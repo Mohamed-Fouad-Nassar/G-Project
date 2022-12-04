@@ -1,0 +1,7 @@
+#59c1bd   // Main
+#3bacb6   // Second
+#2f8f9d   // Hovered
+#caf8f6   // Transparent
+#0b8496 // Link Color
+#FFFFFF   // White
+#000000 // Black

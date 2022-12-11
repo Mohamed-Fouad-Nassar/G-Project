@@ -18,6 +18,14 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <!-- font Yesteryear files -->
+    <!-- font-family: 'Yesteryear', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
     <!-- ion-icons js files -->
     <script
       type="module"
@@ -30,61 +38,73 @@
     <title>log in page</title>
   </head>
   <body>
-    <div class="card">
-      <div class="left">
-        <div class="head">
-          <h2>log in</h2>
-          <p>
-            to stay in touch with us, <br />
-            please log in to your account
-          </p>
-        </div>
-        <form action="">
-          <section>
-            <label for="fieldOne">username or phone number:</label>
-            <div class="field">
-              <input type="text" id="fieldOne" />
-              <i class="icon fa-solid fa-user"></i>
+    <div class="container">
+      <div class="card">
+        <div class="left">
+          <div class="head">
+            <h2>log in</h2>
+            <p>
+              to stay in touch with us, <br />
+              please log in to your account
+            </p>
+          </div>
+          <form action="">
+            <section>
+              <label for="field">username or phone number:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="text"
+                  id="field"
+                  name="userName/phoneNumber"
+                />
+                <i class="f-icon fa-solid fa-user"></i>
+              </div>
+            </section>
+            <section>
+              <label for="field">password:</label>
+              <div class="field">
+                <input class="input" type="text" id="field" name="Password" />
+                <i class="f-icon fa-solid fa-lock"></i>
+              </div>
+            </section>
+            <section>
+              <div class="left-sec">
+                <input type="checkbox" name="remember" id="rem" />
+                <label for="rem">remember me</label>
+              </div>
+              <div class="right-sec">
+                <a href="#">forget password</a>
+              </div>
+            </section>
+            <input type="submit" value="log in" />
+          </form>
+          <div class="reg-link">
+            <a href="register.html">create account?</a>
+          </div>
+          <hr />
+          <div class="social-log">
+            <h3>log in with</h3>
+            <div class="links">
+              <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://google.com/">
+                <i class="fa-brands fa-google"></i>
+              </a>
             </div>
-          </section>
-          <section>
-            <label for="fieldTwo">password:</label>
-            <div class="field">
-              <input type="text" id="fieldTwo" />
-              <i class="icon fa-solid fa-lock"></i>
-            </div>
-          </section>
-          <section>
-            <div class="left-sec">
-              <input type="checkbox" name="remember" id="rem" />
-              <label for="rem">remember me</label>
-            </div>
-            <div class="right-sec">
-              <a href="#">forget password</a>
-            </div>
-          </section>
-          <input type="submit" value="log in" />
-        </form>
-        <div class="reg-link">
-          <a href="register.html">create account?</a>
-        </div>
-        <div class="social-log">
-          <h3>log in with</h3>
-          <div class="links">
-            <a href="https://www.facebook.com/">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com/">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="https://google.com/">
-              <i class="fa-brands fa-google"></i>
-            </a>
           </div>
         </div>
-      </div>
-      <div class="rigth">
-        <img src="" alt="landing image" />
+        <div class="right">
+          <div class="text">
+            <h1>welcome to</h1>
+            <h2>hope</h2>
+            <p>log in to aAccess your account</p>
+          </div>
+        </div>
       </div>
     </div>
     <script src="../JS Files/test.js"></script>

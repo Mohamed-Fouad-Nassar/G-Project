@@ -40,6 +40,20 @@ ul {
   }
 }
 
+input[type="submit"],
+input[type="button"],
+a {
+  cursor: pointer;
+}
+
+i {
+  transition: 0s;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  -o-transition: 0s;
+}
+
 .container {
   padding-left: 10px;
   padding-right: 10px;

@@ -1,12 +1,13 @@
-*, ::after,
+*,
+::after,
 ::before {
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-delay: 0s;
-          transition-delay: 0s;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
 }
 
-body, ul, ul li {
+body,
+ul,
+ul li {
   margin: 0;
   padding: 0;
 }
@@ -17,31 +18,27 @@ a {
   cursor: pointer;
 }
 
-body, body .card .left form section .field, body .card .left form section .left-sec input:checked::after {
-  display: -webkit-box;
-  display: -ms-flexbox;
+body,
+.card .left form section .field,
+.card .left form section .left-sec input:checked::after,
+.card .left .reg-link,
+.card .left .social-log,
+.card .left .social-log .links,
+.card .left .social-log .links a,
+.card .right {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-body .card, body .card .left form section:last-of-type {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.card .left form section:last-of-type {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
-body .card, body .card .left form input[type=submit] {
+.card,
+.card .left form input[type=submit] {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -51,8 +48,7 @@ body .card, body .card .left form input[type=submit] {
 
 /* Start Global Rules:- */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-transform: capitalize;
   font-family: "Open Sans", sans-serif;
   background-position: center;
@@ -65,6 +61,20 @@ html {
 
 img {
   max-width: 100%;
+}
+
+input[type=submit],
+input[type=button],
+a {
+  cursor: pointer;
+}
+
+i {
+  transition: 0s;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  -o-transition: 0s;
 }
 
 .container {
@@ -81,94 +91,126 @@ img {
     width: 100%;
   }
 }
+
 @media (min-width: 576px) {
   .container {
     width: 540px;
   }
 }
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
 }
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
   }
 }
+
 @media (min-width: 1400px) {
   .container {
     width: 1320px;
   }
 }
+
 /* End Media Quires */
 body {
   min-height: 100vh;
 }
-body .card {
-  min-width: 600px;
-  padding: 20px;
+
+.card {
+  max-width: 950px;
+  margin: auto;
+  display: flex;
   background-color: #eee;
+  overflow: hidden;
 }
-body .card .left {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+
+@media (max-width: 767px) {
+  .card {
+    max-width: 400px;
+  }
 }
-body .card .left .head {
+
+.card .left {
+  width: 50%;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .card .left {
+    width: 100%;
+  }
+}
+
+.card .left .head {
   text-align: center;
   padding-bottom: 20px;
 }
-body .card .left .head h2,
-body .card .left .head p {
+
+.card .left .head h2,
+.card .left .head p {
   margin: 0;
   margin-bottom: 10px;
 }
-body .card .left .head p {
+
+.card .left .head p {
   font-size: 0.9rem;
 }
-body .card .left form section {
+
+.card .left form section {
   padding-bottom: 20px;
 }
-body .card .left form section label {
+
+.card .left form section label {
   margin-bottom: 10px;
 }
-body .card .left form section .field {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+
+.card .left form section .field {
+  flex-direction: row-reverse;
   border-bottom: 2px solid #000;
+  position: relative;
 }
-body .card .left form section .field input[type=text] {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+
+.card .left form section .field::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.card .left form section .field input[type=text] {
+  flex: 1;
   padding: 7px 10px;
   border: none;
   outline: none;
   background-color: transparent;
 }
-body .card .left form section .field input[type=text]:focus + .icon {
-  opacity: 1;
-}
-body .card .left form section .field .icon {
-  opacity: 0.8;
-}
-body .card .left form section .left-sec {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
+.card .left form section .left-sec {
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   gap: 7px;
 }
-body .card .left form section .left-sec input {
+
+.card .left form section .left-sec input {
   cursor: pointer;
   position: relative;
   -webkit-appearance: none;
@@ -177,10 +219,13 @@ body .card .left form section .left-sec input {
   width: 15px;
   height: 15px;
 }
-body .card .left form section .left-sec input::before, body .card .left form section .left-sec input::after {
+
+.card .left form section .left-sec input::before,
+.card .left form section .left-sec input::after {
   position: absolute;
 }
-body .card .left form section .left-sec input::before {
+
+.card .left form section .left-sec input::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -188,10 +233,12 @@ body .card .left form section .left-sec input::before {
   background-color: #fff;
   border: 1.5px solid #aaa;
 }
-body .card .left form section .left-sec input:hover::before {
+
+.card .left form section .left-sec input:hover::before {
   border-color: #000;
 }
-body .card .left form section .left-sec input::after {
+
+.card .left form section .left-sec input::after {
   content: "";
   left: 50%;
   top: 50%;
@@ -205,7 +252,8 @@ body .card .left form section .left-sec input::after {
   -ms-transform: translate(-50%, -50%) rotate(3turn);
   -o-transform: translate(-50%, -50%) rotate(3turn);
 }
-body .card .left form section .left-sec input:checked::after {
+
+.card .left form section .left-sec input:checked::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
@@ -222,14 +270,22 @@ body .card .left form section .left-sec input:checked::after {
   -ms-transform: translate(-50%, -50%) rotate(0);
   -o-transform: translate(-50%, -50%) rotate(0);
 }
-body .card .left form section .left-sec label {
+
+.card .left form section .left-sec label {
   margin: 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.card .left form section .right-sec a {
   font-size: 0.9rem;
 }
-body .card .left form section .right-sec a {
-  font-size: 0.9rem;
+
+.card .left form section .right-sec a:hover {
+  color: #777;
 }
-body .card .left form input[type=submit] {
+
+.card .left form input[type=submit] {
   display: block;
   min-width: 150px;
   margin: auto;
@@ -239,7 +295,101 @@ body .card .left form input[type=submit] {
   background-color: #aaa;
   color: #fff;
 }
-body .card .right {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+
+.card .left form input[type=submit]:hover {
+  background-color: #777;
+}
+
+.card .left .reg-link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card .left .reg-link a {
+  font-size: 0.9rem;
+}
+
+.card .left .reg-link a:hover {
+  color: #777;
+}
+
+.card .left hr {
+  margin-top: 0;
+}
+
+.card .left .social-log {
+  flex-direction: column;
+}
+
+.card .left .social-log h3 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.card .left .social-log .links {
+  gap: 20px;
+}
+
+.card .left .social-log .links a {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.card .left .social-log .links a:hover {
+  background-color: #777;
+}
+
+.card .left .social-log .links a i {
+  font-size: 1.2rem;
+}
+
+.card .right {
+  width: 50%;
+  background-image: url(../Data/Images/IMG_20221204_221527_467.jpg);
+  position: relative;
+}
+
+.card .right::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #777;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .card .right {
+    display: none;
+  }
+}
+
+.card .right .text {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.card .right .text h1,
+.card .right .text h2 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card .right .text h2 {
+  font-family: "Yesteryear", cursive;
+  font-size: 3.5rem;
+}
+
+.card .right .text p {
+  margin: 0;
 }

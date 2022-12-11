@@ -1,0 +1,100 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+
+// additional page styling
+
+body {
+  min-height: 100vh;
+  @extend %flex-center-center;
+  .card {
+    @extend %flex-center-between;
+    @extend %border-radius-10;
+    min-width: 600px;
+    padding: 20px;
+    background-color: #eee;
+    .left {
+      flex-basis: 50%;
+      .head {
+        text-align: center;
+        padding-bottom: $main-element-padding;
+        h2,
+        p {
+          margin: 0 {
+            bottom: $sec-element-padding;
+          }
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      form {
+        section {
+          padding-bottom: $main-element-padding;
+          &:last-of-type {
+            @extend %flex-center-between;
+          }
+          label {
+            margin-bottom: $sec-element-padding;
+          }
+          .field {
+            @extend %flex-center-center;
+            flex-direction: row-reverse;
+            border-bottom: 2px solid $black-color;
+            input[type="text"] {
+              flex: 1;
+              padding: $field-top-padding $sec-element-padding;
+              border: none;
+              outline: none;
+              background-color: transparent;
+              &:focus + .icon {
+                opacity: 1;
+              }
+            }
+            .icon {
+              opacity: 0.8;
+            }
+          }
+          .left-sec {
+            display: flex;
+            align-items: center;
+            gap: $field-top-padding;
+            input {
+              @include check-box-shape($black-color);
+            }
+            label {
+              margin: 0;
+              font-size: 0.9rem;
+            }
+          }
+          .right-sec {
+            a {
+              font-size: 0.9rem;
+            }
+          }
+        }
+        input[type="submit"] {
+          @extend %border-radius-10;
+          display: block;
+          min-width: 150px;
+          margin: auto;
+          padding: $sec-element-padding $main-element-padding;
+          border: none;
+          outline: none;
+          background-color: #aaa;
+          color: $white-color;
+        }
+      }
+      .reg-link {
+      }
+      .social-log {
+      }
+    }
+    .right {
+      flex-basis: 50%;
+    }
+  }
+}

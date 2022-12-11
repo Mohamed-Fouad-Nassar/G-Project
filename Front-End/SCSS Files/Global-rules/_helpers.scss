@@ -1,0 +1,106 @@
+@use "./variables" as *;
+
+// placeholders:-
+
+%transition {
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+
+%reset {
+  margin: 0;
+  padding: 0;
+}
+
+%link {
+  color: $black-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+%flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%border-radius-5 {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+%border-radius-10 {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+// mixins:-
+
+@mixin check-box-shape($color) {
+  cursor: pointer;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  &::before,
+  &::after {
+    position: absolute;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: $white-color;
+    border: 1.5px solid #aaa;
+  }
+  &:hover::before {
+    border-color: $color;
+  }
+  &::after {
+    content: "";
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 2px;
+    background-color: $color;
+    transform: translate(-50%, -50%) rotate(3turn);
+    -webkit-transform: translate(-50%, -50%) rotate(3turn);
+    -moz-transform: translate(-50%, -50%) rotate(3turn);
+    -ms-transform: translate(-50%, -50%) rotate(3turn);
+    -o-transform: translate(-50%, -50%) rotate(3turn);
+  }
+  &:checked::after {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: $white-color;
+    left: calc(50% + 1px);
+    top: calc(50% + 1px);
+    font-size: 1rem;
+    border: 2px solid $color;
+    width: 100%;
+    height: 101%;
+    transform: translate(-50%, -50%) rotate(0);
+    -webkit-transform: translate(-50%, -50%) rotate(0);
+    -moz-transform: translate(-50%, -50%) rotate(0);
+    -ms-transform: translate(-50%, -50%) rotate(0);
+    -o-transform: translate(-50%, -50%) rotate(0);
+    @extend %flex-center-center;
+  }
+}

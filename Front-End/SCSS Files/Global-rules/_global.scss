@@ -1,0 +1,89 @@
+@use "./variables" as *;
+@use "./helpers" as *;
+
+/* Start Global Rules:- */
+
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  background-position: center;
+  background-size: cover;
+  @extend %transition;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @extend %reset;
+}
+
+::after,
+::before {
+  @extend %transition;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  @extend %link;
+}
+
+ul {
+  @extend %reset;
+  li {
+    @extend %reset;
+  }
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Start Media Quires:- */
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+/* End Media Quires */

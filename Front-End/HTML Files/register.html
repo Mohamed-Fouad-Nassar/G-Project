@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- normalize css files -->
-    <link rel="stylesheet" href="CSS Files/normalize.css" />
+    <link rel="stylesheet" href="../CSS Files/normalize" />
     <!-- font-awesome css file -->
-    <link rel="stylesheet" href="CSS Files/all.min.css" />
+    <link rel="stylesheet" href="../CSS Files/all.min.css" />
     <!-- main css file -->
-    <link rel="stylesheet" href="CSS Files/master.css" />
+    <link rel="stylesheet" href="../SCSS Files/pages/register.css" />
     <!-- font open-sans files -->
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +35,130 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <title>register page</title>
+    <title>sign up page</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="left">
+          <form action="">
+            <div class="data">
+              <div class="f-name">
+                <label for="field">First Name:</label>
+                <div class="field">
+                  <input
+                    class="input"
+                    type="text"
+                    id="field"
+                    name="firstName"
+                  />
+                  <i class="f-icon fa-solid fa-user"></i>
+                </div>
+              </div>
+              <div class="l-name">
+                <label for="field">Last Name:</label>
+                <div class="field">
+                  <input class="input" type="text" id="field" name="lastName" />
+                  <i class="f-icon fa-solid fa-user"></i>
+                </div>
+              </div>
+            </div>
+            <div class="e-mail">
+              <label for="field">E-mail:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="email"
+                  id="field"
+                  name="email"
+                />
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+            </div>
+            <div class="Password">
+              <label for="field">Password:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="password"
+                  id="field"
+                  name="password"
+                />
+                <i class="f-icon fa-solid fa-lock"></i>
+              </div>
+            </div>
+            <div class="Password">
+              <label for="field">Confirm Password:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="Password"
+                  id="field"
+                  name="confirmPassword"
+                />
+                <i class="f-icon fa-solid fa-lock"></i>
+              </div>
+            </div>
+            <div class="phone">
+              <label for="field">Phone number:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="text"
+                  id="field"
+                  name="phoneNumber"
+                  pattern="[0-9]"
+                />
+                <i class="fa-solid fa-phone"></i>
+              </div>
+            </div>
+
+            <div class="gender">
+              <label>Gender:</label>
+              <div class="gender-flex">
+                <p>please choose your gender:</p>
+
+                <div class="choose">
+                  <input type="radio" name="gender" id="male">
+                  <label for="male"><i class="fa-solid fa-mars"></i> Male</label>
+  
+                  <input type="radio" name="gender" id="female">
+                  <label for="female"><i class="fa-solid fa-venus"></i> Female</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="birth-date">
+              <div class="date-flex">
+                <label>date of birth:</label>
+                <input type="date">
+              </div>
+            </div>
+
+            <div class="check-box">
+              <div class="check-flex">
+                <input type="checkbox" name="agree">
+                <label>i agree with all <a href="#">terms of use</a> and <a href="#">our privacy policy</a></label>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <input type="submit" value="Confirm">
+              <input type="submit" value="Cancel">
+            </div>
+          </form>
+        </div>
+        <div class="right">
+          <div class="text">
+            <h1>register</h1>
+            <p>please enter your details to sign up and to be part of our great community</p>
+            <h2>already have account?</h2>
+
+            <input type="submit" value="log in">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../JS Files/test.js"></script>
+  </body>
 </html>

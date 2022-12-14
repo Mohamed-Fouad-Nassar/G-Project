@@ -23,7 +23,7 @@ body {
   }
   .left {
     width: 50%;
-    padding: 50px 20px;
+    padding: $main-element-padding;
     @media (max-width: 767px) {
       width: 100%;
     }
@@ -39,111 +39,143 @@ body {
       p {
         font-size: 0.9rem;
       }
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
     form {
-        .data, .buttons{
-          @extend %flex-center-center;
+      section {
+        margin-bottom: $main-element-padding;
+        .sec-flex {
           @extend %flex-center-between;
-          margin-bottom: $sec-element-padding;
-
-        }
-        .gender, .birth-date, .check-box, .buttons{
-          margin-top: 30px;
-          .gender-flex{
-            @extend %flex-center-center;
-            @extend %flex-center-between;
-          }
-        }
-        .check-box{
-          a{
-            color: #aaa;
-          }
-          input{
-            @include check-box-shape($black-color);
-          }
-        }
-        label {
-          margin-bottom: $sec-element-padding;
-        }
-        .field {
-          @extend %flex-center-center;
-          flex-direction: row-reverse;
-          border-bottom: 2px solid $black-color;
           position: relative;
+          padding-right: 25px;
           &::after {
-            content: "\f057";
-            color: #fb0505;
-            // content: "\f058";
-            // color: #1ad922;
-            font-weight: 900;
-            font-family: "Font Awesome 5 Free";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            -webkit-transform: translateY(-50%);
-            -moz-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            -o-transform: translateY(-50%);
-          }
-          input[type="text"],input[type="email"],input[type="Password"] {
-            flex: 1;
-            padding: $field-top-padding $sec-element-padding;
-            border: none;
-            outline: none;
-            background-color: transparent;
+            @extend %error-sign;
           }
         }
-        .gender .choose{
-          input {
-            position: relative;
-            cursor: pointer;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            &::before,
-            &::after {
-              content: "";
-              position: absolute;
-              @extend %translate-50;
-              @extend %border-radius-50;
+      }
+      .name {
+        > label {
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+        .data {
+          @media (max-width: 991px) {
+            flex-direction: column;
+            gap: $main-element-padding;
+          }
+          div {
+            @media (max-width: 991px) {
+              width: 100%;
             }
-            &::before {
-              width: 16px;
-              height: 16px;
-              background-color: $white-color;
-              border: 1.5px solid $un-checked-color;
-            }
-            &:hover::before {
-              border-color: $main-color;
-            }
-            &::after {
-              width: 0;
-              height: 0;
-            }
-            &:checked {
-              &::before {
-                border-color: $main-color;
+            label {
+              display: none;
+              @media (max-width: 991px) {
+                display: block;
               }
-              &:after {
-                width: 12px;
-                height: 12px;
-                background-color: $main-color;
+            }
+            .field {
+              input {
+                @media (max-width: 991px) {
+                  &::-webkit-input-placeholder {
+                    color: transparent;
+                  }
+                  &::-moz-placeholder {
+                    color: transparent;
+                  }
+                  &:-ms-input-placeholder {
+                    color: transparent;
+                  }
+                  &::-ms-input-placeholder {
+                    color: transparent;
+                  }
+                  &::placeholder {
+                    color: transparent;
+                  }
+                }
               }
             }
           }
-
         }
-        input[type="date"]{
-          width: 70%;
-          text-align: center;
-          padding: 2px;
+      }
+      .data,
+      .buttons {
+        @extend %flex-center-between;
+        margin-bottom: $main-element-padding;
+      }
+      .check-box {
+        a {
+          color: #aaa;
+        }
+        input {
+          @include check-box-shape($black-color);
+        }
+      }
+      .field {
+        @extend %flex-center-center;
+        flex-direction: row-reverse;
+        border-bottom: 2px solid $black-color;
+        position: relative;
+        &::after {
+          @extend %error-sign;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="Password"] {
+          flex: 1;
+          padding: $field-top-padding $sec-element-padding;
+          border: none;
+          outline: none;
           background-color: transparent;
-          border: 2px solid #aaa;
         }
+      }
+      .gender {
+        p {
+          margin: 0 {
+            top: 10px;
+          }
+          &:first-of-type {
+            @media (max-width: 991px) {
+              display: none;
+            }
+          }
+          &:last-of-type {
+            display: none;
+            @media (max-width: 991px) {
+              display: block;
+            }
+          }
+        }
+        .choose {
+          input {
+            margin-bottom: 5px;
+            @include radio-shape($black-color);
+          }
+          label {
+            cursor: pointer;
+            display: inline-block;
+            margin: {
+              left: $field-top-padding;
+              top: $sec-element-padding;
+              bottom: 0;
+            }
+          }
+        }
+      }
+      input[type="date"] {
+        flex: 1;
+        text-align: center;
+        margin-left: $sec-element-padding;
+        padding: $field-top-padding $sec-element-padding;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid $black-color;
+        background-color: transparent;
+      }
       input[type="submit"] {
         @extend %border-radius-10;
-        // display: inline-block;
         min-width: 150px;
         margin: auto;
         padding: $sec-element-padding $main-element-padding;
@@ -156,6 +188,20 @@ body {
         }
       }
     }
+    .log-link {
+      @extend %flex-center-center;
+      gap: 10px;
+      a {
+        font-size: 1rem;
+        color: #aaa;
+        &:hover {
+          color: #777;
+        }
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
   }
   .right {
     &::before {
@@ -163,7 +209,7 @@ body {
       width: 100%;
       height: 100%;
       background-color: #777;
-      opacity: 0.3;
+      opacity: 0.5;
       position: absolute;
       top: 0;
       left: 0;
@@ -171,7 +217,7 @@ body {
     }
     @extend %flex-center-center;
     width: 50%;
-    background-image: url(../../Data/Images/IMG_20221204_221445_961.jpg);
+    background-image: url(../Data/Images/IMG_20221204_221445_961.jpg);
     position: relative;
     @media (max-width: 767px) {
       display: none;
@@ -180,29 +226,29 @@ body {
       text-align: center;
       color: $white-color;
       z-index: 2;
-      p{
-        margin: 0 auto;
+      p {
+        margin: auto;
         max-width: 70%;
-        margin-bottom: 50px;
       }
-      h1,
-      h2 {
+      h1 {
         margin: 0 {
           bottom: $sec-element-padding;
         }
       }
       h2 {
-        // font-family: "Yesteryear", cursive;
-        font-size: 1.4rem;
+        margin: $main-element-padding 0;
+        font-family: "Yesteryear", cursive;
+        font-size: 2.4rem;
       }
-      input{
+      h3 {
+        margin: $main-element-padding 0;
+      }
+      a {
         @extend %border-radius-10;
-        // display: inline-block;
-        min-width: 150px;
+        display: block;
         margin: auto;
+        max-width: 150px;
         padding: $sec-element-padding $main-element-padding;
-        border: none;
-        outline: none;
         background-color: #aaa;
         color: $white-color;
         &:hover {

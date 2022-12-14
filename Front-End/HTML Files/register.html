@@ -9,7 +9,7 @@
     <!-- font-awesome css file -->
     <link rel="stylesheet" href="../CSS Files/all.min.css" />
     <!-- main css file -->
-    <link rel="stylesheet" href="../SCSS Files/pages/register.css" />
+    <link rel="stylesheet" href="../CSS Files/register.css" />
     <!-- font open-sans files -->
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,48 +35,60 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <title>sign up page</title>
+    <title>rejecter page</title>
   </head>
   <body>
     <div class="container">
       <div class="card">
         <div class="left">
+          <div class="head">
+            <h2>register</h2>
+            <p>
+              please enter your details to sign up and to be part of our great
+              community
+            </p>
+          </div>
           <form action="">
-            <div class="data">
-              <div class="f-name">
-                <label for="field">First Name:</label>
-                <div class="field">
-                  <input
-                    class="input"
-                    type="text"
-                    id="field"
-                    name="firstName"
-                  />
-                  <i class="f-icon fa-solid fa-user"></i>
+            <section class="name">
+              <label>full name:</label>
+              <div class="data">
+                <div class="f-name">
+                  <label for="field">first name:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="field"
+                      name="firstName"
+                      placeholder="First Name"
+                    />
+                    <i class="f-icon fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="l-name">
+                  <label for="field">last name:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="field"
+                      name="lastName"
+                      placeholder="Last Name"
+                    />
+                    <i class="f-icon fa-solid fa-user"></i>
+                  </div>
                 </div>
               </div>
-              <div class="l-name">
-                <label for="field">Last Name:</label>
-                <div class="field">
-                  <input class="input" type="text" id="field" name="lastName" />
-                  <i class="f-icon fa-solid fa-user"></i>
-                </div>
-              </div>
-            </div>
-            <div class="e-mail">
-              <label for="field">E-mail:</label>
+            </section>
+            <section class="e-mail">
+              <label for="field">e-mail:</label>
               <div class="field">
-                <input
-                  class="input"
-                  type="email"
-                  id="field"
-                  name="email"
-                />
+                <input class="input" type="email" id="field" name="email" />
                 <i class="fa-regular fa-envelope"></i>
               </div>
-            </div>
-            <div class="Password">
-              <label for="field">Password:</label>
+            </section>
+            <section class="password">
+              <label for="field">password:</label>
               <div class="field">
                 <input
                   class="input"
@@ -86,9 +98,9 @@
                 />
                 <i class="f-icon fa-solid fa-lock"></i>
               </div>
-            </div>
-            <div class="Password">
-              <label for="field">Confirm Password:</label>
+            </section>
+            <section class="password">
+              <label for="field">confirm password:</label>
               <div class="field">
                 <input
                   class="input"
@@ -98,9 +110,9 @@
                 />
                 <i class="f-icon fa-solid fa-lock"></i>
               </div>
-            </div>
-            <div class="phone">
-              <label for="field">Phone number:</label>
+            </section>
+            <section class="phone">
+              <label for="field">phone number:</label>
               <div class="field">
                 <input
                   class="input"
@@ -111,50 +123,63 @@
                 />
                 <i class="fa-solid fa-phone"></i>
               </div>
-            </div>
-
-            <div class="gender">
-              <label>Gender:</label>
-              <div class="gender-flex">
+            </section>
+            <section class="gender">
+              <label>gender:</label>
+              <div class="sec-flex">
                 <p>please choose your gender:</p>
-
+                <p>your gender:</p>
                 <div class="choose">
-                  <input type="radio" name="gender" id="male">
-                  <label for="male"><i class="fa-solid fa-mars"></i> Male</label>
-  
-                  <input type="radio" name="gender" id="female">
-                  <label for="female"><i class="fa-solid fa-venus"></i> Female</label>
+                  <input type="radio" name="gender" id="male" />
+                  <label for="male">
+                    <!-- <i class="fa-solid fa-mars"></i> -->
+                    male
+                  </label>
+                </div>
+                <div class="choose">
+                  <input type="radio" name="gender" id="female" />
+                  <label for="female">
+                    <!-- <i class="fa-solid fa-venus"></i> -->
+                    female
+                  </label>
                 </div>
               </div>
-            </div>
-
-            <div class="birth-date">
-              <div class="date-flex">
+            </section>
+            <section class="birth-date">
+              <div class="sec-flex">
                 <label>date of birth:</label>
-                <input type="date">
+                <input type="date" />
               </div>
-            </div>
-
-            <div class="check-box">
-              <div class="check-flex">
-                <input type="checkbox" name="agree">
-                <label>i agree with all <a href="#">terms of use</a> and <a href="#">our privacy policy</a></label>
-              </div>
-            </div>
-
+            </section>
+            <section class="check-box">
+              <input type="checkbox" name="agree" id="terms" />
+              <label for="terms"
+                >i agree with all
+                <a href="#">terms of use</a>
+                and
+                <a href="#">our privacy policy</a>
+              </label>
+            </section>
             <div class="buttons">
-              <input type="submit" value="Confirm">
-              <input type="submit" value="Cancel">
+              <input type="submit" value="Confirm" />
+              <input type="submit" value="Cancel" />
             </div>
           </form>
+          <div class="log-link">
+            <span>already have account?</span>
+            <a href="./log_in.html" id="logIn"> log in </a>
+          </div>
         </div>
         <div class="right">
           <div class="text">
             <h1>register</h1>
-            <p>please enter your details to sign up and to be part of our great community</p>
-            <h2>already have account?</h2>
-
-            <input type="submit" value="log in">
+            <p>
+              please enter your details to sign up and to be part of our great
+              community
+            </p>
+            <h2>hope</h2>
+            <h3>already have account?</h3>
+            <a href="./log_in.html" id="logIn"> log in </a>
           </div>
         </div>
       </div>

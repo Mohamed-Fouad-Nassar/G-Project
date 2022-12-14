@@ -30,6 +30,14 @@
   justify-content: space-between;
 }
 
+%translate-50 {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
 %border-radius-5 {
   border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -46,6 +54,31 @@
   -o-border-radius: 10px;
 }
 
+%border-radius-50 {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+%error-sign {
+  // content: "\f058";
+  // color: #1ad922;
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
 // mixins:-
 
 @mixin check-box-shape($color) {
@@ -56,6 +89,7 @@
   appearance: none;
   width: 15px;
   height: 15px;
+  margin-bottom: 0px;
   &::before,
   &::after {
     position: absolute;
@@ -102,5 +136,43 @@
     -ms-transform: translate(-50%, -50%) rotate(0);
     -o-transform: translate(-50%, -50%) rotate(0);
     @extend %flex-center-center;
+  }
+}
+
+@mixin radio-shape($color) {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    @extend %translate-50;
+    @extend %border-radius-50;
+  }
+  &::before {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border: 1.5px solid #aaa;
+  }
+  &:hover::before {
+    border-color: $color;
+  }
+  &::after {
+    width: 0;
+    height: 0;
+  }
+  &:checked {
+    &::before {
+      border-color: $color;
+    }
+    &:after {
+      width: 12px;
+      height: 12px;
+      background-color: $color;
+    }
   }
 }

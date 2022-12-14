@@ -1,0 +1,532 @@
+*,
+::after,
+::before {
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+
+body,
+ul,
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body,
+.card .left form .check-box input:checked::after,
+.card .left form .field,
+.card .left .log-link,
+.card .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .left form section .sec-flex,
+.card .left form .data,
+.card .left form .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .left form .gender .choose input::before,
+.card .left form .gender .choose input::after {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.card,
+.card .left form input[type=submit],
+.card .right .text a {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card .left form .gender .choose input::before,
+.card .left form .gender .choose input::after {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.card .left form section .sec-flex::after,
+.card .left form .field::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+/* Start Global Rules:- */
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  background-position: center;
+  background-size: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+input[type=submit],
+input[type=button],
+a {
+  cursor: pointer;
+}
+
+i {
+  transition: 0s;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  -o-transition: 0s;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Start Media Quires:- */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+/* End Media Quires */
+body {
+  min-height: 100vh;
+}
+
+.card {
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+.card .left {
+  width: 50%;
+  padding: 20px;
+}
+
+@media (max-width: 767px) {
+  .card .left {
+    width: 100%;
+  }
+}
+
+.card .left .head {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.card .left .head h2,
+.card .left .head p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card .left .head p {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .card .left .head {
+    display: none;
+  }
+}
+
+.card .left form section {
+  margin-bottom: 20px;
+}
+
+.card .left form section .sec-flex {
+  position: relative;
+  padding-right: 25px;
+}
+
+@media (max-width: 991px) {
+  .card .left form .name>label {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .card .left form .name .data {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .card .left form .name .data div {
+    width: 100%;
+  }
+}
+
+.card .left form .name .data div label {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .card .left form .name .data div label {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .card .left form .name .data div .field input::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+  .card .left form .name .data div .field input::-moz-placeholder {
+    color: transparent;
+  }
+
+  .card .left form .name .data div .field input:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .card .left form .name .data div .field input::-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .card .left form .name .data div .field input::placeholder {
+    color: transparent;
+  }
+}
+
+.card .left form .data,
+.card .left form .buttons {
+  margin-bottom: 20px;
+}
+
+.card .left form .check-box a {
+  color: #aaa;
+}
+
+.card .left form .check-box input {
+  cursor: pointer;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 0px;
+}
+
+.card .left form .check-box input::before,
+.card .left form .check-box input::after {
+  position: absolute;
+}
+
+.card .left form .check-box input::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1.5px solid #aaa;
+}
+
+.card .left form .check-box input:hover::before {
+  border-color: #000;
+}
+
+.card .left form .check-box input::after {
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 2px;
+  background-color: #000;
+  transform: translate(-50%, -50%) rotate(3turn);
+  -webkit-transform: translate(-50%, -50%) rotate(3turn);
+  -moz-transform: translate(-50%, -50%) rotate(3turn);
+  -ms-transform: translate(-50%, -50%) rotate(3turn);
+  -o-transform: translate(-50%, -50%) rotate(3turn);
+}
+
+.card .left form .check-box input:checked::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #fff;
+  left: calc(50% + 1px);
+  top: calc(50% + 1px);
+  font-size: 1rem;
+  border: 2px solid #000;
+  width: 100%;
+  height: 101%;
+  transform: translate(-50%, -50%) rotate(0);
+  -webkit-transform: translate(-50%, -50%) rotate(0);
+  -moz-transform: translate(-50%, -50%) rotate(0);
+  -ms-transform: translate(-50%, -50%) rotate(0);
+  -o-transform: translate(-50%, -50%) rotate(0);
+}
+
+.card .left form .field {
+  flex-direction: row-reverse;
+  border-bottom: 2px solid #000;
+  position: relative;
+}
+
+.card .left form .field input[type=text],
+.card .left form .field input[type=email],
+.card .left form .field input[type=Password] {
+  flex: 1;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.card .left form .gender p {
+  margin: 0;
+  margin-top: 10px;
+}
+
+@media (max-width: 991px) {
+  .card .left form .gender p:first-of-type {
+    display: none;
+  }
+}
+
+.card .left form .gender p:last-of-type {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .card .left form .gender p:last-of-type {
+    display: block;
+  }
+}
+
+.card .left form .gender .choose input {
+  margin-bottom: 5px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.card .left form .gender .choose input::before,
+.card .left form .gender .choose input::after {
+  content: "";
+  position: absolute;
+}
+
+.card .left form .gender .choose input::before {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 1.5px solid #aaa;
+}
+
+.card .left form .gender .choose input:hover::before {
+  border-color: #000;
+}
+
+.card .left form .gender .choose input::after {
+  width: 0;
+  height: 0;
+}
+
+.card .left form .gender .choose input:checked::before {
+  border-color: #000;
+}
+
+.card .left form .gender .choose input:checked:after {
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+}
+
+.card .left form .gender .choose label {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 7px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.card .left form input[type=date] {
+  flex: 1;
+  text-align: center;
+  margin-left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #000;
+  background-color: transparent;
+}
+
+.card .left form input[type=submit] {
+  min-width: 150px;
+  margin: auto;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: #aaa;
+  color: #fff;
+}
+
+.card .left form input[type=submit]:hover {
+  background-color: #777;
+}
+
+.card .left .log-link {
+  gap: 10px;
+}
+
+.card .left .log-link a {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.card .left .log-link a:hover {
+  color: #777;
+}
+
+@media (min-width: 768px) {
+  .card .left .log-link {
+    display: none;
+  }
+}
+
+.card .right {
+  width: 50%;
+  background-image: url(../Data/Images/IMG_20221204_221445_961.jpg);
+  position: relative;
+}
+
+.card .right::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #777;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .card .right {
+    display: none;
+  }
+}
+
+.card .right .text {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.card .right .text p {
+  margin: auto;
+  max-width: 70%;
+}
+
+.card .right .text h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card .right .text h2 {
+  margin: 20px 0;
+  font-family: "Yesteryear", cursive;
+  font-size: 2.4rem;
+}
+
+.card .right .text h3 {
+  margin: 20px 0;
+}
+
+.card .right .text a {
+  display: block;
+  margin: auto;
+  max-width: 150px;
+  padding: 10px 20px;
+  background-color: #aaa;
+  color: #fff;
+}
+
+.card .right .text a:hover {
+  background-color: #777;
+}

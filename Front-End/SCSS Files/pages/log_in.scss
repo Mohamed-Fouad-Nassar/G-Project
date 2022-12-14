@@ -57,7 +57,7 @@ body {
           &::after {
             @extend %error-sign;
           }
-          input[type="text"] {
+          input {
             flex: 1;
             padding: $field-top-padding $sec-element-padding;
             border: none;
@@ -67,7 +67,6 @@ body {
         }
         .left-sec {
           display: flex;
-          align-items: center;
           gap: $field-top-padding;
           input {
             @include check-box-shape($black-color);

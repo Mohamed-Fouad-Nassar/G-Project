@@ -1,0 +1,186 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+
+// header styling:-
+header {
+  background-color: #eee;
+  @media (max-width: 991px) {
+    padding: {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+  .container {
+    @extend %flex-center-between;
+    @media (max-width: 991px) {
+    }
+    .logo {
+      a {
+        h1 {
+          font-size: 2.5rem;
+          font-family: "Yesteryear", cursive;
+          margin: 0;
+        }
+        &:hover {
+          color: #aaa;
+        }
+      }
+    }
+    .nav-icon {
+      display: none;
+      width: 40px;
+      height: 35px;
+      position: relative;
+      cursor: pointer;
+      span {
+        @extend %border-radius-10;
+        position: absolute;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+        height: 5px;
+        &:first-of-type {
+          top: 0;
+        }
+        &:nth-of-type(2) {
+          top: 15px;
+        }
+        &:last-of-type {
+          top: 30px;
+        }
+      }
+      &:hover {
+        span {
+          background-color: #aaa;
+        }
+      }
+      &.active {
+        &:hover {
+          span {
+            background-color: #aaa;
+          }
+        }
+        span:first-of-type,
+        span:last-of-type {
+          top: 15px;
+        }
+        span:first-of-type {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+        }
+        span:nth-of-type(2) {
+          opacity: 0;
+        }
+        span:nth-of-type(2) {
+          opacity: 0;
+        }
+        span:nth-of-type(2) {
+          opacity: 0;
+        }
+        span:last-of-type {
+          transform: rotate(-45deg);
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+        }
+      }
+      @media (max-width: 991px) {
+        display: block;
+      }
+    }
+    nav {
+      opacity: 1 !important;
+      z-index: 1000 !important;
+      @extend %flex-center-between;
+      ul {
+        display: flex;
+        gap: 15px;
+        li {
+          padding: {
+            right: 5px;
+            left: 5px;
+          }
+          &:last-of-type,
+          &:nth-last-of-type(2) {
+            display: none;
+            @media (max-width: 991px) {
+              display: block;
+            }
+          }
+          &.active {
+            border-bottom: 2px solid #aaa;
+          }
+          a {
+            @extend %flex-center-center;
+            height: 68px;
+            &:hover {
+              color: #aaa;
+            }
+          }
+        }
+      }
+      @media (max-width: 991px) {
+        right: -300px;
+        display: block;
+        width: 300px;
+        height: calc(100% - 66px);
+        background-color: #eee;
+        position: absolute;
+        top: 66px;
+        opacity: 0;
+        @media (max-width: 575px) {
+          opacity: 0;
+          width: 100%;
+          height: 600px;
+          right: -100%;
+        }
+        ul {
+          flex-direction: column;
+          padding-top: 20px;
+          li {
+            padding: 0;
+            border-bottom: 1px solid #aaa !important;
+            a {
+              height: 40px;
+              justify-content: flex-start;
+              padding-left: 10px;
+              &:hover {
+                padding-left: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .account {
+      @media (max-width: 991px) {
+        display: none;
+      }
+      a {
+        @extend %border-radius-5;
+        padding: 7px 15px;
+        color: white;
+        background-color: #aaa;
+        &:hover {
+          background-color: #585858;
+        }
+        &:last-of-type {
+          background-color: #ccc;
+          &:hover {
+            background-color: #aaa;
+          }
+        }
+      }
+      @extend %flex-center-between;
+      gap: 20px;
+    }
+  }
+}

@@ -106,7 +106,8 @@ abbr[title] {
     /* 1 */
     text-decoration: underline;
     /* 2 */
-    text-decoration: underline dotted;
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
     /* 2 */
 }
 
@@ -367,7 +368,7 @@ textarea {
    * 2. Change font properties to `inherit` in Safari.
    */
 
- ::-webkit-file-upload-button {
+::-webkit-file-upload-button {
     -webkit-appearance: button;
     /* 1 */
     font: inherit;

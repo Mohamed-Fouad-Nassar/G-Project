@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- normalize css files -->
-    <link rel="stylesheet" href="CSS Files/normalize.css" />
+    <link rel="stylesheet" href="./CSS Files/normalize.css" />
     <!-- font-awesome css file -->
-    <link rel="stylesheet" href="CSS Files/all.min.css" />
+    <link rel="stylesheet" href="./CSS Files/all.min.css" />
+    <!-- bootstrap css file -->
+    <link rel="stylesheet" href="./CSS Files/bootstrap.min.css" />
     <!-- main css file -->
-    <link rel="stylesheet" href="CSS Files/master.css" />
+    <link rel="stylesheet" href="./CSS Files/master.css" />
     <!-- font open-sans files -->
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,6 +28,8 @@
       href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
       rel="stylesheet"
     />
+    <!-- bootstrap js file -->
+    <script src="./JS Files/bootstrap.bundle.js"></script>
     <!-- ion-icons js files -->
     <script
       type="module"
@@ -38,7 +42,346 @@
     <title>main page</title>
   </head>
   <body>
-    <a href="./HTML Files/log_in.html">log in</a>
-    <a href="./HTML Files/register.html">sign up</a>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="#top">
+            <h1>hope</h1>
+          </a>
+        </div>
+        <div class="nav-icon" id="navIcon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav id="nav">
+          <ul id="links">
+            <li class="active">
+              <a href="">home</a>
+            </li>
+            <li>
+              <a href="">doctors</a>
+            </li>
+            <li>
+              <a href="">medicines</a>
+            </li>
+            <li>
+              <a href="">radiation places</a>
+            </li>
+            <li>
+              <a href="">blog</a>
+            </li>
+            <li>
+              <a href="">contact us</a>
+            </li>
+            <li>
+              <a class="regist" href="./HTML Files/register.html">sign up</a>
+            </li>
+            <li>
+              <a class="log-in" href="./HTML Files/log_in.html">log in</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="account">
+          <a class="log-in" href="./HTML Files/log_in.html">log in</a>
+          <a class="regist" href="./HTML Files/register.html">sign up</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="slider">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <img
+                src="./Data/Images/doctors-slider-image-1.jpg"
+                class="d-block w-100"
+                alt="doctors-slider-image"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="./Data/Images/medicines-slider-image-1.jpg"
+                class="d-block w-100"
+                alt="medicines-slider-image"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./Data/Images/radiation-slider-image-1.jpg"
+                class="d-block w-100"
+                alt="radiation-slider-image"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+      <section class="doctors">
+        <div class="container">
+          <div class="sec-head">
+            <h2>our doctors</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              consequatur ullam excepturi dolores repellat, minus assumenda
+              exercitationem.
+            </p>
+          </div>
+          <div class="sec-body">
+            <div class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="mailto:@mohagmail@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/552196312XXXX">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+18475555555">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="mailto:@mohagmail@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/552196312XXXX">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+18475555555">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="mailto:@mohagmail@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/552196312XXXX">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+18475555555">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="mailto:@mohagmail@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/552196312XXXX">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+18475555555">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="mailto:@mohagmail@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/552196312XXXX">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+18475555555">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="mailto:@mohagmail@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/552196312XXXX">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+18475555555">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <a href="https://www.facebook.com/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="mailto:@mohagmail@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/552196312XXXX">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="tel:+18475555555">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sec-foot">
+            <input type="button" value="see more" />
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="">
+        <div class="container">
+          <div class="sec-head">
+            <h2>our </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              consequatur ullam excepturi dolores repellat, minus assumenda
+              exercitationem.
+            </p>
+          </div>
+          <div class="sec-body"></div>
+          <div class="sec-foot"></div>
+        </div>
+      </section> -->
+    </main>
+    <footer>
+      <div class="container"></div>
+    </footer>
+    <script src="./JS Files/main.js"></script>
   </body>
 </html>

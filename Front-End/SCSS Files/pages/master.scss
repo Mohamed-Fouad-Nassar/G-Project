@@ -1,0 +1,69 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+
+// additional page styling
+main {
+  min-height: 200vh;
+  .slider {
+    div {
+      max-height: calc(100vh - 66px);
+    }
+  }
+  .doctors {
+    .container {
+      padding: $up-down-padding 0;
+      .sec-body {
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        display: -webkit-box;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 20px;
+        .box {
+          width: 250px;
+          position: relative;
+          img {
+            max-width: 100%;
+          }
+          .info {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(204, 204, 204, 0.8);
+            padding: 10px;
+            &:hover {
+              bottom: 0;
+            }
+            .contact {
+              @extend %flex-center-between;
+              a {
+                @extend %ni-flex-center-center;
+                @extend %border-radius-5;
+                width: 40px;
+                height: 40px;
+                background-color: #ccc;
+                &:hover {
+                  background-color: #aaa;
+                  i {
+                    color: #777;
+                  }
+                }
+                i {
+                  color: #fff;
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

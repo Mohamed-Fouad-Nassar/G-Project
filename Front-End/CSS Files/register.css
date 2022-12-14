@@ -93,8 +93,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
+}
+
+ul {
+  list-style: none;
 }
 
 input[type=submit],
@@ -157,6 +165,42 @@ i {
 }
 
 /* End Media Quires */
+section .container .sec-head {
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+section .container .sec-head h2 {
+  font-size: 1.9rem;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+section .container .sec-head p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+section .container .sec-foot {
+  padding-top: 60px;
+}
+
+section .container .sec-foot input[type=button] {
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  border: 1px solid #eee;
+  background-color: #eee;
+  padding: 10px 20px;
+}
+
+section .container .sec-foot input[type=button]:hover {
+  background-color: #777;
+  color: #fff;
+}
+
 body {
   min-height: 100vh;
 }

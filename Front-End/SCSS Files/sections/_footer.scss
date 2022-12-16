@@ -108,12 +108,10 @@ footer {
           overflow: hidden;
         }
         .info {
+          @extend %article-info;
           span {
             color: #eee;
             &.input {
-              cursor: pointer;
-              font-style: italic;
-              color: #aaa;
               &:hover {
                 color: #eee;
               }

@@ -18,13 +18,18 @@ a {
   cursor: pointer;
 }
 
+main .top a,
 main .contact .container .sec-body .sec-left .contact-info .box .icon-div i,
-header .container nav ul li a {
+header .container nav ul li a,
+section .container .sec-foot a,
+main .radiation .container .sec-body .text a,
+main .contact .container .sec-body .sec-right form input[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+main .doctors .container .sec-body .box .info .contact,
 main .contact .container .sec-body .sec-left .social-icon>div,
 footer .container .f-info .f-social {
   display: flex;
@@ -38,7 +43,12 @@ main .contact .container .sec-body {
   justify-content: space-between;
 }
 
-main .doctors .container .sec-body .box .info .contact a,
+main .radiation .container .sec-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .doctors .container .sec-body .box .info .contact>div a,
 main .contact .container .sec-body .sec-left .social-icon>div>div a,
 footer .container .f-info .f-social>div a {
   display: inline-flex;
@@ -46,7 +56,6 @@ footer .container .f-info .f-social>div a {
   justify-content: center;
 }
 
-main .doctors .container .sec-body .box .info .contact,
 header .container,
 header .container nav,
 header .container .account {
@@ -55,8 +64,43 @@ header .container .account {
   justify-content: space-between;
 }
 
-main .doctors .container .sec-body .box .info .contact a,
+main .doctors .container .sec-body {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+main .blog .container .sec-body {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+main .medicine .container .sec-body {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+main .medicine .container .sec-body .box::before,
+main .medicine .container .sec-body .box .info {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+main .doctors .container .sec-body .box,
+main .medicine .container .sec-body .box::before,
+main .medicine .container .sec-body .box,
+main .blog .container .sec-body article,
+main .top a,
 header .container .account a,
+main .doctors .container .sec-body .box .info .contact>div a,
 main .contact .container .sec-body .sec-left .social-icon>div>div a,
 footer .container .f-info .f-social>div a {
   border-radius: 5px;
@@ -83,8 +127,9 @@ main .contact .container .sec-body .sec-left .social-icon>div>div a {
   -o-border-radius: 50%;
 }
 
+main .radiation .container .sec-body .text a,
 main .contact .container .sec-body .sec-right form input[type=submit] {
-  display: block;
+  width: 150px;
   margin: 0 auto;
   outline: none;
   border: 1px solid #eee;
@@ -92,17 +137,20 @@ main .contact .container .sec-body .sec-right form input[type=submit] {
   padding: 10px 20px;
 }
 
+main .radiation .container .sec-body .text a:hover,
 main .contact .container .sec-body .sec-right form input[type=submit]:hover {
   background-color: #777;
   color: #fff;
 }
 
+main .doctors .container .sec-body .box .info .contact,
 main .contact .container .sec-body .sec-left .social-icon>div,
 footer .container .f-info .f-social {
   flex-wrap: wrap;
   gap: 10px;
 }
 
+main .doctors .container .sec-body .box .info .contact>div a,
 main .contact .container .sec-body .sec-left .social-icon>div>div a,
 footer .container .f-info .f-social>div a {
   width: 40px;
@@ -110,20 +158,41 @@ footer .container .f-info .f-social>div a {
   background-color: #ccc;
 }
 
+main .doctors .container .sec-body .box .info .contact>div a:hover,
 main .contact .container .sec-body .sec-left .social-icon>div>div a:hover,
 footer .container .f-info .f-social>div a:hover {
   background-color: #aaa;
 }
 
+main .doctors .container .sec-body .box .info .contact>div a:hover i,
 main .contact .container .sec-body .sec-left .social-icon>div>div a:hover i,
 footer .container .f-info .f-social>div a:hover i {
   color: #777;
 }
 
+main .doctors .container .sec-body .box .info .contact>div a i,
 main .contact .container .sec-body .sec-left .social-icon>div>div a i,
 footer .container .f-info .f-social>div a i {
   color: #fff;
   font-size: 1.5rem;
+}
+
+main .blog .container .sec-body article .text .info span,
+footer .container .f-blog article .info span {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+main .blog .container .sec-body article .text .info span.input,
+footer .container .f-blog article .info span.input {
+  cursor: pointer;
+  font-style: italic;
+  color: #777;
+}
+
+main .blog .container .sec-body article .text .info span.input:hover,
+footer .container .f-blog article .info span.input:hover {
+  color: #aaa;
 }
 
 /* Start Global Rules:- */
@@ -211,6 +280,10 @@ i {
 }
 
 /* End Media Quires */
+article {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+}
+
 section .container .sec-head {
   padding-bottom: 60px;
   text-align: center;
@@ -233,17 +306,17 @@ section .container .sec-foot {
   padding-top: 60px;
 }
 
-section .container .sec-foot input[type=button] {
-  display: block;
+section .container .sec-foot a {
+  width: 150px;
+  padding: 10px 20px;
   margin: 0 auto;
   outline: none;
   border: 1px solid #eee;
   background-color: #eee;
-  padding: 10px 20px;
 }
 
-section .container .sec-foot input[type=button]:hover {
-  background-color: #777;
+section .container .sec-foot a:hover {
+  background-color: #777 !important;
   color: #fff;
 }
 
@@ -344,8 +417,15 @@ header .container .nav-icon.active span:last-of-type {
 }
 
 header .container nav {
-  opacity: 1 !important;
-  z-index: 1000 !important;
+  opacity: 1;
+  z-index: 1000;
+}
+
+@media (min-width: 992px) {
+  header .container nav {
+    opacity: 1 !important;
+    z-index: 1000 !important;
+  }
 }
 
 header .container nav ul {
@@ -385,23 +465,20 @@ header .container nav ul li a:hover {
 
 @media (max-width: 991px) {
   header .container nav {
-    right: -300px;
+    right: 0;
     display: block;
     width: 300px;
     height: calc(100% - 66px);
     background-color: #eee;
     position: absolute;
     top: 66px;
-    opacity: 0;
   }
 }
 
 @media (max-width: 991px) and (max-width: 575px) {
   header .container nav {
-    opacity: 0;
     width: 100%;
     height: 600px;
-    right: -100%;
   }
 }
 
@@ -563,12 +640,6 @@ footer .container .f-blog article .info span {
   color: #eee;
 }
 
-footer .container .f-blog article .info span.input {
-  cursor: pointer;
-  font-style: italic;
-  color: #aaa;
-}
-
 footer .container .f-blog article .info span.input:hover {
   color: #eee;
 }
@@ -603,24 +674,17 @@ main .slider div {
   max-height: calc(100vh - 66px);
 }
 
-main .doctors .container {
+main .doctors {
   padding: 60px 0;
 }
 
-main .doctors .container .sec-body {
-  display: -webkit-box;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  gap: 20px;
-}
-
 main .doctors .container .sec-body .box {
-  width: 250px;
   position: relative;
+  overflow: hidden;
 }
 
 main .doctors .container .sec-body .box img {
-  max-width: 100%;
+  width: 100%;
 }
 
 main .doctors .container .sec-body .box .info {
@@ -636,23 +700,242 @@ main .doctors .container .sec-body .box .info:hover {
   bottom: 0;
 }
 
-main .doctors .container .sec-body .box .info .contact a {
+main .doctors .container .sec-body .box .info p {
+  font-size: 0.9rem;
+}
+
+main .doctors .container .sec-body .box .info .contact {
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 0;
+}
+
+main .doctors .container .sec-body .box .info .contact>div a {
+  width: 30px;
+  height: 30px;
+}
+
+main .doctors .container .sec-body .box .info .contact>div a i {
+  font-size: 1.1rem;
+}
+
+main .medicine {
+  padding: 60px 0;
+  background-color: #eee;
+}
+
+@media (max-width: 575px) {
+  main .medicine .container .sec-body {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+main .medicine .container .sec-body .box {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+main .medicine .container .sec-body .box::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  width: 0;
+  height: 0;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+main .medicine .container .sec-body .box .info {
+  text-align: center;
+  color: #fff;
+  display: block;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 60px);
+  z-index: -1;
+  opacity: 0;
+}
+
+main .medicine .container .sec-body .box .info a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+main .medicine .container .sec-body .box .info a:hover i,
+main .medicine .container .sec-body .box .info a:hover h4 {
+  color: #ed4342;
+}
+
+main .medicine .container .sec-body .box .info a i {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  main .medicine .container .sec-body .box .info a i {
+    font-size: 1.5rem;
+  }
+}
+
+main .medicine .container .sec-body .box .info a h4 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+@media (max-width: 575px) {
+  main .medicine .container .sec-body .box .info a h4 {
+    font-size: 1.1rem;
+  }
+}
+
+main .medicine .container .sec-body .box .info p {
+  margin: 0;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 575px) {
+  main .medicine .container .sec-body .box .info p {
+    font-size: 0.8rem;
+  }
+}
+
+main .medicine .container .sec-body .box:hover::before {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+}
+
+main .medicine .container .sec-body .box:hover img {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+main .medicine .container .sec-body .box:hover .info {
+  opacity: 1;
+  z-index: 3;
+}
+
+main .medicine .container .sec-foot a {
+  background-color: #fff;
+}
+
+main .radiation {
+  padding: 60px 0;
+}
+
+main .radiation .container .sec-body {
+  background-color: #eee;
+}
+
+@media (max-width: 991px) {
+  main .radiation .container .sec-body {
+    flex-direction: column;
+  }
+}
+
+main .radiation .container .sec-body .text {
+  width: 50%;
+  padding: 60px 20px;
+}
+
+@media (max-width: 991px) {
+  main .radiation .container .sec-body .text {
+    width: 100%;
+  }
+}
+
+main .radiation .container .sec-body .text h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main .radiation .container .sec-body .text p {
+  margin-bottom: 40px;
+}
+
+main .radiation .container .sec-body .text a {
+  margin-left: 0;
+  background-color: #fff;
+}
+
+main .radiation .container .sec-body .image {
+  width: 50%;
+  padding: 0;
+  background-image: url(../Data/Images/radiation-places-image-1.jpg);
+}
+
+@media (max-width: 991px) {
+  main .radiation .container .sec-body .image {
+    display: none;
+  }
+}
+
+main .blog {
+  padding: 60px 0;
+  background-color: #eee;
+}
+
+main .blog .container .sec-body article {
+  overflow: hidden;
+}
+
+main .blog .container .sec-body article .text {
+  padding: 10px;
+  background-color: #fff;
+}
+
+main .blog .container .sec-body article .text a h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+main .blog .container .sec-body article .text p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+main .blog .container .sec-foot a {
+  background-color: #fff;
+}
+
+main .top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+}
+
+main .top a {
   width: 40px;
   height: 40px;
-  background-color: #ccc;
+  background-color: #222;
+  color: #eee;
+  font-size: 1.5rem;
 }
 
-main .doctors .container .sec-body .box .info .contact a:hover {
-  background-color: #aaa;
-}
-
-main .doctors .container .sec-body .box .info .contact a:hover i {
-  color: #777;
-}
-
-main .doctors .container .sec-body .box .info .contact a i {
-  color: #fff;
-  font-size: 1.2rem;
+main .top a:hover {
+  background-color: #fff;
+  color: #222;
 }
 
 main .contact {

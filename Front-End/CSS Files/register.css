@@ -22,7 +22,8 @@ body,
 .card .left form .check-box input:checked::after,
 .card .left form .field,
 .card .left .log-link,
-.card .right {
+.card .right,
+section .container .sec-foot a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,6 +166,10 @@ i {
 }
 
 /* End Media Quires */
+article {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+}
+
 section .container .sec-head {
   padding-bottom: 60px;
   text-align: center;
@@ -187,17 +192,17 @@ section .container .sec-foot {
   padding-top: 60px;
 }
 
-section .container .sec-foot input[type=button] {
-  display: block;
+section .container .sec-foot a {
+  width: 150px;
+  padding: 10px 20px;
   margin: 0 auto;
   outline: none;
   border: 1px solid #eee;
   background-color: #eee;
-  padding: 10px 20px;
 }
 
-section .container .sec-foot input[type=button]:hover {
-  background-color: #777;
+section .container .sec-foot a:hover {
+  background-color: #777 !important;
   color: #fff;
 }
 

@@ -6,6 +6,8 @@
 @use "../Global-rules/variables" as *;
 // import header styling:-
 @use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
 
 // additional page styling
 main {
@@ -15,6 +17,7 @@ main {
       max-height: calc(100vh - 66px);
     }
   }
+  // Start Doctors Styling:-
   .doctors {
     .container {
       padding: $up-down-padding 0;
@@ -66,4 +69,89 @@ main {
       }
     }
   }
+  // End Doctors Styling
+  // Start Contact Styling:-
+  .contact {
+    padding: $up-down-padding 0;
+    .container {
+      .sec-body {
+        @extend %flex-start-between;
+        gap: 20px;
+        @media (max-width: 767px) {
+          flex-direction: column;
+          gap: $up-down-padding;
+        }
+        h2 {
+          margin-bottom: 20px;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        .sec-left {
+          width: 50%;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          .contact-info {
+            .box {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              margin-bottom: 10px;
+              &:last-of-type {
+                margin: 0;
+              }
+              .icon-div {
+                i {
+                  @extend %flex-center-center;
+                  @extend %border-radius-50;
+                  width: 45px;
+                  height: 45px;
+                  background-color: #eee;
+                  font-size: 1.5rem;
+                }
+              }
+              span {
+                color: #222;
+              }
+            }
+          }
+          .social-icon {
+            padding-top: $up-down-padding;
+            > div {
+              @extend %social-media;
+              > div {
+                a {
+                  @extend %border-radius-50;
+                  width: 45px;
+                  height: 45px;
+                }
+              }
+            }
+          }
+        }
+        .sec-right {
+          width: 50%;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          form {
+            textarea {
+              padding: 10px;
+              width: 100%;
+              min-height: 250px;
+              border: 1px solid #aaa;
+              outline: none;
+              resize: none;
+            }
+            input[type="submit"] {
+              @extend %button-shape;
+              margin-top: 20px;
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  // End contact Styling
 }

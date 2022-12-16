@@ -18,13 +18,29 @@ a {
   cursor: pointer;
 }
 
+main .contact .container .sec-body .sec-left .contact-info .box .icon-div i,
 header .container nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-main .doctors .container .sec-body .box .info .contact a {
+main .contact .container .sec-body .sec-left .social-icon>div,
+footer .container .f-info .f-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main .contact .container .sec-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+main .doctors .container .sec-body .box .info .contact a,
+main .contact .container .sec-body .sec-left .social-icon>div>div a,
+footer .container .f-info .f-social>div a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -40,7 +56,9 @@ header .container .account {
 }
 
 main .doctors .container .sec-body .box .info .contact a,
-header .container .account a {
+header .container .account a,
+main .contact .container .sec-body .sec-left .social-icon>div>div a,
+footer .container .f-info .f-social>div a {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -54,6 +72,58 @@ header .container .nav-icon span {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+main .contact .container .sec-body .sec-left .contact-info .box .icon-div i,
+main .contact .container .sec-body .sec-left .social-icon>div>div a {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+main .contact .container .sec-body .sec-right form input[type=submit] {
+  display: block;
+  margin: 0 auto;
+  outline: none;
+  border: 1px solid #eee;
+  background-color: #eee;
+  padding: 10px 20px;
+}
+
+main .contact .container .sec-body .sec-right form input[type=submit]:hover {
+  background-color: #777;
+  color: #fff;
+}
+
+main .contact .container .sec-body .sec-left .social-icon>div,
+footer .container .f-info .f-social {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+main .contact .container .sec-body .sec-left .social-icon>div>div a,
+footer .container .f-info .f-social>div a {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+}
+
+main .contact .container .sec-body .sec-left .social-icon>div>div a:hover,
+footer .container .f-info .f-social>div a:hover {
+  background-color: #aaa;
+}
+
+main .contact .container .sec-body .sec-left .social-icon>div>div a:hover i,
+footer .container .f-info .f-social>div a:hover i {
+  color: #777;
+}
+
+main .contact .container .sec-body .sec-left .social-icon>div>div a i,
+footer .container .f-info .f-social>div a i {
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 /* Start Global Rules:- */
@@ -385,6 +455,146 @@ header .container .account a:last-of-type:hover {
   background-color: #aaa;
 }
 
+footer {
+  background-color: rgb(19, 19, 19);
+  padding: 60px 0;
+}
+
+footer .container {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+  footer .container {
+    gap: 40px;
+  }
+}
+
+footer .container>div h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #eee;
+}
+
+footer .container .f-info .f-logo h1 {
+  font-family: "Yesteryear", cursive;
+  font-size: 2.5rem;
+  color: #eee;
+  margin: 0;
+  margin-left: 4px;
+}
+
+footer .container .f-info .f-text p {
+  color: #ccc;
+  margin: 20px 0;
+}
+
+footer .container .f-links ul {
+  padding-top: 10px;
+}
+
+footer .container .f-links ul li {
+  border-bottom: 1px solid #eee;
+}
+
+footer .container .f-links ul li a {
+  display: block;
+  padding: 7px 0;
+  color: #eee;
+  position: relative;
+}
+
+footer .container .f-links ul li a::before {
+  content: "\f101";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+footer .container .f-links ul li a:hover {
+  color: #aaa;
+  padding-left: 20px;
+}
+
+footer .container .f-blog {
+  color: #eee;
+}
+
+footer .container .f-blog article {
+  padding: 10px 0;
+  border-bottom: 1px solid #aaa;
+}
+
+footer .container .f-blog article:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+footer .container .f-blog article a h4 {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #eee;
+}
+
+footer .container .f-blog article a h4:hover {
+  color: #aaa;
+}
+
+footer .container .f-blog article p {
+  color: #ccc;
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+footer .container .f-blog article .info span {
+  color: #eee;
+}
+
+footer .container .f-blog article .info span.input {
+  cursor: pointer;
+  font-style: italic;
+  color: #aaa;
+}
+
+footer .container .f-blog article .info span.input:hover {
+  color: #eee;
+}
+
+footer .rights p {
+  margin-top: 30px;
+  margin-bottom: -30px;
+  text-align: center;
+  color: #aaa;
+}
+
+footer .rights p a {
+  color: #eee;
+  font-size: 1.1rem;
+}
+
+footer .rights p a:hover {
+  color: #aaa;
+}
+
+footer .rights p span {
+  font-family: "Yesteryear", cursive;
+  font-size: 1.5rem;
+  color: #eee;
+}
+
 main {
   min-height: 200vh;
 }
@@ -443,4 +653,90 @@ main .doctors .container .sec-body .box .info .contact a:hover i {
 main .doctors .container .sec-body .box .info .contact a i {
   color: #fff;
   font-size: 1.2rem;
+}
+
+main .contact {
+  padding: 60px 0;
+}
+
+main .contact .container .sec-body {
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  main .contact .container .sec-body {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+
+main .contact .container .sec-body h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main .contact .container .sec-body .sec-left {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  main .contact .container .sec-body .sec-left {
+    width: 100%;
+  }
+}
+
+main .contact .container .sec-body .sec-left .contact-info .box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+main .contact .container .sec-body .sec-left .contact-info .box:last-of-type {
+  margin: 0;
+}
+
+main .contact .container .sec-body .sec-left .contact-info .box .icon-div i {
+  width: 45px;
+  height: 45px;
+  background-color: #eee;
+  font-size: 1.5rem;
+}
+
+main .contact .container .sec-body .sec-left .contact-info .box span {
+  color: #222;
+}
+
+main .contact .container .sec-body .sec-left .social-icon {
+  padding-top: 60px;
+}
+
+main .contact .container .sec-body .sec-left .social-icon>div>div a {
+  width: 45px;
+  height: 45px;
+}
+
+main .contact .container .sec-body .sec-right {
+  width: 50%;
+}
+
+@media (max-width: 767px) {
+  main .contact .container .sec-body .sec-right {
+    width: 100%;
+  }
+}
+
+main .contact .container .sec-body .sec-right form textarea {
+  padding: 10px;
+  width: 100%;
+  min-height: 250px;
+  border: 1px solid #aaa;
+  outline: none;
+  resize: none;
+}
+
+main .contact .container .sec-body .sec-right form input[type=submit] {
+  margin-top: 20px;
+  margin-right: 0;
 }

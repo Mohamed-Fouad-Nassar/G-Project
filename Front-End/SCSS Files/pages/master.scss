@@ -17,22 +17,22 @@ main {
       max-height: calc(100vh - 66px);
     }
   }
-  // Start Doctors Styling:-
+  //doctors sec styling
   .doctors {
+    margin-top: $margin-50;
     .container {
-      padding: $up-down-padding 0;
       .sec-body {
-        // display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        display: -webkit-box;
-        overflow-x: scroll;
-        overflow-y: hidden;
+        @extend %flex-center-center;
+        flex-wrap: wrap;
+        overflow: hidden;
         gap: 20px;
         .box {
           width: 250px;
           position: relative;
+          overflow: hidden;
+
           img {
-            max-width: 100%;
+            width: 100%;
           }
           .info {
             position: absolute;
@@ -69,7 +69,82 @@ main {
       }
     }
   }
-  // End Doctors Styling
+  //end doctors sec
+
+  //styling for medicine sec
+    .medicine{
+      margin-top: $margin-50;
+      padding: 30px 0;
+      background-color: #eee;
+      //medicine footer
+      .sec-foot{
+        input[type= "button"]{
+          background-color: #fff;
+        }
+      }
+    }
+  //end styling for medicine sec
+
+  //styling for radiation
+    .radiation{
+      margin-top: $margin-50;
+      padding: 10px 50px;
+      .sec-head{
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 30px;
+        h2{
+          font-size: 1.9rem;
+          margin: 0;
+          margin-bottom: 20px;
+        }
+        p{
+          max-width: 750px;
+          margin: 0 auto;
+          font-size: 0.9rem;
+          color: #777;  
+        }
+      }
+      .row .image{
+        padding: 0 !important;
+      }
+      .sec-body{
+        background-color: #eee;
+        .text{
+          padding: $main-element-padding;
+          h2{
+            line-height: 1.2rem;
+            margin-bottom: 30px;
+          }
+          input[type= "button"]{
+            background-color: #fff;
+            border: none;
+            padding: 10px 15px;
+            &:hover{
+              background-color: #777;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  //end radiation styling
+
+
+  //blog
+    .blog{
+      margin-top: $margin-50;
+      .sec-body{
+        margin-top: 20px;
+      }
+      .card{
+        border: none;
+        margin-bottom: 50px;
+      }
+    }
+  //end blog styling
+
+
   // Start Contact Styling:-
   .contact {
     padding: $up-down-padding 0;

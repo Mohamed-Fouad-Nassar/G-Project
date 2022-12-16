@@ -417,8 +417,8 @@ header .container .nav-icon.active span:last-of-type {
 }
 
 header .container nav {
-  opacity: 1;
-  z-index: 1000;
+  opacity: 0;
+  z-index: -1;
 }
 
 @media (min-width: 992px) {

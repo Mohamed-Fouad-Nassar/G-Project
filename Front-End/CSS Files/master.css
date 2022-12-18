@@ -18,12 +18,14 @@ a {
   cursor: pointer;
 }
 
+main .slider .caption,
 main .top a,
 main .contact .container .sec-body .sec-left .contact-info .box .icon-div i,
 header .container nav ul li a,
-section .container .sec-foot a,
 main .radiation .container .sec-body .text a,
-main .contact .container .sec-body .sec-right form input[type=submit] {
+main .contact .container .sec-body .sec-right form input[type=submit],
+header .container .account a,
+section .container .sec-foot a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,7 +101,6 @@ main .medicine .container .sec-body .box::before,
 main .medicine .container .sec-body .box,
 main .blog .container .sec-body article,
 main .top a,
-header .container .account a,
 main .doctors .container .sec-body .box .info .contact>div a,
 main .contact .container .sec-body .sec-left .social-icon>div>div a,
 footer .container .f-info .f-social>div a {
@@ -128,19 +129,24 @@ main .contact .container .sec-body .sec-left .social-icon>div>div a {
 }
 
 main .radiation .container .sec-body .text a,
-main .contact .container .sec-body .sec-right form input[type=submit] {
+main .contact .container .sec-body .sec-right form input[type=submit],
+header .container .account a,
+section .container .sec-foot a {
   width: 150px;
   margin: 0 auto;
   outline: none;
-  border: 1px solid #eee;
-  background-color: #eee;
+  color: #fff;
+  border: 1px solid #e67a7a;
+  background-color: #e67a7a;
   padding: 10px 20px;
 }
 
 main .radiation .container .sec-body .text a:hover,
-main .contact .container .sec-body .sec-right form input[type=submit]:hover {
-  background-color: #777;
-  color: #fff;
+main .contact .container .sec-body .sec-right form input[type=submit]:hover,
+header .container .account a:hover,
+section .container .sec-foot a:hover {
+  background-color: #ed4342;
+  border-color: #ed4342;
 }
 
 main .doctors .container .sec-body .box .info .contact,
@@ -155,19 +161,13 @@ main .contact .container .sec-body .sec-left .social-icon>div>div a,
 footer .container .f-info .f-social>div a {
   width: 40px;
   height: 40px;
-  background-color: #ccc;
-}
-
-main .doctors .container .sec-body .box .info .contact>div a:hover,
-main .contact .container .sec-body .sec-left .social-icon>div>div a:hover,
-footer .container .f-info .f-social>div a:hover {
-  background-color: #aaa;
+  background-color: #e67a7a;
 }
 
 main .doctors .container .sec-body .box .info .contact>div a:hover i,
 main .contact .container .sec-body .sec-left .social-icon>div>div a:hover i,
 footer .container .f-info .f-social>div a:hover i {
-  color: #777;
+  color: #ed4342;
 }
 
 main .doctors .container .sec-body .box .info .contact>div a i,
@@ -179,7 +179,7 @@ footer .container .f-info .f-social>div a i {
 
 main .blog .container .sec-body article .text .info span,
 footer .container .f-blog article .info span {
-  color: #333;
+  color: #777;
   font-size: 0.9rem;
 }
 
@@ -221,6 +221,7 @@ ul {
 }
 
 input[type=submit],
+input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
@@ -232,6 +233,10 @@ i {
   -moz-transition: 0s;
   -ms-transition: 0s;
   -o-transition: 0s;
+}
+
+input {
+  caret-color: #ed4342;
 }
 
 .container {
@@ -280,12 +285,8 @@ i {
 }
 
 /* End Media Quires */
-article {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-}
-
 section .container .sec-head {
-  padding-bottom: 60px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -303,21 +304,7 @@ section .container .sec-head p {
 }
 
 section .container .sec-foot {
-  padding-top: 60px;
-}
-
-section .container .sec-foot a {
-  width: 150px;
-  padding: 10px 20px;
-  margin: 0 auto;
-  outline: none;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-section .container .sec-foot a:hover {
-  background-color: #777 !important;
-  color: #fff;
+  padding-top: 100px;
 }
 
 header {
@@ -332,13 +319,10 @@ header {
 }
 
 header .container .logo a h1 {
+  color: #ed4342;
   font-size: 2.5rem;
   font-family: "Yesteryear", cursive;
   margin: 0;
-}
-
-header .container .logo a:hover {
-  color: #aaa;
 }
 
 header .container .nav-icon {
@@ -370,11 +354,11 @@ header .container .nav-icon span:last-of-type {
 }
 
 header .container .nav-icon:hover span {
-  background-color: #aaa;
+  background-color: #e67a7a;
 }
 
 header .container .nav-icon.active:hover span {
-  background-color: #aaa;
+  background-color: #e67a7a;
 }
 
 header .container .nav-icon.active span:first-of-type,
@@ -452,7 +436,7 @@ header .container nav ul li:nth-last-of-type(2) {
 }
 
 header .container nav ul li.active {
-  border-bottom: 2px solid #aaa;
+  border-bottom: 2px solid #ed4342;
 }
 
 header .container nav ul li a {
@@ -460,7 +444,7 @@ header .container nav ul li a {
 }
 
 header .container nav ul li a:hover {
-  color: #aaa;
+  color: #ed4342;
 }
 
 @media (max-width: 991px) {
@@ -490,7 +474,7 @@ header .container nav ul li a:hover {
 
   header .container nav ul li {
     padding: 0;
-    border-bottom: 1px solid #aaa !important;
+    border-bottom: 1px solid #e67a7a !important;
   }
 
   header .container nav ul li a {
@@ -515,26 +499,24 @@ header .container .account {
 }
 
 header .container .account a {
-  padding: 7px 15px;
-  color: white;
-  background-color: #aaa;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  padding: 10px 15px;
 }
 
-header .container .account a:hover {
-  background-color: #585858;
+header .container .account a:first-of-type {
+  background-color: #ed4342;
 }
 
-header .container .account a:last-of-type {
-  background-color: #ccc;
-}
-
-header .container .account a:last-of-type:hover {
-  background-color: #aaa;
+header .container .account a:first-of-type:hover {
+  background-color: #e67a7a;
 }
 
 footer {
   background-color: rgb(19, 19, 19);
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 footer .container {
@@ -666,16 +648,47 @@ footer .rights p span {
   color: #eee;
 }
 
-main {
-  min-height: 200vh;
-}
-
 main .slider div {
   max-height: calc(100vh - 66px);
 }
 
+main .slider .caption {
+  flex-direction: column;
+  display: flex !important;
+  bottom: initial;
+  padding: 100px;
+  background-color: rgba(119, 119, 119, 0.7);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+main .slider .caption h5 {
+  margin-bottom: 20px;
+}
+
+main .slider .caption p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  main .slider .caption h5 {
+    font-size: 1.2rem;
+  }
+
+  main .slider .caption p {
+    font-size: 0.85rem;
+  }
+}
+
 main .doctors {
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 main .doctors .container .sec-body .box {
@@ -692,12 +705,16 @@ main .doctors .container .sec-body .box .info {
   bottom: -50px;
   left: 0;
   width: 100%;
-  background-color: rgba(204, 204, 204, 0.8);
+  background-color: rgba(238, 238, 238, 0.5);
   padding: 10px;
 }
 
 main .doctors .container .sec-body .box .info:hover {
   bottom: 0;
+}
+
+main .doctors .container .sec-body .box .info h5 {
+  color: #ed4342;
 }
 
 main .doctors .container .sec-body .box .info p {
@@ -720,7 +737,7 @@ main .doctors .container .sec-body .box .info .contact>div a i {
 }
 
 main .medicine {
-  padding: 60px 0;
+  padding: 100px 0;
   background-color: #eee;
 }
 
@@ -731,6 +748,7 @@ main .medicine {
 }
 
 main .medicine .container .sec-body .box {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -745,8 +763,7 @@ main .medicine .container .sec-body .box::before {
   height: calc(100% - 40px);
   width: 0;
   height: 0;
-  background-color: #000;
-  opacity: 0.5;
+  background-color: rgba(119, 119, 119, 0.7);
   z-index: 2;
 }
 
@@ -766,6 +783,7 @@ main .medicine .container .sec-body .box .info {
 main .medicine .container .sec-body .box .info a {
   display: block;
   margin-bottom: 10px;
+  color: #e67a7a;
 }
 
 main .medicine .container .sec-body .box .info a:hover i,
@@ -776,7 +794,7 @@ main .medicine .container .sec-body .box .info a:hover h4 {
 main .medicine .container .sec-body .box .info a i {
   margin-bottom: 10px;
   font-size: 2rem;
-  color: #fff;
+  color: #e67a7a;
 }
 
 @media (max-width: 575px) {
@@ -788,7 +806,7 @@ main .medicine .container .sec-body .box .info a i {
 main .medicine .container .sec-body .box .info a h4 {
   margin-bottom: 10px;
   font-size: 1.5rem;
-  color: #fff;
+  color: #e67a7a;
 }
 
 @media (max-width: 575px) {
@@ -830,12 +848,8 @@ main .medicine .container .sec-body .box:hover .info {
   z-index: 3;
 }
 
-main .medicine .container .sec-foot a {
-  background-color: #fff;
-}
-
 main .radiation {
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 main .radiation .container .sec-body {
@@ -850,7 +864,7 @@ main .radiation .container .sec-body {
 
 main .radiation .container .sec-body .text {
   width: 50%;
-  padding: 60px 20px;
+  padding: 100px 20px;
 }
 
 @media (max-width: 991px) {
@@ -871,7 +885,6 @@ main .radiation .container .sec-body .text p {
 
 main .radiation .container .sec-body .text a {
   margin-left: 0;
-  background-color: #fff;
 }
 
 main .radiation .container .sec-body .image {
@@ -887,11 +900,12 @@ main .radiation .container .sec-body .image {
 }
 
 main .blog {
-  padding: 60px 0;
+  padding: 100px 0;
   background-color: #eee;
 }
 
 main .blog .container .sec-body article {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
 
@@ -914,10 +928,6 @@ main .blog .container .sec-body article .text p {
   overflow: hidden;
 }
 
-main .blog .container .sec-foot a {
-  background-color: #fff;
-}
-
 main .top {
   position: fixed;
   bottom: 15px;
@@ -928,18 +938,17 @@ main .top {
 main .top a {
   width: 40px;
   height: 40px;
-  background-color: #222;
+  background-color: #e67a7a;
   color: #eee;
   font-size: 1.5rem;
 }
 
 main .top a:hover {
-  background-color: #fff;
-  color: #222;
+  background-color: #ed4342;
 }
 
 main .contact {
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 main .contact .container .sec-body {
@@ -949,7 +958,7 @@ main .contact .container .sec-body {
 @media (max-width: 767px) {
   main .contact .container .sec-body {
     flex-direction: column;
-    gap: 60px;
+    gap: 100px;
   }
 }
 
@@ -983,16 +992,17 @@ main .contact .container .sec-body .sec-left .contact-info .box:last-of-type {
 main .contact .container .sec-body .sec-left .contact-info .box .icon-div i {
   width: 45px;
   height: 45px;
-  background-color: #eee;
+  background-color: #e67a7a;
+  color: #fff;
   font-size: 1.5rem;
 }
 
 main .contact .container .sec-body .sec-left .contact-info .box span {
-  color: #222;
+  color: #000;
 }
 
 main .contact .container .sec-body .sec-left .social-icon {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 main .contact .container .sec-body .sec-left .social-icon>div>div a {
@@ -1014,9 +1024,14 @@ main .contact .container .sec-body .sec-right form textarea {
   padding: 10px;
   width: 100%;
   min-height: 250px;
-  border: 1px solid #aaa;
+  border: 1px solid #e67a7a;
   outline: none;
   resize: none;
+  caret-color: #ed4342;
+}
+
+main .contact .container .sec-body .sec-right form textarea:focus {
+  border-color: #ed4342;
 }
 
 main .contact .container .sec-body .sec-right form input[type=submit] {

@@ -23,14 +23,23 @@ body,
 .card .left form .field,
 .card .left .log-link,
 .card .right,
+.card .left form input[type=submit],
+.card .left form input[type=reset],
+.card .right .text a,
 section .container .sec-foot a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.card .left form .check-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .card .left form section .sec-flex,
-.card .left form .data,
+.card .left form .name .data,
 .card .left form .buttons {
   display: flex;
   align-items: center;
@@ -46,9 +55,7 @@ section .container .sec-foot a {
   -o-transform: translate(-50%, -50%);
 }
 
-.card,
-.card .left form input[type=submit],
-.card .right .text a {
+.card {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -81,6 +88,27 @@ section .container .sec-foot a {
   -o-transform: translateY(-50%);
 }
 
+.card .left form input[type=submit],
+.card .left form input[type=reset],
+.card .right .text a,
+section .container .sec-foot a {
+  width: 150px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #e67a7a;
+  background-color: #e67a7a;
+  padding: 10px 20px;
+}
+
+.card .left form input[type=submit]:hover,
+.card .left form input[type=reset]:hover,
+.card .right .text a:hover,
+section .container .sec-foot a:hover {
+  background-color: #ed4342;
+  border-color: #ed4342;
+}
+
 /* Start Global Rules:- */
 * {
   box-sizing: border-box;
@@ -107,6 +135,7 @@ ul {
 }
 
 input[type=submit],
+input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
@@ -118,6 +147,10 @@ i {
   -moz-transition: 0s;
   -ms-transition: 0s;
   -o-transition: 0s;
+}
+
+input {
+  caret-color: #ed4342;
 }
 
 .container {
@@ -166,12 +199,8 @@ i {
 }
 
 /* End Media Quires */
-article {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-}
-
 section .container .sec-head {
-  padding-bottom: 60px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -189,21 +218,7 @@ section .container .sec-head p {
 }
 
 section .container .sec-foot {
-  padding-top: 60px;
-}
-
-section .container .sec-foot a {
-  width: 150px;
-  padding: 10px 20px;
-  margin: 0 auto;
-  outline: none;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-section .container .sec-foot a:hover {
-  background-color: #777 !important;
-  color: #fff;
+  padding-top: 100px;
 }
 
 body {
@@ -244,6 +259,10 @@ body {
 .card .left .head p {
   margin: 0;
   margin-bottom: 10px;
+}
+
+.card .left .head h2 {
+  color: #ed4342;
 }
 
 .card .left .head p {
@@ -316,13 +335,36 @@ body {
   }
 }
 
-.card .left form .data,
 .card .left form .buttons {
-  margin-bottom: 20px;
+  gap: 10px;
 }
 
-.card .left form .check-box a {
-  color: #aaa;
+@media (max-width: 767px) {
+  .card .left form .buttons {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 370px) {
+  .card .left form .buttons {
+    flex-direction: column;
+  }
+}
+
+.card .left form .check-box {
+  gap: 10px;
+}
+
+.card .left form .check-box label {
+  font-size: 0.9rem;
+}
+
+.card .left form .check-box label a {
+  color: #e67a7a;
+}
+
+.card .left form .check-box label a:hover {
+  color: #ed4342;
 }
 
 .card .left form .check-box input {
@@ -347,11 +389,11 @@ body {
   height: 100%;
   border-radius: 2px;
   background-color: #fff;
-  border: 1.5px solid #aaa;
+  border: 1.5px solid #e67a7a;
 }
 
 .card .left form .check-box input:hover::before {
-  border-color: #000;
+  border-color: #ed4342;
 }
 
 .card .left form .check-box input::after {
@@ -361,7 +403,7 @@ body {
   width: 0;
   height: 0;
   border-radius: 2px;
-  background-color: #000;
+  background-color: #ed4342;
   transform: translate(-50%, -50%) rotate(3turn);
   -webkit-transform: translate(-50%, -50%) rotate(3turn);
   -moz-transform: translate(-50%, -50%) rotate(3turn);
@@ -377,7 +419,7 @@ body {
   left: calc(50% + 1px);
   top: calc(50% + 1px);
   font-size: 1rem;
-  border: 2px solid #000;
+  border: 2px solid #ed4342;
   width: 100%;
   height: 101%;
   transform: translate(-50%, -50%) rotate(0);
@@ -389,18 +431,23 @@ body {
 
 .card .left form .field {
   flex-direction: row-reverse;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #e67a7a;
   position: relative;
+  gap: 10px;
 }
 
 .card .left form .field input[type=text],
 .card .left form .field input[type=email],
 .card .left form .field input[type=Password] {
   flex: 1;
-  padding: 7px 10px;
+  padding: 10px 0;
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.card .left form .field i {
+  color: #e67a7a;
 }
 
 .card .left form .gender p {
@@ -443,11 +490,11 @@ body {
   width: 16px;
   height: 16px;
   background-color: #fff;
-  border: 1.5px solid #aaa;
+  border: 1.5px solid #e67a7a;
 }
 
 .card .left form .gender .choose input:hover::before {
-  border-color: #000;
+  border-color: #ed4342;
 }
 
 .card .left form .gender .choose input::after {
@@ -456,19 +503,19 @@ body {
 }
 
 .card .left form .gender .choose input:checked::before {
-  border-color: #000;
+  border-color: #ed4342;
 }
 
 .card .left form .gender .choose input:checked:after {
   width: 12px;
   height: 12px;
-  background-color: #000;
+  background-color: #ed4342;
 }
 
 .card .left form .gender .choose label {
   cursor: pointer;
   display: inline-block;
-  margin-left: 7px;
+  margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 0;
 }
@@ -480,22 +527,8 @@ body {
   padding: 7px 10px;
   border: none;
   outline: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #e67a7a;
   background-color: transparent;
-}
-
-.card .left form input[type=submit] {
-  min-width: 150px;
-  margin: auto;
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  background-color: #aaa;
-  color: #fff;
-}
-
-.card .left form input[type=submit]:hover {
-  background-color: #777;
 }
 
 .card .left .log-link {
@@ -504,11 +537,11 @@ body {
 
 .card .left .log-link a {
   font-size: 1rem;
-  color: #aaa;
+  color: #e67a7a;
 }
 
 .card .left .log-link a:hover {
-  color: #777;
+  color: #ed4342;
 }
 
 @media (min-width: 768px) {
@@ -527,8 +560,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #777;
-  opacity: 0.5;
+  background-color: rgba(119, 119, 119, 0.7);
   position: absolute;
   top: 0;
   left: 0;
@@ -565,17 +597,4 @@ body {
 
 .card .right .text h3 {
   margin: 20px 0;
-}
-
-.card .right .text a {
-  display: block;
-  margin: auto;
-  max-width: 150px;
-  padding: 10px 20px;
-  background-color: #aaa;
-  color: #fff;
-}
-
-.card .right .text a:hover {
-  background-color: #777;
 }

@@ -2,11 +2,17 @@
 $main-element-padding: 20px;
 $sec-element-padding: 10px;
 $field-top-padding: 7px;
-$up-down-padding: 60px;
+$up-down-padding: 100px;
 // Light Mode colors :-
 $black-color: #000;
 $white-color: #fff;
+$main-color: #ed4342;
+$sec-color: #e67a7a;
 $sec-text-color: #777;
 $main-background-color: #eee;
 $hover-text-color: #aaa;
-$main-color: #ed4342;
+$hovered-btn-color: #777;
+$transparent-color: rgba(238, 238, 238, 0.5);
+$black-transparent-color: rgba(119, 119, 119, 0.7);
+// Box Shadow:-
+$main-box-shadow: 0px 3px 8px rgb(0 0 0 / 24%);

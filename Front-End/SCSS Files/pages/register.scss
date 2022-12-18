@@ -16,7 +16,7 @@ body {
   max-width: 950px;
   margin: auto;
   display: flex;
-  background-color: #eee;
+  background-color: $main-background-color;
   overflow: hidden;
   @media (max-width: 767px) {
     max-width: 400px;
@@ -35,6 +35,9 @@ body {
         margin: 0 {
           bottom: $sec-element-padding;
         }
+      }
+      h2 {
+        color: $main-color;
       }
       p {
         font-size: 0.9rem;
@@ -62,6 +65,7 @@ body {
           }
         }
         .data {
+          @extend %flex-center-between;
           @media (max-width: 991px) {
             flex-direction: column;
             gap: $main-element-padding;
@@ -100,24 +104,38 @@ body {
           }
         }
       }
-      .data,
       .buttons {
         @extend %flex-center-between;
-        margin-bottom: $main-element-padding;
+        gap: $sec-element-padding;
+        @media (max-width: 767px) {
+          margin-bottom: $main-element-padding;
+        }
+        @media (max-width: 370px) {
+          flex-direction: column;
+        }
       }
       .check-box {
-        a {
-          color: #aaa;
+        @extend %flex-center-start;
+        gap: $sec-element-padding;
+        label {
+          font-size: 0.9rem;
+          a {
+            color: $sec-color;
+            &:hover {
+              color: $main-color;
+            }
+          }
         }
         input {
-          @include check-box-shape($black-color);
+          @include check-box-shape($main-color);
         }
       }
       .field {
         @extend %flex-center-center;
         flex-direction: row-reverse;
-        border-bottom: 2px solid $black-color;
+        border-bottom: 2px solid $sec-color;
         position: relative;
+        gap: 10px;
         &::after {
           @extend %error-sign;
         }
@@ -125,10 +143,13 @@ body {
         input[type="email"],
         input[type="Password"] {
           flex: 1;
-          padding: $field-top-padding $sec-element-padding;
+          padding: $sec-element-padding 0;
           border: none;
           outline: none;
           background-color: transparent;
+        }
+        i {
+          color: $sec-color;
         }
       }
       .gender {
@@ -151,13 +172,13 @@ body {
         .choose {
           input {
             margin-bottom: 5px;
-            @include radio-shape($black-color);
+            @include radio-shape($main-color);
           }
           label {
             cursor: pointer;
             display: inline-block;
             margin: {
-              left: $field-top-padding;
+              left: $sec-element-padding;
               top: $sec-element-padding;
               bottom: 0;
             }
@@ -171,31 +192,22 @@ body {
         padding: $field-top-padding $sec-element-padding;
         border: none;
         outline: none;
-        border-bottom: 2px solid $black-color;
+        border-bottom: 2px solid $sec-color;
         background-color: transparent;
       }
-      input[type="submit"] {
-        @extend %border-radius-10;
-        min-width: 150px;
-        margin: auto;
-        padding: $sec-element-padding $main-element-padding;
-        border: none;
-        outline: none;
-        background-color: #aaa;
-        color: $white-color;
-        &:hover {
-          background-color: #777;
-        }
+      input[type="submit"],
+      input[type="reset"] {
+        @extend %button-shape;
       }
     }
     .log-link {
       @extend %flex-center-center;
-      gap: 10px;
+      gap: $sec-element-padding;
       a {
         font-size: 1rem;
-        color: #aaa;
+        color: $sec-color;
         &:hover {
-          color: #777;
+          color: $main-color;
         }
       }
       @media (min-width: 768px) {
@@ -208,8 +220,7 @@ body {
       content: "";
       width: 100%;
       height: 100%;
-      background-color: #777;
-      opacity: 0.5;
+      background-color: $black-transparent-color;
       position: absolute;
       top: 0;
       left: 0;
@@ -244,16 +255,7 @@ body {
         margin: $main-element-padding 0;
       }
       a {
-        @extend %border-radius-10;
-        display: block;
-        margin: auto;
-        max-width: 150px;
-        padding: $sec-element-padding $main-element-padding;
-        background-color: #aaa;
-        color: $white-color;
-        &:hover {
-          background-color: #777;
-        }
+        @extend %button-shape;
       }
     }
   }

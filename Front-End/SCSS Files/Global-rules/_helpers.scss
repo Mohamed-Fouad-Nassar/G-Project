@@ -127,12 +127,13 @@
   width: 150px;
   margin: 0 auto;
   outline: none;
-  border: 1px solid #eee;
-  background-color: #eee;
-  padding: 10px 20px;
+  color: $white-color;
+  border: 1px solid $sec-color;
+  background-color: $sec-color;
+  padding: $sec-element-padding $main-element-padding;
   &:hover {
-    background-color: #777;
-    color: $white-color;
+    background-color: $main-color;
+    border-color: $main-color;
   }
 }
 
@@ -146,11 +147,10 @@
       @extend %border-radius-5;
       width: 40px;
       height: 40px;
-      background-color: #ccc;
+      background-color: $sec-color;
       &:hover {
-        background-color: #aaa;
         i {
-          color: #777;
+          color: $main-color;
         }
       }
       i {
@@ -163,12 +163,12 @@
 
 %article-info {
   span {
-    color: #333;
+    color: $sec-text-color;
     font-size: 0.9rem;
     &.input {
       cursor: pointer;
       font-style: italic;
-      color: #777;
+      color: $sec-text-color;
       &:hover {
         color: $hover-text-color;
       }
@@ -197,7 +197,7 @@
     height: 100%;
     border-radius: 2px;
     background-color: $white-color;
-    border: 1.5px solid #aaa;
+    border: 1.5px solid $sec-color;
   }
   &:hover::before {
     border-color: $color;
@@ -253,7 +253,7 @@
     width: 16px;
     height: 16px;
     background-color: $white-color;
-    border: 1.5px solid #aaa;
+    border: 1.5px solid $sec-color;
   }
   &:hover::before {
     border-color: $color;

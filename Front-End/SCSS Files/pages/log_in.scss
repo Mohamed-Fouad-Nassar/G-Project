@@ -16,7 +16,7 @@ body {
   max-width: 950px;
   margin: auto;
   display: flex;
-  background-color: #eee;
+  background-color: $main-background-color;
   overflow: hidden;
   @media (max-width: 767px) {
     max-width: 400px;
@@ -36,6 +36,9 @@ body {
           bottom: $sec-element-padding;
         }
       }
+      h2 {
+        color: $main-color;
+      }
       p {
         font-size: 0.9rem;
       }
@@ -52,7 +55,7 @@ body {
         .field {
           @extend %flex-center-center;
           flex-direction: row-reverse;
-          border-bottom: 2px solid $black-color;
+          border-bottom: 2px solid $sec-color;
           position: relative;
           &::after {
             @extend %error-sign;
@@ -64,12 +67,15 @@ body {
             outline: none;
             background-color: transparent;
           }
+          i {
+            color: $sec-color;
+          }
         }
         .left-sec {
           display: flex;
           gap: $field-top-padding;
           input {
-            @include check-box-shape($black-color);
+            @include check-box-shape($main-color);
           }
           label {
             margin: 0;
@@ -80,25 +86,15 @@ body {
         .right-sec {
           a {
             font-size: 0.9rem;
+            color: $sec-color;
             &:hover {
-              color: #777;
+              color: $main-color;
             }
           }
         }
       }
       input[type="submit"] {
-        @extend %border-radius-10;
-        display: block;
-        min-width: 150px;
-        margin: auto;
-        padding: $sec-element-padding $main-element-padding;
-        border: none;
-        outline: none;
-        background-color: #aaa;
-        color: $white-color;
-        &:hover {
-          background-color: #777;
-        }
+        @extend %button-shape;
       }
     }
     .reg-link {
@@ -107,8 +103,9 @@ body {
       padding-bottom: $main-element-padding;
       a {
         font-size: 0.9rem;
+        color: $sec-color;
         &:hover {
-          color: #777;
+          color: $main-color;
         }
       }
     }
@@ -125,21 +122,20 @@ body {
       }
       .links {
         @extend %flex-center-center;
-        gap: 20px;
+        gap: $main-element-padding;
         a {
           @extend %flex-center-center;
+          @extend %border-radius-50;
           width: 40px;
           height: 40px;
-          background-color: #ccc;
-          border-radius: 50%;
-          -webkit-border-radius: 50%;
-          -moz-border-radius: 50%;
-          -ms-border-radius: 50%;
-          -o-border-radius: 50%;
+          background-color: $sec-color;
           &:hover {
-            background-color: #777;
+            i {
+              color: $main-color;
+            }
           }
           i {
+            color: $white-color;
             font-size: 1.2rem;
           }
         }
@@ -151,8 +147,7 @@ body {
       content: "";
       width: 100%;
       height: 100%;
-      background-color: #777;
-      opacity: 0.5;
+      background-color: $black-transparent-color;
       position: absolute;
       top: 0;
       left: 0;

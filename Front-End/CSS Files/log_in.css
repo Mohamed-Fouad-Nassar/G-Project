@@ -26,6 +26,7 @@ body,
 .card .left .social-log .links,
 .card .left .social-log .links a,
 .card .right,
+.card .left form input[type=submit],
 section .container .sec-foot a {
   display: flex;
   align-items: center;
@@ -38,13 +39,20 @@ section .container .sec-foot a {
   justify-content: space-between;
 }
 
-.card,
-.card .left form input[type=submit] {
+.card {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+.card .left .social-log .links a {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
 .card .left form section .field::after {
@@ -60,6 +68,23 @@ section .container .sec-foot a {
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
+}
+
+.card .left form input[type=submit],
+section .container .sec-foot a {
+  width: 150px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #e67a7a;
+  background-color: #e67a7a;
+  padding: 10px 20px;
+}
+
+.card .left form input[type=submit]:hover,
+section .container .sec-foot a:hover {
+  background-color: #ed4342;
+  border-color: #ed4342;
 }
 
 /* Start Global Rules:- */
@@ -88,6 +113,7 @@ ul {
 }
 
 input[type=submit],
+input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
@@ -99,6 +125,10 @@ i {
   -moz-transition: 0s;
   -ms-transition: 0s;
   -o-transition: 0s;
+}
+
+input {
+  caret-color: #ed4342;
 }
 
 .container {
@@ -147,12 +177,8 @@ i {
 }
 
 /* End Media Quires */
-article {
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-}
-
 section .container .sec-head {
-  padding-bottom: 60px;
+  padding-bottom: 100px;
   text-align: center;
 }
 
@@ -170,21 +196,7 @@ section .container .sec-head p {
 }
 
 section .container .sec-foot {
-  padding-top: 60px;
-}
-
-section .container .sec-foot a {
-  width: 150px;
-  padding: 10px 20px;
-  margin: 0 auto;
-  outline: none;
-  border: 1px solid #eee;
-  background-color: #eee;
-}
-
-section .container .sec-foot a:hover {
-  background-color: #777 !important;
-  color: #fff;
+  padding-top: 100px;
 }
 
 body {
@@ -227,6 +239,10 @@ body {
   margin-bottom: 10px;
 }
 
+.card .left .head h2 {
+  color: #ed4342;
+}
+
 .card .left .head p {
   font-size: 0.9rem;
 }
@@ -241,7 +257,7 @@ body {
 
 .card .left form section .field {
   flex-direction: row-reverse;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #e67a7a;
   position: relative;
 }
 
@@ -251,6 +267,10 @@ body {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.card .left form section .field i {
+  color: #e67a7a;
 }
 
 .card .left form section .left-sec {
@@ -280,11 +300,11 @@ body {
   height: 100%;
   border-radius: 2px;
   background-color: #fff;
-  border: 1.5px solid #aaa;
+  border: 1.5px solid #e67a7a;
 }
 
 .card .left form section .left-sec input:hover::before {
-  border-color: #000;
+  border-color: #ed4342;
 }
 
 .card .left form section .left-sec input::after {
@@ -294,7 +314,7 @@ body {
   width: 0;
   height: 0;
   border-radius: 2px;
-  background-color: #000;
+  background-color: #ed4342;
   transform: translate(-50%, -50%) rotate(3turn);
   -webkit-transform: translate(-50%, -50%) rotate(3turn);
   -moz-transform: translate(-50%, -50%) rotate(3turn);
@@ -310,7 +330,7 @@ body {
   left: calc(50% + 1px);
   top: calc(50% + 1px);
   font-size: 1rem;
-  border: 2px solid #000;
+  border: 2px solid #ed4342;
   width: 100%;
   height: 101%;
   transform: translate(-50%, -50%) rotate(0);
@@ -328,25 +348,11 @@ body {
 
 .card .left form section .right-sec a {
   font-size: 0.9rem;
+  color: #e67a7a;
 }
 
 .card .left form section .right-sec a:hover {
-  color: #777;
-}
-
-.card .left form input[type=submit] {
-  display: block;
-  min-width: 150px;
-  margin: auto;
-  padding: 10px 20px;
-  border: none;
-  outline: none;
-  background-color: #aaa;
-  color: #fff;
-}
-
-.card .left form input[type=submit]:hover {
-  background-color: #777;
+  color: #ed4342;
 }
 
 .card .left .reg-link {
@@ -356,10 +362,11 @@ body {
 
 .card .left .reg-link a {
   font-size: 0.9rem;
+  color: #e67a7a;
 }
 
 .card .left .reg-link a:hover {
-  color: #777;
+  color: #ed4342;
 }
 
 .card .left hr {
@@ -382,19 +389,15 @@ body {
 .card .left .social-log .links a {
   width: 40px;
   height: 40px;
-  background-color: #ccc;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  background-color: #e67a7a;
 }
 
-.card .left .social-log .links a:hover {
-  background-color: #777;
+.card .left .social-log .links a:hover i {
+  color: #ed4342;
 }
 
 .card .left .social-log .links a i {
+  color: #fff;
   font-size: 1.2rem;
 }
 
@@ -408,8 +411,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #777;
-  opacity: 0.5;
+  background-color: rgba(119, 119, 119, 0.7);
   position: absolute;
   top: 0;
   left: 0;

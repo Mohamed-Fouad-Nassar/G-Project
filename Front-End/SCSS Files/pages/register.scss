@@ -10,13 +10,16 @@
 body {
   min-height: 100vh;
   @extend %flex-center-center;
+  background-image: url(../Data/Images/log_in_background.png);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .card {
   @extend %border-radius-10;
   max-width: 950px;
   margin: auto;
   display: flex;
-  background-color: $main-background-color;
+  background-color: $white-color;
   overflow: hidden;
   @media (max-width: 767px) {
     max-width: 400px;
@@ -220,11 +223,12 @@ body {
       content: "";
       width: 100%;
       height: 100%;
-      background-color: $black-transparent-color;
+      background-color: $main-transparent-color;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 1;
+      opacity: 0.6;
     }
     @extend %flex-center-center;
     width: 50%;
@@ -256,6 +260,9 @@ body {
       }
       a {
         @extend %button-shape;
+        &:hover {
+          background-color: $white-color;
+        }
       }
     }
   }

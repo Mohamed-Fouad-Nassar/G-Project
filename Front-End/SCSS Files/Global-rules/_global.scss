@@ -13,6 +13,7 @@
 }
 
 html {
+  scrollbar-color: $main-color $white-color;
   scroll-behavior: smooth;
 }
 
@@ -32,6 +33,13 @@ img {
 
 a {
   @extend %link;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+i {
+  @extend %zero-trans;
 }
 
 ul {
@@ -47,14 +55,6 @@ input[type="reset"],
 input[type="button"],
 a {
   cursor: pointer;
-}
-
-i {
-  transition: 0s;
-  -webkit-transition: 0s;
-  -moz-transition: 0s;
-  -ms-transition: 0s;
-  -o-transition: 0s;
 }
 
 input {
@@ -109,6 +109,85 @@ input {
 
 /* End Media Quires */
 
+/* Start Selection Styling:- */
+
+::-moz-selection {
+  background: $black-color;
+  color: $main-color;
+}
+
+::selection {
+  background: $black-color;
+  color: $main-color;
+}
+
+/* End Selection Styling */
+
+/* Start Scroll Bar Styling:- */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $white-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $sec-color;
+}
+
+/* End Scroll Bar Styling */
+
+/* Start Head-Shape Styling:- */
+
+.head-shape,
+.head-shape-w {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  span {
+    @extend %border-radius-50;
+    display: block;
+    margin: auto;
+    height: 17px;
+    width: 17px;
+    background-color: transparent;
+    border: 2px solid $sec-color;
+    &::after,
+    &::before {
+      @extend %translate-y-50;
+      content: "";
+      height: 2px;
+      width: calc(50% - 20px);
+      background-color: $sec-color;
+      position: absolute;
+      top: 50%;
+    }
+    &::before {
+      left: 5px;
+    }
+    &::after {
+      right: 5px;
+    }
+  }
+}
+.head-shape-w {
+  span {
+    border-color: $white-color;
+    &::after,
+    &::before {
+      background-color: $white-color;
+    }
+  }
+}
+
+/* End Head-Shape Styling */
+
 section {
   .container {
     .sec-head {
@@ -116,13 +195,16 @@ section {
       text-align: center;
       h2 {
         font-size: 1.9rem;
+        color: $main-color;
         margin: 0 {
-          bottom: $main-element-padding;
+          bottom: $sec-element-padding;
         }
       }
       p {
         max-width: 750px;
-        margin: 0 auto;
+        margin: 0 auto {
+          bottom: $main-element-padding;
+        }
         font-size: 0.9rem;
         color: $sec-text-color;
       }

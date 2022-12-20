@@ -55,6 +55,19 @@ section .container .sec-foot a {
   -o-transform: translate(-50%, -50%);
 }
 
+.head-shape span::after,
+.head-shape span::before,
+.head-shape-w span::after,
+.head-shape-w span::before,
+.card .left form section .sec-flex::after,
+.card .left form .field::after {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
 .card {
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -64,7 +77,9 @@ section .container .sec-foot a {
 }
 
 .card .left form .gender .choose input::before,
-.card .left form .gender .choose input::after {
+.card .left form .gender .choose input::after,
+.head-shape span,
+.head-shape-w span {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -72,32 +87,33 @@ section .container .sec-foot a {
   -o-border-radius: 50%;
 }
 
+i {
+  transition: 0s !important;
+  -webkit-transition: 0s !important;
+  -moz-transition: 0s !important;
+  -ms-transition: 0s !important;
+  -o-transition: 0s !important;
+}
+
 .card .left form section .sec-flex::after,
 .card .left form .field::after {
-  content: "\f057";
-  color: #fb0505;
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
 }
 
 .card .left form input[type=submit],
 .card .left form input[type=reset],
 .card .right .text a,
 section .container .sec-foot a {
-  width: 150px;
+  width: 160px;
   margin: 0 auto;
   outline: none;
   color: #fff;
-  border: 1px solid #e67a7a;
-  background-color: #e67a7a;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
   padding: 10px 20px;
 }
 
@@ -105,8 +121,9 @@ section .container .sec-foot a {
 .card .left form input[type=reset]:hover,
 .card .right .text a:hover,
 section .container .sec-foot a:hover {
-  background-color: #ed4342;
-  border-color: #ed4342;
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
 }
 
 /* Start Global Rules:- */
@@ -119,6 +136,7 @@ section .container .sec-foot a:hover {
 }
 
 html {
+  scrollbar-color: #059cb1 #fff;
   scroll-behavior: smooth;
 }
 
@@ -128,6 +146,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+a:hover {
+  color: #059cb1;
 }
 
 ul {
@@ -141,16 +163,8 @@ a {
   cursor: pointer;
 }
 
-i {
-  transition: 0s;
-  -webkit-transition: 0s;
-  -moz-transition: 0s;
-  -ms-transition: 0s;
-  -o-transition: 0s;
-}
-
 input {
-  caret-color: #ed4342;
+  caret-color: #059cb1;
 }
 
 .container {
@@ -199,6 +213,86 @@ input {
 }
 
 /* End Media Quires */
+/* Start Selection Styling:- */
+::-moz-selection {
+  background: #000;
+  color: #059cb1;
+}
+
+::selection {
+  background: #000;
+  color: #059cb1;
+}
+
+/* End Selection Styling */
+/* Start Scroll Bar Styling:- */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #059cb1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #59c1bd;
+}
+
+/* End Scroll Bar Styling */
+/* Start Head-Shape Styling:- */
+.head-shape,
+.head-shape-w {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+
+.head-shape span,
+.head-shape-w span {
+  display: block;
+  margin: auto;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 2px solid #59c1bd;
+}
+
+.head-shape span::after,
+.head-shape span::before,
+.head-shape-w span::after,
+.head-shape-w span::before {
+  content: "";
+  height: 2px;
+  width: calc(50% - 20px);
+  background-color: #59c1bd;
+  position: absolute;
+  top: 50%;
+}
+
+.head-shape span::before,
+.head-shape-w span::before {
+  left: 5px;
+}
+
+.head-shape span::after,
+.head-shape-w span::after {
+  right: 5px;
+}
+
+.head-shape-w span {
+  border-color: #fff;
+}
+
+.head-shape-w span::after,
+.head-shape-w span::before {
+  background-color: #fff;
+}
+
+/* End Head-Shape Styling */
 section .container .sec-head {
   padding-bottom: 100px;
   text-align: center;
@@ -206,13 +300,15 @@ section .container .sec-head {
 
 section .container .sec-head h2 {
   font-size: 1.9rem;
+  color: #059cb1;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 section .container .sec-head p {
   max-width: 750px;
   margin: 0 auto;
+  margin-bottom: 20px;
   font-size: 0.9rem;
   color: #777;
 }
@@ -223,13 +319,16 @@ section .container .sec-foot {
 
 body {
   min-height: 100vh;
+  background-image: url(../Data/Images/log_in_background.png);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
 .card {
   max-width: 950px;
   margin: auto;
   display: flex;
-  background-color: #eee;
+  background-color: #fff;
   overflow: hidden;
 }
 
@@ -262,7 +361,7 @@ body {
 }
 
 .card .left .head h2 {
-  color: #ed4342;
+  color: #059cb1;
 }
 
 .card .left .head p {
@@ -360,11 +459,11 @@ body {
 }
 
 .card .left form .check-box label a {
-  color: #e67a7a;
+  color: #59c1bd;
 }
 
 .card .left form .check-box label a:hover {
-  color: #ed4342;
+  color: #059cb1;
 }
 
 .card .left form .check-box input {
@@ -389,11 +488,11 @@ body {
   height: 100%;
   border-radius: 2px;
   background-color: #fff;
-  border: 1.5px solid #e67a7a;
+  border: 1.5px solid #59c1bd;
 }
 
 .card .left form .check-box input:hover::before {
-  border-color: #ed4342;
+  border-color: #059cb1;
 }
 
 .card .left form .check-box input::after {
@@ -403,7 +502,7 @@ body {
   width: 0;
   height: 0;
   border-radius: 2px;
-  background-color: #ed4342;
+  background-color: #059cb1;
   transform: translate(-50%, -50%) rotate(3turn);
   -webkit-transform: translate(-50%, -50%) rotate(3turn);
   -moz-transform: translate(-50%, -50%) rotate(3turn);
@@ -419,7 +518,7 @@ body {
   left: calc(50% + 1px);
   top: calc(50% + 1px);
   font-size: 1rem;
-  border: 2px solid #ed4342;
+  border: 2px solid #059cb1;
   width: 100%;
   height: 101%;
   transform: translate(-50%, -50%) rotate(0);
@@ -431,7 +530,7 @@ body {
 
 .card .left form .field {
   flex-direction: row-reverse;
-  border-bottom: 2px solid #e67a7a;
+  border-bottom: 2px solid #59c1bd;
   position: relative;
   gap: 10px;
 }
@@ -447,7 +546,7 @@ body {
 }
 
 .card .left form .field i {
-  color: #e67a7a;
+  color: #59c1bd;
 }
 
 .card .left form .gender p {
@@ -490,11 +589,11 @@ body {
   width: 16px;
   height: 16px;
   background-color: #fff;
-  border: 1.5px solid #e67a7a;
+  border: 1.5px solid #59c1bd;
 }
 
 .card .left form .gender .choose input:hover::before {
-  border-color: #ed4342;
+  border-color: #059cb1;
 }
 
 .card .left form .gender .choose input::after {
@@ -503,13 +602,13 @@ body {
 }
 
 .card .left form .gender .choose input:checked::before {
-  border-color: #ed4342;
+  border-color: #059cb1;
 }
 
 .card .left form .gender .choose input:checked:after {
   width: 12px;
   height: 12px;
-  background-color: #ed4342;
+  background-color: #059cb1;
 }
 
 .card .left form .gender .choose label {
@@ -527,7 +626,7 @@ body {
   padding: 7px 10px;
   border: none;
   outline: none;
-  border-bottom: 2px solid #e67a7a;
+  border-bottom: 2px solid #59c1bd;
   background-color: transparent;
 }
 
@@ -537,11 +636,11 @@ body {
 
 .card .left .log-link a {
   font-size: 1rem;
-  color: #e67a7a;
+  color: #59c1bd;
 }
 
 .card .left .log-link a:hover {
-  color: #ed4342;
+  color: #059cb1;
 }
 
 @media (min-width: 768px) {
@@ -560,11 +659,12 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba(119, 119, 119, 0.7);
+  background-color: rgba(5, 156, 177, 0.6);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+  opacity: 0.6;
 }
 
 @media (max-width: 767px) {
@@ -597,4 +697,8 @@ body {
 
 .card .right .text h3 {
   margin: 20px 0;
+}
+
+.card .right .text a:hover {
+  background-color: #fff;
 }

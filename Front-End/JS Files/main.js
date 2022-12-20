@@ -12,21 +12,3 @@ navIcon.addEventListener("click", () => {
     nav.style.zIndex = "1000";
   }
 });
-
-// let active = document.querySelectorAll("li"); //for change active class
-// let top = document.getElementById("home"); //for back to the top
-
-// //active calss
-// active.forEach((li) => {
-//   li.addEventListener("click", function () {
-//     active.forEach((li) => li.classList.remove("active"));
-//     this.classList.add("active");
-//   });
-// });
-// ///////////////
-// //back to top
-// top.onclick = function () {
-//   "use strict";
-//   window.scrollTo(0, 0);
-// };
-// //////////

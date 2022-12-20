@@ -7,7 +7,7 @@
 
 // header styling:-
 header {
-  background-color: $main-background-color;
+  background-color: $light-white-color;
   @media (max-width: 991px) {
     padding: {
       top: $sec-element-padding;
@@ -38,7 +38,7 @@ header {
         @extend %border-radius-10;
         position: absolute;
         left: 0;
-        background-color: $black-color;
+        background-color: $main-color;
         width: 100%;
         height: 5px;
         &:first-of-type {
@@ -110,6 +110,16 @@ header {
             right: 5px;
             left: 5px;
           }
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: $main-color;
+          }
           &:last-of-type,
           &:nth-last-of-type(2) {
             display: none;
@@ -118,7 +128,12 @@ header {
             }
           }
           &.active {
-            border-bottom: 2px solid $main-color;
+            &::after {
+              width: 100%;
+            }
+            a {
+              color: $main-color;
+            }
           }
           a {
             @extend %flex-center-center;
@@ -133,10 +148,10 @@ header {
         right: 0;
         display: block;
         width: 300px;
-        height: calc(100% - 66px);
-        background-color: $main-background-color;
+        height: calc(100% - 68px);
+        background-color: $main-color;
         position: absolute;
-        top: 66px;
+        top: 68px;
         @media (max-width: 575px) {
           width: 100%;
           height: 600px;
@@ -146,12 +161,20 @@ header {
           padding-top: $main-element-padding;
           li {
             padding: 0;
-            border-bottom: 1px solid $sec-color !important;
+            &::after {
+              display: none;
+            }
+            &.active {
+              a {
+                color: $white-color;
+              }
+            }
             a {
               height: 40px;
               justify-content: flex-start;
               padding-left: $sec-element-padding;
               &:hover {
+                color: $white-color;
                 padding-left: 30px;
               }
             }
@@ -168,12 +191,14 @@ header {
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
-        border: none;
         padding: $sec-element-padding 15px;
-        &:first-of-type {
-          background-color: $main-color;
+        &:last-of-type {
+          background-color: $sec-color;
+          border-color: $sec-color;
           &:hover {
-            background-color: $sec-color;
+            background-color: transparent;
+            border-color: $sec-color;
+            color: $sec-color;
           }
         }
       }

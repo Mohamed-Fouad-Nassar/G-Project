@@ -6,7 +6,7 @@
 @use "../Global-rules/variables" as *;
 
 footer {
-  background-color: rgb(19, 19, 19);
+  background-color: $footer-background;
   padding: $up-down-padding 0;
   .container {
     display: grid;
@@ -19,7 +19,7 @@ footer {
       h3 {
         font-size: 1.3rem;
         margin: 0;
-        color: #eee;
+        color: $light-white-color;
       }
     }
     .f-info {
@@ -29,7 +29,7 @@ footer {
             family: "Yesteryear", cursive;
             size: 2.5rem;
           }
-          color: #eee;
+          color: $main-color;
           margin: 0 {
             left: 4px;
           }
@@ -37,7 +37,7 @@ footer {
       }
       .f-text {
         p {
-          color: #ccc;
+          color: $dark-white-color;
           margin: $main-element-padding 0;
         }
       }
@@ -47,35 +47,36 @@ footer {
     }
     .f-links {
       ul {
-        padding-top: 10px;
+        padding-top: $sec-element-padding;
         li {
-          border-bottom: 1px solid #eee;
+          border-bottom: 1px solid $light-white-color;
           a {
             &::before {
+              @extend %zero-trans;
               content: "\f101";
               font: {
                 family: "Font Awesome 6 Free";
                 weight: 900;
               }
-              margin-right: 10px;
+              margin-right: $sec-element-padding;
             }
             display: block;
             padding: 7px 0;
-            color: #eee;
+            color: $light-white-color;
             position: relative;
             &:hover {
-              color: #aaa;
-              padding-left: 20px;
+              color: $main-color;
+              padding-left: $main-element-padding;
             }
           }
         }
       }
     }
     .f-blog {
-      color: #eee;
+      color: $light-white-color;
       article {
-        padding: 10px 0;
-        border-bottom: 1px solid #aaa;
+        padding: $sec-element-padding 0;
+        border-bottom: 1px solid $max-dark-white-color;
         &:last-of-type {
           border-bottom: none;
           padding-bottom: 0;
@@ -84,38 +85,29 @@ footer {
           h4 {
             margin: {
               bottom: 5px;
-              top: 10px;
+              top: $sec-element-padding;
             }
+            @include max-chars(1);
             font-size: 1.1rem;
             letter-spacing: 1.5px;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            color: #eee;
-            &:hover {
-              color: #aaa;
+            color: $light-white-color;
+          }
+          &:hover {
+            h4 {
+              color: $main-color;
             }
           }
         }
         p {
-          color: #ccc;
+          color: $dark-white-color;
           font-size: 0.85rem;
           margin-bottom: 5px;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
+          @include max-chars(3);
         }
         .info {
           @extend %article-info;
           span {
-            color: #eee;
-            &.input {
-              &:hover {
-                color: #eee;
-              }
-            }
+            color: $light-white-color;
           }
         }
       }
@@ -128,18 +120,18 @@ footer {
         bottom: -30px;
       }
       text-align: center;
-      color: #aaa;
+      color: $max-dark-white-color;
       a {
-        color: #eee;
+        color: $light-white-color;
         font-size: 1.1rem;
         &:hover {
-          color: #aaa;
+          color: $max-dark-white-color;
         }
       }
       span {
         font-family: "Yesteryear", cursive;
         font-size: 1.5rem;
-        color: #eee;
+        color: $light-white-color;
       }
     }
   }

@@ -6,6 +6,14 @@
 @use "../Global-rules/variables" as *;
 
 // header styling:-
+.navScroll{ //change nav onscroll
+  background-color: $main-color !important;
+  a{
+    h1{
+      color: #fff !important;
+    }
+  }
+}
 header {
   background-color: $light-white-color;
   @media (max-width: 991px) {

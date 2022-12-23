@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -28,22 +28,11 @@
       href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
       rel="stylesheet"
     />
-    <!-- bootstrap js file -->
-    <script src="./JS Files/bootstrap.bundle.js"></script>
-    <!-- ion-icons js files -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
     <title>main page</title>
   </head>
   <body>
     <!-- Start Header -->
-    <header>
+    <header id="navbar_top" class="navbar">
       <div class="container">
         <div class="logo">
           <a href="#top">
@@ -57,28 +46,31 @@
         </div>
         <nav id="nav">
           <ul id="links">
-            <li class="active">
+            <li class="links">
               <a href="#top">home</a>
             </li>
-            <li>
+            <li class="links">
+              <a href="#services">services</a>
+            </li>
+            <li class="links">
               <a href="#doctors">doctors</a>
             </li>
-            <li>
+            <li class="links">
               <a href="#medicine">medicines</a>
             </li>
-            <li>
+            <li class="links">
               <a href="#radiation">radiation places</a>
             </li>
-            <li>
+            <li class="links">
               <a href="#blog">blog</a>
             </li>
-            <li>
-              <a href="#contact">contact us</a>
+            <li class="links">
+              <a href="#contact-us">contact us</a>
             </li>
-            <li>
+            <li class="links">
               <a class="regist" href="./HTML Files/register.html">register</a>
             </li>
-            <li>
+            <li class="links">
               <a class="log-in" href="./HTML Files/log_in.html">log in</a>
             </li>
           </ul>
@@ -129,7 +121,7 @@
                 alt="doctors-slider-image"
               />
               <div class="caption carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+                <h5>first slide label</h5>
                 <p>
                   Some representative placeholder content for the third slide.
                 </p>
@@ -142,7 +134,7 @@
                 alt="medicines-slider-image"
               />
               <div class="caption carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
+                <h5>second slide label</h5>
                 <p>
                   Some representative placeholder content for the third slide.
                 </p>
@@ -507,10 +499,10 @@
               <a href="#">see more</a>
             </div>
             <div class="image">
-              <!-- <img
-                src="../Data/Images/radiation-places-image-3.jpg"
+              <img
+                src="./Data/Images/3d-render-medical-background-showing-virus-cells-male-figures-lungs_1048-6289.webp"
                 alt="radiation-places-image"
-              /> -->
+              />
             </div>
           </div>
         </div>
@@ -696,7 +688,7 @@
       <!-- End Contact-->
       <!-- Start Top Button -->
       <div class="top" id="up">
-        <a href="#top">
+        <a href="#">
           <i class="fa-solid fa-angle-up"></i>
         </a>
       </div>
@@ -808,7 +800,7 @@
       </div>
       <div class="rights">
         <p>
-          Copyright &copy; 2021 <span> hope</span>, made by -
+          Copyright &copy; 2023 <span> hope</span>, made by -
           <a href="">🚑66-اسعاف🚨</a>
         </p>
       </div>
@@ -816,5 +808,16 @@
     <!-- End Footer -->
     <!--script-->
     <script src="./JS Files/main.js"></script>
+    <!-- bootstrap js file -->
+    <script src="./JS Files/bootstrap.bundle.js"></script>
+    <!-- ion-icons js files -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      ></script>
+      <script
+        nomodule
+        src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      ></script>
   </body>
 </html>

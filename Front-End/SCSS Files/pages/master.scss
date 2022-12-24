@@ -282,7 +282,7 @@ main {
         .image {
           width: 50%;
           padding: 0;
-          background-image: url(../Data/Images/radiation-places-image-1.jpg);
+          background-image: url(../Data/Images/3d-render-medical-background-showing-virus-cells-male-figures-lungs_1048-6289.webp);
           @media (max-width: 991px) {
             display: none;
           }
@@ -336,20 +336,20 @@ main {
     position: fixed;
     bottom: 15px;
     right: 15px;
-    z-index: 100;
+    z-index: 100000;
     a {
       @extend %flex-center-center;
       @extend %border-radius-5;
       width: 40px;
       height: 40px;
       background-color: $main-color;
-      border: 1px solid $main-color;
+      border: 2px solid $main-color;
       font-size: 1.5rem;
       i {
         color: $white-color;
       }
       &:hover {
-        background-color: transparent;
+        background-color: $white-color;
         border-color: $main-color;
         i {
           color: $main-color;

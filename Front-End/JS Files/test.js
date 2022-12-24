@@ -11,7 +11,7 @@ inp[0].onblur = function () {
   fIcon[0].style.cssText = "color: #59c1bd";
 };
 
-// input 1
+// input 2
 inp[1].onfocus = function () {
   ele[1].style.cssText = "border-bottom-color: #059cb1";
   fIcon[1].style.cssText = "color: #059cb1";

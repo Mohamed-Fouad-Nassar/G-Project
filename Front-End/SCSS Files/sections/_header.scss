@@ -6,16 +6,11 @@
 @use "../Global-rules/variables" as *;
 
 // header styling:-
-.navScroll{ //change nav onscroll
-  background-color: $main-color !important;
-  a{
-    h1{
-      color: #fff !important;
-    }
-  }
-}
 header {
   background-color: $light-white-color;
+  @media (min-width: 992px) {
+    padding: 0 !important;
+  }
   @media (max-width: 991px) {
     padding: {
       top: $sec-element-padding;
@@ -61,7 +56,7 @@ header {
       }
       &:hover {
         span {
-          background-color: $sec-color;
+          background-color: $sec-color !important;
         }
       }
       &.active {
@@ -103,12 +98,6 @@ header {
       }
     }
     nav {
-      opacity: 0;
-      z-index: -1;
-      @media (min-width: 992px) {
-        opacity: 1 !important;
-        z-index: 1000 !important;
-      }
       @extend %flex-center-between;
       ul {
         display: flex;
@@ -153,13 +142,13 @@ header {
         }
       }
       @media (max-width: 991px) {
-        right: 0;
         display: block;
         width: 300px;
-        height: calc(100% - 68px);
+        height: calc(100vh - 64px);
         background-color: $main-color;
         position: absolute;
-        top: 68px;
+        top: 64px;
+        right: -100%;
         @media (max-width: 575px) {
           width: 100%;
           height: 600px;
@@ -175,12 +164,15 @@ header {
             &.active {
               a {
                 color: $white-color;
+                &:hover {
+                  padding-left: $main-element-padding;
+                }
               }
             }
             a {
               height: 40px;
               justify-content: flex-start;
-              padding-left: $sec-element-padding;
+              padding-left: $main-element-padding;
               &:hover {
                 color: $white-color;
                 padding-left: 30px;
@@ -212,6 +204,55 @@ header {
       }
       @extend %flex-center-between;
       gap: $main-element-padding;
+    }
+  }
+  &.navScroll {
+    background-color: #000000d9;
+    .container {
+      .logo {
+        a {
+          h1 {
+            color: $white-color;
+          }
+        }
+      }
+      .nav-icon {
+        span {
+          background-color: $white-color;
+        }
+        &:hover {
+          span {
+            background-color: $main-color;
+          }
+        }
+        &.active {
+          &:hover {
+            span {
+              background-color: $main-color;
+            }
+          }
+        }
+      }
+      nav {
+        ul {
+          li {
+            a {
+              color: $white-color;
+              @media (max-width: 991px) {
+                color: $black-color;
+              }
+            }
+            &.active {
+              a {
+                color: $main-color;
+                @media (max-width: 991px) {
+                  color: $white-color;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

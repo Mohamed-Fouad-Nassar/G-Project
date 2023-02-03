@@ -10,9 +10,7 @@
 body {
   min-height: 100vh;
   @extend %flex-center-center;
-  background-image: url(../Data/Images/log_in_background.png);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  background-color: $light-white-color;
 }
 
 .card {
@@ -24,6 +22,7 @@ body {
   max-width: 850px;
   margin: auto;
   background-color: $white-color;
+  box-shadow: 3px 4px 22px -5px #8b8b8b;
   @media (max-width: 767px) {
     max-width: 400px;
   }
@@ -84,8 +83,26 @@ body {
           }
         }
       }
-      input[type="submit"] {
-        @extend %button-shape;
+      .btns {
+        @extend %flex-center-center;
+        gap: 20px;
+        @media (max-width: 400px) {
+          flex-direction: column;
+          gap: 10px;
+        }
+        input[type="submit"],
+        input[type="button"] {
+          @extend %button-shape;
+          display: inline-block;
+          margin: initial;
+          @media (max-width: 400px) {
+            width: 100%;
+          }
+        }
+        input[type="button"] {
+          background-color: $sec-color;
+          border-color: $sec-color;
+        }
       }
     }
   }

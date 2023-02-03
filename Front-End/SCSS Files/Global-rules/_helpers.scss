@@ -112,6 +112,14 @@
   -o-transform: translateY($per);
 }
 
+@mixin scale($num) {
+  transform: scale($num);
+  -webkit-transform: scale($num);
+  -moz-transform: scale($num);
+  -ms-transform: scale($num);
+  -o-transform: scale($num);
+}
+
 @mixin grid($width, $gap) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
@@ -124,6 +132,25 @@
   -moz-border-radius: $num;
   -ms-border-radius: $num;
   -o-border-radius: $num;
+}
+
+@mixin back-btn($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  padding: $field-top-padding $sec-element-padding;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  &:hover {
+    .f-icon {
+      color: $main-color;
+    }
+  }
+  .f-icon {
+    font-size: 1.3rem;
+  }
 }
 
 // placeholders:-

@@ -10,25 +10,31 @@
 body {
   min-height: 100vh;
   @extend %flex-center-center;
-  background-image: url(../Data/Images/log_in_background.png);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  background-color: $light-white-color;
 }
 .card {
   @extend %border-radius-10;
   max-width: 950px;
   margin: auto;
   display: flex;
-  background-color: $white-color;
   overflow: hidden;
+  position: relative;
+  background-color: $white-color;
+  box-shadow: 3px 4px 22px -5px #8b8b8b;
   @media (max-width: 767px) {
     max-width: 400px;
   }
   .left {
     width: 50%;
-    padding: $main-element-padding;
+    padding: $main-element-padding {
+      top: $main-element-padding * 4;
+    }
     @media (max-width: 767px) {
       width: 100%;
+      padding-top: $up-down-padding / 2;
+    }
+    .back-btn {
+      @include back-btn($main-element-padding, $sec-element-padding);
     }
     .head {
       text-align: center;

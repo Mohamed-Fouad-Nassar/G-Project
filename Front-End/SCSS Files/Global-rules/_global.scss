@@ -109,6 +109,28 @@ input {
 
 /* End Media Quires */
 
+/* Start Animation Styling:- */
+
+@-webkit-keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+
+@keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+
+/* End Animation Styling */
+
 /* Start Selection Styling:- */
 
 ::-moz-selection {
@@ -194,8 +216,9 @@ section {
       padding-bottom: $up-down-padding;
       text-align: center;
       h2 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         color: $main-color;
+        text-transform: uppercase;
         margin: 0 {
           bottom: $sec-element-padding;
         }

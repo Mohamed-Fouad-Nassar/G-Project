@@ -20,7 +20,9 @@ a {
 
 body,
 .card .body form section .field,
-.card .body form input[type=submit],
+.card .body form .btns,
+.card .body form .btns input[type=submit],
+.card .body form .btns input[type=button],
 section .container .sec-foot a {
   display: flex;
   align-items: center;
@@ -72,7 +74,8 @@ i {
   top: 50%;
 }
 
-.card .body form input[type=submit],
+.card .body form .btns input[type=submit],
+.card .body form .btns input[type=button],
 section .container .sec-foot a {
   width: 160px;
   margin: 0 auto;
@@ -83,7 +86,8 @@ section .container .sec-foot a {
   padding: 10px 20px;
 }
 
-.card .body form input[type=submit]:hover,
+.card .body form .btns input[type=submit]:hover,
+.card .body form .btns input[type=button]:hover,
 section .container .sec-foot a:hover {
   color: #059cb1;
   background-color: transparent;
@@ -177,6 +181,28 @@ input {
 }
 
 /* End Media Quires */
+/* Start Animation Styling:- */
+@-webkit-keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+
+  to {
+    margin-bottom: 15px;
+  }
+}
+
+@keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+
+  to {
+    margin-bottom: 15px;
+  }
+}
+
+/* End Animation Styling */
 /* Start Selection Styling:- */
 ::-moz-selection {
   background: #000;
@@ -263,8 +289,9 @@ section .container .sec-head {
 }
 
 section .container .sec-head h2 {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   color: #059cb1;
+  text-transform: uppercase;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -274,7 +301,7 @@ section .container .sec-head p {
   margin: 0 auto;
   margin-bottom: 20px;
   font-size: 0.9rem;
-  color: #777;
+  color: #555;
 }
 
 section .container .sec-foot {
@@ -283,9 +310,7 @@ section .container .sec-foot {
 
 body {
   min-height: 100vh;
-  background-image: url(../Data/Images/log_in_background.png);
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
+  background-color: #eee;
 }
 
 .card {
@@ -296,6 +321,7 @@ body {
   max-width: 850px;
   margin: auto;
   background-color: #fff;
+  box-shadow: 3px 4px 22px -5px #8b8b8b;
 }
 
 @media (max-width: 767px) {
@@ -325,7 +351,7 @@ body {
 
 .card .head p {
   margin: 0;
-  color: #777;
+  color: #555;
 }
 
 @media (max-width: 767px) {
@@ -372,4 +398,34 @@ body {
 
 .card .body form section .field .f-icon {
   color: #59c1bd;
+}
+
+.card .body form .btns {
+  gap: 20px;
+}
+
+@media (max-width: 400px) {
+  .card .body form .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.card .body form .btns input[type=submit],
+.card .body form .btns input[type=button] {
+  display: inline-block;
+  margin: initial;
+}
+
+@media (max-width: 400px) {
+
+  .card .body form .btns input[type=submit],
+  .card .body form .btns input[type=button] {
+    width: 100%;
+  }
+}
+
+.card .body form .btns input[type=button] {
+  background-color: #59c1bd;
+  border-color: #59c1bd;
 }

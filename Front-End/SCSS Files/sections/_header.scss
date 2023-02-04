@@ -11,9 +11,14 @@ header {
   box-shadow: -1px 1px 20px -15px $black-color;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  padding: 0 !important;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
   .container {
-    display: grid !important;
+    display: grid;
     align-items: center;
     justify-content: space-between;
     grid-template-columns: repeat(3, auto);
@@ -112,15 +117,18 @@ header {
         }
       }
     }
-    .account {
+    .account,
+    .log-in-acc {
       @extend %flex-center-center;
-      gap: $sec-element-padding;
+      gap: $main-element-padding;
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content;
       @media (max-width: 767px) {
         grid-area: account;
       }
+    }
+    .account {
       a {
         @extend %button-shape;
         width: -webkit-fit-content;
@@ -138,50 +146,63 @@ header {
         }
       }
     }
-  }
-  &.navScroll {
-    background-color: $transparent-color;
-    .container {
-      .logo {
-        a {
-          h1 {
-            color: $white-color;
+    .log-in-acc {
+      .lang {
+        @extend %flex-center-center;
+        gap: 5px;
+        &:hover {
+          cursor: pointer;
+        }
+        div {
+          @include border-rad(50%);
+          width: 30px;
+          overflow: hidden;
+          img {
+            max-width: 100%;
           }
         }
+        span {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
       }
+      .theme {
+        @extend %flex-center-center;
+        &:hover {
+          cursor: pointer;
+        }
+        .f-icon {
+          font-size: 1.5rem;
+        }
+      }
+      .acc {
+        @include border-rad(50%);
+        width: 50px;
+        overflow: hidden;
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  &.scroll {
+    background-color: $transparent-color !important;
+    @media (max-width: 767px) {
+      top: -67px !important;
+    }
+    .container {
       nav {
         ul {
           li {
-            a {
-              color: $white-color;
-              @media (max-width: 991px) {
-                color: $black-color;
-              }
-            }
             &.active {
               background-color: $light-white-color;
               a {
                 color: $main-color;
-                @media (max-width: 991px) {
-                  color: $white-color;
-                }
               }
             }
-          }
-        }
-      }
-    }
-  }
-  &.fixed-top {
-    background-color: $transparent-color;
-    @media (max-width: 767px) {
-      top: -67px;
-    }
-    nav {
-      ul {
-        li {
-          &.active {
-            background-color: $light-white-color;
           }
         }
       }

@@ -16,10 +16,10 @@ main {
     @extend %flex-center-center;
     padding: $up-down-padding 0;
     background-color: $white-color;
-    min-height: calc(100vh - 68px);
+    min-height: 100vh;
     position: relative;
     @media (max-width: 767px) {
-      min-height: calc(100vh - 117px);
+      padding-top: 150px;
     }
     .container {
       @extend %flex-center-center;

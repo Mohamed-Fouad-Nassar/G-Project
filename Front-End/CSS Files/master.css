@@ -25,6 +25,9 @@ main .top a,
 main .contact-us .container .sec-body .sec-left .contact-info .box .icon-div i,
 header .container nav ul li a,
 header .container .account,
+header .container .log-in-acc,
+header .container .log-in-acc .lang,
+header .container .log-in-acc .theme,
 main .radiation .container .sec-body .text a,
 main .contact-us .container .sec-body .sec-right form input[type=submit],
 header .container .account a,
@@ -430,11 +433,16 @@ header {
   box-shadow: -1px 1px 20px -15px #000;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  padding: 0 !important;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 header .container {
-  display: grid !important;
+  display: grid;
   align-items: center;
   justify-content: space-between;
   grid-template-columns: repeat(3, auto);
@@ -556,15 +564,18 @@ header .container nav ul li a .f-icon {
   }
 }
 
-header .container .account {
-  gap: 10px;
+header .container .account,
+header .container .log-in-acc {
+  gap: 20px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
 @media (max-width: 767px) {
-  header .container .account {
+
+  header .container .account,
+  header .container .log-in-acc {
     grid-area: account;
   }
 }
@@ -587,50 +598,75 @@ header .container .account a:last-of-type:hover {
   color: #59c1bd;
 }
 
-header.navScroll {
-  background-color: rgba(255, 255, 255, 0.8);
+header .container .log-in-acc .lang {
+  gap: 5px;
 }
 
-header.navScroll .container .logo a h1 {
-  color: #fff;
+header .container .log-in-acc .lang:hover {
+  cursor: pointer;
 }
 
-header.navScroll .container nav ul li a {
-  color: #fff;
+header .container .log-in-acc .lang div {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 30px;
+  overflow: hidden;
 }
 
-@media (max-width: 991px) {
-  header.navScroll .container nav ul li a {
-    color: #000;
-  }
+header .container .log-in-acc .lang div img {
+  max-width: 100%;
 }
 
-header.navScroll .container nav ul li.active {
-  background-color: #eee;
+header .container .log-in-acc .lang span {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-header.navScroll .container nav ul li.active a {
-  color: #059cb1;
+header .container .log-in-acc .theme:hover {
+  cursor: pointer;
 }
 
-@media (max-width: 991px) {
-  header.navScroll .container nav ul li.active a {
-    color: #fff;
-  }
+header .container .log-in-acc .theme .f-icon {
+  font-size: 1.5rem;
 }
 
-header.fixed-top {
-  background-color: rgba(255, 255, 255, 0.8);
+header .container .log-in-acc .acc {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 50px;
+  overflow: hidden;
+}
+
+header .container .log-in-acc .acc:hover {
+  cursor: pointer;
+}
+
+header .container .log-in-acc .acc img {
+  max-width: 100%;
+}
+
+header.scroll {
+  background-color: rgba(255, 255, 255, 0.8) !important;
 }
 
 @media (max-width: 767px) {
-  header.fixed-top {
-    top: -67px;
+  header.scroll {
+    top: -67px !important;
   }
 }
 
-header.fixed-top nav ul li.active {
+header.scroll .container nav ul li.active {
   background-color: #eee;
+}
+
+header.scroll .container nav ul li.active a {
+  color: #059cb1;
 }
 
 footer {
@@ -765,13 +801,13 @@ footer .rights p span {
 main .landing {
   padding: 100px 0;
   background-color: #fff;
-  min-height: calc(100vh - 68px);
+  min-height: 100vh;
   position: relative;
 }
 
 @media (max-width: 767px) {
   main .landing {
-    min-height: calc(100vh - 117px);
+    padding-top: 150px;
   }
 }
 

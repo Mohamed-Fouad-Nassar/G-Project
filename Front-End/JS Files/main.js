@@ -5,21 +5,14 @@ var lightWhiteColor = "#eee";
 var darkTransColor = "#000000d9";
 var lightTransColor = "#ffffffcc";
 
-// fixed nav-bar
+// change nav color and position on scroll
 let header = document.getElementById("navbar_top");
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
-    if (window.scrollY > 150) {
-      header.classList.add("fixed-top");
-      // add padding top to show content behind navbar
-      navbar_height = document.querySelector(".navbar").offsetHeight;
-      document.body.style.paddingTop = navbar_height + "px";
-      // header.classList.add("navScroll"); //change nav styling
+    if (window.scrollY > 30) {
+      header.classList.add("scroll");
     } else {
-      document.getElementById("navbar_top").classList.remove("fixed-top");
-      // remove padding top from body
-      document.body.style.paddingTop = "0";
-      header.classList.remove("navScroll"); //back to first style
+      header.classList.remove("scroll");
     }
   });
 });

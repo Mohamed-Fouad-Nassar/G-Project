@@ -32,7 +32,7 @@
   </head>
   <body>
     <!-- Start Header -->
-    <header id="navbar_top">
+    <header id="navbar_top" class="dark">
       <div class="container">
         <div class="logo">
           <a href="#top">
@@ -90,18 +90,42 @@
         <!-- Start Logging In View -->
         <div class="log-in-acc">
           <article class="lang">
-            <div>
-              <img src="./Data/Images/usa.png" alt="lang-flag-image" />
+            <div class="h-btn">
+              <div>
+                <img src="./Data/Images/usa.png" alt="lang-flag-image" />
+              </div>
+              <span>en</span>
             </div>
-            <span>en</span>
+            <div class="menu">
+              <ul>
+                <li img-src="./Data/Images/usa.png" lang-text="en">
+                  <div>
+                    <img src="./Data/Images/usa.png" alt="lang-flag-image" />
+                  </div>
+                  <span>en</span>
+                </li>
+                <li img-src="./Data/Images/eg.png" lang-text="ar">
+                  <div>
+                    <img src="./Data/Images/eg.png" alt="lang-flag-image" />
+                  </div>
+                  <span>ar</span>
+                </li>
+              </ul>
+            </div>
           </article>
           <article class="theme">
-            <i class="f-icon fa-solid fa-circle-half-stroke"></i>
-            <!-- <i class="f-icon fa-solid fa-sun"></i> -->
-            <!-- <i class="f-icon fa-solid fa-moon"></i> -->
+            <div class="h-btn">
+              <i class="f-icon fa-solid fa-circle-half-stroke"></i>
+              <!-- <i class="f-icon fa-solid fa-sun"></i> -->
+              <!-- <i class="f-icon fa-solid fa-moon"></i> -->
+            </div>
+            <div class="menu"></div>
           </article>
           <article class="acc">
-            <img src="./Data/Images/avatar-image-1.png" alt="account-image" />
+            <div class="h-btn">
+              <img src="./Data/Images/avatar-image-1.png" alt="account-image" />
+            </div>
+            <div class="menu"></div>
           </article>
         </div>
         <!-- End Logging In View -->
@@ -109,7 +133,7 @@
     </header>
     <!-- End Header -->
     <!-- Start Main -->
-    <main>
+    <main id="main_page" class="dark">
       <!-- Start Landing -->
       <article class="landing" id="landing">
         <div class="container">
@@ -128,7 +152,10 @@
             </p>
           </div>
           <div class="right">
-            <img src="./Data/Images/24237733_6906778.jpg" alt="Landing-Image" />
+            <img
+              src="./Data/Images/24237733_6906778-removebg.png"
+              alt="Landing-Image"
+            />
           </div>
         </div>
       </article>
@@ -767,8 +794,10 @@
       </div>
     </footer>
     <!-- End Footer -->
-    <!--script-->
+    <!-- main script -->
     <script src="./JS Files/main.js"></script>
+    <!-- header script -->
+    <script src="./JS Files/header.js"></script>
     <!-- bootstrap js file -->
     <script src="./JS Files/bootstrap.bundle.js"></script>
     <!-- ion-icons js files -->

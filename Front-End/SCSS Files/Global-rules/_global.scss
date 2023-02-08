@@ -18,7 +18,6 @@ html {
 }
 
 body {
-  overflow-x: hidden;
   @extend %reset;
 }
 
@@ -236,6 +235,22 @@ section {
       padding-top: $up-down-padding;
       a {
         @extend %button-shape;
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  // Dark Mode Head-Shape
+  section {
+    .container {
+      .sec-head {
+        h2 {
+          color: $main-dark-color;
+        }
+        p {
+          color: $sec-text-dark-color;
+        }
       }
     }
   }

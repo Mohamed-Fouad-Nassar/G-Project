@@ -112,6 +112,14 @@
   -o-transform: translateY($per);
 }
 
+@mixin trans-x($per) {
+  transform: translateX($per);
+  -webkit-transform: translateX($per);
+  -moz-transform: translateX($per);
+  -ms-transform: translateX($per);
+  -o-transform: translateX($per);
+}
+
 @mixin scale($num) {
   transform: scale($num);
   -webkit-transform: scale($num);

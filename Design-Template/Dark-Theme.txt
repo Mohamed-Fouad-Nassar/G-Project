@@ -1,0 +1,22 @@
+main background color [replace #fff bg]
+	#1f1f1f	OR
+	#222
+
+
+sec background color [replace #eee bg]
+	#181818 	OR
+	#1c1c1c	OR
+	#1d1d1d
+
+
+white dark color [replace #fff text]
+	#fdfdf6 	OR
+	#efefef
+
+
+
+
+
+sec text color [replace #555 text]
+	#b3b3b3 	OR
+	#a5a5a5

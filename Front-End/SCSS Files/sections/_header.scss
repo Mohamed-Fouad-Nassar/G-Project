@@ -35,7 +35,7 @@ header {
       }
       a {
         h1 {
-          color: $main-color !important;
+          color: $main-color;
           font-size: 2.5rem;
           font-family: "Yesteryear", cursive;
           margin: 0;
@@ -133,7 +133,7 @@ header {
         @extend %button-shape;
         width: -webkit-fit-content;
         width: -moz-fit-content;
-        width: fit-content;
+        width: fit-content !important;
         padding: $sec-element-padding 15px;
         &:last-of-type {
           background-color: $sec-color;
@@ -147,51 +147,112 @@ header {
       }
     }
     .log-in-acc {
-      .lang {
+      gap: $sec-element-padding;
+      height: 100%;
+      article {
+        height: 100%;
         @extend %flex-center-center;
-        gap: 5px;
-        &:hover {
-          cursor: pointer;
+        .h-btn {
+          padding: 10px;
         }
-        div {
-          @include border-rad(50%);
-          width: 30px;
-          overflow: hidden;
-          img {
-            max-width: 100%;
+      }
+      .lang {
+        position: relative;
+        .h-btn {
+          @extend %flex-center-center;
+          gap: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+          div {
+            @include border-rad(50%);
+            width: 30px;
+            overflow: hidden;
+            img {
+              max-width: 100%;
+            }
+          }
+          span {
+            text-transform: uppercase;
+            font-weight: 600;
           }
         }
-        span {
-          text-transform: uppercase;
-          font-weight: 600;
+        .menu {
+          @include trans-x(-50%);
+          display: none;
+          position: absolute;
+          padding: 0 {
+            top: $sec-element-padding;
+            bottom: $sec-element-padding;
+          }
+          background-color: $light-white-color;
+          top: 68px;
+          left: 50%;
+          ul {
+            @extend %flex-center-center;
+            flex-direction: column;
+            gap: $sec-element-padding;
+            li {
+              @extend %flex-center-center;
+              padding: 5px {
+                left: $sec-element-padding;
+                right: $sec-element-padding;
+              }
+              gap: $sec-element-padding;
+              &:hover {
+                cursor: pointer;
+              }
+              div {
+                @include border-rad(50%);
+                width: 25px;
+                overflow: hidden;
+                img {
+                  max-width: 100%;
+                }
+              }
+              span {
+                text-transform: uppercase;
+                font: {
+                  weight: 400;
+                  size: 0.9rem;
+                }
+              }
+            }
+          }
         }
       }
       .theme {
-        @extend %flex-center-center;
-        &:hover {
-          cursor: pointer;
-        }
-        .f-icon {
-          font-size: 1.5rem;
+        .h-btn {
+          @extend %flex-center-center;
+          &:hover {
+            cursor: pointer;
+          }
+          .f-icon {
+            font-size: 1.5rem;
+          }
         }
       }
       .acc {
-        @include border-rad(50%);
-        width: 50px;
-        overflow: hidden;
-        &:hover {
-          cursor: pointer;
-        }
-        img {
-          max-width: 100%;
+        padding-left: $sec-element-padding;
+        .h-btn {
+          @include border-rad(50%);
+          width: 50px;
+          padding: 0;
+          overflow: hidden;
+          &:hover {
+            cursor: pointer;
+          }
+          img {
+            max-width: 100%;
+          }
         }
       }
     }
   }
   &.scroll {
-    background-color: $transparent-color !important;
+    background-color: $transparent-color;
     @media (max-width: 767px) {
-      top: -67px !important;
+      top: -67px;
     }
     .container {
       nav {
@@ -202,6 +263,109 @@ header {
               a {
                 color: $main-color;
               }
+            }
+          }
+        }
+      }
+    }
+    &.dark {
+      background-color: $dark-transparent-color;
+      .container {
+        nav {
+          ul {
+            li {
+              &.active {
+                background-color: $nav-active-bg;
+                a {
+                  color: $main-dark-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dark {
+    background-color: $sec-dark-bg;
+    box-shadow: 0px 9px 20px -15px $black-color;
+    .container {
+      .logo {
+        a {
+          h1 {
+            color: $main-dark-color;
+          }
+        }
+      }
+      nav {
+        @media (max-width: 767px) {
+          border-color: $sec-text-color;
+        }
+        ul {
+          li {
+            &::after {
+              background-color: $main-dark-color;
+            }
+            &.active {
+              background-color: $nav-active-bg;
+              a {
+                span,
+                .f-icon {
+                  color: $main-dark-color;
+                }
+              }
+            }
+            a {
+              &:hover {
+                span,
+                .f-icon {
+                  color: $main-dark-color;
+                }
+              }
+              .f-icon,
+              span {
+                color: $white-dark-color;
+              }
+            }
+          }
+        }
+      }
+      .account {
+        a {
+          @extend %button-shape;
+          &:last-of-type {
+            background-color: $sec-dark-color;
+            border-color: $sec-dark-color;
+            &:hover {
+              background-color: transparent;
+              border-color: $sec-dark-color;
+              color: $sec-dark-color;
+            }
+          }
+        }
+      }
+      .log-in-acc {
+        .lang {
+          .h-btn {
+            span {
+              color: $white-dark-color;
+            }
+          }
+          .menu {
+            background-color: $sec-dark-bg;
+            ul {
+              li {
+                span {
+                  color: $white-dark-color;
+                }
+              }
+            }
+          }
+        }
+        .theme {
+          .h-btn {
+            .f-icon {
+              color: $white-dark-color;
             }
           }
         }

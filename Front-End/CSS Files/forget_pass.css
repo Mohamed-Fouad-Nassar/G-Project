@@ -108,10 +108,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 img {
   max-width: 100%;
 }
@@ -306,6 +302,16 @@ section .container .sec-head p {
 
 section .container .sec-foot {
   padding-top: 100px;
+}
+
+@media (prefers-color-scheme: dark) {
+  section .container .sec-head h2 {
+    color: rgba(5, 156, 177, 0.8705882353);
+  }
+
+  section .container .sec-head p {
+    color: #a5a5a5;
+  }
 }
 
 body {

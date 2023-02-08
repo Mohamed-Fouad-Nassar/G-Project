@@ -29,6 +29,7 @@ main {
       }
       .down-btn {
         @include trans-y(-50%);
+        height: 40px;
         position: absolute;
         bottom: $main-element-padding;
         left: 50%;
@@ -509,4 +510,167 @@ main {
     }
   }
   // End contact Us Styling
+  // Start Dark Mode Styling:-
+  &.dark {
+    .landing {
+      background-color: $main-dark-bg;
+      .container {
+        .down-btn {
+          a {
+            &:hover {
+              i {
+                color: $sec-dark-color;
+              }
+            }
+            i {
+              color: $main-dark-color;
+            }
+          }
+        }
+        .left {
+          h2 {
+            color: $main-dark-color;
+          }
+          p {
+            color: $sec-text-dark-color;
+          }
+        }
+      }
+    }
+    .services {
+      background-color: $sec-dark-bg;
+      .container {
+        .sec-body {
+          .box {
+            &:hover {
+              box-shadow: $dark-box-shadow;
+            }
+            a {
+              i {
+                color: $white-dark-color;
+                background-color: $main-dark-color;
+              }
+              h3 {
+                color: $main-dark-color;
+              }
+              p {
+                color: $sec-text-dark-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .doctors {
+      background-color: $main-dark-bg;
+      .container {
+        .sec-body {
+          .box {
+            box-shadow: $dark-box-shadow;
+            .info {
+              background-color: $dark-transparent-color;
+              h5 {
+                color: $main-dark-color;
+              }
+              p {
+                color: $sec-text-dark-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .medicine {
+      background-color: $sec-dark-bg;
+      .container {
+        .sec-body {
+          .box {
+            &::before {
+              background-color: $dark-transparent-color;
+            }
+            box-shadow: $dark-box-shadow;
+            .info {
+              a {
+                color: $sec-dark-color;
+                &:hover {
+                  i,
+                  h4 {
+                    color: $main-dark-color;
+                  }
+                }
+                i {
+                  color: $sec-dark-color;
+                }
+                h4 {
+                  color: $sec-dark-color;
+                }
+              }
+              p {
+                color: $sec-text-dark-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .radiation {
+      background-color: $main-dark-bg;
+      .container {
+        .sec-body {
+          background-color: $sec-dark-bg;
+          .text {
+            h2 {
+              color: $white-dark-color;
+            }
+            p {
+              color: $sec-text-dark-color;
+            }
+          }
+        }
+      }
+    }
+    .blog {
+      background-color: $sec-dark-bg;
+      .container {
+        .sec-body {
+          article {
+            box-shadow: $main-box-shadow;
+            .text {
+              background-color: $main-dark-bg;
+              a {
+                h3 {
+                  color: $white-dark-color;
+                }
+              }
+              p {
+                color: $sec-text-dark-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .top {
+      a {
+        background-color: $main-dark-color;
+        border-color: $main-dark-color;
+        i {
+          color: $white-dark-color;
+        }
+        &:hover {
+          background-color: $sec-dark-bg;
+          border-color: $main-dark-color;
+          i {
+            color: $main-dark-color;
+          }
+        }
+      }
+    }
+    .contact-us {
+      &::before {
+        background-color: rgba(5, 156, 177, 0.5);
+      }
+    }
+  }
+  // End Dark Mode Styling
 }

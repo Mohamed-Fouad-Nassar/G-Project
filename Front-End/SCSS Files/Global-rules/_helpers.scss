@@ -1,7 +1,7 @@
 @use "./variables" as *;
 
 // mixins:-
-@mixin check-box-shape($color) {
+@mixin check-box-shape($color, $theme) {
   cursor: pointer;
   position: relative;
   -webkit-appearance: none;
@@ -9,7 +9,7 @@
   appearance: none;
   width: 15px;
   height: 15px;
-  margin-bottom: 0px;
+  margin: 0px;
   &::before,
   &::after {
     position: absolute;
@@ -19,7 +19,7 @@
     width: 100%;
     height: 100%;
     border-radius: 2px;
-    background-color: $white-color;
+    background-color: transparent;
     border: 1.5px solid $sec-color;
   }
   &:hover::before {
@@ -57,9 +57,17 @@
     -o-transform: translate(-50%, -50%) rotate(0);
     @extend %flex-center-center;
   }
+  @if ($theme == "dark") {
+    &::before {
+      border-color: $sec-dark-color;
+    }
+    &:checked::after {
+      color: $white-dark-color;
+    }
+  }
 }
 
-@mixin radio-shape($color) {
+@mixin radio-shape($color, $theme) {
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -75,7 +83,7 @@
   &::before {
     width: 16px;
     height: 16px;
-    background-color: $white-color;
+    background-color: transparent;
     border: 1.5px solid $sec-color;
   }
   &:hover::before {
@@ -93,6 +101,11 @@
       width: 12px;
       height: 12px;
       background-color: $color;
+    }
+  }
+  @if ($theme == "dark") {
+    &::before {
+      border-color: $sec-dark-color;
     }
   }
 }
@@ -142,7 +155,7 @@
   -o-border-radius: $num;
 }
 
-@mixin back-btn($top, $left) {
+@mixin back-btn($top, $left, $theme) {
   position: absolute;
   top: $top;
   left: $left;
@@ -158,6 +171,32 @@
   }
   .f-icon {
     font-size: 1.3rem;
+  }
+  @if ($theme == "dark") {
+    color: $white-dark-color;
+    &:hover {
+      .f-icon {
+        color: $main-dark-color;
+      }
+    }
+  }
+}
+
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
   }
 }
 

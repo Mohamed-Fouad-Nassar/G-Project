@@ -10,7 +10,59 @@
 body {
   min-height: 100vh;
   @extend %flex-center-center;
-  background-color: $light-white-color;
+  // background-color: $light-white-color;
+  background-color: #ebfcff;
+  &.dark {
+    background-color: $main-dark-bg;
+    .card {
+      background-color: $sec-dark-bg;
+      box-shadow: $dark-box-shadow;
+      .head {
+        h2 {
+          color: $main-dark-color;
+        }
+        p {
+          color: $sec-text-dark-color;
+        }
+      }
+      .body {
+        form {
+          section {
+            label {
+              color: $white-dark-color;
+            }
+            .field {
+              background-color: $main-dark-bg;
+              input[type="text"] {
+                background-color: transparent;
+                color: $white-dark-color;
+                &:focus {
+                  ~ span {
+                    background-color: $main-dark-color;
+                  }
+                  ~ .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+              }
+              span {
+                background-color: $sec-dark-color;
+              }
+              .f-icon {
+                color: $sec-dark-color;
+              }
+            }
+          }
+          .btns {
+            input[type="button"] {
+              background-color: $sec-dark-color;
+              border-color: $sec-dark-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .card {
@@ -22,7 +74,7 @@ body {
   max-width: 850px;
   margin: auto;
   background-color: $white-color;
-  box-shadow: 3px 4px 22px -5px #8b8b8b;
+  box-shadow: $light-form-shadow;
   @media (max-width: 767px) {
     max-width: 400px;
   }
@@ -36,6 +88,7 @@ body {
       max-width: 100%;
     }
     h2 {
+      color: $main-color;
       margin: 0 {
         bottom: 10px;
       }
@@ -66,17 +119,40 @@ body {
         .field {
           @extend %flex-center-center;
           flex-direction: row-reverse;
-          border-bottom: 2px solid $sec-color;
           position: relative;
+          padding: 0 {
+            left: 5px;
+            right: 5px;
+          }
+          background-color: #f9f9f9;
           &::after {
             @extend %error-sign;
           }
           input[type="text"] {
             flex: 1;
-            padding: $field-top-padding $sec-element-padding;
+            padding: 10px {
+              left: 5px;
+              right: 0;
+            }
             border: none;
             outline: none;
             background-color: transparent;
+            &:focus {
+              ~ span {
+                background-color: $main-color;
+              }
+              ~ .f-icon {
+                color: $main-color;
+              }
+            }
+          }
+          span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $sec-color;
+            height: 2px;
+            width: 100%;
           }
           .f-icon {
             color: $sec-color;

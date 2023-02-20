@@ -9,9 +9,157 @@
 
 body {
   min-height: 100vh;
+  padding: $main-element-padding 0;
   @extend %flex-center-center;
-  background-color: $light-white-color;
+  // background-color: $light-white-color;
+  background-color: #ebfcff;
+  &.dark {
+    background-color: $main-dark-bg;
+    .card {
+      background-color: $sec-dark-bg;
+      box-shadow: $dark-box-shadow;
+      .left {
+        .back-btn {
+          @include back-btn($main-element-padding, $sec-element-padding, dark);
+        }
+        .head {
+          h2 {
+            color: $main-color;
+          }
+          p {
+            color: $sec-text-dark-color;
+          }
+        }
+        form {
+          section {
+            label {
+              color: $white-dark-color;
+            }
+          }
+          .name {
+            > label {
+              color: $white-dark-color;
+            }
+            .data {
+              div {
+                label {
+                  color: $white-dark-color;
+                }
+              }
+            }
+          }
+          .field {
+            background-color: $main-dark-bg;
+            input {
+              background-color: transparent;
+              color: $white-dark-color;
+              &:focus {
+                ~ span {
+                  background-color: $main-dark-color;
+                }
+                ~ .f-icon {
+                  color: $main-dark-color;
+                }
+              }
+            }
+            i {
+              color: $sec-dark-color;
+            }
+            span {
+              background-color: $sec-dark-color;
+            }
+          }
+          .gender {
+            p {
+              color: $sec-text-dark-color;
+            }
+            .choose {
+              input {
+                @include radio-shape($main-dark-color, dark);
+              }
+              label {
+                color: $white-dark-color;
+              }
+            }
+          }
+          .caner-type {
+            .cancer {
+              select {
+                background-color: $main-dark-bg;
+                color: $white-dark-color;
+                &:focus {
+                  border-bottom-color: $main-dark-color;
+                }
+              }
+            }
+          }
+          .birth-date {
+            input[type="date"] {
+              border-bottom-color: $sec-dark-color;
+              background-color: $main-dark-bg;
+              color: $white-dark-color;
+              &:focus {
+                border-color: $main-dark-color;
+              }
+            }
+          }
+          .check-box {
+            label {
+              a {
+                color: $sec-dark-color;
+                &:hover {
+                  color: $main-dark-color;
+                }
+              }
+            }
+            input {
+              @include check-box-shape($main-dark-color, dark);
+            }
+          }
+          .buttons {
+            input[type="reset"] {
+              background-color: $sec-dark-color;
+              border-color: $sec-dark-color;
+              &:hover {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+        .log-link {
+          span {
+            color: $white-dark-color;
+          }
+          a {
+            color: $sec-dark-color;
+            &:hover {
+              color: $main-dark-color;
+            }
+          }
+        }
+      }
+      .right {
+        &::before {
+          background-color: $main-transparent-color;
+          filter: brightness(0.7);
+          -webkit-filter: brightness(0.7);
+        }
+        .text {
+          color: $white-dark-color;
+          a {
+            background-color: $main-dark-color;
+            &:hover {
+              background-color: $nav-active-bg;
+              border-color: $main-dark-color;
+              color: $main-dark-color;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 .card {
   @extend %border-radius-10;
   max-width: 950px;
@@ -20,21 +168,21 @@ body {
   overflow: hidden;
   position: relative;
   background-color: $white-color;
-  box-shadow: 3px 4px 22px -5px #8b8b8b;
+  box-shadow: $light-form-shadow;
   @media (max-width: 767px) {
     max-width: 400px;
   }
   .left {
     width: 50%;
     padding: $main-element-padding {
-      top: $main-element-padding * 4;
+      top: 70px;
     }
     @media (max-width: 767px) {
       width: 100%;
       padding-top: $up-down-padding / 2;
     }
     .back-btn {
-      @include back-btn($main-element-padding, $sec-element-padding);
+      @include back-btn($main-element-padding, $sec-element-padding, light);
     }
     .head {
       text-align: center;
@@ -61,7 +209,6 @@ body {
         .sec-flex {
           @extend %flex-center-between;
           position: relative;
-          padding-right: 25px;
           &::after {
             @extend %error-sign;
           }
@@ -75,14 +222,13 @@ body {
         }
         .data {
           @extend %flex-center-between;
+          gap: 10px;
           @media (max-width: 991px) {
             flex-direction: column;
             gap: $main-element-padding;
           }
           div {
-            @media (max-width: 991px) {
-              width: 100%;
-            }
+            width: 100%;
             label {
               display: none;
               @media (max-width: 991px) {
@@ -91,80 +237,64 @@ body {
             }
             .field {
               input {
+                &:focus {
+                  @include placeholder-color(transparent);
+                }
                 @media (max-width: 991px) {
-                  &::-webkit-input-placeholder {
-                    color: transparent;
-                  }
-                  &::-moz-placeholder {
-                    color: transparent;
-                  }
-                  &:-ms-input-placeholder {
-                    color: transparent;
-                  }
-                  &::-ms-input-placeholder {
-                    color: transparent;
-                  }
-                  &::placeholder {
-                    color: transparent;
-                  }
+                  @include placeholder-color(transparent);
                 }
               }
             }
           }
         }
       }
-      .buttons {
-        @extend %flex-center-between;
-        gap: $sec-element-padding;
-        @media (max-width: 767px) {
-          margin-bottom: $main-element-padding;
+      .field {
+        @extend %flex-center-center;
+        flex-direction: row-reverse;
+        position: relative;
+        gap: 5px;
+        padding: 0 {
+          left: 5px;
+          right: 5px;
         }
-        @media (max-width: 370px) {
-          flex-direction: column;
+        background-color: #f9f9f9;
+        &::after {
+          @extend %error-sign;
         }
-      }
-      .check-box {
-        @extend %flex-center-start;
-        gap: $sec-element-padding;
-        label {
-          font-size: 0.9rem;
-          a {
-            color: $sec-color;
-            &:hover {
+        input {
+          flex: 1;
+          padding: $sec-element-padding {
+            left: 5px;
+            right: 0;
+          }
+          border: none;
+          outline: none;
+          background-color: transparent;
+          &:focus {
+            ~ span {
+              background-color: $main-color;
+            }
+            ~ .f-icon {
               color: $main-color;
             }
           }
         }
-        input {
-          @include check-box-shape($main-color);
-        }
-      }
-      .field {
-        @extend %flex-center-center;
-        flex-direction: row-reverse;
-        border-bottom: 2px solid $sec-color;
-        position: relative;
-        gap: 10px;
-        &::after {
-          @extend %error-sign;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="Password"] {
-          flex: 1;
-          padding: $sec-element-padding 0;
-          border: none;
-          outline: none;
-          background-color: transparent;
-        }
         i {
           color: $sec-color;
+        }
+        span {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $sec-color;
+          height: 2px;
+          width: 100%;
         }
       }
       .gender {
         p {
           margin: 0 {
-            top: 10px;
+            top: $sec-element-padding;
           }
           &:first-of-type {
             @media (max-width: 991px) {
@@ -181,7 +311,7 @@ body {
         .choose {
           input {
             margin-bottom: 5px;
-            @include radio-shape($main-color);
+            @include radio-shape($main-color, light);
           }
           label {
             cursor: pointer;
@@ -194,19 +324,77 @@ body {
           }
         }
       }
-      input[type="date"] {
-        flex: 1;
-        text-align: center;
-        margin-left: $sec-element-padding;
-        padding: $field-top-padding $sec-element-padding;
-        border: none;
-        outline: none;
-        border-bottom: 2px solid $sec-color;
-        background-color: transparent;
+      .caner-type {
+        @extend %flex-center-between;
+        gap: $sec-element-padding;
+        .cancer {
+          flex: 1;
+          select {
+            width: 100%;
+            padding: 7px $sec-element-padding;
+            outline: none;
+            text-align: center;
+            background-color: #f9f9f9;
+            border: none {
+              bottom: 2px solid $sec-color;
+            }
+            &:focus {
+              border-bottom-color: $main-color;
+            }
+          }
+        }
       }
-      input[type="submit"],
-      input[type="reset"] {
-        @extend %button-shape;
+      .birth-date {
+        input[type="date"] {
+          flex: 1;
+          text-align: center;
+          margin-left: $sec-element-padding;
+          padding: $field-top-padding $sec-element-padding;
+          border: none;
+          outline: none;
+          border-bottom: 2px solid $sec-color;
+          background-color: #f9f9f9;
+          // background-color: transparent;
+          &:focus {
+            border-color: $main-color;
+          }
+        }
+      }
+      .check-box {
+        @extend %flex-center-start;
+        gap: 7px;
+        label {
+          font-size: 0.9rem;
+          margin-top: 2px;
+          a {
+            color: $sec-color;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+        input {
+          @include check-box-shape($main-color, light);
+        }
+      }
+      .buttons {
+        @extend %flex-center-between;
+        gap: $sec-element-padding;
+        margin-bottom: 15px;
+        @media (max-width: 767px) {
+          margin-bottom: $main-element-padding;
+        }
+        @media (max-width: 370px) {
+          flex-direction: column;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+          @extend %button-shape;
+        }
+        input[type="reset"] {
+          background-color: $sec-color;
+          border-color: $sec-color;
+        }
       }
     }
     .log-link {

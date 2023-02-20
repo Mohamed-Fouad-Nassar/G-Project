@@ -34,7 +34,7 @@ header .container .log-in-acc .theme .h-btn,
 main .radiation .container .sec-body .text a,
 main .contact-us .container .sec-body .sec-right form input[type=submit],
 header .container .account a,
-header.dark .container .account a,
+body.dark header .container .account a,
 section .container .sec-foot a {
   display: flex;
   align-items: center;
@@ -153,7 +153,7 @@ i {
 main .radiation .container .sec-body .text a,
 main .contact-us .container .sec-body .sec-right form input[type=submit],
 header .container .account a,
-header.dark .container .account a,
+body.dark header .container .account a,
 section .container .sec-foot a {
   width: 160px;
   margin: 0 auto;
@@ -167,6 +167,7 @@ section .container .sec-foot a {
 main .radiation .container .sec-body .text a:hover,
 main .contact-us .container .sec-body .sec-right form input[type=submit]:hover,
 header .container .account a:hover,
+body.dark header .container .account a:hover,
 section .container .sec-foot a:hover {
   color: #059cb1;
   background-color: transparent;
@@ -766,69 +767,69 @@ header.scroll.dark .container nav ul li.active a {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-header.dark {
+body.dark header {
   background-color: #1d1d1d;
   box-shadow: 0px 9px 20px -15px #000;
 }
 
-header.dark .container .logo a h1 {
+body.dark header .container .logo a h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
 @media (max-width: 767px) {
-  header.dark .container nav {
+  body.dark header .container nav {
     border-color: #555;
   }
 }
 
-header.dark .container nav ul li::after {
+body.dark header .container nav ul li::after {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
 
-header.dark .container nav ul li.active {
+body.dark header .container nav ul li.active {
   background-color: #323234;
 }
 
-header.dark .container nav ul li.active a span,
-header.dark .container nav ul li.active a .f-icon {
+body.dark header .container nav ul li.active a span,
+body.dark header .container nav ul li.active a .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-header.dark .container nav ul li a:hover span,
-header.dark .container nav ul li a:hover .f-icon {
+body.dark header .container nav ul li a:hover span,
+body.dark header .container nav ul li a:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-header.dark .container nav ul li a .f-icon,
-header.dark .container nav ul li a span {
-  color: #fdfdf6;
+body.dark header .container nav ul li a .f-icon,
+body.dark header .container nav ul li a span {
+  color: #efefef;
 }
 
-header.dark .container .account a:last-of-type {
+body.dark header .container .account a:last-of-type {
   background-color: rgba(89, 193, 189, 0.8705882353);
   border-color: rgba(89, 193, 189, 0.8705882353);
 }
 
-header.dark .container .account a:last-of-type:hover {
+body.dark header .container .account a:last-of-type:hover {
   background-color: transparent;
   border-color: rgba(89, 193, 189, 0.8705882353);
   color: rgba(89, 193, 189, 0.8705882353);
 }
 
-header.dark .container .log-in-acc .lang .h-btn span {
-  color: #fdfdf6;
+body.dark header .container .log-in-acc .lang .h-btn span {
+  color: #efefef;
 }
 
-header.dark .container .log-in-acc .lang .menu {
+body.dark header .container .log-in-acc .lang .menu {
   background-color: #1d1d1d;
 }
 
-header.dark .container .log-in-acc .lang .menu ul li span {
-  color: #fdfdf6;
+body.dark header .container .log-in-acc .lang .menu ul li span {
+  color: #efefef;
 }
 
-header.dark .container .log-in-acc .theme .h-btn .f-icon {
-  color: #fdfdf6;
+body.dark header .container .log-in-acc .theme .h-btn .f-icon {
+  color: #efefef;
 }
 
 footer {
@@ -1382,6 +1383,7 @@ main .top a:hover i {
 main .contact-us {
   padding: 100px 0;
   position: relative;
+  background-image: url(../Data/Images/contact-background-image.jpg);
   z-index: 0;
 }
 
@@ -1392,7 +1394,7 @@ main .contact-us::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(5, 156, 177, 0.6);
+  background-color: rgba(5, 156, 177, 0.9);
   z-index: -1;
   opacity: 0.9;
 }
@@ -1479,12 +1481,12 @@ main .contact-us .container .sec-body .sec-right form textarea {
   padding: 10px;
   width: 100%;
   min-height: 250px;
-  border: 1px solid #59c1bd;
-  outline: none;
-  resize: none;
-  caret-color: #059cb1;
-  background-color: #059cb1;
   color: #fff;
+  background-color: #059cb1;
+  resize: none;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
 }
 
 main .contact-us .container .sec-body .sec-right form textarea::-webkit-input-placeholder {
@@ -1507,9 +1509,24 @@ main .contact-us .container .sec-body .sec-right form textarea::placeholder {
   color: #fff;
 }
 
-main .contact-us .container .sec-body .sec-right form textarea:focus {
-  border-color: #059cb1;
-  background-color: rgba(5, 156, 177, 0.6);
+main .contact-us .container .sec-body .sec-right form textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .contact-us .container .sec-body .sec-right form textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .contact-us .container .sec-body .sec-right form textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .contact-us .container .sec-body .sec-right form textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .contact-us .container .sec-body .sec-right form textarea:focus::placeholder {
+  color: transparent;
 }
 
 main .contact-us .container .sec-body .sec-right form input[type=submit] {
@@ -1522,154 +1539,231 @@ main .contact-us .container .sec-body .sec-right form input[type=submit]:hover {
   border-color: #fff;
 }
 
-main.dark .landing {
+body.dark main .landing {
   background-color: #222;
 }
 
-main.dark .landing .container .down-btn a:hover i {
+body.dark main .landing .container .down-btn a:hover i {
   color: rgba(89, 193, 189, 0.8705882353);
 }
 
-main.dark .landing .container .down-btn a i {
+body.dark main .landing .container .down-btn a i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .landing .container .left h2 {
+body.dark main .landing .container .left h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .landing .container .left p {
+body.dark main .landing .container .left p {
   color: #a5a5a5;
 }
 
-main.dark .services {
+body.dark main .services {
   background-color: #1d1d1d;
 }
 
-main.dark .services .container .sec-body .box:hover {
+body.dark main .services .container .sec-body .box:hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-main.dark .services .container .sec-body .box a i {
-  color: #fdfdf6;
+body.dark main .services .container .sec-body .box a i {
+  color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .services .container .sec-body .box a h3 {
+body.dark main .services .container .sec-body .box a h3 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .services .container .sec-body .box a p {
+body.dark main .services .container .sec-body .box a p {
   color: #a5a5a5;
 }
 
-main.dark .doctors {
+body.dark main .doctors {
   background-color: #222;
 }
 
-main.dark .doctors .container .sec-body .box {
+body.dark main .doctors .container .sec-body .box {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-main.dark .doctors .container .sec-body .box .info {
+body.dark main .doctors .container .sec-body .box .info {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-main.dark .doctors .container .sec-body .box .info h5 {
+body.dark main .doctors .container .sec-body .box .info h5 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .doctors .container .sec-body .box .info p {
+body.dark main .doctors .container .sec-body .box .info p {
   color: #a5a5a5;
 }
 
-main.dark .medicine {
+body.dark main .medicine {
   background-color: #1d1d1d;
 }
 
-main.dark .medicine .container .sec-body .box {
+body.dark main .medicine .container .sec-body .box {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-main.dark .medicine .container .sec-body .box::before {
+body.dark main .medicine .container .sec-body .box::before {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-main.dark .medicine .container .sec-body .box .info a {
+body.dark main .medicine .container .sec-body .box .info a {
   color: rgba(89, 193, 189, 0.8705882353);
 }
 
-main.dark .medicine .container .sec-body .box .info a:hover i,
-main.dark .medicine .container .sec-body .box .info a:hover h4 {
+body.dark main .medicine .container .sec-body .box .info a:hover i,
+body.dark main .medicine .container .sec-body .box .info a:hover h4 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .medicine .container .sec-body .box .info a i {
+body.dark main .medicine .container .sec-body .box .info a i {
   color: rgba(89, 193, 189, 0.8705882353);
 }
 
-main.dark .medicine .container .sec-body .box .info a h4 {
+body.dark main .medicine .container .sec-body .box .info a h4 {
   color: rgba(89, 193, 189, 0.8705882353);
 }
 
-main.dark .medicine .container .sec-body .box .info p {
+body.dark main .medicine .container .sec-body .box .info p {
   color: #a5a5a5;
 }
 
-main.dark .radiation {
+body.dark main .radiation {
   background-color: #222;
 }
 
-main.dark .radiation .container .sec-body {
+body.dark main .radiation .container .sec-body {
   background-color: #1d1d1d;
 }
 
-main.dark .radiation .container .sec-body .text h2 {
-  color: #fdfdf6;
+body.dark main .radiation .container .sec-body .text h2 {
+  color: #efefef;
 }
 
-main.dark .radiation .container .sec-body .text p {
+body.dark main .radiation .container .sec-body .text p {
   color: #a5a5a5;
 }
 
-main.dark .blog {
+body.dark main .blog {
   background-color: #1d1d1d;
 }
 
-main.dark .blog .container .sec-body article {
+body.dark main .blog .container .sec-body article {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
 }
 
-main.dark .blog .container .sec-body article .text {
+body.dark main .blog .container .sec-body article .text {
   background-color: #222;
 }
 
-main.dark .blog .container .sec-body article .text a h3 {
-  color: #fdfdf6;
+body.dark main .blog .container .sec-body article .text a h3 {
+  color: #efefef;
 }
 
-main.dark .blog .container .sec-body article .text p {
+body.dark main .blog .container .sec-body article .text p {
   color: #a5a5a5;
 }
 
-main.dark .top a {
+body.dark main .top a {
   background-color: rgba(5, 156, 177, 0.8705882353);
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .top a i {
-  color: #fdfdf6;
+body.dark main .top a i {
+  color: #efefef;
 }
 
-main.dark .top a:hover {
+body.dark main .top a:hover {
   background-color: #1d1d1d;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .top a:hover i {
+body.dark main .top a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-main.dark .contact-us::before {
-  background-color: rgba(5, 156, 177, 0.5);
+body.dark main .contact-us {
+  z-index: 0;
+}
+
+body.dark main .contact-us::before {
+  background-color: rgba(5, 156, 177, 0.9);
+  -webkit-filter: brightness(0.6);
+  filter: brightness(0.6);
+}
+
+body.dark main .contact-us .container {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-head h2,
+body.dark main .contact-us .container .sec-head p {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-left .contact-info .box .icon-div i {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-left .contact-info .box span {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea {
+  color: #efefef;
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  border-bottom-color: #efefef;
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea::-webkit-input-placeholder {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea::-moz-placeholder {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea:-ms-input-placeholder {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea::-ms-input-placeholder {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea::placeholder {
+  color: #efefef;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form textarea:focus::placeholder {
+  color: transparent;
+}
+
+body.dark main .contact-us .container .sec-body .sec-right form input[type=submit]:hover {
+  color: #efefef;
+  border-color: #efefef;
 }

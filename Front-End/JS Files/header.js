@@ -1,4 +1,5 @@
 // Language Dropdown Menu
+
 // active menu
 let lang = document.querySelector(".lang > .h-btn");
 let menu = document.querySelector(".lang > .menu");
@@ -15,6 +16,7 @@ lang.onblur = function () {
   lang.classList.remove("active");
   menu.style.display = "none";
 };
+
 // change header language icon and text
 let headLangImage = document.querySelector(".lang > .h-btn div img");
 let headLangText = document.querySelector(".lang > .h-btn span");
@@ -30,16 +32,11 @@ langs.forEach((lang) => {
 
 // Dark Mode Button
 let theme = document.querySelector(".theme > .h-btn");
-// let header = document.getElementById("navbar_top");
-let main = document.getElementById("main_page");
+let body = document.body;
 theme.onclick = function () {
-  if (main.classList.contains("dark") || header.classList.contains("dark")) {
-    main.classList.remove("dark");
-    header.classList.remove("dark");
-    document.body.style.background = "#fff";
+  if (body.classList.contains("dark")) {
+    body.classList.remove("dark");
   } else {
-    main.classList.add("dark");
-    header.classList.add("dark");
-    document.body.style.background = "#000";
+    body.classList.add("dark");
   }
 };

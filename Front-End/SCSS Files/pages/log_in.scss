@@ -10,7 +10,109 @@
 body {
   min-height: 100vh;
   @extend %flex-center-center;
-  background-color: $light-white-color;
+  // background-color: $light-white-color;
+  background-color: #ebfcff;
+  &.dark {
+    background-color: $main-dark-bg;
+    .card {
+      background-color: $sec-dark-bg;
+      box-shadow: $dark-box-shadow;
+      .left {
+        .back-btn {
+          @include back-btn($main-element-padding, $sec-element-padding, dark);
+        }
+        .head {
+          h2 {
+            color: $main-dark-color;
+          }
+          p {
+            color: $sec-text-dark-color;
+          }
+        }
+        form {
+          section {
+            label {
+              color: $white-dark-color;
+            }
+            .field {
+              background-color: $main-dark-bg;
+              input {
+                background-color: transparent;
+                color: $white-dark-color;
+                &:focus {
+                  ~ span {
+                    background-color: $main-dark-color;
+                  }
+                  ~ .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+              }
+              .f-icon {
+                color: $sec-dark-color;
+              }
+              span {
+                background-color: $sec-dark-color;
+              }
+            }
+            .left-sec {
+              input {
+                @include check-box-shape($main-dark-color, dark);
+              }
+              label {
+                color: $white-dark-color;
+              }
+            }
+            .right-sec {
+              a {
+                color: $sec-dark-color;
+                &:hover {
+                  color: $main-dark-color;
+                }
+              }
+            }
+          }
+        }
+        .reg-link {
+          a {
+            color: $sec-dark-color;
+            &:hover {
+              color: $main-dark-color;
+            }
+          }
+        }
+        hr {
+          border-color: $white-dark-color;
+        }
+        .social-log {
+          h3 {
+            color: $white-dark-color;
+          }
+          .links {
+            a {
+              background-color: $sec-dark-color;
+              &:hover {
+                i {
+                  color: $main-dark-color;
+                }
+              }
+              i {
+                color: $white-dark-color;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        &::before {
+          background-color: $main-transparent-color;
+        }
+        .text {
+          color: $white-dark-color;
+        }
+      }
+    }
+  }
 }
 .card {
   @extend %border-radius-10;
@@ -20,7 +122,7 @@ body {
   overflow: hidden;
   position: relative;
   background-color: $white-color;
-  box-shadow: 3px 4px 22px -5px #8b8b8b;
+  box-shadow: $light-form-shadow;
   @media (max-width: 767px) {
     max-width: 400px;
   }
@@ -33,7 +135,7 @@ body {
       width: 100%;
     }
     .back-btn {
-      @include back-btn($main-element-padding, $sec-element-padding);
+      @include back-btn($main-element-padding, $sec-element-padding, light);
     }
     .head {
       text-align: center;
@@ -63,27 +165,51 @@ body {
         .field {
           @extend %flex-center-center;
           flex-direction: row-reverse;
-          border-bottom: 2px solid $sec-color;
           position: relative;
+          gap: 5px;
+          padding: 0 {
+            left: 5px;
+            right: 5px;
+          }
+          background-color: #f9f9f9;
           &::after {
             @extend %error-sign;
           }
           input {
             flex: 1;
-            padding: $field-top-padding $sec-element-padding;
+            padding: 10px {
+              left: 5px;
+              right: 0;
+            }
             border: none;
             outline: none;
             background-color: transparent;
+            &:focus {
+              ~ span {
+                background-color: $main-color;
+              }
+              ~ .f-icon {
+                color: $main-color;
+              }
+            }
           }
-          i {
+          .f-icon {
             color: $sec-color;
+          }
+          span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $sec-color;
+            height: 2px;
+            width: 100%;
           }
         }
         .left-sec {
           display: flex;
           gap: $field-top-padding;
           input {
-            @include check-box-shape($main-color);
+            @include check-box-shape($main-color, light);
           }
           label {
             margin: 0;
@@ -125,6 +251,7 @@ body {
       flex-direction: column;
       h3 {
         margin: 0 {
+          top: $sec-element-padding;
           bottom: $main-element-padding;
         }
       }

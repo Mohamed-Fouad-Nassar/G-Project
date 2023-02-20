@@ -28,7 +28,6 @@ function activeMenu() {
 }
 activeMenu();
 window.addEventListener("scroll", activeMenu);
-///////////
 
 // back to top button
 let goUp = document.getElementById("up");

@@ -5,7 +5,7 @@
 // import variables
 @use "../Global-rules/variables" as *;
 
-// header styling:-
+// Start Header Styling:-
 header {
   background-color: $light-white-color;
   box-shadow: -1px 1px 20px -15px $black-color;
@@ -286,75 +286,48 @@ header {
       }
     }
   }
+}
+// End Header Styling
+// Start Dark Mode Styling:-
+body {
   &.dark {
-    background-color: $sec-dark-bg;
-    box-shadow: 0px 9px 20px -15px $black-color;
-    .container {
-      .logo {
-        a {
-          h1 {
-            color: $main-dark-color;
+    header {
+      background-color: $sec-dark-bg;
+      box-shadow: 0px 9px 20px -15px $black-color;
+      .container {
+        .logo {
+          a {
+            h1 {
+              color: $main-dark-color;
+            }
           }
         }
-      }
-      nav {
-        @media (max-width: 767px) {
-          border-color: $sec-text-color;
-        }
-        ul {
-          li {
-            &::after {
-              background-color: $main-dark-color;
-            }
-            &.active {
-              background-color: $nav-active-bg;
+        nav {
+          @media (max-width: 767px) {
+            border-color: $sec-text-color;
+          }
+          ul {
+            li {
+              &::after {
+                background-color: $main-dark-color;
+              }
+              &.active {
+                background-color: $nav-active-bg;
+                a {
+                  span,
+                  .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+              }
               a {
-                span,
-                .f-icon {
-                  color: $main-dark-color;
+                &:hover {
+                  span,
+                  .f-icon {
+                    color: $main-dark-color;
+                  }
                 }
-              }
-            }
-            a {
-              &:hover {
-                span,
-                .f-icon {
-                  color: $main-dark-color;
-                }
-              }
-              .f-icon,
-              span {
-                color: $white-dark-color;
-              }
-            }
-          }
-        }
-      }
-      .account {
-        a {
-          @extend %button-shape;
-          &:last-of-type {
-            background-color: $sec-dark-color;
-            border-color: $sec-dark-color;
-            &:hover {
-              background-color: transparent;
-              border-color: $sec-dark-color;
-              color: $sec-dark-color;
-            }
-          }
-        }
-      }
-      .log-in-acc {
-        .lang {
-          .h-btn {
-            span {
-              color: $white-dark-color;
-            }
-          }
-          .menu {
-            background-color: $sec-dark-bg;
-            ul {
-              li {
+                .f-icon,
                 span {
                   color: $white-dark-color;
                 }
@@ -362,10 +335,43 @@ header {
             }
           }
         }
-        .theme {
-          .h-btn {
-            .f-icon {
-              color: $white-dark-color;
+        .account {
+          a {
+            @extend %button-shape;
+            &:last-of-type {
+              background-color: $sec-dark-color;
+              border-color: $sec-dark-color;
+              &:hover {
+                background-color: transparent;
+                border-color: $sec-dark-color;
+                color: $sec-dark-color;
+              }
+            }
+          }
+        }
+        .log-in-acc {
+          .lang {
+            .h-btn {
+              span {
+                color: $white-dark-color;
+              }
+            }
+            .menu {
+              background-color: $sec-dark-bg;
+              ul {
+                li {
+                  span {
+                    color: $white-dark-color;
+                  }
+                }
+              }
+            }
+          }
+          .theme {
+            .h-btn {
+              .f-icon {
+                color: $white-dark-color;
+              }
             }
           }
         }
@@ -373,3 +379,4 @@ header {
     }
   }
 }
+// End Dark Mode Styling

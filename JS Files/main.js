@@ -45,3 +45,81 @@ goUp.onclick = function () {
   "use strict";
   window.scrollTo(0, 0);
 };
+
+// test
+
+const slider = document.querySelector(".slider");
+const firstSlide = slider.querySelectorAll(".slider .slide")[0],
+  arrowIcons = document.querySelectorAll(".slider .icon");
+
+let isDragStart = false,
+  prevPageX,
+  prevScrollLeft;
+
+let isDragging = false,
+  positionDiff;
+
+const showHideIcons = () => {
+  let scrollWidth = slider.scrollWidth - slider.clientWidth;
+  arrowIcons[0].style.display = slider.scrollLeft == 0 ? "none" : "flex";
+  arrowIcons[1].style.display =
+    slider.scrollLeft == scrollWidth ? "none" : "flex";
+};
+
+arrowIcons.forEach((icon) => {
+  icon.addEventListener("click", () => {
+    let firstSlideWidth = firstSlide.clientWidth + 14;
+    slider.scrollLeft += icon.id == "left" ? -firstSlideWidth : firstSlideWidth;
+    setTimeout(() => showHideIcons(), 60);
+  });
+});
+
+const autoSlide = () => {
+  if (
+    slider.scrollLeft - (slider.scrollWidth - slider.clientWidth) > -1 ||
+    slider.scrollLeft <= 0
+  )
+    return;
+  positionDiff = Math.abs(positionDiff);
+  let firstSlideWidth = firstSlide.clientWidth + 14;
+  let valDifference = firstSlideWidth - positionDiff;
+  if (slider.scrollLeft > prevScrollLeft) {
+    return (slider.scrollLeft +=
+      positionDiff > firstSlideWidth / 3 ? valDifference : -positionDiff);
+  }
+  slider.scrollLeft -=
+    positionDiff > firstSlideWidth / 3 ? valDifference : -positionDiff;
+};
+
+const dragStart = (e) => {
+  isDragStart = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevScrollLeft = slider.scrollLeft;
+};
+
+const dragging = (e) => {
+  if (!isDragStart) return;
+  e.preventDefault();
+  isDragging = true;
+  slider.classList.add("dragging");
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  slider.scrollLeft = prevScrollLeft - positionDiff;
+  showHideIcons();
+};
+
+const dragStop = () => {
+  isDragStart = false;
+  slider.classList.remove("dragging");
+  if (!isDragging) return;
+  isDragging = false;
+  autoSlide();
+};
+
+slider.addEventListener("mousedown", dragStart);
+slider.addEventListener("touchstart", dragStart);
+
+document.addEventListener("mousemove", dragging);
+slider.addEventListener("touchmove", dragging);
+
+document.addEventListener("mouseup", dragStop);
+slider.addEventListener("touchend", dragStop);

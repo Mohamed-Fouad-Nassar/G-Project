@@ -60,6 +60,12 @@ input {
   caret-color: $main-color;
 }
 
+.dark {
+  input {
+    caret-color: $main-dark-color;
+  }
+}
+
 .container {
   padding-left: 10px;
   padding-right: 10px;
@@ -128,6 +134,24 @@ input {
   }
 }
 
+@-webkit-keyframes left-right-btn {
+  from {
+    margin-left: 10px;
+  }
+  to {
+    margin-right: 10px;
+  }
+}
+
+@keyframes left-right-btn {
+  from {
+    margin-left: 10px;
+  }
+  to {
+    margin-right: 10px;
+  }
+}
+
 /* End Animation Styling */
 
 /* Start Selection Styling:- */
@@ -175,8 +199,8 @@ input {
     @extend %border-radius-50;
     display: block;
     margin: auto;
-    height: 17px;
-    width: 17px;
+    height: 14px;
+    width: 14px;
     background-color: transparent;
     border: 2px solid $sec-color;
     &::after,
@@ -184,7 +208,7 @@ input {
       @extend %translate-y-50;
       content: "";
       height: 2px;
-      width: calc(50% - 20px);
+      width: calc(50% - 15px);
       background-color: $sec-color;
       position: absolute;
       top: 50%;
@@ -203,6 +227,28 @@ input {
     &::after,
     &::before {
       background-color: $white-color;
+    }
+  }
+}
+
+.dark {
+  .head-shape,
+  .head-shape-w {
+    span {
+      border-color: $sec-dark-color;
+      &::after,
+      &::before {
+        background-color: $sec-dark-color;
+      }
+    }
+  }
+  .head-shape-w {
+    span {
+      border-color: $white-dark-color;
+      &::after,
+      &::before {
+        background-color: $white-dark-color;
+      }
     }
   }
 }
@@ -240,7 +286,7 @@ section {
   }
 }
 
-@media (prefers-color-scheme: dark) {
+.dark {
   // Dark Mode Head-Shape
   section {
     .container {

@@ -81,9 +81,8 @@ main {
     background-color: $light-white-color;
     .container {
       .sec-body {
-        @extend %grid-250-20;
+        @extend %grid-200-20;
         .box {
-          @extend %border-radius-5;
           padding: $main-element-padding $sec-element-padding;
           position: relative;
           &:hover {
@@ -91,7 +90,7 @@ main {
           }
           a {
             text-align: center;
-            i {
+            .f-icon {
               @extend %border-radius-50;
               @extend %flex-center-center;
               margin: auto;
@@ -123,7 +122,6 @@ main {
       .sec-body {
         @extend %grid-200-20;
         .box {
-          @extend %border-radius-5;
           box-shadow: $main-box-shadow;
           position: relative;
           overflow: hidden;
@@ -189,7 +187,6 @@ main {
         }
         .box {
           &::before {
-            @extend %border-radius-5;
             @extend %translate-50;
             content: "";
             position: absolute;
@@ -202,7 +199,6 @@ main {
             background-color: $transparent-color;
             z-index: 2;
           }
-          @extend %border-radius-5;
           box-shadow: $main-box-shadow;
           overflow: hidden;
           position: relative;
@@ -274,7 +270,7 @@ main {
   }
   // End Medicine Styling
   // Start Radiation Styling:-
-  .radiation {
+  .hospitals {
     padding: $up-down-padding 0;
     .container {
       .sec-body {
@@ -322,7 +318,6 @@ main {
       .sec-body {
         @extend %grid-250-20;
         article {
-          @extend %border-radius-5;
           box-shadow: $main-box-shadow;
           overflow: hidden;
           &:hover {
@@ -336,6 +331,11 @@ main {
                 font: {
                   size: 1.2rem;
                   weight: 600;
+                }
+              }
+              &:hover {
+                h3 {
+                  color: $main-color;
                 }
               }
             }
@@ -353,6 +353,157 @@ main {
     }
   }
   // End Blog Styling
+  // Start charities Styling:-
+  .charities {
+    padding: $up-down-padding 0;
+    .container {
+      .sec-body {
+        position: relative;
+        .slider {
+          overflow: hidden;
+          scroll-behavior: smooth;
+          @media (max-width: 575px) {
+            margin: {
+              left: $main-element-padding;
+              right: $main-element-padding;
+            }
+          }
+          .icon {
+            @extend%translate-y-50;
+            @extend%border-radius-50;
+            @extend%flex-center-center;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            color: $white-color;
+            background-color: $main-color;
+            transition: transform 0.1s linear;
+            -webkit-transition: transform 0.1s linear;
+            -moz-transition: transform 0.1s linear;
+            -ms-transition: transform 0.1s linear;
+            -o-transition: transform 0.1s linear;
+            &:hover {
+              background-color: $sec-color;
+            }
+            &:active {
+              transform: translateY(-50%) scale(0.9);
+              -webkit-transform: translateY(-50%) scale(0.9);
+              -moz-transform: translateY(-50%) scale(0.9);
+              -ms-transform: translateY(-50%) scale(0.9);
+              -o-transform: translateY(-50%) scale(0.9);
+            }
+            &:first-of-type {
+              left: -20px;
+              display: none;
+              @media (max-width: 575px) {
+                left: 0px;
+              }
+            }
+            &:last-of-type {
+              right: -20px;
+              @media (max-width: 575px) {
+                right: 0px;
+              }
+            }
+          }
+          .slides {
+            width: 100%;
+            white-space: nowrap;
+            &.dragging {
+              scroll-behavior: auto;
+            }
+            &.dragging {
+              .slide {
+                pointer-events: none;
+              }
+            }
+            .slide {
+              cursor: -webkit-grab;
+              cursor: grab;
+              display: inline-block;
+              margin-left: 11px;
+              background-color: $light-white-color;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none;
+              box-shadow: $main-box-shadow;
+              &:first-of-type {
+                margin-left: 0;
+              }
+              @media (min-width: 992px) {
+                width: calc((100% - 30px) / 3);
+              }
+              @media (max-width: 991px) {
+                width: calc((100% - 15px) / 2);
+              }
+              @media (max-width: 575px) {
+                width: 100%;
+              }
+              .slide-image {
+                img {
+                  width: 100%;
+                  height: 250px;
+                  -o-object-fit: cover;
+                  object-fit: cover;
+                }
+              }
+              .slide-body {
+                padding: 5px $sec-element-padding;
+                h3 {
+                  font-size: 1.2rem;
+                }
+                p {
+                  color: $sec-text-color;
+                  font-size: 0.9rem;
+                  margin-bottom: $sec-element-padding;
+                  white-space: normal;
+                  overflow: hidden;
+                  width: -webkit-fit-content;
+                  width: -moz-fit-content;
+                  width: fit-content;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                }
+              }
+              .slide-foot {
+                padding: $sec-element-padding {
+                  top: 0;
+                }
+                a {
+                  span {
+                    font-size: 0.95rem;
+                    color: $main-color;
+                  }
+                  .f-icon {
+                    margin-left: 2px;
+                    font-size: 0.9rem;
+                    color: $main-color;
+                  }
+                  &:hover {
+                    span,
+                    .f-icon {
+                      color: $sec-color;
+                    }
+                    .f-icon {
+                      animation: left-right-btn 0.3s linear infinite alternate;
+                      -webkit-animation: left-right-btn 0.3s linear infinite
+                        alternate;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // End charities Styling
   // Start Top Button Styling:-
   .top {
     display: none;
@@ -362,7 +513,6 @@ main {
     z-index: 100000;
     a {
       @extend %flex-center-center;
-      @extend %border-radius-5;
       width: 40px;
       height: 40px;
       background-color: $main-color;
@@ -539,7 +689,7 @@ body {
                 box-shadow: $dark-box-shadow;
               }
               a {
-                i {
+                .f-icon {
                   color: $white-dark-color;
                   background-color: $main-dark-color;
                 }
@@ -606,7 +756,7 @@ body {
           }
         }
       }
-      .radiation {
+      .hospitals {
         background-color: $main-dark-bg;
         .container {
           .sec-body {
@@ -634,9 +784,60 @@ body {
                   h3 {
                     color: $white-dark-color;
                   }
+                  &:hover {
+                    h3 {
+                      color: $main-dark-color;
+                    }
+                  }
                 }
                 p {
                   color: $sec-text-dark-color;
+                }
+              }
+            }
+          }
+        }
+      }
+      .charities {
+        background-color: $main-dark-bg;
+        .container {
+          .sec-body {
+            .slider {
+              .icon {
+                color: $white-dark-color;
+                background-color: $main-dark-color;
+                &:hover {
+                  background-color: $sec-dark-color;
+                }
+              }
+              .slides {
+                .slide {
+                  background-color: $sec-dark-bg;
+                  box-shadow: $dark-box-shadow;
+                  .slide-body {
+                    h3 {
+                      color: $white-dark-color;
+                    }
+                    p {
+                      color: $sec-text-dark-color;
+                    }
+                  }
+                  .slide-foot {
+                    a {
+                      span {
+                        color: $main-dark-color;
+                      }
+                      .f-icon {
+                        color: $main-dark-color;
+                      }
+                      &:hover {
+                        span,
+                        .f-icon {
+                          color: $sec-dark-color;
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }

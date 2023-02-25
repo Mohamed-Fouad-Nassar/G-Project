@@ -20,7 +20,8 @@ a {
 
 main .landing,
 main .landing .container,
-main .services .container .sec-body .box a i,
+main .services .container .sec-body .box a .f-icon,
+main .charities .container .sec-body .slider .icon,
 main .top a,
 main .contact-us .container .sec-body .sec-left .contact-info .box .icon-div i,
 header .container nav ul li a,
@@ -31,7 +32,7 @@ header .container .log-in-acc .lang .h-btn,
 header .container .log-in-acc .lang .menu ul,
 header .container .log-in-acc .lang .menu ul li,
 header .container .log-in-acc .theme .h-btn,
-main .radiation .container .sec-body .text a,
+main .hospitals .container .sec-body .text a,
 main .contact-us .container .sec-body .sec-right form input[type=submit],
 header .container .account a,
 body.dark header .container .account a,
@@ -55,7 +56,7 @@ main .contact-us .container .sec-body {
   justify-content: space-between;
 }
 
-main .radiation .container .sec-body {
+main .hospitals .container .sec-body {
   display: flex;
   justify-content: space-between;
 }
@@ -74,13 +75,13 @@ header .container nav {
   justify-content: space-between;
 }
 
+main .services .container .sec-body,
 main .doctors .container .sec-body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
-main .services .container .sec-body,
 main .blog .container .sec-body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -102,6 +103,7 @@ main .medicine .container .sec-body .box .info {
   -o-transform: translate(-50%, -50%);
 }
 
+main .charities .container .sec-body .slider .icon,
 .head-shape span::after,
 .head-shape span::before,
 .head-shape-w span::after,
@@ -113,12 +115,6 @@ main .medicine .container .sec-body .box .info {
   -o-transform: translateY(-50%);
 }
 
-main .services .container .sec-body .box,
-main .doctors .container .sec-body .box,
-main .medicine .container .sec-body .box::before,
-main .medicine .container .sec-body .box,
-main .blog .container .sec-body article,
-main .top a,
 main .doctors .container .sec-body .box .info .contact>div a,
 main .contact-us .container .sec-body .sec-left .social-icon>div>div a,
 footer .container .f-info .f-social>div a {
@@ -129,7 +125,8 @@ footer .container .f-info .f-social>div a {
   -o-border-radius: 5px;
 }
 
-main .services .container .sec-body .box a i,
+main .services .container .sec-body .box a .f-icon,
+main .charities .container .sec-body .slider .icon,
 main .contact-us .container .sec-body .sec-left .contact-info .box .icon-div i,
 main .contact-us .container .sec-body .sec-left .social-icon>div>div a,
 .head-shape span,
@@ -150,7 +147,7 @@ i {
   -o-transition: 0s !important;
 }
 
-main .radiation .container .sec-body .text a,
+main .hospitals .container .sec-body .text a,
 main .contact-us .container .sec-body .sec-right form input[type=submit],
 header .container .account a,
 body.dark header .container .account a,
@@ -164,7 +161,7 @@ section .container .sec-foot a {
   padding: 10px 20px;
 }
 
-main .radiation .container .sec-body .text a:hover,
+main .hospitals .container .sec-body .text a:hover,
 main .contact-us .container .sec-body .sec-right form input[type=submit]:hover,
 header .container .account a:hover,
 body.dark header .container .account a:hover,
@@ -257,6 +254,10 @@ input {
   caret-color: #059cb1;
 }
 
+.dark input {
+  caret-color: rgba(5, 156, 177, 0.8705882353);
+}
+
 .container {
   padding-left: 10px;
   padding-right: 10px;
@@ -324,6 +325,26 @@ input {
   }
 }
 
+@-webkit-keyframes left-right-btn {
+  from {
+    margin-left: 10px;
+  }
+
+  to {
+    margin-right: 10px;
+  }
+}
+
+@keyframes left-right-btn {
+  from {
+    margin-left: 10px;
+  }
+
+  to {
+    margin-right: 10px;
+  }
+}
+
 /* End Animation Styling */
 /* Start Selection Styling:- */
 ::-moz-selection {
@@ -367,8 +388,8 @@ input {
 .head-shape-w span {
   display: block;
   margin: auto;
-  height: 17px;
-  width: 17px;
+  height: 14px;
+  width: 14px;
   background-color: transparent;
   border: 2px solid #59c1bd;
 }
@@ -379,7 +400,7 @@ input {
 .head-shape-w span::before {
   content: "";
   height: 2px;
-  width: calc(50% - 20px);
+  width: calc(50% - 15px);
   background-color: #59c1bd;
   position: absolute;
   top: 50%;
@@ -402,6 +423,27 @@ input {
 .head-shape-w span::after,
 .head-shape-w span::before {
   background-color: #fff;
+}
+
+.dark .head-shape span,
+.dark .head-shape-w span {
+  border-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+.dark .head-shape span::after,
+.dark .head-shape span::before,
+.dark .head-shape-w span::after,
+.dark .head-shape-w span::before {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+.dark .head-shape-w span {
+  border-color: #efefef;
+}
+
+.dark .head-shape-w span::after,
+.dark .head-shape-w span::before {
+  background-color: #efefef;
 }
 
 /* End Head-Shape Styling */
@@ -430,14 +472,12 @@ section .container .sec-foot {
   padding-top: 100px;
 }
 
-@media (prefers-color-scheme: dark) {
-  section .container .sec-head h2 {
-    color: rgba(5, 156, 177, 0.8705882353);
-  }
+.dark section .container .sec-head h2 {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
 
-  section .container .sec-head p {
-    color: #a5a5a5;
-  }
+.dark section .container .sec-head p {
+  color: #a5a5a5;
 }
 
 header {
@@ -1058,7 +1098,7 @@ main .services .container .sec-body .box a {
   text-align: center;
 }
 
-main .services .container .sec-body .box a i {
+main .services .container .sec-body .box a .f-icon {
   margin: auto;
   width: 80px;
   height: 80px;
@@ -1263,53 +1303,53 @@ main .medicine .container .sec-body .box:hover .info {
   z-index: 3;
 }
 
-main .radiation {
+main .hospitals {
   padding: 100px 0;
 }
 
-main .radiation .container .sec-body {
+main .hospitals .container .sec-body {
   background-color: #eee;
 }
 
 @media (max-width: 991px) {
-  main .radiation .container .sec-body {
+  main .hospitals .container .sec-body {
     flex-direction: column;
   }
 }
 
-main .radiation .container .sec-body .text {
+main .hospitals .container .sec-body .text {
   width: 50%;
   padding: 100px 20px;
 }
 
 @media (max-width: 991px) {
-  main .radiation .container .sec-body .text {
+  main .hospitals .container .sec-body .text {
     width: 100%;
   }
 }
 
-main .radiation .container .sec-body .text h2 {
+main .hospitals .container .sec-body .text h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-main .radiation .container .sec-body .text p {
+main .hospitals .container .sec-body .text p {
   margin-bottom: 40px;
 }
 
-main .radiation .container .sec-body .text a {
+main .hospitals .container .sec-body .text a {
   margin-left: 0;
 }
 
-main .radiation .container .sec-body .image {
+main .hospitals .container .sec-body .image {
   width: 50%;
   padding: 0;
   background-image: url(../Data/Images/3d-render-medical-background-showing-virus-cells-male-figures-lungs_1048-6289.webp);
 }
 
 @media (max-width: 991px) {
-  main .radiation .container .sec-body .image {
+  main .hospitals .container .sec-body .image {
     display: none;
   }
 }
@@ -1342,6 +1382,10 @@ main .blog .container .sec-body article .text a h3 {
   font-weight: 600;
 }
 
+main .blog .container .sec-body article .text a:hover h3 {
+  color: #059cb1;
+}
+
 main .blog .container .sec-body article .text p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1349,6 +1393,178 @@ main .blog .container .sec-body article .text p {
   overflow: hidden;
   margin-bottom: 10px;
   font-size: 0.9rem;
+}
+
+main .charities {
+  padding: 100px 0;
+}
+
+main .charities .container .sec-body {
+  position: relative;
+}
+
+main .charities .container .sec-body .slider {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 575px) {
+  main .charities .container .sec-body .slider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+main .charities .container .sec-body .slider .icon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #059cb1;
+  transition: transform 0.1s linear;
+  -webkit-transition: transform 0.1s linear;
+  -moz-transition: transform 0.1s linear;
+  -ms-transition: transform 0.1s linear;
+  -o-transition: transform 0.1s linear;
+}
+
+main .charities .container .sec-body .slider .icon:hover {
+  background-color: #59c1bd;
+}
+
+main .charities .container .sec-body .slider .icon:active {
+  transform: translateY(-50%) scale(0.9);
+  -webkit-transform: translateY(-50%) scale(0.9);
+  -moz-transform: translateY(-50%) scale(0.9);
+  -ms-transform: translateY(-50%) scale(0.9);
+  -o-transform: translateY(-50%) scale(0.9);
+}
+
+main .charities .container .sec-body .slider .icon:first-of-type {
+  left: -20px;
+  display: none;
+}
+
+@media (max-width: 575px) {
+  main .charities .container .sec-body .slider .icon:first-of-type {
+    left: 0px;
+  }
+}
+
+main .charities .container .sec-body .slider .icon:last-of-type {
+  right: -20px;
+}
+
+@media (max-width: 575px) {
+  main .charities .container .sec-body .slider .icon:last-of-type {
+    right: 0px;
+  }
+}
+
+main .charities .container .sec-body .slider .slides {
+  width: 100%;
+  white-space: nowrap;
+}
+
+main .charities .container .sec-body .slider .slides.dragging {
+  scroll-behavior: auto;
+}
+
+main .charities .container .sec-body .slider .slides.dragging .slide {
+  pointer-events: none;
+}
+
+main .charities .container .sec-body .slider .slides .slide {
+  cursor: -webkit-grab;
+  cursor: grab;
+  display: inline-block;
+  margin-left: 11px;
+  background-color: #eee;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+}
+
+main .charities .container .sec-body .slider .slides .slide:first-of-type {
+  margin-left: 0;
+}
+
+@media (min-width: 992px) {
+  main .charities .container .sec-body .slider .slides .slide {
+    width: calc((100% - 30px) / 3);
+  }
+}
+
+@media (max-width: 991px) {
+  main .charities .container .sec-body .slider .slides .slide {
+    width: calc((100% - 15px) / 2);
+  }
+}
+
+@media (max-width: 575px) {
+  main .charities .container .sec-body .slider .slides .slide {
+    width: 100%;
+  }
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-image img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-body {
+  padding: 5px 10px;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-body h3 {
+  font-size: 1.2rem;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-body p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  white-space: normal;
+  overflow: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-foot {
+  padding: 10px;
+  padding-top: 0;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-foot a span {
+  font-size: 0.95rem;
+  color: #059cb1;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-foot a .f-icon {
+  margin-left: 2px;
+  font-size: 0.9rem;
+  color: #059cb1;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-foot a:hover span,
+main .charities .container .sec-body .slider .slides .slide .slide-foot a:hover .f-icon {
+  color: #59c1bd;
+}
+
+main .charities .container .sec-body .slider .slides .slide .slide-foot a:hover .f-icon {
+  animation: left-right-btn 0.3s linear infinite alternate;
+  -webkit-animation: left-right-btn 0.3s linear infinite alternate;
 }
 
 main .top {
@@ -1567,7 +1783,7 @@ body.dark main .services .container .sec-body .box:hover {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
-body.dark main .services .container .sec-body .box a i {
+body.dark main .services .container .sec-body .box a .f-icon {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
@@ -1633,19 +1849,19 @@ body.dark main .medicine .container .sec-body .box .info p {
   color: #a5a5a5;
 }
 
-body.dark main .radiation {
+body.dark main .hospitals {
   background-color: #222;
 }
 
-body.dark main .radiation .container .sec-body {
+body.dark main .hospitals .container .sec-body {
   background-color: #1d1d1d;
 }
 
-body.dark main .radiation .container .sec-body .text h2 {
+body.dark main .hospitals .container .sec-body .text h2 {
   color: #efefef;
 }
 
-body.dark main .radiation .container .sec-body .text p {
+body.dark main .hospitals .container .sec-body .text p {
   color: #a5a5a5;
 }
 
@@ -1665,8 +1881,51 @@ body.dark main .blog .container .sec-body article .text a h3 {
   color: #efefef;
 }
 
+body.dark main .blog .container .sec-body article .text a:hover h3 {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
 body.dark main .blog .container .sec-body article .text p {
   color: #a5a5a5;
+}
+
+body.dark main .charities {
+  background-color: #222;
+}
+
+body.dark main .charities .container .sec-body .slider .icon {
+  color: #efefef;
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .charities .container .sec-body .slider .icon:hover {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .charities .container .sec-body .slider .slides .slide {
+  background-color: #1d1d1d;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark main .charities .container .sec-body .slider .slides .slide .slide-body h3 {
+  color: #efefef;
+}
+
+body.dark main .charities .container .sec-body .slider .slides .slide .slide-body p {
+  color: #a5a5a5;
+}
+
+body.dark main .charities .container .sec-body .slider .slides .slide .slide-foot a span {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .charities .container .sec-body .slider .slides .slide .slide-foot a .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .charities .container .sec-body .slider .slides .slide .slide-foot a:hover span,
+body.dark main .charities .container .sec-body .slider .slides .slide .slide-foot a:hover .f-icon {
+  color: rgba(89, 193, 189, 0.8705882353);
 }
 
 body.dark main .top a {

@@ -1,0 +1,810 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+
+// additional page styling
+
+// Start Main Styling:-
+main {
+  // Start Landing Styling:-
+  .landing {
+    @extend %flex-center-center;
+    padding: $up-down-padding 0;
+    background-color: $white-color;
+    min-height: 100vh;
+    position: relative;
+    @media (max-width: 767px) {
+      padding-top: 150px;
+    }
+    .container {
+      @extend %flex-center-center;
+      gap: $main-element-padding;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      .down-btn {
+        @include trans-y(-50%);
+        height: 40px;
+        position: absolute;
+        bottom: $main-element-padding;
+        left: 50%;
+        a {
+          &:hover {
+            i {
+              color: $sec-color;
+            }
+          }
+          i {
+            font-size: 1.6rem;
+            color: $main-color;
+            -webkit-animation: up-down-btn 0.3s linear infinite alternate;
+            animation: up-down-btn 0.3s linear infinite alternate;
+          }
+        }
+      }
+      .left {
+        flex-basis: 50%;
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+          text-align: center;
+        }
+        h2 {
+          font-size: 1.95rem;
+          color: $main-color;
+        }
+        p {
+          color: $sec-text-color;
+          letter-spacing: 1px;
+          line-height: 1.5rem;
+          font-size: 1.1rem;
+        }
+      }
+      .right {
+        flex-basis: 50%;
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  // End Landing Styling
+  // Start Services Styling:-
+  .services {
+    padding: $up-down-padding 0;
+    background-color: $light-white-color;
+    .container {
+      .sec-body {
+        @extend %grid-200-20;
+        .box {
+          padding: $main-element-padding $sec-element-padding;
+          position: relative;
+          &:hover {
+            box-shadow: $main-box-shadow;
+          }
+          a {
+            text-align: center;
+            .f-icon {
+              @extend %border-radius-50;
+              @extend %flex-center-center;
+              margin: auto;
+              width: 80px;
+              height: 80px;
+              font-size: 2rem;
+              color: $white-color;
+              background-color: $main-color;
+            }
+            h3 {
+              font-size: 1.5rem;
+              color: $main-color;
+              margin: $main-element-padding 0;
+            }
+            p {
+              margin: 0;
+              color: $sec-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  // End Services Styling
+  // Start Doctors Styling:-
+  .doctors {
+    padding: $up-down-padding 0;
+    .container {
+      .sec-body {
+        @extend %grid-200-20;
+        .box {
+          box-shadow: $main-box-shadow;
+          position: relative;
+          overflow: hidden;
+          @media (max-width: 575px) {
+            max-width: 250px;
+            margin: auto;
+          }
+          &:hover {
+            @include trans-y(-10px);
+            .info {
+              bottom: 0;
+            }
+            img {
+              @include scale(1.1);
+            }
+          }
+          img {
+            width: 100%;
+          }
+          .info {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background-color: $transparent-color;
+            padding: $sec-element-padding;
+            h5 {
+              color: $main-color;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+            .contact {
+              @include social-media-links("light");
+              justify-content: center !important;
+              flex-wrap: nowrap !important;
+              padding: 0 !important;
+              > div {
+                a {
+                  width: 30px !important;
+                  height: 30px !important;
+                  i {
+                    font-size: 1.1rem !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // End Doctors Styling
+  // Start Medicine Styling:-
+  .medicine {
+    padding: $up-down-padding 0;
+    background-color: $light-white-color;
+    .container {
+      .sec-body {
+        @extend %grid-350-20;
+        @media (max-width: 575px) {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .box {
+          &::before {
+            @extend %translate-50;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            width: 0;
+            height: 0;
+            background-color: $transparent-color;
+            z-index: 2;
+          }
+          box-shadow: $main-box-shadow;
+          overflow: hidden;
+          position: relative;
+          z-index: 1;
+          .info {
+            @extend %translate-50;
+            text-align: center;
+            display: block;
+            padding: $main-element-padding;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(100% - 60px);
+            z-index: -1;
+            opacity: 0;
+            a {
+              display: block;
+              margin-bottom: $sec-element-padding;
+              color: $sec-color;
+              &:hover {
+                i,
+                h4 {
+                  color: $main-color;
+                }
+              }
+              i {
+                margin-bottom: $sec-element-padding;
+                font-size: 2rem;
+                color: $sec-color;
+                @media (max-width: 575px) {
+                  font-size: 1.5rem;
+                }
+              }
+              h4 {
+                margin-bottom: $sec-element-padding;
+                font-size: 1.5rem;
+                color: $sec-color;
+                @media (max-width: 575px) {
+                  font-size: 1.1rem;
+                }
+              }
+            }
+            p {
+              @include max-chars(3);
+              margin: 0;
+              font-size: 0.9rem;
+              color: $sec-text-color;
+              @media (max-width: 575px) {
+                font-size: 0.8rem;
+              }
+            }
+          }
+          &:hover {
+            &::before {
+              width: calc(100% - 40px);
+              height: calc(100% - 40px);
+            }
+            img {
+              @include scale(1.2);
+            }
+            .info {
+              opacity: 1;
+              z-index: 3;
+            }
+          }
+        }
+      }
+    }
+  }
+  // End Medicine Styling
+  // Start Radiation Styling:-
+  .hospitals {
+    padding: $up-down-padding 0;
+    .container {
+      .sec-body {
+        @extend %flex--between;
+        background-color: $light-white-color;
+        @media (max-width: 991px) {
+          flex-direction: column;
+        }
+        .text {
+          width: 50%;
+          padding: $up-down-padding $main-element-padding;
+          @media (max-width: 991px) {
+            width: 100%;
+          }
+          h2 {
+            margin-bottom: $main-element-padding;
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+          p {
+            margin-bottom: 40px;
+          }
+          a {
+            @include button-shape($main-color, "light");
+            margin-left: auto;
+          }
+        }
+        .image {
+          width: 50%;
+          padding: 0;
+          background-image: url(../Data/Images/3d-render-medical-background-showing-virus-cells-male-figures-lungs_1048-6289.webp);
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  // End Radiation Styling
+  // Start Blog Styling:-
+  .blog {
+    padding: $up-down-padding 0;
+    background-color: $light-white-color;
+    .container {
+      .sec-body {
+        @extend %grid-250-20;
+        article {
+          @include blog-article-box("light");
+        }
+      }
+    }
+  }
+  // End Blog Styling
+  // Start charities Styling:-
+  .charities {
+    padding: $up-down-padding 0;
+    .container {
+      .sec-body {
+        position: relative;
+        .slider {
+          overflow: hidden;
+          .slider-container {
+            padding: 0px 8px;
+            .slides {
+              width: 100%;
+              padding-bottom: 40px;
+              .slide {
+                @extend %user-select-none;
+                background-color: $light-white-color;
+                box-shadow: $main-box-shadow;
+                @media (min-width: 992px) {
+                  width: calc((100% - 30px) / 3);
+                }
+                @media (max-width: 991px) {
+                  width: calc((100% - 15px) / 2);
+                }
+                @media (max-width: 575px) {
+                  width: 100%;
+                }
+                .slide-image {
+                  img {
+                    width: 100%;
+                    height: 250px;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                  }
+                }
+                .slide-body {
+                  padding: 5px $sec-element-padding;
+                  h3 {
+                    margin-top: 5px;
+                    font-size: 1.2rem;
+                  }
+                  p {
+                    color: $sec-text-color;
+                    font-size: 0.9rem;
+                    margin-bottom: $sec-element-padding;
+                    white-space: normal;
+                    overflow: hidden;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
+                    width: fit-content;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                  }
+                }
+                .slide-foot {
+                  padding: $sec-element-padding {
+                    top: 0;
+                  }
+                  a {
+                    span {
+                      font-size: 0.95rem;
+                      color: $main-color;
+                    }
+                    .f-icon {
+                      margin-left: 2px;
+                      font-size: 0.9rem;
+                      color: $main-color;
+                    }
+                    &:hover {
+                      span,
+                      .f-icon {
+                        color: $sec-color;
+                      }
+                      .f-icon {
+                        animation: left-right-btn 0.3s linear infinite alternate;
+                        -webkit-animation: left-right-btn 0.3s linear infinite
+                          alternate;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .swiper-navBtn {
+            height: 40px;
+            width: 40px;
+            color: $white-color;
+            background-color: $main-color;
+            @extend %border-radius-50;
+            &:hover {
+              background-color: $sec-color;
+            }
+            &::before,
+            &::after {
+              font-size: 1rem;
+              bottom: -25px;
+            }
+          }
+          .swiper-pagination-bullet {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  // End charities Styling
+  // Start Contacts Styling:-
+  .contacts {
+    padding: $up-down-padding 0;
+    position: relative;
+    background-image: url(../Data/Images/contact-background-image.jpg);
+    z-index: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(5 156 177 / 90%);
+      z-index: -1;
+      opacity: 0.9;
+    }
+    .container {
+      color: $white-color;
+      .sec-head {
+        h2,
+        p {
+          color: $white-color;
+        }
+      }
+      .sec-body {
+        @extend %flex-start-between;
+        gap: $main-element-padding;
+        @media (max-width: 767px) {
+          flex-direction: column;
+          gap: $up-down-padding;
+        }
+        h2 {
+          margin-bottom: $main-element-padding;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        .sec-left {
+          width: 50%;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          .contact-info {
+            .box {
+              display: flex;
+              align-items: center;
+              gap: $sec-element-padding;
+              margin-bottom: $sec-element-padding;
+              &:last-of-type {
+                margin: 0;
+              }
+              .icon-div {
+                i {
+                  @extend %flex-center-center;
+                  @extend %border-radius-50;
+                  width: 45px;
+                  height: 45px;
+                  background-color: $sec-color;
+                  color: $white-color;
+                  font-size: 1.5rem;
+                }
+              }
+              span {
+                color: $white-color;
+              }
+            }
+          }
+          .social-icon {
+            display: block !important;
+            padding-top: $up-down-padding;
+            > div {
+              @include social-media-links("light");
+              > div {
+                a {
+                  width: 45px !important;
+                  height: 45px !important;
+                }
+              }
+            }
+          }
+        }
+        .sec-right {
+          width: 50%;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          form {
+            textarea {
+              padding: 10px;
+              width: 100%;
+              min-height: 250px;
+              color: $white-color;
+              background-color: $main-color;
+              resize: none;
+              border: none;
+              outline: none;
+              border-bottom: 2px solid $white-color;
+              @include placeholder-color($white-color);
+              &:focus {
+                @include placeholder-color(transparent);
+              }
+            }
+            input[type="submit"] {
+              @include button-shape($main-color, "light");
+              margin-top: $main-element-padding;
+              margin-right: 0;
+              &:hover {
+                color: $white-color;
+                border-color: $white-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // End contacts Styling
+}
+// End Main Styling
+
+// Start Dark Mode Styling:-
+body {
+  &.dark {
+    main {
+      .landing {
+        background-color: $main-dark-bg;
+        .container {
+          .down-btn {
+            a {
+              &:hover {
+                i {
+                  color: $sec-dark-color;
+                }
+              }
+              i {
+                color: $main-dark-color;
+              }
+            }
+          }
+          .left {
+            h2 {
+              color: $main-dark-color;
+            }
+            p {
+              color: $sec-text-dark-color;
+            }
+          }
+        }
+      }
+      .services {
+        background-color: $sec-dark-bg;
+        .container {
+          .sec-body {
+            .box {
+              &:hover {
+                box-shadow: $dark-box-shadow;
+              }
+              a {
+                .f-icon {
+                  color: $white-dark-color;
+                  background-color: $main-dark-color;
+                }
+                h3 {
+                  color: $main-dark-color;
+                }
+                p {
+                  color: $sec-text-dark-color;
+                }
+              }
+            }
+          }
+        }
+      }
+      .doctors {
+        background-color: $main-dark-bg;
+        .container {
+          .sec-body {
+            .box {
+              box-shadow: $dark-box-shadow;
+              .info {
+                background-color: $dark-transparent-color;
+                h5 {
+                  color: $main-dark-color;
+                }
+                p {
+                  color: $sec-text-dark-color;
+                }
+                .contact {
+                  @include social-media-links("dark");
+                }
+              }
+            }
+          }
+        }
+      }
+      .medicine {
+        background-color: $sec-dark-bg;
+        .container {
+          .sec-body {
+            .box {
+              &::before {
+                background-color: $dark-transparent-color;
+              }
+              box-shadow: $dark-box-shadow;
+              .info {
+                a {
+                  color: $sec-dark-color;
+                  &:hover {
+                    i,
+                    h4 {
+                      color: $main-dark-color;
+                    }
+                  }
+                  i {
+                    color: $sec-dark-color;
+                  }
+                  h4 {
+                    color: $sec-dark-color;
+                  }
+                }
+                p {
+                  color: $sec-text-dark-color;
+                }
+              }
+            }
+          }
+        }
+      }
+      .hospitals {
+        background-color: $main-dark-bg;
+        .container {
+          .sec-body {
+            background-color: $sec-dark-bg;
+            .text {
+              h2 {
+                color: $white-dark-color;
+              }
+              p {
+                color: $sec-text-dark-color;
+              }
+              a {
+                @include button-shape($main-dark-color, "dark");
+                margin: {
+                  right: auto;
+                  left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .blog {
+        background-color: $sec-dark-bg;
+        .container {
+          .sec-body {
+            article {
+              @include blog-article-box("dark");
+            }
+          }
+        }
+      }
+      .charities {
+        background-color: $main-dark-bg;
+        .container {
+          .sec-body {
+            .slider {
+              .slider-container {
+                .slides {
+                  .slide {
+                    background-color: $sec-dark-bg;
+                    box-shadow: $dark-box-shadow;
+                    .slide-body {
+                      h3 {
+                        color: $white-dark-color;
+                      }
+                      p {
+                        color: $sec-text-dark-color;
+                      }
+                    }
+                    .slide-foot {
+                      a {
+                        span {
+                          color: $main-dark-color;
+                        }
+                        .f-icon {
+                          color: $main-dark-color;
+                        }
+                        &:hover {
+                          span,
+                          .f-icon {
+                            color: $sec-dark-color;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .swiper-navBtn {
+                color: $white-dark-color;
+                background-color: $main-dark-color;
+                &:hover {
+                  background-color: $sec-dark-color;
+                }
+              }
+              .swiper-pagination-bullet {
+                background-color: $main-dark-color;
+              }
+            }
+          }
+        }
+      }
+      .contacts {
+        z-index: 0;
+        &::before {
+          background-color: rgb(5 156 177 / 90%);
+          -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+        }
+        .container {
+          color: $white-dark-color;
+          .sec-head {
+            h2,
+            p {
+              color: $white-dark-color;
+            }
+          }
+          .sec-body {
+            .sec-left {
+              .contact-info {
+                .box {
+                  .icon-div {
+                    i {
+                      background-color: $sec-dark-color;
+                      color: $white-dark-color;
+                    }
+                  }
+                  span {
+                    color: $white-dark-color;
+                  }
+                }
+              }
+              .social-icon {
+                @include social-media-links("dark");
+              }
+            }
+            .sec-right {
+              form {
+                textarea {
+                  @include placeholder-color($white-dark-color);
+                  color: $white-dark-color;
+                  background-color: $main-dark-color;
+                  border-bottom-color: $white-dark-color;
+                  -webkit-filter: brightness(0.9);
+                  filter: brightness(0.9);
+                  &:focus {
+                    @include placeholder-color(transparent);
+                  }
+                }
+                input[type="submit"] {
+                  @include button-shape($main-dark-color, "dark");
+                  margin-top: $main-element-padding;
+                  margin-right: 0;
+                  &:hover {
+                    color: $white-dark-color;
+                    border-color: $white-dark-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// End Dark Mode Styling

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize css files -->
+    <link rel="stylesheet" href="../CSS Files/normalize.css" />
+    <!-- font-awesome css file -->
+    <link rel="stylesheet" href="../CSS Files/all.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="../CSS Files/log_in.css" />
+    <!-- font open-sans files -->
+    <!-- font-family: 'Open Sans', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font Yesteryear files -->
+    <!-- font-family: 'Yesteryear', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fav icon -->
+    <link
+      rel="shortcut icon"
+      href="../Data/Images/fav-icon.png"
+      type="image/x-icon"
+    />
+    <!-- page title -->
+    <title>Log In</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header id="navbar_top">
+      <div class="container">
+        <div class="logo">
+          <a href="#top">
+            <h1 id="logoText">hope</h1>
+            <!-- <img src="./Data/Images/logo.png" alt="logo-image" /> -->
+          </a>
+        </div>
+        <nav id="nav">
+          <ul id="links">
+            <li class="link">
+              <a href="#top">
+                <i class="f-icon fa-solid fa-house"></i>
+                <span>home</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="./doctors.html">
+                <i class="f-icon fa-solid fa-user-doctor"></i>
+                <span>doctors</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#medicine">
+                <i class="f-icon fa-solid fa-pills"></i>
+                <span>medicines</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#hospitals">
+                <i class="f-icon fa-solid fa-hospital"></i>
+                <span>hospitals</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#blog">
+                <i class="f-icon fa-solid fa-book-open-reader"></i>
+                <span>blog</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#charities">
+                <i class="f-icon fa-solid fa-hand-holding-heart"></i>
+                <span>charities</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#contacts">
+                <!-- <i class="f-icon fa-solid fa-phone"></i> -->
+                <!-- <i class="f-icon fa-solid fa-headset"></i> -->
+                <i class="f-icon fa-solid fa-comments"></i>
+                <span>contacts</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Start Not Logging In View -->
+        <!-- <div class="account">
+          <a class="log-in" href="./log_in.html">log in</a>
+          <a class="regist" href="./register.html">register</a>
+        </div> -->
+        <!-- End Not Logging In View -->
+        <!-- Start Logging In View -->
+        <div class="log-in-acc">
+          <article class="lang">
+            <div class="h-btn">
+              <div>
+                <img src="./Data/Images/usa.png" alt="lang-flag-image" />
+              </div>
+              <span>en</span>
+            </div>
+            <div class="menu">
+              <ul>
+                <li img-src="./Data/Images/usa.png" lang-text="en">
+                  <div>
+                    <img src="./Data/Images/usa.png" alt="lang-flag-image" />
+                  </div>
+                  <span>en</span>
+                </li>
+                <li img-src="./Data/Images/eg.png" lang-text="ar">
+                  <div>
+                    <img src="./Data/Images/eg.png" alt="lang-flag-image" />
+                  </div>
+                  <span>ar</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="theme">
+            <div class="h-btn">
+              <i class="f-icon fa-solid fa-circle-half-stroke"></i>
+              <!-- <i class="f-icon fa-solid fa-sun"></i> -->
+              <!-- <i class="f-icon fa-solid fa-moon"></i> -->
+            </div>
+            <div class="menu"></div>
+          </article>
+          <article class="acc">
+            <div class="h-btn">
+              <img src="./Data/Images/avatar-image-1.png" alt="account-image" />
+            </div>
+            <div class="menu">
+              <ul>
+                <li id="log-out-btn">
+                  <span>log out</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- End Logging In View -->
+      </div>
+    </header>
+    <!-- End Header -->
+    <div class="container">
+      <div class="card">
+        <div class="left">
+          <button class="back-btn" id="cancel">
+            <i class="f-icon fa-solid fa-arrow-left"></i>
+            <!-- <i class="fa-solid fa-left-long"></i> -->
+            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+          </button>
+          <div class="head">
+            <h2>log in</h2>
+            <p>
+              to stay in touch with us, <br />
+              please log in to your account
+            </p>
+          </div>
+          <form action="">
+            <section>
+              <label for="field">username or phone number:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="text"
+                  id="field"
+                  name="userName/phoneNumber"
+                />
+                <span></span>
+                <i class="f-icon fa-solid fa-user"></i>
+              </div>
+            </section>
+            <section>
+              <label for="field">password:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="password"
+                  id="field"
+                  name="Password"
+                />
+                <span></span>
+                <i class="f-icon fa-solid fa-lock"></i>
+              </div>
+            </section>
+            <section>
+              <div class="left-sec">
+                <input type="checkbox" name="remember" id="rem" />
+                <label for="rem">remember me</label>
+              </div>
+              <div class="right-sec">
+                <a href="./forget_pass.html">forget password</a>
+              </div>
+            </section>
+            <input type="submit" value="log in" />
+          </form>
+          <div class="reg-link">
+            <a href="register.html">create account?</a>
+          </div>
+          <hr />
+          <div class="social-log">
+            <h3>log in with</h3>
+            <div class="links">
+              <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://google.com/">
+                <i class="fa-brands fa-google"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="text">
+            <h1>welcome to</h1>
+            <h2>hope</h2>
+            <p>log in to access your account</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bootstrap js file -->
+    <script src="./JS Files/bootstrap.bundle.js"></script>
+    <!-- ion-icons js files -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- main script file -->
+    <script src="../JS Files/test.js"></script>
+    <!-- header script -->
+    <!-- <script src="./JS Files/header.js"></script> -->
+  </body>
+</html>

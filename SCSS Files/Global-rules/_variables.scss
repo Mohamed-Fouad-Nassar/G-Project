@@ -1,0 +1,36 @@
+// Spacing(Padding, Margin):-
+$main-element-padding: 20px;
+$sec-element-padding: 10px;
+$field-top-padding: 7px;
+$up-down-padding: 100px;
+// Light Mode Colors:-
+$black-color: #000;
+$white-color: #fff;
+$main-color: #059cb1;
+$sec-color: #59c1bd;
+$light-white-color: #eee;
+$dark-white-color: #ccc;
+$max-dark-white-color: #aaa;
+$transparent-color: rgba(255, 255, 255, 0.8);
+$main-transparent-color: rgba(5, 156, 177, 0.6);
+$sec-text-color: #555;
+$footer-background: rgb(19, 19, 19);
+$light-danger-color: #dc3545;
+$danger-color-hover: #d20519;
+// Box Shadow:-
+$main-box-shadow: 0px 3px 8px rgb(0 0 0 / 24%);
+$list-light-box-shadow: 0 0 15px -6px #6d6d6d;
+$list-dark-box-shadow: 0 0 15px -6px #000;
+$dark-box-shadow: 0px 3px 8px rgb(0 0 0 / 50%);
+$light-form-shadow: 3px 4px 22px -5px #8b8b8b;
+// Dark Mode Colors:-
+$white-dark-color: #efefef;
+// $white-dark-color: #fdfdf6;
+$main-dark-color: #059cb1de;
+$sec-dark-color: #59c1bdde;
+$main-dark-bg: #222;
+$sec-dark-bg: #1d1d1d;
+$nav-active-bg: #323234;
+// $sec-text-dark-color: #b3b3b3;
+$sec-text-dark-color: #a5a5a5;
+$dark-transparent-color: rgba(0, 0, 0, 0.8);

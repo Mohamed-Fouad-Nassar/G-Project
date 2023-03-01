@@ -1,0 +1,163 @@
+[
+  {
+    "title": "article one Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/pexels-pavel-danilyuk-8442105.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221443_587.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article three Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article four Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/pexels-pavel-danilyuk-8442105.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article five Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+
+  {
+    "title": "article six Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221443_587.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article seven Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/pexels-pavel-danilyuk-8442105.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article eight Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article nine Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221443_587.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article ten Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two one Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/pexels-pavel-danilyuk-8442105.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two two Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221443_587.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two three Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two four Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/pexels-pavel-danilyuk-8442105.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two five Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two six Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221443_587.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two seven Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/pexels-pavel-danilyuk-8442105.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two eight Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two nine Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221443_587.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  },
+  {
+    "title": "article two ten Title",
+    "author": "john doe",
+    "imgSrc": "../Data/Images/IMG_20221204_221446_098.jpg",
+    "imgAlt": "article-image",
+    "articleLink": "#",
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. At impedit laboriosam enim facilis."
+  }
+]

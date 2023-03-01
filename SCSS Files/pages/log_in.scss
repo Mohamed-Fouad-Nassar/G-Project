@@ -1,0 +1,353 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+
+// additional page styling
+
+body {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #059cb140;
+    z-index: -1;
+  }
+  background-image: url(../../Data/un-used-Images/11852427_4858794.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  @extend %flex-center-center;
+  // background-color: $light-white-color;
+  // background-color: #ebfcff;
+  position: relative;
+  header {
+    display: none;
+  }
+  &.dark {
+    &::before {
+      background-color: #1d1d1de6;
+    }
+    background-image: url(../../Data/un-used-Images/11852427_4858794.jpg);
+    background-position: center;
+    background-size: cover;
+    // background-color: $main-dark-bg;
+    .card {
+      background-color: $main-dark-bg;
+      box-shadow: $dark-box-shadow;
+      .left {
+        .back-btn {
+          @include back-btn($main-element-padding, $sec-element-padding, dark);
+        }
+        .head {
+          h2 {
+            color: $main-dark-color;
+          }
+          p {
+            color: $sec-text-dark-color;
+          }
+        }
+        form {
+          section {
+            label {
+              display: block;
+              margin-bottom: $sec-element-padding;
+              color: $white-dark-color;
+            }
+            .field {
+              background-color: $sec-dark-bg;
+              input {
+                background-color: transparent;
+                color: $white-dark-color;
+                &:focus {
+                  ~ span {
+                    background-color: $main-dark-color;
+                  }
+                  ~ .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+              }
+              .f-icon {
+                color: $sec-dark-color;
+              }
+              span {
+                background-color: $sec-dark-color;
+              }
+            }
+            .left-sec {
+              input {
+                @include check-box-shape($main-dark-color, dark);
+              }
+              label {
+                color: $white-dark-color;
+                margin-bottom: 0;
+              }
+            }
+            .right-sec {
+              a {
+                color: $sec-dark-color;
+                &:hover {
+                  color: $main-dark-color;
+                }
+              }
+            }
+          }
+          input[type="submit"] {
+            @include button-shape($main-dark-color, "dark");
+          }
+        }
+        .reg-link {
+          a {
+            color: $sec-dark-color;
+            &:hover {
+              color: $main-dark-color;
+            }
+          }
+        }
+        hr {
+          border-color: $white-dark-color;
+        }
+        .social-log {
+          h3 {
+            color: $white-dark-color;
+          }
+          .links {
+            a {
+              background-color: $sec-dark-color;
+              &:hover {
+                background-color: $sec-dark-bg;
+                i {
+                  color: $main-dark-color;
+                }
+              }
+              i {
+                color: $white-dark-color;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        &::before {
+          background-color: $main-transparent-color;
+        }
+        .text {
+          color: $white-dark-color;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  @extend %border-radius-10;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  background-color: $white-color;
+  box-shadow: $light-form-shadow;
+  @media (max-width: 767px) {
+    max-width: 400px;
+  }
+  .left {
+    width: 50%;
+    padding: $main-element-padding {
+      top: $up-down-padding / 2;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    .back-btn {
+      @include back-btn($main-element-padding, $sec-element-padding, light);
+    }
+    .head {
+      text-align: center;
+      padding-bottom: $main-element-padding;
+      h2,
+      p {
+        margin: 0 {
+          bottom: $sec-element-padding;
+        }
+      }
+      h2 {
+        color: $main-color;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+    form {
+      section {
+        padding-bottom: $main-element-padding;
+        &:last-of-type {
+          @extend %flex-center-between;
+        }
+        label {
+          display: block;
+          margin-bottom: $sec-element-padding;
+        }
+        .field {
+          @extend %flex-center-center;
+          flex-direction: row-reverse;
+          position: relative;
+          gap: 5px;
+          padding: 0 {
+            left: 5px;
+            right: 5px;
+          }
+          background-color: #f9f9f9;
+          &::after {
+            @extend %error-sign;
+          }
+          input {
+            flex: 1;
+            padding: 10px {
+              left: 5px;
+              right: 0;
+            }
+            border: none;
+            outline: none;
+            background-color: transparent;
+            &:focus {
+              ~ span {
+                background-color: $main-color;
+              }
+              ~ .f-icon {
+                color: $main-color;
+              }
+            }
+          }
+          .f-icon {
+            color: $sec-color;
+          }
+          span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $sec-color;
+            height: 2px;
+            width: 100%;
+          }
+        }
+        .left-sec {
+          display: flex;
+          gap: $field-top-padding;
+          input {
+            @include check-box-shape($main-color, light);
+          }
+          label {
+            margin: 0;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+        }
+        .right-sec {
+          a {
+            font-size: 0.9rem;
+            color: $sec-color;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+      input[type="submit"] {
+        @include button-shape($main-color, "light");
+      }
+    }
+    .reg-link {
+      @extend %flex-center-center;
+      padding-top: $main-element-padding;
+      padding-bottom: $main-element-padding;
+      a {
+        font-size: 0.9rem;
+        color: $sec-color;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    hr {
+      margin-top: 0;
+    }
+    .social-log {
+      @extend %flex-center-center;
+      flex-direction: column;
+      h3 {
+        margin: 0 {
+          top: $sec-element-padding;
+          bottom: $main-element-padding;
+        }
+      }
+      .links {
+        @extend %flex-center-center;
+        gap: $main-element-padding;
+        a {
+          @extend %flex-center-center;
+          @extend %border-radius-50;
+          width: 40px;
+          height: 40px;
+          background-color: $sec-color;
+          &:hover {
+            background-color: $light-white-color;
+            i {
+              color: $main-color;
+            }
+          }
+          i {
+            color: $white-color;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $main-transparent-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0.2;
+    }
+    @extend %flex-center-center;
+    width: 50%;
+    background-image: url(../Data/Images/IMG_20221204_221527_467.jpg);
+    position: relative;
+    @media (max-width: 767px) {
+      display: none;
+    }
+    .text {
+      text-align: center;
+      color: $white-color;
+      z-index: 2;
+      h1,
+      h2 {
+        margin: 0 {
+          bottom: $sec-element-padding;
+        }
+      }
+      h2 {
+        font-family: "Yesteryear", cursive;
+        font-size: 3.5rem;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

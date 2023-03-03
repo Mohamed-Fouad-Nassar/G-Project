@@ -78,3 +78,15 @@ if (window.localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
   html.classList.add("dark");
 }
+
+// change nav color and position on scroll
+let header = document.getElementById("navbar_top");
+document.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 30) {
+      header.classList.add("scroll");
+    } else {
+      header.classList.remove("scroll");
+    }
+  });
+});

@@ -132,7 +132,9 @@ function loopOnData(array, startIndex, stopIndex) {
     secBody.appendChild(article);
   }
 }
-
+// Variables
+var x = 6;
+var m = 0;
 // get Data function
 async function useAPI(apiLink, startIndex, stopIndex) {
   try {
@@ -140,13 +142,19 @@ async function useAPI(apiLink, startIndex, stopIndex) {
     let response = await fetch(apiLink);
     // get data
     let data = await response.json();
-    if (stopIndex <= data.length) {
-      loopOnData(data, startIndex, stopIndex);
-      if (stopIndex === data.length) {
-        secFoot.style.display = "none";
-      }
-    } else {
+    m = data.length;
+    if (x - m === 1) {
+      loopOnData(data, startIndex, stopIndex - 1);
       secFoot.style.display = "none";
+    } else if (x - m === 2) {
+      loopOnData(data, startIndex, stopIndex - 2);
+      secFoot.style.display = "none";
+    } else if (x - m === 3) {
+      loopOnData(data, startIndex, stopIndex - 3);
+      secFoot.style.display = "none";
+    } else {
+      loopOnData(data, startIndex, stopIndex);
+      x += 3;
     }
   } catch (error) {
     console.log(Error(error));
@@ -166,7 +174,27 @@ seeMoreBtn.addEventListener("click", function () {
   useAPI("../Test APIs/blog.json", startNum, StopNum);
   startNum += 3;
   StopNum = startNum + 3;
+  if (x === m) {
+    secFoot.style.display = "none";
+  }
 });
+
+// back to top button
+let goUp = document.getElementById("up");
+window.onscroll = function () {
+  //show button onscroll at 700
+  "use strict";
+  if (window.pageYOffset >= 700) {
+    goUp.style.display = "block";
+  } else {
+    goUp.style.display = "none";
+  }
+};
+goUp.onclick = function () {
+  //go up onclick
+  "use strict";
+  window.scrollTo(0, 0);
+};
 
 //////////////////////////////////////////////////////////////////////////////////////
 

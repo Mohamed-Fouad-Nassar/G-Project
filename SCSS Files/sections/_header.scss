@@ -30,8 +30,13 @@ header {
       grid-template-areas: "logo . account" "navLinK navLinK navLinK";
     }
     .logo {
+      width: 75px;
+      @media (max-width: 991px) {
+        width: 60px;
+      }
       @media (max-width: 767px) {
         grid-area: logo;
+        width: 70px;
       }
       a {
         h1 {

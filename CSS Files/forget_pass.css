@@ -447,8 +447,33 @@ main .top a:hover i {
 
 /* End Top Button Styling */
 body {
+  background-image: url(../../Data/un-used-Images/11852427_4858794.jpg);
+  background-position: center;
+  background-size: cover;
   min-height: 100vh;
   background-color: #ebfcff;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 156, 177, 0.37);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.12);
+  z-index: -1;
 }
 
 body header {
@@ -457,6 +482,14 @@ body header {
 
 body.dark {
   background-color: #222;
+}
+
+body.dark::before {
+  background-color: rgba(5, 156, 177, 0.35);
+}
+
+body.dark::after {
+  background-color: rgba(0, 0, 0, 0.72);
 }
 
 body.dark .card {

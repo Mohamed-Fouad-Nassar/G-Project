@@ -505,9 +505,20 @@ header .container {
   }
 }
 
+header .container .logo {
+  width: 75px;
+}
+
+@media (max-width: 991px) {
+  header .container .logo {
+    width: 60px;
+  }
+}
+
 @media (max-width: 767px) {
   header .container .logo {
     grid-area: logo;
+    width: 70px;
   }
 }
 
@@ -958,7 +969,18 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(5, 156, 177, 0.2509803922);
+  background-color: rgba(5, 156, 177, 0.37);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.12);
   z-index: -1;
 }
 
@@ -966,14 +988,12 @@ body header {
   display: none;
 }
 
-body.dark {
-  background-image: url(../../Data/un-used-Images/11852427_4858794.jpg);
-  background-position: center;
-  background-size: cover;
+body.dark::before {
+  background-color: rgba(5, 156, 177, 0.35);
 }
 
-body.dark::before {
-  background-color: rgba(29, 29, 29, 0.9019607843);
+body.dark::after {
+  background-color: rgba(0, 0, 0, 0.72);
 }
 
 body.dark .card {
@@ -1450,7 +1470,7 @@ body.dark .card .right .text {
 
 .card .right {
   width: 50%;
-  background-image: url(../Data/Images/IMG_20221204_221527_467.jpg);
+  background-image: url(../Data/un-used-Images/log-in-image.png);
   position: relative;
 }
 

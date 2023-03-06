@@ -537,9 +537,20 @@ header .container {
   }
 }
 
+header .container .logo {
+  width: 75px;
+}
+
+@media (max-width: 991px) {
+  header .container .logo {
+    width: 60px;
+  }
+}
+
 @media (max-width: 767px) {
   header .container .logo {
     grid-area: logo;
+    width: 70px;
   }
 }
 

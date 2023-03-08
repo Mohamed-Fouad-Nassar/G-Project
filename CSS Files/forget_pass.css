@@ -87,6 +87,10 @@ i {
   background-size: cover;
 }
 
+.mail {
+  text-transform: lowercase;
+}
+
 html {
   scrollbar-color: #059cb1 #fff;
   scroll-behavior: smooth;

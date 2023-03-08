@@ -21,9 +21,83 @@ main {
   }
   .content {
     .container {
-      .sec-head {
-      }
       .sec-body {
+        @extend %grid-350-20;
+        .box {
+          position: relative;
+          background-color: $white-color;
+          padding: 20px 20px 30px;
+          .avatar {
+            @extend %border-radius-50;
+            @include trans(10px, -50px);
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 130px;
+            height: 130px;
+            border: 7px solid $light-white-color;
+            background-color: $light-white-color;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 130px;
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+          }
+          .data {
+            .head {
+              h3,
+              span {
+                width: calc(100% - 130px);
+              }
+              h3 {
+                font-size: 1.3rem;
+                margin: 0;
+              }
+              span {
+                font-size: 0.9rem;
+                padding: 10px 0 20px;
+                display: block;
+              }
+              p {
+                margin: 0;
+                @include max-lines(3);
+                color: $sec-text-color;
+              }
+            }
+            .info {
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                background-color: $light-white-color;
+              }
+              &::before {
+                top: 20px;
+              }
+              &::after {
+                bottom: -20px;
+              }
+              @include contact-info("light");
+              position: relative;
+              padding-top: 40px;
+              .field {
+                span {
+                  color: $sec-text-color;
+                }
+              }
+            }
+            .contact {
+              @include social-media-links("light");
+              flex-wrap: nowrap;
+              padding-top: 40px;
+            }
+          }
+        }
       }
       .sec-foot {
         input[type="button"] {
@@ -38,6 +112,52 @@ body {
   &.dark {
     main {
       background-color: $main-dark-bg;
+      .content {
+        .container {
+          .sec-body {
+            .box {
+              background-color: $sec-dark-bg;
+              .avatar {
+                border-color: $main-dark-bg;
+                background-color: $main-dark-bg;
+              }
+              .data {
+                .head {
+                  h3 {
+                    color: $white-dark-color;
+                  }
+                  span {
+                    color: $white-dark-color;
+                  }
+                  p {
+                    color: $sec-text-dark-color;
+                  }
+                }
+                .info {
+                  &::before,
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    left: 0;
+                    background-color: $sec-text-color;
+                  }
+                  @include contact-info("dark");
+                }
+                .contact {
+                  @include social-media-links("dark");
+                }
+              }
+            }
+          }
+          .sec-foot {
+            input[type="button"] {
+              @include button-shape($main-color, "dark");
+            }
+          }
+        }
+      }
     }
   }
 }

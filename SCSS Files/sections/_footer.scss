@@ -87,7 +87,7 @@ footer {
               bottom: 5px;
               top: $sec-element-padding;
             }
-            @include max-chars(1);
+            @include max-lines(1);
             font-size: 1.1rem;
             letter-spacing: 1.5px;
             color: $light-white-color;
@@ -102,7 +102,7 @@ footer {
           color: $dark-white-color;
           font-size: 0.85rem;
           margin-bottom: 5px;
-          @include max-chars(3);
+          @include max-lines(3);
         }
         .info {
           span {

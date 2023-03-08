@@ -22,9 +22,10 @@ main .landing,
 main .landing .container,
 main .services .container .sec-body .box a .f-icon,
 main .hospitals .container .sec-body .text a,
-main .contacts .container .sec-body .sec-left .contact-info .box .icon-div i,
+main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
 main .contacts .container .sec-body .sec-right form input[type=submit],
 body.dark main .hospitals .container .sec-body .text a,
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
 body.dark main .contacts .container .sec-body .sec-right form input[type=submit],
 header .container nav ul li a,
 header .container .account,
@@ -137,7 +138,8 @@ body.dark footer .f-info .f-social>div a {
 
 main .services .container .sec-body .box a .f-icon,
 main .charities .container .sec-body .slider .swiper-navBtn,
-main .contacts .container .sec-body .sec-left .contact-info .box .icon-div i,
+main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
 .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
@@ -171,6 +173,10 @@ header .container .log-in-acc article>.menu {
   font-family: "Open Sans", sans-serif;
   background-position: center;
   background-size: cover;
+}
+
+.mail {
+  text-transform: lowercase;
 }
 
 html {
@@ -1564,7 +1570,7 @@ main .hospitals .container .sec-body .text a {
   border: 1px solid #059cb1;
   background-color: #059cb1;
   padding: 10px 20px;
-  margin-left: auto;
+  margin-left: 0;
 }
 
 main .hospitals .container .sec-body .text a:hover {
@@ -1696,13 +1702,13 @@ main .charities .container .sec-body .slider .slider-container .slides .slide .s
   font-size: 0.9rem;
   margin-bottom: 10px;
   white-space: normal;
-  overflow: hidden;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot {
@@ -1807,18 +1813,18 @@ main .contacts .container .sec-body .sec-left {
   }
 }
 
-main .contacts .container .sec-body .sec-left .contact-info .box {
+main .contacts .container .sec-body .sec-left .contact-info>div {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
 
-main .contacts .container .sec-body .sec-left .contact-info .box:last-of-type {
+main .contacts .container .sec-body .sec-left .contact-info>div:last-of-type {
   margin: 0;
 }
 
-main .contacts .container .sec-body .sec-left .contact-info .box .icon-div i {
+main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
@@ -1826,7 +1832,7 @@ main .contacts .container .sec-body .sec-left .contact-info .box .icon-div i {
   font-size: 1.5rem;
 }
 
-main .contacts .container .sec-body .sec-left .contact-info .box span {
+main .contacts .container .sec-body .sec-left .contact-info>div>span {
   color: #fff;
 }
 
@@ -2231,12 +2237,35 @@ body.dark main .contacts .container .sec-head p {
   color: #efefef;
 }
 
-body.dark main .contacts .container .sec-body .sec-left .contact-info .box .icon-div i {
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div:last-of-type {
+  margin: 0;
+}
+
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div>span {
+  color: #fff;
+}
+
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
   background-color: rgba(89, 193, 189, 0.8705882353);
   color: #efefef;
 }
 
-body.dark main .contacts .container .sec-body .sec-left .contact-info .box span {
+body.dark main .contacts .container .sec-body .sec-left .contact-info>div>span {
   color: #efefef;
 }
 

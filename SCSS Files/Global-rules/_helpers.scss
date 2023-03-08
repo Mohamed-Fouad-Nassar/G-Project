@@ -133,7 +133,7 @@
       }
     }
     p {
-      @include max-chars(2);
+      @include max-lines(2);
       margin-bottom: $sec-element-padding;
       font-size: 0.9rem;
     }
@@ -192,7 +192,46 @@
   }
 }
 
-@mixin max-chars($num) {
+@mixin contact-info($theme) {
+  > div {
+    display: flex;
+    align-items: center;
+    gap: $sec-element-padding;
+    margin-bottom: $sec-element-padding;
+    &:last-of-type {
+      margin: 0;
+    }
+    > div {
+      > .f-icon {
+        @extend %flex-center-center;
+        @extend %border-radius-50;
+        width: 45px;
+        height: 45px;
+        background-color: $sec-color;
+        color: $white-color;
+        font-size: 1.5rem;
+      }
+    }
+    > span {
+      color: $white-color;
+    }
+  }
+  @if ($theme == "dark") {
+    > div {
+      > div {
+        > .f-icon {
+          background-color: $sec-dark-color;
+          color: $white-dark-color;
+        }
+      }
+      > span {
+        color: $white-dark-color;
+      }
+    }
+  }
+}
+
+@mixin max-lines($num) {
   display: -webkit-box;
   -webkit-line-clamp: $num;
   -webkit-box-orient: vertical;
@@ -213,6 +252,14 @@
   -moz-transform: translateX($per);
   -ms-transform: translateX($per);
   -o-transform: translateX($per);
+}
+
+@mixin trans($x-axis, $y-axis) {
+  transform: translate($x-axis, $y-axis);
+  -webkit-transform: translate($x-axis, $y-axis);
+  -moz-transform: translate($x-axis, $y-axis);
+  -ms-transform: translate($x-axis, $y-axis);
+  -o-transform: translate($x-axis, $y-axis);
 }
 
 @mixin scale($num) {

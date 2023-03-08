@@ -242,7 +242,7 @@ main {
               }
             }
             p {
-              @include max-chars(3);
+              @include max-lines(3);
               margin: 0;
               font-size: 0.9rem;
               color: $sec-text-color;
@@ -295,7 +295,7 @@ main {
           }
           a {
             @include button-shape($main-color, "light");
-            margin-left: auto;
+            margin-left: 0;
           }
         }
         .image {
@@ -369,13 +369,10 @@ main {
                     font-size: 0.9rem;
                     margin-bottom: $sec-element-padding;
                     white-space: normal;
-                    overflow: hidden;
                     width: -webkit-fit-content;
                     width: -moz-fit-content;
                     width: fit-content;
-                    display: -webkit-box;
-                    -webkit-line-clamp: 3;
-                    -webkit-box-orient: vertical;
+                    @include max-lines(3);
                   }
                 }
                 .slide-foot {
@@ -474,29 +471,7 @@ main {
             width: 100%;
           }
           .contact-info {
-            .box {
-              display: flex;
-              align-items: center;
-              gap: $sec-element-padding;
-              margin-bottom: $sec-element-padding;
-              &:last-of-type {
-                margin: 0;
-              }
-              .icon-div {
-                i {
-                  @extend %flex-center-center;
-                  @extend %border-radius-50;
-                  width: 45px;
-                  height: 45px;
-                  background-color: $sec-color;
-                  color: $white-color;
-                  font-size: 1.5rem;
-                }
-              }
-              span {
-                color: $white-color;
-              }
-            }
+            @include contact-info("light");
           }
           .social-icon {
             display: block !important;
@@ -761,17 +736,7 @@ body {
           .sec-body {
             .sec-left {
               .contact-info {
-                .box {
-                  .icon-div {
-                    i {
-                      background-color: $sec-dark-color;
-                      color: $white-dark-color;
-                    }
-                  }
-                  span {
-                    color: $white-dark-color;
-                  }
-                }
+                @include contact-info("dark");
               }
               .social-icon {
                 @include social-media-links("dark");

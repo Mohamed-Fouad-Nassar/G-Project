@@ -12,6 +12,10 @@
   @extend %transition;
 }
 
+.mail {
+  text-transform: lowercase;
+}
+
 html {
   scrollbar-color: $main-color $white-color;
   scroll-behavior: smooth;

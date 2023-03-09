@@ -64,10 +64,6 @@ header {
           gap: $sec-element-padding;
         }
         li {
-          padding: {
-            right: $sec-element-padding;
-            left: $sec-element-padding;
-          }
           position: relative;
           &::after {
             content: "";
@@ -77,6 +73,9 @@ header {
             width: 0;
             height: 2px;
             background-color: $main-color;
+          }
+          &:hover::after {
+            width: 100%;
           }
           &.active {
             background-color: $white-color;
@@ -92,6 +91,10 @@ header {
           }
           a {
             @extend %flex-center-center;
+            padding: {
+              right: $sec-element-padding;
+              left: $sec-element-padding;
+            }
             height: 68px;
             &:hover {
               span,

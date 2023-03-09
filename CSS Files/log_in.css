@@ -559,8 +559,6 @@ header .container nav ul {
 }
 
 header .container nav ul li {
-  padding-right: 10px;
-  padding-left: 10px;
   position: relative;
 }
 
@@ -572,6 +570,10 @@ header .container nav ul li::after {
   width: 0;
   height: 2px;
   background-color: #059cb1;
+}
+
+header .container nav ul li:hover::after {
+  width: 100%;
 }
 
 header .container nav ul li.active {
@@ -588,6 +590,8 @@ header .container nav ul li.active a .f-icon {
 }
 
 header .container nav ul li a {
+  padding-right: 10px;
+  padding-left: 10px;
   height: 68px;
 }
 

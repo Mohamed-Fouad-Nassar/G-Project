@@ -20,10 +20,7 @@ a {
   cursor: pointer;
 }
 
-main .content .container .sec-body .box .data .info>div>div>.f-icon,
-main .content .container .sec-foot input[type=button],
-body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon,
-body.dark main .content .container .sec-foot input[type=button],
+main .container,
 header .container nav ul li a,
 header .container .account,
 header .container .log-in-acc,
@@ -48,8 +45,6 @@ main .top a {
   justify-content: center;
 }
 
-main .content .container .sec-body .box .data .contact,
-body.dark main .content .container .sec-body .box .data .contact,
 footer .container .f-info .f-social,
 body.dark footer .f-info .f-social {
   display: -webkit-box;
@@ -63,8 +58,6 @@ body.dark footer .f-info .f-social {
   justify-content: flex-start;
 }
 
-main .content .container .sec-body .box .data .contact>div a,
-body.dark main .content .container .sec-body .box .data .contact>div a,
 footer .container .f-info .f-social>div a,
 body.dark footer .f-info .f-social>div a {
   display: -webkit-inline-box;
@@ -90,13 +83,6 @@ header .container nav {
   justify-content: space-between;
 }
 
-main .content .container .sec-body {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-}
-
 .head-shape span::after,
 .head-shape span::before,
 .head-shape-w span::after,
@@ -108,8 +94,6 @@ main .content .container .sec-body {
   -o-transform: translateY(-50%);
 }
 
-main .content .container .sec-body .box .data .contact>div a,
-body.dark main .content .container .sec-body .box .data .contact>div a,
 footer .container .f-info .f-social>div a,
 body.dark footer .f-info .f-social>div a {
   border-radius: 5px !important;
@@ -119,9 +103,6 @@ body.dark footer .f-info .f-social>div a {
   -o-border-radius: 5px !important;
 }
 
-main .content .container .sec-body .box .avatar,
-main .content .container .sec-body .box .data .info>div>div>.f-icon,
-body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon,
 .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
@@ -1228,7 +1209,10 @@ body.dark footer .f-info .f-social>div a i {
 
 main {
   background-color: #eee;
-  padding: 100px 0;
+  min-height: calc(100vh - 544px);
+  padding: 0;
+  padding-top: 100px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -1238,272 +1222,134 @@ main {
   }
 }
 
-main .content .container .sec-body .box {
-  position: relative;
+main .container {
+  gap: 20px;
+}
+
+@media (max-width: 991px) {
+  main .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+main .container>section {
   background-color: #fff;
-  padding: 20px 20px 30px;
 }
 
-main .content .container .sec-body .box .avatar {
-  transform: translate(10px, -50px);
-  -webkit-transform: translate(10px, -50px);
-  -moz-transform: translate(10px, -50px);
-  -ms-transform: translate(10px, -50px);
-  -o-transform: translate(10px, -50px);
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 130px;
-  height: 130px;
-  border: 7px solid #eee;
-  background-color: #eee;
-  overflow: hidden;
-}
-
-main .content .container .sec-body .box .avatar img {
+main .container .right {
   width: 100%;
-  height: 130px;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
-main .content .container .sec-body .box .data .head h3,
-main .content .container .sec-body .box .data .head span {
-  width: calc(100% - 130px);
+@media (max-width: 991px) {
+  main .container .right {
+    width: 100%;
+  }
 }
 
-main .content .container .sec-body .box .data .head h3 {
-  font-size: 1.3rem;
-  margin: 0;
-}
-
-main .content .container .sec-body .box .data .head span {
-  font-size: 0.9rem;
-  padding: 10px 0 20px;
-  display: block;
-}
-
-main .content .container .sec-body .box .data .head p {
-  margin: 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  color: #555;
-}
-
-main .content .container .sec-body .box .data .info {
-  position: relative;
-  padding-top: 40px;
-}
-
-main .content .container .sec-body .box .data .info::before,
-main .content .container .sec-body .box .data .info::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  left: 0;
-  background-color: #eee;
-}
-
-main .content .container .sec-body .box .data .info::before {
-  top: 20px;
-}
-
-main .content .container .sec-body .box .data .info::after {
-  bottom: -20px;
-}
-
-main .content .container .sec-body .box .data .info>div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-main .content .container .sec-body .box .data .info>div:last-of-type {
-  margin: 0;
-}
-
-main .content .container .sec-body .box .data .info>div>div>.f-icon {
-  width: 45px;
-  height: 45px;
-  background-color: #59c1bd;
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-main .content .container .sec-body .box .data .info>div>span {
-  color: #fff;
-}
-
-main .content .container .sec-body .box .data .info .field span {
-  color: #555;
-}
-
-main .content .container .sec-body .box .data .contact {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 10px;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  padding-top: 40px;
-}
-
-main .content .container .sec-body .box .data .contact>div a {
-  width: 40px;
-  height: 40px;
-  background-color: #59c1bd;
-}
-
-main .content .container .sec-body .box .data .contact>div a i {
-  font-size: 1.5rem;
-}
-
-main .content .container .sec-body .box .data .contact>div a:hover {
-  background-color: #eee;
-}
-
-main .content .container .sec-body .box .data .contact>div a:hover i {
-  color: #059cb1;
-}
-
-main .content .container .sec-body .box .data .contact>div a i {
-  color: #fff;
-}
-
-main .content .container .sec-foot input[type=button] {
-  width: 160px;
+main .container .right article h1 {
+  padding: 15px;
+  width: 90%;
   margin: 0 auto;
-  outline: none;
-  color: #fff;
-  border: 1px solid #059cb1;
-  background-color: #059cb1;
-  padding: 10px 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #059cb1;
 }
 
-main .content .container .sec-foot input[type=button]:hover {
-  color: #059cb1;
-  background-color: transparent;
-  border-color: #059cb1;
+main .container .right article .image img {
+  width: 100%;
+}
+
+main .container .right article .info {
+  display: block;
+  padding: 10px 15px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+main .container .right article .info span {
+  color: #59c1bd;
+}
+
+main .container .right article .article-body {
+  padding: 20px 40px;
+  white-space: break-spaces;
+  font: inherit;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  main .container .right article .article-body {
+    padding: 20px 15px;
+  }
+}
+
+main .container .right article .video {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0 15px 20px;
+}
+
+@media (max-width: 767px) {
+  main .container .right article .video {
+    width: 100%;
+    height: 340px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  main .container .right article .video {
+    width: 90%;
+    height: 340px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  main .container .right article .video {
+    width: 80%;
+    height: 440px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .container .right article .video {
+    width: 70%;
+    height: 460px;
+  }
+}
+
+main .container .right article .video iframe {
+  width: 100%;
+  height: 100%;
 }
 
 body.dark main {
   background-color: #222;
 }
 
-body.dark main .content .container .sec-body .box {
+body.dark main .container>section {
   background-color: #1d1d1d;
 }
 
-body.dark main .content .container .sec-body .box .avatar {
-  border-color: #222;
-  background-color: #222;
-}
-
-body.dark main .content .container .sec-body .box .data .head h3 {
-  color: #efefef;
-}
-
-body.dark main .content .container .sec-body .box .data .head span {
-  color: #efefef;
-}
-
-body.dark main .content .container .sec-body .box .data .head p {
-  color: #a5a5a5;
-}
-
-body.dark main .content .container .sec-body .box .data .info::before,
-body.dark main .content .container .sec-body .box .data .info::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  left: 0;
-  background-color: #555;
-}
-
-body.dark main .content .container .sec-body .box .data .info>div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-body.dark main .content .container .sec-body .box .data .info>div:last-of-type {
-  margin: 0;
-}
-
-body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon {
-  width: 45px;
-  height: 45px;
-  background-color: #59c1bd;
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-body.dark main .content .container .sec-body .box .data .info>div>span {
-  color: #fff;
-}
-
-body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon {
-  background-color: rgba(89, 193, 189, 0.8705882353);
-  color: #efefef;
-}
-
-body.dark main .content .container .sec-body .box .data .info>div>span {
-  color: #efefef;
-}
-
-body.dark main .content .container .sec-body .box .data .contact {
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-body.dark main .content .container .sec-body .box .data .contact>div a {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(89, 193, 189, 0.8705882353);
-}
-
-body.dark main .content .container .sec-body .box .data .contact>div a i {
-  font-size: 1.5rem;
-}
-
-body.dark main .content .container .sec-body .box .data .contact>div a:hover {
-  background-color: #222;
-}
-
-body.dark main .content .container .sec-body .box .data .contact>div a:hover i {
+body.dark main .container .right article h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .content .container .sec-body .box .data .contact>div a i {
-  color: #efefef;
+body.dark main .container .right article .image {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
 }
 
-body.dark main .content .container .sec-foot input[type=button] {
-  width: 160px;
-  margin: 0 auto;
-  outline: none;
-  color: #efefef;
-  border: 1px solid #059cb1;
-  background-color: #059cb1;
-  padding: 10px 20px;
+body.dark main .container .right article .info {
+  color: #aaa;
 }
 
-body.dark main .content .container .sec-foot input[type=button]:hover {
-  color: #059cb1;
-  background-color: transparent;
-  border-color: #059cb1;
+body.dark main .container .right article .info span {
+  color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .container .right article .article-body {
+  color: #a5a5a5;
 }

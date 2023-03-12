@@ -71,7 +71,7 @@ let getLinks = function () {
   let arr = [].slice.call(links);
   arr.forEach((e) => {
     e.addEventListener("click", function () {
-      let newWindow = window.open("../HTML Files/article.html");
+      let newWindow = window.open("../HTML Files/article.html", "_self");
       newWindow.localStorage.setItem("index", e.getAttribute("index"));
     });
   });

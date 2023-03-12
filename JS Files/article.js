@@ -77,22 +77,9 @@ function embedLink(url) {
     : null;
 }
 
-// let createIFrameTag = function (link) {
-//   if (embedLink(link) === null) {
-//   } else {
-//     // create video div
-//     let videoDiv = document.createElement("div");
-//     // create iframe tag
-//     let iframe = document.createElement("iframe");
-//     // set the video src attr
-//     iframe.setAttribute("src", embedLink(link));
-//     // set default attrs
-//     iframe.setAttribute(
-//       "allow",
-//       "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-//     );
-//     iframe.setAttribute("allowfullscreen", "");
-//     // append iframe to video div
-//     videoDiv.appendChild(iframe);
-//   }
-// };
+// back button
+let backBtn = document.getElementById("cancel");
+backBtn.addEventListener("click", function () {
+  console.log("Click");
+  window.history.back();
+});

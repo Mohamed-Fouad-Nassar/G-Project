@@ -178,6 +178,11 @@ header {
           top: 62px;
           left: 50%;
           box-shadow: $list-light-box-shadow;
+          @media (max-width: 575px) {
+            @include trans-x(0);
+            right: 0;
+            left: initial;
+          }
           ul {
             @extend %flex-center-center;
             flex-direction: column;
@@ -194,6 +199,11 @@ header {
               border-color: transparent transparent $light-white-color
                 transparent;
               @include trans-x(-50%);
+              @media (max-width: 575px) {
+                @include trans-x(0);
+                right: 15px;
+                left: initial;
+              }
             }
             li {
               @extend %flex-center-center;
@@ -274,18 +284,45 @@ header {
         }
         .menu {
           top: 75px;
-          min-width: 75px;
+          min-width: 120px;
           ul {
             li {
-              &:hover {
+              width: calc(100% - 15px);
+              padding: 0;
+              text-align: center;
+              &:first-of-type {
                 span {
-                  color: $danger-color-hover;
+                  font-size: 0.9rem;
+                  color: $white-color;
+                  background-color: $main-color;
+                  border-color: $main-color;
+                  &:hover {
+                    background-color: transparent;
+                    color: $main-color;
+                  }
+                }
+              }
+              &:last-of-type {
+                span {
+                  font-size: 0.85rem;
+                  color: $white-color;
+                  background-color: $light-danger-color;
+                  border-color: $light-danger-color;
+                  &:hover {
+                    background-color: transparent;
+                    color: $light-danger-color;
+                  }
                 }
               }
               span {
-                font-size: 0.85rem;
+                width: 100%;
+                display: block;
+                border: 1px solid;
+                padding: 5px {
+                  left: $sec-element-padding;
+                  right: $sec-element-padding;
+                }
                 text-transform: capitalize;
-                color: $light-danger-color;
               }
             }
           }
@@ -306,23 +343,6 @@ header {
               background-color: $light-white-color;
               a {
                 color: $main-color;
-              }
-            }
-          }
-        }
-      }
-    }
-    &.dark {
-      background-color: $dark-transparent-color;
-      .container {
-        nav {
-          ul {
-            li {
-              &.active {
-                background-color: $nav-active-bg;
-                a {
-                  color: $main-dark-color;
-                }
               }
             }
           }
@@ -429,13 +449,44 @@ body {
             .menu {
               ul {
                 li {
-                  &:hover {
+                  &:first-of-type {
                     span {
-                      color: $danger-color-hover;
+                      color: $white-dark-color;
+                      background-color: $main-dark-color;
+                      border-color: $main-dark-color;
+                      &:hover {
+                        background-color: transparent;
+                        color: $main-dark-color;
+                      }
                     }
                   }
-                  span {
-                    color: $light-danger-color;
+                  &:last-of-type {
+                    span {
+                      color: $white-dark-color;
+                      background-color: $dark-danger-color;
+                      border-color: $dark-danger-color;
+                      &:hover {
+                        background-color: transparent;
+                        color: $dark-danger-color;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.scroll {
+        background-color: $dark-transparent-color;
+        .container {
+          nav {
+            ul {
+              li {
+                &.active {
+                  background-color: $nav-active-bg;
+                  a {
+                    color: $main-dark-color;
                   }
                 }
               }

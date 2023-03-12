@@ -760,6 +760,18 @@ header .container .log-in-acc article>.menu {
   box-shadow: 0 0 15px -6px #6d6d6d;
 }
 
+@media (max-width: 575px) {
+  header .container .log-in-acc article>.menu {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    right: 0;
+    left: initial;
+  }
+}
+
 header .container .log-in-acc article>.menu ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -783,6 +795,18 @@ header .container .log-in-acc article>.menu ul::after {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+}
+
+@media (max-width: 575px) {
+  header .container .log-in-acc article>.menu ul::after {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    right: 15px;
+    left: initial;
+  }
 }
 
 header .container .log-in-acc article>.menu ul li {
@@ -881,17 +905,47 @@ header .container .log-in-acc .acc .h-btn img {
 
 header .container .log-in-acc .acc .menu {
   top: 75px;
-  min-width: 75px;
+  min-width: 120px;
 }
 
-header .container .log-in-acc .acc .menu ul li:hover span {
+header .container .log-in-acc .acc .menu ul li {
+  width: calc(100% - 15px);
+  padding: 0;
+  text-align: center;
+}
+
+header .container .log-in-acc .acc .menu ul li:first-of-type span {
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #059cb1;
+  border-color: #059cb1;
+}
+
+header .container .log-in-acc .acc .menu ul li:first-of-type span:hover {
+  background-color: transparent;
+  color: #059cb1;
+}
+
+header .container .log-in-acc .acc .menu ul li:last-of-type span {
+  font-size: 0.85rem;
+  color: #fff;
+  background-color: #d20519;
+  border-color: #d20519;
+}
+
+header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+  background-color: transparent;
   color: #d20519;
 }
 
 header .container .log-in-acc .acc .menu ul li span {
-  font-size: 0.85rem;
+  width: 100%;
+  display: block;
+  border: 1px solid;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-transform: capitalize;
-  color: #dc3545;
 }
 
 header.scroll {
@@ -910,18 +964,6 @@ header.scroll .container nav ul li.active {
 
 header.scroll .container nav ul li.active a {
   color: #059cb1;
-}
-
-header.scroll.dark {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-header.scroll.dark .container nav ul li.active {
-  background-color: #323234;
-}
-
-header.scroll.dark .container nav ul li.active a {
-  color: rgba(5, 156, 177, 0.8705882353);
 }
 
 body.dark header {
@@ -1012,12 +1054,38 @@ body.dark header .container .log-in-acc .theme .h-btn .f-icon {
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:hover span {
-  color: #d20519;
+body.dark header .container .log-in-acc .acc .menu ul li:first-of-type span {
+  color: #efefef;
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  border-color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li span {
+body.dark header .container .log-in-acc .acc .menu ul li:first-of-type span:hover {
+  background-color: transparent;
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span {
+  color: #efefef;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+  background-color: transparent;
   color: #dc3545;
+}
+
+body.dark header.scroll {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark header.scroll .container nav ul li.active {
+  background-color: #323234;
+}
+
+body.dark header.scroll .container nav ul li.active a {
+  color: rgba(5, 156, 177, 0.8705882353);
 }
 
 footer {
@@ -1241,6 +1309,27 @@ main .container>section {
 
 main .container .right {
   width: 100%;
+  padding-top: 20px;
+  position: relative;
+}
+
+main .container .right .back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+main .container .right .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+
+main .container .right .back-btn .f-icon {
+  font-size: 1rem;
 }
 
 @media (max-width: 991px) {
@@ -1264,7 +1353,7 @@ main .container .right article .image img {
 
 main .container .right article .info {
   display: block;
-  padding: 10px 15px 20px;
+  padding: 10px 15px 0;
   font-size: 0.9rem;
   color: #555;
 }
@@ -1289,7 +1378,7 @@ main .container .right article .article-body {
 main .container .right article .video {
   width: 85%;
   margin: 0 auto;
-  padding: 0 15px 20px;
+  padding: 0 15px 30px;
 }
 
 @media (max-width: 767px) {
@@ -1331,6 +1420,30 @@ body.dark main {
 
 body.dark main .container>section {
   background-color: #1d1d1d;
+}
+
+body.dark main .container .right .back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #efefef;
+}
+
+body.dark main .container .right .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+
+body.dark main .container .right .back-btn .f-icon {
+  font-size: 1rem;
+}
+
+body.dark main .container .right .back-btn:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
 }
 
 body.dark main .container .right article h1 {

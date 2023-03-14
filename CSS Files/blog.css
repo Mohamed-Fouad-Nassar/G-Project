@@ -1327,6 +1327,10 @@ main .content .container .sec-body .box .text a h3 {
   font-weight: 600;
 }
 
+main .content .container .sec-body .box .text a:hover {
+  cursor: pointer;
+}
+
 main .content .container .sec-body .box .text a:hover h3 {
   color: #059cb1;
 }
@@ -1388,6 +1392,10 @@ body.dark main .content .container .sec-body .box .text {
 body.dark main .content .container .sec-body .box .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+body.dark main .content .container .sec-body .box .text a:hover {
+  cursor: pointer;
 }
 
 body.dark main .content .container .sec-body .box .text a:hover h3 {

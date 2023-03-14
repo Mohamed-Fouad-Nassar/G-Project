@@ -121,6 +121,7 @@ body.dark footer .f-info .f-social>div a {
 
 main .content .container .sec-body .box .avatar,
 main .content .container .sec-body .box .data .info>div>div>.f-icon,
+body.dark main .content .container .sec-body .box .avatar,
 body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon,
 .head-shape span,
 .head-shape-w span {
@@ -1466,7 +1467,143 @@ body.dark main {
 }
 
 body.dark main .content .container .sec-body .box {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 20px 30px;
   background-color: #1d1d1d;
+}
+
+body.dark main .content .container .sec-body .box .avatar {
+  transform: translate(10px, -50px);
+  -webkit-transform: translate(10px, -50px);
+  -moz-transform: translate(10px, -50px);
+  -ms-transform: translate(10px, -50px);
+  -o-transform: translate(10px, -50px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  border: 7px solid #eee;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+body.dark main .content .container .sec-body .box .avatar img {
+  width: 100%;
+  height: 130px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+body.dark main .content .container .sec-body .box .data .head h3,
+body.dark main .content .container .sec-body .box .data .head span {
+  width: calc(100% - 130px);
+}
+
+body.dark main .content .container .sec-body .box .data .head h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+body.dark main .content .container .sec-body .box .data .head span {
+  font-size: 0.9rem;
+  padding: 10px 0 20px;
+  display: block;
+}
+
+body.dark main .content .container .sec-body .box .data .head p {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #555;
+}
+
+body.dark main .content .container .sec-body .box .data .info {
+  position: relative;
+  padding-top: 40px;
+}
+
+body.dark main .content .container .sec-body .box .data .info::before,
+body.dark main .content .container .sec-body .box .data .info::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: #eee;
+}
+
+body.dark main .content .container .sec-body .box .data .info::before {
+  top: 20px;
+}
+
+body.dark main .content .container .sec-body .box .data .info::after {
+  bottom: -20px;
+}
+
+body.dark main .content .container .sec-body .box .data .info>div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+body.dark main .content .container .sec-body .box .data .info>div:last-of-type {
+  margin: 0;
+}
+
+body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body.dark main .content .container .sec-body .box .data .info>div>span {
+  color: #fff;
+}
+
+body.dark main .content .container .sec-body .box .data .info .field span {
+  color: #555;
+}
+
+body.dark main .content .container .sec-body .box .data .contact {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-top: 40px;
+}
+
+body.dark main .content .container .sec-body .box .data .contact>div a {
+  width: 40px;
+  height: 40px;
+  background-color: #59c1bd;
+}
+
+body.dark main .content .container .sec-body .box .data .contact>div a i {
+  font-size: 1.5rem;
+}
+
+body.dark main .content .container .sec-body .box .data .contact>div a:hover {
+  background-color: #eee;
+}
+
+body.dark main .content .container .sec-body .box .data .contact>div a:hover i {
+  color: #059cb1;
+}
+
+body.dark main .content .container .sec-body .box .data .contact>div a i {
+  color: #fff;
 }
 
 body.dark main .content .container .sec-body .box .avatar {
@@ -1529,7 +1666,7 @@ body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon {
 }
 
 body.dark main .content .container .sec-body .box .data .info>div>span {
-  color: #efefef;
+  color: #efefef !important;
 }
 
 body.dark main .content .container .sec-body .box .data .contact {

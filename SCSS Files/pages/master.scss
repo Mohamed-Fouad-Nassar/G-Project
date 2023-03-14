@@ -130,7 +130,6 @@ main {
             margin: auto;
           }
           &:hover {
-            @include trans-y(-10px);
             .info {
               bottom: 0;
             }
@@ -310,10 +309,23 @@ main {
     }
   }
   // End Radiation Styling
+  // Start Pharmacies Styling:-
+  .pharmacies {
+    padding: $up-down-padding 0;
+    background-color: $light-white-color;
+    .container {
+      .sec-body {
+        @extend %grid-350-20;
+        .box {
+          @include hospital-pharmacy-card("light");
+        }
+      }
+    }
+  }
+  // End Pharmacies Styling
   // Start Blog Styling:-
   .blog {
     padding: $up-down-padding 0;
-    background-color: $light-white-color;
     .container {
       .sec-body {
         @extend %grid-250-20;
@@ -327,6 +339,7 @@ main {
   // Start charities Styling:-
   .charities {
     padding: $up-down-padding 0;
+    background-color: $light-white-color;
     .container {
       .sec-body {
         position: relative;
@@ -531,7 +544,7 @@ body {
   &.dark {
     main {
       .landing {
-        background-color: $main-dark-bg;
+        background-color: $sec-dark-bg;
         .container {
           .down-btn {
             a {
@@ -556,7 +569,7 @@ body {
         }
       }
       .services {
-        background-color: $sec-dark-bg;
+        background-color: $main-dark-bg;
         .container {
           .sec-body {
             .box {
@@ -580,7 +593,7 @@ body {
         }
       }
       .doctors {
-        background-color: $main-dark-bg;
+        background-color: $sec-dark-bg;
         .container {
           .sec-body {
             .box {
@@ -602,7 +615,7 @@ body {
         }
       }
       .medicine {
-        background-color: $sec-dark-bg;
+        background-color: $main-dark-bg;
         .container {
           .sec-body {
             .box {
@@ -635,10 +648,10 @@ body {
         }
       }
       .hospitals {
-        background-color: $main-dark-bg;
+        background-color: $sec-dark-bg;
         .container {
           .sec-body {
-            background-color: $sec-dark-bg;
+            background-color: $main-dark-bg;
             .text {
               h2 {
                 color: $white-dark-color;
@@ -653,6 +666,16 @@ body {
                   left: 0;
                 }
               }
+            }
+          }
+        }
+      }
+      .pharmacies {
+        background-color: $main-dark-bg;
+        .container {
+          .sec-body {
+            .box {
+              @include hospital-pharmacy-card("dark");
             }
           }
         }

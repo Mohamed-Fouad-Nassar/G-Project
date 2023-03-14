@@ -1,16 +1,11 @@
-// creating Articles in js with Test API [blog.json]  // Test
-
-// sec-body select
-let secBody = document.querySelector(".container .sec-body");
-
-// see more button select
-let seeMoreBtn = document.querySelector(".container .sec-foot input");
-
+// global variable
 // sec-foot select
 let secFoot = document.querySelector(".container .sec-foot");
 
+// -----------------------------------------------------------------------------
+// pharmacy API:-
 // function to loop on elements
-function loopOnData(array, startIndex, stopIndex) {
+function pharmacyLoopOnData(array, startIndex, stopIndex, parent) {
   // loop on elements
   for (let i = startIndex; i < stopIndex; i++) {
     // create article box
@@ -183,16 +178,14 @@ function loopOnData(array, startIndex, stopIndex) {
     article.appendChild(dataDiv);
 
     // append article to sec body
-    secBody.appendChild(article);
+    parent.appendChild(article);
   }
 }
-
 // Variables
 var x = 3;
 var m = 0;
-
 // get Data function
-async function useAPI(apiLink, startIndex, stopIndex) {
+async function pharmaciesAPI(apiLink, startIndex, stopIndex, parent) {
   try {
     // fetch api
     let response = await fetch(apiLink);
@@ -200,57 +193,129 @@ async function useAPI(apiLink, startIndex, stopIndex) {
     let data = await response.json();
     m = data.length;
     if (x - m === 1) {
-      loopOnData(data, startIndex, stopIndex - 1);
+      pharmacyLoopOnData(data, startIndex, stopIndex - 1, parent);
       secFoot.style.display = "none";
     } else if (x - m === 2) {
-      loopOnData(data, startIndex, stopIndex - 2);
+      pharmacyLoopOnData(data, startIndex, stopIndex - 2, parent);
       secFoot.style.display = "none";
     } else if (x - m === 3) {
-      loopOnData(data, startIndex, stopIndex - 3);
+      pharmacyLoopOnData(data, startIndex, stopIndex - 3, parent);
       secFoot.style.display = "none";
     } else {
-      loopOnData(data, startIndex, stopIndex);
+      pharmacyLoopOnData(data, startIndex, stopIndex, parent);
       x += 3;
     }
   } catch (error) {
     console.log(Error(error));
   }
 }
+// export elements
+export { pharmaciesAPI };
 
+// -----------------------------------------------------------------------------
+// Blog API
+// function to loop on elements
+function blogLoopOnData(array, startIndex, stopIndex, parent) {
+  // loop on elements
+  for (let i = startIndex; i < stopIndex; i++) {
+    // create article box
+    let article = document.createElement("article");
+    article.classList.add("box");
+    // create image div
+    let imageDiv = document.createElement("div");
+    imageDiv.classList.add("image");
+    // image
+    let image = document.createElement("img");
+    image.setAttribute("src", `${array[i].imgSrc}`);
+    image.setAttribute("alt", `${array[i].imgAlt}`);
+    // append image to image div
+    imageDiv.appendChild(image);
+    // create text div
+    let textDiv = document.createElement("div");
+    textDiv.classList.add("text");
+    // create link
+    let titleLink = document.createElement("a");
+    titleLink.classList.add("article-link");
+    titleLink.setAttribute("href", `${array[i].articleLink}`);
+    titleLink.setAttribute("index", `${i}`);
+    // create title heading
+    let title = document.createElement("h3");
+    title.innerText = `${array[i].title}`;
+    titleLink.appendChild(title);
+    // create paragraph
+    let para = document.createElement("p");
+    para.innerText = `${array[i].content}`;
+    // create info div
+    let infoDiv = document.createElement("div");
+    infoDiv.classList.add("info");
+    // create author spans
+    let firstSpan = document.createElement("span");
+    firstSpan.innerText = "author: ";
+    let secondSpan = document.createElement("span");
+    secondSpan.classList.add("input");
+    secondSpan.setAttribute("id", "input");
+    secondSpan.innerText = `${array[i].author}`;
+    // append spans in info div
+    infoDiv.appendChild(firstSpan);
+    infoDiv.appendChild(secondSpan);
+    // append element in text div
+    textDiv.appendChild(titleLink);
+    textDiv.appendChild(para);
+    textDiv.appendChild(infoDiv);
+    // append divs in article box
+    article.appendChild(imageDiv);
+    article.appendChild(textDiv);
+    // append article in sec-body div
+    parent.appendChild(article);
+  }
+}
 // Variables
-let start = 0;
-let startNum = 3;
-let StopNum = startNum + 3;
-
-// // export elements
-// export { x, m, start, startNum, StopNum, useAPI };
-
-// calling function
-useAPI("../Test APIs/hospitals.json", start, startNum);
-
-// see More Button
-seeMoreBtn.addEventListener("click", function () {
-  useAPI("../Test APIs/hospitals.json", startNum, StopNum);
-  startNum += 3;
-  StopNum = startNum + 3;
-  if (x === m) {
-    secFoot.style.display = "none";
-  }
-});
-
-// back to top button
-let goUp = document.getElementById("up");
-window.onscroll = function () {
-  //show button onscroll at 700
-  "use strict";
-  if (window.pageYOffset >= 700) {
-    goUp.style.display = "block";
-  } else {
-    goUp.style.display = "none";
-  }
+var x = 6;
+var m = 0;
+// get Links Function
+let getLinks = function () {
+  let links = document.querySelectorAll(".article-link");
+  let arr = [].slice.call(links);
+  arr.forEach((e) => {
+    e.addEventListener("click", function () {
+      let newWindow = window.open("../HTML Files/article.html", "_self");
+      newWindow.localStorage.setItem("index", e.getAttribute("index"));
+    });
+    e.addEventListener("mouseup", function (el) {
+      if (el.button === 1) {
+        let newWindow = window.open("../HTML Files/article.html");
+        newWindow.localStorage.setItem("index", e.getAttribute("index"));
+      }
+    });
+  });
 };
-goUp.onclick = function () {
-  //go up onclick
-  "use strict";
-  window.scrollTo(0, 0);
-};
+// get Data function
+async function blogAPI(apiLink, startIndex, stopIndex, parent) {
+  try {
+    // fetch api
+    let response = await fetch(apiLink);
+    // get data
+    let data = await response.json();
+    m = data.length;
+    if (x - m === 1) {
+      blogLoopOnData(data, startIndex, stopIndex - 1, parent);
+      secFoot.style.display = "none";
+    } else if (x - m === 2) {
+      blogLoopOnData(data, startIndex, stopIndex - 2, parent);
+      secFoot.style.display = "none";
+    } else if (x - m === 3) {
+      blogLoopOnData(data, startIndex, stopIndex - 3, parent);
+      secFoot.style.display = "none";
+    } else {
+      blogLoopOnData(data, startIndex, stopIndex, parent);
+      x += 3;
+    }
+    // calling getLinks function every call useAPI function
+    getLinks();
+  } catch (error) {
+    console.log(Error(error));
+  }
+}
+// export elements
+export { blogAPI };
+// -----------------------------------------------------------------------------

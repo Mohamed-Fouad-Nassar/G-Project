@@ -22,9 +22,11 @@ main .landing,
 main .landing .container,
 main .services .container .sec-body .box a .f-icon,
 main .hospitals .container .sec-body .text a,
+main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
 main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
 main .contacts .container .sec-body .sec-right form input[type=submit],
 body.dark main .hospitals .container .sec-body .text a,
+body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
 body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
 body.dark main .contacts .container .sec-body .sec-right form input[type=submit],
 header .container nav ul li a,
@@ -46,8 +48,10 @@ main .top a {
 }
 
 main .doctors .container .sec-body .box .info .contact,
+main .pharmacies .container .sec-body .box .data .contact,
 main .contacts .container .sec-body .sec-left .social-icon>div,
 body.dark main .doctors .container .sec-body .box .info .contact,
+body.dark main .pharmacies .container .sec-body .box .data .contact,
 body.dark main .contacts .container .sec-body .sec-left .social-icon,
 footer .container .f-info .f-social,
 body.dark footer .f-info .f-social {
@@ -68,8 +72,10 @@ main .hospitals .container .sec-body {
 }
 
 main .doctors .container .sec-body .box .info .contact>div a,
+main .pharmacies .container .sec-body .box .data .contact>div a,
 main .contacts .container .sec-body .sec-left .social-icon>div>div a,
 body.dark main .doctors .container .sec-body .box .info .contact>div a,
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a,
 body.dark main .contacts .container .sec-body .sec-left .social-icon>div a,
 footer .container .f-info .f-social>div a,
 body.dark footer .f-info .f-social>div a {
@@ -97,7 +103,8 @@ main .blog .container .sec-body {
   gap: 20px;
 }
 
-main .medicine .container .sec-body {
+main .medicine .container .sec-body,
+main .pharmacies .container .sec-body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
@@ -124,8 +131,10 @@ main .medicine .container .sec-body .box .info {
 }
 
 main .doctors .container .sec-body .box .info .contact>div a,
+main .pharmacies .container .sec-body .box .data .contact>div a,
 main .contacts .container .sec-body .sec-left .social-icon>div>div a,
 body.dark main .doctors .container .sec-body .box .info .contact>div a,
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a,
 body.dark main .contacts .container .sec-body .sec-left .social-icon>div a,
 footer .container .f-info .f-social>div a,
 body.dark footer .f-info .f-social>div a {
@@ -137,8 +146,12 @@ body.dark footer .f-info .f-social>div a {
 }
 
 main .services .container .sec-body .box a .f-icon,
+main .pharmacies .container .sec-body .box .avatar,
+main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
 main .charities .container .sec-body .slider .swiper-navBtn,
 main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
+body.dark main .pharmacies .container .sec-body .box .avatar,
+body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
 body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
 .head-shape span,
 .head-shape-w span {
@@ -1407,14 +1420,6 @@ main .doctors .container .sec-body .box {
   }
 }
 
-main .doctors .container .sec-body .box:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
-}
-
 main .doctors .container .sec-body .box:hover .info {
   bottom: 0;
 }
@@ -1663,9 +1668,146 @@ main .hospitals .container .sec-body .image {
   }
 }
 
-main .blog {
+main .pharmacies {
   padding: 100px 0;
   background-color: #eee;
+}
+
+main .pharmacies .container .sec-body .box {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 20px 30px;
+}
+
+main .pharmacies .container .sec-body .box .avatar {
+  transform: translate(10px, -50px);
+  -webkit-transform: translate(10px, -50px);
+  -moz-transform: translate(10px, -50px);
+  -ms-transform: translate(10px, -50px);
+  -o-transform: translate(10px, -50px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  border: 7px solid #eee;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+main .pharmacies .container .sec-body .box .avatar img {
+  width: 100%;
+  height: 130px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+main .pharmacies .container .sec-body .box .data .head h3,
+main .pharmacies .container .sec-body .box .data .head span {
+  width: calc(100% - 130px);
+}
+
+main .pharmacies .container .sec-body .box .data .head h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+main .pharmacies .container .sec-body .box .data .head span {
+  font-size: 0.9rem;
+  padding: 10px 0 20px;
+  display: block;
+}
+
+main .pharmacies .container .sec-body .box .data .head p {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #555;
+}
+
+main .pharmacies .container .sec-body .box .data .info {
+  position: relative;
+  padding-top: 40px;
+}
+
+main .pharmacies .container .sec-body .box .data .info::before,
+main .pharmacies .container .sec-body .box .data .info::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: #eee;
+}
+
+main .pharmacies .container .sec-body .box .data .info::before {
+  top: 20px;
+}
+
+main .pharmacies .container .sec-body .box .data .info::after {
+  bottom: -20px;
+}
+
+main .pharmacies .container .sec-body .box .data .info>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+main .pharmacies .container .sec-body .box .data .info>div:last-of-type {
+  margin: 0;
+}
+
+main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+main .pharmacies .container .sec-body .box .data .info>div>span {
+  color: #fff;
+}
+
+main .pharmacies .container .sec-body .box .data .info .field span {
+  color: #555;
+}
+
+main .pharmacies .container .sec-body .box .data .contact {
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
+  padding-top: 40px;
+}
+
+main .pharmacies .container .sec-body .box .data .contact>div a {
+  width: 40px;
+  height: 40px;
+  background-color: #59c1bd;
+}
+
+main .pharmacies .container .sec-body .box .data .contact>div a i {
+  font-size: 1.5rem;
+}
+
+main .pharmacies .container .sec-body .box .data .contact>div a:hover {
+  background-color: #eee;
+}
+
+main .pharmacies .container .sec-body .box .data .contact>div a:hover i {
+  color: #059cb1;
+}
+
+main .pharmacies .container .sec-body .box .data .contact>div a i {
+  color: #fff;
+}
+
+main .blog {
+  padding: 100px 0;
 }
 
 main .blog .container .sec-body article {
@@ -1691,6 +1833,10 @@ main .blog .container .sec-body article .text a h3 {
   font-weight: 600;
 }
 
+main .blog .container .sec-body article .text a:hover {
+  cursor: pointer;
+}
+
 main .blog .container .sec-body article .text a:hover h3 {
   color: #059cb1;
 }
@@ -1711,6 +1857,7 @@ main .blog .container .sec-body article .text .info span {
 
 main .charities {
   padding: 100px 0;
+  background-color: #eee;
 }
 
 main .charities .container .sec-body {
@@ -2031,7 +2178,7 @@ main .contacts .container .sec-body .sec-right form input[type=submit]:hover {
 }
 
 body.dark main .landing {
-  background-color: #222;
+  background-color: #1d1d1d;
 }
 
 body.dark main .landing .container .down-btn a:hover i {
@@ -2051,7 +2198,7 @@ body.dark main .landing .container .left p {
 }
 
 body.dark main .services {
-  background-color: #1d1d1d;
+  background-color: #222;
 }
 
 body.dark main .services .container .sec-body .box:hover {
@@ -2072,7 +2219,7 @@ body.dark main .services .container .sec-body .box a p {
 }
 
 body.dark main .doctors {
-  background-color: #222;
+  background-color: #1d1d1d;
 }
 
 body.dark main .doctors .container .sec-body .box {
@@ -2119,7 +2266,7 @@ body.dark main .doctors .container .sec-body .box .info .contact>div a i {
 }
 
 body.dark main .medicine {
-  background-color: #1d1d1d;
+  background-color: #222;
 }
 
 body.dark main .medicine .container .sec-body .box {
@@ -2152,11 +2299,11 @@ body.dark main .medicine .container .sec-body .box .info p {
 }
 
 body.dark main .hospitals {
-  background-color: #222;
+  background-color: #1d1d1d;
 }
 
 body.dark main .hospitals .container .sec-body {
-  background-color: #1d1d1d;
+  background-color: #222;
 }
 
 body.dark main .hospitals .container .sec-body .text h2 {
@@ -2185,6 +2332,230 @@ body.dark main .hospitals .container .sec-body .text a:hover {
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
 
+body.dark main .pharmacies {
+  background-color: #222;
+}
+
+body.dark main .pharmacies .container .sec-body .box {
+  position: relative;
+  background-color: #fff;
+  padding: 20px 20px 30px;
+  background-color: #1d1d1d;
+}
+
+body.dark main .pharmacies .container .sec-body .box .avatar {
+  transform: translate(10px, -50px);
+  -webkit-transform: translate(10px, -50px);
+  -moz-transform: translate(10px, -50px);
+  -ms-transform: translate(10px, -50px);
+  -o-transform: translate(10px, -50px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  border: 7px solid #eee;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+body.dark main .pharmacies .container .sec-body .box .avatar img {
+  width: 100%;
+  height: 130px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .head h3,
+body.dark main .pharmacies .container .sec-body .box .data .head span {
+  width: calc(100% - 130px);
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .head h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .head span {
+  font-size: 0.9rem;
+  padding: 10px 0 20px;
+  display: block;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .head p {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #555;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info {
+  position: relative;
+  padding-top: 40px;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info::before,
+body.dark main .pharmacies .container .sec-body .box .data .info::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: #eee;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info::before {
+  top: 20px;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info::after {
+  bottom: -20px;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div:last-of-type {
+  margin: 0;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div>span {
+  color: #fff;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info .field span {
+  color: #555;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact {
+  flex-wrap: wrap;
+  gap: 10px;
+  flex-wrap: nowrap;
+  padding-top: 40px;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a {
+  width: 40px;
+  height: 40px;
+  background-color: #59c1bd;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+  font-size: 1.5rem;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover {
+  background-color: #eee;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover i {
+  color: #059cb1;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+  color: #fff;
+}
+
+body.dark main .pharmacies .container .sec-body .box .avatar {
+  border-color: #222;
+  background-color: #222;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .head h3 {
+  color: #efefef;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .head span {
+  color: #efefef;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .head p {
+  color: #a5a5a5;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info::before,
+body.dark main .pharmacies .container .sec-body .box .data .info::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  background-color: #555;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div:last-of-type {
+  margin: 0;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+  width: 45px;
+  height: 45px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div>span {
+  color: #fff;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+  color: #efefef;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .info>div>span {
+  color: #efefef !important;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+  font-size: 1.5rem;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover {
+  background-color: #222;
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover i {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+  color: #efefef;
+}
+
 body.dark main .blog {
   background-color: #1d1d1d;
 }
@@ -2211,6 +2582,10 @@ body.dark main .blog .container .sec-body article .text {
 body.dark main .blog .container .sec-body article .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
+}
+
+body.dark main .blog .container .sec-body article .text a:hover {
+  cursor: pointer;
 }
 
 body.dark main .blog .container .sec-body article .text a:hover h3 {
@@ -2338,7 +2713,7 @@ body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f
 }
 
 body.dark main .contacts .container .sec-body .sec-left .contact-info>div>span {
-  color: #efefef;
+  color: #efefef !important;
 }
 
 body.dark main .contacts .container .sec-body .sec-left .social-icon {

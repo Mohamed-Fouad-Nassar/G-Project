@@ -1,6 +1,6 @@
 [
   {
-    "name": "hospital one name",
+    "name": "pharmacy one name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221524_882.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -13,7 +13,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital two name",
+    "name": "pharmacy two name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221446_131.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -26,7 +26,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital three name",
+    "name": "pharmacy three name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221446_842.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -39,7 +39,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital four name",
+    "name": "pharmacy four name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221528_346.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -52,7 +52,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital five name",
+    "name": "pharmacy five name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221534_192.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -65,7 +65,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital six name",
+    "name": "pharmacy six name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221446_131.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -78,7 +78,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital seven name",
+    "name": "pharmacy seven name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221524_882.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -91,7 +91,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital eight name",
+    "name": "pharmacy eight name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221446_131.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -104,7 +104,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital nine name",
+    "name": "pharmacy nine name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221446_842.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -117,7 +117,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital ten name",
+    "name": "pharmacy ten name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221528_346.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",
@@ -130,7 +130,7 @@
     "whatsapp": "https://wa.me/552196312XXXX"
   },
   {
-    "name": "hospital two one name",
+    "name": "pharmacy two one name",
     "imageUrl": "../Data/un-used-Images/IMG_20221204_221534_192.jpg",
     "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat vel molestias minus vitae numquam eveniet? Minus libero itaque quibusdam tempore eligendi quos, voluptas voluptatum rem ducimus harum facere a vitae!",
     "phone": "+12353245",

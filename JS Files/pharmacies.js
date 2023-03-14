@@ -6,18 +6,18 @@ let seeMoreBtn = document.querySelector(".container .sec-foot input");
 
 // Variables
 let start = 0;
-let startNum = 6;
+let startNum = 3;
 let StopNum = startNum + 3;
 
-// import blog API
-import { blogAPI } from "./APIs.js";
+// import elements
+import { pharmaciesAPI } from "./APIs.js";
 
-// calling blogAPI function
-blogAPI("../Test APIs/blog.json", start, startNum, secBody);
+// calling pharmacies API
+pharmaciesAPI("../Test APIs/pharmacy.json", start, startNum, secBody);
 
 // see More Button
 seeMoreBtn.addEventListener("click", function () {
-  blogAPI("../Test APIs/blog.json", startNum, StopNum, secBody);
+  pharmaciesAPI("../Test APIs/pharmacy.json", startNum, StopNum, secBody);
   startNum += 3;
   StopNum = startNum + 3;
 });

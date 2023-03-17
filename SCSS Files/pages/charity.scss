@@ -1,0 +1,321 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+// additional page styling
+
+// Start Main Styling:-
+main {
+  min-height: calc(100vh - 544px);
+  padding: 0 {
+    top: $up-down-padding;
+    bottom: $main-element-padding * 2;
+  }
+  @media (max-width: 767px) {
+    padding-top: 150px;
+  }
+  .container {
+    background-color: $light-white-color;
+    position: relative;
+    .back-btn {
+      @include back-btn($sec-element-padding, $sec-element-padding, "light");
+    }
+    > h1 {
+      display: none;
+      padding: 15px;
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.5rem;
+      color: $main-color;
+      @media (max-width: 991px) {
+        display: block;
+      }
+    }
+    .content {
+      padding: {
+        left: $sec-element-padding;
+        right: $sec-element-padding;
+        bottom: $main-element-padding;
+      }
+      .upper-sec {
+        @extend %flex-start-center;
+        gap: $main-element-padding;
+        @media (max-width: 991px) {
+          flex-direction: column-reverse;
+          > article {
+            width: 100% !important;
+          }
+        }
+        .description {
+          width: calc(60% - 10px);
+          .article-body {
+            white-space: break-spaces;
+            font: inherit;
+            margin: 0;
+          }
+          h1 {
+            padding: 20px;
+            width: 90%;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            color: $main-color;
+            @media (max-width: 991px) {
+              display: none;
+            }
+          }
+        }
+        .data {
+          background-color: $white-color;
+          padding: 20px {
+            top: 0;
+          }
+          margin-top: 110px;
+          position: relative;
+          width: calc(40% - 10px);
+          > div {
+            h2 {
+              text-align: center;
+              font-size: 1.4rem;
+              margin-bottom: 20px;
+            }
+          }
+          .image {
+            @extend %border-radius-50;
+            @include trans-x(-50%);
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            img {
+              width: 200px;
+              height: 200px;
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+          }
+          .social-icon {
+            margin-top: 30px;
+            display: block !important;
+            padding-top: $up-down-padding;
+            > div {
+              @include social-media-links("light");
+              justify-content: center;
+              > div {
+                a {
+                  width: 40px !important;
+                  height: 40px !important;
+                }
+              }
+            }
+          }
+          .contact-info {
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 1px;
+              left: 0;
+              top: 30px;
+              background-color: $light-white-color;
+            }
+            @include contact-info("light");
+            position: relative;
+            padding-top: 60px;
+            .box {
+              span {
+                color: initial;
+              }
+            }
+          }
+        }
+      }
+      .events {
+        padding-top: 30px;
+        @media (max-width: 991px) {
+          padding-top: 0;
+        }
+        .head {
+          h2 {
+            padding: 20px;
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.5rem;
+            color: $main-color;
+          }
+        }
+        .events-slider {
+          overflow: hidden;
+          .slider-container {
+            padding: 0px 8px;
+            .slides {
+              width: 100%;
+              padding-bottom: 40px;
+              .slide {
+                @extend %user-select-none;
+                background-color: $light-white-color;
+                box-shadow: $main-box-shadow;
+                @media (min-width: 992px) {
+                  width: calc((100% - 30px) / 3);
+                }
+                @media (max-width: 991px) {
+                  width: calc((100% - 15px) / 2);
+                }
+                @media (max-width: 575px) {
+                  width: 100%;
+                }
+                .slide-image {
+                  img {
+                    width: 100%;
+                    height: 250px;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                  }
+                }
+              }
+            }
+          }
+          .swiper-navBtn {
+            height: 40px;
+            width: 40px;
+            color: $white-color;
+            background-color: $main-color;
+            @extend %border-radius-50;
+            &:hover {
+              background-color: $sec-color;
+            }
+            &::before,
+            &::after {
+              font-size: 1rem;
+              bottom: -25px;
+            }
+          }
+          .swiper-pagination-bullet {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// start dark mode styling:-
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      .container {
+        background-color: $sec-dark-bg;
+        .back-btn {
+          @include back-btn($sec-element-padding, $sec-element-padding, "dark");
+        }
+        > h1 {
+          color: $main-dark-color;
+        }
+        .content {
+          .upper-sec {
+            .description {
+              .article-body {
+                color: $sec-text-dark-color;
+              }
+              h1 {
+                color: $main-dark-color;
+              }
+            }
+            .data {
+              background-color: $main-dark-bg;
+              > div {
+                h2 {
+                  color: $white-dark-color;
+                }
+              }
+              .image {
+                img {
+                  filter: brightness(0.9);
+                  -webkit-filter: brightness(0.9);
+                }
+              }
+              .social-icon {
+                > div {
+                  @include social-media-links("dark");
+                  justify-content: center;
+                }
+              }
+              .contact-info {
+                &::before {
+                  background-color: $sec-text-color;
+                }
+                @include contact-info("dark");
+                .box {
+                  span {
+                    color: $sec-text-dark-color !important;
+                  }
+                }
+              }
+            }
+          }
+          .events {
+            .head {
+              h2 {
+                color: $main-dark-color;
+              }
+            }
+            .events-slider {
+              .slider-container {
+                .slides {
+                  .slide {
+                    background-color: $sec-dark-bg;
+                    box-shadow: $dark-box-shadow;
+                    .slide-body {
+                      h3 {
+                        color: $white-dark-color;
+                      }
+                      p {
+                        color: $sec-text-dark-color;
+                      }
+                    }
+                    .slide-foot {
+                      a {
+                        span {
+                          color: $main-dark-color;
+                        }
+                        .f-icon {
+                          color: $main-dark-color;
+                        }
+                        &:hover {
+                          span,
+                          .f-icon {
+                            color: $sec-dark-color;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .swiper-navBtn {
+                color: $white-dark-color;
+                background-color: $main-dark-color;
+                &:hover {
+                  background-color: $sec-dark-color;
+                }
+              }
+              .swiper-pagination-bullet {
+                background-color: $main-dark-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

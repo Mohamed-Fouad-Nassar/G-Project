@@ -1,0 +1,167 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+
+// additional page styling
+// Start Main Styling:-
+main {
+  background-color: $light-white-color;
+  min-height: calc(100vh - 544px);
+  position: relative;
+  padding: 0 {
+    top: $up-down-padding;
+    bottom: $main-element-padding * 2;
+  }
+  @media (max-width: 767px) {
+    padding-top: 150px;
+  }
+  .container {
+    @include grid(425px, 20px);
+    @media (max-width: 500px) {
+      @include grid(250px, 20px);
+    }
+    .box {
+      padding: 20px;
+      background-color: $white-color;
+      .head {
+        padding-bottom: 20px;
+        position: relative;
+        h2 {
+          width: fit-content;
+          font-size: 1.7rem;
+          color: $main-color;
+          position: relative;
+          margin: 0;
+          padding: 0 {
+            bottom: 20px;
+          }
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 3px;
+            background-color: $sec-color;
+          }
+          &::before {
+            bottom: 10px;
+            width: 100%;
+          }
+          &::after {
+            bottom: 0;
+            width: 50%;
+          }
+        }
+        .icon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          .f-icon {
+            color: $main-color;
+            font-size: 2.5rem;
+          }
+        }
+      }
+      .content {
+        // @extend %flex-center-between;
+        @extend %flex-stretch-center;
+        @media (max-width: 500px) {
+          flex-direction: column;
+        }
+        gap: 20px;
+        > div {
+          @extend %flex-center-center;
+          flex-direction: column;
+          padding: 20px;
+          width: calc(50% - 10px);
+          background-color: $light-white-color;
+          @media (max-width: 500px) {
+            width: 100%;
+          }
+          h3 {
+            font-size: 1.4rem;
+          }
+        }
+        .number {
+          span {
+            color: $main-color;
+            font-size: 1.8rem;
+            font-weight: 700;
+          }
+        }
+        .add {
+          a {
+            .f-icon {
+              font-size: 3rem;
+              color: $main-color;
+            }
+            &:hover {
+              .f-icon {
+                color: $sec-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      .container {
+        .box {
+          background-color: $sec-dark-bg;
+          .head {
+            h2 {
+              color: $main-dark-color;
+              &::before,
+              &::after {
+                background-color: $sec-dark-color;
+              }
+            }
+            .icon {
+              .f-icon {
+                color: $main-dark-color;
+              }
+            }
+          }
+          .content {
+            > div {
+              background-color: $main-dark-bg;
+              h3 {
+                color: $sec-text-dark-color;
+              }
+            }
+            .number {
+              span {
+                color: $main-dark-color;
+              }
+            }
+            .add {
+              a {
+                .f-icon {
+                  color: $main-dark-color;
+                }
+                &:hover {
+                  .f-icon {
+                    color: $sec-dark-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

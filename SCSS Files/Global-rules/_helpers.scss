@@ -498,6 +498,12 @@
   justify-content: center;
 }
 
+%flex-stretch-center {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
 %flex-center-start {
   display: flex;
   align-items: center;

@@ -21,9 +21,65 @@ main {
   }
   .content {
     .container {
-      .sec-head {
-      }
       .sec-body {
+        .box{
+          .cards-list{
+            @extend %flex-start-between;
+            @include grid(425px, 20px);
+            @media (max-width: 991px) {
+              @include grid(350px, 20px);
+            }
+            .card{
+              @extend %border-radius-10;
+              margin-bottom: 20px;
+              overflow: hidden;
+              .card-top{
+                background-color: $main-color;
+                .images{
+                  margin: 0 auto;
+                  width: 100px;
+                  height: 100px;
+                  overflow: hidden;
+                  @extend %border-radius-50;
+                  img{
+                    width: 100%;
+                  }
+                }
+              }
+              .card-body{
+                h2{
+                  font-size: 2rem;
+                  color: $main-color;
+                  text-transform: uppercase;
+                  margin: 10px 0;
+                }
+                span{
+                  font-size: 1rem;
+                  font-weight: 700;
+                }
+              }
+              .data{
+                padding: 1rem;
+                .contact-info {
+                  @include contact-info("light");
+                }
+                .social-icon {
+                  display: block !important;
+                  padding-top: 15px;
+                  > div {
+                    @include social-media-links("light");
+                    > div {
+                      a {
+                        width: 45px !important;
+                        height: 45px !important;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       .sec-foot {
         input[type="button"] {
@@ -38,6 +94,50 @@ body {
   &.dark {
     main {
       background-color: $main-dark-bg;
+      .content {
+        .container {
+          .sec-body {
+            .box{
+                .card{
+                  background-color: $sec-dark-bg;
+                  color: $white-dark-color;
+                  .card-top{
+                    background-color: $main-dark-color;
+                  }
+                  .card-body{
+                    h2{
+                      color: $main-dark-color;
+                    }
+                  }
+                  .data{
+                    padding: 1rem;
+                    .contact-info {
+                      @include contact-info("dark");
+                    }
+                    .social-icon {
+                      display: block !important;
+                      padding-top: 15px;
+                      > div {
+                        @include social-media-links("dark");
+                        > div {
+                          a {
+                            width: 45px !important;
+                            height: 45px !important;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .sec-foot {
+            input[type="button"] {
+              @include button-shape($main-color, "light");
+            }
+          }
+      }
     }
   }
 }

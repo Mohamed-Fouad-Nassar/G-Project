@@ -1,0 +1,12 @@
+.img-container {
+  border: 2px solid red;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  
+}
+.img-container .img-to-fit {
+  flex: 1;
+  height: 100%;
+}

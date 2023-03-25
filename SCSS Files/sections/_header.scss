@@ -291,7 +291,8 @@ header {
               padding: 0;
               text-align: center;
               &:first-of-type {
-                span {
+                a {
+                  display: block;
                   font-size: 0.9rem;
                   color: $white-color;
                   background-color: $main-color;
@@ -314,7 +315,8 @@ header {
                   }
                 }
               }
-              span {
+              span,
+              a {
                 width: 100%;
                 display: block;
                 border: 1px solid;
@@ -450,7 +452,7 @@ body {
               ul {
                 li {
                   &:first-of-type {
-                    span {
+                    a {
                       color: $white-dark-color;
                       background-color: $main-dark-color;
                       border-color: $main-dark-color;

@@ -1,0 +1,42 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+
+// additional page styling
+
+// Start Main Styling:-
+main {
+  min-height: calc(100vh - 500px);
+  background-color: $light-white-color;
+  position: relative;
+  padding: $up-down-padding 0 {
+    bottom: $up-down-padding / 2;
+  }
+  @media (max-width: 767px) {
+    padding-top: 150px;
+  }
+  .content {
+    .container {
+    }
+  }
+}
+
+// start dark mode
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      .content {
+        .container {
+        }
+      }
+    }
+  }
+}

@@ -81,7 +81,10 @@ main {
     background-color: $light-white-color;
     .container {
       .sec-body {
-        @extend %grid-200-20;
+        @extend %grid-350-20;
+        @media (max-width: 1199px) {
+          @include grid(300px, 20px);
+        }
         .box {
           padding: $main-element-padding $sec-element-padding;
           position: relative;

@@ -510,6 +510,11 @@
   justify-content: flex-start;
 }
 
+%flex-center- {
+  display: flex;
+  align-items: center;
+}
+
 %flex-start-between {
   display: flex;
   align-items: flex-start;
@@ -545,6 +550,10 @@
 
 %grid-250-20 {
   @include grid(250px, 20px);
+}
+
+%grid-300-20 {
+  @include grid(300px, 20px);
 }
 
 %grid-350-20 {

@@ -20,8 +20,9 @@ a {
   cursor: pointer;
 }
 
-main .content .container .sec-foot input[type=button],
-body.dark main .content .container .sec-foot input[type=button],
+main .content .container .left .edit-btn a,
+main .content .container .right .box .field,
+body.dark main .content .container .left .edit-btn a,
 header .container nav ul li a,
 header .container .account,
 header .container .log-in-acc,
@@ -41,6 +42,18 @@ main .top a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main .content .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -84,13 +97,6 @@ header .container nav {
   justify-content: space-between;
 }
 
-main .content .container .sec-body {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 20px;
-}
-
 .head-shape span::after,
 .head-shape span::before,
 .head-shape-w span::after,
@@ -111,6 +117,7 @@ body.dark footer .f-info .f-social>div a {
   -o-border-radius: 5px !important;
 }
 
+main .content .container .left .image,
 .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
@@ -127,14 +134,6 @@ i {
   -moz-transition: 0s !important;
   -ms-transition: 0s !important;
   -o-transition: 0s !important;
-}
-
-main .content .container .sec-body .box:hover {
-  transform: none !important;
-  -webkit-transform: none !important;
-  -moz-transform: none !important;
-  -ms-transform: none !important;
-  -o-transform: none !important;
 }
 
 header .container .log-in-acc article>.menu {
@@ -1295,8 +1294,9 @@ body.dark footer .f-info .f-social>div a i {
 
 main {
   background-color: #eee;
-  padding: 100px 0;
   position: relative;
+  padding: 100px 0;
+  padding-bottom: 50px;
 }
 
 @media (max-width: 767px) {
@@ -1305,53 +1305,68 @@ main {
   }
 }
 
-main .content .container .sec-body .box {
-  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-  overflow: hidden;
+main .content .container {
+  gap: 20px;
 }
 
-main .content .container .sec-body .box:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
+@media (max-width: 767px) {
+  main .content .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }
 
-main .content .container .sec-body .box .text {
-  padding: 10px;
+main .content .container .left {
+  padding: 20px;
   background-color: #fff;
+  min-width: 300px;
 }
 
-main .content .container .sec-body .box .text a h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
+@media (max-width: 991px) {
+  main .content .container .left {
+    min-width: initial;
+  }
 }
 
-main .content .container .sec-body .box .text a:hover {
-  cursor: pointer;
-}
-
-main .content .container .sec-body .box .text a:hover h3 {
-  color: #059cb1;
-}
-
-main .content .container .sec-body .box .text p {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+main .content .container .left .image {
+  width: 200px;
+  height: 200px;
   overflow: hidden;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
+  margin: 0 auto;
 }
 
-main .content .container .sec-body .box .text .info span {
+@media (max-width: 767px) {
+  main .content .container .left .image {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+main .content .container .left .image img {
+  width: 100%;
+}
+
+main .content .container .left .text {
+  text-align: center;
+}
+
+main .content .container .left .text h2 {
+  padding-top: 20px;
+  font-size: 1.5em;
+}
+
+main .content .container .left .text span {
+  font-size: 1.2rem;
   color: #555;
-  font-size: 0.9rem;
 }
 
-main .content .container .sec-foot input[type=button] {
+main .content .container .left .edit-btn {
+  padding-top: 30px;
+}
+
+main .content .container .left .edit-btn a {
   width: 160px;
   margin: 0 auto;
   outline: none;
@@ -1359,93 +1374,127 @@ main .content .container .sec-foot input[type=button] {
   border: 1px solid #059cb1;
   background-color: #059cb1;
   padding: 10px 20px;
+  gap: 10px;
 }
 
-main .content .container .sec-foot input[type=button]:hover {
+main .content .container .left .edit-btn a:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
+}
+
+main .content .container .left .edit-btn a:hover .f-icon,
+main .content .container .left .edit-btn a:hover span {
+  color: #059cb1;
+}
+
+main .content .container .left .edit-btn a .f-icon,
+main .content .container .left .edit-btn a span {
+  color: #fff;
+}
+
+main .content .container .right {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+main .content .container .right .box {
+  padding-bottom: 20px;
+}
+
+main .content .container .right .box:last-of-type {
+  padding: 0;
+}
+
+main .content .container .right .box label {
+  font-size: 1.05rem;
+  padding-bottom: 10px;
+  color: #212529;
+  font-weight: 500;
+}
+
+main .content .container .right .box .field {
+  gap: 20px;
+  color: #059cb1;
+  font-size: 1.5rem;
+}
+
+main .content .container .right .box .field span {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #eee;
+  color: #212529;
+  display: block;
+  text-align: center;
+}
+
+main .content .container .right .box .field>div {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 body.dark main {
   background-color: #222;
 }
 
-body.dark main .content .container .sec-body .box {
-  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
-  overflow: hidden;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.24);
+body.dark main .content .container .left {
+  background-color: #1d1d1d;
 }
 
-body.dark main .content .container .sec-body .box:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
-}
-
-body.dark main .content .container .sec-body .box .text {
-  padding: 10px;
-  background-color: #fff;
-}
-
-body.dark main .content .container .sec-body .box .text a h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-body.dark main .content .container .sec-body .box .text a:hover {
-  cursor: pointer;
-}
-
-body.dark main .content .container .sec-body .box .text a:hover h3 {
-  color: #059cb1;
-}
-
-body.dark main .content .container .sec-body .box .text p {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin-bottom: 10px;
-  font-size: 0.9rem;
-}
-
-body.dark main .content .container .sec-body .box .text .info span {
-  color: #555;
-  font-size: 0.9rem;
-}
-
-body.dark main .content .container .sec-body .box .text {
-  background-color: #222;
-}
-
-body.dark main .content .container .sec-body .box .text a h3 {
+body.dark main .content .container .left .text h2 {
   color: #efefef;
 }
 
-body.dark main .content .container .sec-body .box .text a:hover h3 {
-  color: rgba(5, 156, 177, 0.8705882353);
-}
-
-body.dark main .content .container .sec-body .box .text p {
+body.dark main .content .container .left .text span {
   color: #a5a5a5;
 }
 
-body.dark main .content .container .sec-foot input[type=button] {
+body.dark main .content .container .left .edit-btn a {
   width: 160px;
   margin: 0 auto;
   outline: none;
   color: #efefef;
-  border: 1px solid #059cb1;
-  background-color: #059cb1;
+  border: 1px solid rgba(5, 156, 177, 0.8705882353);
+  background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
 
-body.dark main .content .container .sec-foot input[type=button]:hover {
-  color: #059cb1;
+body.dark main .content .container .left .edit-btn a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
-  border-color: #059cb1;
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .left .edit-btn a:hover .f-icon,
+body.dark main .content .container .left .edit-btn a:hover span {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .left .edit-btn a .f-icon,
+body.dark main .content .container .left .edit-btn a span {
+  color: #efefef;
+}
+
+body.dark main .content .container .right {
+  background-color: #1d1d1d;
+}
+
+body.dark main .content .container .right .box label {
+  color: #efefef;
+}
+
+body.dark main .content .container .right .box .field {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .right .box .field span {
+  color: #a5a5a5;
+  background-color: #222;
 }

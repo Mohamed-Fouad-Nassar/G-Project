@@ -9,7 +9,7 @@
     <!-- bootstrap css file -->
     <link rel="stylesheet" href="../CSS Files/bootstrap.min.css" />
     <!-- main css file -->
-    <link rel="stylesheet" href="../CSS Files/hospitals.css" />
+    <link rel="stylesheet" href="../CSS Files/view_profile.css" />
     <!-- font open-sans files -->
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,7 +33,7 @@
       type="image/x-icon"
     />
     <!-- page title -->
-    <title>Pharmacies</title>
+    <title>Profile</title>
   </head>
   <body>
     <!-- Start Header -->
@@ -71,8 +71,8 @@
                 <span>hospitals</span>
               </a>
             </li>
-            <li class="link active">
-              <a href="#top">
+            <li class="link">
+              <a href="./pharmacies.html">
                 <i class="f-icon fa-solid fa-house-medical"></i>
                 <span>pharmacies</span>
               </a>
@@ -147,7 +147,7 @@
             <div class="menu">
               <ul>
                 <li id="view-profile">
-                  <a href="./view_profile.html">view profile</a>
+                  <a href="#top">view profile</a>
                 </li>
                 <li id="log-out-btn">
                   <span>log out</span>
@@ -164,222 +164,92 @@
     <main id="main_page">
       <section class="content">
         <div class="container">
-          <div class="sec-head">
-            <h2>pharmacies</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
-              consequatur ullam excepturi dolores repellat, minus assumenda
-              exercitationem.
-            </p>
-            <div class="head-shape">
-              <span></span>
+          <div class="left">
+            <div class="image">
+              <img
+                src="../Data/Images/avatar-image-1.png"
+                alt="profile-image"
+              />
+            </div>
+            <div class="text">
+              <h2>account name</h2>
+              <span>username</span>
+            </div>
+            <div class="edit-btn">
+              <a href="./edit_profile.html">
+                <i class="f-icon fa-solid fa-pen"></i>
+                <span>edit profile</span>
+              </a>
             </div>
           </div>
-          <div class="sec-body">
-            <!-- <article class="box">
-              <div class="avatar">
-                <img
-                  src="../Data/un-used-Images/IMG_20221204_221524_882.jpg"
-                  alt="hospital-image"
-                />
+          <div class="right">
+            <!-- start box -->
+            <article class="box">
+              <label for="field">full name:</label>
+              <div class="field" id="field">
+                <span>first</span>
+                <span>last</span>
               </div>
-              <div class="data">
-                <section class="head">
-                  <h3>pharmacy one name</h3>
-                  <span>test span...</span>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Placeat vel molestias minus vitae numquam eveniet? Minus
-                    libero itaque quibusdam tempore eligendi quos, voluptas
-                    voluptatum rem ducimus harum facere a vitae!
-                  </p>
-                </section>
-                <section class="info">
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-location-dot"></i>
-                    </div>
-                    <span>Sit Molestiae Vitae Nam.</span>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <label for="field">date of birth:</label>
+              <div class="field" id="field">
+                <span>3</span> / <span>10</span> / <span>2000</span>
+              </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <label for="field">e-mail:</label>
+              <div class="field" id="field">
+                <span>leosx.as@mn.ci</span>
+              </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <div class="field">
+                <div class="left-sec">
+                  <label for="field">gender:</label>
+                  <div class="field" id="field">
+                    <span>male</span>
                   </div>
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-phone"></i>
-                    </div>
-                    <span>+12353245</span>
-                  </div>
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-envelope"></i>
-                    </div>
-                    <span class="mail">monsfd@gmail.com</span>
-                  </div>
-                </section>
-                <div class="contact">
-                  <div>
-                    <a href="https://www.facebook.com/">
-                      <i class="f-icon fa-brands fa-facebook-f"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://www.twitter.com/">
-                      <i class="f-icon fa-brands fa-twitter"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://maps.google.com/">
-                      <i class="f-icon fa-solid fa-location-dot"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://wa.me/552196312XXXX">
-                      <i class="f-icon fa-brands fa-whatsapp"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="tel:+18475555555">
-                      <i class="f-icon fa-solid fa-phone"></i>
-                    </a>
+                </div>
+                <div class="right-sec">
+                  <label for="field">age:</label>
+                  <div class="field" id="field">
+                    <span>20</span>
                   </div>
                 </div>
               </div>
             </article>
+            <!-- end box -->
+            <!-- start box -->
             <article class="box">
-              <div class="avatar">
-                <img
-                  src="../Data/un-used-Images/IMG_20221204_221524_882.jpg"
-                  alt="hospital-image"
-                />
-              </div>
-              <div class="data">
-                <section class="head">
-                  <h3>pharmacy one name</h3>
-                  <span>test span...</span>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Placeat vel molestias minus vitae numquam eveniet? Minus
-                    libero itaque quibusdam tempore eligendi quos, voluptas
-                    voluptatum rem ducimus harum facere a vitae!
-                  </p>
-                </section>
-                <section class="info">
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-location-dot"></i>
-                    </div>
-                    <span>Sit Molestiae Vitae Nam.</span>
-                  </div>
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-phone"></i>
-                    </div>
-                    <span>+12353245</span>
-                  </div>
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-envelope"></i>
-                    </div>
-                    <span class="mail">monsfd@gmail.com</span>
-                  </div>
-                </section>
-                <div class="contact">
-                  <div>
-                    <a href="https://www.facebook.com/">
-                      <i class="f-icon fa-brands fa-facebook-f"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://www.twitter.com/">
-                      <i class="f-icon fa-brands fa-twitter"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://maps.google.com/">
-                      <i class="f-icon fa-solid fa-location-dot"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://wa.me/552196312XXXX">
-                      <i class="f-icon fa-brands fa-whatsapp"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="tel:+18475555555">
-                      <i class="f-icon fa-solid fa-phone"></i>
-                    </a>
-                  </div>
-                </div>
+              <label for="field">phone number:</label>
+              <div class="field" id="field">
+                <span>+201034648924</span>
               </div>
             </article>
+            <!-- end box -->
+            <!-- start box -->
             <article class="box">
-              <div class="avatar">
-                <img
-                  src="../Data/un-used-Images/IMG_20221204_221524_882.jpg"
-                  alt="hospital-image"
-                />
+              <label for="field">cancer type:</label>
+              <div class="field" id="field">
+                <span>bladder cancer</span>
               </div>
-              <div class="data">
-                <section class="head">
-                  <h3>pharmacy one name</h3>
-                  <span>test span...</span>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Placeat vel molestias minus vitae numquam eveniet? Minus
-                    libero itaque quibusdam tempore eligendi quos, voluptas
-                    voluptatum rem ducimus harum facere a vitae!
-                  </p>
-                </section>
-                <section class="info">
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-location-dot"></i>
-                    </div>
-                    <span>Sit Molestiae Vitae Nam.</span>
-                  </div>
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-phone"></i>
-                    </div>
-                    <span>+12353245</span>
-                  </div>
-                  <div class="field">
-                    <div class="icon">
-                      <i class="f-icon fa-solid fa-envelope"></i>
-                    </div>
-                    <span class="mail">monsfd@gmail.com</span>
-                  </div>
-                </section>
-                <div class="contact">
-                  <div>
-                    <a href="https://www.facebook.com/">
-                      <i class="f-icon fa-brands fa-facebook-f"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://www.twitter.com/">
-                      <i class="f-icon fa-brands fa-twitter"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://maps.google.com/">
-                      <i class="f-icon fa-solid fa-location-dot"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="https://wa.me/552196312XXXX">
-                      <i class="f-icon fa-brands fa-whatsapp"></i>
-                    </a>
-                  </div>
-                  <div>
-                    <a href="tel:+18475555555">
-                      <i class="f-icon fa-solid fa-phone"></i>
-                    </a>
-                  </div>
-                </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <label for="field">address:</label>
+              <div class="field" id="field">
+                <span>street name - city - country</span>
               </div>
-            </article> -->
-          </div>
-          <div class="sec-foot">
-            <input type="button" id="more" value="see more" />
+            </article>
+            <!-- end box -->
           </div>
         </div>
       </section>
@@ -456,7 +326,7 @@
               <a href="./hospitals.html">hospitals</a>
             </li>
             <li>
-              <a href="#top">pharmacies</a>
+              <a href="./pharmacies.html">pharmacies</a>
             </li>
             <li>
               <a href="./blog.html">our blog</a>
@@ -515,7 +385,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
     <!-- main script -->
-    <script src="../JS Files/pharmacies.js" type="module"></script>
+    <!-- <script src="../JS Files/.js"></script> -->
     <!-- header script -->
     <script src="../JS Files/header.js"></script>
   </body>

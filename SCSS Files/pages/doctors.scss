@@ -22,58 +22,98 @@ main {
   .content {
     .container {
       .sec-body {
-        .box{
-          .cards-list{
-            @extend %flex-start-between;
-            @include grid(425px, 20px);
-            @media (max-width: 991px) {
-              @include grid(350px, 20px);
-            }
-            .card{
-              @extend %border-radius-10;
-              margin-bottom: 20px;
+        @extend %flex-start-between;
+        @include grid(350px, $main-element-padding);
+        .box {
+          @extend %border-radius-10;
+          background-color: $white-color;
+          overflow: hidden;
+          .card-top {
+            @extend %flex-center-;
+            background-color: $main-color;
+            position: relative;
+            height: 170px;
+            .images {
+              @extend %border-radius-50;
+              margin: 0 auto;
+              width: 150px;
+              height: 150px;
               overflow: hidden;
-              .card-top{
-                background-color: $main-color;
-                .images{
-                  margin: 0 auto;
-                  width: 100px;
-                  height: 100px;
-                  overflow: hidden;
-                  @extend %border-radius-50;
-                  img{
-                    width: 100%;
-                  }
+              position: absolute;
+              top: $sec-element-padding;
+              right: $sec-element-padding;
+              img {
+                width: 100%;
+                width: 150px;
+                height: 150px;
+                object-fit: cover;
+              }
+            }
+            .text {
+              width: calc(100% - 170px);
+              padding-left: $sec-element-padding;
+              h2 {
+                font-size: 1.7rem;
+                color: $white-color;
+                margin: 0;
+              }
+              span {
+                color: $light-white-color;
+                font-size: 0.95rem;
+              }
+            }
+          }
+          .card-body {
+            padding: $main-element-padding {
+              bottom: 0;
+            }
+            p {
+              color: $sec-text-color !important;
+            }
+          }
+          .data {
+            padding: $main-element-padding;
+            .contact-info {
+              @include contact-info("light");
+              position: relative;
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                left: 0;
+                background-color: $light-white-color;
+              }
+              &::before {
+                top: -10px;
+              }
+              &::after {
+                bottom: -20px;
+              }
+              h2 {
+                font-size: 1.6rem !important;
+                margin-bottom: $main-element-padding !important;
+              }
+              div {
+                span {
+                  color: $sec-text-color !important;
                 }
               }
-              .card-body{
-                h2{
-                  font-size: 2rem;
-                  color: $main-color;
-                  text-transform: uppercase;
-                  margin: 10px 0;
-                }
-                span{
-                  font-size: 1rem;
-                  font-weight: 700;
-                }
+            }
+            .social-icon {
+              display: block !important;
+              padding-top: 30px;
+              h2 {
+                font-size: 1.6rem;
+                margin-bottom: $main-element-padding;
               }
-              .data{
-                padding: 1rem;
-                .contact-info {
-                  @include contact-info("light");
-                }
-                .social-icon {
-                  display: block !important;
-                  padding-top: 15px;
-                  > div {
-                    @include social-media-links("light");
-                    > div {
-                      a {
-                        width: 45px !important;
-                        height: 45px !important;
-                      }
-                    }
+              > div {
+                @include social-media-links("light");
+                > div {
+                  a {
+                    width: 40px !important;
+                    height: 40px !important;
                   }
                 }
               }
@@ -97,46 +137,61 @@ body {
       .content {
         .container {
           .sec-body {
-            .box{
-                .card{
-                  background-color: $sec-dark-bg;
+            .box {
+              background-color: $sec-dark-bg;
+              .card-top {
+                background-color: $main-dark-color;
+                .text {
+                  h2,
+                  span {
+                    color: $white-dark-color;
+                  }
+                }
+              }
+              .card-body {
+                h2 {
+                  color: $main-dark-color;
+                }
+                span {
                   color: $white-dark-color;
-                  .card-top{
-                    background-color: $main-dark-color;
+                }
+                p {
+                  color: $sec-text-dark-color !important;
+                }
+              }
+              .data {
+                .contact-info {
+                  @include contact-info("dark");
+                  &::before,
+                  &::after {
+                    background-color: $sec-text-color;
                   }
-                  .card-body{
-                    h2{
-                      color: $main-dark-color;
+                  h2 {
+                    color: $white-dark-color;
+                  }
+                  div {
+                    span {
+                      color: $sec-text-dark-color !important;
                     }
                   }
-                  .data{
-                    padding: 1rem;
-                    .contact-info {
-                      @include contact-info("dark");
-                    }
-                    .social-icon {
-                      display: block !important;
-                      padding-top: 15px;
-                      > div {
-                        @include social-media-links("dark");
-                        > div {
-                          a {
-                            width: 45px !important;
-                            height: 45px !important;
-                          }
-                        }
-                      }
-                    }
+                }
+                .social-icon {
+                  h2 {
+                    color: $white-dark-color;
+                  }
+                  > div {
+                    @include social-media-links("dark");
                   }
                 }
               }
             }
           }
-          .sec-foot {
-            input[type="button"] {
-              @include button-shape($main-color, "light");
-            }
+        }
+        .sec-foot {
+          input[type="button"] {
+            @include button-shape($main-dark-color, "dark");
           }
+        }
       }
     }
   }

@@ -13,7 +13,7 @@ ul li {
 }
 
 a {
-  color: #000;
+  color: #212529;
   text-decoration: none;
   cursor: pointer;
 }
@@ -258,22 +258,22 @@ input {
 /* End Animation Styling */
 /* Start Selection Styling:- */
 ::-moz-selection {
-  background: #000;
+  background: #212529;
   color: #059cb1;
 }
 
 ::selection {
-  background: #000;
+  background: #212529;
   color: #059cb1;
 }
 
 .dark ::-moz-selection {
-  background: #000;
+  background: #212529;
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
 .dark ::selection {
-  background: #000;
+  background: #212529;
   color: rgba(5, 156, 177, 0.8705882353);
 }
 

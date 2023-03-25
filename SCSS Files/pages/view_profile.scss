@@ -1,0 +1,173 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+
+// additional page styling
+
+// Start Main Styling:-
+main {
+  background-color: $light-white-color;
+  position: relative;
+  padding: $up-down-padding 0 {
+    bottom: $up-down-padding / 2;
+  }
+  @media (max-width: 767px) {
+    padding-top: 150px;
+  }
+  .content {
+    .container {
+      @extend %flex-stretch-center;
+      gap: $main-element-padding;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      .left {
+        padding: $main-element-padding;
+        background-color: $white-color;
+        min-width: 300px;
+        @media (max-width: 991px) {
+          min-width: initial;
+        }
+        .image {
+          @extend %border-radius-50;
+          width: 200px;
+          height: 200px;
+          overflow: hidden;
+          margin: 0 auto;
+          @media (max-width: 767px) {
+            width: 170px;
+            height: 170px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+        .text {
+          text-align: center;
+          h2 {
+            padding-top: $main-element-padding;
+            font-size: 1.5em;
+          }
+          span {
+            font-size: 1.2rem;
+            color: $sec-text-color;
+          }
+        }
+        .edit-btn {
+          padding-top: 30px;
+          a {
+            @include button-shape($main-color, "light");
+            @extend %flex-center-center;
+            gap: $sec-element-padding;
+            &:hover {
+              .f-icon,
+              span {
+                color: $main-color;
+              }
+            }
+            .f-icon,
+            span {
+              color: $white-color;
+            }
+          }
+        }
+      }
+      .right {
+        flex: 1;
+        padding: $main-element-padding;
+        background-color: $white-color;
+        .box {
+          padding-bottom: $main-element-padding;
+          &:last-of-type {
+            padding: 0;
+          }
+          label {
+            font-size: 1.05rem;
+            padding-bottom: $sec-element-padding;
+            color: $black-color;
+            font-weight: 500;
+          }
+          .field {
+            @extend %flex-center-center;
+            gap: $main-element-padding;
+            color: $main-color;
+            font-size: 1.5rem;
+            span {
+              flex: 1;
+              font-size: 1rem;
+              padding: $sec-element-padding $main-element-padding;
+              background-color: $light-white-color;
+              color: $black-color;
+              display: block;
+              text-align: center;
+            }
+            > div {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// start dark mode
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      .content {
+        .container {
+          .left {
+            background-color: $sec-dark-bg;
+            .text {
+              h2 {
+                color: $white-dark-color;
+              }
+              span {
+                color: $sec-text-dark-color;
+              }
+            }
+            .edit-btn {
+              a {
+                @include button-shape($main-dark-color, "dark");
+                &:hover {
+                  .f-icon,
+                  span {
+                    color: $main-dark-color;
+                  }
+                }
+                .f-icon,
+                span {
+                  color: $white-dark-color;
+                }
+              }
+            }
+          }
+          .right {
+            background-color: $sec-dark-bg;
+            .box {
+              label {
+                color: $white-dark-color;
+              }
+              .field {
+                color: $main-dark-color;
+                span {
+                  color: $sec-text-dark-color;
+                  background-color: $main-dark-bg;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

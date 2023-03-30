@@ -287,24 +287,7 @@ input {
 section {
   .container {
     .sec-head {
-      padding-bottom: $up-down-padding;
-      text-align: center;
-      h2 {
-        font-size: 1.8rem;
-        color: $main-color;
-        text-transform: uppercase;
-        margin: 0 {
-          bottom: $sec-element-padding;
-        }
-      }
-      p {
-        max-width: 750px;
-        margin: 0 auto {
-          bottom: $main-element-padding;
-        }
-        font-size: 0.9rem;
-        color: $sec-text-color;
-      }
+      @include sec-head("light");
     }
     .sec-foot {
       padding-top: $up-down-padding;
@@ -320,12 +303,7 @@ section {
   section {
     .container {
       .sec-head {
-        h2 {
-          color: $main-dark-color;
-        }
-        p {
-          color: $sec-text-dark-color;
-        }
+        @include sec-head("dark");
       }
       .sec-foot {
         a {

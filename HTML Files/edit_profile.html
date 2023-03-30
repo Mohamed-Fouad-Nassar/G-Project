@@ -162,8 +162,182 @@
     <!-- End Header -->
     <!-- Start Main -->
     <main id="main_page">
+      <section class="head">
+        <h1>edit profile</h1>
+      </section>
       <section class="content">
-        <div class="container"></div>
+        <div class="container">
+          <button class="back-btn" id="cancel">
+            <i class="f-icon fa-solid fa-arrow-left"></i>
+            <!-- <i class="fa-solid fa-left-long"></i> -->
+            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+          </button>
+          <form action="">
+            <div class="top-sec">
+              <div class="left">
+                <!-- Start user image upload and preview -->
+                <div class="avatar-upload">
+                  <div class="avatar-edit">
+                    <input
+                      type="file"
+                      id="imageUpload"
+                      accept=".png, .jpg, .jpeg"
+                    />
+                    <label for="imageUpload"></label>
+                  </div>
+                  <div class="avatar-preview">
+                    <div>
+                      <img
+                        id="imagePreview"
+                        src="../Data/Images/avatar-image-1.png"
+                        alt="profile-image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- End user image upload and preview -->
+                <div class="text">
+                  <h2>account name</h2>
+                  <span>username</span>
+                </div>
+              </div>
+              <div class="right">
+                <section class="name">
+                  <label>full name:</label>
+                  <div class="data">
+                    <div class="f-name">
+                      <label for="field">first name:</label>
+                      <div class="field">
+                        <input
+                          class="input"
+                          type="text"
+                          id="field"
+                          name="firstName"
+                          placeholder="First Name"
+                        />
+                        <span></span>
+                        <i class="f-icon fa-solid fa-user"></i>
+                      </div>
+                    </div>
+                    <div class="l-name">
+                      <label for="field">last name:</label>
+                      <div class="field">
+                        <input
+                          class="input"
+                          type="text"
+                          id="field"
+                          name="lastName"
+                          placeholder="Last Name"
+                        />
+                        <span></span>
+                        <i class="f-icon fa-solid fa-user"></i>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="e-mail">
+                  <label for="field">e-mail:</label>
+                  <div class="field">
+                    <input class="input" type="email" id="field" name="email" />
+                    <span></span>
+                    <i class="f-icon fa-regular fa-envelope"></i>
+                  </div>
+                </section>
+                <section class="password">
+                  <label for="field">old password:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="Password"
+                      id="field"
+                      name="oldPassword"
+                    />
+                    <span></span>
+                    <i class="f-icon fa-solid fa-lock"></i>
+                  </div>
+                </section>
+                <section class="password">
+                  <label for="field">new password:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="password"
+                      id="field"
+                      name="newPassword"
+                    />
+                    <span></span>
+                    <i class="f-icon fa-solid fa-lock"></i>
+                  </div>
+                </section>
+                <section class="password">
+                  <label for="field">confirm new password:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="Password"
+                      id="field"
+                      name="confirmNewPassword"
+                    />
+                    <span></span>
+                    <i class="f-icon fa-solid fa-lock"></i>
+                  </div>
+                </section>
+                <section class="phone">
+                  <label for="field">phone number:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="field"
+                      name="phoneNumber"
+                      pattern="[0-9]"
+                    />
+                    <span></span>
+                    <i class="f-icon fa-solid fa-phone"></i>
+                  </div>
+                </section>
+                <section class="gender">
+                  <label for="gender">gender:</label>
+                  <div class="sec-flex" id="gender">
+                    <p>please choose your gender:</p>
+                    <p>your gender:</p>
+                    <div class="choices">
+                      <div class="choice">
+                        <input type="radio" name="gender" id="male" />
+                        <label for="male">
+                          <!-- <i class="fa-solid fa-mars"></i> -->
+                          male
+                        </label>
+                      </div>
+                      <div class="choice">
+                        <input type="radio" name="gender" id="female" />
+                        <label for="female">
+                          <!-- <i class="fa-solid fa-venus"></i> -->
+                          female
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="caner-type">
+                  <label for="cancer">cancer type:</label>
+                  <div class="cancer">
+                    <select name="cancer" id="cancer"></select>
+                  </div>
+                </section>
+                <section class="birth-date">
+                  <div class="sec-flex">
+                    <label>date of birth:</label>
+                    <input type="date" name="birth date" />
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Confirm" />
+            </div>
+          </form>
+        </div>
       </section>
       <!-- Start Top Button -->
       <div class="top" id="up">
@@ -300,5 +474,7 @@
     <!-- <script src="../JS Files/.js"></script> -->
     <!-- header script -->
     <script src="../JS Files/header.js"></script>
+    <script src="../JS Files/register.js"></script>
+    <script src="../JS Files/edit_profile.js"></script>
   </body>
 </html>

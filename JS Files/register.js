@@ -1,5 +1,4 @@
 let cancerTypeInput = document.getElementById("cancer");
-console.log(cancerTypeInput);
 
 const cancerTypes = [
   "I haven't cancer",

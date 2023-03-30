@@ -24,6 +24,7 @@ body.dark .card .left form .buttons input[type=submit],
 body.dark .card .left form .buttons input[type=reset],
 body.dark .card .right .text a,
 .card .left form .field,
+.card .left form .gender .choices,
 .card .left form .check-box input:checked::after,
 .card .left form .buttons input[type=submit],
 .card .left form .buttons input[type=reset],
@@ -53,10 +54,10 @@ main .top a {
   justify-content: space-between;
 }
 
-body.dark .card .left form .gender .choose input::before,
-body.dark .card .left form .gender .choose input::after,
-.card .left form .gender .choose input::before,
-.card .left form .gender .choose input::after {
+body.dark .card .left form .gender .choices .choice input::before,
+body.dark .card .left form .gender .choices .choice input::after,
+.card .left form .gender .choices .choice input::before,
+.card .left form .gender .choices .choice input::after {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -85,10 +86,10 @@ body.dark .card .left form .gender .choose input::after,
   -o-border-radius: 10px !important;
 }
 
-body.dark .card .left form .gender .choose input::before,
-body.dark .card .left form .gender .choose input::after,
-.card .left form .gender .choose input::before,
-.card .left form .gender .choose input::after,
+body.dark .card .left form .gender .choices .choice input::before,
+body.dark .card .left form .gender .choices .choice input::after,
+.card .left form .gender .choices .choice input::before,
+.card .left form .gender .choices .choice input::after,
 .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
@@ -107,7 +108,7 @@ i {
 }
 
 .card .left form .name .data div label,
-.card .left form .gender .choose label {
+.card .left form .gender .choices .choice label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -395,10 +396,10 @@ section .container .sec-head h2 {
 
 section .container .sec-head p {
   max-width: 750px;
-  margin: 0 auto;
-  margin-bottom: 20px;
   font-size: 0.9rem;
   color: #555;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 section .container .sec-foot {
@@ -419,6 +420,27 @@ section .container .sec-foot a:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
+}
+
+.dark section .container .sec-head {
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.dark section .container .sec-head h2 {
+  font-size: 1.8rem;
+  color: #059cb1;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.dark section .container .sec-head p {
+  max-width: 750px;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .dark section .container .sec-head h2 {
@@ -576,8 +598,6 @@ body.dark .card .left .head p {
 }
 
 body.dark .card .left form section label {
-  display: block;
-  margin-bottom: 10px;
   color: #efefef;
 }
 
@@ -618,7 +638,7 @@ body.dark .card .left form .gender p {
   color: #a5a5a5;
 }
 
-body.dark .card .left form .gender .choose input {
+body.dark .card .left form .gender .choices .choice input {
   position: relative;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -626,44 +646,40 @@ body.dark .card .left form .gender .choose input {
   cursor: pointer;
 }
 
-body.dark .card .left form .gender .choose input::before,
-body.dark .card .left form .gender .choose input::after {
+body.dark .card .left form .gender .choices .choice input::before,
+body.dark .card .left form .gender .choices .choice input::after {
   content: "";
   position: absolute;
 }
 
-body.dark .card .left form .gender .choose input::before {
+body.dark .card .left form .gender .choices .choice input::before {
   width: 16px;
   height: 16px;
   background-color: transparent;
   border: 1.5px solid #59c1bd;
 }
 
-body.dark .card .left form .gender .choose input:hover::before {
-  border-color: rgba(5, 156, 177, 0.8705882353);
+body.dark .card .left form .gender .choices .choice input:hover::before {
+  border-color: #059cb1;
 }
 
-body.dark .card .left form .gender .choose input::after {
+body.dark .card .left form .gender .choices .choice input::after {
   width: 0;
   height: 0;
 }
 
-body.dark .card .left form .gender .choose input:checked::before {
-  border-color: rgba(5, 156, 177, 0.8705882353);
+body.dark .card .left form .gender .choices .choice input:checked::before {
+  border-color: #059cb1;
 }
 
-body.dark .card .left form .gender .choose input:checked:after {
+body.dark .card .left form .gender .choices .choice input:checked:after {
   width: 12px;
   height: 12px;
-  background-color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #059cb1;
 }
 
-body.dark .card .left form .gender .choose input::before {
+body.dark .card .left form .gender .choices .choice input::before {
   border-color: rgba(89, 193, 189, 0.8705882353);
-}
-
-body.dark .card .left form .gender .choose label {
-  color: #efefef;
 }
 
 body.dark .card .left form .caner-type .cancer select {
@@ -746,12 +762,12 @@ body.dark .card .left form .check-box input:checked::after {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #fff;
-  left: calc(50% + 1px);
-  top: calc(50% + 1px);
-  font-size: 1rem;
+  left: 50%;
+  top: 50%;
+  font-size: 0.85rem;
   border: 2px solid rgba(5, 156, 177, 0.8705882353);
   width: 100%;
-  height: 101%;
+  height: 100%;
   transform: translate(-50%, -50%) rotate(0);
   -webkit-transform: translate(-50%, -50%) rotate(0);
   -moz-transform: translate(-50%, -50%) rotate(0);
@@ -918,6 +934,11 @@ body.dark .card .right .text a:hover {
   margin-bottom: 20px;
 }
 
+.card .left form section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .card .left form section .sec-flex {
   position: relative;
 }
@@ -1067,7 +1088,11 @@ body.dark .card .right .text a:hover {
   }
 }
 
-.card .left form .gender .choose input {
+.card .left form .gender .choices {
+  gap: 30px;
+}
+
+.card .left form .gender .choices .choice input {
   margin-bottom: 5px;
   position: relative;
   -webkit-appearance: none;
@@ -1076,39 +1101,39 @@ body.dark .card .right .text a:hover {
   cursor: pointer;
 }
 
-.card .left form .gender .choose input::before,
-.card .left form .gender .choose input::after {
+.card .left form .gender .choices .choice input::before,
+.card .left form .gender .choices .choice input::after {
   content: "";
   position: absolute;
 }
 
-.card .left form .gender .choose input::before {
+.card .left form .gender .choices .choice input::before {
   width: 16px;
   height: 16px;
   background-color: transparent;
   border: 1.5px solid #59c1bd;
 }
 
-.card .left form .gender .choose input:hover::before {
+.card .left form .gender .choices .choice input:hover::before {
   border-color: #059cb1;
 }
 
-.card .left form .gender .choose input::after {
+.card .left form .gender .choices .choice input::after {
   width: 0;
   height: 0;
 }
 
-.card .left form .gender .choose input:checked::before {
+.card .left form .gender .choices .choice input:checked::before {
   border-color: #059cb1;
 }
 
-.card .left form .gender .choose input:checked:after {
+.card .left form .gender .choices .choice input:checked:after {
   width: 12px;
   height: 12px;
   background-color: #059cb1;
 }
 
-.card .left form .gender .choose label {
+.card .left form .gender .choices .choice label {
   cursor: pointer;
   display: inline-block;
   margin-left: 10px;
@@ -1220,12 +1245,12 @@ body.dark .card .right .text a:hover {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #fff;
-  left: calc(50% + 1px);
-  top: calc(50% + 1px);
-  font-size: 1rem;
+  left: 50%;
+  top: 50%;
+  font-size: 0.85rem;
   border: 2px solid #059cb1;
   width: 100%;
-  height: 101%;
+  height: 100%;
   transform: translate(-50%, -50%) rotate(0);
   -webkit-transform: translate(-50%, -50%) rotate(0);
   -moz-transform: translate(-50%, -50%) rotate(0);

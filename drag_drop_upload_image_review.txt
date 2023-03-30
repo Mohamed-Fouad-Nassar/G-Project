@@ -1,0 +1,140 @@
+HTML:-
+-------------------------
+
+<body>
+    <div class="drag-area">
+        <header>Drag & Drop to Upload Image</header>
+        <span>OR</span>
+        <button>Browse Image</button>
+        <input type="file" hidden>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+
+--------------------------------------------------------------
+CSS:-
+-------------------------
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #3b49df;
+}
+.drag-area{
+  border: 2px dashed #000000;
+  height: 500px;
+  width: 500px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active{
+  border: 2px solid #fff;
+}
+.drag-area .icon{
+  font-size: 100px;
+  color: #fff;
+}
+.drag-area header{
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+.drag-area span{
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.drag-area button{
+  padding: 10px 25px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+--------------------------------------------------------------
+JS:-
+-------------------------
+
+//Get DOM Elements
+const dropArea = document.querySelector(".drag-area");
+const dragText = document.querySelector("header");
+const button = document.querySelector("button");
+const input = document.querySelector("input");
+let file; 
+
+button.onclick = () => input.click();//on click open file selector
+
+input.onchange = () => {
+  file = this.files[0];
+  dropArea.classList.add("active");
+  showImage(); 
+};
+
+//on drag over
+dropArea.ondragover = (event) => {
+  event.preventDefault();
+  dropArea.classList.add("active");
+  dragText.textContent = "Release to Upload File";
+};
+
+//on drag leave
+dropArea.ondragleave = () => {
+  dropArea.classList.remove("active");
+  dragText.textContent = "Drag & Drop to Upload File";
+};
+
+//on drop
+dropArea.ondrop = (event) => {
+  event.preventDefault();
+  file = event.dataTransfer.files[0];
+  showImage();
+};
+
+
+//change the image to droped imagege
+showImage = () => {
+  let fileType = file.type;
+  let validFiletypes = ["image/jpeg", "image/jpg", "image/png"];
+  
+  if(validFiletypes.includes(fileType)){
+    let fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    fileReader.onload = ()=>{
+        let fileURL = fileReader.result;
+        let image = `<img src="${fileURL}" alt="image">`;
+        dropArea.innerHTML = image;
+        }
+    }
+  else{
+    alert("This is not an Image File!");
+    dropArea.classList.remove("active");
+    dragText.textContent = "Drag & Drop to Upload File";
+  }
+}
+
+--------------------------------------------------------------

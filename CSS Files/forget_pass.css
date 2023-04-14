@@ -423,6 +423,16 @@ section .container .sec-foot a:hover {
 
 /* End Section Header And Footer Styling:- */
 /* Start Top Button Styling:- */
+main {
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 150px !important;
+  }
+}
+
 main .top {
   display: none;
   position: fixed;
@@ -519,7 +529,7 @@ body.dark::after {
 
 body.dark .card {
   background-color: #1d1d1d;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
 body.dark .card .head h2 {

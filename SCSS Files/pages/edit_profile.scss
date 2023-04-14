@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 
 // additional page styling
 
@@ -148,6 +148,11 @@ body {
   }
 }
 
+.Mag-Image {
+  width: 600px;
+  height: 600px;
+}
+
 // Start Main Styling:-
 main {
   background-color: $light-white-color;
@@ -155,7 +160,7 @@ main {
   padding: $up-down-padding 0;
   @media (max-width: 767px) {
     padding: {
-      top: 150px;
+      // top: 150px;
       left: $sec-element-padding;
       right: $sec-element-padding;
     }
@@ -431,10 +436,17 @@ main {
                 position: relative;
                 border: 6px solid $white-color;
                 box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-                > div img {
+                > div {
                   @extend %border-radius-50;
                   width: 100%;
                   height: 100%;
+                  display: flex;
+                  justify-content: center;
+                  overflow: hidden;
+                  img {
+                    flex: 1;
+                    height: 100%;
+                  }
                 }
               }
             }

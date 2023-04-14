@@ -67,16 +67,22 @@ theme.onclick = function () {
     body.classList.add("dark");
     html.classList.add("dark");
     window.localStorage.setItem("theme", "dark");
+    // lightIcon.style.display = "none";
+    // darkIcon.style.display = "block";
   } else {
     body.classList.remove("dark");
     html.classList.remove("dark");
     window.localStorage.setItem("theme", "light");
+    // darkIcon.style.display = "none";
+    // lightIcon.style.display = "block";
   }
 };
 
 if (window.localStorage.getItem("theme") === "dark") {
   body.classList.add("dark");
   html.classList.add("dark");
+  // lightIcon.style.display = "none";
+  // darkIcon.style.display = "block";
 }
 
 // change nav color and position on scroll

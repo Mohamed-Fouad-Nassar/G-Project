@@ -174,11 +174,14 @@ header {
             top: $sec-element-padding;
             bottom: $sec-element-padding;
           }
-          background-color: $light-white-color;
-          top: 62px;
+          background-color: $white-color;
+          top: 70px;
           left: 50%;
           box-shadow: $list-light-box-shadow;
-          @media (max-width: 575px) {
+          @media (max-width: 768px) {
+            top: 62px !important;
+          }
+          @media (max-width: 1240px) {
             @include trans-x(0);
             right: 0;
             left: initial;
@@ -196,12 +199,10 @@ header {
               width: 0;
               height: 0;
               border: 12px solid;
-              border-color: transparent transparent $light-white-color
-                transparent;
+              border-color: transparent transparent $white-color transparent;
               @include trans-x(-50%);
-              @media (max-width: 575px) {
+              @media (max-width: 1240px) {
                 @include trans-x(0);
-                right: 15px;
                 left: initial;
               }
             }
@@ -255,15 +256,38 @@ header {
             font-weight: 600;
           }
         }
+        .menu {
+          padding: 10px;
+          ul {
+            li {
+              &:hover {
+                background-color: $light-input-background;
+                color: $main-color;
+              }
+            }
+          }
+        }
       }
       .theme {
         .h-btn {
           @extend %flex-center-center;
+          @extend %border-radius-50;
+          background-color: $white-color;
+          width: 35px;
+          height: 35px;
           &:hover {
+            background-color: $dark-white-color;
             cursor: pointer;
           }
           .f-icon {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
+            color: $black-color;
+            &.light {
+              display: block;
+            }
+            &.dark {
+              display: none;
+            }
           }
         }
       }
@@ -283,48 +307,58 @@ header {
           }
         }
         .menu {
-          top: 75px;
-          min-width: 120px;
+          padding: 10px;
+          min-width: 150px;
           ul {
+            gap: 5px;
+            padding: 0;
+            &::after {
+              @media (max-width: 1240px) {
+                right: 0;
+              }
+            }
             li {
-              width: calc(100% - 15px);
+              width: 100%;
               padding: 0;
-              text-align: center;
-              &:first-of-type {
-                a {
-                  display: block;
-                  font-size: 0.9rem;
-                  color: $white-color;
-                  background-color: $main-color;
-                  border-color: $main-color;
-                  &:hover {
-                    background-color: transparent;
-                    color: $main-color;
-                  }
-                }
-              }
-              &:last-of-type {
-                span {
-                  font-size: 0.85rem;
-                  color: $white-color;
-                  background-color: $light-danger-color;
-                  border-color: $light-danger-color;
-                  &:hover {
-                    background-color: transparent;
-                    color: $light-danger-color;
-                  }
-                }
-              }
               span,
               a {
+                @extend %flex-center-;
+                gap: 10px;
                 width: 100%;
-                display: block;
-                border: 1px solid;
                 padding: 5px {
                   left: $sec-element-padding;
                   right: $sec-element-padding;
                 }
                 text-transform: capitalize;
+              }
+              a {
+                font-size: 0.9rem;
+                &:hover {
+                  background-color: $light-input-background;
+                  color: $main-color;
+                  .f-icon {
+                    color: $main-color;
+                  }
+                }
+                .f-icon {
+                  color: $black-color;
+                }
+              }
+              &:last-of-type {
+                span {
+                  font-size: 0.85rem;
+                  color: $light-danger-color;
+                  &:hover {
+                    background-color: $dark-danger-color;
+                    color: $white-color;
+                    .f-icon {
+                      color: $white-color;
+                    }
+                  }
+                  .f-icon {
+                    color: $light-danger-color;
+                  }
+                }
               }
             }
           }
@@ -439,11 +473,31 @@ body {
                 color: $white-dark-color;
               }
             }
+            .menu {
+              ul {
+                li {
+                  &:hover {
+                    background-color: $sec-dark-bg;
+                    color: $main-dark-color;
+                  }
+                }
+              }
+            }
           }
           .theme {
             .h-btn {
+              background-color: $main-dark-bg;
+              &:hover {
+                background-color: $nav-active-bg;
+              }
               .f-icon {
-                color: $white-dark-color;
+                color: $white-color;
+                &.light {
+                  display: none;
+                }
+                &.dark {
+                  display: block;
+                }
               }
             }
           }
@@ -451,24 +505,30 @@ body {
             .menu {
               ul {
                 li {
-                  &:first-of-type {
-                    a {
-                      color: $white-dark-color;
-                      background-color: $main-dark-color;
-                      border-color: $main-dark-color;
-                      &:hover {
-                        background-color: transparent;
+                  a {
+                    color: $white-dark-color;
+                    &:hover {
+                      background-color: $sec-dark-bg;
+                      color: $main-dark-color;
+                      .f-icon {
                         color: $main-dark-color;
                       }
+                    }
+                    .f-icon {
+                      color: $white-dark-color;
                     }
                   }
                   &:last-of-type {
                     span {
-                      color: $white-dark-color;
-                      background-color: $dark-danger-color;
-                      border-color: $dark-danger-color;
+                      color: $dark-danger-color;
                       &:hover {
-                        background-color: transparent;
+                        background-color: $dark-danger-color;
+                        color: $white-dark-color;
+                        .f-icon {
+                          color: $white-dark-color;
+                        }
+                      }
+                      .f-icon {
                         color: $dark-danger-color;
                       }
                     }

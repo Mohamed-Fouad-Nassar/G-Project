@@ -439,6 +439,128 @@
   }
 }
 
+@mixin table-head($theme) {
+  @extend %flex-center-center;
+  gap: 3px;
+  > span {
+    display: block;
+    flex: 1;
+    padding: 10px 15px;
+    background-color: $sec-color;
+    color: $white-color;
+    font: {
+      size: 1.1rem;
+      weight: 600;
+    }
+    &:first-of-type {
+      flex: 0;
+      min-width: 60px;
+    }
+    &:nth-of-type(2) {
+      flex: 2;
+    }
+    &:last-of-type {
+      flex: 0;
+      min-width: 90px;
+    }
+  }
+  @if ($theme == "dark") {
+    > span {
+      background-color: $sec-dark-color;
+    }
+  }
+}
+
+@mixin table-body-item($theme) {
+  padding-top: 2px;
+  @include table-head("light");
+  > span {
+    background-color: $light-white-color;
+    color: $black-color;
+    font: {
+      size: 1rem !important;
+      weight: 500 !important;
+    }
+    a {
+      display: inline-block;
+      padding: 4px 10px;
+      text-align: center;
+      border: 1px solid $main-color;
+      background-color: $main-color;
+      color: $white-color;
+      @media (max-width: 1199px) {
+        display: block;
+      }
+      &:hover {
+        background-color: transparent;
+        color: $main-color;
+      }
+    }
+    &:nth-last-of-type(2) {
+      padding: 5px 15px;
+    }
+    &:last-of-type {
+      @extend %flex-center-between;
+      padding: 7px 10px;
+      button {
+        @extend %border-radius-5;
+        @extend %ni-flex-center-center;
+        border: none;
+        outline: none;
+        color: $white-color;
+        width: 30px;
+        height: 30px;
+        &:first-of-type {
+          background-color: $main-color;
+          &:hover {
+            background-color: $sec-color;
+          }
+        }
+        &:last-of-type {
+          background-color: $error-input-color;
+          &:hover {
+            background-color: $light-danger-color;
+          }
+        }
+      }
+    }
+  }
+  @if ($theme == "dark") {
+    @include table-head("dark");
+    > span {
+      font-weight: 400 !important;
+      background-color: $main-dark-bg;
+      color: $sec-text-dark-color;
+      a {
+        border-color: $main-dark-color;
+        background-color: $main-dark-color;
+        color: $white-dark-color;
+        &:hover {
+          background-color: transparent;
+          color: $main-dark-color;
+        }
+      }
+      &:last-of-type {
+        button {
+          color: $white-dark-color;
+          &:first-of-type {
+            background-color: $main-dark-color;
+            &:hover {
+              background-color: $sec-dark-color;
+            }
+          }
+          &:last-of-type {
+            background-color: $light-danger-color;
+            &:hover {
+              background-color: $dark-danger-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @mixin max-lines($num) {
   display: -webkit-box;
   -webkit-line-clamp: $num;
@@ -598,6 +720,12 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
+}
+
+%flex-stretch-start {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
 %flex-center-start {

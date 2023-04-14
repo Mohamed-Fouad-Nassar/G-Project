@@ -317,6 +317,10 @@ section {
 
 /* Start Top Button Styling:- */
 main {
+  padding-top: 100px;
+  @media (max-width: 767px) {
+    padding-top: 150px !important;
+  }
   .top {
     display: none;
     position: fixed;

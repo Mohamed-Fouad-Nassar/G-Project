@@ -1,0 +1,248 @@
+main .content .container .sec-body form div input[type=submit],
+body.dark main .content .container .sec-body form div input[type=submit] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main {
+  padding: 100px 0;
+  position: relative;
+}
+
+main .content .container .sec-body form {
+  width: 100%;
+}
+
+main .content .container .sec-body form div {
+  width: 100%;
+  position: relative;
+}
+
+main .content .container .sec-body form div:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+main .content .container .sec-body form div input,
+main .content .container .sec-body form div textarea {
+  padding: 10px 15px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #59c1bd;
+  background-color: #f9f9f9;
+}
+
+main .content .container .sec-body form div input:focus,
+main .content .container .sec-body form div textarea:focus {
+  border-color: #059cb1;
+}
+
+main .content .container .sec-body form div input:focus::-webkit-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-moz-placeholder,
+main .content .container .sec-body form div textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus:-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-webkit-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-moz-placeholder,
+main .content .container .sec-body form div textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus:-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::placeholder,
+main .content .container .sec-body form div textarea:focus::placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div textarea {
+  min-height: 300px;
+  height: 600px;
+  resize: vertical;
+}
+
+main .content .container .sec-body form div input[type=file] {
+  cursor: pointer;
+}
+
+main .content .container .sec-body form div input[type=file]::-webkit-file-upload-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+main .content .container .sec-body form div input[type=file]::file-selector-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+main .content .container .sec-body form div input[type=file]::-ms-browse {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+main .content .container .sec-body form div input[type=file]::-webkit-file-upload-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+main .content .container .sec-body form div input[type=file]::file-selector-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+}
+
+main .content .container .sec-body form div span {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-transform: lowercase;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  color: #fb0505;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  main .content .container .sec-body form div span {
+    width: calc(100% - 5px);
+    right: initial;
+    top: -12px;
+    left: 5px;
+  }
+}
+
+main .content .container .sec-body form div.success::after,
+main .content .container .sec-body form div.error::after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+main .content .container .sec-body form div.success::after {
+  content: "\f058";
+  color: #1ad922;
+}
+
+main .content .container .sec-body form div.success>input,
+main .content .container .sec-body form div.success>textarea {
+  border-color: #1ad922;
+}
+
+main .content .container .sec-body form div.error::after {
+  content: "\f057";
+  color: #fb0505;
+}
+
+main .content .container .sec-body form div.error>input,
+main .content .container .sec-body form div.error>textarea {
+  border-bottom-color: #fb0505;
+}
+
+main .content .container .sec-body form div input[type=submit] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+
+main .content .container .sec-body form div input[type=submit]:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}
+
+.content .box pre {
+  white-space: break-spaces;
+}
+
+body.dark main {
+  background-color: #222;
+}
+
+body.dark main .content .container .sec-body form div input,
+body.dark main .content .container .sec-body form div textarea {
+  color: #ccc;
+  background-color: #1d1d1d;
+  border-bottom-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form div input:focus,
+body.dark main .content .container .sec-body form div textarea:focus {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form div input[type=submit] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #efefef;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+
+body.dark main .content .container .sec-body form div input[type=submit]:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}

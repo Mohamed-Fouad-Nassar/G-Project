@@ -1,5 +1,5 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
@@ -35,8 +35,6 @@ body {
   min-height: 100vh;
   padding: $main-element-padding 0;
   @extend %flex-center-center;
-  // background-color: $light-white-color;
-  // background-color: #ebfcff;
   header {
     display: none;
   }

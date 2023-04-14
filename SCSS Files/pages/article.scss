@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 
 // additional page styling
 // Start Main Styling:-
@@ -15,13 +15,13 @@ main {
   background-color: $light-white-color;
   min-height: calc(100vh - 544px);
   padding: 0 {
-    top: $up-down-padding;
+    // top: $up-down-padding;
     bottom: $main-element-padding * 2;
   }
   position: relative;
-  @media (max-width: 767px) {
-    padding-top: 150px;
-  }
+  // @media (max-width: 767px) {
+  //   padding-top: 150px;
+  // }
   .container {
     @extend %flex-center-center;
     gap: $main-element-padding;

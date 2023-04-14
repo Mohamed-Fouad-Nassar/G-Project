@@ -1,111 +1,240 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 
 // additional page styling
-// Start Main Styling:-
+
 main {
-  background-color: $light-white-color;
-  min-height: calc(100vh - 544px);
-  position: relative;
-  padding: 0 {
-    top: $up-down-padding;
-    bottom: $main-element-padding * 2;
-  }
+  @extend %flex-stretch-start;
+  padding: $up-down-padding $main-element-padding $main-element-padding * 2;
+  height: 100vh;
+  gap: $main-element-padding;
   @media (max-width: 767px) {
-    padding-top: 150px;
+    padding: 150px $sec-element-padding 30px;
+    gap: 15px;
   }
-  .container {
-    @include grid(425px, 20px);
-    @media (max-width: 500px) {
-      @include grid(250px, 20px);
+  aside {
+    @extend %border-radius-10;
+    width: 230px;
+    padding: $main-element-padding;
+    background-color: $white-color;
+    box-shadow: $dash-main-box-shadow;
+    position: relative;
+    @media (max-width: 991px) {
+      width: 200px;
     }
-    .box {
-      padding: 20px;
-      background-color: $white-color;
-      .head {
-        padding-bottom: 20px;
-        position: relative;
-        h2 {
-          width: fit-content;
-          font-size: 1.7rem;
-          color: $main-color;
-          position: relative;
-          margin: 0;
-          padding: 0 {
-            bottom: 20px;
-          }
-          &::before,
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            height: 3px;
-            background-color: $sec-color;
-          }
-          &::before {
-            bottom: 10px;
-            width: 100%;
-          }
-          &::after {
-            bottom: 0;
-            width: 50%;
-          }
+    @media (max-width: 767px) {
+      width: 60px;
+      padding: 15px $sec-element-padding;
+    }
+    @media (max-width: 575px) {
+      padding: {
+        left: 5px;
+        right: 5px;
+      }
+    }
+    .head {
+      width: fit-content;
+      margin: 0 auto;
+      a {
+        display: block;
+        color: $main-color;
+        padding: {
+          left: $sec-element-padding;
+          right: $sec-element-padding;
         }
-        .icon {
+        font: {
+          weight: 700;
+          size: 1.2rem;
+        }
+        &:hover {
+          color: $sec-color;
+        }
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+    .shape {
+      margin-top: $sec-element-padding;
+      position: relative;
+      span {
+        &::before,
+        &::after {
+          content: "";
           position: absolute;
-          top: 0;
+          height: 2px;
+          top: 50%;
+          width: calc(50% - 10px);
+          background-color: $main-color;
+          @extend %translate-y-50;
+        }
+        &::before {
+          left: 0;
+        }
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-color: $main-color;
+        margin: 0 auto;
+        @extend %border-radius-50;
+        &::after {
           right: 0;
-          .f-icon {
-            color: $main-color;
-            font-size: 2.5rem;
+        }
+      }
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+    .links {
+      padding-top: $main-element-padding;
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        @extend %reset;
+        @media (max-width: 767px) {
+          align-items: center;
+        }
+        li {
+          @extend %reset;
+          padding-top: 5px;
+          a {
+            display: block;
+            width: 100%;
+            color: $black-color;
+            padding: $sec-element-padding 15px;
+            @extend %border-radius-5;
+            &:hover {
+              color: $main-color;
+              background-color: $light-input-background;
+              span {
+                color: $main-color;
+              }
+            }
+            &.active {
+              color: $main-color;
+              background-color: $light-input-background;
+              span {
+                color: $main-color;
+              }
+            }
+            span {
+              color: $black-color;
+              @media (max-width: 767px) {
+                display: none;
+              }
+            }
+            i {
+              margin-right: $sec-element-padding;
+              @media (max-width: 767px) {
+                margin-right: 0;
+              }
+            }
           }
         }
       }
-      .content {
-        // @extend %flex-center-between;
-        @extend %flex-stretch-center;
-        @media (max-width: 500px) {
-          flex-direction: column;
+    }
+  }
+  .content {
+    @extend %border-radius-10;
+    padding: $main-element-padding;
+    background-color: $white-color;
+    box-shadow: $dash-main-box-shadow;
+    position: relative;
+    flex: 1;
+    overflow-y: auto;
+    .sec-head {
+      h2 {
+        margin-bottom: 40px;
+        position: relative;
+        color: $main-color;
+        font: {
+          size: 1.6rem;
+          weight: 600;
         }
-        gap: 20px;
-        > div {
-          @extend %flex-center-center;
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          height: 3px;
+          background-color: $sec-color;
+        }
+        &::before {
+          width: 95px;
+          bottom: -8px;
+        }
+        &::after {
+          width: 50px;
+          bottom: -15px;
+        }
+      }
+    }
+    .sec-body {
+      .info {
+        @extend %flex-stretch-start;
+        max-width: 750px;
+        margin: 0 auto;
+        gap: $main-element-padding;
+        @media (max-width: 575px) {
           flex-direction: column;
-          padding: 20px;
-          width: calc(50% - 10px);
-          background-color: $light-white-color;
-          @media (max-width: 500px) {
+          gap: $sec-element-padding;
+        }
+        > div {
+          width: 50%;
+          @media (max-width: 575px) {
             width: 100%;
           }
+          padding: $main-element-padding;
+          background-color: $light-white-color;
+          text-align: center;
           h3 {
-            font-size: 1.4rem;
+            margin-bottom: $sec-element-padding;
+            font: {
+              size: 1.2rem;
+              weight: 600;
+            }
           }
-        }
-        .number {
           span {
             color: $main-color;
-            font-size: 1.8rem;
-            font-weight: 700;
+            font: {
+              size: 1.4rem;
+              weight: 700;
+            }
+          }
+          .f-icon {
+            font-size: 2.6rem;
+            color: $main-color;
+            cursor: pointer;
+            &:hover {
+              color: $sec-color;
+            }
           }
         }
-        .add {
-          a {
-            .f-icon {
-              font-size: 3rem;
-              color: $main-color;
-            }
-            &:hover {
-              .f-icon {
-                color: $sec-color;
-              }
+      }
+      .control {
+        padding-top: 30px;
+        overflow-x: auto;
+        .table {
+          min-width: 950px;
+          padding-bottom: 5px;
+          white-space: nowrap;
+          width: 100%;
+          .tab-head {
+            @include table-head("light");
+          }
+          .tab-body {
+            padding-top: 2px;
+            .item {
+              @include table-body-item("light");
             }
           }
         }
@@ -118,44 +247,93 @@ body {
   &.dark {
     main {
       background-color: $main-dark-bg;
-      .container {
-        .box {
-          background-color: $sec-dark-bg;
-          .head {
-            h2 {
-              color: $main-dark-color;
-              &::before,
-              &::after {
-                background-color: $sec-dark-color;
-              }
+      aside {
+        background-color: $sec-dark-bg;
+        box-shadow: $dark-box-shadow;
+        .head {
+          a {
+            color: $main-dark-color;
+            &:hover {
+              color: $sec-dark-color;
             }
-            .icon {
-              .f-icon {
-                color: $main-dark-color;
+          }
+        }
+        .shape {
+          span {
+            &::before,
+            &::after {
+              background-color: $main-dark-color;
+            }
+            background-color: $main-dark-color;
+          }
+        }
+        .links {
+          ul {
+            li {
+              a {
+                &:hover {
+                  color: $main-dark-color;
+                  background-color: $nav-active-bg;
+                  span,
+                  .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+                &.active {
+                  color: $main-dark-color;
+                  background-color: $nav-active-bg;
+                  span,
+                  .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+                span,
+                .f-icon {
+                  color: $white-dark-color;
+                }
               }
             }
           }
-          .content {
+        }
+      }
+      .content {
+        background-color: $sec-dark-bg;
+        box-shadow: $dark-box-shadow;
+        .sec-head {
+          h2 {
+            color: $main-dark-color;
+            &::before,
+            &::after {
+              background-color: $sec-dark-color;
+            }
+          }
+        }
+        .sec-body {
+          .info {
             > div {
               background-color: $main-dark-bg;
               h3 {
-                color: $sec-text-dark-color;
+                color: $white-dark-color;
               }
-            }
-            .number {
               span {
                 color: $main-dark-color;
               }
-            }
-            .add {
-              a {
-                .f-icon {
-                  color: $main-dark-color;
-                }
+              .f-icon {
+                color: $main-dark-color;
                 &:hover {
-                  .f-icon {
-                    color: $sec-dark-color;
-                  }
+                  color: $sec-dark-color;
+                }
+              }
+            }
+          }
+          .control {
+            .table {
+              .tab-head {
+                @include table-head("dark");
+              }
+              .tab-body {
+                .item {
+                  @include table-body-item("dark");
                 }
               }
             }

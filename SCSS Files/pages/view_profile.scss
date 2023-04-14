@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 
 // additional page styling
 
@@ -18,9 +18,9 @@ main {
   padding: $up-down-padding 0 {
     bottom: $up-down-padding / 2;
   }
-  @media (max-width: 767px) {
-    padding-top: 150px;
-  }
+  // @media (max-width: 767px) {
+  //   padding-top: 150px;
+  // }
   .content {
     .container {
       @extend %flex-stretch-center;

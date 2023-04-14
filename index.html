@@ -94,14 +94,12 @@
                 <span>charities</span>
               </a>
             </li>
-            <li class="link">
+            <!-- <li class="link">
               <a href="#contacts">
-                <!-- <i class="f-icon fa-solid fa-phone"></i> -->
-                <!-- <i class="f-icon fa-solid fa-headset"></i> -->
                 <i class="f-icon fa-solid fa-comments"></i>
                 <span>contacts</span>
               </a>
-            </li>
+            </li> -->
           </ul>
         </nav>
         <!-- Start Not Logging In View -->
@@ -138,9 +136,15 @@
           </article>
           <article class="theme">
             <div class="h-btn">
-              <i class="f-icon fa-solid fa-circle-half-stroke"></i>
-              <!-- <i class="f-icon fa-solid fa-sun"></i> -->
-              <!-- <i class="f-icon fa-solid fa-moon"></i> -->
+              <!-- <i class="f-icon fa-solid fa-circle-half-stroke"></i> -->
+              <!-- <i class="f-icon light fa-solid fa-sun"></i> -->
+              <!-- <i class="f-icon dark fa-solid fa-moon"></i> -->
+              <ion-icon
+                class="f-icon light"
+                name="sunny"
+                size="large"
+              ></ion-icon>
+              <ion-icon class="f-icon dark" name="moon" size="large"></ion-icon>
             </div>
             <div class="menu"></div>
           </article>
@@ -151,10 +155,22 @@
             <div class="menu">
               <ul>
                 <li id="view-profile">
-                  <a href="./HTML Files/view_profile.html">view profile</a>
+                  <a href="./HTML Files/view_profile.html">
+                    <i class="f-icon fa-solid fa-user"></i>
+                    view profile
+                  </a>
+                </li>
+                <li>
+                  <a href="./HTML Files/dashboard-pages/dashboard.html">
+                    <i class="f-icon fa-solid fa-chart-column"></i>
+                    dashboard
+                  </a>
                 </li>
                 <li id="log-out-btn">
-                  <span>log out</span>
+                  <span>
+                    <i class="f-icon fa-solid fa-arrow-right-from-bracket"></i>
+                    log out
+                  </span>
                 </li>
               </ul>
             </div>

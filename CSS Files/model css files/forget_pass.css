@@ -1,0 +1,334 @@
+body,
+body.dark .card .body form .btns input[type=submit],
+body.dark .card .body form .btns input[type=button],
+.card .body form section .field,
+.card .body form .btns,
+.card .body form .btns input[type=submit],
+.card .body form .btns input[type=button] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .body form section .field::after {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.card {
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
+}
+
+.card .body form section .field::after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+body {
+  background-image: url(../../Data/un-used-Images/11852427_4858794.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: #ebfcff;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 156, 177, 0.37);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.12);
+  z-index: -1;
+}
+
+body header {
+  display: none;
+}
+
+body.dark {
+  background-color: #222;
+}
+
+body.dark::before {
+  background-color: rgba(5, 156, 177, 0.35);
+}
+
+body.dark::after {
+  background-color: rgba(0, 0, 0, 0.72);
+}
+
+body.dark .card {
+  background-color: #1d1d1d;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .card .head h2 {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark .card .head p {
+  color: #a5a5a5;
+}
+
+body.dark .card .body form section label {
+  color: #efefef;
+}
+
+body.dark .card .body form section .field {
+  background-color: #222;
+}
+
+body.dark .card .body form section .field input[type=text] {
+  background-color: transparent;
+  color: #efefef;
+}
+
+body.dark .card .body form section .field input[type=text]:focus~span {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark .card .body form section .field input[type=text]:focus~.f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark .card .body form section .field span {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark .card .body form section .field .f-icon {
+  color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark .card .body form .btns input[type=submit] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #efefef;
+  border: 1px solid rgba(5, 156, 177, 0.8705882353);
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  padding: 10px 20px;
+  margin: initial;
+}
+
+body.dark .card .body form .btns input[type=submit]:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: transparent;
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark .card .body form .btns input[type=button] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #efefef;
+  border: 1px solid rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(89, 193, 189, 0.8705882353);
+  padding: 10px 20px;
+  margin: initial;
+}
+
+body.dark .card .body form .btns input[type=button]:hover {
+  color: rgba(89, 193, 189, 0.8705882353);
+  background-color: transparent;
+  border-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark .card .body form .btns input[type=button]:hover {
+  background-color: transparent;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 20px;
+  max-width: 850px;
+  margin: auto;
+  background-color: #fff;
+  box-shadow: 3px 4px 22px -5px #8b8b8b;
+}
+
+@media (max-width: 767px) {
+  .card {
+    max-width: 400px;
+  }
+}
+
+.card .head {
+  padding: 0;
+  padding-bottom: 50px;
+  max-width: 85%;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .card .head {
+    max-width: 100%;
+  }
+}
+
+.card .head h2 {
+  color: #059cb1;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.card .head p {
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 767px) {
+  .card .head p {
+    font-size: 0.95rem;
+  }
+}
+
+.card .body form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card .body form section {
+  min-width: 70%;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .card .body form section {
+    min-width: 100%;
+  }
+}
+
+.card .body form section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card .body form section .field {
+  flex-direction: row-reverse;
+  position: relative;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f9f9f9;
+}
+
+.card .body form section .field input[type=text] {
+  flex: 1;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.card .body form section .field input[type=text]:focus~span {
+  background-color: #059cb1;
+}
+
+.card .body form section .field input[type=text]:focus~.f-icon {
+  color: #059cb1;
+}
+
+.card .body form section .field span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #59c1bd;
+  height: 2px;
+  width: 100%;
+}
+
+.card .body form section .field .f-icon {
+  color: #59c1bd;
+}
+
+.card .body form .btns {
+  gap: 20px;
+}
+
+@media (max-width: 400px) {
+  .card .body form .btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.card .body form .btns input[type=submit] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: initial;
+}
+
+.card .body form .btns input[type=submit]:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}
+
+@media (max-width: 400px) {
+  .card .body form .btns input[type=submit] {
+    width: 100%;
+  }
+}
+
+.card .body form .btns input[type=button] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #59c1bd;
+  background-color: #59c1bd;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: initial;
+}
+
+.card .body form .btns input[type=button]:hover {
+  color: #59c1bd;
+  background-color: transparent;
+  border-color: #59c1bd;
+}
+
+@media (max-width: 400px) {
+  .card .body form .btns input[type=button] {
+    width: 100%;
+  }
+}
+
+.card .body form .btns input[type=button]:hover {
+  background-color: transparent;
+}

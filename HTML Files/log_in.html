@@ -37,92 +37,8 @@
     <!-- Start Header -->
     <header id="navbar_top">
       <div class="container">
-        <div class="logo">
-          <a href="#top">
-            <h1 id="logoText">hope</h1>
-            <!-- <img src="./Data/Images/logo.png" alt="logo-image" /> -->
-          </a>
-        </div>
-        <nav id="nav">
-          <ul id="links">
-            <li class="link">
-              <a href="#top">
-                <i class="f-icon fa-solid fa-house"></i>
-                <span>home</span>
-              </a>
-            </li>
-            <li class="link">
-              <a href="./doctors.html">
-                <i class="f-icon fa-solid fa-user-doctor"></i>
-                <span>doctors</span>
-              </a>
-            </li>
-            <li class="link">
-              <a href="#medicine">
-                <i class="f-icon fa-solid fa-pills"></i>
-                <span>medicines</span>
-              </a>
-            </li>
-            <li class="link">
-              <a href="#hospitals">
-                <i class="f-icon fa-solid fa-hospital"></i>
-                <span>hospitals</span>
-              </a>
-            </li>
-            <li class="link">
-              <a href="#blog">
-                <i class="f-icon fa-solid fa-book-open-reader"></i>
-                <span>blog</span>
-              </a>
-            </li>
-            <li class="link">
-              <a href="#charities">
-                <i class="f-icon fa-solid fa-hand-holding-heart"></i>
-                <span>charities</span>
-              </a>
-            </li>
-            <li class="link">
-              <a href="#contacts">
-                <!-- <i class="f-icon fa-solid fa-phone"></i> -->
-                <!-- <i class="f-icon fa-solid fa-headset"></i> -->
-                <i class="f-icon fa-solid fa-comments"></i>
-                <span>contacts</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <!-- Start Not Logging In View -->
-        <!-- <div class="account">
-          <a class="log-in" href="./log_in.html">log in</a>
-          <a class="regist" href="./register.html">register</a>
-        </div> -->
-        <!-- End Not Logging In View -->
         <!-- Start Logging In View -->
         <div class="log-in-acc">
-          <article class="lang">
-            <div class="h-btn">
-              <div>
-                <img src="./Data/Images/usa.png" alt="lang-flag-image" />
-              </div>
-              <span>en</span>
-            </div>
-            <div class="menu">
-              <ul>
-                <li img-src="./Data/Images/usa.png" lang-text="en">
-                  <div>
-                    <img src="./Data/Images/usa.png" alt="lang-flag-image" />
-                  </div>
-                  <span>en</span>
-                </li>
-                <li img-src="./Data/Images/eg.png" lang-text="ar">
-                  <div>
-                    <img src="./Data/Images/eg.png" alt="lang-flag-image" />
-                  </div>
-                  <span>ar</span>
-                </li>
-              </ul>
-            </div>
-          </article>
           <article class="theme">
             <div class="h-btn">
               <i class="f-icon fa-solid fa-circle-half-stroke"></i>
@@ -130,21 +46,6 @@
               <!-- <i class="f-icon fa-solid fa-moon"></i> -->
             </div>
             <div class="menu"></div>
-          </article>
-          <article class="acc">
-            <div class="h-btn">
-              <img src="./Data/Images/avatar-image-1.png" alt="account-image" />
-            </div>
-            <div class="menu">
-              <ul>
-                <li id="view-profile">
-                  <a href="./view_profile.html">view profile</a>
-                </li>
-                <li id="log-out-btn">
-                  <span>log out</span>
-                </li>
-              </ul>
-            </div>
           </article>
         </div>
         <!-- End Logging In View -->
@@ -169,28 +70,30 @@
             </div>
             <form action="">
               <section>
-                <label for="field">username or phone number:</label>
+                <label for="field">your e-mail</label>
                 <div class="field">
                   <input
                     class="input"
                     type="text"
-                    id="field"
-                    name="userName/phoneNumber"
+                    id="mail-field"
+                    name="e-mail"
                   />
                   <span></span>
+                  <span class="error">error message here</span>
                   <i class="f-icon fa-solid fa-user"></i>
                 </div>
               </section>
               <section>
-                <label for="field">password:</label>
+                <label for="field">password</label>
                 <div class="field">
                   <input
                     class="input"
                     type="password"
-                    id="field"
+                    id="pass-field"
                     name="Password"
                   />
                   <span></span>
+                  <span class="error">error message here</span>
                   <i class="f-icon fa-solid fa-lock"></i>
                 </div>
               </section>
@@ -248,6 +151,6 @@
     <!-- main script file -->
     <script src="../JS Files/test.js"></script>
     <!-- header script -->
-    <!-- <script src="./JS Files/header.js"></script> -->
+    <script src="../JS Files/log_in.js"></script>
   </body>
 </html>

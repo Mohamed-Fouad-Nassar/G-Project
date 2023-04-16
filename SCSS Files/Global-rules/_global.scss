@@ -60,6 +60,10 @@ a {
   cursor: pointer;
 }
 
+input[type="email"] {
+  text-transform: initial !important;
+}
+
 input {
   caret-color: $main-color;
 }
@@ -371,3 +375,33 @@ main {
 }
 
 /* End Top Button Styling */
+
+/* Start Error message and Success sign Styling:- */
+
+body.dark {
+  .error-message {
+    @include error-sign("dark");
+    border-bottom-color: #ff3c3cde !important;
+    span:first-of-type {
+      background-color: #ff3c3cde !important;
+    }
+  }
+}
+
+.error-message {
+  @include error-sign("light");
+  border-bottom-color: #fb0505 !important;
+  span:first-of-type {
+    background-color: #fb0505 !important;
+  }
+}
+
+.success-message {
+  @extend %success-sign;
+  border-bottom-color: #1ad922 !important;
+  span:first-of-type {
+    background-color: #1ad922 !important;
+  }
+}
+
+/* End Error message and Success sign Styling */

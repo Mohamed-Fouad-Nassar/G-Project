@@ -42,15 +42,6 @@ body.dark .card .left form .gender .choices .choice input::after,
   -o-transform: translate(-50%, -50%);
 }
 
-.card .left form section .sec-flex::after,
-.card .left form .field::after {
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
 .card {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
@@ -76,15 +67,6 @@ body.dark .card .left form .gender .choices .choice input::after,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.card .left form section .sec-flex::after,
-.card .left form .field::after {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  right: 0;
-  top: 50%;
 }
 
 body {
@@ -204,6 +186,10 @@ body.dark .card .left form .field span {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
 
+body.dark .card .left form .field span.error {
+  color: rgba(255, 60, 60, 0.8705882353);
+}
+
 body.dark .card .left form .gender p {
   color: #a5a5a5;
 }
@@ -269,18 +255,6 @@ body.dark .card .left form .birth-date input[type=date] {
 
 body.dark .card .left form .birth-date input[type=date]:focus {
   border-color: rgba(5, 156, 177, 0.8705882353);
-}
-
-body.dark .card .left form .check-box label {
-  margin-bottom: 0;
-}
-
-body.dark .card .left form .check-box label a {
-  color: rgba(89, 193, 189, 0.8705882353);
-}
-
-body.dark .card .left form .check-box label a:hover {
-  color: rgba(5, 156, 177, 0.8705882353);
 }
 
 body.dark .card .left form .check-box input {
@@ -351,6 +325,22 @@ body.dark .card .left form .check-box input::before {
 
 body.dark .card .left form .check-box input:checked::after {
   color: #efefef;
+}
+
+body.dark .card .left form .check-box label {
+  margin-bottom: 0;
+}
+
+body.dark .card .left form .check-box label a {
+  color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark .card .left form .check-box label a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark .card .left form .check-box span {
+  color: rgba(255, 60, 60, 0.8705882353);
 }
 
 body.dark .card .left form .buttons input[type=submit] {
@@ -427,8 +417,12 @@ body.dark .card .right .text a:hover {
   background-color: #323234;
 }
 
+main {
+  padding-top: 0 !important;
+}
+
 .card {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   display: flex;
   overflow: hidden;
@@ -439,7 +433,8 @@ body.dark .card .right .text a:hover {
 
 @media (max-width: 767px) {
   .card {
-    max-width: 400px;
+    min-width: 360px;
+    max-width: 420px;
   }
 }
 
@@ -501,12 +496,12 @@ body.dark .card .right .text a:hover {
 }
 
 .card .left form section {
-  margin-bottom: 20px;
+  margin-bottom: 27px;
 }
 
 .card .left form section label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .card .left form section .sec-flex {
@@ -530,7 +525,7 @@ body.dark .card .right .text a:hover {
 @media (max-width: 991px) {
   .card .left form .name .data {
     flex-direction: column;
-    gap: 20px;
+    gap: 27px;
   }
 }
 
@@ -596,6 +591,10 @@ body.dark .card .right .text a:hover {
   }
 }
 
+.card .left form .e-mail .field input {
+  text-transform: initial;
+}
+
 .card .left form .field {
   flex-direction: row-reverse;
   position: relative;
@@ -616,7 +615,7 @@ body.dark .card .right .text a:hover {
   background-color: transparent;
 }
 
-.card .left form .field input:focus~span {
+.card .left form .field input:focus~span:first-of-type {
   background-color: #059cb1;
 }
 
@@ -635,6 +634,15 @@ body.dark .card .right .text a:hover {
   background-color: #59c1bd;
   height: 2px;
   width: 100%;
+}
+
+.card .left form .field span.error {
+  background-color: transparent !important;
+  font-size: 0.9rem;
+  color: #fb0505;
+  height: inherit;
+  bottom: -22px;
+  display: none;
 }
 
 .card .left form .gender p {
@@ -749,21 +757,9 @@ body.dark .card .right .text a:hover {
 }
 
 .card .left form .check-box {
+  position: relative;
   gap: 7px;
-}
-
-.card .left form .check-box label {
-  font-size: 0.9rem;
-  margin-top: 2px;
-  cursor: pointer;
-}
-
-.card .left form .check-box label a {
-  color: #59c1bd;
-}
-
-.card .left form .check-box label a:hover {
-  color: #059cb1;
+  margin-bottom: 40px;
 }
 
 .card .left form .check-box input {
@@ -826,6 +822,34 @@ body.dark .card .right .text a:hover {
   -moz-transform: translate(-50%, -50%) rotate(0);
   -ms-transform: translate(-50%, -50%) rotate(0);
   -o-transform: translate(-50%, -50%) rotate(0);
+}
+
+.card .left form .check-box label {
+  font-size: 0.9rem;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.card .left form .check-box label a {
+  color: #59c1bd;
+}
+
+.card .left form .check-box label a:hover {
+  color: #059cb1;
+}
+
+.card .left form .check-box span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.card .left form .check-box span.error {
+  background-color: transparent;
+  font-size: 0.9rem;
+  color: #fb0505;
+  bottom: -22px;
+  display: none;
 }
 
 .card .left form .buttons {

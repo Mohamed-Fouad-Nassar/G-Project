@@ -228,9 +228,6 @@ main {
               .sec-flex {
                 @extend %flex-center-between;
                 position: relative;
-                &::after {
-                  @extend %error-sign;
-                }
               }
               &:last-of-type {
                 padding-bottom: $main-element-padding;
@@ -282,9 +279,6 @@ main {
                 right: 5px;
               }
               background-color: $light-input-background;
-              &::after {
-                @extend %error-sign;
-              }
               input {
                 flex: 1;
                 padding: $sec-element-padding {

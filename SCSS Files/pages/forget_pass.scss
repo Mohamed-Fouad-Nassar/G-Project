@@ -164,9 +164,6 @@ body {
             right: 5px;
           }
           background-color: $light-input-background;
-          &::after {
-            @extend %error-sign;
-          }
           input[type="text"] {
             flex: 1;
             padding: 10px {

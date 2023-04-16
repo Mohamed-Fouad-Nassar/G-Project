@@ -65,15 +65,6 @@ main .content .container form .top-sec .right .gender .choices .choice input::af
   -o-transform: translate(-50%, -50%);
 }
 
-main .content .container form .top-sec .right section .sec-flex::after,
-main .content .container form .top-sec .right .field::after {
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::before,
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::after,
 main .content .container form .top-sec .right .gender .choices .choice input::before,
@@ -94,15 +85,6 @@ main .content .container form .top-sec .right .gender .choices .choice label {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-main .content .container form .top-sec .right section .sec-flex::after,
-main .content .container form .top-sec .right .field::after {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  right: 0;
-  top: 50%;
 }
 
 body.dark main {

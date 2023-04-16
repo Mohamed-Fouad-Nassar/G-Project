@@ -692,6 +692,22 @@
   }
 }
 
+@mixin error-sign($theme) {
+  &::after {
+    @extend %translate-y-50;
+    content: "\f057";
+    color: #fb0505;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @if ($theme == "dark") {
+      color: #fd5151;
+    }
+  }
+}
+
 // placeholders:-
 
 %transition {
@@ -833,15 +849,15 @@
 
 // Styles:-
 
-%error-sign {
-  @extend %translate-y-50;
-  // content: "\f058";
-  // color: #1ad922;
-  // content: "\f057";
-  // color: #fb0505;
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  right: 0;
-  top: 50%;
+%success-sign {
+  &::after {
+    @extend %translate-y-50;
+    content: "\f058";
+    color: #1ad922;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
 }

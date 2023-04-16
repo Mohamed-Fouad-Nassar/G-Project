@@ -10,28 +10,12 @@ body.dark .card .body form .btns input[type=button],
   justify-content: center;
 }
 
-.card .body form section .field::after {
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
 .card {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
   -ms-border-radius: 10px !important;
   -o-border-radius: 10px !important;
-}
-
-.card .body form section .field::after {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  right: 0;
-  top: 50%;
 }
 
 body {

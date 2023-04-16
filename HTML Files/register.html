@@ -177,11 +177,12 @@
                       <input
                         class="input"
                         type="text"
-                        id="field"
+                        id="f-name"
                         name="firstName"
                         placeholder="First Name"
                       />
                       <span></span>
+                      <span class="error">error message here</span>
                       <i class="f-icon fa-solid fa-user"></i>
                     </div>
                   </div>
@@ -191,11 +192,12 @@
                       <input
                         class="input"
                         type="text"
-                        id="field"
+                        id="l-name"
                         name="lastName"
                         placeholder="Last Name"
                       />
                       <span></span>
+                      <span class="error">error message here</span>
                       <i class="f-icon fa-solid fa-user"></i>
                     </div>
                   </div>
@@ -204,8 +206,14 @@
               <section class="e-mail">
                 <label for="field">e-mail:</label>
                 <div class="field">
-                  <input class="input" type="email" id="field" name="email" />
+                  <input
+                    class="input"
+                    type="text"
+                    id="mail-field"
+                    name="email"
+                  />
                   <span></span>
+                  <span class="error">error message here</span>
                   <i class="f-icon fa-regular fa-envelope"></i>
                 </div>
               </section>
@@ -215,10 +223,11 @@
                   <input
                     class="input"
                     type="password"
-                    id="field"
+                    id="pass-field"
                     name="password"
                   />
                   <span></span>
+                  <span class="error">error message here</span>
                   <i class="f-icon fa-solid fa-lock"></i>
                 </div>
               </section>
@@ -228,14 +237,15 @@
                   <input
                     class="input"
                     type="Password"
-                    id="field"
+                    id="confirm-pass-field"
                     name="confirmPassword"
                   />
                   <span></span>
+                  <span class="error">error message here</span>
                   <i class="f-icon fa-solid fa-lock"></i>
                 </div>
               </section>
-              <section class="phone">
+              <!-- <section class="phone">
                 <label for="field">phone number:</label>
                 <div class="field">
                   <input
@@ -246,9 +256,10 @@
                     pattern="[0-9]"
                   />
                   <span></span>
+                  <span class="error">error message here</span>
                   <i class="f-icon fa-solid fa-phone"></i>
                 </div>
-              </section>
+              </section> -->
               <section class="gender">
                 <label for="gender">gender:</label>
                 <div class="sec-flex" id="gender">
@@ -256,7 +267,7 @@
                   <p>your gender:</p>
                   <div class="choices">
                     <div class="choice">
-                      <input type="radio" name="gender" id="male" />
+                      <input type="radio" name="gender" id="male" checked />
                       <label for="male">
                         <!-- <i class="fa-solid fa-mars"></i> -->
                         male
@@ -272,18 +283,18 @@
                   </div>
                 </div>
               </section>
-              <section class="caner-type">
+              <!-- <section class="caner-type"> 
                 <label for="cancer">cancer type:</label>
                 <div class="cancer">
                   <select name="cancer" id="cancer"></select>
                 </div>
-              </section>
-              <section class="birth-date">
+              </section>-->
+              <!-- <section class="birth-date">
                 <div class="sec-flex">
                   <label>date of birth:</label>
                   <input type="date" name="birth date" />
                 </div>
-              </section>
+              </section> -->
               <section class="check-box">
                 <input type="checkbox" name="agree" id="terms" />
                 <label for="terms"
@@ -292,6 +303,7 @@
                   and
                   <a href="#">our privacy policy</a>
                 </label>
+                <span class="error">error message here</span>
               </section>
               <div class="buttons">
                 <input type="submit" value="Confirm" />

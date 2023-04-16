@@ -20,14 +20,6 @@ body.dark .card .left form input[type=submit],
   justify-content: space-between;
 }
 
-.card .left form section .field::after {
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-}
-
 .card {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
@@ -42,14 +34,6 @@ body.dark .card .left form input[type=submit],
   -moz-border-radius: 50% !important;
   -ms-border-radius: 50% !important;
   -o-border-radius: 50% !important;
-}
-
-.card .left form section .field::after {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  position: absolute;
-  right: 0;
-  top: 50%;
 }
 
 body {
@@ -160,6 +144,10 @@ body.dark .card .left form section .field .f-icon {
 
 body.dark .card .left form section .field span {
   background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark .card .left form section .field span.error {
+  color: rgba(255, 60, 60, 0.8705882353);
 }
 
 body.dark .card .left form section .left-sec input {
@@ -301,8 +289,12 @@ body.dark .card .right .text {
   color: #efefef;
 }
 
+main {
+  padding-top: 0 !important;
+}
+
 .card {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   display: flex;
   overflow: hidden;
@@ -313,7 +305,8 @@ body.dark .card .right .text {
 
 @media (max-width: 767px) {
   .card {
-    max-width: 400px;
+    min-width: 360px;
+    max-width: 420px;
   }
 }
 
@@ -368,12 +361,12 @@ body.dark .card .right .text {
 }
 
 .card .left form section {
-  padding-bottom: 20px;
+  margin-bottom: 27px;
 }
 
 .card .left form section label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .card .left form section .field {
@@ -396,7 +389,7 @@ body.dark .card .right .text {
   background-color: transparent;
 }
 
-.card .left form section .field input:focus~span {
+.card .left form section .field input:focus~span:first-of-type {
   background-color: #059cb1;
 }
 
@@ -415,6 +408,19 @@ body.dark .card .right .text {
   background-color: #59c1bd;
   height: 2px;
   width: 100%;
+}
+
+.card .left form section .field span.error {
+  background-color: transparent !important;
+  font-size: 0.9rem;
+  color: #fb0505;
+  height: inherit;
+  bottom: -22px;
+  display: none;
+}
+
+.card .left form section:first-of-type .field input {
+  text-transform: initial;
 }
 
 .card .left form section .left-sec {

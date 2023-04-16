@@ -90,6 +90,9 @@ body {
               }
               span {
                 background-color: $sec-dark-color;
+                &.error {
+                  color: #ff3c3cde;
+                }
               }
             }
             .left-sec {
@@ -157,9 +160,13 @@ body {
   }
 }
 
+main {
+  padding-top: 0 !important;
+}
+
 .card {
   @extend %border-radius-10;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   display: flex;
   overflow: hidden;
@@ -167,7 +174,8 @@ body {
   background-color: $white-color;
   box-shadow: $light-form-shadow;
   @media (max-width: 767px) {
-    max-width: 400px;
+    min-width: 360px;
+    max-width: 420px;
   }
   .left {
     width: 50%;
@@ -198,13 +206,13 @@ body {
     }
     form {
       section {
-        padding-bottom: $main-element-padding;
+        margin-bottom: 27px;
         &:last-of-type {
           @extend %flex-center-between;
         }
         label {
           display: block;
-          margin-bottom: $sec-element-padding;
+          margin-bottom: $sec-element-padding / 2;
         }
         .field {
           @extend %flex-center-center;
@@ -216,9 +224,6 @@ body {
             right: 5px;
           }
           background-color: $light-input-background;
-          &::after {
-            @extend %error-sign;
-          }
           input {
             flex: 1;
             padding: 10px {
@@ -229,7 +234,7 @@ body {
             outline: none;
             background-color: transparent;
             &:focus {
-              ~ span {
+              ~ span:first-of-type {
                 background-color: $main-color;
               }
               ~ .f-icon {
@@ -247,6 +252,21 @@ body {
             background-color: $sec-color;
             height: 2px;
             width: 100%;
+            &.error {
+              background-color: transparent !important;
+              font-size: 0.9rem;
+              color: $error-input-color;
+              height: inherit;
+              bottom: -22px;
+              display: none;
+            }
+          }
+        }
+        &:first-of-type {
+          .field {
+            input {
+              text-transform: initial;
+            }
           }
         }
         .left-sec {

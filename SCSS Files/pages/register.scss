@@ -98,6 +98,9 @@ body {
             }
             span {
               background-color: $sec-dark-color;
+              &.error {
+                color: #ff3c3cde;
+              }
             }
           }
           .gender {
@@ -134,6 +137,9 @@ body {
             }
           }
           .check-box {
+            input {
+              @include check-box-shape($main-dark-color, dark);
+            }
             label {
               margin-bottom: 0;
               a {
@@ -143,8 +149,8 @@ body {
                 }
               }
             }
-            input {
-              @include check-box-shape($main-dark-color, dark);
+            span {
+              color: #ff3c3cde;
             }
           }
           .buttons {
@@ -188,9 +194,13 @@ body {
   }
 }
 
+main {
+  padding-top: 0 !important;
+}
+
 .card {
   @extend %border-radius-10;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   display: flex;
   overflow: hidden;
@@ -198,7 +208,8 @@ body {
   background-color: $white-color;
   box-shadow: $light-form-shadow;
   @media (max-width: 767px) {
-    max-width: 400px;
+    min-width: 360px;
+    max-width: 420px;
   }
   .left {
     width: 50%;
@@ -233,17 +244,14 @@ body {
     }
     form {
       section {
-        margin-bottom: $main-element-padding;
+        margin-bottom: 27px;
         label {
           display: block;
-          margin-bottom: $sec-element-padding;
+          margin-bottom: $sec-element-padding / 2;
         }
         .sec-flex {
           @extend %flex-center-between;
           position: relative;
-          &::after {
-            @extend %error-sign;
-          }
         }
       }
       .name {
@@ -258,7 +266,7 @@ body {
           gap: 10px;
           @media (max-width: 991px) {
             flex-direction: column;
-            gap: $main-element-padding;
+            gap: 27px;
           }
           div {
             width: 100%;
@@ -285,6 +293,13 @@ body {
           }
         }
       }
+      .e-mail {
+        .field {
+          input {
+            text-transform: initial;
+          }
+        }
+      }
       .field {
         @extend %flex-center-center;
         flex-direction: row-reverse;
@@ -295,9 +310,6 @@ body {
           right: 5px;
         }
         background-color: $light-input-background;
-        &::after {
-          @extend %error-sign;
-        }
         input {
           flex: 1;
           padding: $sec-element-padding {
@@ -308,7 +320,7 @@ body {
           outline: none;
           background-color: transparent;
           &:focus {
-            ~ span {
+            ~ span:first-of-type {
               background-color: $main-color;
             }
             ~ .f-icon {
@@ -326,6 +338,14 @@ body {
           background-color: $sec-color;
           height: 2px;
           width: 100%;
+          &.error {
+            background-color: transparent !important;
+            font-size: 0.9rem;
+            color: $error-input-color;
+            height: inherit;
+            bottom: -22px;
+            display: none;
+          }
         }
       }
       .gender {
@@ -403,7 +423,12 @@ body {
       }
       .check-box {
         @extend %flex-center-start;
+        position: relative;
         gap: 7px;
+        margin-bottom: $main-element-padding * 2;
+        input {
+          @include check-box-shape($main-color, light);
+        }
         label {
           font-size: 0.9rem;
           margin-top: 2px;
@@ -415,8 +440,17 @@ body {
             }
           }
         }
-        input {
-          @include check-box-shape($main-color, light);
+        span {
+          position: absolute;
+          left: 0;
+          width: 100%;
+          &.error {
+            background-color: transparent;
+            font-size: 0.9rem;
+            color: $error-input-color;
+            bottom: -22px;
+            display: none;
+          }
         }
       }
       .buttons {

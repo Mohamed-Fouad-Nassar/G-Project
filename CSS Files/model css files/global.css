@@ -95,7 +95,10 @@ header .container nav {
 .head-shape span::after,
 .head-shape span::before,
 .head-shape-w span::after,
-.head-shape-w span::before {
+.head-shape-w span::before,
+body.dark .error-message::after,
+.error-message::after,
+.success-message::after {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -138,6 +141,16 @@ header .container .log-in-acc article>.menu {
   user-select: none;
 }
 
+.success-message::after {
+  content: "\f058";
+  color: #1ad922;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
 /* Start Global Rules:- */
 * {
   -webkit-box-sizing: border-box;
@@ -174,6 +187,10 @@ input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
+}
+
+input[type=email] {
+  text-transform: initial !important;
 }
 
 input {
@@ -542,6 +559,53 @@ main .top a:hover i {
 }
 
 /* End Top Button Styling */
+/* Start Error message and Success sign Styling:- */
+body.dark .error-message {
+  border-bottom-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+body.dark .error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  color: #fd5151;
+}
+
+body.dark .error-message span:first-of-type {
+  background-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+.error-message {
+  border-bottom-color: #fb0505 !important;
+}
+
+.error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.error-message span:first-of-type {
+  background-color: #fb0505 !important;
+}
+
+.success-message {
+  border-bottom-color: #1ad922 !important;
+}
+
+.success-message span:first-of-type {
+  background-color: #1ad922 !important;
+}
+
+/* End Error message and Success sign Styling */
 header {
   background-color: #eee;
   -webkit-box-shadow: -1px 1px 20px -15px #212529;

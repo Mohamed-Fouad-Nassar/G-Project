@@ -45,7 +45,7 @@ main {
       margin: 0 auto;
       a {
         display: block;
-        color: $main-color;
+        color: $main-color !important;
         padding: {
           left: $sec-element-padding;
           right: $sec-element-padding;
@@ -55,7 +55,7 @@ main {
           size: 1.2rem;
         }
         &:hover {
-          color: $sec-color;
+          color: $sec-color !important;
         }
         @media (max-width: 767px) {
           display: none;
@@ -118,11 +118,17 @@ main {
               span {
                 color: $main-color;
               }
+              .f-icon {
+                color: $main-color;
+              }
             }
             &.active {
               color: $main-color;
               background-color: $light-input-background;
               span {
+                color: $main-color;
+              }
+              .f-icon {
                 color: $main-color;
               }
             }
@@ -132,7 +138,7 @@ main {
                 display: none;
               }
             }
-            i {
+            .f-icon {
               margin-right: $sec-element-padding;
               @media (max-width: 767px) {
                 margin-right: 0;
@@ -151,6 +157,110 @@ main {
     position: relative;
     flex: 1;
     overflow-y: auto;
+    @media (max-width: 1199px) {
+      padding-right: 10px;
+    }
+    > div {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .dashboard {
+      display: none;
+      &.active {
+        @include grid(600px, 20px);
+        height: 100%;
+        align-content: space-around;
+        @media (max-width: 1580px) {
+          @include grid(500px, 20px);
+        }
+        @media (max-width: 1380px) {
+          @include grid(400px, 20px);
+        }
+        @media (max-width: 1199px) {
+          @include grid(420px, 20px);
+          height: initial;
+        }
+        @media (max-width: 575px) {
+          @include grid(250px, 20px);
+        }
+      }
+      > article {
+        @extend %border-radius-10;
+        background-color: $light-input-background;
+        padding: 20px;
+        .head {
+          h2 {
+            margin-bottom: 40px;
+            position: relative;
+            color: $main-color;
+            font: {
+              size: 1.6rem;
+              weight: 600;
+            }
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              height: 3px;
+              background-color: $sec-color;
+            }
+            &::before {
+              width: 95px;
+              bottom: -8px;
+            }
+            &::after {
+              width: 50px;
+              bottom: -15px;
+            }
+          }
+        }
+        .info {
+          @extend %flex-stretch-start;
+          // max-width: 750px;
+          margin: 0 auto;
+          gap: $main-element-padding;
+          @media (max-width: 575px) {
+            flex-direction: column;
+            gap: $sec-element-padding;
+          }
+          > div {
+            @extend %border-radius-10;
+            width: 50%;
+            @media (max-width: 575px) {
+              width: 100%;
+            }
+            padding: $main-element-padding;
+            background-color: $white-color;
+            text-align: center;
+            h3 {
+              margin-bottom: $sec-element-padding;
+              font: {
+                size: 1.2rem;
+                weight: 600;
+              }
+            }
+            span {
+              color: $main-color;
+              font: {
+                size: 1.4rem;
+                weight: 700;
+              }
+            }
+            .f-icon {
+              font-size: 2.6rem;
+              color: $main-color;
+              cursor: pointer;
+              &:hover {
+                color: $sec-color;
+              }
+            }
+          }
+        }
+      }
+    }
     .sec-head {
       h2 {
         margin-bottom: 40px;
@@ -189,12 +299,13 @@ main {
           gap: $sec-element-padding;
         }
         > div {
+          @extend %border-radius-10;
           width: 50%;
           @media (max-width: 575px) {
             width: 100%;
           }
           padding: $main-element-padding;
-          background-color: $light-white-color;
+          background-color: $light-input-background;
           text-align: center;
           h3 {
             margin-bottom: $sec-element-padding;
@@ -252,9 +363,9 @@ body {
         box-shadow: $dark-box-shadow;
         .head {
           a {
-            color: $main-dark-color;
+            color: $main-dark-color !important;
             &:hover {
-              color: $sec-dark-color;
+              color: $sec-dark-color !important;
             }
           }
         }
@@ -299,6 +410,37 @@ body {
       .content {
         background-color: $sec-dark-bg;
         box-shadow: $dark-box-shadow;
+        .dashboard {
+          > article {
+            background-color: $main-dark-bg;
+            .head {
+              h2 {
+                color: $main-dark-color;
+                &::before,
+                &::after {
+                  background-color: $sec-dark-color;
+                }
+              }
+            }
+            .info {
+              > div {
+                background-color: $sec-dark-bg;
+                h3 {
+                  color: $white-dark-color;
+                }
+                span {
+                  color: $main-dark-color;
+                }
+                .f-icon {
+                  color: $main-dark-color;
+                  &:hover {
+                    color: $sec-dark-color;
+                  }
+                }
+              }
+            }
+          }
+        }
         .sec-head {
           h2 {
             color: $main-dark-color;

@@ -1,0 +1,2576 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font-awesome css file -->
+    <link rel="stylesheet" href="../CSS Files/all.min.css" />
+    <!-- bootstrap css file -->
+    <link rel="stylesheet" href="../CSS Files/bootstrap.min.css" />
+    <!-- swiper css files -->
+    <link rel="stylesheet" href="../CSS Files/swiper-bundle.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="../CSS Files/dashboard.css" />
+    <!-- font open-sans files -->
+    <!-- font-family: 'Open Sans', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font Yesteryear files -->
+    <!-- font-family: 'Yesteryear', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fav icon -->
+    <link
+      rel="shortcut icon"
+      href="../Data/Images/fav-icon.png"
+      type="image/x-icon"
+    />
+    <!-- page title -->
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header id="navbar_top">
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">
+            <!-- <h1 id="logoText">hope</h1> -->
+            <!-- <img src="./Data/un-used-Images/logo-1.png" alt="logo-image" /> -->
+            <img src="../Data/un-used-Images/logo-2.png" alt="logo-image" />
+          </a>
+        </div>
+        <nav id="nav">
+          <ul id="links">
+            <li class="link">
+              <a href="../index.html">
+                <i class="f-icon fa-solid fa-house"></i>
+                <span>home</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="./doctors.html">
+                <i class="f-icon fa-solid fa-user-doctor"></i>
+                <span>doctors</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="./medicines.html">
+                <i class="f-icon fa-solid fa-pills"></i>
+                <span>medicines</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="./hospitals.html">
+                <i class="f-icon fa-solid fa-hospital"></i>
+                <span>hospitals</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="./pharmacies.html">
+                <i class="f-icon fa-solid fa-house-medical"></i>
+                <span>pharmacies</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="./blog.html">
+                <i class="f-icon fa-solid fa-book-open-reader"></i>
+                <span>blog</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Start Not Logging In View -->
+        <!-- <div class="account">
+          <a class="log-in" href="./log_in.html">log in</a>
+          <a class="regist" href="./register.html">register</a>
+        </div> -->
+        <!-- End Not Logging In View -->
+        <!-- Start Logging In View -->
+        <div class="log-in-acc">
+          <article class="lang">
+            <div class="h-btn">
+              <div>
+                <img src="../Data/Images/usa.png" alt="lang-flag-image" />
+              </div>
+              <span>en</span>
+            </div>
+            <div class="menu">
+              <ul>
+                <li img-src="../Data/Images/usa.png" lang-text="en">
+                  <div>
+                    <img src="../Data/Images/usa.png" alt="lang-flag-image" />
+                  </div>
+                  <span>en</span>
+                </li>
+                <li img-src="../Data/Images/eg.png" lang-text="ar">
+                  <div>
+                    <img src="../Data/Images/eg.png" alt="lang-flag-image" />
+                  </div>
+                  <span>ar</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="theme">
+            <div class="h-btn">
+              <!-- <i class="f-icon fa-solid fa-circle-half-stroke"></i> -->
+              <!-- <i class="f-icon light fa-solid fa-sun"></i> -->
+              <!-- <i class="f-icon dark fa-solid fa-moon"></i> -->
+              <ion-icon
+                class="f-icon light"
+                name="sunny"
+                size="large"
+              ></ion-icon>
+              <ion-icon class="f-icon dark" name="moon" size="large"></ion-icon>
+            </div>
+            <div class="menu"></div>
+          </article>
+          <article class="acc">
+            <div class="h-btn">
+              <img
+                src="../Data/Images/avatar-image-1.png"
+                alt="account-image"
+              />
+            </div>
+            <div class="menu">
+              <ul>
+                <li id="view-profile">
+                  <a href="./view_profile.html">view profile</a>
+                </li>
+                <li id="log-out-btn">
+                  <span>log out</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- End Logging In View -->
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main id="main_page">
+      <!-- Start Aside -->
+      <aside>
+        <div class="head">
+          <a id="dash">dashboard</a>
+          <div class="shape">
+            <span></span>
+          </div>
+        </div>
+        <div class="links">
+          <ul>
+            <li class="aside-link">
+              <a class="active" data-name="dashboard">
+                <i class="f-icon fa-regular fa-chart-bar"></i>
+                <span>dashboard</span>
+              </a>
+            </li>
+            <li class="aside-link">
+              <a data-name="doctors">
+                <i class="f-icon fa-solid fa-user-doctor"></i>
+                <span>doctors</span>
+              </a>
+            </li>
+            <li class="aside-link">
+              <a data-name="medicines">
+                <i class="f-icon fa-solid fa-pills"></i>
+                <span>medicines</span>
+              </a>
+            </li>
+            <li class="aside-link">
+              <a data-name="hospitals">
+                <i class="f-icon fa-solid fa-hospital"></i>
+                <span>hospitals</span>
+              </a>
+            </li>
+            <li class="aside-link">
+              <a data-name="pharmacies">
+                <i class="f-icon fa-solid fa-house-medical"></i>
+                <span>pharmacies</span>
+              </a>
+            </li>
+            <li class="aside-link">
+              <a data-name="blog">
+                <i class="f-icon fa-solid fa-book-open-reader"></i>
+                <span>blog</span>
+              </a>
+            </li>
+            <li class="aside-link">
+              <a data-name="charities">
+                <i class="f-icon fa-solid fa-hand-holding-heart"></i>
+                <span>charities</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- End Aside -->
+      <!-- Start Content  -->
+      <section class="content">
+        <div class="dashboard active" data-name="dashboard">
+          <article class="doctors">
+            <div class="head">
+              <h2>doctors</h2>
+            </div>
+            <div class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </div>
+          </article>
+          <article class="medicines">
+            <div class="head">
+              <h2>medicines</h2>
+            </div>
+            <div class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </div>
+          </article>
+          <article class="hospitals">
+            <div class="head">
+              <h2>hospitals</h2>
+            </div>
+            <div class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </div>
+          </article>
+          <article class="pharmacies">
+            <div class="head">
+              <h2>pharmacies</h2>
+            </div>
+            <div class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </div>
+          </article>
+          <article class="blog">
+            <div class="head">
+              <h2>blog</h2>
+            </div>
+            <div class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </div>
+          </article>
+          <article class="charities">
+            <div class="head">
+              <h2>charities</h2>
+            </div>
+            <div class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="doctors" data-name="doctors">
+          <div class="sec-head">
+            <h2>doctors</h2>
+          </div>
+          <div class="sec-body">
+            <article class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </article>
+            <article class="control">
+              <div class="table">
+                <div class="tab-head">
+                  <span>no.</span>
+                  <span>title</span>
+                  <span>date</span>
+                  <span>details</span>
+                  <span>actions</span>
+                </div>
+                <div class="tab-body">
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="medicines" data-name="medicines">
+          <div class="sec-head">
+            <h2>medicines</h2>
+          </div>
+          <div class="sec-body">
+            <article class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </article>
+            <article class="control">
+              <div class="table">
+                <div class="tab-head">
+                  <span>no.</span>
+                  <span>title</span>
+                  <span>date</span>
+                  <span>details</span>
+                  <span>actions</span>
+                </div>
+                <div class="tab-body">
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="hospitals" data-name="hospitals">
+          <div class="sec-head">
+            <h2>hospitals</h2>
+          </div>
+          <div class="sec-body">
+            <article class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </article>
+            <article class="control">
+              <div class="table">
+                <div class="tab-head">
+                  <span>no.</span>
+                  <span>title</span>
+                  <span>date</span>
+                  <span>details</span>
+                  <span>actions</span>
+                </div>
+                <div class="tab-body">
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="pharmacies" data-name="pharmacies">
+          <div class="sec-head">
+            <h2>pharmacies</h2>
+          </div>
+          <div class="sec-body">
+            <article class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </article>
+            <article class="control">
+              <div class="table">
+                <div class="tab-head">
+                  <span>no.</span>
+                  <span>title</span>
+                  <span>date</span>
+                  <span>details</span>
+                  <span>actions</span>
+                </div>
+                <div class="tab-body">
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="blog" data-name="blog">
+          <div class="sec-head">
+            <h2>blog</h2>
+          </div>
+          <div class="sec-body">
+            <article class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </article>
+            <article class="control">
+              <div class="table">
+                <div class="tab-head">
+                  <span>no.</span>
+                  <span>title</span>
+                  <span>date</span>
+                  <span>details</span>
+                  <span>actions</span>
+                </div>
+                <div class="tab-body">
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="charities" data-name="charities">
+          <div class="sec-head">
+            <h2>charities</h2>
+          </div>
+          <div class="sec-body">
+            <article class="info">
+              <div class="modify">
+                <h3>add a new item</h3>
+                <i class="f-icon fa-solid fa-circle-plus"></i>
+              </div>
+              <div class="items-num">
+                <h3>number of item</h3>
+                <span>nan</span>
+              </div>
+            </article>
+            <article class="control">
+              <div class="table">
+                <div class="tab-head">
+                  <span>no.</span>
+                  <span>title</span>
+                  <span>date</span>
+                  <span>details</span>
+                  <span>actions</span>
+                </div>
+                <div class="tab-body">
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>1</span>
+                    <span>item 1</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>2</span>
+                    <span>item 2</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>3</span>
+                    <span>item 3</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>4</span>
+                    <span>item 4</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>5</span>
+                    <span>item 5</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>6</span>
+                    <span>item 6</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>8</span>
+                    <span>item 8</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>9</span>
+                    <span>item 9</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div class="item">
+                    <span>10</span>
+                    <span>item 10</span>
+                    <span>1 jun 2022</span>
+                    <span><a href="">see more</a></span>
+                    <span>
+                      <button class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </button>
+                      <button class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </button>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- End Content  -->
+      <!-- Start Top Button -->
+      <div class="top" id="up">
+        <a href="#">
+          <i class="f-icon fa-solid fa-angle-up"></i>
+        </a>
+      </div>
+      <!-- End Top Button -->
+    </main>
+    <!-- End Main -->
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <div class="f-info">
+          <div class="f-logo">
+            <h1>hope</h1>
+          </div>
+          <div class="f-text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut, amet sunt eius molestiae
+              repellat voluptas quaerat quidem?
+            </p>
+          </div>
+          <div class="f-social">
+            <div title="Facebook Page">
+              <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div title="Instagram Page">
+              <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+            <div title="Twitter Account">
+              <a href="https://www.twitter.com/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+            <div title="Mail">
+              <a href="mailto:@mohagmail@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+            <div title="Whatsapp">
+              <a href="https://wa.me/552196312XXXX">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </div>
+            <div title="Phone Number">
+              <a href="tel:+18475555555">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="f-links">
+          <h3>important links</h3>
+          <ul>
+            <li>
+              <a href="../../index.html">home</a>
+            </li>
+            <li>
+              <a href="../doctors.html">doctors</a>
+            </li>
+            <li>
+              <a href="../medicines.html">medicines</a>
+            </li>
+            <li>
+              <a href="../hospitals.html">hospitals</a>
+            </li>
+            <li>
+              <a href="../pharmacies.html">pharmacies</a>
+            </li>
+            <li>
+              <a href="../blog.html">our blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="f-blog">
+          <h3>from our blog</h3>
+          <article>
+            <a href="">
+              <h4>article title</h4>
+            </a>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut.
+            </p>
+            <div class="info">
+              <span>author: </span>
+              <span class="input" id="input">john doe</span>
+            </div>
+          </article>
+          <article>
+            <a href="">
+              <h4>article title</h4>
+            </a>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut.
+            </p>
+            <div class="info">
+              <span>author: </span>
+              <span class="input" id="input">john doe</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="rights">
+        <p>
+          Copyright &copy; 2023 <span> hope</span>, made by -
+          <a href="">🚑66-اسعاف🚨</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- bootstrap js file -->
+    <script src="../JS Files/bootstrap.bundle.js"></script>
+    <!-- ion-icons js files -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- swiper script -->
+    <script src="../JS Files/swiper-bundle.min.js"></script>
+    <!-- header script -->
+    <script src="../JS Files/header.js"></script>
+    <!-- main script -->
+    <script src="../JS Files/dashboard.js"></script>
+  </body>
+</html>

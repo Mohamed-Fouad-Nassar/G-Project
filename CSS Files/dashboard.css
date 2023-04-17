@@ -51,6 +51,7 @@ main .top a {
 }
 
 main,
+main .content .dashboard>article .info,
 main .content .sec-body .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,7 +121,10 @@ main aside .shape span::after,
 .head-shape span::after,
 .head-shape span::before,
 .head-shape-w span::after,
-.head-shape-w span::before {
+.head-shape-w span::before,
+body.dark .error-message::after,
+.error-message::after,
+.success-message::after {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -141,7 +145,10 @@ body.dark footer .f-info .f-social>div a {
 }
 
 main aside,
-main .content {
+main .content,
+main .content .dashboard>article,
+main .content .dashboard>article .info>div,
+main .content .sec-body .info>div {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -174,6 +181,16 @@ header .container .log-in-acc article>.menu {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.success-message::after {
+  content: "\f058";
+  color: #1ad922;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 /* Start Global Rules:- */
@@ -212,6 +229,10 @@ input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
+}
+
+input[type=email] {
+  text-transform: initial !important;
 }
 
 input {
@@ -580,6 +601,53 @@ main .top a:hover i {
 }
 
 /* End Top Button Styling */
+/* Start Error message and Success sign Styling:- */
+body.dark .error-message {
+  border-bottom-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+body.dark .error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  color: #fd5151;
+}
+
+body.dark .error-message span:first-of-type {
+  background-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+.error-message {
+  border-bottom-color: #fb0505 !important;
+}
+
+.error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.error-message span:first-of-type {
+  background-color: #fb0505 !important;
+}
+
+.success-message {
+  border-bottom-color: #1ad922 !important;
+}
+
+.success-message span:first-of-type {
+  background-color: #1ad922 !important;
+}
+
+/* End Error message and Success sign Styling */
 header {
   background-color: #eee;
   -webkit-box-shadow: -1px 1px 20px -15px #212529;
@@ -1052,6 +1120,14 @@ header .container .log-in-acc .acc .menu ul li a:hover {
   color: #059cb1;
 }
 
+header .container .log-in-acc .acc .menu ul li a:hover .f-icon {
+  color: #059cb1;
+}
+
+header .container .log-in-acc .acc .menu ul li a .f-icon {
+  color: #212529;
+}
+
 header .container .log-in-acc .acc .menu ul li:last-of-type span {
   font-size: 0.85rem;
   color: #d20519;
@@ -1060,6 +1136,14 @@ header .container .log-in-acc .acc .menu ul li:last-of-type span {
 header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
   background-color: #dc3545;
   color: #fff;
+}
+
+header .container .log-in-acc .acc .menu ul li:last-of-type span:hover .f-icon {
+  color: #fff;
+}
+
+header .container .log-in-acc .acc .menu ul li:last-of-type span .f-icon {
+  color: #d20519;
 }
 
 header.scroll {
@@ -1189,7 +1273,6 @@ body.dark header .container .log-in-acc .theme .h-btn .f-icon.dark {
   display: block;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li span,
 body.dark header .container .log-in-acc .acc .menu ul li a {
   color: #efefef;
 }
@@ -1199,6 +1282,14 @@ body.dark header .container .log-in-acc .acc .menu ul li a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
+body.dark header .container .log-in-acc .acc .menu ul li a:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a .f-icon {
+  color: #efefef;
+}
+
 body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span {
   color: #dc3545;
 }
@@ -1206,6 +1297,14 @@ body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span {
 body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
   background-color: #dc3545;
   color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover .f-icon {
+  color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span .f-icon {
+  color: #dc3545;
 }
 
 body.dark header.scroll {
@@ -1458,7 +1557,7 @@ main aside .head {
 
 main aside .head a {
   display: block;
-  color: #059cb1;
+  color: #059cb1 !important;
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 700;
@@ -1466,7 +1565,7 @@ main aside .head a {
 }
 
 main aside .head a:hover {
-  color: #59c1bd;
+  color: #59c1bd !important;
 }
 
 @media (max-width: 767px) {
@@ -1555,12 +1654,20 @@ main aside .links ul li a:hover span {
   color: #059cb1;
 }
 
+main aside .links ul li a:hover .f-icon {
+  color: #059cb1;
+}
+
 main aside .links ul li a.active {
   color: #059cb1;
   background-color: #f9f9f9;
 }
 
 main aside .links ul li a.active span {
+  color: #059cb1;
+}
+
+main aside .links ul li a.active .f-icon {
   color: #059cb1;
 }
 
@@ -1574,12 +1681,12 @@ main aside .links ul li a span {
   }
 }
 
-main aside .links ul li a i {
+main aside .links ul li a .f-icon {
   margin-right: 10px;
 }
 
 @media (max-width: 767px) {
-  main aside .links ul li a i {
+  main aside .links ul li a .f-icon {
     margin-right: 0;
   }
 }
@@ -1594,6 +1701,153 @@ main .content {
   -ms-flex: 1;
   flex: 1;
   overflow-y: auto;
+}
+
+@media (max-width: 1199px) {
+  main .content {
+    padding-right: 10px;
+  }
+}
+
+main .content>div {
+  display: none;
+}
+
+main .content>div.active {
+  display: block;
+}
+
+main .content .dashboard {
+  display: none;
+}
+
+main .content .dashboard.active {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 20px;
+  height: 100%;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+}
+
+@media (max-width: 1580px) {
+  main .content .dashboard.active {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1380px) {
+  main .content .dashboard.active {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  main .content .dashboard.active {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 20px;
+    height: initial;
+  }
+}
+
+@media (max-width: 575px) {
+  main .content .dashboard.active {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}
+
+main .content .dashboard>article {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+main .content .dashboard>article .head h2 {
+  margin-bottom: 40px;
+  position: relative;
+  color: #059cb1;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+main .content .dashboard>article .head h2::before,
+main .content .dashboard>article .head h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 3px;
+  background-color: #59c1bd;
+}
+
+main .content .dashboard>article .head h2::before {
+  width: 95px;
+  bottom: -8px;
+}
+
+main .content .dashboard>article .head h2::after {
+  width: 50px;
+  bottom: -15px;
+}
+
+main .content .dashboard>article .info {
+  margin: 0 auto;
+  gap: 20px;
+}
+
+@media (max-width: 575px) {
+  main .content .dashboard>article .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+main .content .dashboard>article .info>div {
+  width: 50%;
+  padding: 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  main .content .dashboard>article .info>div {
+    width: 100%;
+  }
+}
+
+main .content .dashboard>article .info>div h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+main .content .dashboard>article .info>div span {
+  color: #059cb1;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+main .content .dashboard>article .info>div .f-icon {
+  font-size: 2.6rem;
+  color: #059cb1;
+  cursor: pointer;
+}
+
+main .content .dashboard>article .info>div .f-icon:hover {
+  color: #59c1bd;
 }
 
 main .content .sec-head h2 {
@@ -1642,7 +1896,7 @@ main .content .sec-body .info {
 main .content .sec-body .info>div {
   width: 50%;
   padding: 20px;
-  background-color: #eee;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
@@ -1833,11 +2087,11 @@ body.dark main aside {
 }
 
 body.dark main aside .head a {
-  color: rgba(5, 156, 177, 0.8705882353);
+  color: rgba(5, 156, 177, 0.8705882353) !important;
 }
 
 body.dark main aside .head a:hover {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(89, 193, 189, 0.8705882353) !important;
 }
 
 body.dark main aside .shape span {
@@ -1878,6 +2132,39 @@ body.dark main .content {
   background-color: #1d1d1d;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark main .content .dashboard>article {
+  background-color: #222;
+}
+
+body.dark main .content .dashboard>article .head h2 {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .dashboard>article .head h2::before,
+body.dark main .content .dashboard>article .head h2::after {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content .dashboard>article .info>div {
+  background-color: #1d1d1d;
+}
+
+body.dark main .content .dashboard>article .info>div h3 {
+  color: #efefef;
+}
+
+body.dark main .content .dashboard>article .info>div span {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .dashboard>article .info>div .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .dashboard>article .info>div .f-icon:hover {
+  color: rgba(89, 193, 189, 0.8705882353);
 }
 
 body.dark main .content .sec-head h2 {

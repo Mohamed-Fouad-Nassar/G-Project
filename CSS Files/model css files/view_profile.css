@@ -24,6 +24,15 @@ main .content .container {
   justify-content: center;
 }
 
+main .content .container .left .edit-btn a,
+body.dark main .content .container .left .edit-btn a {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 main .content .container .left .image {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;

@@ -61,7 +61,9 @@ body.dark main .content .container .sec-body .box .data .social-icon>div>div a {
 }
 
 main .content .container .sec-body .box .data .social-icon>div>div a,
-body.dark main .content .container .sec-body .box .data .social-icon>div>div a {
+main .content .container .sec-foot input[type=button],
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a,
+body.dark main .content .sec-foot input[type=button] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;

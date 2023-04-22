@@ -10,6 +10,14 @@ main .content .container .sec-foot input[type=button] {
   justify-content: center;
 }
 
+main .content .container .sec-foot input[type=button] {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 main {
   background-color: #eee;
   padding: 100px 0;

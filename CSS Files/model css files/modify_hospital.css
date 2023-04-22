@@ -1,0 +1,468 @@
+main .content .container .sec-body form .sec-flex .image,
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div,
+main .content .container .sec-body form input[type=submit],
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div,
+body.dark main .content .container .sec-body form input[type=submit] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main .content .container .sec-body form .sec-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: between;
+  -ms-flex-pack: between;
+  justify-content: between;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label,
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main .content .container .sec-body form div.social .inputs {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit,
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+main .content .container .sec-body form input[type=submit],
+body.dark main .content .container .sec-body form input[type=submit] {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label,
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+
+main {
+  padding: 100px 0;
+  position: relative;
+}
+
+main .content .container .sec-head {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+main .content .container .sec-head .back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+main .content .container .sec-head .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+
+main .content .container .sec-head .back-btn .f-icon {
+  font-size: 1rem;
+}
+
+main .content .container .sec-body form {
+  width: 100%;
+}
+
+main .content .container .sec-body form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+main .content .container .sec-body form .sec-flex {
+  gap: 20px;
+}
+
+@media (max-width: 1199px) {
+  main .content .container .sec-body form .sec-flex>section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  main .content .container .sec-body form .sec-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+
+main .content .container .sec-body form .sec-flex .info {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+main .content .container .sec-body form .sec-flex .image {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main .content .container .sec-body form .sec-flex .image h2 {
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload {
+  position: relative;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  max-width: 550px !important;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  z-index: 1;
+  bottom: -20px;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit input {
+  display: none;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: #059cb1;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:hover {
+  background-color: #028da0;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:after {
+  content: "upload";
+  color: #fff;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  position: relative;
+  border: 6px solid #fff;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  overflow: hidden;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div img {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  max-height: 280px !important;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div {
+  max-height: 280px !important;
+}
+
+main .content .container .sec-body form div {
+  width: 100%;
+  position: relative;
+}
+
+main .content .container .sec-body form div:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+main .content .container .sec-body form div input,
+main .content .container .sec-body form div textarea {
+  padding: 10px 15px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #59c1bd;
+  background-color: #f9f9f9;
+}
+
+main .content .container .sec-body form div input:focus,
+main .content .container .sec-body form div textarea:focus {
+  border-color: #059cb1;
+}
+
+main .content .container .sec-body form div input:focus::-webkit-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-moz-placeholder,
+main .content .container .sec-body form div textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus:-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-webkit-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-moz-placeholder,
+main .content .container .sec-body form div textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus:-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::placeholder,
+main .content .container .sec-body form div textarea:focus::placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div textarea {
+  min-height: 300px;
+  resize: vertical;
+}
+
+main .content .container .sec-body form div.social .inputs>div {
+  margin-top: 0;
+}
+
+main .content .container .sec-body form input[type=submit] {
+  margin-top: 40px !important;
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+
+main .content .container .sec-body form input[type=submit]:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}
+
+body.dark main {
+  background-color: #222;
+}
+
+body.dark main .content .container .sec-head .back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #efefef;
+}
+
+body.dark main .content .container .sec-head .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+
+body.dark main .content .container .sec-head .back-btn .f-icon {
+  font-size: 1rem;
+}
+
+body.dark main .content .container .sec-head .back-btn:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form h2 {
+  color: #efefef;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload {
+  position: relative;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  z-index: 1;
+  bottom: -20px;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit input {
+  display: none;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: #059cb1;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:hover {
+  background-color: #028da0;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:after {
+  content: "upload";
+  color: #fff;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  position: relative;
+  border: 6px solid #fff;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  overflow: hidden;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div img {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:hover {
+  background-color: #028da0;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:after {
+  color: #efefef;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  border-color: #1d1d1d;
+}
+
+body.dark main .content .container .sec-body form div input,
+body.dark main .content .container .sec-body form div textarea {
+  color: #ccc;
+  background-color: #1d1d1d;
+  border-bottom-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form div input:focus,
+body.dark main .content .container .sec-body form div textarea:focus {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form input[type=submit] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #efefef;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+
+body.dark main .content .container .sec-body form input[type=submit]:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}

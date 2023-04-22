@@ -20,6 +20,15 @@ body.dark .card .left form input[type=submit],
   justify-content: space-between;
 }
 
+body.dark .card .left form input[type=submit],
+.card .left form input[type=submit] {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 .card {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
@@ -67,6 +76,10 @@ body::after {
 }
 
 body header {
+  display: none;
+}
+
+body footer {
   display: none;
 }
 

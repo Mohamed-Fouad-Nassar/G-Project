@@ -11,127 +11,127 @@
 
 // additional page styling
 // Start Main Styling:-
+
 main {
   padding: $up-down-padding 0;
   position: relative;
-  // @media (max-width: 767px) {
-  //   padding-top: 150px;
-  // }
   .content {
     .container {
+      .sec-head {
+        position: relative;
+        padding-bottom: 30px;
+        .back-btn {
+          @include back-btn(0, 0, "light");
+        }
+      }
       .sec-body {
         form {
           width: 100%;
+          h2 {
+            font-size: 1.5rem;
+            margin-bottom: $sec-element-padding;
+          }
+          .sec-flex {
+            @extend %flex-stretch-between;
+            gap: $main-element-padding;
+            @media (max-width: 1199px) {
+              > div {
+                flex: 1;
+              }
+            }
+            @media (max-width: 991px) {
+              flex-direction: column-reverse;
+              gap: 40px;
+            }
+            .info {
+              flex: 1;
+            }
+            .image {
+              @extend %flex-center-center;
+              flex-direction: column;
+              h2 {
+                align-self: baseline;
+                // display: none;
+                // @media (max-width: 991px) {
+                //   display: block;
+                // }
+              }
+              .avatar-upload {
+                @include upload-image("light");
+                max-width: 550px !important;
+                .avatar-preview {
+                  max-height: 280px !important;
+                  > div {
+                    max-height: 280px !important;
+                  }
+                }
+              }
+            }
+          }
           div {
             width: 100%;
             position: relative;
             &:not(:first-of-type) {
               margin-top: 30px;
             }
-            input,
-            textarea {
-              padding: 10px 15px;
+            input {
+              padding: $sec-element-padding 15px;
               width: 100%;
               outline: none;
               border: none;
               border-bottom: 2px solid $sec-color;
               background-color: $light-input-background;
-              // background-color: $sec-dark-bg;
               &:focus {
                 @include placeholder-color(transparent);
                 border-color: $main-color;
               }
             }
-            textarea {
-              min-height: 300px;
-              height: 600px;
-              resize: vertical;
-            }
-            input[type="file"] {
-              cursor: pointer;
-              &::file-selector-button {
-                background-color: transparent;
-                border: none;
-                outline: none;
-                color: inherit;
-              }
-              &::-ms-browse {
-                background-color: transparent;
-                border: none;
-                outline: none;
-                color: inherit;
-              }
-              &::-webkit-file-upload-button {
-                background-color: transparent;
-                border: none;
-                outline: none;
-                color: inherit;
-              }
-              &::file-selector-button {
-                background-color: transparent;
-                border: none;
-                outline: none;
-                color: inherit;
-              }
-            }
-            span {
-              display: inline-block;
-              width: fit-content;
-              text-transform: lowercase;
-              position: absolute;
-              right: 40px;
-              top: 50%;
-              @include trans-y(-50%);
-              color: $error-input-color;
-              font-size: 0.9rem;
-              @media (max-width: 767px) {
-                width: calc(100% - 5px);
-                right: initial;
-                top: -12px;
-                left: 5px;
+            // &.success::after,
+            // &.error::after {
+            //   font-weight: 900;
+            //   font-family: "Font Awesome 5 Free";
+            //   position: absolute;
+            //   top: 50%;
+            //   right: $sec-element-padding;
+            //   @include trans-y(-50%);
+            // }
+            // &.success {
+            //   &::after {
+            //     content: "\f058";
+            //     color: $success-input-color;
+            //   }
+            //   > input,
+            //   > textarea {
+            //     border-color: $success-input-color;
+            //   }
+            // }
+            // &.error {
+            //   &::after {
+            //     content: "\f057";
+            //     color: $error-input-color;
+            //   }
+            //   > input,
+            //   > textarea {
+            //     border-bottom-color: $error-input-color;
+            //   }
+            // }
+            &.social {
+              .inputs {
+                @extend %grid-350-20;
+                > div {
+                  margin-top: 0;
+                }
               }
             }
-            &.success::after,
-            &.error::after {
-              font-weight: 900;
-              font-family: "Font Awesome 5 Free";
-              position: absolute;
-              top: 50%;
-              right: 10px;
-              @include trans-y(-50%);
-            }
-            &.success {
-              &::after {
-                content: "\f058";
-                color: $success-input-color;
-              }
-              > input,
-              > textarea {
-                border-color: $success-input-color;
-              }
-            }
-            &.error {
-              &::after {
-                content: "\f057";
-                color: $error-input-color;
-              }
-              > input,
-              > textarea {
-                border-bottom-color: $error-input-color;
-              }
-            }
-            input[type="submit"] {
-              @include button-shape($main-color, "light");
-            }
+          }
+          input[type="submit"] {
+            margin-top: $main-element-padding * 2 !important;
+            @include button-shape($main-color, "light");
           }
         }
       }
     }
   }
-}
-
-.content .box pre {
-  white-space: break-spaces;
 }
 
 body {
@@ -140,11 +140,25 @@ body {
       background-color: $main-dark-bg;
       .content {
         .container {
+          .sec-head {
+            .back-btn {
+              @include back-btn(0, 0, "dark");
+            }
+          }
           .sec-body {
             form {
+              h2 {
+                color: $white-dark-color;
+              }
+              .sec-flex {
+                .image {
+                  .avatar-upload {
+                    @include upload-image("dark");
+                  }
+                }
+              }
               div {
-                input,
-                textarea {
+                input {
                   color: $dark-white-color;
                   background-color: $sec-dark-bg;
                   border-bottom-color: $sec-dark-color;
@@ -152,9 +166,9 @@ body {
                     border-color: $main-dark-color;
                   }
                 }
-                input[type="submit"] {
-                  @include button-shape($main-color, "dark");
-                }
+              }
+              input[type="submit"] {
+                @include button-shape($main-color, "dark");
               }
             }
           }

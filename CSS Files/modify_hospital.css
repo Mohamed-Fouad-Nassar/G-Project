@@ -15,13 +15,16 @@ ul li {
 }
 
 a {
-  color: #000;
+  color: #212529;
   text-decoration: none;
   cursor: pointer;
 }
 
-main .content .container .sec-foot input[type=button],
-body.dark main .content .container .sec-foot input[type=button],
+main .content .container .sec-body form .sec-flex .image,
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div,
+main .content .container .sec-body form input[type=submit],
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div,
+body.dark main .content .container .sec-body form input[type=submit],
 header .container nav ul li a,
 header .container .account,
 header .container .log-in-acc,
@@ -46,6 +49,18 @@ main .top a {
   justify-content: center;
 }
 
+main .content .container .sec-body form .sec-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-pack: between;
+  -ms-flex-pack: between;
+  justify-content: between;
+}
+
 footer .container .f-info .f-social,
 body.dark footer .f-info .f-social {
   display: -webkit-box;
@@ -59,6 +74,17 @@ body.dark footer .f-info .f-social {
   justify-content: flex-start;
 }
 
+header .container .log-in-acc .acc .menu ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label,
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label,
 footer .container .f-info .f-social>div a,
 body.dark footer .f-info .f-social>div a {
   display: -webkit-inline-box;
@@ -84,7 +110,7 @@ header .container nav {
   justify-content: space-between;
 }
 
-main .content .container .sec-body {
+main .content .container .sec-body form div.social .inputs {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -94,7 +120,10 @@ main .content .container .sec-body {
 .head-shape span::after,
 .head-shape span::before,
 .head-shape-w span::after,
-.head-shape-w span::before {
+.head-shape-w span::before,
+body.dark .error-message::after,
+.error-message::after,
+.success-message::after {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -102,8 +131,23 @@ main .content .container .sec-body {
   -o-transform: translateY(-50%);
 }
 
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit,
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit {
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+main .content .container .sec-body form input[type=submit],
+body.dark main .content .container .sec-body form input[type=submit],
 footer .container .f-info .f-social>div a,
-body.dark footer .f-info .f-social>div a {
+body.dark footer .f-info .f-social>div a,
+header .container .account a,
+body.dark header .container .account a,
+section .container .sec-foot a,
+.dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -111,6 +155,18 @@ body.dark footer .f-info .f-social>div a {
   -o-border-radius: 5px !important;
 }
 
+.box,
+.card {
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label,
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label,
+header .container .log-in-acc .theme .h-btn,
 .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
@@ -134,6 +190,16 @@ header .container .log-in-acc article>.menu {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.success-message::after {
+  content: "\f058";
+  color: #1ad922;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
 }
 
 /* Start Global Rules:- */
@@ -172,6 +238,10 @@ input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
+}
+
+input[type=email] {
+  text-transform: initial !important;
 }
 
 input {
@@ -272,29 +342,30 @@ input {
 /* End Animation Styling */
 /* Start Selection Styling:- */
 ::-moz-selection {
-  background: #000;
+  background: #212529;
   color: #059cb1;
 }
 
 ::selection {
-  background: #000;
+  background: #212529;
   color: #059cb1;
 }
 
 .dark ::-moz-selection {
-  background: #000;
+  background: #212529;
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
 .dark ::selection {
-  background: #000;
+  background: #212529;
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
 /* End Selection Styling */
 /* Start Scroll Bar Styling:- */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -399,6 +470,7 @@ section .container .sec-head {
   text-align: center;
 }
 
+section .container .sec-head h1,
 section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -409,10 +481,10 @@ section .container .sec-head h2 {
 
 section .container .sec-head p {
   max-width: 750px;
-  margin: 0 auto;
-  margin-bottom: 20px;
   font-size: 0.9rem;
   color: #555;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 section .container .sec-foot {
@@ -435,6 +507,29 @@ section .container .sec-foot a:hover {
   border-color: #059cb1;
 }
 
+.dark section .container .sec-head {
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.dark section .container .sec-head h1,
+.dark section .container .sec-head h2 {
+  font-size: 1.8rem;
+  color: #059cb1;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.dark section .container .sec-head p {
+  max-width: 750px;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
@@ -461,6 +556,16 @@ section .container .sec-foot a:hover {
 
 /* End Section Header And Footer Styling:- */
 /* Start Top Button Styling:- */
+main {
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 150px !important;
+  }
+}
+
 main .top {
   display: none;
   position: fixed;
@@ -509,10 +614,57 @@ main .top a:hover i {
 }
 
 /* End Top Button Styling */
+/* Start Error message and Success sign Styling:- */
+body.dark .error-message {
+  border-bottom-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+body.dark .error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  color: #fd5151;
+}
+
+body.dark .error-message span:first-of-type {
+  background-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+.error-message {
+  border-bottom-color: #fb0505 !important;
+}
+
+.error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.error-message span:first-of-type {
+  background-color: #fb0505 !important;
+}
+
+.success-message {
+  border-bottom-color: #1ad922 !important;
+}
+
+.success-message span:first-of-type {
+  background-color: #1ad922 !important;
+}
+
+/* End Error message and Success sign Styling */
 header {
   background-color: #eee;
-  -webkit-box-shadow: -1px 1px 20px -15px #000;
-  box-shadow: -1px 1px 20px -15px #000;
+  -webkit-box-shadow: -1px 1px 20px -15px #212529;
+  box-shadow: -1px 1px 20px -15px #212529;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   padding: 0;
@@ -761,14 +913,20 @@ header .container .log-in-acc article>.menu {
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #eee;
-  top: 62px;
+  background-color: #fff;
+  top: 70px;
   left: 50%;
-  -webkit-box-shadow: 0 0 15px -6px #6d6d6d;
-  box-shadow: 0 0 15px -6px #6d6d6d;
+  -webkit-box-shadow: 0 0 6px -2px #6d6d6d;
+  box-shadow: 0 0 6px -2px #6d6d6d;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 768px) {
+  header .container .log-in-acc article>.menu {
+    top: 62px !important;
+  }
+}
+
+@media (max-width: 1240px) {
   header .container .log-in-acc article>.menu {
     transform: translateX(0);
     -webkit-transform: translateX(0);
@@ -797,7 +955,7 @@ header .container .log-in-acc article>.menu ul::after {
   width: 0;
   height: 0;
   border: 12px solid;
-  border-color: transparent transparent #eee transparent;
+  border-color: transparent transparent #fff transparent;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -805,14 +963,13 @@ header .container .log-in-acc article>.menu ul::after {
   -o-transform: translateX(-50%);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 1240px) {
   header .container .log-in-acc article>.menu ul::after {
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
     -o-transform: translateX(0);
-    right: 15px;
     left: initial;
   }
 }
@@ -879,12 +1036,37 @@ header .container .log-in-acc .lang .h-btn span {
   font-weight: 600;
 }
 
+header .container .log-in-acc .lang .menu {
+  padding: 10px;
+}
+
+header .container .log-in-acc .lang .menu ul li:hover {
+  background-color: #f9f9f9;
+  color: #059cb1;
+}
+
+header .container .log-in-acc .theme .h-btn {
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+}
+
 header .container .log-in-acc .theme .h-btn:hover {
+  background-color: #ccc;
   cursor: pointer;
 }
 
 header .container .log-in-acc .theme .h-btn .f-icon {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  color: #212529;
+}
+
+header .container .log-in-acc .theme .h-btn .f-icon.light {
+  display: block;
+}
+
+header .container .log-in-acc .theme .h-btn .f-icon.dark {
+  display: none;
 }
 
 header .container .log-in-acc .acc {
@@ -912,48 +1094,65 @@ header .container .log-in-acc .acc .h-btn img {
 }
 
 header .container .log-in-acc .acc .menu {
-  top: 75px;
-  min-width: 120px;
+  padding: 10px;
+  min-width: 150px;
+}
+
+header .container .log-in-acc .acc .menu ul {
+  gap: 5px;
+  padding: 0;
+}
+
+@media (max-width: 1240px) {
+  header .container .log-in-acc .acc .menu ul::after {
+    right: 0;
+  }
 }
 
 header .container .log-in-acc .acc .menu ul li {
-  width: calc(100% - 15px);
-  padding: 0;
-  text-align: center;
-}
-
-header .container .log-in-acc .acc .menu ul li:first-of-type span {
-  font-size: 0.9rem;
-  color: #fff;
-  background-color: #059cb1;
-  border-color: #059cb1;
-}
-
-header .container .log-in-acc .acc .menu ul li:first-of-type span:hover {
-  background-color: transparent;
-  color: #059cb1;
-}
-
-header .container .log-in-acc .acc .menu ul li:last-of-type span {
-  font-size: 0.85rem;
-  color: #fff;
-  background-color: #d20519;
-  border-color: #d20519;
-}
-
-header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
-  background-color: transparent;
-  color: #d20519;
-}
-
-header .container .log-in-acc .acc .menu ul li span {
   width: 100%;
-  display: block;
-  border: 1px solid;
+  padding: 0;
+}
+
+header .container .log-in-acc .acc .menu ul li a {
+  gap: 10px;
+  width: 100%;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
   text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+header .container .log-in-acc .acc .menu ul li a:hover {
+  background-color: #f9f9f9;
+  color: #059cb1;
+}
+
+header .container .log-in-acc .acc .menu ul li a:hover .f-icon {
+  color: #059cb1;
+}
+
+header .container .log-in-acc .acc .menu ul li a .f-icon {
+  color: #212529;
+}
+
+header .container .log-in-acc .acc .menu ul li a.danger {
+  font-size: 0.85rem;
+  color: #d20519;
+}
+
+header .container .log-in-acc .acc .menu ul li a.danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
+  color: #fff;
+}
+
+header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
+  color: #d20519;
 }
 
 header.scroll {
@@ -976,8 +1175,8 @@ header.scroll .container nav ul li.active a {
 
 body.dark header {
   background-color: #1d1d1d;
-  -webkit-box-shadow: 0px 9px 20px -15px #000;
-  box-shadow: 0px 9px 20px -15px #000;
+  -webkit-box-shadow: 0px 9px 20px -15px #212529;
+  box-shadow: 0px 9px 20px -15px #212529;
 }
 
 body.dark header .container .logo a h1 {
@@ -1058,29 +1257,62 @@ body.dark header .container .log-in-acc .lang .h-btn span {
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .theme .h-btn .f-icon {
-  color: #efefef;
-}
-
-body.dark header .container .log-in-acc .acc .menu ul li:first-of-type span {
-  color: #efefef;
-  background-color: rgba(5, 156, 177, 0.8705882353);
-  border-color: rgba(5, 156, 177, 0.8705882353);
-}
-
-body.dark header .container .log-in-acc .acc .menu ul li:first-of-type span:hover {
-  background-color: transparent;
+body.dark header .container .log-in-acc .lang .menu ul li:hover {
+  background-color: #1d1d1d;
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span {
-  color: #efefef;
-  background-color: #dc3545;
-  border-color: #dc3545;
+body.dark header .container .log-in-acc .theme .h-btn {
+  background-color: #222;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
-  background-color: transparent;
+body.dark header .container .log-in-acc .theme .h-btn:hover {
+  background-color: #323234;
+}
+
+body.dark header .container .log-in-acc .theme .h-btn .f-icon {
+  color: #fff;
+}
+
+body.dark header .container .log-in-acc .theme .h-btn .f-icon.light {
+  display: none;
+}
+
+body.dark header .container .log-in-acc .theme .h-btn .f-icon.dark {
+  display: block;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a {
+  color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a:hover {
+  background-color: #1d1d1d;
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a .f-icon {
+  color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a.danger {
+  color: #dc3545;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover {
+  background-color: #dc3545;
+  color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
+  color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
   color: #dc3545;
 }
 
@@ -1284,18 +1516,240 @@ body.dark footer .f-info .f-social>div a i {
 }
 
 main {
-  background-color: #eee;
   padding: 100px 0;
   position: relative;
 }
 
-@media (max-width: 767px) {
-  main {
-    padding-top: 150px;
+main .content .container .sec-head {
+  position: relative;
+  padding-bottom: 30px;
+}
+
+main .content .container .sec-head .back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+main .content .container .sec-head .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+
+main .content .container .sec-head .back-btn .f-icon {
+  font-size: 1rem;
+}
+
+main .content .container .sec-body form {
+  width: 100%;
+}
+
+main .content .container .sec-body form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+main .content .container .sec-body form .sec-flex {
+  gap: 20px;
+}
+
+@media (max-width: 1199px) {
+  main .content .container .sec-body form .sec-flex>section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
   }
 }
 
-main .content .container .sec-foot input[type=button] {
+@media (max-width: 991px) {
+  main .content .container .sec-body form .sec-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+}
+
+main .content .container .sec-body form .sec-flex .info {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+main .content .container .sec-body form .sec-flex .image {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+main .content .container .sec-body form .sec-flex .image h2 {
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload {
+  position: relative;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  max-width: 550px !important;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  z-index: 1;
+  bottom: -20px;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit input {
+  display: none;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: #059cb1;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:hover {
+  background-color: #028da0;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:after {
+  content: "upload";
+  color: #fff;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  position: relative;
+  border: 6px solid #fff;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  overflow: hidden;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div img {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  max-height: 280px !important;
+}
+
+main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div {
+  max-height: 280px !important;
+}
+
+main .content .container .sec-body form div {
+  width: 100%;
+  position: relative;
+}
+
+main .content .container .sec-body form div:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+main .content .container .sec-body form div input,
+main .content .container .sec-body form div textarea {
+  padding: 10px 15px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #59c1bd;
+  background-color: #f9f9f9;
+}
+
+main .content .container .sec-body form div input:focus,
+main .content .container .sec-body form div textarea:focus {
+  border-color: #059cb1;
+}
+
+main .content .container .sec-body form div input:focus::-webkit-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-moz-placeholder,
+main .content .container .sec-body form div textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus:-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-webkit-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-moz-placeholder,
+main .content .container .sec-body form div textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus:-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::-ms-input-placeholder,
+main .content .container .sec-body form div textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div input:focus::placeholder,
+main .content .container .sec-body form div textarea:focus::placeholder {
+  color: transparent;
+}
+
+main .content .container .sec-body form div textarea {
+  min-height: 300px;
+  resize: vertical;
+}
+
+main .content .container .sec-body form div.social .inputs>div {
+  margin-top: 0;
+}
+
+main .content .container .sec-body form input[type=submit] {
+  margin-top: 40px !important;
   width: 160px;
   margin: 0 auto;
   outline: none;
@@ -1305,7 +1759,7 @@ main .content .container .sec-foot input[type=button] {
   padding: 10px 20px;
 }
 
-main .content .container .sec-foot input[type=button]:hover {
+main .content .container .sec-body form input[type=submit]:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
@@ -1315,7 +1769,131 @@ body.dark main {
   background-color: #222;
 }
 
-body.dark main .content .container .sec-foot input[type=button] {
+body.dark main .content .container .sec-head .back-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #efefef;
+}
+
+body.dark main .content .container .sec-head .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+
+body.dark main .content .container .sec-head .back-btn .f-icon {
+  font-size: 1rem;
+}
+
+body.dark main .content .container .sec-head .back-btn:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form h2 {
+  color: #efefef;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload {
+  position: relative;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  left: 50%;
+  z-index: 1;
+  bottom: -20px;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit input {
+  display: none;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  margin-bottom: 0;
+  padding: 10px;
+  background-color: #059cb1;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:hover {
+  background-color: #028da0;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:after {
+  content: "upload";
+  color: #fff;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  position: relative;
+  border: 6px solid #fff;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  overflow: hidden;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview>div img {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 100%;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:hover {
+  background-color: #028da0;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-edit label:after {
+  color: #efefef;
+}
+
+body.dark main .content .container .sec-body form .sec-flex .image .avatar-upload .avatar-preview {
+  border-color: #1d1d1d;
+}
+
+body.dark main .content .container .sec-body form div input,
+body.dark main .content .container .sec-body form div textarea {
+  color: #ccc;
+  background-color: #1d1d1d;
+  border-bottom-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form div input:focus,
+body.dark main .content .container .sec-body form div textarea:focus {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content .container .sec-body form input[type=submit] {
   width: 160px;
   margin: 0 auto;
   outline: none;
@@ -1325,7 +1903,7 @@ body.dark main .content .container .sec-foot input[type=button] {
   padding: 10px 20px;
 }
 
-body.dark main .content .container .sec-foot input[type=button]:hover {
+body.dark main .content .container .sec-body form input[type=submit]:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;

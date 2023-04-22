@@ -42,6 +42,19 @@ body.dark .card .left form .gender .choices .choice input::after,
   -o-transform: translate(-50%, -50%);
 }
 
+body.dark .card .left form .buttons input[type=submit],
+body.dark .card .left form .buttons input[type=reset],
+body.dark .card .right .text a,
+.card .left form .buttons input[type=submit],
+.card .left form .buttons input[type=reset],
+.card .right .text a {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 .card {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;

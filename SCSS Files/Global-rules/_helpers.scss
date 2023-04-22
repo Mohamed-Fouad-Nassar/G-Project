@@ -1,72 +1,5 @@
 @use "./variables" as *;
 
-// mixins:-
-// @mixin check-box-shape($color, $theme) {
-//   cursor: pointer;
-//   position: relative;
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   appearance: none;
-//   width: 15px;
-//   height: 15px;
-//   margin: 0px;
-//   &::before,
-//   &::after {
-//     position: absolute;
-//   }
-//   &::before {
-//     content: "";
-//     width: 100%;
-//     height: 100%;
-//     border-radius: 2px;
-//     background-color: transparent;
-//     border: 1.5px solid $sec-color;
-//   }
-//   &:hover::before {
-//     border-color: $color;
-//   }
-//   &::after {
-//     content: "";
-//     left: 50%;
-//     top: 50%;
-//     width: 0;
-//     height: 0;
-//     border-radius: 2px;
-//     background-color: $color;
-//     transform: translate(-50%, -50%) rotate(3turn);
-//     -webkit-transform: translate(-50%, -50%) rotate(3turn);
-//     -moz-transform: translate(-50%, -50%) rotate(3turn);
-//     -ms-transform: translate(-50%, -50%) rotate(3turn);
-//     -o-transform: translate(-50%, -50%) rotate(3turn);
-//   }
-//   &:checked::after {
-//     content: "\f00c";
-//     font-family: "Font Awesome 6 Free";
-//     font-weight: 900;
-//     color: $white-color;
-//     left: calc(50% + 1px);
-//     top: calc(50% + 1px);
-//     font-size: 1rem;
-//     border: 2px solid $color;
-//     width: 100%;
-//     height: 101%;
-//     transform: translate(-50%, -50%) rotate(0);
-//     -webkit-transform: translate(-50%, -50%) rotate(0);
-//     -moz-transform: translate(-50%, -50%) rotate(0);
-//     -ms-transform: translate(-50%, -50%) rotate(0);
-//     -o-transform: translate(-50%, -50%) rotate(0);
-//     @extend %flex-center-center;
-//   }
-//   @if ($theme == "dark") {
-//     &::before {
-//       border-color: $sec-dark-color;
-//     }
-//     &:checked::after {
-//       color: $white-dark-color;
-//     }
-//   }
-// }
-
 @mixin check-box-shape($color, $theme) {
   cursor: pointer;
   position: relative;
@@ -112,7 +45,6 @@
     color: $white-color;
     left: 50%;
     top: 50%;
-    // padding: 5px;
     font-size: 0.85rem;
     border: 2px solid $color;
     width: 100%;
@@ -302,16 +234,16 @@
 @mixin hospital-pharmacy-card($theme) {
   position: relative;
   background-color: $white-color;
-  padding: 20px 20px 30px;
+  padding: $main-element-padding $main-element-padding 30px;
   .avatar {
     @extend %border-radius-50;
-    @include trans(10px, -50px);
+    @include trans($sec-element-padding, -50px);
     position: absolute;
     top: 0;
     right: 0;
     width: 130px;
     height: 130px;
-    border: 7px solid $light-white-color;
+    border: $field-top-padding solid $light-white-color;
     background-color: $light-white-color;
     overflow: hidden;
     img {
@@ -333,7 +265,7 @@
       }
       span {
         font-size: 0.9rem;
-        padding: 10px 0 20px;
+        padding: $sec-element-padding 0 $main-element-padding;
         display: block;
       }
       p {
@@ -353,14 +285,14 @@
         background-color: $light-white-color;
       }
       &::before {
-        top: 20px;
+        top: $main-element-padding;
       }
       &::after {
         bottom: -20px;
       }
       @include contact-info("light");
       position: relative;
-      padding-top: 40px;
+      padding-top: $main-element-padding * 2;
       .field {
         span {
           color: $sec-text-color;
@@ -370,7 +302,7 @@
     .contact {
       @include social-media-links("light");
       flex-wrap: nowrap;
-      padding-top: 40px;
+      padding-top: $main-element-padding * 2;
     }
   }
   @if ($theme == "dark") {
@@ -413,6 +345,7 @@
 @mixin sec-head($theme) {
   padding-bottom: $up-down-padding;
   text-align: center;
+  h1,
   h2 {
     font-size: 1.8rem;
     color: $main-color;
@@ -430,11 +363,85 @@
     }
   }
   @if ($theme == "dark") {
+    h1,
     h2 {
       color: $main-dark-color;
     }
     p {
       color: $sec-text-dark-color;
+    }
+  }
+}
+
+@mixin upload-image($theme) {
+  position: relative;
+  margin: 0 auto;
+  max-width: 350px;
+  width: 100%;
+  .avatar-edit {
+    @extend %translate-x-50;
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    z-index: 1;
+    bottom: -20px;
+    input {
+      display: none;
+    }
+    label {
+      @extend %ni-flex-center-center;
+      @extend %border-radius-50;
+      margin-bottom: 0;
+      padding: $sec-element-padding;
+      background-color: $main-color;
+      border: 1px solid transparent;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+      cursor: pointer;
+      font-weight: normal;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: $main-color-hover;
+      }
+      &:after {
+        content: "upload";
+        color: $white-color;
+      }
+    }
+  }
+  .avatar-preview {
+    width: 100%;
+    height: 100%;
+    max-height: 400px;
+    position: relative;
+    border: 6px solid $white-color;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    overflow: hidden;
+    > div {
+      @extend %flex-center-center;
+      width: 100%;
+      height: 100%;
+      max-height: 400px;
+      img {
+        flex: 1;
+        height: 100%;
+      }
+    }
+  }
+  @if ($theme == "dark") {
+    .avatar-edit {
+      label {
+        background-color: $main-dark-color;
+        &:hover {
+          background-color: $main-color-hover;
+        }
+        &:after {
+          color: $white-dark-color;
+        }
+      }
+    }
+    .avatar-preview {
+      border-color: $sec-dark-bg;
     }
   }
 }
@@ -445,7 +452,7 @@
   > span {
     display: block;
     flex: 1;
-    padding: 10px 15px;
+    padding: $sec-element-padding 15px;
     background-color: $sec-color;
     color: $white-color;
     font: {
@@ -459,9 +466,13 @@
     &:nth-of-type(2) {
       flex: 2;
     }
+    &:nth-last-of-type(2) {
+      min-width: 130px !important;
+      max-width: 160px !important;
+    }
     &:last-of-type {
       flex: 0;
-      min-width: 90px;
+      min-width: 130px;
     }
   }
   @if ($theme == "dark") {
@@ -481,28 +492,11 @@
       size: 1rem !important;
       weight: 500 !important;
     }
-    a {
-      display: inline-block;
-      padding: 4px 10px;
-      text-align: center;
-      border: 1px solid $main-color;
-      background-color: $main-color;
-      color: $white-color;
-      @media (max-width: 1199px) {
-        display: block;
-      }
-      &:hover {
-        background-color: transparent;
-        color: $main-color;
-      }
-    }
-    &:nth-last-of-type(2) {
-      padding: 5px 15px;
-    }
     &:last-of-type {
       @extend %flex-center-between;
-      padding: 7px 10px;
-      button {
+      padding: $field-top-padding $sec-element-padding;
+      gap: $sec-element-padding;
+      a {
         @extend %border-radius-5;
         @extend %ni-flex-center-center;
         border: none;
@@ -510,11 +504,9 @@
         color: $white-color;
         width: 30px;
         height: 30px;
-        &:first-of-type {
-          background-color: $main-color;
-          &:hover {
-            background-color: $sec-color;
-          }
+        background-color: $main-color;
+        &:hover {
+          background-color: $sec-color;
         }
         &:last-of-type {
           background-color: $error-input-color;
@@ -531,23 +523,12 @@
       font-weight: 400 !important;
       background-color: $main-dark-bg;
       color: $sec-text-dark-color;
-      a {
-        border-color: $main-dark-color;
-        background-color: $main-dark-color;
-        color: $white-dark-color;
-        &:hover {
-          background-color: transparent;
-          color: $main-dark-color;
-        }
-      }
       &:last-of-type {
-        button {
+        a {
           color: $white-dark-color;
-          &:first-of-type {
-            background-color: $main-dark-color;
-            &:hover {
-              background-color: $sec-dark-color;
-            }
+          background-color: $main-dark-color;
+          &:hover {
+            background-color: $sec-dark-color;
           }
           &:last-of-type {
             background-color: $light-danger-color;
@@ -615,6 +596,7 @@
 }
 
 @mixin button-shape($color, $theme) {
+  @extend %border-radius-5;
   @extend %flex-center-center;
   width: 160px;
   margin: 0 auto;
@@ -642,8 +624,8 @@
     a {
       @extend %ni-flex-center-center;
       @extend %border-radius-5;
-      width: 40px;
-      height: 40px;
+      width: $main-element-padding * 2;
+      height: $main-element-padding * 2;
       i {
         font-size: 1.5rem;
       }
@@ -708,6 +690,112 @@
   }
 }
 
+@mixin multiple-uploader($theme) {
+  .multiple-uploader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // border: 2px dashed #858585;
+    border: 2px dashed $sec-color;
+    border-bottom: solid $main-color;
+    background-color: $light-input-background;
+    min-height: 150px;
+    cursor: pointer;
+    width: 100%;
+    padding: $main-element-padding;
+    gap: $main-element-padding;
+    @if ($theme == "dark") {
+      border-color: $main-dark-color;
+      border-bottom-color: $sec-dark-color;
+      background-color: $sec-dark-bg;
+    }
+    .mup-msg {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        margin-bottom: $sec-element-padding;
+      }
+      .mup-main-msg {
+        color: #606060;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+      .mup-msg {
+        color: #737373;
+      }
+    }
+    .image-container {
+      margin: 0 !important;
+      width: 150px !important;
+      height: 150px !important;
+      position: relative;
+      pointer-events: unset;
+      cursor: auto;
+      &:before {
+        z-index: 3;
+        content: "\2716";
+        align-content: center;
+        font-size: $sec-element-padding;
+        font-weight: bold;
+        text-align: center;
+        line-height: 22px;
+        color: $white-color;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: $main-element-padding;
+        height: $main-element-padding;
+        border-radius: 50%;
+        background-color: #e50000;
+        pointer-events: all;
+        cursor: pointer;
+      }
+    }
+    .image-preview {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 0;
+    }
+    .image-size {
+      position: absolute;
+      z-index: 1;
+      height: 150px;
+      width: 150px;
+      backdrop-filter: blur(4px);
+      font-weight: bolder;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: unset;
+      color: $white-color;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .exceeded-size {
+      margin: 0 !important;
+      position: absolute !important;
+      z-index: 2;
+      height: 150px;
+      width: 150px;
+      display: flex;
+      font-weight: bold;
+      font-size: 12px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      color: $white-color;
+      background: rgba(255, 0, 0, 0.6);
+      pointer-events: unset;
+    }
+  }
+}
+
 // placeholders:-
 
 %transition {
@@ -736,6 +824,12 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
+}
+
+%flex-stretch-between {
+  display: flex;
+  align-items: stretch;
+  justify-content: between;
 }
 
 %flex-stretch-start {
@@ -785,19 +879,19 @@
 }
 
 %grid-200-20 {
-  @include grid(200px, 20px);
+  @include grid(200px, $main-element-padding);
 }
 
 %grid-250-20 {
-  @include grid(250px, 20px);
+  @include grid(250px, $main-element-padding);
 }
 
 %grid-300-20 {
-  @include grid(300px, 20px);
+  @include grid(300px, $main-element-padding);
 }
 
 %grid-350-20 {
-  @include grid(350px, 20px);
+  @include grid(350px, $main-element-padding);
 }
 
 %translate-50 {
@@ -812,12 +906,16 @@
   @include trans-y(-50%);
 }
 
+%translate-x-50 {
+  @include trans-x(-50%);
+}
+
 %border-radius-5 {
-  @include border-rad(5px);
+  @include border-rad($sec-element-padding / 2);
 }
 
 %border-radius-10 {
-  @include border-rad(10px);
+  @include border-rad($sec-element-padding);
 }
 
 %border-radius-50 {

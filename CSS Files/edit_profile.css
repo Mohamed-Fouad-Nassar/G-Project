@@ -63,7 +63,6 @@ body.dark footer .f-info .f-social {
   justify-content: flex-start;
 }
 
-header .container .log-in-acc .acc .menu ul li span,
 header .container .log-in-acc .acc .menu ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,8 +129,9 @@ main .content .container form .top-sec .right .gender .choices .choice input::af
 .head-shape span::before,
 .head-shape-w span::after,
 .head-shape-w span::before,
-main .content .container form .top-sec .right section .sec-flex::after,
-main .content .container form .top-sec .right .field::after {
+body.dark .error-message::after,
+.error-message::after,
+.success-message::after {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -139,13 +139,30 @@ main .content .container form .top-sec .right .field::after {
   -o-transform: translateY(-50%);
 }
 
+body.dark main .content .container form .buttons input[type=submit],
+body.dark main .content .container form .buttons input[type=reset],
+main .content .container form .button input[type=submit],
+main .content .container form .button input[type=reset],
 footer .container .f-info .f-social>div a,
-body.dark footer .f-info .f-social>div a {
+body.dark footer .f-info .f-social>div a,
+header .container .account a,
+body.dark header .container .account a,
+section .container .sec-foot a,
+.dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
   -ms-border-radius: 5px !important;
   -o-border-radius: 5px !important;
+}
+
+.box,
+.card {
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
 }
 
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::before,
@@ -183,8 +200,9 @@ header .container .log-in-acc article>.menu {
   user-select: none;
 }
 
-main .content .container form .top-sec .right section .sec-flex::after,
-main .content .container form .top-sec .right .field::after {
+.success-message::after {
+  content: "\f058";
+  color: #1ad922;
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -228,6 +246,10 @@ input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
+}
+
+input[type=email] {
+  text-transform: initial !important;
 }
 
 input {
@@ -350,7 +372,8 @@ input {
 /* End Selection Styling */
 /* Start Scroll Bar Styling:- */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -455,6 +478,7 @@ section .container .sec-head {
   text-align: center;
 }
 
+section .container .sec-head h1,
 section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -496,6 +520,7 @@ section .container .sec-foot a:hover {
   text-align: center;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -512,6 +537,7 @@ section .container .sec-foot a:hover {
   margin-bottom: 20px;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
@@ -596,6 +622,53 @@ main .top a:hover i {
 }
 
 /* End Top Button Styling */
+/* Start Error message and Success sign Styling:- */
+body.dark .error-message {
+  border-bottom-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+body.dark .error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  color: #fd5151;
+}
+
+body.dark .error-message span:first-of-type {
+  background-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+.error-message {
+  border-bottom-color: #fb0505 !important;
+}
+
+.error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.error-message span:first-of-type {
+  background-color: #fb0505 !important;
+}
+
+.success-message {
+  border-bottom-color: #1ad922 !important;
+}
+
+.success-message span:first-of-type {
+  background-color: #1ad922 !important;
+}
+
+/* End Error message and Success sign Styling */
 header {
   background-color: #eee;
   -webkit-box-shadow: -1px 1px 20px -15px #212529;
@@ -1049,7 +1122,6 @@ header .container .log-in-acc .acc .menu ul li {
   padding: 0;
 }
 
-header .container .log-in-acc .acc .menu ul li span,
 header .container .log-in-acc .acc .menu ul li a {
   gap: 10px;
   width: 100%;
@@ -1057,9 +1129,6 @@ header .container .log-in-acc .acc .menu ul li a {
   padding-left: 10px;
   padding-right: 10px;
   text-transform: capitalize;
-}
-
-header .container .log-in-acc .acc .menu ul li a {
   font-size: 0.9rem;
 }
 
@@ -1068,14 +1137,30 @@ header .container .log-in-acc .acc .menu ul li a:hover {
   color: #059cb1;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span {
+header .container .log-in-acc .acc .menu ul li a:hover .f-icon {
+  color: #059cb1;
+}
+
+header .container .log-in-acc .acc .menu ul li a .f-icon {
+  color: #212529;
+}
+
+header .container .log-in-acc .acc .menu ul li a.danger {
   font-size: 0.85rem;
   color: #d20519;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+header .container .log-in-acc .acc .menu ul li a.danger:hover {
   background-color: #dc3545;
   color: #fff;
+}
+
+header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
+  color: #fff;
+}
+
+header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
+  color: #d20519;
 }
 
 header.scroll {
@@ -1205,7 +1290,6 @@ body.dark header .container .log-in-acc .theme .h-btn .f-icon.dark {
   display: block;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li span,
 body.dark header .container .log-in-acc .acc .menu ul li a {
   color: #efefef;
 }
@@ -1215,13 +1299,29 @@ body.dark header .container .log-in-acc .acc .menu ul li a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span {
+body.dark header .container .log-in-acc .acc .menu ul li a:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a .f-icon {
+  color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a.danger {
   color: #dc3545;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover {
   background-color: #dc3545;
   color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
+  color: #efefef;
+}
+
+body.dark header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
+  color: #dc3545;
 }
 
 body.dark header.scroll {

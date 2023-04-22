@@ -263,6 +263,15 @@ input {
 }
 
 /* End Animation Styling */
+.box,
+.card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 /* Start Selection Styling:- */
 ::-moz-selection {
   background: #212529;
@@ -287,7 +296,8 @@ input {
 /* End Selection Styling */
 /* Start Scroll Bar Styling:- */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -392,6 +402,7 @@ section .container .sec-head {
   text-align: center;
 }
 
+section .container .sec-head h1,
 section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -433,6 +444,7 @@ section .container .sec-foot a:hover {
   text-align: center;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -449,6 +461,7 @@ section .container .sec-foot a:hover {
   margin-bottom: 20px;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }

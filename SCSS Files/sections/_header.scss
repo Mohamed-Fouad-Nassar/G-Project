@@ -320,7 +320,6 @@ header {
             li {
               width: 100%;
               padding: 0;
-              span,
               a {
                 @extend %flex-center-;
                 gap: 10px;
@@ -330,8 +329,6 @@ header {
                   right: $sec-element-padding;
                 }
                 text-transform: capitalize;
-              }
-              a {
                 font-size: 0.9rem;
                 &:hover {
                   background-color: $light-input-background;
@@ -343,9 +340,7 @@ header {
                 .f-icon {
                   color: $black-color;
                 }
-              }
-              &:last-of-type {
-                span {
+                &.danger {
                   font-size: 0.85rem;
                   color: $light-danger-color;
                   &:hover {
@@ -517,9 +512,7 @@ body {
                     .f-icon {
                       color: $white-dark-color;
                     }
-                  }
-                  &:last-of-type {
-                    span {
+                    &.danger {
                       color: $dark-danger-color;
                       &:hover {
                         background-color: $dark-danger-color;

@@ -36,7 +36,6 @@ body {
   background-size: cover;
   min-height: 100vh;
   @extend %flex-center-center;
-  // background-color: $light-white-color;
   background-color: #ebfcff;
   &.dark {
     &::before {

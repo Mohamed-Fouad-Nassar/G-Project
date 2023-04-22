@@ -60,7 +60,6 @@ body.dark footer .f-info .f-social {
   justify-content: flex-start;
 }
 
-header .container .log-in-acc .acc .menu ul li span,
 header .container .log-in-acc .acc .menu ul li a {
   display: flex;
   align-items: center;
@@ -140,18 +139,38 @@ body.dark .error-message::after,
 }
 
 main .doctors .container .sec-body .box .info .contact>div a,
+main .hospitals .container .sec-body .text a,
 main .pharmacies .container .sec-body .box .data .contact>div a,
 main .contacts .container .sec-body .sec-left .social-icon>div>div a,
+main .contacts .container .sec-body .sec-right form input[type=submit],
 body.dark main .doctors .container .sec-body .box .info .contact>div a,
+body.dark main .hospitals .container .sec-body .text a,
 body.dark main .pharmacies .container .sec-body .box .data .contact>div a,
 body.dark main .contacts .container .sec-body .sec-left .social-icon>div a,
+body.dark main .contacts .container .sec-body .sec-right form input[type=submit],
 footer .container .f-info .f-social>div a,
-body.dark footer .f-info .f-social>div a {
+body.dark footer .f-info .f-social>div a,
+header .container .account a,
+body.dark header .container .account a,
+section .container .sec-foot a,
+.dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
   -ms-border-radius: 5px !important;
   -o-border-radius: 5px !important;
+}
+
+main .medicine .container .sec-body .box::before,
+main .hospitals .container .sec-body,
+main .charities .container .sec-body .slider .slider-container .slides .slide,
+.box,
+.card {
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
 }
 
 main .services .container .sec-body .box a .f-icon,
@@ -360,7 +379,8 @@ input {
 /* End Selection Styling */
 /* Start Scroll Bar Styling:- */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -465,6 +485,7 @@ section .container .sec-head {
   text-align: center;
 }
 
+section .container .sec-head h1,
 section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -506,6 +527,7 @@ section .container .sec-foot a:hover {
   text-align: center;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -522,6 +544,7 @@ section .container .sec-foot a:hover {
   margin-bottom: 20px;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
@@ -1072,7 +1095,6 @@ header .container .log-in-acc .acc .menu ul li {
   padding: 0;
 }
 
-header .container .log-in-acc .acc .menu ul li span,
 header .container .log-in-acc .acc .menu ul li a {
   gap: 10px;
   width: 100%;
@@ -1080,9 +1102,6 @@ header .container .log-in-acc .acc .menu ul li a {
   padding-left: 10px;
   padding-right: 10px;
   text-transform: capitalize;
-}
-
-header .container .log-in-acc .acc .menu ul li a {
   font-size: 0.9rem;
 }
 
@@ -1099,21 +1118,21 @@ header .container .log-in-acc .acc .menu ul li a .f-icon {
   color: #212529;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span {
+header .container .log-in-acc .acc .menu ul li a.danger {
   font-size: 0.85rem;
   color: #d20519;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+header .container .log-in-acc .acc .menu ul li a.danger:hover {
   background-color: #dc3545;
   color: #fff;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span:hover .f-icon {
+header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
   color: #fff;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span .f-icon {
+header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
   color: #d20519;
 }
 
@@ -1259,20 +1278,20 @@ body.dark header .container .log-in-acc .acc .menu ul li a .f-icon {
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger {
   color: #dc3545;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover {
   background-color: #dc3545;
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover .f-icon {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span .f-icon {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
   color: #dc3545;
 }
 
@@ -2078,6 +2097,7 @@ main .charities .container .sec-body .slider .slider-container .slides {
 main .charities .container .sec-body .slider .slider-container .slides .slide {
   background-color: #eee;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
 }
 
 @media (min-width: 992px) {

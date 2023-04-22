@@ -18,6 +18,15 @@ main .content .container .sec-body {
   gap: 20px;
 }
 
+main .content .container .sec-foot input[type=button],
+body.dark main .content .container .sec-foot input[type=button] {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 main .content .container .sec-body .box:hover {
   transform: none !important;
   -webkit-transform: none !important;

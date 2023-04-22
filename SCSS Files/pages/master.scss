@@ -191,6 +191,7 @@ main {
         .box {
           &::before {
             @extend %translate-50;
+            @extend %border-radius-10;
             content: "";
             position: absolute;
             top: 50%;
@@ -277,6 +278,7 @@ main {
     padding: $up-down-padding 0;
     .container {
       .sec-body {
+        @extend %border-radius-10;
         @extend %flex--between;
         background-color: $light-white-color;
         @media (max-width: 991px) {
@@ -355,9 +357,11 @@ main {
               width: 100%;
               padding-bottom: 40px;
               .slide {
+                @extend %border-radius-10;
                 @extend %user-select-none;
                 background-color: $light-white-color;
                 box-shadow: $main-box-shadow;
+                overflow: hidden;
                 @media (min-width: 992px) {
                   width: calc((100% - 30px) / 3);
                 }

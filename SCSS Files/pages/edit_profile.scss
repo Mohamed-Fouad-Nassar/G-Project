@@ -22,7 +22,6 @@ body {
       }
       .content {
         .container {
-          // box-shadow: $dark-box-shadow;
           .back-btn {
             @include back-btn(
               $main-element-padding,
@@ -160,7 +159,6 @@ main {
   padding: $up-down-padding 0;
   @media (max-width: 767px) {
     padding: {
-      // top: 150px;
       left: $sec-element-padding;
       right: $sec-element-padding;
     }
@@ -183,7 +181,6 @@ main {
     .container {
       position: relative;
       max-width: 1050px;
-      // box-shadow: $light-form-shadow;
       .back-btn {
         @include back-btn($main-element-padding, $sec-element-padding, light);
         left: 20px !important;

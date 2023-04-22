@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../CSS Files/swiper-bundle.min.css" />
     <!-- main css file -->
     <link rel="stylesheet" href="../CSS Files/dashboard.css" />
+    <link rel="stylesheet" href="../CSS Files/dashboard_dark.css" />
     <!-- font open-sans files -->
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -170,7 +171,7 @@
         <div class="links">
           <ul>
             <li class="aside-link">
-              <a class="active" data-name="dashboard">
+              <a data-name="dashboard">
                 <i class="f-icon fa-regular fa-chart-bar"></i>
                 <span>dashboard</span>
               </a>
@@ -217,7 +218,7 @@
       <!-- End Aside -->
       <!-- Start Content  -->
       <section class="content">
-        <div class="dashboard active" data-name="dashboard">
+        <div class="dashboard" data-name="dashboard">
           <article class="doctors">
             <div class="head">
               <h2>doctors</h2>
@@ -225,7 +226,9 @@
             <div class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_doctor.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -240,7 +243,9 @@
             <div class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_medicine.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -255,7 +260,9 @@
             <div class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_hospital.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -270,7 +277,9 @@
             <div class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_pharmacy.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -285,7 +294,9 @@
             <div class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_article.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -300,7 +311,9 @@
             <div class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_charity.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -317,7 +330,9 @@
             <article class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_doctor.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -328,9 +343,8 @@
               <div class="table">
                 <div class="tab-head">
                   <span>no.</span>
-                  <span>title</span>
+                  <span>name</span>
                   <span>date</span>
-                  <span>details</span>
                   <span>actions</span>
                 </div>
                 <div class="tab-body">
@@ -339,16 +353,19 @@
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -357,16 +374,19 @@
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -375,16 +395,19 @@
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -393,16 +416,19 @@
                     <span>4</span>
                     <span>item 4</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -411,16 +437,19 @@
                     <span>5</span>
                     <span>item 5</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -429,16 +458,19 @@
                     <span>6</span>
                     <span>item 6</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -447,16 +479,19 @@
                     <span>8</span>
                     <span>item 8</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -465,16 +500,19 @@
                     <span>9</span>
                     <span>item 9</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -483,178 +521,124 @@
                     <span>10</span>
                     <span>item 10</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>1</span>
-                    <span>item 1</span>
+                    <span>11</span>
+                    <span>item 11</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>2</span>
-                    <span>item 2</span>
+                    <span>12</span>
+                    <span>item 12</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>3</span>
-                    <span>item 3</span>
+                    <span>13</span>
+                    <span>item 13</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div href="./modify-pages/modify_doctor.html" class="item">
+                    <span>14</span>
+                    <span>item 14</span>
+                    <span>1 jun 2022</span>
+                    <span>
+                      <a class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>4</span>
-                    <span>item 4</span>
+                    <span>15</span>
+                    <span>item 15</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>5</span>
-                    <span>item 5</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>6</span>
-                    <span>item 6</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>8</span>
-                    <span>item 8</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>9</span>
-                    <span>item 9</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>10</span>
-                    <span>item 10</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -671,7 +655,9 @@
             <article class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_medicine.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -682,9 +668,8 @@
               <div class="table">
                 <div class="tab-head">
                   <span>no.</span>
-                  <span>title</span>
+                  <span>name</span>
                   <span>date</span>
-                  <span>details</span>
                   <span>actions</span>
                 </div>
                 <div class="tab-body">
@@ -693,16 +678,19 @@
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -711,16 +699,19 @@
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -729,16 +720,19 @@
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -747,16 +741,19 @@
                     <span>4</span>
                     <span>item 4</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -765,16 +762,19 @@
                     <span>5</span>
                     <span>item 5</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -783,16 +783,19 @@
                     <span>6</span>
                     <span>item 6</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -801,16 +804,19 @@
                     <span>8</span>
                     <span>item 8</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -819,16 +825,19 @@
                     <span>9</span>
                     <span>item 9</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -837,178 +846,124 @@
                     <span>10</span>
                     <span>item 10</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>1</span>
-                    <span>item 1</span>
+                    <span>11</span>
+                    <span>item 11</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>2</span>
-                    <span>item 2</span>
+                    <span>12</span>
+                    <span>item 12</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>3</span>
-                    <span>item 3</span>
+                    <span>13</span>
+                    <span>item 13</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div href="./modify-pages/modify_doctor.html" class="item">
+                    <span>14</span>
+                    <span>item 14</span>
+                    <span>1 jun 2022</span>
+                    <span>
+                      <a class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>4</span>
-                    <span>item 4</span>
+                    <span>15</span>
+                    <span>item 15</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>5</span>
-                    <span>item 5</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>6</span>
-                    <span>item 6</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>8</span>
-                    <span>item 8</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>9</span>
-                    <span>item 9</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>10</span>
-                    <span>item 10</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1025,7 +980,9 @@
             <article class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_hospital.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -1036,9 +993,8 @@
               <div class="table">
                 <div class="tab-head">
                   <span>no.</span>
-                  <span>title</span>
+                  <span>name</span>
                   <span>date</span>
-                  <span>details</span>
                   <span>actions</span>
                 </div>
                 <div class="tab-body">
@@ -1047,16 +1003,19 @@
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1065,16 +1024,19 @@
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1083,16 +1045,19 @@
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1101,16 +1066,19 @@
                     <span>4</span>
                     <span>item 4</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1119,16 +1087,19 @@
                     <span>5</span>
                     <span>item 5</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1137,16 +1108,19 @@
                     <span>6</span>
                     <span>item 6</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1155,16 +1129,19 @@
                     <span>8</span>
                     <span>item 8</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1173,16 +1150,19 @@
                     <span>9</span>
                     <span>item 9</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1191,178 +1171,124 @@
                     <span>10</span>
                     <span>item 10</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>1</span>
-                    <span>item 1</span>
+                    <span>11</span>
+                    <span>item 11</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>2</span>
-                    <span>item 2</span>
+                    <span>12</span>
+                    <span>item 12</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>3</span>
-                    <span>item 3</span>
+                    <span>13</span>
+                    <span>item 13</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div href="./modify-pages/modify_doctor.html" class="item">
+                    <span>14</span>
+                    <span>item 14</span>
+                    <span>1 jun 2022</span>
+                    <span>
+                      <a class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>4</span>
-                    <span>item 4</span>
+                    <span>15</span>
+                    <span>item 15</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>5</span>
-                    <span>item 5</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>6</span>
-                    <span>item 6</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>8</span>
-                    <span>item 8</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>9</span>
-                    <span>item 9</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>10</span>
-                    <span>item 10</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1379,7 +1305,9 @@
             <article class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_pharmacy.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -1390,9 +1318,8 @@
               <div class="table">
                 <div class="tab-head">
                   <span>no.</span>
-                  <span>title</span>
+                  <span>name</span>
                   <span>date</span>
-                  <span>details</span>
                   <span>actions</span>
                 </div>
                 <div class="tab-body">
@@ -1401,16 +1328,19 @@
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1419,16 +1349,19 @@
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1437,16 +1370,19 @@
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1455,16 +1391,19 @@
                     <span>4</span>
                     <span>item 4</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1473,16 +1412,19 @@
                     <span>5</span>
                     <span>item 5</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1491,16 +1433,19 @@
                     <span>6</span>
                     <span>item 6</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1509,16 +1454,19 @@
                     <span>8</span>
                     <span>item 8</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1527,16 +1475,19 @@
                     <span>9</span>
                     <span>item 9</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1545,178 +1496,124 @@
                     <span>10</span>
                     <span>item 10</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>1</span>
-                    <span>item 1</span>
+                    <span>11</span>
+                    <span>item 11</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>2</span>
-                    <span>item 2</span>
+                    <span>12</span>
+                    <span>item 12</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>3</span>
-                    <span>item 3</span>
+                    <span>13</span>
+                    <span>item 13</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div href="./modify-pages/modify_doctor.html" class="item">
+                    <span>14</span>
+                    <span>item 14</span>
+                    <span>1 jun 2022</span>
+                    <span>
+                      <a class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>4</span>
-                    <span>item 4</span>
+                    <span>15</span>
+                    <span>item 15</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>5</span>
-                    <span>item 5</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>6</span>
-                    <span>item 6</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>8</span>
-                    <span>item 8</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>9</span>
-                    <span>item 9</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>10</span>
-                    <span>item 10</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1733,7 +1630,9 @@
             <article class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_article.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -1744,9 +1643,8 @@
               <div class="table">
                 <div class="tab-head">
                   <span>no.</span>
-                  <span>title</span>
+                  <span>name</span>
                   <span>date</span>
-                  <span>details</span>
                   <span>actions</span>
                 </div>
                 <div class="tab-body">
@@ -1755,16 +1653,19 @@
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1773,16 +1674,19 @@
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1791,16 +1695,19 @@
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1809,16 +1716,19 @@
                     <span>4</span>
                     <span>item 4</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1827,16 +1737,19 @@
                     <span>5</span>
                     <span>item 5</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1845,16 +1758,19 @@
                     <span>6</span>
                     <span>item 6</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1863,16 +1779,19 @@
                     <span>8</span>
                     <span>item 8</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1881,16 +1800,19 @@
                     <span>9</span>
                     <span>item 9</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -1899,178 +1821,124 @@
                     <span>10</span>
                     <span>item 10</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>1</span>
-                    <span>item 1</span>
+                    <span>11</span>
+                    <span>item 11</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>2</span>
-                    <span>item 2</span>
+                    <span>12</span>
+                    <span>item 12</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>3</span>
-                    <span>item 3</span>
+                    <span>13</span>
+                    <span>item 13</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div href="./modify-pages/modify_doctor.html" class="item">
+                    <span>14</span>
+                    <span>item 14</span>
+                    <span>1 jun 2022</span>
+                    <span>
+                      <a class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>4</span>
-                    <span>item 4</span>
+                    <span>15</span>
+                    <span>item 15</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>5</span>
-                    <span>item 5</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>6</span>
-                    <span>item 6</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>8</span>
-                    <span>item 8</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>9</span>
-                    <span>item 9</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>10</span>
-                    <span>item 10</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2087,7 +1955,9 @@
             <article class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <i class="f-icon fa-solid fa-circle-plus"></i>
+                <a href="./modify-pages/modify_charity.html">
+                  <i class="f-icon fa-solid fa-circle-plus"></i>
+                </a>
               </div>
               <div class="items-num">
                 <h3>number of item</h3>
@@ -2098,9 +1968,8 @@
               <div class="table">
                 <div class="tab-head">
                   <span>no.</span>
-                  <span>title</span>
+                  <span>name</span>
                   <span>date</span>
-                  <span>details</span>
                   <span>actions</span>
                 </div>
                 <div class="tab-body">
@@ -2109,16 +1978,19 @@
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2127,16 +1999,19 @@
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2145,16 +2020,19 @@
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2163,16 +2041,19 @@
                     <span>4</span>
                     <span>item 4</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2181,16 +2062,19 @@
                     <span>5</span>
                     <span>item 5</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2199,16 +2083,19 @@
                     <span>6</span>
                     <span>item 6</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2217,16 +2104,19 @@
                     <span>8</span>
                     <span>item 8</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2235,16 +2125,19 @@
                     <span>9</span>
                     <span>item 9</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
@@ -2253,178 +2146,124 @@
                     <span>10</span>
                     <span>item 10</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>1</span>
-                    <span>item 1</span>
+                    <span>11</span>
+                    <span>item 11</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>2</span>
-                    <span>item 2</span>
+                    <span>12</span>
+                    <span>item 12</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>3</span>
-                    <span>item 3</span>
+                    <span>13</span>
+                    <span>item 13</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
+                      </a>
+                    </span>
+                  </div>
+                  <!-- End Item -->
+                  <!-- Start Item -->
+                  <div href="./modify-pages/modify_doctor.html" class="item">
+                    <span>14</span>
+                    <span>item 14</span>
+                    <span>1 jun 2022</span>
+                    <span>
+                      <a class="edit">
+                        <i class="f-icon fa-solid fa-pencil"></i>
+                        <!-- edit -->
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
+                        <i class="f-icon fa-solid fa-trash-can"></i>
+                        <!-- remove -->
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
-                    <span>4</span>
-                    <span>item 4</span>
+                    <span>15</span>
+                    <span>item 15</span>
                     <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
                     <span>
-                      <button class="edit">
+                      <a href="./modify-pages/modify_doctor.html" class="edit">
                         <i class="f-icon fa-solid fa-pencil"></i>
                         <!-- edit -->
-                      </button>
-                      <button class="remove">
+                      </a>
+                      <a class="seeMore">
+                        <i class="f-icon fa-solid fa-eye"></i>
+                        <!-- see more -->
+                      </a>
+                      <a class="remove">
                         <i class="f-icon fa-solid fa-trash-can"></i>
                         <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>5</span>
-                    <span>item 5</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>6</span>
-                    <span>item 6</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>8</span>
-                    <span>item 8</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>9</span>
-                    <span>item 9</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
-                    </span>
-                  </div>
-                  <!-- End Item -->
-                  <!-- Start Item -->
-                  <div class="item">
-                    <span>10</span>
-                    <span>item 10</span>
-                    <span>1 jun 2022</span>
-                    <span><a href="">see more</a></span>
-                    <span>
-                      <button class="edit">
-                        <i class="f-icon fa-solid fa-pencil"></i>
-                        <!-- edit -->
-                      </button>
-                      <button class="remove">
-                        <i class="f-icon fa-solid fa-trash-can"></i>
-                        <!-- remove -->
-                      </button>
+                      </a>
                     </span>
                   </div>
                   <!-- End Item -->

@@ -14,8 +14,15 @@ main {
   background-color: #eee;
   min-height: calc(100vh - 544px);
   padding: 0;
+  padding-top: 100px;
   padding-bottom: 40px;
   position: relative;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 150px;
+  }
 }
 
 main .container {

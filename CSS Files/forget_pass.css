@@ -37,7 +37,9 @@ main .top a {
 .head-shape span::before,
 .head-shape-w span::after,
 .head-shape-w span::before,
-.card .body form section .field::after {
+body.dark .error-message::after,
+.error-message::after,
+.success-message::after {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -70,7 +72,9 @@ i {
   -o-transition: 0s !important;
 }
 
-.card .body form section .field::after {
+.success-message::after {
+  content: "\f058";
+  color: #1ad922;
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -113,6 +117,10 @@ input[type=reset],
 input[type=button],
 a {
   cursor: pointer;
+}
+
+input[type=email] {
+  text-transform: initial !important;
 }
 
 input {
@@ -211,6 +219,15 @@ input {
 }
 
 /* End Animation Styling */
+.box,
+.card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 /* Start Selection Styling:- */
 ::-moz-selection {
   background: #212529;
@@ -235,7 +252,8 @@ input {
 /* End Selection Styling */
 /* Start Scroll Bar Styling:- */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -340,6 +358,7 @@ section .container .sec-head {
   text-align: center;
 }
 
+section .container .sec-head h1,
 section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -381,6 +400,7 @@ section .container .sec-foot a:hover {
   text-align: center;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -397,6 +417,7 @@ section .container .sec-foot a:hover {
   margin-bottom: 20px;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
@@ -481,6 +502,53 @@ main .top a:hover i {
 }
 
 /* End Top Button Styling */
+/* Start Error message and Success sign Styling:- */
+body.dark .error-message {
+  border-bottom-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+body.dark .error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  color: #fd5151;
+}
+
+body.dark .error-message span:first-of-type {
+  background-color: rgba(255, 60, 60, 0.8705882353) !important;
+}
+
+.error-message {
+  border-bottom-color: #fb0505 !important;
+}
+
+.error-message::after {
+  content: "\f057";
+  color: #fb0505;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.error-message span:first-of-type {
+  background-color: #fb0505 !important;
+}
+
+.success-message {
+  border-bottom-color: #1ad922 !important;
+}
+
+.success-message span:first-of-type {
+  background-color: #1ad922 !important;
+}
+
+/* End Error message and Success sign Styling */
 body {
   background-image: url(../../Data/un-used-Images/11852427_4858794.jpg);
   background-position: center;

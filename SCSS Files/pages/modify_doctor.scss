@@ -1,0 +1,168 @@
+// import global rules
+// @use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+// @use "../sections/header" as *;
+// import footer styling:-
+// @use "../sections/footer" as *;
+
+// additional page styling
+// Start Main Styling:-
+main {
+  padding: $up-down-padding 0;
+  position: relative;
+  .content {
+    .container {
+      .sec-head {
+        position: relative;
+        padding-bottom: 30px;
+        .back-btn {
+          @include back-btn(0, 0, "light");
+        }
+      }
+      .sec-body {
+        form {
+          width: 100%;
+          h2 {
+            font-size: 1.5rem;
+            margin-bottom: $sec-element-padding;
+          }
+          .sec-flex {
+            @extend %flex-stretch-between;
+            gap: $main-element-padding;
+            @media (max-width: 991px) {
+              flex-direction: column-reverse;
+              gap: 40px;
+            }
+            .info {
+              flex: 1;
+            }
+            .image {
+              @extend %flex-center-center;
+              flex-direction: column;
+              h2 {
+                align-self: baseline;
+              }
+              .avatar-upload {
+                @include upload-image("light");
+              }
+            }
+          }
+          div {
+            width: 100%;
+            position: relative;
+            &:not(:first-of-type) {
+              margin-top: 30px;
+            }
+            input,
+            textarea {
+              padding: $sec-element-padding 15px;
+              width: 100%;
+              outline: none;
+              border: none;
+              border-bottom: 2px solid $sec-color;
+              background-color: $light-input-background;
+              &:focus {
+                @include placeholder-color(transparent);
+                border-color: $main-color;
+              }
+            }
+            textarea {
+              min-height: 300px;
+              resize: vertical;
+            }
+            // &.success::after,
+            // &.error::after {
+            //   font-weight: 900;
+            //   font-family: "Font Awesome 5 Free";
+            //   position: absolute;
+            //   top: 50%;
+            //   right: $sec-element-padding;
+            //   @include trans-y(-50%);
+            // }
+            // &.success {
+            //   &::after {
+            //     content: "\f058";
+            //     color: $success-input-color;
+            //   }
+            //   > input,
+            //   > textarea {
+            //     border-color: $success-input-color;
+            //   }
+            // }
+            // &.error {
+            //   &::after {
+            //     content: "\f057";
+            //     color: $error-input-color;
+            //   }
+            //   > input,
+            //   > textarea {
+            //     border-bottom-color: $error-input-color;
+            //   }
+            // }
+            &.social {
+              .inputs {
+                @extend %grid-350-20;
+                > div {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+          input[type="submit"] {
+            margin-top: $main-element-padding * 2 !important;
+            @include button-shape($main-color, "light");
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      .content {
+        .container {
+          .sec-head {
+            .back-btn {
+              @include back-btn(0, 0, "dark");
+            }
+          }
+          .sec-body {
+            form {
+              h2 {
+                color: $white-dark-color;
+              }
+              .sec-flex {
+                .image {
+                  .avatar-upload {
+                    @include upload-image("dark");
+                  }
+                }
+              }
+              div {
+                input,
+                textarea {
+                  color: $dark-white-color;
+                  background-color: $sec-dark-bg;
+                  border-bottom-color: $sec-dark-color;
+                  &:focus {
+                    border-color: $main-dark-color;
+                  }
+                }
+              }
+              input[type="submit"] {
+                @include button-shape($main-color, "dark");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

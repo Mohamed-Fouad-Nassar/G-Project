@@ -65,6 +65,17 @@ main .content .container form .top-sec .right .gender .choices .choice input::af
   -o-transform: translate(-50%, -50%);
 }
 
+body.dark main .content .container form .buttons input[type=submit],
+body.dark main .content .container form .buttons input[type=reset],
+main .content .container form .button input[type=submit],
+main .content .container form .button input[type=reset] {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::before,
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::after,
 main .content .container form .top-sec .right .gender .choices .choice input::before,

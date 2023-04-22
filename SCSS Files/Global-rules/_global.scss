@@ -75,8 +75,8 @@ input {
 }
 
 .container {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: $sec-element-padding;
+  padding-right: $sec-element-padding;
   margin-right: auto;
   margin-left: auto;
 }
@@ -85,7 +85,7 @@ input {
 
 @media (max-width: 575px) {
   .container {
-    padding: 0 10px;
+    padding: 0 $sec-element-padding;
     width: 100%;
   }
 }
@@ -144,23 +144,28 @@ input {
 
 @-webkit-keyframes left-right-btn {
   from {
-    margin-left: 10px;
+    margin-left: $sec-element-padding;
   }
   to {
-    margin-right: 10px;
+    margin-right: $sec-element-padding;
   }
 }
 
 @keyframes left-right-btn {
   from {
-    margin-left: 10px;
+    margin-left: $sec-element-padding;
   }
   to {
-    margin-right: 10px;
+    margin-right: $sec-element-padding;
   }
 }
 
 /* End Animation Styling */
+
+.box,
+.card {
+  @extend %border-radius-10;
+}
 
 /* Start Selection Styling:- */
 
@@ -190,7 +195,8 @@ input {
 /* Start Scroll Bar Styling:- */
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: $sec-element-padding;
+  height: $sec-element-padding;
 }
 
 ::-webkit-scrollbar-track {
@@ -245,10 +251,10 @@ input {
       top: 50%;
     }
     &::before {
-      left: 5px;
+      left: $sec-element-padding / 2;
     }
     &::after {
-      right: 5px;
+      right: $sec-element-padding / 2;
     }
   }
 }
@@ -321,7 +327,7 @@ section {
 
 /* Start Top Button Styling:- */
 main {
-  padding-top: 100px;
+  padding-top: $up-down-padding;
   @media (max-width: 767px) {
     padding-top: 150px !important;
   }
@@ -333,8 +339,8 @@ main {
     z-index: 100000;
     a {
       @extend %flex-center-center;
-      width: 40px;
-      height: 40px;
+      width: $main-element-padding * 2;
+      height: $main-element-padding * 2;
       background-color: $main-color;
       border: 2px solid $main-color;
       font-size: 1.5rem;

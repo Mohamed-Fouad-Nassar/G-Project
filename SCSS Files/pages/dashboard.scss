@@ -23,6 +23,9 @@ main {
   aside {
     @extend %border-radius-10;
     width: 230px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: $main-element-padding;
     background-color: $white-color;
     box-shadow: $dash-main-box-shadow;
@@ -36,13 +39,17 @@ main {
     }
     @media (max-width: 575px) {
       padding: {
-        left: 5px;
-        right: 5px;
+        left: $sec-element-padding / 2;
+        right: $sec-element-padding / 2;
       }
     }
     .head {
       width: fit-content;
       margin: 0 auto;
+      padding-bottom: 30px;
+      @media (max-width: 767px) {
+        display: none;
+      }
       a {
         display: block;
         color: $main-color !important;
@@ -57,44 +64,40 @@ main {
         &:hover {
           color: $sec-color !important;
         }
+      }
+      .shape {
+        margin-top: $sec-element-padding;
+        position: relative;
+        span {
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            top: 50%;
+            width: calc(50% - 10px);
+            background-color: $main-color;
+            @extend %translate-y-50;
+          }
+          &::before {
+            left: 0;
+          }
+          display: block;
+          width: 12px;
+          height: 12px;
+          background-color: $main-color;
+          margin: 0 auto;
+          @extend %border-radius-50;
+          &::after {
+            right: 0;
+          }
+        }
         @media (max-width: 767px) {
           display: none;
         }
       }
     }
-    .shape {
-      margin-top: $sec-element-padding;
-      position: relative;
-      span {
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          height: 2px;
-          top: 50%;
-          width: calc(50% - 10px);
-          background-color: $main-color;
-          @extend %translate-y-50;
-        }
-        &::before {
-          left: 0;
-        }
-        display: block;
-        width: 12px;
-        height: 12px;
-        background-color: $main-color;
-        margin: 0 auto;
-        @extend %border-radius-50;
-        &::after {
-          right: 0;
-        }
-      }
-      @media (max-width: 767px) {
-        display: none;
-      }
-    }
     .links {
-      padding-top: $main-element-padding;
       ul {
         display: flex;
         flex-direction: column;
@@ -105,7 +108,7 @@ main {
         }
         li {
           @extend %reset;
-          padding-top: 5px;
+          padding-top: $sec-element-padding / 2;
           a {
             display: block;
             width: 100%;
@@ -151,17 +154,23 @@ main {
   }
   .content {
     @extend %border-radius-10;
-    padding: $main-element-padding;
+    @extend %flex-center-center;
     background-color: $white-color;
     box-shadow: $dash-main-box-shadow;
     position: relative;
     flex: 1;
     overflow-y: auto;
     @media (max-width: 1199px) {
-      padding-right: 10px;
+      padding-right: $sec-element-padding;
     }
     > div {
       display: none;
+      width: 100%;
+      padding: $main-element-padding;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
       &.active {
         display: block;
       }
@@ -169,30 +178,27 @@ main {
     .dashboard {
       display: none;
       &.active {
-        @include grid(600px, 20px);
-        height: 100%;
-        align-content: space-around;
+        @include grid(600px, $main-element-padding);
         @media (max-width: 1580px) {
-          @include grid(500px, 20px);
+          @include grid(500px, $main-element-padding);
         }
         @media (max-width: 1380px) {
-          @include grid(400px, 20px);
+          @include grid(400px, $main-element-padding);
         }
         @media (max-width: 1199px) {
-          @include grid(420px, 20px);
-          height: initial;
+          @include grid(420px, $main-element-padding);
         }
         @media (max-width: 575px) {
-          @include grid(250px, 20px);
+          @include grid(250px, $main-element-padding);
         }
       }
       > article {
         @extend %border-radius-10;
         background-color: $light-input-background;
-        padding: 20px;
+        padding: $main-element-padding;
         .head {
           h2 {
-            margin-bottom: 40px;
+            margin-bottom: $main-element-padding * 2;
             position: relative;
             color: $main-color;
             font: {
@@ -219,9 +225,8 @@ main {
         }
         .info {
           @extend %flex-stretch-start;
-          // max-width: 750px;
           margin: 0 auto;
-          gap: $main-element-padding;
+          gap: $sec-element-padding;
           @media (max-width: 575px) {
             flex-direction: column;
             gap: $sec-element-padding;
@@ -249,103 +254,109 @@ main {
                 weight: 700;
               }
             }
-            .f-icon {
-              font-size: 2.6rem;
-              color: $main-color;
-              cursor: pointer;
-              &:hover {
-                color: $sec-color;
+            a {
+              .f-icon {
+                font-size: 2.6rem;
+                color: $main-color;
+                cursor: pointer;
+                &:hover {
+                  color: $sec-color;
+                }
               }
             }
           }
         }
       }
     }
-    .sec-head {
-      h2 {
-        margin-bottom: 40px;
-        position: relative;
-        color: $main-color;
-        font: {
-          size: 1.6rem;
-          weight: 600;
-        }
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          height: 3px;
-          background-color: $sec-color;
-        }
-        &::before {
-          width: 95px;
-          bottom: -8px;
-        }
-        &::after {
-          width: 50px;
-          bottom: -15px;
+    div {
+      .sec-head {
+        h2 {
+          margin-bottom: 40px;
+          position: relative;
+          color: $main-color;
+          font: {
+            size: 1.6rem;
+            weight: 600;
+          }
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 3px;
+            background-color: $sec-color;
+          }
+          &::before {
+            width: 95px;
+            bottom: -8px;
+          }
+          &::after {
+            width: 50px;
+            bottom: -15px;
+          }
         }
       }
-    }
-    .sec-body {
-      .info {
-        @extend %flex-stretch-start;
-        max-width: 750px;
-        margin: 0 auto;
-        gap: $main-element-padding;
-        @media (max-width: 575px) {
-          flex-direction: column;
-          gap: $sec-element-padding;
-        }
-        > div {
-          @extend %border-radius-10;
-          width: 50%;
+      .sec-body {
+        .info {
+          @extend %flex-stretch-start;
+          max-width: 750px;
+          margin: 0 auto;
+          gap: $main-element-padding;
           @media (max-width: 575px) {
-            width: 100%;
+            flex-direction: column;
+            gap: $sec-element-padding;
           }
-          padding: $main-element-padding;
-          background-color: $light-input-background;
-          text-align: center;
-          h3 {
-            margin-bottom: $sec-element-padding;
-            font: {
-              size: 1.2rem;
-              weight: 600;
+          > div {
+            @extend %border-radius-10;
+            width: 50%;
+            @media (max-width: 575px) {
+              width: 100%;
             }
-          }
-          span {
-            color: $main-color;
-            font: {
-              size: 1.4rem;
-              weight: 700;
+            padding: $main-element-padding;
+            background-color: $light-input-background;
+            text-align: center;
+            h3 {
+              margin-bottom: $sec-element-padding;
+              font: {
+                size: 1.2rem;
+                weight: 600;
+              }
             }
-          }
-          .f-icon {
-            font-size: 2.6rem;
-            color: $main-color;
-            cursor: pointer;
-            &:hover {
-              color: $sec-color;
+            span {
+              color: $main-color;
+              font: {
+                size: 1.4rem;
+                weight: 700;
+              }
+            }
+            a {
+              .f-icon {
+                font-size: 2.6rem;
+                color: $main-color;
+                cursor: pointer;
+                &:hover {
+                  color: $sec-color;
+                }
+              }
             }
           }
         }
-      }
-      .control {
-        padding-top: 30px;
-        overflow-x: auto;
-        .table {
-          min-width: 950px;
-          padding-bottom: 5px;
-          white-space: nowrap;
-          width: 100%;
-          .tab-head {
-            @include table-head("light");
-          }
-          .tab-body {
-            padding-top: 2px;
-            .item {
-              @include table-body-item("light");
+        .control {
+          padding-top: $main-element-padding + $sec-element-padding;
+          overflow-x: auto;
+          .table {
+            min-width: 750px;
+            padding-bottom: $sec-element-padding / 2;
+            white-space: nowrap;
+            width: 100%;
+            .tab-head {
+              @include table-head("light");
+            }
+            .tab-body {
+              padding-top: 2px;
+              .item {
+                @include table-body-item("light");
+              }
             }
           }
         }
@@ -431,51 +442,57 @@ body {
                 span {
                   color: $main-dark-color;
                 }
-                .f-icon {
-                  color: $main-dark-color;
-                  &:hover {
-                    color: $sec-dark-color;
+                a {
+                  .f-icon {
+                    color: $main-dark-color;
+                    &:hover {
+                      color: $sec-dark-color;
+                    }
                   }
                 }
               }
             }
           }
         }
-        .sec-head {
-          h2 {
-            color: $main-dark-color;
-            &::before,
-            &::after {
-              background-color: $sec-dark-color;
+        div {
+          .sec-head {
+            h2 {
+              color: $main-dark-color;
+              &::before,
+              &::after {
+                background-color: $sec-dark-color;
+              }
             }
           }
-        }
-        .sec-body {
-          .info {
-            > div {
-              background-color: $main-dark-bg;
-              h3 {
-                color: $white-dark-color;
-              }
-              span {
-                color: $main-dark-color;
-              }
-              .f-icon {
-                color: $main-dark-color;
-                &:hover {
-                  color: $sec-dark-color;
+          .sec-body {
+            .info {
+              > div {
+                background-color: $main-dark-bg;
+                h3 {
+                  color: $white-dark-color;
+                }
+                span {
+                  color: $main-dark-color;
+                }
+                a {
+                  .f-icon {
+                    color: $main-dark-color;
+                    &:hover {
+                      color: $sec-dark-color;
+                    }
+                  }
                 }
               }
             }
-          }
-          .control {
-            .table {
-              .tab-head {
-                @include table-head("dark");
-              }
-              .tab-body {
-                .item {
-                  @include table-body-item("dark");
+            .control {
+              .table {
+                .tab-head {
+                  @include table-head("dark");
+                }
+                .tab-body {
+                  .item {
+                    @include table-body-item("dark");
+                  }
                 }
               }
             }

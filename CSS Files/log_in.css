@@ -47,7 +47,6 @@ main .top a {
   justify-content: center;
 }
 
-header .container .log-in-acc .acc .menu ul li span,
 header .container .log-in-acc .acc .menu ul li a {
   display: flex;
   align-items: center;
@@ -255,6 +254,15 @@ input {
 }
 
 /* End Animation Styling */
+.box,
+.card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 /* Start Selection Styling:- */
 ::-moz-selection {
   background: #212529;
@@ -279,7 +287,8 @@ input {
 /* End Selection Styling */
 /* Start Scroll Bar Styling:- */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -384,6 +393,7 @@ section .container .sec-head {
   text-align: center;
 }
 
+section .container .sec-head h1,
 section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -425,6 +435,7 @@ section .container .sec-foot a:hover {
   text-align: center;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   font-size: 1.8rem;
   color: #059cb1;
@@ -441,6 +452,7 @@ section .container .sec-foot a:hover {
   margin-bottom: 20px;
 }
 
+.dark section .container .sec-head h1,
 .dark section .container .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
@@ -991,7 +1003,6 @@ header .container .log-in-acc .acc .menu ul li {
   padding: 0;
 }
 
-header .container .log-in-acc .acc .menu ul li span,
 header .container .log-in-acc .acc .menu ul li a {
   gap: 10px;
   width: 100%;
@@ -999,9 +1010,6 @@ header .container .log-in-acc .acc .menu ul li a {
   padding-left: 10px;
   padding-right: 10px;
   text-transform: capitalize;
-}
-
-header .container .log-in-acc .acc .menu ul li a {
   font-size: 0.9rem;
 }
 
@@ -1018,21 +1026,21 @@ header .container .log-in-acc .acc .menu ul li a .f-icon {
   color: #212529;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span {
+header .container .log-in-acc .acc .menu ul li a.danger {
   font-size: 0.85rem;
   color: #d20519;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+header .container .log-in-acc .acc .menu ul li a.danger:hover {
   background-color: #dc3545;
   color: #fff;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span:hover .f-icon {
+header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
   color: #fff;
 }
 
-header .container .log-in-acc .acc .menu ul li:last-of-type span .f-icon {
+header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
   color: #d20519;
 }
 
@@ -1178,20 +1186,20 @@ body.dark header .container .log-in-acc .acc .menu ul li a .f-icon {
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger {
   color: #dc3545;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover {
   background-color: #dc3545;
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span:hover .f-icon {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger:hover .f-icon {
   color: #efefef;
 }
 
-body.dark header .container .log-in-acc .acc .menu ul li:last-of-type span .f-icon {
+body.dark header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
   color: #dc3545;
 }
 
@@ -1238,6 +1246,10 @@ body::after {
 }
 
 body header {
+  display: none;
+}
+
+body footer {
   display: none;
 }
 

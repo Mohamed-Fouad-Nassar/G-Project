@@ -10,6 +10,17 @@ body.dark .card .body form .btns input[type=button],
   justify-content: center;
 }
 
+body.dark .card .body form .btns input[type=submit],
+body.dark .card .body form .btns input[type=button],
+.card .body form .btns input[type=submit],
+.card .body form .btns input[type=button] {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 .card {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;

@@ -23,6 +23,10 @@ a {
 }
 
 main .content,
+main .content div .sec-body .control .table .tab-head,
+main .content div .sec-body .control .table .tab-body .item,
+body.dark main .content div .sec-body .control .table .tab-head,
+body.dark main .content div .sec-body .control .table .tab-body .item,
 header .container nav ul li a,
 header .container .account,
 header .container .log-in-acc,
@@ -48,7 +52,7 @@ main .top a {
 }
 
 main,
-main .content .dashboard>article .info {
+main .content div .sec-body .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,6 +86,8 @@ header .container .log-in-acc .acc .menu ul li a {
   align-items: center;
 }
 
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type a,
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a,
 footer .container .f-info .f-social>div a,
 body.dark footer .f-info .f-social>div a {
   display: -webkit-inline-box;
@@ -95,6 +101,8 @@ body.dark footer .f-info .f-social>div a {
   justify-content: center;
 }
 
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type,
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type,
 header .container nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,6 +132,8 @@ body.dark .error-message::after,
 }
 
 main aside .links ul li a,
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type a,
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a,
 footer .container .f-info .f-social>div a,
 body.dark footer .f-info .f-social>div a,
 header .container .account a,
@@ -139,8 +149,7 @@ section .container .sec-foot a,
 
 main aside,
 main .content,
-main .content .dashboard>article,
-main .content .dashboard>article .info>div,
+main .content div .sec-body .info>div,
 .box,
 .card {
   border-radius: 10px !important;
@@ -1711,55 +1720,7 @@ main .content>div {
   overflow-y: auto;
 }
 
-main .content .dashboard {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: 20px;
-}
-
-@media (max-width: 1580px) {
-  main .content .dashboard {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 20px;
-  }
-}
-
-@media (max-width: 1380px) {
-  main .content .dashboard {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-  }
-}
-
-@media (max-width: 1199px) {
-  main .content .dashboard {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    gap: 20px;
-  }
-}
-
-@media (max-width: 575px) {
-  main .content .dashboard {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-}
-
-main .content .dashboard>article {
-  background-color: #f9f9f9;
-  padding: 20px;
-}
-
-main .content .dashboard>article .head h2 {
+main .content div .sec-head h2 {
   margin-bottom: 40px;
   position: relative;
   color: #059cb1;
@@ -1767,8 +1728,8 @@ main .content .dashboard>article .head h2 {
   font-weight: 600;
 }
 
-main .content .dashboard>article .head h2::before,
-main .content .dashboard>article .head h2::after {
+main .content div .sec-head h2::before,
+main .content div .sec-head h2::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1776,23 +1737,24 @@ main .content .dashboard>article .head h2::after {
   background-color: #59c1bd;
 }
 
-main .content .dashboard>article .head h2::before {
+main .content div .sec-head h2::before {
   width: 95px;
   bottom: -8px;
 }
 
-main .content .dashboard>article .head h2::after {
+main .content div .sec-head h2::after {
   width: 50px;
   bottom: -15px;
 }
 
-main .content .dashboard>article .info {
+main .content div .sec-body .info {
+  max-width: 750px;
   margin: 0 auto;
-  gap: 10px;
+  gap: 20px;
 }
 
 @media (max-width: 575px) {
-  main .content .dashboard>article .info {
+  main .content div .sec-body .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1801,39 +1763,171 @@ main .content .dashboard>article .info {
   }
 }
 
-main .content .dashboard>article .info>div {
+main .content div .sec-body .info>div {
   width: 50%;
   padding: 20px;
-  background-color: #fff;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
 @media (max-width: 575px) {
-  main .content .dashboard>article .info>div {
+  main .content div .sec-body .info>div {
     width: 100%;
   }
 }
 
-main .content .dashboard>article .info>div h3 {
+main .content div .sec-body .info>div h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-main .content .dashboard>article .info>div span {
+main .content div .sec-body .info>div span {
   color: #059cb1;
   font-size: 1.4rem;
   font-weight: 700;
 }
 
-main .content .dashboard>article .info>div a .f-icon {
+main .content div .sec-body .info>div a .f-icon {
   font-size: 2.6rem;
   color: #059cb1;
   cursor: pointer;
 }
 
-main .content .dashboard>article .info>div a .f-icon:hover {
+main .content div .sec-body .info>div a .f-icon:hover {
   color: #59c1bd;
+}
+
+main .content div .sec-body .control {
+  padding-top: 30px;
+  overflow-x: auto;
+}
+
+main .content div .sec-body .control .table {
+  min-width: 750px;
+  padding-bottom: 5px;
+  white-space: nowrap;
+  width: 100%;
+}
+
+main .content div .sec-body .control .table .tab-head {
+  gap: 3px;
+}
+
+main .content div .sec-body .control .table .tab-head>span {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+main .content div .sec-body .control .table .tab-head>span:first-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 60px;
+}
+
+main .content div .sec-body .control .table .tab-head>span:nth-of-type(2) {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+main .content div .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
+  min-width: 130px !important;
+  max-width: 160px !important;
+}
+
+main .content div .sec-body .control .table .tab-head>span:last-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 130px;
+}
+
+main .content div .sec-body .control .table .tab-body {
+  padding-top: 2px;
+}
+
+main .content div .sec-body .control .table .tab-body .item {
+  padding-top: 2px;
+  gap: 3px;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:first-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 60px;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+  min-width: 130px !important;
+  max-width: 160px !important;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 130px;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span {
+  background-color: #eee;
+  color: #212529;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type {
+  padding: 7px 10px;
+  gap: 10px;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type a {
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  background-color: #059cb1;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+  background-color: #59c1bd;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+  background-color: #fb0505;
+}
+
+main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+  background-color: #d20519;
 }
 
 body.dark main {
@@ -1894,35 +1988,216 @@ body.dark main .content {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
-body.dark main .content .dashboard>article {
-  background-color: #222;
-}
-
-body.dark main .content .dashboard>article .head h2 {
+body.dark main .content div .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .content .dashboard>article .head h2::before,
-body.dark main .content .dashboard>article .head h2::after {
+body.dark main .content div .sec-head h2::before,
+body.dark main .content div .sec-head h2::after {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
 
-body.dark main .content .dashboard>article .info>div {
-  background-color: #1d1d1d;
+body.dark main .content div .sec-body .info>div {
+  background-color: #222;
 }
 
-body.dark main .content .dashboard>article .info>div h3 {
+body.dark main .content div .sec-body .info>div h3 {
   color: #efefef;
 }
 
-body.dark main .content .dashboard>article .info>div span {
+body.dark main .content div .sec-body .info>div span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .content .dashboard>article .info>div a .f-icon {
+body.dark main .content div .sec-body .info>div a .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .content .dashboard>article .info>div a .f-icon:hover {
+body.dark main .content div .sec-body .info>div a .f-icon:hover {
   color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content div .sec-body .control .table .tab-head {
+  gap: 3px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-head>span {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+body.dark main .content div .sec-body .control .table .tab-head>span:first-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 60px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-head>span:nth-of-type(2) {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+body.dark main .content div .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
+  min-width: 130px !important;
+  max-width: 160px !important;
+}
+
+body.dark main .content div .sec-body .control .table .tab-head>span:last-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 130px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-head>span {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item {
+  padding-top: 2px;
+  gap: 3px;
+  gap: 3px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:first-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 60px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+  min-width: 130px !important;
+  max-width: 160px !important;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 130px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span {
+  background-color: #eee;
+  color: #212529;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type {
+  padding: 7px 10px;
+  gap: 10px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a {
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  background-color: #059cb1;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+  background-color: #59c1bd;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+  background-color: #fb0505;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+  background-color: #d20519;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 15px;
+  background-color: #59c1bd;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:first-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 60px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+  min-width: 130px !important;
+  max-width: 160px !important;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type {
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  min-width: 130px;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span {
+  font-weight: 400 !important;
+  background-color: #222;
+  color: #a5a5a5;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a {
+  color: #efefef;
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+  background-color: rgba(89, 193, 189, 0.8705882353);
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+  background-color: #d20519;
+}
+
+body.dark main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+  background-color: #dc3545;
 }

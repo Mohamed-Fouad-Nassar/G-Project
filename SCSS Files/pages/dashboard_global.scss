@@ -1,0 +1,236 @@
+// import global rules
+// @use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+// @use "../sections/header" as *;
+// import footer styling:-
+// @use "../sections/footer" as *;
+
+// additional page styling
+
+main {
+  @extend %flex-stretch-start;
+  padding: $up-down-padding $main-element-padding $main-element-padding * 2;
+  height: 100vh;
+  gap: $main-element-padding;
+  @media (max-width: 767px) {
+    padding: 150px $sec-element-padding 30px;
+    gap: 15px;
+  }
+  aside {
+    @extend %border-radius-10;
+    width: 230px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: $main-element-padding;
+    background-color: $white-color;
+    box-shadow: $dash-main-box-shadow;
+    position: relative;
+    @media (max-width: 991px) {
+      width: 200px;
+    }
+    @media (max-width: 767px) {
+      width: 60px;
+      padding: 15px $sec-element-padding;
+    }
+    @media (max-width: 575px) {
+      padding: {
+        left: $sec-element-padding / 2;
+        right: $sec-element-padding / 2;
+      }
+    }
+    .head {
+      width: fit-content;
+      margin: 0 auto;
+      padding-bottom: 30px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+      a {
+        display: block;
+        color: $main-color !important;
+        padding: {
+          left: $sec-element-padding;
+          right: $sec-element-padding;
+        }
+        font: {
+          weight: 700;
+          size: 1.2rem;
+        }
+        &:hover {
+          color: $sec-color !important;
+        }
+      }
+      .shape {
+        margin-top: $sec-element-padding;
+        position: relative;
+        span {
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            top: 50%;
+            width: calc(50% - 10px);
+            background-color: $main-color;
+            @extend %translate-y-50;
+          }
+          &::before {
+            left: 0;
+          }
+          display: block;
+          width: 12px;
+          height: 12px;
+          background-color: $main-color;
+          margin: 0 auto;
+          @extend %border-radius-50;
+          &::after {
+            right: 0;
+          }
+        }
+        @media (max-width: 767px) {
+          display: none;
+        }
+      }
+    }
+    .links {
+      ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        @extend %reset;
+        @media (max-width: 767px) {
+          align-items: center;
+        }
+        li {
+          @extend %reset;
+          padding-top: $sec-element-padding / 2;
+          a {
+            display: block;
+            width: 100%;
+            color: $black-color;
+            padding: $sec-element-padding 15px;
+            @extend %border-radius-5;
+            &:hover {
+              color: $main-color;
+              background-color: $light-input-background;
+              span {
+                color: $main-color;
+              }
+              .f-icon {
+                color: $main-color;
+              }
+            }
+            &.active {
+              color: $main-color;
+              background-color: $light-input-background;
+              span {
+                color: $main-color;
+              }
+              .f-icon {
+                color: $main-color;
+              }
+            }
+            span {
+              color: $black-color;
+              @media (max-width: 767px) {
+                display: none;
+              }
+            }
+            .f-icon {
+              margin-right: $sec-element-padding;
+              @media (max-width: 767px) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .content {
+    @extend %border-radius-10;
+    @extend %flex-center-center;
+    background-color: $white-color;
+    box-shadow: $dash-main-box-shadow;
+    position: relative;
+    flex: 1;
+    overflow-y: auto;
+    @media (max-width: 1199px) {
+      padding-right: $sec-element-padding;
+    }
+    > div {
+      width: 100%;
+      padding: $main-element-padding;
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+    }
+  }
+}
+
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      aside {
+        background-color: $sec-dark-bg;
+        box-shadow: $dark-box-shadow;
+        .head {
+          a {
+            color: $main-dark-color !important;
+            &:hover {
+              color: $sec-dark-color !important;
+            }
+          }
+        }
+        .shape {
+          span {
+            &::before,
+            &::after {
+              background-color: $main-dark-color;
+            }
+            background-color: $main-dark-color;
+          }
+        }
+        .links {
+          ul {
+            li {
+              a {
+                &:hover {
+                  color: $main-dark-color;
+                  background-color: $nav-active-bg;
+                  span,
+                  .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+                &.active {
+                  color: $main-dark-color;
+                  background-color: $nav-active-bg;
+                  span,
+                  .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+                span,
+                .f-icon {
+                  color: $white-dark-color;
+                }
+              }
+            }
+          }
+        }
+      }
+      .content {
+        background-color: $sec-dark-bg;
+        box-shadow: $dark-box-shadow;
+      }
+    }
+  }
+}

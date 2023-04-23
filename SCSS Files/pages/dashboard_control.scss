@@ -171,55 +171,40 @@ main {
     //   left: 0;
     //   overflow-y: auto;
     // }
-    .dashboard {
-      @include grid(600px, $main-element-padding);
-      @media (max-width: 1580px) {
-        @include grid(500px, $main-element-padding);
-      }
-      @media (max-width: 1380px) {
-        @include grid(400px, $main-element-padding);
-      }
-      @media (max-width: 1199px) {
-        @include grid(420px, $main-element-padding);
-      }
-      @media (max-width: 575px) {
-        @include grid(250px, $main-element-padding);
-      }
-      > article {
-        @extend %border-radius-10;
-        background-color: $light-input-background;
-        padding: $main-element-padding;
-        .head {
-          h2 {
-            margin-bottom: $main-element-padding * 2;
-            position: relative;
-            color: $main-color;
-            font: {
-              size: 1.6rem;
-              weight: 600;
-            }
-            &::before,
-            &::after {
-              content: "";
-              position: absolute;
-              left: 0;
-              height: 3px;
-              background-color: $sec-color;
-            }
-            &::before {
-              width: 95px;
-              bottom: -8px;
-            }
-            &::after {
-              width: 50px;
-              bottom: -15px;
-            }
+    div {
+      .sec-head {
+        h2 {
+          margin-bottom: 40px;
+          position: relative;
+          color: $main-color;
+          font: {
+            size: 1.6rem;
+            weight: 600;
+          }
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 3px;
+            background-color: $sec-color;
+          }
+          &::before {
+            width: 95px;
+            bottom: -8px;
+          }
+          &::after {
+            width: 50px;
+            bottom: -15px;
           }
         }
+      }
+      .sec-body {
         .info {
           @extend %flex-stretch-start;
+          max-width: 750px;
           margin: 0 auto;
-          gap: $sec-element-padding;
+          gap: $main-element-padding;
           @media (max-width: 575px) {
             flex-direction: column;
             gap: $sec-element-padding;
@@ -231,7 +216,7 @@ main {
               width: 100%;
             }
             padding: $main-element-padding;
-            background-color: $white-color;
+            background-color: $light-input-background;
             text-align: center;
             h3 {
               margin-bottom: $sec-element-padding;
@@ -255,6 +240,25 @@ main {
                 &:hover {
                   color: $sec-color;
                 }
+              }
+            }
+          }
+        }
+        .control {
+          padding-top: $main-element-padding + $sec-element-padding;
+          overflow-x: auto;
+          .table {
+            min-width: 750px;
+            padding-bottom: $sec-element-padding / 2;
+            white-space: nowrap;
+            width: 100%;
+            .tab-head {
+              @include table-head("light");
+            }
+            .tab-body {
+              padding-top: 2px;
+              .item {
+                @include table-body-item("light");
               }
             }
           }
@@ -320,21 +324,20 @@ body {
       .content {
         // background-color: $sec-dark-bg;
         // box-shadow: $dark-box-shadow;
-        .dashboard {
-          > article {
-            background-color: $main-dark-bg;
-            .head {
-              h2 {
-                color: $main-dark-color;
-                &::before,
-                &::after {
-                  background-color: $sec-dark-color;
-                }
+        div {
+          .sec-head {
+            h2 {
+              color: $main-dark-color;
+              &::before,
+              &::after {
+                background-color: $sec-dark-color;
               }
             }
+          }
+          .sec-body {
             .info {
               > div {
-                background-color: $sec-dark-bg;
+                background-color: $main-dark-bg;
                 h3 {
                   color: $white-dark-color;
                 }
@@ -347,6 +350,18 @@ body {
                     &:hover {
                       color: $sec-dark-color;
                     }
+                  }
+                }
+              }
+            }
+            .control {
+              .table {
+                .tab-head {
+                  @include table-head("dark");
+                }
+                .tab-body {
+                  .item {
+                    @include table-body-item("dark");
                   }
                 }
               }

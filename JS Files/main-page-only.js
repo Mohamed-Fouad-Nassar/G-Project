@@ -59,12 +59,19 @@ function activeMenu() {
 activeMenu();
 window.addEventListener("scroll", activeMenu);
 
-// use pharmacies api
-let pharmacySecBody = document.getElementById("pharmacy-body");
-import { pharmaciesAPI as pharmacy } from "./APIs.js";
-pharmacy("../Test APIs/pharmacy.json", 0, 3, pharmacySecBody);
+// // use pharmacies api
+// let pharmacySecBody = document.getElementById("pharmacy-body");
+// import { pharmaciesAPI as pharmacy } from "./APIs.js";
+// pharmacy("../Test APIs/pharmacy.json", 0, 3, pharmacySecBody);
 
-// use blog api
-let blogSecBody = document.getElementById("blog-body");
-import { blogAPI as blog } from "./APIs.js";
-blog("../Test APIs/blog.json", 0, 3, blogSecBody);
+// // use blog api
+// let blogSecBody = document.getElementById("blog-body");
+// import { blogAPI as blog } from "./APIs.js";
+// blog("../Test APIs/blog.json", 0, 3, blogSecBody);
+
+// new added
+// change year automatically in copyright section
+let year = document.getElementById("copyright");
+year.innerText = new Date().getFullYear();
+year.style.cssText =
+  "font-family:inherit; font-size:inherit; font-weight:inherit; color:#aaa !important;";

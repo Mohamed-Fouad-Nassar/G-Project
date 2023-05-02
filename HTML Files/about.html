@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize css files -->
+    <link rel="stylesheet" href="../CSS Files/normalize.css" />
+    <!-- font-awesome css file -->
+    <link rel="stylesheet" href="../CSS Files/all.min.css" />
+    <!-- bootstrap css file -->
+    <link rel="stylesheet" href="../CSS Files/bootstrap.min.css" />
+    <!-- swiper css files -->
+    <link rel="stylesheet" href="../CSS Files/swiper-bundle.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="../CSS Files/about.css" />
+    <!-- font open-sans files -->
+    <!-- font-family: 'Open Sans', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font Yesteryear files -->
+    <!-- font-family: 'Yesteryear', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fav icon -->
+    <link
+      rel="shortcut icon"
+      href="../Data/Images/fav-icon.png"
+      type="image/x-icon"
+    />
+    <!-- page title -->
+    <title>Hope</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header id="navbar_top">
+      <div class="container">
+        <div class="logo">
+          <a href="#top">
+            <h1 id="logoText">hope</h1>
+            <!-- <img src="./Data/un-used-Images/logo-1.png" alt="logo-image" /> -->
+            <!-- <img src="./Data/un-used-Images/logo-2.png" alt="logo-image" /> -->
+          </a>
+        </div>
+        <nav id="nav">
+          <ul id="links">
+            <li class="link">
+              <a href="../index.html">
+                <i class="f-icon fa-solid fa-house"></i>
+                <span>home</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="../HTML Files/doctors.html">
+                <i class="f-icon fa-solid fa-user-doctor"></i>
+                <span>doctors</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="../HTML Files/medicines.html">
+                <i class="f-icon fa-solid fa-pills"></i>
+                <span>medicines</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="../HTML Files/hospitals.html">
+                <i class="f-icon fa-solid fa-hospital"></i>
+                <span>hospitals</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="../HTML Files/pharmacies.html">
+                <i class="f-icon fa-solid fa-house-medical"></i>
+                <span>pharmacies</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="../HTML Files/blog.html">
+                <i class="f-icon fa-solid fa-book-open-reader"></i>
+                <span>blog</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Start Not Logging In View -->
+        <!-- <div class="account">
+          <a class="log-in" href="../HTML Files/log_in.html">log in</a>
+          <a class="regist" href="../HTML Files/register.html">register</a>
+        </div> -->
+        <!-- End Not Logging In View -->
+        <!-- Start Logging In View -->
+        <div class="log-in-acc">
+          <article class="lang">
+            <div class="h-btn">
+              <div>
+                <img src="../Data/Images/usa.png" alt="lang-flag-image" />
+              </div>
+              <span>en</span>
+            </div>
+            <div class="menu">
+              <ul>
+                <li img-src="../Data/Images/usa.png" lang-text="en">
+                  <div>
+                    <img src="../Data/Images/usa.png" alt="lang-flag-image" />
+                  </div>
+                  <span>en</span>
+                </li>
+                <li img-src="../Data/Images/eg.png" lang-text="ar">
+                  <div>
+                    <img src="../Data/Images/eg.png" alt="lang-flag-image" />
+                  </div>
+                  <span>ar</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+          <article class="theme">
+            <div class="h-btn">
+              <!-- <i class="f-icon fa-solid fa-circle-half-stroke"></i> -->
+              <!-- <i class="f-icon light fa-solid fa-sun"></i> -->
+              <!-- <i class="f-icon dark fa-solid fa-moon"></i> -->
+              <ion-icon
+                class="f-icon light"
+                name="sunny"
+                size="large"
+              ></ion-icon>
+              <ion-icon class="f-icon dark" name="moon" size="large"></ion-icon>
+            </div>
+            <div class="menu"></div>
+          </article>
+          <article class="acc">
+            <div class="h-btn">
+              <img
+                src="../Data/Images/avatar-image-1.png"
+                alt="account-image"
+              />
+            </div>
+            <div class="menu">
+              <ul>
+                <li id="view-profile">
+                  <a href="../HTML Files/view_profile.html">
+                    <i class="f-icon fa-solid fa-user"></i>
+                    view profile
+                  </a>
+                </li>
+                <li>
+                  <a href="../HTML Files/dashboard.html">
+                    <i class="f-icon fa-solid fa-chart-column"></i>
+                    dashboard
+                  </a>
+                </li>
+                <li id="log-out-btn">
+                  <a class="danger">
+                    <i class="f-icon fa-solid fa-arrow-right-from-bracket"></i>
+                    log out
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- End Logging In View -->
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main id="main_page">
+      <!--  -->
+      <section class="content">
+        <div class="container">
+          <div class="sec-head">
+            <h2>our team</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              consequatur ullam excepturi dolores repellat, minus assumenda
+              exercitationem.
+            </p>
+            <div class="head-shape">
+              <span></span>
+            </div>
+          </div>
+          <div class="sec-body">
+            <!-- start box -->
+            <article class="box">
+              <div class="avatar">
+                <img
+                  src="../Data/Images/about us/mahmoud-salama.jpg"
+                  alt="person-image"
+                />
+              </div>
+              <div class="data">
+                <section class="head">
+                  <h3>Mahmoud Salama</h3>
+                  <span>data analysis</span>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat vel molestias minus vitae numquam eveniet? Minus
+                    libero itaque quibusdam tempore eligendi quos, voluptas
+                    voluptatum rem ducimus harum facere a vitae!
+                  </p>
+                </section>
+                <section class="links">
+                  <h3>contact info</h3>
+                  <div class="contact">
+                    <div>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100009428234982&mibextid=ZbWKwL"
+                      >
+                        <i class="f-icon fa-brands fa-facebook-f"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/+201144962371">
+                        <i class="f-icon fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+201144962371">
+                        <i class="f-icon fa-solid fa-phone"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="mailto:@mohammednassar740@gmail.com">
+                        <i class="f-icon fa-solid fa-envelope"></i>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <div class="avatar">
+                <img
+                  src="../Data/Images/about us/mohamed-nassar.jpg"
+                  alt="person-image"
+                />
+              </div>
+              <div class="data">
+                <section class="head">
+                  <h3>mohamed nassar</h3>
+                  <span>front-end developer</span>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat vel molestias minus vitae numquam eveniet? Minus
+                    libero itaque quibusdam tempore eligendi quos, voluptas
+                    voluptatum rem ducimus harum facere a vitae!
+                  </p>
+                </section>
+                <section class="links">
+                  <h3>contact info</h3>
+                  <div class="contact">
+                    <div>
+                      <a href="https://www.facebook.com/mohammed.nassar.31508/">
+                        <i class="f-icon fa-brands fa-facebook-f"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/+201010959709">
+                        <i class="f-icon fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+201010959709">
+                        <i class="f-icon fa-solid fa-phone"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="mailto:@mohammednassar740@gmail.com">
+                        <i class="f-icon fa-solid fa-envelope"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/Mohamed-Fouad-Nassar/">
+                        <i class="f-icon fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <div class="avatar">
+                <img
+                  src="../Data/Images/about us/mohamed-ali.jpg"
+                  alt="person-image"
+                />
+              </div>
+              <div class="data">
+                <section class="head">
+                  <h3>mohamed el-tohamy ali</h3>
+                  <span>front-end developer</span>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat vel molestias minus vitae numquam eveniet? Minus
+                    libero itaque quibusdam tempore eligendi quos, voluptas
+                    voluptatum rem ducimus harum facere a vitae!
+                  </p>
+                </section>
+                <section class="links">
+                  <h3>contact info</h3>
+                  <div class="contact">
+                    <div>
+                      <a href="https://www.facebook.com/mohamed.esho.16">
+                        <i class="f-icon fa-brands fa-facebook-f"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/+201014525677">
+                        <i class="f-icon fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+201014525677">
+                        <i class="f-icon fa-solid fa-phone"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="mailto:@mohamedeltohamyaly1410@gmail.com">
+                        <i class="f-icon fa-solid fa-envelope"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/MohamedEltohamyAly">
+                        <i class="f-icon fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <div class="avatar">
+                <img
+                  src="../Data/Images/about us/abdallah-kalifa.jpg"
+                  alt="person-image"
+                />
+              </div>
+              <div class="data">
+                <section class="head">
+                  <h3>abdallah kalifa</h3>
+                  <span>back-end developer</span>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat vel molestias minus vitae numquam eveniet? Minus
+                    libero itaque quibusdam tempore eligendi quos, voluptas
+                    voluptatum rem ducimus harum facere a vitae!
+                  </p>
+                </section>
+                <section class="links">
+                  <h3>contact info</h3>
+                  <div class="contact">
+                    <div>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100013063080309"
+                      >
+                        <i class="f-icon fa-brands fa-facebook-f"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/+201050584461">
+                        <i class="f-icon fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+201050584461">
+                        <i class="f-icon fa-solid fa-phone"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="mailto:@bebokhalefa31@gmail.com">
+                        <i class="f-icon fa-solid fa-envelope"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/AbdullahKhalifa35">
+                        <i class="f-icon fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <div class="avatar">
+                <img
+                  src="../Data/Images/about us/mohamed-aymen.jpg"
+                  alt="person-image"
+                />
+              </div>
+              <div class="data">
+                <section class="head">
+                  <h3>mohamed aymen</h3>
+                  <span>back-end developer</span>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat vel molestias minus vitae numquam eveniet? Minus
+                    libero itaque quibusdam tempore eligendi quos, voluptas
+                    voluptatum rem ducimus harum facere a vitae!
+                  </p>
+                </section>
+                <section class="links">
+                  <h3>contact info</h3>
+                  <div class="contact">
+                    <div>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100006656057458&mibextid=ZbWKwL"
+                      >
+                        <i class="f-icon fa-brands fa-facebook-f"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/+201033975215">
+                        <i class="f-icon fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+201033975215">
+                        <i class="f-icon fa-solid fa-phone"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="mailto:@mohamedmohamed33289@gmail.com">
+                        <i class="f-icon fa-solid fa-envelope"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/Mohamedaymana">
+                        <i class="f-icon fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+            <!-- end box -->
+            <!-- start box -->
+            <article class="box">
+              <div class="avatar">
+                <img
+                  src="../Data/Images/about us/ziad-mahmoud.jpg"
+                  alt="person-image"
+                />
+              </div>
+              <div class="data">
+                <section class="head">
+                  <h3>Ziad M.Eltility</h3>
+                  <span>back-end developer</span>
+                  <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Placeat vel molestias minus vitae numquam eveniet? Minus
+                    libero itaque quibusdam tempore eligendi quos, voluptas
+                    voluptatum rem ducimus harum facere a vitae!
+                  </p>
+                </section>
+                <section class="links">
+                  <h3>contact info</h3>
+                  <div class="contact">
+                    <div>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=100071489490640&mibextid=ZbWKwL"
+                      >
+                        <i class="f-icon fa-brands fa-facebook-f"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://wa.me/+201129609244">
+                        <i class="f-icon fa-brands fa-whatsapp"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="tel:+201129609244">
+                        <i class="f-icon fa-solid fa-phone"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="mailto:@ziad.mahmoud21.07@hotmail.com">
+                        <i class="f-icon fa-solid fa-envelope"></i>
+                      </a>
+                    </div>
+                    <div>
+                      <a href="https://github.com/ZiadMahmoud2106/">
+                        <i class="f-icon fa-brands fa-github"></i>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </article>
+            <!-- end box -->
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <!-- Start Top Button -->
+      <div class="top" id="up">
+        <a href="#">
+          <i class="f-icon fa-solid fa-angle-up"></i>
+        </a>
+      </div>
+      <!-- End Top Button -->
+    </main>
+    <!-- End Main -->
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <div class="f-info">
+          <div class="f-logo">
+            <h1>hope</h1>
+          </div>
+          <div class="f-text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut, amet sunt eius molestiae
+              repellat voluptas quaerat quidem?
+            </p>
+          </div>
+          <div class="f-social">
+            <div title="Facebook Page">
+              <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div title="Instagram Page">
+              <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+            <div title="Twitter Account">
+              <a href="https://www.twitter.com/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+            <div title="Mail">
+              <a href="mailto:@mohagmail@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+            <div title="Whatsapp">
+              <a href="https://wa.me/552196312XXXX">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </div>
+            <div title="Phone Number">
+              <a href="tel:+18475555555">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="f-links">
+          <h3>important links</h3>
+          <ul>
+            <li>
+              <a href="../index.html">home</a>
+            </li>
+            <li>
+              <a href="../HTML Files/doctors.html">doctors</a>
+            </li>
+            <li>
+              <a href="../HTML Files/medicines.html">medicines</a>
+            </li>
+            <li>
+              <a href="../HTML Files/hospitals.html">hospitals</a>
+            </li>
+            <li>
+              <a href="../HTML Files/pharmacies.html">pharmacies</a>
+            </li>
+            <li>
+              <a href="../HTML Files/blog.html">our blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="f-blog">
+          <h3>from our blog</h3>
+          <article>
+            <a href="">
+              <h4>article title</h4>
+            </a>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut.
+            </p>
+            <div class="info">
+              <span>author: </span>
+              <span class="input" id="input">john doe</span>
+            </div>
+          </article>
+          <article>
+            <a href="">
+              <h4>article title</h4>
+            </a>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut.
+            </p>
+            <div class="info">
+              <span>author: </span>
+              <span class="input" id="input">john doe</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="rights">
+        <p>
+          Copyright &copy; 2023 <span id="copyright"></span> -
+          <span> hope</span>, made by -
+          <a href="#top">🚑66-اسعاف🚨</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- bootstrap js file -->
+    <script src="../JS Files/bootstrap.bundle.js"></script>
+    <!-- ion-icons js files -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- swiper script -->
+    <script src="../JS Files/swiper-bundle.min.js"></script>
+    <!-- header script -->
+    <script src="../JS Files/header.js"></script>
+  </body>
+</html>

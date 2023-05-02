@@ -99,6 +99,55 @@ main {
           }
         }
       }
+      .other {
+        padding: 20px {
+          bottom: 10px;
+          top: 30px;
+        }
+        @media (max-width: 991px) {
+          padding-top: 0;
+        }
+        .head {
+          h2 {
+            padding: $main-element-padding $sec-element-padding;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            color: $main-color;
+          }
+        }
+        .swiper {
+          overflow: hidden;
+          .slider-container {
+            padding: 0px 8px;
+            .slides {
+              width: 100%;
+              padding-bottom: 40px;
+              .slide {
+                @extend %user-select-none;
+                @include blog-article-box("light");
+              }
+            }
+          }
+          .swiper-navBtn {
+            height: 40px;
+            width: 40px;
+            color: $white-color;
+            background-color: $main-color;
+            @extend %border-radius-50;
+            &:hover {
+              background-color: $sec-color;
+            }
+            &::before,
+            &::after {
+              font-size: 1rem;
+              bottom: -25px;
+            }
+          }
+          .swiper-pagination-bullet {
+            background-color: $main-color;
+          }
+        }
+      }
     }
   }
 }
@@ -134,6 +183,32 @@ body {
             }
             .article-body {
               color: $sec-text-dark-color;
+            }
+          }
+          .other {
+            .head {
+              h2 {
+                color: $main-dark-color;
+              }
+            }
+            .swiper {
+              .slider-container {
+                .slides {
+                  .slide {
+                    @include blog-article-box("dark");
+                  }
+                }
+              }
+              .swiper-navBtn {
+                color: $white-dark-color;
+                background-color: $main-dark-color;
+                &:hover {
+                  background-color: $sec-dark-color;
+                }
+              }
+              .swiper-pagination-bullet {
+                background-color: $main-dark-color;
+              }
             }
           }
         }

@@ -1,4 +1,4 @@
-// events slider
+// more charities slider
 var swiper = new Swiper(".slider-container", {
   slidesPerView: 3,
   spaceBetween: 15,

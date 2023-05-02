@@ -95,7 +95,8 @@ body.dark main .contacts .container .sec-body .sec-right form input[type=submit]
 
 main .medicine .container .sec-body .box::before,
 main .hospitals .container .sec-body,
-main .charities .container .sec-body .slider .slider-container .slides .slide {
+main .charities .container .sec-body .slider .slider-container .slides .slide,
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -110,6 +111,7 @@ main .charities .container .sec-body .slider .swiper-navBtn,
 main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
 body.dark main .pharmacies .container .sec-body .box .avatar,
 body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
+body.dark main .charities .container .sec-body .slider .swiper-navBtn,
 body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
@@ -118,7 +120,8 @@ body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f
   -o-border-radius: 50% !important;
 }
 
-main .charities .container .sec-body .slider .slider-container .slides .slide {
+main .charities .container .sec-body .slider .slider-container .slides .slide,
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -664,14 +667,6 @@ main .blog {
 main .blog .container .sec-body article {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
-}
-
-main .blog .container .sec-body article:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
 }
 
 main .blog .container .sec-body article .text {
@@ -1418,14 +1413,6 @@ body.dark main .blog .container .sec-body article {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
 }
 
-body.dark main .blog .container .sec-body article:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
-}
-
 body.dark main .blog .container .sec-body article .text {
   padding: 10px;
   background-color: #fff;
@@ -1476,6 +1463,120 @@ body.dark main .blog .container .sec-body article .text p {
 
 body.dark main .charities {
   background-color: #222;
+}
+
+body.dark main .charities .container .sec-body .slider {
+  overflow: hidden;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container {
+  padding: 0px 8px;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
+  background-color: #eee;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  overflow: hidden;
+}
+
+@media (min-width: 992px) {
+  body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
+    width: calc((100% - 30px) / 3);
+  }
+}
+
+@media (max-width: 991px) {
+  body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
+    width: calc((100% - 15px) / 2);
+  }
+}
+
+@media (max-width: 575px) {
+  body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
+    width: 100%;
+  }
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-image img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body {
+  padding: 5px 10px;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body h3 {
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  white-space: normal;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot {
+  padding: 10px;
+  padding-top: 0;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a span {
+  font-size: 0.95rem;
+  color: #059cb1;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a .f-icon {
+  margin-left: 2px;
+  font-size: 0.9rem;
+  color: #059cb1;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover span,
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover .f-icon {
+  color: #59c1bd;
+}
+
+body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover .f-icon {
+  animation: left-right-btn 0.3s linear infinite alternate;
+  -webkit-animation: left-right-btn 0.3s linear infinite alternate;
+}
+
+body.dark main .charities .container .sec-body .slider .swiper-navBtn {
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  background-color: #059cb1;
+}
+
+body.dark main .charities .container .sec-body .slider .swiper-navBtn:hover {
+  background-color: #59c1bd;
+}
+
+body.dark main .charities .container .sec-body .slider .swiper-navBtn::before,
+body.dark main .charities .container .sec-body .slider .swiper-navBtn::after {
+  font-size: 1rem;
+  bottom: -25px;
+}
+
+body.dark main .charities .container .sec-body .slider .swiper-pagination-bullet {
+  background-color: #059cb1;
 }
 
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {

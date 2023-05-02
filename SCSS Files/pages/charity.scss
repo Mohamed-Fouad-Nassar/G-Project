@@ -15,7 +15,7 @@ main {
   min-height: calc(100vh - 544px);
   padding: 0 {
     top: $up-down-padding;
-    bottom: $main-element-padding * 2;
+    // bottom: $main-element-padding * 2;
   }
   .container {
     background-color: $light-white-color;
@@ -135,70 +135,37 @@ main {
           }
         }
       }
-      .events {
+      .events,
+      .other {
         padding-top: 30px;
         @media (max-width: 991px) {
           padding-top: 0;
         }
         .head {
           h2 {
-            padding: $main-element-padding;
-            width: 90%;
+            padding: $main-element-padding $sec-element-padding;
             margin: 0 auto;
-            text-align: center;
             font-size: 1.5rem;
             color: $main-color;
           }
         }
-        .events-slider {
-          overflow: hidden;
-          .slider-container {
-            padding: 0px 8px;
-            .slides {
+      }
+      .events {
+        .body {
+          @extend %grid-300-20;
+          .image {
+            border: 5px solid $white-color;
+            img {
               width: 100%;
-              padding-bottom: $main-element-padding * 2;
-              .slide {
-                @extend %user-select-none;
-                background-color: $light-white-color;
-                box-shadow: $main-box-shadow;
-                @media (min-width: 992px) {
-                  width: calc((100% - 30px) / 3);
-                }
-                @media (max-width: 991px) {
-                  width: calc((100% - 15px) / 2);
-                }
-                @media (max-width: 575px) {
-                  width: 100%;
-                }
-                .slide-image {
-                  img {
-                    width: 100%;
-                    height: 250px;
-                    -o-object-fit: cover;
-                    object-fit: cover;
-                  }
-                }
-              }
+              height: 250px;
+              object-fit: cover;
             }
           }
-          .swiper-navBtn {
-            height: $main-element-padding * 2;
-            width: $main-element-padding * 2;
-            color: $white-color;
-            background-color: $main-color;
-            @extend %border-radius-50;
-            &:hover {
-              background-color: $sec-color;
-            }
-            &::before,
-            &::after {
-              font-size: 1rem;
-              bottom: -25px;
-            }
-          }
-          .swiper-pagination-bullet {
-            background-color: $main-color;
-          }
+        }
+      }
+      .other {
+        .swiper {
+          @include charities-slider("light");
         }
       }
     }
@@ -260,55 +227,24 @@ body {
               }
             }
           }
-          .events {
+          .events,
+          .other {
             .head {
               h2 {
                 color: $main-dark-color;
               }
             }
-            .events-slider {
-              .slider-container {
-                .slides {
-                  .slide {
-                    background-color: $sec-dark-bg;
-                    box-shadow: $dark-box-shadow;
-                    .slide-body {
-                      h3 {
-                        color: $white-dark-color;
-                      }
-                      p {
-                        color: $sec-text-dark-color;
-                      }
-                    }
-                    .slide-foot {
-                      a {
-                        span {
-                          color: $main-dark-color;
-                        }
-                        .f-icon {
-                          color: $main-dark-color;
-                        }
-                        &:hover {
-                          span,
-                          .f-icon {
-                            color: $sec-dark-color;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+          }
+          .events {
+            .body {
+              .image {
+                border-color: $main-dark-bg;
               }
-              .swiper-navBtn {
-                color: $white-dark-color;
-                background-color: $main-dark-color;
-                &:hover {
-                  background-color: $sec-dark-color;
-                }
-              }
-              .swiper-pagination-bullet {
-                background-color: $main-dark-color;
-              }
+            }
+          }
+          .other {
+            .swiper {
+              @include charities-slider("dark");
             }
           }
         }

@@ -47,14 +47,6 @@ main .content .container .sec-body .box {
   overflow: hidden;
 }
 
-main .content .container .sec-body .box:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
-}
-
 main .content .container .sec-body .box .text {
   padding: 10px;
   background-color: #fff;
@@ -112,14 +104,6 @@ body.dark main .content .container .sec-body .box {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-}
-
-body.dark main .content .container .sec-body .box:hover {
-  transform: translateY(-10px);
-  -webkit-transform: translateY(-10px);
-  -moz-transform: translateY(-10px);
-  -ms-transform: translateY(-10px);
-  -o-transform: translateY(-10px);
 }
 
 body.dark main .content .container .sec-body .box .text {

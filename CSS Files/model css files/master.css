@@ -1,25 +1,10 @@
-main .landing,
-main .landing .container,
-main .services .container .sec-body .box a .f-icon,
-main .hospitals .container .sec-body .text a,
-main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
-main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
-main .contacts .container .sec-body .sec-right form input[type=submit],
-body.dark main .hospitals .container .sec-body .text a,
-body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
-body.dark main .contacts .container .sec-body .sec-right form input[type=submit] {
+main .landing, main .landing .container, main .services .container .sec-body .box a .f-icon, main .hospitals .container .sec-body .text a, main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon, main .contacts .container .sec-body .sec-left .contact-info > div > div > .f-icon, main .contacts .container .sec-body .sec-right form input[type=submit], body.dark main .hospitals .container .sec-body .text a, body.dark main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon, body.dark main .contacts .container .sec-body .sec-left .contact-info > div > div > .f-icon, body.dark main .contacts .container .sec-body .sec-right form input[type=submit] {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-main .doctors .container .sec-body .box .info .contact,
-main .pharmacies .container .sec-body .box .data .contact,
-main .contacts .container .sec-body .sec-left .social-icon>div,
-body.dark main .doctors .container .sec-body .box .info .contact,
-body.dark main .pharmacies .container .sec-body .box .data .contact,
-body.dark main .contacts .container .sec-body .sec-left .social-icon {
+main .doctors .container .sec-body .box .info .contact, main .pharmacies .container .sec-body .box .data .contact, main .contacts .container .sec-body .sec-left .social-icon > div, body.dark main .doctors .container .sec-body .box .info .contact, body.dark main .pharmacies .container .sec-body .box .data .contact, body.dark main .contacts .container .sec-body .sec-left .social-icon {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -36,12 +21,7 @@ main .hospitals .container .sec-body {
   justify-content: space-between;
 }
 
-main .doctors .container .sec-body .box .info .contact>div a,
-main .pharmacies .container .sec-body .box .data .contact>div a,
-main .contacts .container .sec-body .sec-left .social-icon>div>div a,
-body.dark main .doctors .container .sec-body .box .info .contact>div a,
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a,
-body.dark main .contacts .container .sec-body .sec-left .social-icon>div a {
+main .doctors .container .sec-body .box .info .contact > div a, main .pharmacies .container .sec-body .box .data .contact > div a, main .contacts .container .sec-body .sec-left .social-icon > div > div a, body.dark main .doctors .container .sec-body .box .info .contact > div a, body.dark main .pharmacies .container .sec-body .box .data .contact > div a, body.dark main .contacts .container .sec-body .sec-left .social-icon > div a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -59,16 +39,13 @@ main .blog .container .sec-body {
   gap: 20px;
 }
 
-main .services .container .sec-body,
-main .medicine .container .sec-body,
-main .pharmacies .container .sec-body {
+main .services .container .sec-body, main .medicine .container .sec-body, main .pharmacies .container .sec-body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
 }
 
-main .medicine .container .sec-body .box::before,
-main .medicine .container .sec-body .box .info {
+main .medicine .container .sec-body .box::before, main .medicine .container .sec-body .box .info {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -76,16 +53,7 @@ main .medicine .container .sec-body .box .info {
   -o-transform: translate(-50%, -50%);
 }
 
-main .doctors .container .sec-body .box .info .contact>div a,
-main .hospitals .container .sec-body .text a,
-main .pharmacies .container .sec-body .box .data .contact>div a,
-main .contacts .container .sec-body .sec-left .social-icon>div>div a,
-main .contacts .container .sec-body .sec-right form input[type=submit],
-body.dark main .doctors .container .sec-body .box .info .contact>div a,
-body.dark main .hospitals .container .sec-body .text a,
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a,
-body.dark main .contacts .container .sec-body .sec-left .social-icon>div a,
-body.dark main .contacts .container .sec-body .sec-right form input[type=submit] {
+main .doctors .container .sec-body .box .info .contact > div a, main .hospitals .container .sec-body .text a, main .pharmacies .container .sec-body .box .data .contact > div a, main .contacts .container .sec-body .sec-left .social-icon > div > div a, main .contacts .container .sec-body .sec-right form input[type=submit], body.dark main .doctors .container .sec-body .box .info .contact > div a, body.dark main .hospitals .container .sec-body .text a, body.dark main .pharmacies .container .sec-body .box .data .contact > div a, body.dark main .contacts .container .sec-body .sec-left .social-icon > div a, body.dark main .contacts .container .sec-body .sec-right form input[type=submit] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -93,10 +61,7 @@ body.dark main .contacts .container .sec-body .sec-right form input[type=submit]
   -o-border-radius: 5px !important;
 }
 
-main .medicine .container .sec-body .box::before,
-main .hospitals .container .sec-body,
-main .charities .container .sec-body .slider .slider-container .slides .slide,
-body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
+main .medicine .container .sec-body .box::before, main .hospitals .container .sec-body, main .charities .container .sec-body .slider .slider-container .slides .slide, body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -104,15 +69,7 @@ body.dark main .charities .container .sec-body .slider .slider-container .slides
   -o-border-radius: 10px !important;
 }
 
-main .services .container .sec-body .box a .f-icon,
-main .pharmacies .container .sec-body .box .avatar,
-main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
-main .charities .container .sec-body .slider .swiper-navBtn,
-main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon,
-body.dark main .pharmacies .container .sec-body .box .avatar,
-body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon,
-body.dark main .charities .container .sec-body .slider .swiper-navBtn,
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
+main .services .container .sec-body .box a .f-icon, main .pharmacies .container .sec-body .box .avatar, main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon, main .charities .container .sec-body .slider .swiper-navBtn, main .contacts .container .sec-body .sec-left .contact-info > div > div > .f-icon, body.dark main .pharmacies .container .sec-body .box .avatar, body.dark main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon, body.dark main .charities .container .sec-body .slider .swiper-navBtn, body.dark main .contacts .container .sec-body .sec-left .contact-info > div > div > .f-icon {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -120,8 +77,7 @@ body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f
   -o-border-radius: 50% !important;
 }
 
-main .charities .container .sec-body .slider .slider-container .slides .slide,
-body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
+main .charities .container .sec-body .slider .slider-container .slides .slide, body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -131,30 +87,25 @@ body.dark main .charities .container .sec-body .slider .slider-container .slides
 main {
   padding: 0 !important;
 }
-
 main .landing {
   padding: 100px 0;
   background-color: #fff;
   min-height: 100vh;
   position: relative;
 }
-
 @media (max-width: 767px) {
   main .landing {
     padding-top: 150px;
   }
 }
-
 main .landing .container {
   gap: 20px;
 }
-
 @media (max-width: 767px) {
   main .landing .container {
     flex-direction: column;
   }
 }
-
 main .landing .container .down-btn {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -166,56 +117,46 @@ main .landing .container .down-btn {
   bottom: 20px;
   left: 50%;
 }
-
 main .landing .container .down-btn a:hover i {
   color: #59c1bd;
 }
-
 main .landing .container .down-btn a i {
   font-size: 1.6rem;
   color: #059cb1;
   -webkit-animation: up-down-btn 0.3s linear infinite alternate;
   animation: up-down-btn 0.3s linear infinite alternate;
 }
-
 main .landing .container .left {
   flex-basis: 50%;
 }
-
 @media (max-width: 767px) {
   main .landing .container .left {
     flex-basis: 100%;
     text-align: center;
   }
 }
-
 main .landing .container .left h2 {
   font-size: 1.95rem;
   color: #059cb1;
 }
-
 main .landing .container .left p {
   color: #555;
   letter-spacing: 1px;
   line-height: 1.5rem;
   font-size: 1.1rem;
 }
-
 main .landing .container .right {
   flex-basis: 50%;
 }
-
 @media (max-width: 767px) {
   main .landing .container .right {
     flex-basis: 100%;
   }
 }
-
 main .services {
   padding: 100px 0;
   background-color: #eee;
 }
-
 @media (max-width: 1199px) {
   main .services .container .sec-body {
     display: grid;
@@ -223,20 +164,16 @@ main .services {
     gap: 20px;
   }
 }
-
 main .services .container .sec-body .box {
   padding: 20px 10px;
   position: relative;
 }
-
 main .services .container .sec-body .box:hover {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
 }
-
 main .services .container .sec-body .box a {
   text-align: center;
 }
-
 main .services .container .sec-body .box a .f-icon {
   margin: auto;
   width: 80px;
@@ -245,39 +182,32 @@ main .services .container .sec-body .box a .f-icon {
   color: #fff;
   background-color: #059cb1;
 }
-
 main .services .container .sec-body .box a h3 {
   font-size: 1.5rem;
   color: #059cb1;
   margin: 20px 0;
 }
-
 main .services .container .sec-body .box a p {
   margin: 0;
   color: #555;
 }
-
 main .doctors {
   padding: 100px 0;
 }
-
 main .doctors .container .sec-body .box {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   position: relative;
   overflow: hidden;
 }
-
 @media (max-width: 575px) {
   main .doctors .container .sec-body .box {
     max-width: 250px;
     margin: auto;
   }
 }
-
 main .doctors .container .sec-body .box:hover .info {
   bottom: 0;
 }
-
 main .doctors .container .sec-body .box:hover img {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -285,11 +215,9 @@ main .doctors .container .sec-body .box:hover img {
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
 }
-
 main .doctors .container .sec-body .box img {
   width: 100%;
 }
-
 main .doctors .container .sec-body .box .info {
   position: absolute;
   bottom: -50px;
@@ -298,15 +226,12 @@ main .doctors .container .sec-body .box .info {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
 }
-
 main .doctors .container .sec-body .box .info h5 {
   color: #059cb1;
 }
-
 main .doctors .container .sec-body .box .info p {
   font-size: 0.9rem;
 }
-
 main .doctors .container .sec-body .box .info .contact {
   flex-wrap: wrap;
   gap: 10px;
@@ -314,56 +239,45 @@ main .doctors .container .sec-body .box .info .contact {
   flex-wrap: nowrap !important;
   padding: 0 !important;
 }
-
-main .doctors .container .sec-body .box .info .contact>div a {
+main .doctors .container .sec-body .box .info .contact > div a {
   width: 40px;
   height: 40px;
   background-color: #59c1bd;
 }
-
-main .doctors .container .sec-body .box .info .contact>div a i {
+main .doctors .container .sec-body .box .info .contact > div a i {
   font-size: 1.5rem;
 }
-
-main .doctors .container .sec-body .box .info .contact>div a:hover {
+main .doctors .container .sec-body .box .info .contact > div a:hover {
   background-color: #eee;
 }
-
-main .doctors .container .sec-body .box .info .contact>div a:hover i {
+main .doctors .container .sec-body .box .info .contact > div a:hover i {
   color: #059cb1;
 }
-
-main .doctors .container .sec-body .box .info .contact>div a i {
+main .doctors .container .sec-body .box .info .contact > div a i {
   color: #fff;
 }
-
-main .doctors .container .sec-body .box .info .contact>div a {
+main .doctors .container .sec-body .box .info .contact > div a {
   width: 30px !important;
   height: 30px !important;
 }
-
-main .doctors .container .sec-body .box .info .contact>div a i {
+main .doctors .container .sec-body .box .info .contact > div a i {
   font-size: 1.1rem !important;
 }
-
 main .medicine {
   padding: 100px 0;
   background-color: #eee;
 }
-
 @media (max-width: 575px) {
   main .medicine .container .sec-body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
-
 main .medicine .container .sec-body .box {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   position: relative;
   z-index: 1;
 }
-
 main .medicine .container .sec-body .box::before {
   content: "";
   position: absolute;
@@ -376,7 +290,6 @@ main .medicine .container .sec-body .box::before {
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 2;
 }
-
 main .medicine .container .sec-body .box .info {
   text-align: center;
   display: block;
@@ -388,42 +301,35 @@ main .medicine .container .sec-body .box .info {
   z-index: -1;
   opacity: 0;
 }
-
 main .medicine .container .sec-body .box .info a {
   display: block;
   margin-bottom: 10px;
   color: #59c1bd;
 }
-
 main .medicine .container .sec-body .box .info a:hover i,
 main .medicine .container .sec-body .box .info a:hover h4 {
   color: #059cb1;
 }
-
 main .medicine .container .sec-body .box .info a i {
   margin-bottom: 10px;
   font-size: 2rem;
   color: #59c1bd;
 }
-
 @media (max-width: 575px) {
   main .medicine .container .sec-body .box .info a i {
     font-size: 1.5rem;
   }
 }
-
 main .medicine .container .sec-body .box .info a h4 {
   margin-bottom: 10px;
   font-size: 1.5rem;
   color: #59c1bd;
 }
-
 @media (max-width: 575px) {
   main .medicine .container .sec-body .box .info a h4 {
     font-size: 1.1rem;
   }
 }
-
 main .medicine .container .sec-body .box .info p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -433,18 +339,15 @@ main .medicine .container .sec-body .box .info p {
   font-size: 0.9rem;
   color: #555;
 }
-
 @media (max-width: 575px) {
   main .medicine .container .sec-body .box .info p {
     font-size: 0.8rem;
   }
 }
-
 main .medicine .container .sec-body .box:hover::before {
   width: calc(100% - 40px);
   height: calc(100% - 40px);
 }
-
 main .medicine .container .sec-body .box:hover img {
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -452,47 +355,38 @@ main .medicine .container .sec-body .box:hover img {
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
 }
-
 main .medicine .container .sec-body .box:hover .info {
   opacity: 1;
   z-index: 3;
 }
-
 main .hospitals {
   padding: 100px 0;
 }
-
 main .hospitals .container .sec-body {
   background-color: #eee;
 }
-
 @media (max-width: 991px) {
   main .hospitals .container .sec-body {
     flex-direction: column;
   }
 }
-
 main .hospitals .container .sec-body .text {
   width: 50%;
   padding: 100px 20px;
 }
-
 @media (max-width: 991px) {
   main .hospitals .container .sec-body .text {
     width: 100%;
   }
 }
-
 main .hospitals .container .sec-body .text h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: 600;
 }
-
 main .hospitals .container .sec-body .text p {
   margin-bottom: 40px;
 }
-
 main .hospitals .container .sec-body .text a {
   width: 160px;
   margin: 0 auto;
@@ -503,36 +397,34 @@ main .hospitals .container .sec-body .text a {
   padding: 10px 20px;
   margin-left: 0;
 }
-
 main .hospitals .container .sec-body .text a:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
-
 main .hospitals .container .sec-body .image {
   width: 50%;
   padding: 0;
   background-image: url(../Data/Images/3d-render-medical-background-showing-virus-cells-male-figures-lungs_1048-6289.webp);
 }
-
 @media (max-width: 991px) {
   main .hospitals .container .sec-body .image {
     display: none;
   }
 }
-
 main .pharmacies {
   padding: 100px 0;
   background-color: #eee;
 }
-
 main .pharmacies .container .sec-body .box {
   position: relative;
   background-color: #fff;
   padding: 20px 20px 30px;
+  display: none;
 }
-
+main .pharmacies .container .sec-body .box.active {
+  display: block !important;
+}
 main .pharmacies .container .sec-body .box .avatar {
   transform: translate(10px, -50px);
   -webkit-transform: translate(10px, -50px);
@@ -548,30 +440,29 @@ main .pharmacies .container .sec-body .box .avatar {
   background-color: #eee;
   overflow: hidden;
 }
-
 main .pharmacies .container .sec-body .box .avatar img {
   width: 100%;
   height: 130px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 main .pharmacies .container .sec-body .box .data .head h3,
 main .pharmacies .container .sec-body .box .data .head span {
   width: calc(100% - 130px);
 }
-
-main .pharmacies .container .sec-body .box .data .head h3 {
+main .pharmacies .container .sec-body .box .data .head h3,
+main .pharmacies .container .sec-body .box .data .head a {
   font-size: 1.3rem;
   margin: 0;
 }
-
+main .pharmacies .container .sec-body .box .data .head a:hover {
+  color: #059cb1;
+}
 main .pharmacies .container .sec-body .box .data .head span {
   font-size: 0.9rem;
   padding: 10px 0 20px;
   display: block;
 }
-
 main .pharmacies .container .sec-body .box .data .head p {
   margin: 0;
   display: -webkit-box;
@@ -580,14 +471,11 @@ main .pharmacies .container .sec-body .box .data .head p {
   overflow: hidden;
   color: #555;
 }
-
 main .pharmacies .container .sec-body .box .data .info {
   position: relative;
   padding-top: 40px;
 }
-
-main .pharmacies .container .sec-body .box .data .info::before,
-main .pharmacies .container .sec-body .box .data .info::after {
+main .pharmacies .container .sec-body .box .data .info::before, main .pharmacies .container .sec-body .box .data .info::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -595,98 +483,78 @@ main .pharmacies .container .sec-body .box .data .info::after {
   left: 0;
   background-color: #eee;
 }
-
 main .pharmacies .container .sec-body .box .data .info::before {
   top: 20px;
 }
-
 main .pharmacies .container .sec-body .box .data .info::after {
   bottom: -20px;
 }
-
-main .pharmacies .container .sec-body .box .data .info>div {
+main .pharmacies .container .sec-body .box .data .info > div {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-main .pharmacies .container .sec-body .box .data .info>div:last-of-type {
+main .pharmacies .container .sec-body .box .data .info > div:last-of-type {
   margin: 0;
 }
-
-main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
   color: #fff;
   font-size: 1.5rem;
 }
-
-main .pharmacies .container .sec-body .box .data .info>div>span {
+main .pharmacies .container .sec-body .box .data .info > div > span {
   color: #fff;
 }
-
 main .pharmacies .container .sec-body .box .data .info .field span {
   color: #555;
 }
-
 main .pharmacies .container .sec-body .box .data .contact {
   flex-wrap: wrap;
   gap: 10px;
   flex-wrap: nowrap;
   padding-top: 40px;
 }
-
-main .pharmacies .container .sec-body .box .data .contact>div a {
+main .pharmacies .container .sec-body .box .data .contact > div a {
   width: 40px;
   height: 40px;
   background-color: #59c1bd;
 }
-
-main .pharmacies .container .sec-body .box .data .contact>div a i {
+main .pharmacies .container .sec-body .box .data .contact > div a i {
   font-size: 1.5rem;
 }
-
-main .pharmacies .container .sec-body .box .data .contact>div a:hover {
+main .pharmacies .container .sec-body .box .data .contact > div a:hover {
   background-color: #eee;
 }
-
-main .pharmacies .container .sec-body .box .data .contact>div a:hover i {
+main .pharmacies .container .sec-body .box .data .contact > div a:hover i {
   color: #059cb1;
 }
-
-main .pharmacies .container .sec-body .box .data .contact>div a i {
+main .pharmacies .container .sec-body .box .data .contact > div a i {
   color: #fff;
 }
-
 main .blog {
   padding: 100px 0;
 }
-
 main .blog .container .sec-body article {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-
 main .blog .container .sec-body article .text {
   padding: 10px;
   background-color: #fff;
 }
-
 main .blog .container .sec-body article .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 main .blog .container .sec-body article .text a:hover {
   cursor: pointer;
 }
-
 main .blog .container .sec-body article .text a:hover h3 {
   color: #059cb1;
 }
-
 main .blog .container .sec-body article .text p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -695,74 +563,60 @@ main .blog .container .sec-body article .text p {
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
-
 main .blog .container .sec-body article .text .info span {
   color: #555;
   font-size: 0.9rem;
 }
-
 main .charities {
   padding: 100px 0;
   background-color: #eee;
 }
-
 main .charities .container .sec-body {
   position: relative;
 }
-
 main .charities .container .sec-body .slider {
   overflow: hidden;
 }
-
 main .charities .container .sec-body .slider .slider-container {
   padding: 0px 8px;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides {
   width: 100%;
   padding-bottom: 40px;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide {
   background-color: #eee;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-
 @media (min-width: 992px) {
   main .charities .container .sec-body .slider .slider-container .slides .slide {
     width: calc((100% - 30px) / 3);
   }
 }
-
 @media (max-width: 991px) {
   main .charities .container .sec-body .slider .slider-container .slides .slide {
     width: calc((100% - 15px) / 2);
   }
 }
-
 @media (max-width: 575px) {
   main .charities .container .sec-body .slider .slider-container .slides .slide {
     width: 100%;
   }
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-image img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body {
   padding: 5px 10px;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body h3 {
   margin-top: 5px;
   font-size: 1.2rem;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body p {
   color: #555;
   font-size: 0.9rem;
@@ -776,61 +630,49 @@ main .charities .container .sec-body .slider .slider-container .slides .slide .s
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot {
   padding: 10px;
   padding-top: 0;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a span {
   font-size: 0.95rem;
   color: #059cb1;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a .f-icon {
   margin-left: 2px;
   font-size: 0.9rem;
   color: #059cb1;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover span,
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover .f-icon {
   color: #59c1bd;
 }
-
 main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover .f-icon {
   animation: left-right-btn 0.3s linear infinite alternate;
   -webkit-animation: left-right-btn 0.3s linear infinite alternate;
 }
-
 main .charities .container .sec-body .slider .swiper-navBtn {
   height: 40px;
   width: 40px;
   color: #fff;
   background-color: #059cb1;
 }
-
 main .charities .container .sec-body .slider .swiper-navBtn:hover {
   background-color: #59c1bd;
 }
-
-main .charities .container .sec-body .slider .swiper-navBtn::before,
-main .charities .container .sec-body .slider .swiper-navBtn::after {
+main .charities .container .sec-body .slider .swiper-navBtn::before, main .charities .container .sec-body .slider .swiper-navBtn::after {
   font-size: 1rem;
   bottom: -25px;
 }
-
 main .charities .container .sec-body .slider .swiper-pagination-bullet {
   background-color: #059cb1;
 }
-
 main .contacts {
   padding: 100px 0;
   position: relative;
   background-image: url(../Data/Images/contact-background-image.jpg);
   z-index: 0;
 }
-
 main .contacts::before {
   content: "";
   position: absolute;
@@ -842,113 +684,91 @@ main .contacts::before {
   z-index: -1;
   opacity: 0.9;
 }
-
 main .contacts .container {
   color: #fff;
 }
-
 main .contacts .container .sec-head h2,
 main .contacts .container .sec-head p {
   color: #fff;
 }
-
 main .contacts .container .sec-body {
   gap: 20px;
 }
-
 @media (max-width: 767px) {
   main .contacts .container .sec-body {
     flex-direction: column;
     gap: 100px;
   }
 }
-
 main .contacts .container .sec-body h2 {
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: 600;
 }
-
 main .contacts .container .sec-body .sec-left {
   width: 50%;
 }
-
 @media (max-width: 767px) {
   main .contacts .container .sec-body .sec-left {
     width: 100%;
   }
 }
-
-main .contacts .container .sec-body .sec-left .contact-info>div {
+main .contacts .container .sec-body .sec-left .contact-info > div {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-main .contacts .container .sec-body .sec-left .contact-info>div:last-of-type {
+main .contacts .container .sec-body .sec-left .contact-info > div:last-of-type {
   margin: 0;
 }
-
-main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
+main .contacts .container .sec-body .sec-left .contact-info > div > div > .f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
   color: #fff;
   font-size: 1.5rem;
 }
-
-main .contacts .container .sec-body .sec-left .contact-info>div>span {
+main .contacts .container .sec-body .sec-left .contact-info > div > span {
   color: #fff;
 }
-
 main .contacts .container .sec-body .sec-left .social-icon {
   display: block !important;
   padding-top: 100px;
 }
-
-main .contacts .container .sec-body .sec-left .social-icon>div {
+main .contacts .container .sec-body .sec-left .social-icon > div {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-main .contacts .container .sec-body .sec-left .social-icon>div>div a {
+main .contacts .container .sec-body .sec-left .social-icon > div > div a {
   width: 40px;
   height: 40px;
   background-color: #59c1bd;
 }
-
-main .contacts .container .sec-body .sec-left .social-icon>div>div a i {
+main .contacts .container .sec-body .sec-left .social-icon > div > div a i {
   font-size: 1.5rem;
 }
-
-main .contacts .container .sec-body .sec-left .social-icon>div>div a:hover {
+main .contacts .container .sec-body .sec-left .social-icon > div > div a:hover {
   background-color: #eee;
 }
-
-main .contacts .container .sec-body .sec-left .social-icon>div>div a:hover i {
+main .contacts .container .sec-body .sec-left .social-icon > div > div a:hover i {
   color: #059cb1;
 }
-
-main .contacts .container .sec-body .sec-left .social-icon>div>div a i {
+main .contacts .container .sec-body .sec-left .social-icon > div > div a i {
   color: #fff;
 }
-
-main .contacts .container .sec-body .sec-left .social-icon>div>div a {
+main .contacts .container .sec-body .sec-left .social-icon > div > div a {
   width: 45px !important;
   height: 45px !important;
 }
-
 main .contacts .container .sec-body .sec-right {
   width: 50%;
 }
-
 @media (max-width: 767px) {
   main .contacts .container .sec-body .sec-right {
     width: 100%;
   }
 }
-
 main .contacts .container .sec-body .sec-right form textarea {
   padding: 10px;
   width: 100%;
@@ -960,47 +780,36 @@ main .contacts .container .sec-body .sec-right form textarea {
   outline: none;
   border-bottom: 2px solid #fff;
 }
-
 main .contacts .container .sec-body .sec-right form textarea::-webkit-input-placeholder {
   color: #fff;
 }
-
 main .contacts .container .sec-body .sec-right form textarea::-moz-placeholder {
   color: #fff;
 }
-
 main .contacts .container .sec-body .sec-right form textarea:-ms-input-placeholder {
   color: #fff;
 }
-
 main .contacts .container .sec-body .sec-right form textarea::-ms-input-placeholder {
   color: #fff;
 }
-
 main .contacts .container .sec-body .sec-right form textarea::placeholder {
   color: #fff;
 }
-
 main .contacts .container .sec-body .sec-right form textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
-
 main .contacts .container .sec-body .sec-right form textarea:focus::-moz-placeholder {
   color: transparent;
 }
-
 main .contacts .container .sec-body .sec-right form textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
-
 main .contacts .container .sec-body .sec-right form textarea:focus::-ms-input-placeholder {
   color: transparent;
 }
-
 main .contacts .container .sec-body .sec-right form textarea:focus::placeholder {
   color: transparent;
 }
-
 main .contacts .container .sec-body .sec-right form input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -1012,13 +821,11 @@ main .contacts .container .sec-body .sec-right form input[type=submit] {
   margin-top: 20px;
   margin-right: 0;
 }
-
 main .contacts .container .sec-body .sec-right form input[type=submit]:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
-
 main .contacts .container .sec-body .sec-right form input[type=submit]:hover {
   color: #fff;
   border-color: #fff;
@@ -1027,140 +834,107 @@ main .contacts .container .sec-body .sec-right form input[type=submit]:hover {
 body.dark main .landing {
   background-color: #1d1d1d;
 }
-
 body.dark main .landing .container .down-btn a:hover i {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .landing .container .down-btn a i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .landing .container .left h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .landing .container .left p {
   color: #a5a5a5;
 }
-
 body.dark main .services {
   background-color: #222;
 }
-
 body.dark main .services .container .sec-body .box:hover {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark main .services .container .sec-body .box a .f-icon {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .services .container .sec-body .box a h3 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .services .container .sec-body .box a p {
   color: #a5a5a5;
 }
-
 body.dark main .doctors {
   background-color: #1d1d1d;
 }
-
 body.dark main .doctors .container .sec-body .box {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark main .doctors .container .sec-body .box .info {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 body.dark main .doctors .container .sec-body .box .info h5 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .doctors .container .sec-body .box .info p {
   color: #a5a5a5;
 }
-
 body.dark main .doctors .container .sec-body .box .info .contact {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-body.dark main .doctors .container .sec-body .box .info .contact>div a {
+body.dark main .doctors .container .sec-body .box .info .contact > div a {
   width: 40px;
   height: 40px;
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
-body.dark main .doctors .container .sec-body .box .info .contact>div a i {
+body.dark main .doctors .container .sec-body .box .info .contact > div a i {
   font-size: 1.5rem;
 }
-
-body.dark main .doctors .container .sec-body .box .info .contact>div a:hover {
+body.dark main .doctors .container .sec-body .box .info .contact > div a:hover {
   background-color: #222;
 }
-
-body.dark main .doctors .container .sec-body .box .info .contact>div a:hover i {
+body.dark main .doctors .container .sec-body .box .info .contact > div a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .doctors .container .sec-body .box .info .contact>div a i {
+body.dark main .doctors .container .sec-body .box .info .contact > div a i {
   color: #efefef;
 }
-
 body.dark main .medicine {
   background-color: #222;
 }
-
 body.dark main .medicine .container .sec-body .box {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark main .medicine .container .sec-body .box::before {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 body.dark main .medicine .container .sec-body .box .info a {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .medicine .container .sec-body .box .info a:hover i,
 body.dark main .medicine .container .sec-body .box .info a:hover h4 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .medicine .container .sec-body .box .info a i {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .medicine .container .sec-body .box .info a h4 {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .medicine .container .sec-body .box .info p {
   color: #a5a5a5;
 }
-
 body.dark main .hospitals {
   background-color: #1d1d1d;
 }
-
 body.dark main .hospitals .container .sec-body {
   background-color: #222;
 }
-
 body.dark main .hospitals .container .sec-body .text h2 {
   color: #efefef;
 }
-
 body.dark main .hospitals .container .sec-body .text p {
   color: #a5a5a5;
 }
-
 body.dark main .hospitals .container .sec-body .text a {
   width: 160px;
   margin: 0 auto;
@@ -1172,24 +946,24 @@ body.dark main .hospitals .container .sec-body .text a {
   margin-right: auto;
   margin-left: 0;
 }
-
 body.dark main .hospitals .container .sec-body .text a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .pharmacies {
   background-color: #222;
 }
-
 body.dark main .pharmacies .container .sec-body .box {
   position: relative;
   background-color: #fff;
   padding: 20px 20px 30px;
+  display: none;
   background-color: #1d1d1d;
 }
-
+body.dark main .pharmacies .container .sec-body .box.active {
+  display: block !important;
+}
 body.dark main .pharmacies .container .sec-body .box .avatar {
   transform: translate(10px, -50px);
   -webkit-transform: translate(10px, -50px);
@@ -1205,30 +979,29 @@ body.dark main .pharmacies .container .sec-body .box .avatar {
   background-color: #eee;
   overflow: hidden;
 }
-
 body.dark main .pharmacies .container .sec-body .box .avatar img {
   width: 100%;
   height: 130px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .head h3,
 body.dark main .pharmacies .container .sec-body .box .data .head span {
   width: calc(100% - 130px);
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .head h3 {
+body.dark main .pharmacies .container .sec-body .box .data .head h3,
+body.dark main .pharmacies .container .sec-body .box .data .head a {
   font-size: 1.3rem;
   margin: 0;
 }
-
+body.dark main .pharmacies .container .sec-body .box .data .head a:hover {
+  color: #059cb1;
+}
 body.dark main .pharmacies .container .sec-body .box .data .head span {
   font-size: 0.9rem;
   padding: 10px 0 20px;
   display: block;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .head p {
   margin: 0;
   display: -webkit-box;
@@ -1237,14 +1010,11 @@ body.dark main .pharmacies .container .sec-body .box .data .head p {
   overflow: hidden;
   color: #555;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .info {
   position: relative;
   padding-top: 40px;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info::before,
-body.dark main .pharmacies .container .sec-body .box .data .info::after {
+body.dark main .pharmacies .container .sec-body .box .data .info::before, body.dark main .pharmacies .container .sec-body .box .data .info::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1252,90 +1022,75 @@ body.dark main .pharmacies .container .sec-body .box .data .info::after {
   left: 0;
   background-color: #eee;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .info::before {
   top: 20px;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .info::after {
   bottom: -20px;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div {
+body.dark main .pharmacies .container .sec-body .box .data .info > div {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div:last-of-type {
+body.dark main .pharmacies .container .sec-body .box .data .info > div:last-of-type {
   margin: 0;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+body.dark main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
   color: #fff;
   font-size: 1.5rem;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div>span {
+body.dark main .pharmacies .container .sec-body .box .data .info > div > span {
   color: #fff;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .info .field span {
   color: #555;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .contact {
   flex-wrap: wrap;
   gap: 10px;
   flex-wrap: nowrap;
   padding-top: 40px;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a {
   width: 40px;
   height: 40px;
   background-color: #59c1bd;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a i {
   font-size: 1.5rem;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a:hover {
   background-color: #eee;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover i {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a:hover i {
   color: #059cb1;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a i {
   color: #fff;
 }
-
 body.dark main .pharmacies .container .sec-body .box .avatar {
   border-color: #222;
   background-color: #222;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .head h3 {
+body.dark main .pharmacies .container .sec-body .box .data .head h3,
+body.dark main .pharmacies .container .sec-body .box .data .head a {
   color: #efefef;
 }
-
+body.dark main .pharmacies .container .sec-body .box .data .head a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
 body.dark main .pharmacies .container .sec-body .box .data .head span {
   color: #efefef;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .head p {
   color: #a5a5a5;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info::before,
-body.dark main .pharmacies .container .sec-body .box .data .info::after {
+body.dark main .pharmacies .container .sec-body .box .data .info::before, body.dark main .pharmacies .container .sec-body .box .data .info::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1343,94 +1098,75 @@ body.dark main .pharmacies .container .sec-body .box .data .info::after {
   left: 0;
   background-color: #555;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div {
+body.dark main .pharmacies .container .sec-body .box .data .info > div {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div:last-of-type {
+body.dark main .pharmacies .container .sec-body .box .data .info > div:last-of-type {
   margin: 0;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+body.dark main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
   color: #fff;
   font-size: 1.5rem;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div>span {
+body.dark main .pharmacies .container .sec-body .box .data .info > div > span {
   color: #fff;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div>div>.f-icon {
+body.dark main .pharmacies .container .sec-body .box .data .info > div > div > .f-icon {
   background-color: rgba(89, 193, 189, 0.8705882353);
   color: #efefef;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .info>div>span {
+body.dark main .pharmacies .container .sec-body .box .data .info > div > span {
   color: #efefef !important;
 }
-
 body.dark main .pharmacies .container .sec-body .box .data .contact {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a {
   width: 40px;
   height: 40px;
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a i {
   font-size: 1.5rem;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a:hover {
   background-color: #222;
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a:hover i {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .pharmacies .container .sec-body .box .data .contact>div a i {
+body.dark main .pharmacies .container .sec-body .box .data .contact > div a i {
   color: #efefef;
 }
-
 body.dark main .blog {
   background-color: #1d1d1d;
 }
-
 body.dark main .blog .container .sec-body article {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
 }
-
 body.dark main .blog .container .sec-body article .text {
   padding: 10px;
   background-color: #fff;
 }
-
 body.dark main .blog .container .sec-body article .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 body.dark main .blog .container .sec-body article .text a:hover {
   cursor: pointer;
 }
-
 body.dark main .blog .container .sec-body article .text a:hover h3 {
   color: #059cb1;
 }
-
 body.dark main .blog .container .sec-body article .text p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -1439,85 +1175,68 @@ body.dark main .blog .container .sec-body article .text p {
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
-
 body.dark main .blog .container .sec-body article .text .info span {
   color: #555;
   font-size: 0.9rem;
 }
-
 body.dark main .blog .container .sec-body article .text {
   background-color: #222;
 }
-
 body.dark main .blog .container .sec-body article .text a h3 {
   color: #efefef;
 }
-
 body.dark main .blog .container .sec-body article .text a:hover h3 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .blog .container .sec-body article .text p {
   color: #a5a5a5;
 }
-
 body.dark main .charities {
   background-color: #222;
 }
-
 body.dark main .charities .container .sec-body .slider {
   overflow: hidden;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container {
   padding: 0px 8px;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides {
   width: 100%;
   padding-bottom: 40px;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
   background-color: #eee;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-
 @media (min-width: 992px) {
   body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
     width: calc((100% - 30px) / 3);
   }
 }
-
 @media (max-width: 991px) {
   body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
     width: calc((100% - 15px) / 2);
   }
 }
-
 @media (max-width: 575px) {
   body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
     width: 100%;
   }
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-image img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body {
   padding: 5px 10px;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body h3 {
   margin-top: 5px;
   font-size: 1.2rem;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body p {
   color: #555;
   font-size: 0.9rem;
@@ -1531,171 +1250,135 @@ body.dark main .charities .container .sec-body .slider .slider-container .slides
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot {
   padding: 10px;
   padding-top: 0;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a span {
   font-size: 0.95rem;
   color: #059cb1;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a .f-icon {
   margin-left: 2px;
   font-size: 0.9rem;
   color: #059cb1;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover span,
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover .f-icon {
   color: #59c1bd;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover .f-icon {
   animation: left-right-btn 0.3s linear infinite alternate;
   -webkit-animation: left-right-btn 0.3s linear infinite alternate;
 }
-
 body.dark main .charities .container .sec-body .slider .swiper-navBtn {
   height: 40px;
   width: 40px;
   color: #fff;
   background-color: #059cb1;
 }
-
 body.dark main .charities .container .sec-body .slider .swiper-navBtn:hover {
   background-color: #59c1bd;
 }
-
-body.dark main .charities .container .sec-body .slider .swiper-navBtn::before,
-body.dark main .charities .container .sec-body .slider .swiper-navBtn::after {
+body.dark main .charities .container .sec-body .slider .swiper-navBtn::before, body.dark main .charities .container .sec-body .slider .swiper-navBtn::after {
   font-size: 1rem;
   bottom: -25px;
 }
-
 body.dark main .charities .container .sec-body .slider .swiper-pagination-bullet {
   background-color: #059cb1;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide {
   background-color: #1d1d1d;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body h3 {
   color: #efefef;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-body p {
   color: #a5a5a5;
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover span,
 body.dark main .charities .container .sec-body .slider .slider-container .slides .slide .slide-foot a:hover .f-icon {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .charities .container .sec-body .slider .swiper-navBtn {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .charities .container .sec-body .slider .swiper-navBtn:hover {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .charities .container .sec-body .slider .swiper-pagination-bullet {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .contacts {
   z-index: 0;
 }
-
 body.dark main .contacts::before {
   background-color: rgba(5, 156, 177, 0.9);
   -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
 }
-
 body.dark main .contacts .container {
   color: #efefef;
 }
-
 body.dark main .contacts .container .sec-head h2,
 body.dark main .contacts .container .sec-head p {
   color: #efefef;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div {
+body.dark main .contacts .container .sec-body .sec-left .contact-info > div {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div:last-of-type {
+body.dark main .contacts .container .sec-body .sec-left .contact-info > div:last-of-type {
   margin: 0;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
+body.dark main .contacts .container .sec-body .sec-left .contact-info > div > div > .f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
   color: #fff;
   font-size: 1.5rem;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div>span {
+body.dark main .contacts .container .sec-body .sec-left .contact-info > div > span {
   color: #fff;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div>div>.f-icon {
+body.dark main .contacts .container .sec-body .sec-left .contact-info > div > div > .f-icon {
   background-color: rgba(89, 193, 189, 0.8705882353);
   color: #efefef;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .contact-info>div>span {
+body.dark main .contacts .container .sec-body .sec-left .contact-info > div > span {
   color: #efefef !important;
 }
-
 body.dark main .contacts .container .sec-body .sec-left .social-icon {
   flex-wrap: wrap;
   gap: 10px;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .social-icon>div a {
+body.dark main .contacts .container .sec-body .sec-left .social-icon > div a {
   width: 40px;
   height: 40px;
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
-body.dark main .contacts .container .sec-body .sec-left .social-icon>div a i {
+body.dark main .contacts .container .sec-body .sec-left .social-icon > div a i {
   font-size: 1.5rem;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .social-icon>div a:hover {
+body.dark main .contacts .container .sec-body .sec-left .social-icon > div a:hover {
   background-color: #222;
 }
-
-body.dark main .contacts .container .sec-body .sec-left .social-icon>div a:hover i {
+body.dark main .contacts .container .sec-body .sec-left .social-icon > div a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .contacts .container .sec-body .sec-left .social-icon>div a i {
+body.dark main .contacts .container .sec-body .sec-left .social-icon > div a i {
   color: #efefef;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
@@ -1703,47 +1386,36 @@ body.dark main .contacts .container .sec-body .sec-right form textarea {
   -webkit-filter: brightness(0.9);
   filter: brightness(0.9);
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea::-webkit-input-placeholder {
   color: #efefef;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea::-moz-placeholder {
   color: #efefef;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea:-ms-input-placeholder {
   color: #efefef;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea::-ms-input-placeholder {
   color: #efefef;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea::placeholder {
   color: #efefef;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea:focus::-moz-placeholder {
   color: transparent;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea:focus::-ms-input-placeholder {
   color: transparent;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form textarea:focus::placeholder {
   color: transparent;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -1755,13 +1427,11 @@ body.dark main .contacts .container .sec-body .sec-right form input[type=submit]
   margin-top: 20px;
   margin-right: 0;
 }
-
 body.dark main .contacts .container .sec-body .sec-right form input[type=submit]:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .contacts .container .sec-body .sec-right form input[type=submit]:hover {
   color: #efefef;
   border-color: #efefef;

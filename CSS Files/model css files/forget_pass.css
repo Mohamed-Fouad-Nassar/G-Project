@@ -1,19 +1,10 @@
-body,
-body.dark .card .body form .btns input[type=submit],
-body.dark .card .body form .btns input[type=button],
-.card .body form section .field,
-.card .body form .btns,
-.card .body form .btns input[type=submit],
-.card .body form .btns input[type=button] {
+body, body.dark .card .body form .btns input[type=submit], body.dark .card .body form .btns input[type=button], .card .body form section .field, .card .body form .btns, .card .body form .btns input[type=submit], .card .body form .btns input[type=button] {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-body.dark .card .body form .btns input[type=submit],
-body.dark .card .body form .btns input[type=button],
-.card .body form .btns input[type=submit],
-.card .body form .btns input[type=button] {
+body.dark .card .body form .btns input[type=submit], body.dark .card .body form .btns input[type=button], .card .body form .btns input[type=submit], .card .body form .btns input[type=button] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -36,7 +27,6 @@ body {
   min-height: 100vh;
   background-color: #ebfcff;
 }
-
 body::before {
   content: "";
   position: absolute;
@@ -47,7 +37,6 @@ body::before {
   background-color: rgba(5, 156, 177, 0.37);
   z-index: -1;
 }
-
 body::after {
   content: "";
   position: absolute;
@@ -58,65 +47,50 @@ body::after {
   background-color: rgba(255, 255, 255, 0.12);
   z-index: -1;
 }
-
 body header {
   display: none;
 }
-
 body.dark {
   background-color: #222;
 }
-
 body.dark::before {
   background-color: rgba(5, 156, 177, 0.35);
 }
-
 body.dark::after {
   background-color: rgba(0, 0, 0, 0.72);
 }
-
 body.dark .card {
   background-color: #1d1d1d;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark .card .head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .head p {
   color: #a5a5a5;
 }
-
 body.dark .card .body form section label {
   color: #efefef;
 }
-
 body.dark .card .body form section .field {
   background-color: #222;
 }
-
 body.dark .card .body form section .field input[type=text] {
   background-color: transparent;
   color: #efefef;
 }
-
-body.dark .card .body form section .field input[type=text]:focus~span {
+body.dark .card .body form section .field input[type=text]:focus ~ span {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark .card .body form section .field input[type=text]:focus~.f-icon {
+body.dark .card .body form section .field input[type=text]:focus ~ .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .body form section .field span {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .body form section .field .f-icon {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .body form .btns input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -127,13 +101,11 @@ body.dark .card .body form .btns input[type=submit] {
   padding: 10px 20px;
   margin: initial;
 }
-
 body.dark .card .body form .btns input[type=submit]:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .body form .btns input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -144,13 +116,11 @@ body.dark .card .body form .btns input[type=button] {
   padding: 10px 20px;
   margin: initial;
 }
-
 body.dark .card .body form .btns input[type=button]:hover {
   color: rgba(89, 193, 189, 0.8705882353);
   background-color: transparent;
   border-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .body form .btns input[type=button]:hover {
   background-color: transparent;
 }
@@ -165,13 +135,11 @@ body.dark .card .body form .btns input[type=button]:hover {
   background-color: #fff;
   box-shadow: 3px 4px 22px -5px #8b8b8b;
 }
-
 @media (max-width: 767px) {
   .card {
     max-width: 400px;
   }
 }
-
 .card .head {
   padding: 0;
   padding-bottom: 50px;
@@ -179,52 +147,43 @@ body.dark .card .body form .btns input[type=button]:hover {
   margin: auto;
   text-align: center;
 }
-
 @media (max-width: 767px) {
   .card .head {
     max-width: 100%;
   }
 }
-
 .card .head h2 {
   color: #059cb1;
   margin: 0;
   margin-bottom: 10px;
 }
-
 .card .head p {
   margin: 0;
   color: #555;
 }
-
 @media (max-width: 767px) {
   .card .head p {
     font-size: 0.95rem;
   }
 }
-
 .card .body form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-
 .card .body form section {
   min-width: 70%;
   margin: auto;
 }
-
 @media (max-width: 767px) {
   .card .body form section {
     min-width: 100%;
   }
 }
-
 .card .body form section label {
   display: block;
   margin-bottom: 10px;
 }
-
 .card .body form section .field {
   flex-direction: row-reverse;
   position: relative;
@@ -233,7 +192,6 @@ body.dark .card .body form .btns input[type=button]:hover {
   padding-right: 5px;
   background-color: #f9f9f9;
 }
-
 .card .body form section .field input[type=text] {
   flex: 1;
   padding: 10px;
@@ -243,15 +201,12 @@ body.dark .card .body form .btns input[type=button]:hover {
   outline: none;
   background-color: transparent;
 }
-
-.card .body form section .field input[type=text]:focus~span {
+.card .body form section .field input[type=text]:focus ~ span {
   background-color: #059cb1;
 }
-
-.card .body form section .field input[type=text]:focus~.f-icon {
+.card .body form section .field input[type=text]:focus ~ .f-icon {
   color: #059cb1;
 }
-
 .card .body form section .field span {
   position: absolute;
   bottom: 0;
@@ -260,22 +215,18 @@ body.dark .card .body form .btns input[type=button]:hover {
   height: 2px;
   width: 100%;
 }
-
 .card .body form section .field .f-icon {
   color: #59c1bd;
 }
-
 .card .body form .btns {
   gap: 20px;
 }
-
 @media (max-width: 400px) {
   .card .body form .btns {
     flex-direction: column;
     gap: 10px;
   }
 }
-
 .card .body form .btns input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -287,19 +238,16 @@ body.dark .card .body form .btns input[type=button]:hover {
   display: inline-block;
   margin: initial;
 }
-
 .card .body form .btns input[type=submit]:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
-
 @media (max-width: 400px) {
   .card .body form .btns input[type=submit] {
     width: 100%;
   }
 }
-
 .card .body form .btns input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -311,19 +259,16 @@ body.dark .card .body form .btns input[type=button]:hover {
   display: inline-block;
   margin: initial;
 }
-
 .card .body form .btns input[type=button]:hover {
   color: #59c1bd;
   background-color: transparent;
   border-color: #59c1bd;
 }
-
 @media (max-width: 400px) {
   .card .body form .btns input[type=button] {
     width: 100%;
   }
 }
-
 .card .body form .btns input[type=button]:hover {
   background-color: transparent;
 }

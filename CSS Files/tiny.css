@@ -1,85 +1,80 @@
-  .tox div {
-    margin: initial !important;
-    width: auto !important;
-  }
+.tox div {
+  margin: initial !important;
+  width: auto !important;
+}
 
-  .tox-promotion {
-    display: none !important;
-  }
+.tox-promotion {
+  display: none !important;
+}
 
-  .tox {
-    min-height: 550px !important;
-    z-index: initial !important;
-    border-bottom: 2px solid #059cb1de !important;
-    border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    -ms-border-radius: 0 !important;
-    -o-border-radius: 0 !important;
-  }
+.tox {
+  min-height: 550px !important;
+  z-index: initial !important;
+  border-bottom: 2px solid #059cb1de !important;
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
 
-  .tox-editor-header {
-    position: static !important;
-    padding-top: 0 !important;
-  }
+.tox.tox-silver-sink.tox-tinymce-aux {
+  position: absolute !important;
+  top: 0px !important;
+  left: 0px !important;
+  z-index: auto !important;
+  display: block !important;
+}
 
-  .tox-editor-container {
-    padding-top: 0 !important;
-  }
+.tox-editor-header {
+  position: static !important;
+  padding-top: 0 !important;
+}
 
-  /* For other boilerplate styles, see: /docs/general-configuration-guide/boilerplate-content-css/ */
-  /*
-  * For rendering images inserted using the image plugin.
-  * Includes image captions using the HTML5 figure element.
-  */
+.tox-editor-container {
+  padding-top: 0 !important;
+}
 
-  figure.image {
-    display: inline-block;
-    border: 1px solid gray;
-    margin: 0 2px 0 1px;
-    background: #f5f2f0;
-  }
+figure.image {
+  display: inline-block;
+  border: 1px solid gray;
+  margin: 0 2px 0 1px;
+  background: #f5f2f0;
+}
 
-  figure.align-left {
-    float: left;
-  }
+figure.align-left {
+  float: left;
+}
 
-  figure.align-right {
-    float: right;
-  }
+figure.align-right {
+  float: right;
+}
 
-  figure.image img {
-    margin: 8px 8px 0 8px;
-  }
+figure.image img {
+  margin: 8px 8px 0 8px;
+}
 
-  figure.image figcaption {
-    margin: 6px 8px 6px 8px;
-    text-align: center;
-  }
+figure.image figcaption {
+  margin: 6px 8px 6px 8px;
+  text-align: center;
+}
 
+img.align-left {
+  float: left;
+}
 
-  /*
-   Alignment using classes rather than inline styles
-   check out the "formats" option
-  */
+img.align-right {
+  float: right;
+}
 
-  img.align-left {
-    float: left;
-  }
+.mce-toc {
+  border: 1px solid gray;
+}
 
-  img.align-right {
-    float: right;
-  }
+.mce-toc h2 {
+  margin: 4px;
+}
 
-  /* Basic styles for Table of Contents plugin (toc) */
-  .mce-toc {
-    border: 1px solid gray;
-  }
-
-  .mce-toc h2 {
-    margin: 4px;
-  }
-
-  .mce-toc li {
-    list-style-type: none;
-  }
+.mce-toc li {
+  list-style-type: none;
+}

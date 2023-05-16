@@ -1,13 +1,13 @@
 // import global rules
-// @use "../Global-rules/global" as *;
+@use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-// @use "../sections/header" as *;
+@use "../sections/header" as *;
 // import footer styling:-
-// @use "../sections/footer" as *;
+@use "../sections/footer" as *;
 
 // additional page styling
 // Start Main Styling:-
@@ -18,11 +18,20 @@ main {
   .content {
     .container {
       .sec-body {
-        @extend %grid-350-20;
-        .box {
-          @include blog-article-box("light");
-          &:hover {
-            @extend %zero-transform;
+        .page {
+          &:not(:first-of-type) {
+            padding-top: 20px;
+            display: none;
+          }
+          @extend %grid-350-20;
+          @media (max-width: 991px) and (min-width: 768px) {
+            @include grid(250px, 20);
+          }
+          .box {
+            @include blog-article-box("light");
+            &:hover {
+              @extend %zero-transform;
+            }
           }
         }
       }
@@ -42,13 +51,15 @@ body {
       .content {
         .container {
           .sec-body {
-            .box {
-              @include blog-article-box("dark");
+            .page {
+              .box {
+                @include blog-article-box("dark");
+              }
             }
           }
           .sec-foot {
             input[type="button"] {
-              @include button-shape($main-color, "dark");
+              @include button-shape($main-dark-color, "dark");
             }
           }
         }

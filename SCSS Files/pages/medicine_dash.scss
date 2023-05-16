@@ -1,0 +1,161 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+
+// additional page styling
+
+main {
+  .content {
+    .container {
+      h2 {
+        margin-bottom: 40px;
+        position: relative;
+        color: $main-color;
+        font: {
+          size: 1.6rem;
+          weight: 600;
+        }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          height: 3px;
+          background-color: $sec-color;
+        }
+        &::before {
+          width: 95px;
+          bottom: -8px;
+        }
+        &::after {
+          width: 50px;
+          bottom: -15px;
+        }
+      }
+      .sec-body {
+        .info {
+          @extend %flex-stretch-start;
+          max-width: 750px;
+          margin: 0 auto;
+          gap: $main-element-padding;
+          @media (max-width: 575px) {
+            flex-direction: column;
+            gap: $sec-element-padding;
+          }
+          > div {
+            @extend %border-radius-10;
+            width: 50%;
+            @media (max-width: 575px) {
+              width: 100%;
+            }
+            padding: $main-element-padding;
+            background-color: $light-input-background;
+            text-align: center;
+            h3 {
+              margin-bottom: $sec-element-padding;
+              font: {
+                size: 1.2rem;
+                weight: 600;
+              }
+            }
+            span {
+              color: $main-color;
+              font: {
+                size: 1.4rem;
+                weight: 700;
+              }
+            }
+            a {
+              .f-icon {
+                font-size: 2.6rem;
+                color: $main-color;
+                cursor: pointer;
+                &:hover {
+                  color: $sec-color;
+                }
+              }
+            }
+          }
+        }
+        .control {
+          padding-top: $main-element-padding + $sec-element-padding;
+          overflow-x: auto;
+          .table {
+            min-width: 750px;
+            padding-bottom: $sec-element-padding / 2;
+            white-space: nowrap;
+            width: 100%;
+            .tab-head {
+              @include table-head("light");
+            }
+            .tab-body {
+              padding-top: 2px;
+              .item {
+                @include table-body-item("light");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.dark {
+    main {
+      background-color: $sec-dark-bg;
+      .content {
+        .container {
+          h2 {
+            color: $main-dark-color;
+            &::before,
+            &::after {
+              background-color: $sec-dark-color;
+            }
+          }
+          .sec-body {
+            .info {
+              > div {
+                background-color: $main-dark-bg;
+                h3 {
+                  color: $white-dark-color;
+                }
+                span {
+                  color: $main-dark-color;
+                }
+                a {
+                  .f-icon {
+                    color: $main-dark-color;
+                    &:hover {
+                      color: $sec-dark-color;
+                    }
+                  }
+                }
+              }
+            }
+            .control {
+              .table {
+                .tab-head {
+                  @include table-head("dark");
+                }
+                .tab-body {
+                  .item {
+                    @include table-body-item("dark");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

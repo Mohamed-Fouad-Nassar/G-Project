@@ -1,5 +1,4 @@
-main aside .links ul,
-main aside .links ul li {
+main aside .links ul, main aside .links ul li {
   margin: 0;
   padding: 0;
 }
@@ -9,11 +8,11 @@ main .content {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main {
@@ -21,15 +20,14 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-main aside .head .shape span::before,
-main aside .head .shape span::after {
+main aside .head .shape span::before, main aside .head .shape span::after {
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -45,8 +43,7 @@ main aside .links ul li a {
   -o-border-radius: 5px !important;
 }
 
-main aside,
-main .content {
+main aside, main .content {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -67,14 +64,12 @@ main {
   height: 100vh;
   gap: 20px;
 }
-
 @media (max-width: 767px) {
   main {
     padding: 150px 10px 30px;
     gap: 15px;
   }
 }
-
 main aside {
   width: 230px;
   height: 100%;
@@ -83,30 +78,26 @@ main aside {
   padding: 20px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px 1px #ececec;
-  box-shadow: 0 0 5px 1px #ececec;
+          box-shadow: 0 0 5px 1px #ececec;
   position: relative;
 }
-
 @media (max-width: 991px) {
   main aside {
     width: 200px;
   }
 }
-
 @media (max-width: 767px) {
   main aside {
     width: 60px;
     padding: 15px 10px;
   }
 }
-
 @media (max-width: 575px) {
   main aside {
     padding-left: 5px;
     padding-right: 5px;
   }
 }
-
 main aside .head {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -114,13 +105,11 @@ main aside .head {
   margin: 0 auto;
   padding-bottom: 30px;
 }
-
 @media (max-width: 767px) {
   main aside .head {
     display: none;
   }
 }
-
 main aside .head a {
   display: block;
   color: #059cb1 !important;
@@ -129,16 +118,13 @@ main aside .head a {
   font-weight: 700;
   font-size: 1.2rem;
 }
-
 main aside .head a:hover {
   color: #59c1bd !important;
 }
-
 main aside .head .shape {
   margin-top: 10px;
   position: relative;
 }
-
 main aside .head .shape span {
   display: block;
   width: 12px;
@@ -146,9 +132,7 @@ main aside .head .shape span {
   background-color: #059cb1;
   margin: 0 auto;
 }
-
-main aside .head .shape span::before,
-main aside .head .shape span::after {
+main aside .head .shape span::before, main aside .head .shape span::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -156,115 +140,95 @@ main aside .head .shape span::after {
   width: calc(50% - 10px);
   background-color: #059cb1;
 }
-
 main aside .head .shape span::before {
   left: 0;
 }
-
 main aside .head .shape span::after {
   right: 0;
 }
-
 @media (max-width: 767px) {
   main aside .head .shape {
     display: none;
   }
 }
-
 main aside .links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   list-style: none;
 }
-
 @media (max-width: 767px) {
   main aside .links ul {
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
-
 main aside .links ul li {
   padding-top: 5px;
 }
-
 main aside .links ul li a {
   display: block;
   width: 100%;
   color: #212529;
   padding: 10px 15px;
 }
-
 main aside .links ul li a:hover {
   color: #059cb1;
   background-color: #f9f9f9;
 }
-
 main aside .links ul li a:hover span {
   color: #059cb1;
 }
-
 main aside .links ul li a:hover .f-icon {
   color: #059cb1;
 }
-
 main aside .links ul li a.active {
   color: #059cb1;
   background-color: #f9f9f9;
 }
-
 main aside .links ul li a.active span {
   color: #059cb1;
 }
-
 main aside .links ul li a.active .f-icon {
   color: #059cb1;
 }
-
 main aside .links ul li a span {
   color: #212529;
 }
-
 @media (max-width: 767px) {
   main aside .links ul li a span {
     display: none;
   }
 }
-
 main aside .links ul li a .f-icon {
   margin-right: 10px;
 }
-
 @media (max-width: 767px) {
   main aside .links ul li a .f-icon {
     margin-right: 0;
   }
 }
-
 main .content {
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px 1px #ececec;
-  box-shadow: 0 0 5px 1px #ececec;
+          box-shadow: 0 0 5px 1px #ececec;
   position: relative;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   overflow-y: auto;
 }
-
 @media (max-width: 1199px) {
   main .content {
     padding-right: 10px;
   }
 }
-
-main .content>div {
+main .content > div {
   width: 100%;
   padding: 20px;
   position: absolute;
@@ -276,57 +240,45 @@ main .content>div {
 body.dark main {
   background-color: #222;
 }
-
 body.dark main aside {
   background-color: #1d1d1d;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark main aside .head a {
   color: rgba(5, 156, 177, 0.8705882353) !important;
 }
-
 body.dark main aside .head a:hover {
   color: rgba(89, 193, 189, 0.8705882353) !important;
 }
-
 body.dark main aside .shape span {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main aside .shape span::before,
-body.dark main aside .shape span::after {
+body.dark main aside .shape span::before, body.dark main aside .shape span::after {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main aside .links ul li a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: #323234;
 }
-
 body.dark main aside .links ul li a:hover span,
 body.dark main aside .links ul li a:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main aside .links ul li a.active {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: #323234;
 }
-
 body.dark main aside .links ul li a.active span,
 body.dark main aside .links ul li a.active .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main aside .links ul li a span,
 body.dark main aside .links ul li a .f-icon {
   color: #efefef;
 }
-
 body.dark main .content {
   background-color: #1d1d1d;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }

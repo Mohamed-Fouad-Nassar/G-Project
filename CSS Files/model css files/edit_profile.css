@@ -1,18 +1,13 @@
-body.dark main .content .container form .buttons input[type=submit],
-body.dark main .content .container form .buttons input[type=reset],
-main .content .container form .top-sec .right .field,
-main .content .container form .top-sec .right .gender .choices,
-main .content .container form .button input[type=submit],
-main .content .container form .button input[type=reset] {
+body.dark main .content .container form .buttons input[type=submit], body.dark main .content .container form .buttons input[type=reset], main .content .container form .top-sec .right .field, main .content .container form .top-sec .right .gender .choices, main .content .container form .button input[type=submit], main .content .container form .button input[type=reset] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container form .top-sec {
@@ -20,11 +15,11 @@ main .content .container form .top-sec {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container form .top-sec .left .avatar-upload .avatar-edit label {
@@ -32,32 +27,26 @@ main .content .container form .top-sec .left .avatar-upload .avatar-edit label {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .content .container form .top-sec .right section .sec-flex,
-main .content .container form .top-sec .right .name .data,
-main .content .container form .top-sec .right .caner-type,
-main .content .container form .button {
+main .content .container form .top-sec .right section .sec-flex, main .content .container form .top-sec .right .name .data, main .content .container form .top-sec .right .caner-type, main .content .container form .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-body.dark main .content .container form .top-sec .right .gender .choices .choice input::before,
-body.dark main .content .container form .top-sec .right .gender .choices .choice input::after,
-main .content .container form .top-sec .right .gender .choices .choice input::before,
-main .content .container form .top-sec .right .gender .choices .choice input::after {
+body.dark main .content .container form .top-sec .right .gender .choices .choice input::before, body.dark main .content .container form .top-sec .right .gender .choices .choice input::after, main .content .container form .top-sec .right .gender .choices .choice input::before, main .content .container form .top-sec .right .gender .choices .choice input::after {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -65,10 +54,7 @@ main .content .container form .top-sec .right .gender .choices .choice input::af
   -o-transform: translate(-50%, -50%);
 }
 
-body.dark main .content .container form .buttons input[type=submit],
-body.dark main .content .container form .buttons input[type=reset],
-main .content .container form .button input[type=submit],
-main .content .container form .button input[type=reset] {
+body.dark main .content .container form .buttons input[type=submit], body.dark main .content .container form .buttons input[type=reset], main .content .container form .button input[type=submit], main .content .container form .button input[type=reset] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -76,13 +62,7 @@ main .content .container form .button input[type=reset] {
   -o-border-radius: 5px !important;
 }
 
-body.dark main .content .container form .top-sec .right .gender .choices .choice input::before,
-body.dark main .content .container form .top-sec .right .gender .choices .choice input::after,
-main .content .container form .top-sec .right .gender .choices .choice input::before,
-main .content .container form .top-sec .right .gender .choices .choice input::after,
-main .content .container form .top-sec .left .avatar-upload .avatar-edit label,
-main .content .container form .top-sec .left .avatar-upload .avatar-preview,
-main .content .container form .top-sec .left .avatar-upload .avatar-preview>div {
+body.dark main .content .container form .top-sec .right .gender .choices .choice input::before, body.dark main .content .container form .top-sec .right .gender .choices .choice input::after, main .content .container form .top-sec .right .gender .choices .choice input::before, main .content .container form .top-sec .right .gender .choices .choice input::after, main .content .container form .top-sec .left .avatar-upload .avatar-edit label, main .content .container form .top-sec .left .avatar-upload .avatar-preview, main .content .container form .top-sec .left .avatar-upload .avatar-preview > div {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -90,8 +70,7 @@ main .content .container form .top-sec .left .avatar-upload .avatar-preview>div 
   -o-border-radius: 50% !important;
 }
 
-main .content .container form .top-sec .right .name .data div label,
-main .content .container form .top-sec .right .gender .choices .choice label {
+main .content .container form .top-sec .right .name .data div label, main .content .container form .top-sec .right .gender .choices .choice label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -101,11 +80,9 @@ main .content .container form .top-sec .right .gender .choices .choice label {
 body.dark main {
   background-color: #222;
 }
-
 body.dark main .head h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container .back-btn {
   position: absolute;
   top: 20px;
@@ -117,68 +94,52 @@ body.dark main .content .container .back-btn {
   cursor: pointer;
   color: #efefef;
 }
-
 body.dark main .content .container .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 body.dark main .content .container .back-btn .f-icon {
   font-size: 1rem;
 }
-
 body.dark main .content .container .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container form .top-sec {
   background-color: #1d1d1d;
 }
-
 body.dark main .content .container form .top-sec .right::after {
   background-color: #222;
 }
-
 body.dark main .content .container form .top-sec .right section label {
   color: #efefef;
 }
-
-body.dark main .content .container form .top-sec .right .name>label {
+body.dark main .content .container form .top-sec .right .name > label {
   color: #efefef;
 }
-
 body.dark main .content .container form .top-sec .right .name .data div label {
   color: #efefef;
 }
-
 body.dark main .content .container form .top-sec .right .field {
   background-color: #222;
 }
-
 body.dark main .content .container form .top-sec .right .field input {
   background-color: transparent;
   color: #efefef;
 }
-
-body.dark main .content .container form .top-sec .right .field input:focus~span {
+body.dark main .content .container form .top-sec .right .field input:focus ~ span {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .content .container form .top-sec .right .field input:focus~.f-icon {
+body.dark main .content .container form .top-sec .right .field input:focus ~ .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container form .top-sec .right .field i {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .content .container form .top-sec .right .field span {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .content .container form .top-sec .right .gender p {
   color: #a5a5a5;
 }
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input {
   position: relative;
   -webkit-appearance: none;
@@ -186,82 +147,64 @@ body.dark main .content .container form .top-sec .right .gender .choices .choice
   appearance: none;
   cursor: pointer;
 }
-
-body.dark main .content .container form .top-sec .right .gender .choices .choice input::before,
-body.dark main .content .container form .top-sec .right .gender .choices .choice input::after {
+body.dark main .content .container form .top-sec .right .gender .choices .choice input::before, body.dark main .content .container form .top-sec .right .gender .choices .choice input::after {
   content: "";
   position: absolute;
 }
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::before {
   width: 16px;
   height: 16px;
   background-color: transparent;
   border: 1.5px solid #59c1bd;
 }
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input:hover::before {
   border-color: #059cb1;
 }
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::after {
   width: 0;
   height: 0;
 }
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input:checked::before {
   border-color: #059cb1;
 }
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input:checked:after {
   width: 12px;
   height: 12px;
   background-color: #059cb1;
 }
-
 body.dark main .content .container form .top-sec .right .gender .choices .choice input::before {
   border-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .content .container form .top-sec .right .caner-type .cancer select {
   background-color: #1d1d1d;
   color: #efefef;
 }
-
 body.dark main .content .container form .top-sec .right .caner-type .cancer select:focus {
   border-bottom-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container form .top-sec .right .birth-date input[type=date] {
   border-bottom-color: rgba(89, 193, 189, 0.8705882353);
   background-color: #1d1d1d;
   color: #efefef;
 }
-
 body.dark main .content .container form .top-sec .right .birth-date input[type=date]:focus {
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container form .top-sec .left {
   background-color: #1d1d1d;
 }
-
 body.dark main .content .container form .top-sec .left .avatar-upload .avatar-edit label:after {
   color: #efefef;
 }
-
 body.dark main .content .container form .top-sec .left .avatar-upload .avatar-preview {
   border-color: #222;
 }
-
 body.dark main .content .container form .top-sec .left .text h2 {
   color: #efefef;
 }
-
 body.dark main .content .container form .top-sec .left .text span {
   color: #a5a5a5;
 }
-
 body.dark main .content .container form .buttons input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -271,13 +214,11 @@ body.dark main .content .container form .buttons input[type=submit] {
   background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
-
 body.dark main .content .container form .buttons input[type=submit]:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container form .buttons input[type=reset] {
   width: 160px;
   margin: 0 auto;
@@ -287,7 +228,6 @@ body.dark main .content .container form .buttons input[type=reset] {
   background-color: rgba(89, 193, 189, 0.8705882353);
   padding: 10px 20px;
 }
-
 body.dark main .content .container form .buttons input[type=reset]:hover {
   color: rgba(89, 193, 189, 0.8705882353);
   background-color: transparent;
@@ -304,20 +244,17 @@ main {
   position: relative;
   padding: 100px 0;
 }
-
 @media (max-width: 767px) {
   main {
     padding-left: 10px;
     padding-right: 10px;
   }
 }
-
 main .head {
   padding-bottom: 30px !important;
   padding-left: 10px;
   padding-right: 10px;
 }
-
 main .head h1 {
   text-align: center;
   font-size: 1.8rem;
@@ -325,12 +262,10 @@ main .head h1 {
   text-transform: uppercase;
   margin: 0;
 }
-
 main .content .container {
   position: relative;
   max-width: 1050px;
 }
-
 main .content .container .back-btn {
   position: absolute;
   top: 20px;
@@ -342,15 +277,12 @@ main .content .container .back-btn {
   cursor: pointer;
   left: 20px !important;
 }
-
 main .content .container .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 main .content .container .back-btn .f-icon {
   font-size: 1rem;
 }
-
 main .content .container form .top-sec {
   padding: 20px;
   padding-top: 50px;
@@ -359,21 +291,18 @@ main .content .container form .top-sec {
   background-color: #fff;
   gap: 40px;
 }
-
 @media (max-width: 991px) {
   main .content .container form .top-sec {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
-
 main .content .container form .top-sec .right {
   position: relative;
   width: 75%;
 }
-
 main .content .container form .top-sec .right::after {
   content: "";
   position: absolute;
@@ -383,121 +312,97 @@ main .content .container form .top-sec .right::after {
   height: calc(100% + 50px);
   background-color: #eee;
 }
-
 @media (max-width: 991px) {
   main .content .container form .top-sec .right::after {
     content: initial;
   }
 }
-
 @media (max-width: 991px) {
   main .content .container form .top-sec .right {
     width: 100%;
   }
 }
-
 main .content .container form .top-sec .right section {
   margin-bottom: 20px;
 }
-
 main .content .container form .top-sec .right section label {
   display: block;
   margin-bottom: 10px;
 }
-
 main .content .container form .top-sec .right section .sec-flex {
   position: relative;
 }
-
 main .content .container form .top-sec .right section:last-of-type {
   padding-bottom: 20px;
 }
-
-main .content .container form .top-sec .right .name>label {
+main .content .container form .top-sec .right .name > label {
   display: none !important;
 }
-
 @media (min-width: 767px) {
-  main .content .container form .top-sec .right .name>label {
+  main .content .container form .top-sec .right .name > label {
     display: block !important;
   }
 }
-
 main .content .container form .top-sec .right .name .data {
   gap: 20px;
 }
-
 @media (max-width: 767px) {
   main .content .container form .top-sec .right .name .data {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
   }
 }
-
 main .content .container form .top-sec .right .name .data div {
   width: 100%;
 }
-
 main .content .container form .top-sec .right .name .data div label {
   display: none;
 }
-
 @media (max-width: 767px) {
   main .content .container form .top-sec .right .name .data div label {
     display: block;
   }
 }
-
 main .content .container form .top-sec .right .name .data div .field input:focus::-webkit-input-placeholder {
   color: transparent;
 }
-
 main .content .container form .top-sec .right .name .data div .field input:focus::-moz-placeholder {
   color: transparent;
 }
-
 main .content .container form .top-sec .right .name .data div .field input:focus:-ms-input-placeholder {
   color: transparent;
 }
-
 main .content .container form .top-sec .right .name .data div .field input:focus::-ms-input-placeholder {
   color: transparent;
 }
-
 main .content .container form .top-sec .right .name .data div .field input:focus::placeholder {
   color: transparent;
 }
-
 @media (max-width: 767px) {
   main .content .container form .top-sec .right .name .data div .field input::-webkit-input-placeholder {
     color: transparent;
   }
-
   main .content .container form .top-sec .right .name .data div .field input::-moz-placeholder {
     color: transparent;
   }
-
   main .content .container form .top-sec .right .name .data div .field input:-ms-input-placeholder {
     color: transparent;
   }
-
   main .content .container form .top-sec .right .name .data div .field input::-ms-input-placeholder {
     color: transparent;
   }
-
   main .content .container form .top-sec .right .name .data div .field input::placeholder {
     color: transparent;
   }
 }
-
 main .content .container form .top-sec .right .field {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   position: relative;
   gap: 5px;
   padding: 0;
@@ -505,11 +410,10 @@ main .content .container form .top-sec .right .field {
   padding-right: 5px;
   background-color: #f9f9f9;
 }
-
 main .content .container form .top-sec .right .field input {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px;
   padding-left: 5px;
   padding-right: 0;
@@ -517,19 +421,15 @@ main .content .container form .top-sec .right .field input {
   outline: none;
   background-color: transparent;
 }
-
-main .content .container form .top-sec .right .field input:focus~span {
+main .content .container form .top-sec .right .field input:focus ~ span {
   background-color: #059cb1;
 }
-
-main .content .container form .top-sec .right .field input:focus~.f-icon {
+main .content .container form .top-sec .right .field input:focus ~ .f-icon {
   color: #059cb1;
 }
-
 main .content .container form .top-sec .right .field i {
   color: #59c1bd;
 }
-
 main .content .container form .top-sec .right .field span {
   position: absolute;
   bottom: 0;
@@ -538,32 +438,26 @@ main .content .container form .top-sec .right .field span {
   height: 2px;
   width: 100%;
 }
-
 main .content .container form .top-sec .right .gender p {
   margin: 0;
   margin-top: 10px;
 }
-
 @media (max-width: 991px) {
   main .content .container form .top-sec .right .gender p:first-of-type {
     display: none;
   }
 }
-
 main .content .container form .top-sec .right .gender p:last-of-type {
   display: none;
 }
-
 @media (max-width: 991px) {
   main .content .container form .top-sec .right .gender p:last-of-type {
     display: block;
   }
 }
-
 main .content .container form .top-sec .right .gender .choices {
   gap: 40px;
 }
-
 main .content .container form .top-sec .right .gender .choices .choice input {
   margin-bottom: 5px;
   position: relative;
@@ -572,39 +466,31 @@ main .content .container form .top-sec .right .gender .choices .choice input {
   appearance: none;
   cursor: pointer;
 }
-
-main .content .container form .top-sec .right .gender .choices .choice input::before,
-main .content .container form .top-sec .right .gender .choices .choice input::after {
+main .content .container form .top-sec .right .gender .choices .choice input::before, main .content .container form .top-sec .right .gender .choices .choice input::after {
   content: "";
   position: absolute;
 }
-
 main .content .container form .top-sec .right .gender .choices .choice input::before {
   width: 16px;
   height: 16px;
   background-color: transparent;
   border: 1.5px solid #59c1bd;
 }
-
 main .content .container form .top-sec .right .gender .choices .choice input:hover::before {
   border-color: #059cb1;
 }
-
 main .content .container form .top-sec .right .gender .choices .choice input::after {
   width: 0;
   height: 0;
 }
-
 main .content .container form .top-sec .right .gender .choices .choice input:checked::before {
   border-color: #059cb1;
 }
-
 main .content .container form .top-sec .right .gender .choices .choice input:checked:after {
   width: 12px;
   height: 12px;
   background-color: #059cb1;
 }
-
 main .content .container form .top-sec .right .gender .choices .choice label {
   cursor: pointer;
   display: inline-block;
@@ -612,17 +498,14 @@ main .content .container form .top-sec .right .gender .choices .choice label {
   margin-top: 10px;
   margin-bottom: 0;
 }
-
 main .content .container form .top-sec .right .caner-type {
   gap: 10px;
 }
-
 main .content .container form .top-sec .right .caner-type .cancer {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
-
 main .content .container form .top-sec .right .caner-type .cancer select {
   width: 100%;
   padding: 7px 10px;
@@ -632,15 +515,13 @@ main .content .container form .top-sec .right .caner-type .cancer select {
   border: none;
   border-bottom: 2px solid #59c1bd;
 }
-
 main .content .container form .top-sec .right .caner-type .cancer select:focus {
   border-bottom-color: #059cb1;
 }
-
 main .content .container form .top-sec .right .birth-date input[type=date] {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-align: center;
   margin-left: 10px;
   padding: 7px 10px;
@@ -649,38 +530,31 @@ main .content .container form .top-sec .right .birth-date input[type=date] {
   border-bottom: 2px solid #59c1bd;
   background-color: #f9f9f9;
 }
-
 main .content .container form .top-sec .right .birth-date input[type=date]:focus {
   border-color: #059cb1;
 }
-
 main .content .container form .top-sec .left {
   width: 25%;
 }
-
 @media (max-width: 991px) {
   main .content .container form .top-sec .left {
     width: 100%;
   }
 }
-
 main .content .container form .top-sec .left .avatar-upload {
   position: relative;
   max-width: 200px;
   margin: 0 auto;
 }
-
 main .content .container form .top-sec .left .avatar-upload .avatar-edit {
   position: absolute;
   right: 15px;
   z-index: 1;
   bottom: 10px;
 }
-
 main .content .container form .top-sec .left .avatar-upload .avatar-edit input {
   display: none;
 }
-
 main .content .container form .top-sec .left .avatar-upload .avatar-edit label {
   width: 34px;
   height: 34px;
@@ -688,86 +562,74 @@ main .content .container form .top-sec .left .avatar-upload .avatar-edit label {
   background-color: #059cb1;
   border: 1px solid transparent;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
   cursor: pointer;
   font-weight: normal;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-
 main .content .container form .top-sec .left .avatar-upload .avatar-edit label:hover {
   background-color: #028da0;
   border-color: #028da0;
 }
-
 main .content .container form .top-sec .left .avatar-upload .avatar-edit label:after {
   content: "\f040";
   font-family: "FontAwesome";
   color: #fff;
 }
-
 main .content .container form .top-sec .left .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
   position: relative;
   border: 6px solid #fff;
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
-
-main .content .container form .top-sec .left .avatar-upload .avatar-preview>div {
+main .content .container form .top-sec .left .avatar-upload .avatar-preview > div {
   width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
-
-main .content .container form .top-sec .left .avatar-upload .avatar-preview>div img {
+main .content .container form .top-sec .left .avatar-upload .avatar-preview > div img {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 100%;
 }
-
 main .content .container form .top-sec .left .text {
   text-align: center;
 }
-
 main .content .container form .top-sec .left .text h2 {
   padding-top: 20px;
   font-size: 1.5em;
 }
-
 main .content .container form .top-sec .left .text span {
   font-size: 1.2rem;
   color: #555;
 }
-
 main .content .container form .button {
   gap: 10px;
   margin-bottom: 15px;
 }
-
 @media (max-width: 767px) {
   main .content .container form .button {
     margin-bottom: 20px;
   }
 }
-
 @media (max-width: 370px) {
   main .content .container form .button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
-
 main .content .container form .button input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -777,13 +639,11 @@ main .content .container form .button input[type=submit] {
   background-color: #059cb1;
   padding: 10px 20px;
 }
-
 main .content .container form .button input[type=submit]:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
-
 main .content .container form .button input[type=reset] {
   width: 160px;
   margin: 0 auto;
@@ -793,7 +653,6 @@ main .content .container form .button input[type=reset] {
   background-color: #59c1bd;
   padding: 10px 20px;
 }
-
 main .content .container form .button input[type=reset]:hover {
   color: #59c1bd;
   background-color: transparent;

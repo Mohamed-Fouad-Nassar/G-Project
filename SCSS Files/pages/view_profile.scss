@@ -1,13 +1,13 @@
 // import global rules
-// @use "../Global-rules/global" as *;
+@use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-// @use "../sections/header" as *;
+@use "../sections/header" as *;
 // import footer styling:-
-// @use "../sections/footer" as *;
+@use "../sections/footer" as *;
 
 // additional page styling
 
@@ -58,6 +58,9 @@ main {
           }
         }
         .edit-btn {
+          @extend %flex-center-;
+          flex-direction: column;
+          gap: $sec-element-padding;
           padding-top: 30px;
           a {
             @include button-shape($main-color, "light");
@@ -93,9 +96,10 @@ main {
           }
           .field {
             @extend %flex-center-center;
-            gap: $main-element-padding;
+            gap: $sec-element-padding;
             color: $main-color;
             font-size: 1.5rem;
+            flex-wrap: wrap;
             span {
               flex: 1;
               font-size: 1rem;
@@ -105,8 +109,18 @@ main {
               display: block;
               text-align: center;
             }
-            > div {
+            .left-sec,
+            .right-sec {
               flex: 1;
+            }
+            .flex-sec {
+              width: calc((100% - 20px) / 3);
+              @media (max-width: 1199px) {
+                width: calc((100% - 10px) / 2);
+              }
+              @media (max-width: 991px) {
+                width: 100%;
+              }
             }
           }
         }

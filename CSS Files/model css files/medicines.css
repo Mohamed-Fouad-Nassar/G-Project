@@ -3,11 +3,11 @@ main .content .container .sec-foot input[type=button] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container .sec-foot input[type=button] {
@@ -23,7 +23,6 @@ main {
   padding: 100px 0;
   position: relative;
 }
-
 main .content .container .sec-foot input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -33,7 +32,6 @@ main .content .container .sec-foot input[type=button] {
   background-color: #059cb1;
   padding: 10px 20px;
 }
-
 main .content .container .sec-foot input[type=button]:hover {
   color: #059cb1;
   background-color: transparent;

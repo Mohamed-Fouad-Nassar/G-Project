@@ -1,14 +1,4 @@
-body,
-body.dark .card .left form section .left-sec input:checked::after,
-body.dark .card .left form input[type=submit],
-.card .left form section .field,
-.card .left form section .left-sec input:checked::after,
-.card .left form input[type=submit],
-.card .left .reg-link,
-.card .left .social-log,
-.card .left .social-log .links,
-.card .left .social-log .links a,
-.card .right {
+body, body.dark .card .left form section .left-sec input:checked::after, body.dark .card .left form input[type=submit], .card .left form section .field, .card .left form section .left-sec input:checked::after, .card .left form input[type=submit], .card .left .reg-link, .card .left .social-log, .card .left .social-log .links, .card .left .social-log .links a, .card .right {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,8 +10,7 @@ body.dark .card .left form input[type=submit],
   justify-content: space-between;
 }
 
-body.dark .card .left form input[type=submit],
-.card .left form input[type=submit] {
+body.dark .card .left form input[type=submit], .card .left form input[type=submit] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -52,7 +41,6 @@ body {
   min-height: 100vh;
   position: relative;
 }
-
 body::before {
   content: "";
   position: absolute;
@@ -63,7 +51,6 @@ body::before {
   background-color: rgba(5, 156, 177, 0.37);
   z-index: -1;
 }
-
 body::after {
   content: "";
   position: absolute;
@@ -74,28 +61,22 @@ body::after {
   background-color: rgba(255, 255, 255, 0.12);
   z-index: -1;
 }
-
 body header {
   display: none;
 }
-
 body footer {
   display: none;
 }
-
 body.dark::before {
   background-color: rgba(5, 156, 177, 0.35);
 }
-
 body.dark::after {
   background-color: rgba(0, 0, 0, 0.72);
 }
-
 body.dark .card {
   background-color: #222;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark .card .left .back-btn {
   position: absolute;
   top: 20px;
@@ -107,62 +88,48 @@ body.dark .card .left .back-btn {
   cursor: pointer;
   color: #efefef;
 }
-
 body.dark .card .left .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 body.dark .card .left .back-btn .f-icon {
   font-size: 1rem;
 }
-
 body.dark .card .left .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left .head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left .head p {
   color: #a5a5a5;
 }
-
 body.dark .card .left form section label {
   display: block;
   margin-bottom: 10px;
   color: #efefef;
 }
-
 body.dark .card .left form section .field {
   background-color: #1d1d1d;
 }
-
 body.dark .card .left form section .field input {
   background-color: transparent;
   color: #efefef;
 }
-
-body.dark .card .left form section .field input:focus~span {
+body.dark .card .left form section .field input:focus ~ span {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark .card .left form section .field input:focus~.f-icon {
+body.dark .card .left form section .field input:focus ~ .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left form section .field .f-icon {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .left form section .field span {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .left form section .field span.error {
   color: rgba(255, 60, 60, 0.8705882353);
 }
-
 body.dark .card .left form section .left-sec input {
   cursor: pointer;
   position: relative;
@@ -173,12 +140,9 @@ body.dark .card .left form section .left-sec input {
   height: 15px;
   margin: 0px;
 }
-
-body.dark .card .left form section .left-sec input::before,
-body.dark .card .left form section .left-sec input::after {
+body.dark .card .left form section .left-sec input::before, body.dark .card .left form section .left-sec input::after {
   position: absolute;
 }
-
 body.dark .card .left form section .left-sec input::before {
   content: "";
   width: 100%;
@@ -187,11 +151,9 @@ body.dark .card .left form section .left-sec input::before {
   background-color: transparent;
   border: 1.5px solid #59c1bd;
 }
-
 body.dark .card .left form section .left-sec input:hover::before {
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left form section .left-sec input::after {
   content: "";
   left: 50%;
@@ -206,7 +168,6 @@ body.dark .card .left form section .left-sec input::after {
   -ms-transform: translate(-50%, -50%) rotate(3turn);
   -o-transform: translate(-50%, -50%) rotate(3turn);
 }
-
 body.dark .card .left form section .left-sec input:checked::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
@@ -224,28 +185,22 @@ body.dark .card .left form section .left-sec input:checked::after {
   -ms-transform: translate(-50%, -50%) rotate(0);
   -o-transform: translate(-50%, -50%) rotate(0);
 }
-
 body.dark .card .left form section .left-sec input::before {
   border-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .left form section .left-sec input:checked::after {
   color: #efefef;
 }
-
 body.dark .card .left form section .left-sec label {
   color: #efefef;
   margin-bottom: 0;
 }
-
 body.dark .card .left form section .right-sec a {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .left form section .right-sec a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left form input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -255,49 +210,38 @@ body.dark .card .left form input[type=submit] {
   background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
-
 body.dark .card .left form input[type=submit]:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left .reg-link a {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .left .reg-link a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left hr {
   border-color: #efefef;
 }
-
 body.dark .card .left .social-log h3 {
   color: #efefef;
 }
-
 body.dark .card .left .social-log .links a {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark .card .left .social-log .links a:hover {
   background-color: #1d1d1d;
 }
-
 body.dark .card .left .social-log .links a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark .card .left .social-log .links a i {
   color: #efefef;
 }
-
 body.dark .card .right::before {
   background-color: rgba(5, 156, 177, 0.6);
 }
-
 body.dark .card .right .text {
   color: #efefef;
 }
@@ -315,26 +259,22 @@ main {
   background-color: #fff;
   box-shadow: 3px 4px 22px -5px #8b8b8b;
 }
-
 @media (max-width: 767px) {
   .card {
     min-width: 360px;
     max-width: 420px;
   }
 }
-
 .card .left {
   width: 50%;
   padding: 20px;
   padding-top: 50px;
 }
-
 @media (max-width: 767px) {
   .card .left {
     width: 100%;
   }
 }
-
 .card .left .back-btn {
   position: absolute;
   top: 20px;
@@ -345,43 +285,34 @@ main {
   background-color: transparent;
   cursor: pointer;
 }
-
 .card .left .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 .card .left .back-btn .f-icon {
   font-size: 1rem;
 }
-
 .card .left .head {
   text-align: center;
   padding-bottom: 20px;
 }
-
 .card .left .head h2,
 .card .left .head p {
   margin: 0;
   margin-bottom: 10px;
 }
-
 .card .left .head h2 {
   color: #059cb1;
 }
-
 .card .left .head p {
   font-size: 0.9rem;
 }
-
 .card .left form section {
   margin-bottom: 27px;
 }
-
 .card .left form section label {
   display: block;
   margin-bottom: 5px;
 }
-
 .card .left form section .field {
   flex-direction: row-reverse;
   position: relative;
@@ -391,7 +322,6 @@ main {
   padding-right: 5px;
   background-color: #f9f9f9;
 }
-
 .card .left form section .field input {
   flex: 1;
   padding: 10px;
@@ -401,19 +331,15 @@ main {
   outline: none;
   background-color: transparent;
 }
-
-.card .left form section .field input:focus~span:first-of-type {
+.card .left form section .field input:focus ~ span:first-of-type {
   background-color: #059cb1;
 }
-
-.card .left form section .field input:focus~.f-icon {
+.card .left form section .field input:focus ~ .f-icon {
   color: #059cb1;
 }
-
 .card .left form section .field .f-icon {
   color: #59c1bd;
 }
-
 .card .left form section .field span {
   position: absolute;
   bottom: 0;
@@ -422,7 +348,6 @@ main {
   height: 2px;
   width: 100%;
 }
-
 .card .left form section .field span.error {
   background-color: transparent !important;
   font-size: 0.9rem;
@@ -431,16 +356,13 @@ main {
   bottom: -22px;
   display: none;
 }
-
 .card .left form section:first-of-type .field input {
   text-transform: initial;
 }
-
 .card .left form section .left-sec {
   display: flex;
   gap: 7px;
 }
-
 .card .left form section .left-sec input {
   cursor: pointer;
   position: relative;
@@ -451,12 +373,9 @@ main {
   height: 15px;
   margin: 0px;
 }
-
-.card .left form section .left-sec input::before,
-.card .left form section .left-sec input::after {
+.card .left form section .left-sec input::before, .card .left form section .left-sec input::after {
   position: absolute;
 }
-
 .card .left form section .left-sec input::before {
   content: "";
   width: 100%;
@@ -465,11 +384,9 @@ main {
   background-color: transparent;
   border: 1.5px solid #59c1bd;
 }
-
 .card .left form section .left-sec input:hover::before {
   border-color: #059cb1;
 }
-
 .card .left form section .left-sec input::after {
   content: "";
   left: 50%;
@@ -484,7 +401,6 @@ main {
   -ms-transform: translate(-50%, -50%) rotate(3turn);
   -o-transform: translate(-50%, -50%) rotate(3turn);
 }
-
 .card .left form section .left-sec input:checked::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
@@ -502,22 +418,18 @@ main {
   -ms-transform: translate(-50%, -50%) rotate(0);
   -o-transform: translate(-50%, -50%) rotate(0);
 }
-
 .card .left form section .left-sec label {
   margin: 0;
   font-size: 1rem;
   cursor: pointer;
 }
-
 .card .left form section .right-sec a {
   font-size: 0.9rem;
   color: #59c1bd;
 }
-
 .card .left form section .right-sec a:hover {
   color: #059cb1;
 }
-
 .card .left form input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -527,70 +439,56 @@ main {
   background-color: #059cb1;
   padding: 10px 20px;
 }
-
 .card .left form input[type=submit]:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
-
 .card .left .reg-link {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 .card .left .reg-link a {
   font-size: 0.9rem;
   color: #59c1bd;
 }
-
 .card .left .reg-link a:hover {
   color: #059cb1;
 }
-
 .card .left hr {
   margin-top: 0;
 }
-
 .card .left .social-log {
   flex-direction: column;
 }
-
 .card .left .social-log h3 {
   margin: 0;
   margin-top: 10px;
   margin-bottom: 20px;
 }
-
 .card .left .social-log .links {
   gap: 20px;
 }
-
 .card .left .social-log .links a {
   width: 40px;
   height: 40px;
   background-color: #59c1bd;
 }
-
 .card .left .social-log .links a:hover {
   background-color: #eee;
 }
-
 .card .left .social-log .links a:hover i {
   color: #059cb1;
 }
-
 .card .left .social-log .links a i {
   color: #fff;
   font-size: 1.2rem;
 }
-
 .card .right {
   width: 50%;
   background-image: url(../Data/un-used-Images/log-in-image.png);
   position: relative;
 }
-
 .card .right::before {
   content: "";
   width: 100%;
@@ -602,30 +500,25 @@ main {
   z-index: 1;
   opacity: 0.2;
 }
-
 @media (max-width: 767px) {
   .card .right {
     display: none;
   }
 }
-
 .card .right .text {
   text-align: center;
   color: #fff;
   z-index: 2;
 }
-
 .card .right .text h1,
 .card .right .text h2 {
   margin: 0;
   margin-bottom: 10px;
 }
-
 .card .right .text h2 {
   font-family: "Yesteryear", cursive;
   font-size: 3.5rem;
 }
-
 .card .right .text p {
   margin: 0;
 }

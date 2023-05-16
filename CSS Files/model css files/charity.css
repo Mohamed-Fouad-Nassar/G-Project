@@ -1,41 +1,37 @@
-main .container .content .upper-sec,
-main .container .content .upper-sec .data .contact-info>div>div>.f-icon,
-body.dark main .container .content .upper-sec .data .contact-info>div>div>.f-icon {
+main .container .content .upper-sec, main .container .content .upper-sec .data .contact-info > div > div > .f-icon, body.dark main .container .content .upper-sec .data .contact-info > div > div > .f-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .container .content .upper-sec .data .social-icon>div,
-body.dark main .container .content .upper-sec .data .social-icon>div {
+main .container .content .upper-sec .data .social-icon > div, body.dark main .container .content .upper-sec .data .social-icon > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-main .container .content .upper-sec .data .social-icon>div>div a,
-body.dark main .container .content .upper-sec .data .social-icon>div>div a {
+main .container .content .upper-sec .data .social-icon > div > div a, body.dark main .container .content .upper-sec .data .social-icon > div > div a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .container .content .events .body {
@@ -45,8 +41,7 @@ main .container .content .events .body {
   gap: 20px;
 }
 
-main .container .content .upper-sec .data .social-icon>div>div a,
-body.dark main .container .content .upper-sec .data .social-icon>div>div a {
+main .container .content .upper-sec .data .social-icon > div > div a, body.dark main .container .content .upper-sec .data .social-icon > div > div a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -54,8 +49,7 @@ body.dark main .container .content .upper-sec .data .social-icon>div>div a {
   -o-border-radius: 5px !important;
 }
 
-main .container .content .other .swiper .slider-container .slides .slide,
-body.dark main .container .content .other .swiper .slider-container .slides .slide {
+main .container .content .other .swiper .slider-container .slides .slide, body.dark main .container .content .other .swiper .slider-container .slides .slide {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -63,11 +57,7 @@ body.dark main .container .content .other .swiper .slider-container .slides .sli
   -o-border-radius: 10px !important;
 }
 
-main .container .content .upper-sec .data .image,
-main .container .content .upper-sec .data .contact-info>div>div>.f-icon,
-main .container .content .other .swiper .swiper-navBtn,
-body.dark main .container .content .upper-sec .data .contact-info>div>div>.f-icon,
-body.dark main .container .content .other .swiper .swiper-navBtn {
+main .container .content .upper-sec .data .image, main .container .content .upper-sec .data .contact-info > div > div > .f-icon, main .container .content .other .swiper .swiper-navBtn, body.dark main .container .content .upper-sec .data .contact-info > div > div > .f-icon, body.dark main .container .content .other .swiper .swiper-navBtn {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -75,8 +65,7 @@ body.dark main .container .content .other .swiper .swiper-navBtn {
   -o-border-radius: 50% !important;
 }
 
-main .container .content .other .swiper .slider-container .slides .slide,
-body.dark main .container .content .other .swiper .slider-container .slides .slide {
+main .container .content .other .swiper .slider-container .slides .slide, body.dark main .container .content .other .swiper .slider-container .slides .slide {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -88,12 +77,10 @@ main {
   padding: 0;
   padding-top: 100px;
 }
-
 main .container {
   background-color: #eee;
   position: relative;
 }
-
 main .container .back-btn {
   position: absolute;
   top: 10px;
@@ -104,16 +91,13 @@ main .container .back-btn {
   background-color: transparent;
   cursor: pointer;
 }
-
 main .container .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 main .container .back-btn .f-icon {
   font-size: 1rem;
 }
-
-main .container>h1 {
+main .container > h1 {
   display: none;
   padding: 15px;
   width: 90%;
@@ -122,46 +106,38 @@ main .container>h1 {
   font-size: 1.5rem;
   color: #059cb1;
 }
-
 @media (max-width: 991px) {
-  main .container>h1 {
+  main .container > h1 {
     display: block;
   }
 }
-
 main .container .content {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
 }
-
 main .container .content .upper-sec {
   gap: 20px;
 }
-
 @media (max-width: 991px) {
   main .container .content .upper-sec {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
-
-  main .container .content .upper-sec>article {
+  main .container .content .upper-sec > article {
     width: 100% !important;
   }
 }
-
 main .container .content .upper-sec .description {
   width: calc(60% - 10px);
 }
-
 main .container .content .upper-sec .description .article-body {
   white-space: break-spaces;
   font: inherit;
   margin: 0;
 }
-
 main .container .content .upper-sec .description h1 {
   padding: 20px 5px;
   width: 100%;
@@ -169,13 +145,11 @@ main .container .content .upper-sec .description h1 {
   font-size: 1.5rem;
   color: #059cb1;
 }
-
 @media (max-width: 991px) {
   main .container .content .upper-sec .description h1 {
     display: none;
   }
 }
-
 main .container .content .upper-sec .data {
   background-color: #fff;
   padding: 20px;
@@ -184,13 +158,11 @@ main .container .content .upper-sec .data {
   position: relative;
   width: calc(40% - 10px);
 }
-
-main .container .content .upper-sec .data>div h2 {
+main .container .content .upper-sec .data > div h2 {
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 20px;
 }
-
 main .container .content .upper-sec .data .image {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
@@ -204,61 +176,50 @@ main .container .content .upper-sec .data .image {
   top: -100px;
   left: 50%;
 }
-
 main .container .content .upper-sec .data .image img {
   width: 200px;
   height: 200px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 main .container .content .upper-sec .data .social-icon {
   margin-top: 30px;
   display: block !important;
   padding-top: 100px;
 }
-
-main .container .content .upper-sec .data .social-icon>div {
+main .container .content .upper-sec .data .social-icon > div {
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-
-main .container .content .upper-sec .data .social-icon>div>div a {
+main .container .content .upper-sec .data .social-icon > div > div a {
   width: 40px;
   height: 40px;
   background-color: #59c1bd;
 }
-
-main .container .content .upper-sec .data .social-icon>div>div a i {
+main .container .content .upper-sec .data .social-icon > div > div a i {
   font-size: 1.5rem;
 }
-
-main .container .content .upper-sec .data .social-icon>div>div a:hover {
+main .container .content .upper-sec .data .social-icon > div > div a:hover {
   background-color: #eee;
 }
-
-main .container .content .upper-sec .data .social-icon>div>div a:hover i {
+main .container .content .upper-sec .data .social-icon > div > div a:hover i {
   color: #059cb1;
 }
-
-main .container .content .upper-sec .data .social-icon>div>div a i {
+main .container .content .upper-sec .data .social-icon > div > div a i {
   color: #fff;
 }
-
-main .container .content .upper-sec .data .social-icon>div>div a {
+main .container .content .upper-sec .data .social-icon > div > div a {
   width: 40px !important;
   height: 40px !important;
 }
-
 main .container .content .upper-sec .data .contact-info {
   position: relative;
   padding-top: 60px;
 }
-
 main .container .content .upper-sec .data .contact-info::before {
   content: "";
   position: absolute;
@@ -268,51 +229,42 @@ main .container .content .upper-sec .data .contact-info::before {
   top: 30px;
   background-color: #eee;
 }
-
-main .container .content .upper-sec .data .contact-info>div {
+main .container .content .upper-sec .data .contact-info > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-main .container .content .upper-sec .data .contact-info>div:last-of-type {
+main .container .content .upper-sec .data .contact-info > div:last-of-type {
   margin: 0;
 }
-
-main .container .content .upper-sec .data .contact-info>div>div>.f-icon {
+main .container .content .upper-sec .data .contact-info > div > div > .f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
   color: #fff;
   font-size: 1.5rem;
 }
-
-main .container .content .upper-sec .data .contact-info>div>span {
+main .container .content .upper-sec .data .contact-info > div > span {
   color: #fff;
 }
-
 main .container .content .upper-sec .data .contact-info .box span {
   color: initial;
 }
-
 main .container .content .events,
 main .container .content .other {
   padding-top: 30px;
 }
-
 @media (max-width: 991px) {
-
   main .container .content .events,
-  main .container .content .other {
+main .container .content .other {
     padding-top: 0;
   }
 }
-
 main .container .content .events .head h2,
 main .container .content .other .head h2 {
   padding: 20px 10px;
@@ -320,72 +272,59 @@ main .container .content .other .head h2 {
   font-size: 1.5rem;
   color: #059cb1;
 }
-
 main .container .content .events .body .image {
   border: 5px solid #fff;
 }
-
 main .container .content .events .body .image img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-
 main .container .content .other .swiper {
   overflow: hidden;
 }
-
 main .container .content .other .swiper .slider-container {
   padding: 0px 8px;
 }
-
 main .container .content .other .swiper .slider-container .slides {
   width: 100%;
   padding-bottom: 40px;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide {
   background-color: #eee;
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-
 @media (min-width: 992px) {
   main .container .content .other .swiper .slider-container .slides .slide {
     width: calc((100% - 30px) / 3);
   }
 }
-
 @media (max-width: 991px) {
   main .container .content .other .swiper .slider-container .slides .slide {
     width: calc((100% - 15px) / 2);
   }
 }
-
 @media (max-width: 575px) {
   main .container .content .other .swiper .slider-container .slides .slide {
     width: 100%;
   }
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-image img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-body {
   padding: 5px 10px;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-body h3 {
   margin-top: 5px;
   font-size: 1.2rem;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-body p {
   color: #555;
   font-size: 0.9rem;
@@ -399,50 +338,40 @@ main .container .content .other .swiper .slider-container .slides .slide .slide-
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-foot {
   padding: 10px;
   padding-top: 0;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-foot a span {
   font-size: 0.95rem;
   color: #059cb1;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-foot a .f-icon {
   margin-left: 2px;
   font-size: 0.9rem;
   color: #059cb1;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover span,
 main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover .f-icon {
   color: #59c1bd;
 }
-
 main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover .f-icon {
   animation: left-right-btn 0.3s linear infinite alternate;
   -webkit-animation: left-right-btn 0.3s linear infinite alternate;
 }
-
 main .container .content .other .swiper .swiper-navBtn {
   height: 40px;
   width: 40px;
   color: #fff;
   background-color: #059cb1;
 }
-
 main .container .content .other .swiper .swiper-navBtn:hover {
   background-color: #59c1bd;
 }
-
-main .container .content .other .swiper .swiper-navBtn::before,
-main .container .content .other .swiper .swiper-navBtn::after {
+main .container .content .other .swiper .swiper-navBtn::before, main .container .content .other .swiper .swiper-navBtn::after {
   font-size: 1rem;
   bottom: -25px;
 }
-
 main .container .content .other .swiper .swiper-pagination-bullet {
   background-color: #059cb1;
 }
@@ -450,11 +379,9 @@ main .container .content .other .swiper .swiper-pagination-bullet {
 body.dark main {
   background-color: #222;
 }
-
 body.dark main .container {
   background-color: #1d1d1d;
 }
-
 body.dark main .container .back-btn {
   position: absolute;
   top: 10px;
@@ -466,182 +393,146 @@ body.dark main .container .back-btn {
   cursor: pointer;
   color: #efefef;
 }
-
 body.dark main .container .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 body.dark main .container .back-btn .f-icon {
   font-size: 1rem;
 }
-
 body.dark main .container .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .container>h1 {
+body.dark main .container > h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .container .content .upper-sec .description .article-body {
   color: #a5a5a5;
 }
-
 body.dark main .container .content .upper-sec .description h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .container .content .upper-sec .data {
   background-color: #222;
 }
-
-body.dark main .container .content .upper-sec .data>div h2 {
+body.dark main .container .content .upper-sec .data > div h2 {
   color: #efefef;
 }
-
 body.dark main .container .content .upper-sec .data .image img {
   filter: brightness(0.9);
   -webkit-filter: brightness(0.9);
 }
-
-body.dark main .container .content .upper-sec .data .social-icon>div {
+body.dark main .container .content .upper-sec .data .social-icon > div {
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-
-body.dark main .container .content .upper-sec .data .social-icon>div>div a {
+body.dark main .container .content .upper-sec .data .social-icon > div > div a {
   width: 40px;
   height: 40px;
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
-body.dark main .container .content .upper-sec .data .social-icon>div>div a i {
+body.dark main .container .content .upper-sec .data .social-icon > div > div a i {
   font-size: 1.5rem;
 }
-
-body.dark main .container .content .upper-sec .data .social-icon>div>div a:hover {
+body.dark main .container .content .upper-sec .data .social-icon > div > div a:hover {
   background-color: #222;
 }
-
-body.dark main .container .content .upper-sec .data .social-icon>div>div a:hover i {
+body.dark main .container .content .upper-sec .data .social-icon > div > div a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .container .content .upper-sec .data .social-icon>div>div a i {
+body.dark main .container .content .upper-sec .data .social-icon > div > div a i {
   color: #efefef;
 }
-
 body.dark main .container .content .upper-sec .data .contact-info::before {
   background-color: #555;
 }
-
-body.dark main .container .content .upper-sec .data .contact-info>div {
+body.dark main .container .content .upper-sec .data .contact-info > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-
-body.dark main .container .content .upper-sec .data .contact-info>div:last-of-type {
+body.dark main .container .content .upper-sec .data .contact-info > div:last-of-type {
   margin: 0;
 }
-
-body.dark main .container .content .upper-sec .data .contact-info>div>div>.f-icon {
+body.dark main .container .content .upper-sec .data .contact-info > div > div > .f-icon {
   width: 45px;
   height: 45px;
   background-color: #59c1bd;
   color: #fff;
   font-size: 1.5rem;
 }
-
-body.dark main .container .content .upper-sec .data .contact-info>div>span {
+body.dark main .container .content .upper-sec .data .contact-info > div > span {
   color: #fff;
 }
-
-body.dark main .container .content .upper-sec .data .contact-info>div>div>.f-icon {
+body.dark main .container .content .upper-sec .data .contact-info > div > div > .f-icon {
   background-color: rgba(89, 193, 189, 0.8705882353);
   color: #efefef;
 }
-
-body.dark main .container .content .upper-sec .data .contact-info>div>span {
+body.dark main .container .content .upper-sec .data .contact-info > div > span {
   color: #efefef !important;
 }
-
 body.dark main .container .content .upper-sec .data .contact-info .box span {
   color: #a5a5a5 !important;
 }
-
 body.dark main .container .content .events .head h2,
 body.dark main .container .content .other .head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .container .content .events .body .image {
   border-color: #222;
 }
-
 body.dark main .container .content .other .swiper {
   overflow: hidden;
 }
-
 body.dark main .container .content .other .swiper .slider-container {
   padding: 0px 8px;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides {
   width: 100%;
   padding-bottom: 40px;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide {
   background-color: #eee;
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-
 @media (min-width: 992px) {
   body.dark main .container .content .other .swiper .slider-container .slides .slide {
     width: calc((100% - 30px) / 3);
   }
 }
-
 @media (max-width: 991px) {
   body.dark main .container .content .other .swiper .slider-container .slides .slide {
     width: calc((100% - 15px) / 2);
   }
 }
-
 @media (max-width: 575px) {
   body.dark main .container .content .other .swiper .slider-container .slides .slide {
     width: 100%;
   }
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-image img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-body {
   padding: 5px 10px;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-body h3 {
   margin-top: 5px;
   font-size: 1.2rem;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-body p {
   color: #555;
   font-size: 0.9rem;
@@ -655,90 +546,71 @@ body.dark main .container .content .other .swiper .slider-container .slides .sli
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot {
   padding: 10px;
   padding-top: 0;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a span {
   font-size: 0.95rem;
   color: #059cb1;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a .f-icon {
   margin-left: 2px;
   font-size: 0.9rem;
   color: #059cb1;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover span,
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover .f-icon {
   color: #59c1bd;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover .f-icon {
   animation: left-right-btn 0.3s linear infinite alternate;
   -webkit-animation: left-right-btn 0.3s linear infinite alternate;
 }
-
 body.dark main .container .content .other .swiper .swiper-navBtn {
   height: 40px;
   width: 40px;
   color: #fff;
   background-color: #059cb1;
 }
-
 body.dark main .container .content .other .swiper .swiper-navBtn:hover {
   background-color: #59c1bd;
 }
-
-body.dark main .container .content .other .swiper .swiper-navBtn::before,
-body.dark main .container .content .other .swiper .swiper-navBtn::after {
+body.dark main .container .content .other .swiper .swiper-navBtn::before, body.dark main .container .content .other .swiper .swiper-navBtn::after {
   font-size: 1rem;
   bottom: -25px;
 }
-
 body.dark main .container .content .other .swiper .swiper-pagination-bullet {
   background-color: #059cb1;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide {
   background-color: #1d1d1d;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-body h3 {
   color: #efefef;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-body p {
   color: #a5a5a5;
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover span,
 body.dark main .container .content .other .swiper .slider-container .slides .slide .slide-foot a:hover .f-icon {
   color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .container .content .other .swiper .swiper-navBtn {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .container .content .other .swiper .swiper-navBtn:hover {
   background-color: rgba(89, 193, 189, 0.8705882353);
 }
-
 body.dark main .container .content .other .swiper .swiper-pagination-bullet {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }

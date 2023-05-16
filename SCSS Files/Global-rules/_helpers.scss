@@ -375,6 +375,10 @@
   position: relative;
   background-color: $white-color;
   padding: $main-element-padding $main-element-padding 30px;
+  display: none;
+  &.active {
+    display: block !important;
+  }
   .avatar {
     @extend %border-radius-50;
     @include trans($sec-element-padding, -50px);
@@ -399,9 +403,15 @@
       span {
         width: calc(100% - 130px);
       }
-      h3 {
+      h3,
+      a {
         font-size: 1.3rem;
         margin: 0;
+      }
+      a {
+        &:hover {
+          color: $main-color;
+        }
       }
       span {
         font-size: 0.9rem;
@@ -453,8 +463,14 @@
     }
     .data {
       .head {
-        h3 {
+        h3,
+        a {
           color: $white-dark-color;
+        }
+        a {
+          &:hover {
+            color: $main-dark-color;
+          }
         }
         span {
           color: $white-dark-color;
@@ -1022,6 +1038,10 @@
   @include grid(200px, $main-element-padding);
 }
 
+%grid-200-10 {
+  @include grid(200px, $sec-element-padding);
+}
+
 %grid-250-20 {
   @include grid(250px, $main-element-padding);
 }
@@ -1048,6 +1068,10 @@
 
 %translate-x-50 {
   @include trans-x(-50%);
+}
+
+%border-radius-0 {
+  @include border-rad(0);
 }
 
 %border-radius-5 {

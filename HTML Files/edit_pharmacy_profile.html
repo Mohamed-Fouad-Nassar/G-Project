@@ -203,36 +203,11 @@
               </div>
               <div class="right">
                 <section class="name">
-                  <label>full name:</label>
-                  <div class="data">
-                    <div class="f-name">
-                      <label for="field">first name:</label>
-                      <div class="field">
-                        <input
-                          class="input"
-                          type="text"
-                          id="field"
-                          name="firstName"
-                          placeholder="First Name"
-                        />
-                        <span></span>
-                        <i class="f-icon fa-solid fa-user"></i>
-                      </div>
-                    </div>
-                    <div class="l-name">
-                      <label for="field">last name:</label>
-                      <div class="field">
-                        <input
-                          class="input"
-                          type="text"
-                          id="field"
-                          name="lastName"
-                          placeholder="Last Name"
-                        />
-                        <span></span>
-                        <i class="f-icon fa-solid fa-user"></i>
-                      </div>
-                    </div>
+                  <label for="field">pharmacy name:</label>
+                  <div class="field">
+                    <input class="input" type="text" id="field" name="name" />
+                    <span></span>
+                    <i class="f-icon fa-solid fa-user"></i>
                   </div>
                 </section>
                 <section class="e-mail">
@@ -296,41 +271,84 @@
                     <i class="f-icon fa-solid fa-phone"></i>
                   </div>
                 </section>
-                <section class="gender">
-                  <label for="gender">gender:</label>
-                  <div class="sec-flex" id="gender">
-                    <p>please choose your gender:</p>
-                    <p>your gender:</p>
-                    <div class="choices">
-                      <div class="choice">
-                        <input type="radio" name="gender" id="male" />
-                        <label for="male">
-                          <!-- <i class="fa-solid fa-mars"></i> -->
-                          male
-                        </label>
+                <section class="location">
+                  <label for="field">location:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="field"
+                      name="location"
+                    />
+                    <span></span>
+                    <i class="f-icon fa-solid fa-location-dot"></i>
+                  </div>
+                </section>
+                <div class="social-links">
+                  <h2>social links</h2>
+                  <div class="links">
+                    <section class="link-div">
+                      <div class="field">
+                        <input
+                          type="text"
+                          name="facebook-link"
+                          placeholder="facebook link"
+                        />
+                        <span></span>
                       </div>
-                      <div class="choice">
-                        <input type="radio" name="gender" id="female" />
-                        <label for="female">
-                          <!-- <i class="fa-solid fa-venus"></i> -->
-                          female
-                        </label>
+                    </section>
+                    <section class="link-div">
+                      <div class="field">
+                        <input
+                          type="text"
+                          name="instagram-link"
+                          placeholder="instagram link"
+                        />
+                        <span></span>
                       </div>
-                    </div>
+                    </section>
+                    <section class="link-div">
+                      <div class="field">
+                        <input
+                          type="text"
+                          name="twitter-link"
+                          placeholder="twitter link"
+                        />
+                        <span></span>
+                      </div>
+                    </section>
+                    <section class="link-div">
+                      <div class="field">
+                        <input
+                          type="text"
+                          name="mail-address"
+                          placeholder="mail address"
+                        />
+                        <span></span>
+                      </div>
+                    </section>
+                    <section class="link-div">
+                      <div class="field">
+                        <input
+                          type="text"
+                          name="whatsapp-number"
+                          placeholder="whatsapp number"
+                        />
+                        <span></span>
+                      </div>
+                    </section>
+                    <section class="link-div">
+                      <div class="field">
+                        <input
+                          type="text"
+                          name="phone-number"
+                          placeholder="phone number"
+                        />
+                        <span></span>
+                      </div>
+                    </section>
                   </div>
-                </section>
-                <section class="caner-type">
-                  <label for="cancer">cancer type:</label>
-                  <div class="cancer">
-                    <select name="cancer" id="cancer"></select>
-                  </div>
-                </section>
-                <section class="birth-date">
-                  <div class="sec-flex">
-                    <label>date of birth:</label>
-                    <input type="date" name="birth date" />
-                  </div>
-                </section>
+                </div>
               </div>
             </div>
             <div class="button">
@@ -470,12 +488,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-- main script -->
-    <!-- <script src="../JS Files/.js"></script> -->
     <!-- header script -->
     <script src="../JS Files/header.js"></script>
-    <script src="../JS Files/register.js"></script>
+    <!-- main script -->
+    <!-- <script src="../JS Files/register.js"></script> -->
     <script src="../JS Files/edit_profile.js"></script>
-    <script src="../JS Files/cancer-types.js"></script>
   </body>
 </html>

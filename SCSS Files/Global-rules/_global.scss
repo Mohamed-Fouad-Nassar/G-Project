@@ -41,7 +41,7 @@ a {
   }
 }
 
-i {
+.f-icon {
   @extend %zero-transition;
 }
 
@@ -161,11 +161,6 @@ input {
 }
 
 /* End Animation Styling */
-
-.box,
-.card {
-  @extend %border-radius-10;
-}
 
 /* Start Selection Styling:- */
 

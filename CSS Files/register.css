@@ -23,6 +23,7 @@ body.dark .card .left form .check-box input:checked::after,
 body.dark .card .left form .buttons input[type=submit],
 body.dark .card .left form .buttons input[type=reset],
 body.dark .card .right .text a,
+.card .left .select-btns button,
 .card .left form .field,
 .card .left form .gender .choices,
 .card .left form .check-box input:checked::after,
@@ -39,6 +40,7 @@ main .top a {
   justify-content: center;
 }
 
+.card .left .select-btns,
 .card .left form .check-box {
   display: flex;
   align-items: center;
@@ -79,6 +81,21 @@ body.dark .error-message::after,
   -o-transform: translateY(-50%);
 }
 
+body.dark .card .left form .buttons input[type=submit],
+body.dark .card .left form .buttons input[type=reset],
+body.dark .card .right .text a,
+.card .left form .buttons input[type=submit],
+.card .left form .buttons input[type=reset],
+.card .right .text a,
+section .container .sec-foot a,
+.dark section .container .sec-foot a {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
 .card {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
@@ -100,7 +117,7 @@ body.dark .card .left form .gender .choices .choice input::after,
   -o-border-radius: 50% !important;
 }
 
-i {
+.f-icon {
   transition: 0s !important;
   -webkit-transition: 0s !important;
   -moz-transition: 0s !important;
@@ -263,15 +280,6 @@ input {
 }
 
 /* End Animation Styling */
-.box,
-.card {
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
 /* Start Selection Styling:- */
 ::-moz-selection {
   background: #212529;
@@ -309,7 +317,7 @@ input {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
 }
 
 .dark ::-webkit-scrollbar-thumb {
@@ -321,7 +329,7 @@ input {
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 /* End Scroll Bar Styling */
@@ -340,7 +348,7 @@ input {
   height: 14px;
   width: 14px;
   background-color: transparent;
-  border: 2px solid #59c1bd;
+  border: 2px solid #3ab6b6;
 }
 
 .head-shape span::after,
@@ -350,7 +358,7 @@ input {
   content: "";
   height: 2px;
   width: calc(50% - 15px);
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   position: absolute;
   top: 50%;
 }
@@ -376,14 +384,14 @@ input {
 
 .dark .head-shape span,
 .dark .head-shape-w span {
-  border-color: rgba(89, 193, 189, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 .dark .head-shape span::after,
 .dark .head-shape span::before,
 .dark .head-shape-w span::after,
 .dark .head-shape-w span::before {
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 .dark .head-shape-w span {
@@ -673,6 +681,28 @@ body.dark .card .left .head p {
   color: #a5a5a5;
 }
 
+body.dark .card .left .select-btns {
+  background-color: #1d1d1d;
+}
+
+body.dark .card .left .select-btns button .f-icon,
+body.dark .card .left .select-btns button span {
+  color: #efefef;
+}
+
+body.dark .card .left .select-btns button:hover,
+body.dark .card .left .select-btns button.active {
+  background-color: rgba(58, 182, 182, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
+}
+
+body.dark .card .left .select-btns button:hover .f-icon,
+body.dark .card .left .select-btns button:hover span,
+body.dark .card .left .select-btns button.active .f-icon,
+body.dark .card .left .select-btns button.active span {
+  color: #efefef;
+}
+
 body.dark .card .left form section label {
   color: #efefef;
 }
@@ -703,11 +733,11 @@ body.dark .card .left form .field input:focus~.f-icon {
 }
 
 body.dark .card .left form .field i {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark .card .left form .field span {
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark .card .left form .field span.error {
@@ -736,7 +766,7 @@ body.dark .card .left form .gender .choices .choice input::before {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
 
 body.dark .card .left form .gender .choices .choice input:hover::before {
@@ -759,7 +789,7 @@ body.dark .card .left form .gender .choices .choice input:checked:after {
 }
 
 body.dark .card .left form .gender .choices .choice input::before {
-  border-color: rgba(89, 193, 189, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark .card .left form .caner-type .cancer select {
@@ -772,7 +802,7 @@ body.dark .card .left form .caner-type .cancer select:focus {
 }
 
 body.dark .card .left form .birth-date input[type=date] {
-  border-bottom-color: rgba(89, 193, 189, 0.8705882353);
+  border-bottom-color: rgba(58, 182, 182, 0.8705882353);
   background-color: #1d1d1d;
   color: #efefef;
 }
@@ -803,7 +833,7 @@ body.dark .card .left form .check-box input::before {
   height: 100%;
   border-radius: 2px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
 
 body.dark .card .left form .check-box input:hover::before {
@@ -844,19 +874,15 @@ body.dark .card .left form .check-box input:checked::after {
 }
 
 body.dark .card .left form .check-box input::before {
-  border-color: rgba(89, 193, 189, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark .card .left form .check-box input:checked::after {
   color: #efefef;
 }
 
-body.dark .card .left form .check-box label {
-  margin-bottom: 0;
-}
-
 body.dark .card .left form .check-box label a {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark .card .left form .check-box label a:hover {
@@ -888,15 +914,15 @@ body.dark .card .left form .buttons input[type=reset] {
   margin: 0 auto;
   outline: none;
   color: #efefef;
-  border: 1px solid rgba(89, 193, 189, 0.8705882353);
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  border: 1px solid rgba(58, 182, 182, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
   padding: 10px 20px;
 }
 
 body.dark .card .left form .buttons input[type=reset]:hover {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
   background-color: transparent;
-  border-color: rgba(89, 193, 189, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark .card .left .log-link span {
@@ -904,7 +930,7 @@ body.dark .card .left .log-link span {
 }
 
 body.dark .card .left .log-link a {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark .card .left .log-link a:hover {
@@ -1017,6 +1043,48 @@ main {
   .card .left .head {
     display: none;
   }
+}
+
+.card .left .select-btns {
+  margin-bottom: 20px;
+  background-color: #efefef;
+}
+
+.card .left .select-btns button {
+  gap: 10px;
+  width: 50%;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.card .left .select-btns button .f-icon,
+.card .left .select-btns button span {
+  color: #212529;
+}
+
+.card .left .select-btns button:hover,
+.card .left .select-btns button.active {
+  background-color: #3ab6b6;
+  border-color: #3ab6b6;
+}
+
+.card .left .select-btns button:hover .f-icon,
+.card .left .select-btns button:hover span,
+.card .left .select-btns button.active .f-icon,
+.card .left .select-btns button.active span {
+  color: #fff;
+}
+
+.card .left form {
+  display: none;
+}
+
+.card .left form.active {
+  display: block;
 }
 
 .card .left form section {
@@ -1148,14 +1216,14 @@ main {
 }
 
 .card .left form .field i {
-  color: #59c1bd;
+  color: #3ab6b6;
 }
 
 .card .left form .field span {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   height: 2px;
   width: 100%;
 }
@@ -1213,7 +1281,7 @@ main {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
 
 .card .left form .gender .choices .choice input:hover::before {
@@ -1258,7 +1326,7 @@ main {
   text-align: center;
   background-color: #f9f9f9;
   border: none;
-  border-bottom: 2px solid #59c1bd;
+  border-bottom: 2px solid #3ab6b6;
 }
 
 .card .left form .caner-type .cancer select:focus {
@@ -1272,7 +1340,7 @@ main {
   padding: 7px 10px;
   border: none;
   outline: none;
-  border-bottom: 2px solid #59c1bd;
+  border-bottom: 2px solid #3ab6b6;
   background-color: #f9f9f9;
 }
 
@@ -1308,7 +1376,7 @@ main {
   height: 100%;
   border-radius: 2px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
 
 .card .left form .check-box input:hover::before {
@@ -1351,11 +1419,12 @@ main {
 .card .left form .check-box label {
   font-size: 0.9rem;
   margin-top: 2px;
+  margin-bottom: 0 !important;
   cursor: pointer;
 }
 
 .card .left form .check-box label a {
-  color: #59c1bd;
+  color: #3ab6b6;
 }
 
 .card .left form .check-box label a:hover {
@@ -1394,6 +1463,7 @@ main {
 }
 
 .card .left form .buttons input[type=submit] {
+  font-size: 1rem !important;
   width: 160px;
   margin: 0 auto;
   outline: none;
@@ -1410,19 +1480,20 @@ main {
 }
 
 .card .left form .buttons input[type=reset] {
+  font-size: 1rem !important;
   width: 160px;
   margin: 0 auto;
   outline: none;
   color: #fff;
-  border: 1px solid #59c1bd;
-  background-color: #59c1bd;
+  border: 1px solid #3ab6b6;
+  background-color: #3ab6b6;
   padding: 10px 20px;
 }
 
 .card .left form .buttons input[type=reset]:hover {
-  color: #59c1bd;
+  color: #3ab6b6;
   background-color: transparent;
-  border-color: #59c1bd;
+  border-color: #3ab6b6;
 }
 
 .card .left .log-link {
@@ -1431,7 +1502,7 @@ main {
 
 .card .left .log-link a {
   font-size: 1rem;
-  color: #59c1bd;
+  color: #3ab6b6;
 }
 
 .card .left .log-link a:hover {

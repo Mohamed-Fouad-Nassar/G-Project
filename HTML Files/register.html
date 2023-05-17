@@ -102,21 +102,21 @@
           <article class="lang">
             <div class="h-btn">
               <div>
-                <img src="./Data/Images/usa.png" alt="lang-flag-image" />
+                <img src="../Data/Images/usa.png" alt="lang-flag-image" />
               </div>
               <span>en</span>
             </div>
             <div class="menu">
               <ul>
-                <li img-src="./Data/Images/usa.png" lang-text="en">
+                <li img-src="../Data/Images/usa.png" lang-text="en">
                   <div>
-                    <img src="./Data/Images/usa.png" alt="lang-flag-image" />
+                    <img src="../Data/Images/usa.png" alt="lang-flag-image" />
                   </div>
                   <span>en</span>
                 </li>
-                <li img-src="./Data/Images/eg.png" lang-text="ar">
+                <li img-src="../Data/Images/eg.png" lang-text="ar">
                   <div>
-                    <img src="./Data/Images/eg.png" alt="lang-flag-image" />
+                    <img src="../Data/Images/eg.png" alt="lang-flag-image" />
                   </div>
                   <span>ar</span>
                 </li>
@@ -133,7 +133,10 @@
           </article>
           <article class="acc">
             <div class="h-btn">
-              <img src="./Data/Images/avatar-image-1.png" alt="account-image" />
+              <img
+                src="../Data/Images/avatar-image-1.png"
+                alt="account-image"
+              />
             </div>
             <div class="menu">
               <ul>
@@ -167,85 +170,96 @@
                 community
               </p>
             </div>
-            <form action="">
-              <section class="name">
-                <label>full name:</label>
-                <div class="data">
-                  <div class="f-name">
-                    <label for="field">first name:</label>
-                    <div class="field">
-                      <input
-                        class="input"
-                        type="text"
-                        id="f-name"
-                        name="firstName"
-                        placeholder="First Name"
-                      />
-                      <span></span>
-                      <span class="error">error message here</span>
-                      <i class="f-icon fa-solid fa-user"></i>
+            <div class="select-btns">
+              <button class="active">
+                <i class="f-icon fa-solid fa-user"></i>
+                <span>user</span>
+              </button>
+              <button>
+                <i class="f-icon fa-solid fa-hospital"></i>
+                <span>pharmacy</span>
+              </button>
+            </div>
+            <div class="form">
+              <form class="userReg active" action="">
+                <section class="name">
+                  <label>full name:</label>
+                  <div class="data">
+                    <div class="f-name">
+                      <label for="field">first name:</label>
+                      <div class="field">
+                        <input
+                          class="input"
+                          type="text"
+                          id="f-name"
+                          name="firstName"
+                          placeholder="First Name"
+                        />
+                        <span></span>
+                        <span class="error">error message here</span>
+                        <i class="f-icon fa-solid fa-user"></i>
+                      </div>
+                    </div>
+                    <div class="l-name">
+                      <label for="field">last name:</label>
+                      <div class="field">
+                        <input
+                          class="input"
+                          type="text"
+                          id="l-name"
+                          name="lastName"
+                          placeholder="Last Name"
+                        />
+                        <span></span>
+                        <span class="error">error message here</span>
+                        <i class="f-icon fa-solid fa-user"></i>
+                      </div>
                     </div>
                   </div>
-                  <div class="l-name">
-                    <label for="field">last name:</label>
-                    <div class="field">
-                      <input
-                        class="input"
-                        type="text"
-                        id="l-name"
-                        name="lastName"
-                        placeholder="Last Name"
-                      />
-                      <span></span>
-                      <span class="error">error message here</span>
-                      <i class="f-icon fa-solid fa-user"></i>
-                    </div>
+                </section>
+                <section class="e-mail">
+                  <label for="field">e-mail:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="mail-field"
+                      name="email"
+                    />
+                    <span></span>
+                    <span class="error">error message here</span>
+                    <i class="f-icon fa-regular fa-envelope"></i>
                   </div>
-                </div>
-              </section>
-              <section class="e-mail">
-                <label for="field">e-mail:</label>
-                <div class="field">
-                  <input
-                    class="input"
-                    type="text"
-                    id="mail-field"
-                    name="email"
-                  />
-                  <span></span>
-                  <span class="error">error message here</span>
-                  <i class="f-icon fa-regular fa-envelope"></i>
-                </div>
-              </section>
-              <section class="password">
-                <label for="field">password:</label>
-                <div class="field">
-                  <input
-                    class="input"
-                    type="password"
-                    id="pass-field"
-                    name="password"
-                  />
-                  <span></span>
-                  <span class="error">error message here</span>
-                  <i class="f-icon fa-solid fa-lock"></i>
-                </div>
-              </section>
-              <section class="password">
-                <label for="field">confirm password:</label>
-                <div class="field">
-                  <input
-                    class="input"
-                    type="Password"
-                    id="confirm-pass-field"
-                    name="confirmPassword"
-                  />
-                  <span></span>
-                  <span class="error">error message here</span>
-                  <i class="f-icon fa-solid fa-lock"></i>
-                </div>
-              </section>
-              <!-- <section class="phone">
+                </section>
+                <section class="password">
+                  <label for="field">password:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="password"
+                      id="pass-field"
+                      name="password"
+                    />
+                    <span></span>
+                    <span class="error">error message here</span>
+                    <i class="f-icon fa-solid fa-lock"></i>
+                  </div>
+                </section>
+                <section class="password">
+                  <label for="field">confirm password:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="Password"
+                      id="confirm-pass-field"
+                      name="confirmPassword"
+                    />
+                    <span></span>
+                    <span class="error">error message here</span>
+                    <i class="f-icon fa-solid fa-lock"></i>
+                  </div>
+                </section>
+                <!-- <section class="phone">
                 <label for="field">phone number:</label>
                 <div class="field">
                   <input
@@ -260,56 +274,129 @@
                   <i class="f-icon fa-solid fa-phone"></i>
                 </div>
               </section> -->
-              <section class="gender">
-                <label for="gender">gender:</label>
-                <div class="sec-flex" id="gender">
-                  <p>please choose your gender:</p>
-                  <p>your gender:</p>
-                  <div class="choices">
-                    <div class="choice">
-                      <input type="radio" name="gender" id="male" checked />
-                      <label for="male">
-                        <!-- <i class="fa-solid fa-mars"></i> -->
-                        male
-                      </label>
-                    </div>
-                    <div class="choice">
-                      <input type="radio" name="gender" id="female" />
-                      <label for="female">
-                        <!-- <i class="fa-solid fa-venus"></i> -->
-                        female
-                      </label>
+                <section class="gender">
+                  <label for="gender">gender:</label>
+                  <div class="sec-flex" id="gender">
+                    <p>please choose your gender:</p>
+                    <p>your gender:</p>
+                    <div class="choices">
+                      <div class="choice">
+                        <input type="radio" name="gender" id="male" checked />
+                        <label for="male">
+                          <!-- <i class="fa-solid fa-mars"></i> -->
+                          male
+                        </label>
+                      </div>
+                      <div class="choice">
+                        <input type="radio" name="gender" id="female" />
+                        <label for="female">
+                          <!-- <i class="fa-solid fa-venus"></i> -->
+                          female
+                        </label>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </section>
-              <!-- <section class="caner-type"> 
+                </section>
+                <!-- <section class="caner-type"> 
                 <label for="cancer">cancer type:</label>
                 <div class="cancer">
                   <select name="cancer" id="cancer"></select>
                 </div>
               </section>-->
-              <!-- <section class="birth-date">
+                <!-- <section class="birth-date">
                 <div class="sec-flex">
                   <label>date of birth:</label>
                   <input type="date" name="birth date" />
                 </div>
               </section> -->
-              <section class="check-box">
-                <input type="checkbox" name="agree" id="terms" />
-                <label for="terms"
-                  >i agree with all
-                  <a href="#">terms of use</a>
-                  and
-                  <a href="#">our privacy policy</a>
-                </label>
-                <span class="error">error message here</span>
-              </section>
-              <div class="buttons">
-                <input type="submit" value="Confirm" />
-                <input type="reset" value="clear form" />
-              </div>
-            </form>
+                <section class="check-box">
+                  <input type="checkbox" name="agree" id="terms" />
+                  <label for="terms"
+                    >i agree with all
+                    <a href="#">terms of use</a>
+                    and
+                    <a href="#">our privacy policy</a>
+                  </label>
+                  <span class="error">error message here</span>
+                </section>
+                <div class="buttons">
+                  <input type="submit" value="Confirm" />
+                  <input type="reset" value="clear form" />
+                </div>
+              </form>
+              <form class="pharmacyReg" action="">
+                <section class="name">
+                  <label for="field">pharmacy name:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="name"
+                      name="pharmacyName"
+                    />
+                    <span></span>
+                    <span class="error">error message here</span>
+                    <i class="f-icon fa-solid fa-user"></i>
+                  </div>
+                </section>
+                <section class="e-mail">
+                  <label for="field">e-mail:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="mail-field"
+                      name="email"
+                    />
+                    <span></span>
+                    <span class="error">error message here</span>
+                    <i class="f-icon fa-regular fa-envelope"></i>
+                  </div>
+                </section>
+                <section class="password">
+                  <label for="field">password:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="password"
+                      id="pass-field"
+                      name="password"
+                    />
+                    <span></span>
+                    <span class="error">error message here</span>
+                    <i class="f-icon fa-solid fa-lock"></i>
+                  </div>
+                </section>
+                <section class="password">
+                  <label for="field">confirm password:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="Password"
+                      id="confirm-pass-field"
+                      name="confirmPassword"
+                    />
+                    <span></span>
+                    <span class="error">error message here</span>
+                    <i class="f-icon fa-solid fa-lock"></i>
+                  </div>
+                </section>
+                <section class="check-box">
+                  <input type="checkbox" name="agree" id="pharmacyTerms" />
+                  <label for="pharmacyTerms"
+                    >i agree with all
+                    <a href="#">terms of use</a>
+                    and
+                    <a href="#">our privacy policy</a>
+                  </label>
+                  <span class="error">error message here</span>
+                </section>
+                <div class="buttons">
+                  <input type="submit" value="Confirm" />
+                  <input type="reset" value="clear form" />
+                </div>
+              </form>
+            </div>
             <div class="log-link">
               <span>already have account?</span>
               <a href="./log_in.html" id="logIn"> log in </a>
@@ -331,7 +418,7 @@
       </div>
     </main>
     <!-- bootstrap js file -->
-    <script src="./JS Files/bootstrap.bundle.js"></script>
+    <script src="../JS Files/bootstrap.bundle.js"></script>
     <!-- ion-icons js files -->
     <script
       type="module"

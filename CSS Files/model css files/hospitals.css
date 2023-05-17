@@ -78,6 +78,11 @@ main .content .container .sec-body .box {
   position: relative;
   background-color: #fff;
   padding: 20px 20px 30px;
+  display: none;
+}
+
+main .content .container .sec-body .box.active {
+  display: block !important;
 }
 
 main .content .container .sec-body .box .avatar {
@@ -108,9 +113,14 @@ main .content .container .sec-body .box .data .head span {
   width: calc(100% - 130px);
 }
 
-main .content .container .sec-body .box .data .head h3 {
+main .content .container .sec-body .box .data .head h3,
+main .content .container .sec-body .box .data .head a {
   font-size: 1.3rem;
   margin: 0;
+}
+
+main .content .container .sec-body .box .data .head a:hover {
+  color: #059cb1;
 }
 
 main .content .container .sec-body .box .data .head span {
@@ -169,7 +179,7 @@ main .content .container .sec-body .box .data .info>div:last-of-type {
 main .content .container .sec-body .box .data .info>div>div>.f-icon {
   width: 45px;
   height: 45px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   color: #fff;
   font-size: 1.5rem;
 }
@@ -194,7 +204,7 @@ main .content .container .sec-body .box .data .contact {
 main .content .container .sec-body .box .data .contact>div a {
   width: 40px;
   height: 40px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
 }
 
 main .content .container .sec-body .box .data .contact>div a i {
@@ -237,7 +247,12 @@ body.dark main .content .container .sec-body .box {
   position: relative;
   background-color: #fff;
   padding: 20px 20px 30px;
+  display: none;
   background-color: #1d1d1d;
+}
+
+body.dark main .content .container .sec-body .box.active {
+  display: block !important;
 }
 
 body.dark main .content .container .sec-body .box .avatar {
@@ -268,9 +283,14 @@ body.dark main .content .container .sec-body .box .data .head span {
   width: calc(100% - 130px);
 }
 
-body.dark main .content .container .sec-body .box .data .head h3 {
+body.dark main .content .container .sec-body .box .data .head h3,
+body.dark main .content .container .sec-body .box .data .head a {
   font-size: 1.3rem;
   margin: 0;
+}
+
+body.dark main .content .container .sec-body .box .data .head a:hover {
+  color: #059cb1;
 }
 
 body.dark main .content .container .sec-body .box .data .head span {
@@ -329,7 +349,7 @@ body.dark main .content .container .sec-body .box .data .info>div:last-of-type {
 body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon {
   width: 45px;
   height: 45px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   color: #fff;
   font-size: 1.5rem;
 }
@@ -354,7 +374,7 @@ body.dark main .content .container .sec-body .box .data .contact {
 body.dark main .content .container .sec-body .box .data .contact>div a {
   width: 40px;
   height: 40px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
 }
 
 body.dark main .content .container .sec-body .box .data .contact>div a i {
@@ -378,8 +398,13 @@ body.dark main .content .container .sec-body .box .avatar {
   background-color: #222;
 }
 
-body.dark main .content .container .sec-body .box .data .head h3 {
+body.dark main .content .container .sec-body .box .data .head h3,
+body.dark main .content .container .sec-body .box .data .head a {
   color: #efefef;
+}
+
+body.dark main .content .container .sec-body .box .data .head a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
 }
 
 body.dark main .content .container .sec-body .box .data .head span {
@@ -418,7 +443,7 @@ body.dark main .content .container .sec-body .box .data .info>div:last-of-type {
 body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon {
   width: 45px;
   height: 45px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   color: #fff;
   font-size: 1.5rem;
 }
@@ -428,7 +453,7 @@ body.dark main .content .container .sec-body .box .data .info>div>span {
 }
 
 body.dark main .content .container .sec-body .box .data .info>div>div>.f-icon {
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
   color: #efefef;
 }
 
@@ -445,7 +470,7 @@ body.dark main .content .container .sec-body .box .data .contact {
 body.dark main .content .container .sec-body .box .data .contact>div a {
   width: 40px;
   height: 40px;
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
 }
 
 body.dark main .content .container .sec-body .box .data .contact>div a i {

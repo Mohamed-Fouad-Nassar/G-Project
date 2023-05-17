@@ -1,12 +1,26 @@
-main .container .content .upper-sec,
 main .container .content .upper-sec .data .contact-info>div>div>.f-icon,
-body.dark main .container .content .upper-sec .data .contact-info>div>div>.f-icon {
+main .container .content .medicines form .order-data section .felid,
+main .container .content .medicines form .btn input,
+body.dark main .container .content .upper-sec .data .contact-info>div>div>.f-icon,
+body.dark main .container .content .medicines form .btn input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+main .container .content .upper-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -38,15 +52,33 @@ body.dark main .container .content .upper-sec .data .social-icon>div>div a {
   justify-content: center;
 }
 
-main .container .content .events .body {
+main .container .content .medicines form .order-data {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+main .container .content .medicines form .cards {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+main .container .content .medicines form .cards .box,
+main .container .content .medicines form .cards .box .card {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
+
 main .container .content .upper-sec .data .social-icon>div>div a,
-body.dark main .container .content .upper-sec .data .social-icon>div>div a {
+main .container .content .medicines form .btn input,
+body.dark main .container .content .upper-sec .data .social-icon>div>div a,
+body.dark main .container .content .medicines form .btn input {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -63,7 +95,6 @@ body.dark main .container .content .other .swiper .slider-container .slides .sli
   -o-border-radius: 10px !important;
 }
 
-main .container .content .upper-sec .data .image,
 main .container .content .upper-sec .data .contact-info>div>div>.f-icon,
 main .container .content .other .swiper .swiper-navBtn,
 body.dark main .container .content .upper-sec .data .contact-info>div>div>.f-icon,
@@ -87,6 +118,7 @@ main {
   min-height: calc(100vh - 544px);
   padding: 0;
   padding-top: 100px;
+  padding-bottom: 40px;
 }
 
 main .container {
@@ -114,8 +146,9 @@ main .container .back-btn .f-icon {
 }
 
 main .container>h1 {
-  display: none;
+  display: block;
   padding: 15px;
+  padding-bottom: 0;
   width: 90%;
   margin: 0 30px 0;
   text-align: center;
@@ -123,99 +156,48 @@ main .container>h1 {
   color: #059cb1;
 }
 
-@media (max-width: 991px) {
-  main .container>h1 {
-    display: block;
-  }
-}
-
 main .container .content {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
+  padding: 20px 10px;
 }
 
 main .container .content .upper-sec {
   gap: 20px;
+  background-color: #fff;
+  padding: 20px;
 }
 
 @media (max-width: 991px) {
   main .container .content .upper-sec {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
-  main .container .content .upper-sec>article {
+  main .container .content .upper-sec>section {
     width: 100% !important;
   }
 }
 
-main .container .content .upper-sec .description {
-  width: calc(60% - 10px);
-}
-
-main .container .content .upper-sec .description .article-body {
-  white-space: break-spaces;
-  font: inherit;
-  margin: 0;
-}
-
-main .container .content .upper-sec .description h1 {
-  padding: 20px 5px;
+main .container .content .upper-sec .image img {
   width: 100%;
-  margin: 35px 0 0 0;
-  font-size: 1.5rem;
-  color: #059cb1;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
-@media (max-width: 991px) {
-  main .container .content .upper-sec .description h1 {
-    display: none;
-  }
+main .container .content .upper-sec section {
+  width: 50%;
 }
 
-main .container .content .upper-sec .data {
-  background-color: #fff;
-  padding: 20px;
-  padding-top: 0;
-  margin-top: 110px;
-  position: relative;
-  width: calc(40% - 10px);
-}
-
-main .container .content .upper-sec .data>div h2 {
+main .container .content .upper-sec section>div h2 {
   text-align: center;
   font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
-main .container .content .upper-sec .data .image {
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-  position: absolute;
-  top: -100px;
-  left: 50%;
-}
-
-main .container .content .upper-sec .data .image img {
-  width: 200px;
-  height: 200px;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
 main .container .content .upper-sec .data .social-icon {
-  margin-top: 30px;
   display: block !important;
-  padding-top: 100px;
 }
 
 main .container .content .upper-sec .data .social-icon>div {
@@ -256,7 +238,7 @@ main .container .content .upper-sec .data .social-icon>div>div a {
 
 main .container .content .upper-sec .data .contact-info {
   position: relative;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 main .container .content .upper-sec .data .contact-info::before {
@@ -265,7 +247,7 @@ main .container .content .upper-sec .data .contact-info::before {
   width: 100%;
   height: 1px;
   left: 0;
-  top: 30px;
+  top: 20px;
   background-color: #eee;
 }
 
@@ -300,36 +282,201 @@ main .container .content .upper-sec .data .contact-info .box span {
   color: initial;
 }
 
-main .container .content .events,
-main .container .content .other {
-  padding-top: 30px;
-}
-
-@media (max-width: 991px) {
-
-  main .container .content .events,
-  main .container .content .other {
-    padding-top: 0;
-  }
-}
-
-main .container .content .events .head h2,
-main .container .content .other .head h2 {
-  padding: 20px 10px;
+main .container .content .head h2 {
+  padding: 20px 0;
   margin: 0 auto;
   font-size: 1.5rem;
   color: #059cb1;
 }
 
-main .container .content .events .body .image {
-  border: 5px solid #fff;
+main .container .content .medicines form div {
+  overflow-x: auto;
 }
 
-main .container .content .events .body .image img {
+main .container .content .medicines form .cards .box .card {
+  border: 1px solid #eee;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+main .container .content .medicines form .cards .box .card:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #eee;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+}
+
+main .container .content .medicines form .cards .box .card:after {
+  content: "";
+  position: absolute;
+  top: 19.5px;
+  right: 19.5px;
+  border: 1px solid transparent;
+  opacity: 0;
+  background-color: #059cb1;
+  width: 0;
+  height: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+main .container .content .medicines form .cards .box .card .image {
   width: 100%;
-  height: 250px;
+  height: 200px;
+}
+
+main .container .content .medicines form .cards .box .card .image img {
+  width: 100%;
+  height: 200px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+main .container .content .medicines form .cards .box .card .description {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+main .container .content .medicines form .cards .box .card .description h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+main .container .content .medicines form .cards .box .card .description p {
+  font-size: 0.9rem;
+}
+
+main .container .content .medicines form .cards .box input {
+  cursor: pointer;
+  display: none;
+}
+
+main .container .content .medicines form .cards .box input:checked+.card {
+  border-color: #059cb1;
+}
+
+main .container .content .medicines form .cards .box input:checked+.card::before {
+  border-color: #059cb1;
+}
+
+main .container .content .medicines form .cards .box input:checked+.card::after {
+  opacity: 1;
+  border-color: #059cb1;
+  transform: scale(7);
+  -webkit-transform: scale(7);
+  -moz-transform: scale(7);
+  -ms-transform: scale(7);
+  -o-transform: scale(7);
+}
+
+main .container .content .medicines form .cards .box input:checked+.card .description {
+  background-color: #059cb1;
+}
+
+main .container .content .medicines form .cards .box input:checked+.card .description h2,
+main .container .content .medicines form .cards .box input:checked+.card .description p {
+  color: #fff;
+}
+
+main .container .content .medicines form .order-data {
+  padding-top: 20px;
+}
+
+main .container .content .medicines form .order-data section label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+main .container .content .medicines form .order-data section .felid {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  position: relative;
+  gap: 5px;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f9f9f9;
+}
+
+main .container .content .medicines form .order-data section .felid input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+main .container .content .medicines form .order-data section .felid input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+main .container .content .medicines form .order-data section .felid input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+main .container .content .medicines form .order-data section .felid input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+main .container .content .medicines form .order-data section .felid input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+main .container .content .medicines form .order-data section .felid input:focus::placeholder {
+  color: transparent;
+}
+
+main .container .content .medicines form .order-data section .felid input:focus~span {
+  background-color: #059cb1;
+}
+
+main .container .content .medicines form .order-data section .felid span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #3ab6b6;
+  height: 2px;
+  width: 100%;
+}
+
+main .container .content .medicines form .btn {
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+}
+
+main .container .content .medicines form .btn input {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+  margin-right: 0 !important;
+}
+
+main .container .content .medicines form .btn input:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
 }
 
 main .container .content .other .swiper {
@@ -483,25 +630,17 @@ body.dark main .container>h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .container .content .upper-sec .description .article-body {
-  color: #a5a5a5;
-}
-
-body.dark main .container .content .upper-sec .description h1 {
-  color: rgba(5, 156, 177, 0.8705882353);
-}
-
-body.dark main .container .content .upper-sec .data {
+body.dark main .container .content .upper-sec {
   background-color: #222;
+}
+
+body.dark main .container .content .upper-sec .image img {
+  filter: brightness(0.9);
+  -webkit-filter: brightness(0.9);
 }
 
 body.dark main .container .content .upper-sec .data>div h2 {
   color: #efefef;
-}
-
-body.dark main .container .content .upper-sec .data .image img {
-  filter: brightness(0.9);
-  -webkit-filter: brightness(0.9);
 }
 
 body.dark main .container .content .upper-sec .data .social-icon>div {
@@ -579,13 +718,113 @@ body.dark main .container .content .upper-sec .data .contact-info .box span {
   color: #a5a5a5 !important;
 }
 
-body.dark main .container .content .events .head h2,
-body.dark main .container .content .other .head h2 {
+body.dark main .container .content .head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .container .content .events .body .image {
+body.dark main .container .content .medicines form .cards .box .card {
   border-color: #222;
+}
+
+body.dark main .container .content .medicines form .cards .box .card:before {
+  border-color: #222;
+}
+
+body.dark main .container .content .medicines form .cards .box .card:after {
+  border-color: transparent;
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container .content .medicines form .cards .box .card .description {
+  background-color: #222;
+}
+
+body.dark main .container .content .medicines form .cards .box .card .description h2,
+body.dark main .container .content .medicines form .cards .box .card .description p {
+  color: #a5a5a5;
+}
+
+body.dark main .container .content .medicines form .cards .box .image img {
+  filter: brightness(0.9);
+  -webkit-filter: brightness(0.9);
+}
+
+body.dark main .container .content .medicines form .cards .box input:checked+.card {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container .content .medicines form .cards .box input:checked+.card::before {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container .content .medicines form .cards .box input:checked+.card::after {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container .content .medicines form .cards .box input:checked+.card .description {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container .content .medicines form .cards .box input:checked+.card .description h2,
+body.dark main .container .content .medicines form .cards .box input:checked+.card .description p {
+  color: #212529;
+}
+
+body.dark main .container .content .medicines form .order-data section label {
+  color: #a5a5a5;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid {
+  background-color: #222;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid input {
+  background-color: transparent;
+  color: #efefef;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid input:focus::placeholder {
+  color: transparent;
+}
+
+body.dark main .container .content .medicines form .order-data section .felid input:focus~span {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container .content .medicines form .order-data section .felid span {
+  background-color: rgba(58, 182, 182, 0.8705882353);
+}
+
+body.dark main .container .content .medicines form .btn input {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #efefef;
+  border: 1px solid rgba(5, 156, 177, 0.8705882353);
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  padding: 10px 20px;
+}
+
+body.dark main .container .content .medicines form .btn input:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: transparent;
+  border-color: rgba(5, 156, 177, 0.8705882353);
 }
 
 body.dark main .container .content .other .swiper {

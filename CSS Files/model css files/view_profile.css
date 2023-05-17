@@ -1,13 +1,15 @@
-main .content .container .left .edit-btn a, main .content .container .right .box .field, body.dark main .content .container .left .edit-btn a {
+main .content .container .left .edit-btn a,
+main .content .container .right .box .field,
+body.dark main .content .container .left .edit-btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 main .content .container {
@@ -15,11 +17,11 @@ main .content .container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 main .content .container .left .edit-btn {
@@ -27,11 +29,12 @@ main .content .container .left .edit-btn {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-main .content .container .left .edit-btn a, body.dark main .content .container .left .edit-btn a {
+main .content .container .left .edit-btn a,
+body.dark main .content .container .left .edit-btn a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -53,61 +56,73 @@ main {
   padding: 100px 0;
   padding-bottom: 50px;
 }
+
 main .content .container {
   gap: 20px;
 }
+
 @media (max-width: 767px) {
   main .content .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
+
 main .content .container .left {
   padding: 20px;
   background-color: #fff;
   min-width: 300px;
 }
+
 @media (max-width: 991px) {
   main .content .container .left {
     min-width: initial;
   }
 }
+
 main .content .container .left .image {
   width: 200px;
   height: 200px;
   overflow: hidden;
   margin: 0 auto;
 }
+
 @media (max-width: 767px) {
   main .content .container .left .image {
     width: 170px;
     height: 170px;
   }
 }
+
 main .content .container .left .image img {
   width: 100%;
 }
+
 main .content .container .left .text {
   text-align: center;
 }
+
 main .content .container .left .text h2 {
   padding-top: 20px;
   font-size: 1.5em;
 }
+
 main .content .container .left .text span {
   font-size: 1.2rem;
   color: #555;
 }
+
 main .content .container .left .edit-btn {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   padding-top: 30px;
 }
+
 main .content .container .left .edit-btn a {
   width: 160px;
   margin: 0 auto;
@@ -118,47 +133,58 @@ main .content .container .left .edit-btn a {
   padding: 10px 20px;
   gap: 10px;
 }
+
 main .content .container .left .edit-btn a:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
+
 main .content .container .left .edit-btn a:hover .f-icon,
 main .content .container .left .edit-btn a:hover span {
   color: #059cb1;
 }
+
 main .content .container .left .edit-btn a .f-icon,
 main .content .container .left .edit-btn a span {
   color: #fff;
 }
+
 main .content .container .right {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 20px;
   background-color: #fff;
 }
+
 main .content .container .right .box {
   padding-bottom: 20px;
 }
+
 main .content .container .right .box:last-of-type {
   padding: 0;
 }
+
 main .content .container .right .box label {
   font-size: 1.05rem;
   padding-bottom: 10px;
   color: #212529;
   font-weight: 500;
 }
+
 main .content .container .right .box .field {
-  gap: 20px;
+  gap: 10px;
   color: #059cb1;
   font-size: 1.5rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
+
 main .content .container .right .box .field span {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   font-size: 1rem;
   padding: 10px 20px;
   background-color: #eee;
@@ -166,24 +192,46 @@ main .content .container .right .box .field span {
   display: block;
   text-align: center;
 }
-main .content .container .right .box .field > div {
+
+main .content .container .right .box .field .left-sec,
+main .content .container .right .box .field .right-sec {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+main .content .container .right .box .field .flex-sec {
+  width: calc((100% - 20px) / 3);
+}
+
+@media (max-width: 1199px) {
+  main .content .container .right .box .field .flex-sec {
+    width: calc((100% - 10px) / 2);
+  }
+}
+
+@media (max-width: 991px) {
+  main .content .container .right .box .field .flex-sec {
+    width: 100%;
+  }
 }
 
 body.dark main {
   background-color: #222;
 }
+
 body.dark main .content .container .left {
   background-color: #1d1d1d;
 }
+
 body.dark main .content .container .left .text h2 {
   color: #efefef;
 }
+
 body.dark main .content .container .left .text span {
   color: #a5a5a5;
 }
+
 body.dark main .content .container .left .edit-btn a {
   width: 160px;
   margin: 0 auto;
@@ -193,28 +241,35 @@ body.dark main .content .container .left .edit-btn a {
   background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
+
 body.dark main .content .container .left .edit-btn a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .content .container .left .edit-btn a:hover .f-icon,
 body.dark main .content .container .left .edit-btn a:hover span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .content .container .left .edit-btn a .f-icon,
 body.dark main .content .container .left .edit-btn a span {
   color: #efefef;
 }
+
 body.dark main .content .container .right {
   background-color: #1d1d1d;
 }
+
 body.dark main .content .container .right .box label {
   color: #efefef;
 }
+
 body.dark main .content .container .right .box .field {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .content .container .right .box .field span {
   color: #a5a5a5;
   background-color: #222;

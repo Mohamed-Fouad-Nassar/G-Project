@@ -1,25 +1,29 @@
-main .content .container .sec-body .box .data .contact-info > div > div > .f-icon, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-body .box .data .contact-info > div > div > .f-icon, body.dark main .content .sec-foot input[type=button] {
+main .content .container .sec-body .box .data .contact-info>div>div>.f-icon,
+main .content .container .sec-foot input[type=button],
+body.dark main .content .container .sec-body .box .data .contact-info>div>div>.f-icon,
+body.dark main .content .sec-foot input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-main .content .container .sec-body .box .data .social-icon > div, body.dark main .content .container .sec-body .box .data .social-icon > div {
+main .content .container .sec-body .box .data .social-icon>div,
+body.dark main .content .container .sec-body .box .data .social-icon>div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
 }
 
 main .content .container .sec-body .box .card-top {
@@ -27,8 +31,8 @@ main .content .container .sec-body .box .card-top {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 main .content .container .sec-body {
@@ -36,26 +40,30 @@ main .content .container .sec-body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
-main .content .container .sec-body .box .data .social-icon > div > div a, body.dark main .content .container .sec-body .box .data .social-icon > div > div a {
+main .content .container .sec-body .box .data .social-icon>div>div a,
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-main .content .container .sec-body .box .data .social-icon > div > div a, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-body .box .data .social-icon > div > div a, body.dark main .content .sec-foot input[type=button] {
+main .content .container .sec-body .box .data .social-icon>div>div a,
+main .content .container .sec-foot input[type=button],
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a,
+body.dark main .content .sec-foot input[type=button] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -71,7 +79,9 @@ main .content .container .sec-body .box {
   -o-border-radius: 10px !important;
 }
 
-main .content .container .sec-body .box .card-top .images, main .content .container .sec-body .box .data .contact-info > div > div > .f-icon, body.dark main .content .container .sec-body .box .data .contact-info > div > div > .f-icon {
+main .content .container .sec-body .box .card-top .images,
+main .content .container .sec-body .box .data .contact-info>div>div>.f-icon,
+body.dark main .content .container .sec-body .box .data .contact-info>div>div>.f-icon {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -84,21 +94,25 @@ main {
   padding: 100px 0;
   position: relative;
 }
+
 main .content .container .sec-body {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
 }
+
 main .content .container .sec-body .box {
   background-color: #fff;
   overflow: hidden;
 }
+
 main .content .container .sec-body .box .card-top {
   background-color: #059cb1;
   position: relative;
   height: 170px;
 }
+
 main .content .container .sec-body .box .card-top .images {
   margin: 0 auto;
   width: 150px;
@@ -108,63 +122,77 @@ main .content .container .sec-body .box .card-top .images {
   top: 10px;
   right: 10px;
 }
+
 main .content .container .sec-body .box .card-top .images img {
   width: 100%;
   width: 150px;
   height: 150px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
+
 main .content .container .sec-body .box .card-top .text {
   width: calc(100% - 170px);
   padding-left: 10px;
 }
+
 main .content .container .sec-body .box .card-top .text h2 {
   font-size: 1.7rem;
   color: #fff;
   margin: 0;
 }
+
 main .content .container .sec-body .box .card-top .text span {
   color: #eee;
   font-size: 0.95rem;
 }
+
 main .content .container .sec-body .box .card-body {
   padding: 20px;
   padding-bottom: 0;
 }
+
 main .content .container .sec-body .box .card-body p {
   color: #555 !important;
 }
+
 main .content .container .sec-body .box .data {
   padding: 20px;
 }
+
 main .content .container .sec-body .box .data .contact-info {
   position: relative;
 }
-main .content .container .sec-body .box .data .contact-info > div {
+
+main .content .container .sec-body .box .data .contact-info>div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-main .content .container .sec-body .box .data .contact-info > div:last-of-type {
+
+main .content .container .sec-body .box .data .contact-info>div:last-of-type {
   margin: 0;
 }
-main .content .container .sec-body .box .data .contact-info > div > div > .f-icon {
+
+main .content .container .sec-body .box .data .contact-info>div>div>.f-icon {
   width: 45px;
   height: 45px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   color: #fff;
   font-size: 1.5rem;
 }
-main .content .container .sec-body .box .data .contact-info > div > span {
+
+main .content .container .sec-body .box .data .contact-info>div>span {
   color: #fff;
 }
-main .content .container .sec-body .box .data .contact-info::before, main .content .container .sec-body .box .data .contact-info::after {
+
+main .content .container .sec-body .box .data .contact-info::before,
+main .content .container .sec-body .box .data .contact-info::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -172,53 +200,67 @@ main .content .container .sec-body .box .data .contact-info::before, main .conte
   left: 0;
   background-color: #eee;
 }
+
 main .content .container .sec-body .box .data .contact-info::before {
   top: -10px;
 }
+
 main .content .container .sec-body .box .data .contact-info::after {
   bottom: -20px;
 }
+
 main .content .container .sec-body .box .data .contact-info h2 {
   font-size: 1.4rem !important;
   margin-bottom: 20px !important;
 }
+
 main .content .container .sec-body .box .data .contact-info div span {
   color: #555 !important;
 }
+
 main .content .container .sec-body .box .data .social-icon {
   display: block !important;
   padding-top: 30px;
 }
+
 main .content .container .sec-body .box .data .social-icon h2 {
   font-size: 1.6rem;
   margin-bottom: 20px;
 }
-main .content .container .sec-body .box .data .social-icon > div {
+
+main .content .container .sec-body .box .data .social-icon>div {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 10px;
 }
-main .content .container .sec-body .box .data .social-icon > div > div a {
+
+main .content .container .sec-body .box .data .social-icon>div>div a {
   width: 40px;
   height: 40px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
 }
-main .content .container .sec-body .box .data .social-icon > div > div a i {
+
+main .content .container .sec-body .box .data .social-icon>div>div a i {
   font-size: 1.5rem;
 }
-main .content .container .sec-body .box .data .social-icon > div > div a:hover {
+
+main .content .container .sec-body .box .data .social-icon>div>div a:hover {
   background-color: #eee;
 }
-main .content .container .sec-body .box .data .social-icon > div > div a:hover i {
+
+main .content .container .sec-body .box .data .social-icon>div>div a:hover i {
   color: #059cb1;
 }
-main .content .container .sec-body .box .data .social-icon > div > div a i {
+
+main .content .container .sec-body .box .data .social-icon>div>div a i {
   color: #fff;
 }
-main .content .container .sec-body .box .data .social-icon > div > div a {
+
+main .content .container .sec-body .box .data .social-icon>div>div a {
   width: 40px !important;
   height: 40px !important;
 }
+
 main .content .container .sec-foot input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -228,6 +270,7 @@ main .content .container .sec-foot input[type=button] {
   background-color: #059cb1;
   padding: 10px 20px;
 }
+
 main .content .container .sec-foot input[type=button]:hover {
   color: #059cb1;
   background-color: transparent;
@@ -237,89 +280,113 @@ main .content .container .sec-foot input[type=button]:hover {
 body.dark main {
   background-color: #222;
 }
+
 body.dark main .content .container .sec-body .box {
   background-color: #1d1d1d;
 }
+
 body.dark main .content .container .sec-body .box .card-top {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .content .container .sec-body .box .card-top .text h2,
 body.dark main .content .container .sec-body .box .card-top .text span {
   color: #efefef;
 }
+
 body.dark main .content .container .sec-body .box .card-body h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .content .container .sec-body .box .card-body span {
   color: #efefef;
 }
+
 body.dark main .content .container .sec-body .box .card-body p {
   color: #a5a5a5 !important;
 }
-body.dark main .content .container .sec-body .box .data .contact-info > div {
+
+body.dark main .content .container .sec-body .box .data .contact-info>div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 10px;
   margin-bottom: 10px;
 }
-body.dark main .content .container .sec-body .box .data .contact-info > div:last-of-type {
+
+body.dark main .content .container .sec-body .box .data .contact-info>div:last-of-type {
   margin: 0;
 }
-body.dark main .content .container .sec-body .box .data .contact-info > div > div > .f-icon {
+
+body.dark main .content .container .sec-body .box .data .contact-info>div>div>.f-icon {
   width: 45px;
   height: 45px;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   color: #fff;
   font-size: 1.5rem;
 }
-body.dark main .content .container .sec-body .box .data .contact-info > div > span {
+
+body.dark main .content .container .sec-body .box .data .contact-info>div>span {
   color: #fff;
 }
-body.dark main .content .container .sec-body .box .data .contact-info > div > div > .f-icon {
-  background-color: rgba(89, 193, 189, 0.8705882353);
+
+body.dark main .content .container .sec-body .box .data .contact-info>div>div>.f-icon {
+  background-color: rgba(58, 182, 182, 0.8705882353);
   color: #efefef;
 }
-body.dark main .content .container .sec-body .box .data .contact-info > div > span {
+
+body.dark main .content .container .sec-body .box .data .contact-info>div>span {
   color: #efefef !important;
 }
-body.dark main .content .container .sec-body .box .data .contact-info::before, body.dark main .content .container .sec-body .box .data .contact-info::after {
+
+body.dark main .content .container .sec-body .box .data .contact-info::before,
+body.dark main .content .container .sec-body .box .data .contact-info::after {
   background-color: #555;
 }
+
 body.dark main .content .container .sec-body .box .data .contact-info h2 {
   color: #efefef;
 }
+
 body.dark main .content .container .sec-body .box .data .contact-info div span {
   color: #a5a5a5 !important;
 }
+
 body.dark main .content .container .sec-body .box .data .social-icon h2 {
   color: #efefef;
 }
-body.dark main .content .container .sec-body .box .data .social-icon > div {
+
+body.dark main .content .container .sec-body .box .data .social-icon>div {
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 10px;
 }
-body.dark main .content .container .sec-body .box .data .social-icon > div > div a {
+
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a {
   width: 40px;
   height: 40px;
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
 }
-body.dark main .content .container .sec-body .box .data .social-icon > div > div a i {
+
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a i {
   font-size: 1.5rem;
 }
-body.dark main .content .container .sec-body .box .data .social-icon > div > div a:hover {
+
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a:hover {
   background-color: #222;
 }
-body.dark main .content .container .sec-body .box .data .social-icon > div > div a:hover i {
+
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-body.dark main .content .container .sec-body .box .data .social-icon > div > div a i {
+
+body.dark main .content .container .sec-body .box .data .social-icon>div>div a i {
   color: #efefef;
 }
+
 body.dark main .content .sec-foot input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -329,6 +396,7 @@ body.dark main .content .sec-foot input[type=button] {
   background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
+
 body.dark main .content .sec-foot input[type=button]:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;

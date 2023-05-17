@@ -4,7 +4,6 @@
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
-
 // additional page styling
 
 body {
@@ -58,6 +57,24 @@ body {
           }
           p {
             color: $sec-text-dark-color;
+          }
+        }
+        .select-btns {
+          background-color: $sec-dark-bg;
+          button {
+            .f-icon,
+            span {
+              color: $white-dark-color;
+            }
+            &:hover,
+            &.active {
+              background-color: $sec-dark-color;
+              border-color: $sec-dark-color;
+              .f-icon,
+              span {
+                color: $white-dark-color;
+              }
+            }
           }
         }
         form {
@@ -140,7 +157,6 @@ body {
               @include check-box-shape($main-dark-color, dark);
             }
             label {
-              margin-bottom: 0;
               a {
                 color: $sec-dark-color;
                 &:hover {
@@ -241,7 +257,40 @@ main {
         display: none;
       }
     }
+    .select-btns {
+      margin-bottom: $main-element-padding;
+      background-color: $white-dark-color;
+      @extend %flex-center-start;
+      button {
+        @extend %flex-center-center;
+        gap: $sec-element-padding;
+        width: 50%;
+        padding: $sec-element-padding 15px;
+        border: 1px solid transparent;
+        font-size: 1rem;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+        .f-icon,
+        span {
+          color: $black-color;
+        }
+        &:hover,
+        &.active {
+          background-color: $sec-color;
+          border-color: $sec-color;
+          .f-icon,
+          span {
+            color: $white-color;
+          }
+        }
+      }
+    }
     form {
+      display: none;
+      &.active {
+        display: block;
+      }
       section {
         margin-bottom: 27px;
         label {
@@ -430,7 +479,10 @@ main {
         }
         label {
           font-size: 0.9rem;
-          margin-top: 2px;
+          margin: {
+            top: 2px;
+            bottom: 0 !important;
+          }
           cursor: pointer;
           a {
             color: $sec-color;
@@ -463,9 +515,11 @@ main {
           flex-direction: column;
         }
         input[type="submit"] {
+          font-size: 1rem !important;
           @include button-shape($main-color, "light");
         }
         input[type="reset"] {
+          font-size: 1rem !important;
           @include button-shape($sec-color, "light");
         }
       }

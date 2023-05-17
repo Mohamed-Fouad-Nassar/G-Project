@@ -1,22 +1,42 @@
-body, body.dark .card .left form .check-box input:checked::after, body.dark .card .left form .buttons input[type=submit], body.dark .card .left form .buttons input[type=reset], body.dark .card .right .text a, .card .left form .field, .card .left form .gender .choices, .card .left form .check-box input:checked::after, .card .left form .buttons input[type=submit], .card .left form .buttons input[type=reset], .card .left .log-link, .card .right, .card .right .text a {
+body,
+body.dark .card .left form .check-box input:checked::after,
+body.dark .card .left form .buttons input[type=submit],
+body.dark .card .left form .buttons input[type=reset],
+body.dark .card .right .text a,
+.card .left .select-btns button,
+.card .left form .field,
+.card .left form .gender .choices,
+.card .left form .check-box input:checked::after,
+.card .left form .buttons input[type=submit],
+.card .left form .buttons input[type=reset],
+.card .left .log-link,
+.card .right,
+.card .right .text a {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.card .left .select-btns,
 .card .left form .check-box {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.card .left form section .sec-flex, .card .left form .name .data, .card .left form .caner-type, .card .left form .buttons {
+.card .left form section .sec-flex,
+.card .left form .name .data,
+.card .left form .caner-type,
+.card .left form .buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-body.dark .card .left form .gender .choices .choice input::before, body.dark .card .left form .gender .choices .choice input::after, .card .left form .gender .choices .choice input::before, .card .left form .gender .choices .choice input::after {
+body.dark .card .left form .gender .choices .choice input::before,
+body.dark .card .left form .gender .choices .choice input::after,
+.card .left form .gender .choices .choice input::before,
+.card .left form .gender .choices .choice input::after {
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
@@ -24,7 +44,12 @@ body.dark .card .left form .gender .choices .choice input::before, body.dark .ca
   -o-transform: translate(-50%, -50%);
 }
 
-body.dark .card .left form .buttons input[type=submit], body.dark .card .left form .buttons input[type=reset], body.dark .card .right .text a, .card .left form .buttons input[type=submit], .card .left form .buttons input[type=reset], .card .right .text a {
+body.dark .card .left form .buttons input[type=submit],
+body.dark .card .left form .buttons input[type=reset],
+body.dark .card .right .text a,
+.card .left form .buttons input[type=submit],
+.card .left form .buttons input[type=reset],
+.card .right .text a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -40,7 +65,10 @@ body.dark .card .left form .buttons input[type=submit], body.dark .card .left fo
   -o-border-radius: 10px !important;
 }
 
-body.dark .card .left form .gender .choices .choice input::before, body.dark .card .left form .gender .choices .choice input::after, .card .left form .gender .choices .choice input::before, .card .left form .gender .choices .choice input::after {
+body.dark .card .left form .gender .choices .choice input::before,
+body.dark .card .left form .gender .choices .choice input::after,
+.card .left form .gender .choices .choice input::before,
+.card .left form .gender .choices .choice input::after {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -48,7 +76,8 @@ body.dark .card .left form .gender .choices .choice input::before, body.dark .ca
   -o-border-radius: 50% !important;
 }
 
-.card .left form .name .data div label, .card .left form .gender .choices .choice label {
+.card .left form .name .data div label,
+.card .left form .gender .choices .choice label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -63,6 +92,7 @@ body {
   min-height: 100vh;
   padding: 20px 0;
 }
+
 body::before {
   content: "";
   position: absolute;
@@ -73,6 +103,7 @@ body::before {
   background-color: rgba(5, 156, 177, 0.37);
   z-index: -1;
 }
+
 body::after {
   content: "";
   position: absolute;
@@ -83,19 +114,24 @@ body::after {
   background-color: rgba(255, 255, 255, 0.12);
   z-index: -1;
 }
+
 body header {
   display: none;
 }
+
 body.dark::before {
   background-color: rgba(5, 156, 177, 0.35);
 }
+
 body.dark::after {
   background-color: rgba(0, 0, 0, 0.72);
 }
+
 body.dark .card {
   background-color: #222;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
+
 body.dark .card .left .back-btn {
   position: absolute;
   top: 20px;
@@ -107,55 +143,94 @@ body.dark .card .left .back-btn {
   cursor: pointer;
   color: #efefef;
 }
+
 body.dark .card .left .back-btn:hover .f-icon {
   color: #059cb1;
 }
+
 body.dark .card .left .back-btn .f-icon {
   font-size: 1rem;
 }
+
 body.dark .card .left .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .left .head h2 {
   color: #059cb1;
 }
+
 body.dark .card .left .head p {
   color: #a5a5a5;
 }
+
+body.dark .card .left .select-btns {
+  background-color: #1d1d1d;
+}
+
+body.dark .card .left .select-btns button .f-icon,
+body.dark .card .left .select-btns button span {
+  color: #efefef;
+}
+
+body.dark .card .left .select-btns button:hover,
+body.dark .card .left .select-btns button.active {
+  background-color: rgba(58, 182, 182, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
+}
+
+body.dark .card .left .select-btns button:hover .f-icon,
+body.dark .card .left .select-btns button:hover span,
+body.dark .card .left .select-btns button.active .f-icon,
+body.dark .card .left .select-btns button.active span {
+  color: #efefef;
+}
+
 body.dark .card .left form section label {
   color: #efefef;
 }
-body.dark .card .left form .name > label {
+
+body.dark .card .left form .name>label {
   color: #efefef;
 }
+
 body.dark .card .left form .name .data div label {
   color: #efefef;
 }
+
 body.dark .card .left form .field {
   background-color: #1d1d1d;
 }
+
 body.dark .card .left form .field input {
   background-color: transparent;
   color: #efefef;
 }
-body.dark .card .left form .field input:focus ~ span {
+
+body.dark .card .left form .field input:focus~span {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-body.dark .card .left form .field input:focus ~ .f-icon {
+
+body.dark .card .left form .field input:focus~.f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .left form .field i {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark .card .left form .field span {
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark .card .left form .field span.error {
   color: rgba(255, 60, 60, 0.8705882353);
 }
+
 body.dark .card .left form .gender p {
   color: #a5a5a5;
 }
+
 body.dark .card .left form .gender .choices .choice input {
   position: relative;
   -webkit-appearance: none;
@@ -163,49 +238,62 @@ body.dark .card .left form .gender .choices .choice input {
   appearance: none;
   cursor: pointer;
 }
-body.dark .card .left form .gender .choices .choice input::before, body.dark .card .left form .gender .choices .choice input::after {
+
+body.dark .card .left form .gender .choices .choice input::before,
+body.dark .card .left form .gender .choices .choice input::after {
   content: "";
   position: absolute;
 }
+
 body.dark .card .left form .gender .choices .choice input::before {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
+
 body.dark .card .left form .gender .choices .choice input:hover::before {
   border-color: #059cb1;
 }
+
 body.dark .card .left form .gender .choices .choice input::after {
   width: 0;
   height: 0;
 }
+
 body.dark .card .left form .gender .choices .choice input:checked::before {
   border-color: #059cb1;
 }
+
 body.dark .card .left form .gender .choices .choice input:checked:after {
   width: 12px;
   height: 12px;
   background-color: #059cb1;
 }
+
 body.dark .card .left form .gender .choices .choice input::before {
-  border-color: rgba(89, 193, 189, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark .card .left form .caner-type .cancer select {
   background-color: #1d1d1d;
   color: #efefef;
 }
+
 body.dark .card .left form .caner-type .cancer select:focus {
   border-bottom-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .left form .birth-date input[type=date] {
-  border-bottom-color: rgba(89, 193, 189, 0.8705882353);
+  border-bottom-color: rgba(58, 182, 182, 0.8705882353);
   background-color: #1d1d1d;
   color: #efefef;
 }
+
 body.dark .card .left form .birth-date input[type=date]:focus {
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .left form .check-box input {
   cursor: pointer;
   position: relative;
@@ -216,20 +304,25 @@ body.dark .card .left form .check-box input {
   height: 15px;
   margin: 0px;
 }
-body.dark .card .left form .check-box input::before, body.dark .card .left form .check-box input::after {
+
+body.dark .card .left form .check-box input::before,
+body.dark .card .left form .check-box input::after {
   position: absolute;
 }
+
 body.dark .card .left form .check-box input::before {
   content: "";
   width: 100%;
   height: 100%;
   border-radius: 2px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
+
 body.dark .card .left form .check-box input:hover::before {
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .left form .check-box input::after {
   content: "";
   left: 50%;
@@ -244,6 +337,7 @@ body.dark .card .left form .check-box input::after {
   -ms-transform: translate(-50%, -50%) rotate(3turn);
   -o-transform: translate(-50%, -50%) rotate(3turn);
 }
+
 body.dark .card .left form .check-box input:checked::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
@@ -261,24 +355,27 @@ body.dark .card .left form .check-box input:checked::after {
   -ms-transform: translate(-50%, -50%) rotate(0);
   -o-transform: translate(-50%, -50%) rotate(0);
 }
+
 body.dark .card .left form .check-box input::before {
-  border-color: rgba(89, 193, 189, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark .card .left form .check-box input:checked::after {
   color: #efefef;
 }
-body.dark .card .left form .check-box label {
-  margin-bottom: 0;
-}
+
 body.dark .card .left form .check-box label a {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark .card .left form .check-box label a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .left form .check-box span {
   color: rgba(255, 60, 60, 0.8705882353);
 }
+
 body.dark .card .left form .buttons input[type=submit] {
   width: 160px;
   margin: 0 auto;
@@ -288,42 +385,51 @@ body.dark .card .left form .buttons input[type=submit] {
   background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
+
 body.dark .card .left form .buttons input[type=submit]:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .left form .buttons input[type=reset] {
   width: 160px;
   margin: 0 auto;
   outline: none;
   color: #efefef;
-  border: 1px solid rgba(89, 193, 189, 0.8705882353);
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  border: 1px solid rgba(58, 182, 182, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
   padding: 10px 20px;
 }
+
 body.dark .card .left form .buttons input[type=reset]:hover {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
   background-color: transparent;
-  border-color: rgba(89, 193, 189, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark .card .left .log-link span {
   color: #efefef;
 }
+
 body.dark .card .left .log-link a {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark .card .left .log-link a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .right::before {
   background-color: rgba(5, 156, 177, 0.6);
   filter: brightness(0.7);
   -webkit-filter: brightness(0.7);
 }
+
 body.dark .card .right .text {
   color: #efefef;
 }
+
 body.dark .card .right .text a {
   width: 160px;
   margin: 0 auto;
@@ -333,11 +439,13 @@ body.dark .card .right .text a {
   background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
+
 body.dark .card .right .text a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark .card .right .text a:hover {
   background-color: #323234;
 }
@@ -355,23 +463,27 @@ main {
   background-color: #fff;
   box-shadow: 3px 4px 22px -5px #8b8b8b;
 }
+
 @media (max-width: 767px) {
   .card {
     min-width: 360px;
     max-width: 420px;
   }
 }
+
 .card .left {
   width: 50%;
   padding: 20px;
   padding-top: 70px;
 }
+
 @media (max-width: 767px) {
   .card .left {
     width: 100%;
     padding-top: 50px;
   }
 }
+
 .card .left .back-btn {
   position: absolute;
   top: 20px;
@@ -382,110 +494,182 @@ main {
   background-color: transparent;
   cursor: pointer;
 }
+
 .card .left .back-btn:hover .f-icon {
   color: #059cb1;
 }
+
 .card .left .back-btn .f-icon {
   font-size: 1rem;
 }
+
 .card .left .head {
   text-align: center;
   padding-bottom: 20px;
 }
+
 .card .left .head h2,
 .card .left .head p {
   margin: 0;
   margin-bottom: 10px;
 }
+
 .card .left .head h2 {
   color: #059cb1;
 }
+
 .card .left .head p {
   font-size: 0.9rem;
 }
+
 @media (min-width: 768px) {
   .card .left .head {
     display: none;
   }
 }
+
+.card .left .select-btns {
+  margin-bottom: 20px;
+  background-color: #efefef;
+}
+
+.card .left .select-btns button {
+  gap: 10px;
+  width: 50%;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.card .left .select-btns button .f-icon,
+.card .left .select-btns button span {
+  color: #212529;
+}
+
+.card .left .select-btns button:hover,
+.card .left .select-btns button.active {
+  background-color: #3ab6b6;
+  border-color: #3ab6b6;
+}
+
+.card .left .select-btns button:hover .f-icon,
+.card .left .select-btns button:hover span,
+.card .left .select-btns button.active .f-icon,
+.card .left .select-btns button.active span {
+  color: #fff;
+}
+
+.card .left form {
+  display: none;
+}
+
+.card .left form.active {
+  display: block;
+}
+
 .card .left form section {
   margin-bottom: 27px;
 }
+
 .card .left form section label {
   display: block;
   margin-bottom: 5px;
 }
+
 .card .left form section .sec-flex {
   position: relative;
 }
-.card .left form .name > label {
+
+.card .left form .name>label {
   display: none !important;
 }
+
 @media (min-width: 992px) {
-  .card .left form .name > label {
+  .card .left form .name>label {
     display: block !important;
   }
 }
+
 .card .left form .name .data {
   gap: 10px;
 }
+
 @media (max-width: 991px) {
   .card .left form .name .data {
     flex-direction: column;
     gap: 27px;
   }
 }
+
 .card .left form .name .data div {
   width: 100%;
 }
+
 .card .left form .name .data div label {
   display: none;
 }
+
 @media (max-width: 991px) {
   .card .left form .name .data div label {
     display: block;
   }
 }
+
 .card .left form .name .data div .field input:focus::-webkit-input-placeholder {
   color: transparent;
 }
+
 .card .left form .name .data div .field input:focus::-moz-placeholder {
   color: transparent;
 }
+
 .card .left form .name .data div .field input:focus:-ms-input-placeholder {
   color: transparent;
 }
+
 .card .left form .name .data div .field input:focus::-ms-input-placeholder {
   color: transparent;
 }
+
 .card .left form .name .data div .field input:focus::placeholder {
   color: transparent;
 }
+
 @media (max-width: 991px) {
   .card .left form .name .data div .field input::-webkit-input-placeholder {
     color: transparent;
   }
+
   .card .left form .name .data div .field input::-moz-placeholder {
     color: transparent;
   }
+
   .card .left form .name .data div .field input:-ms-input-placeholder {
     color: transparent;
   }
+
   .card .left form .name .data div .field input::-ms-input-placeholder {
     color: transparent;
   }
+
   .card .left form .name .data div .field input::placeholder {
     color: transparent;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .card .left form .name .data div .field input {
     max-width: 180px;
   }
 }
+
 .card .left form .e-mail .field input {
   text-transform: initial;
 }
+
 .card .left form .field {
   flex-direction: row-reverse;
   position: relative;
@@ -495,6 +679,7 @@ main {
   padding-right: 5px;
   background-color: #f9f9f9;
 }
+
 .card .left form .field input {
   flex: 1;
   padding: 10px;
@@ -504,23 +689,28 @@ main {
   outline: none;
   background-color: transparent;
 }
-.card .left form .field input:focus ~ span:first-of-type {
+
+.card .left form .field input:focus~span:first-of-type {
   background-color: #059cb1;
 }
-.card .left form .field input:focus ~ .f-icon {
+
+.card .left form .field input:focus~.f-icon {
   color: #059cb1;
 }
+
 .card .left form .field i {
-  color: #59c1bd;
+  color: #3ab6b6;
 }
+
 .card .left form .field span {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
   height: 2px;
   width: 100%;
 }
+
 .card .left form .field span.error {
   background-color: transparent !important;
   font-size: 0.9rem;
@@ -529,26 +719,32 @@ main {
   bottom: -22px;
   display: none;
 }
+
 .card .left form .gender p {
   margin: 0;
   margin-top: 10px;
 }
+
 @media (max-width: 991px) {
   .card .left form .gender p:first-of-type {
     display: none;
   }
 }
+
 .card .left form .gender p:last-of-type {
   display: none;
 }
+
 @media (max-width: 991px) {
   .card .left form .gender p:last-of-type {
     display: block;
   }
 }
+
 .card .left form .gender .choices {
   gap: 30px;
 }
+
 .card .left form .gender .choices .choice input {
   margin-bottom: 5px;
   position: relative;
@@ -557,31 +753,39 @@ main {
   appearance: none;
   cursor: pointer;
 }
-.card .left form .gender .choices .choice input::before, .card .left form .gender .choices .choice input::after {
+
+.card .left form .gender .choices .choice input::before,
+.card .left form .gender .choices .choice input::after {
   content: "";
   position: absolute;
 }
+
 .card .left form .gender .choices .choice input::before {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
+
 .card .left form .gender .choices .choice input:hover::before {
   border-color: #059cb1;
 }
+
 .card .left form .gender .choices .choice input::after {
   width: 0;
   height: 0;
 }
+
 .card .left form .gender .choices .choice input:checked::before {
   border-color: #059cb1;
 }
+
 .card .left form .gender .choices .choice input:checked:after {
   width: 12px;
   height: 12px;
   background-color: #059cb1;
 }
+
 .card .left form .gender .choices .choice label {
   cursor: pointer;
   display: inline-block;
@@ -589,12 +793,15 @@ main {
   margin-top: 10px;
   margin-bottom: 0;
 }
+
 .card .left form .caner-type {
   gap: 10px;
 }
+
 .card .left form .caner-type .cancer {
   flex: 1;
 }
+
 .card .left form .caner-type .cancer select {
   width: 100%;
   padding: 7px 10px;
@@ -602,11 +809,13 @@ main {
   text-align: center;
   background-color: #f9f9f9;
   border: none;
-  border-bottom: 2px solid #59c1bd;
+  border-bottom: 2px solid #3ab6b6;
 }
+
 .card .left form .caner-type .cancer select:focus {
   border-bottom-color: #059cb1;
 }
+
 .card .left form .birth-date input[type=date] {
   flex: 1;
   text-align: center;
@@ -614,17 +823,20 @@ main {
   padding: 7px 10px;
   border: none;
   outline: none;
-  border-bottom: 2px solid #59c1bd;
+  border-bottom: 2px solid #3ab6b6;
   background-color: #f9f9f9;
 }
+
 .card .left form .birth-date input[type=date]:focus {
   border-color: #059cb1;
 }
+
 .card .left form .check-box {
   position: relative;
   gap: 7px;
   margin-bottom: 40px;
 }
+
 .card .left form .check-box input {
   cursor: pointer;
   position: relative;
@@ -635,20 +847,25 @@ main {
   height: 15px;
   margin: 0px;
 }
-.card .left form .check-box input::before, .card .left form .check-box input::after {
+
+.card .left form .check-box input::before,
+.card .left form .check-box input::after {
   position: absolute;
 }
+
 .card .left form .check-box input::before {
   content: "";
   width: 100%;
   height: 100%;
   border-radius: 2px;
   background-color: transparent;
-  border: 1.5px solid #59c1bd;
+  border: 1.5px solid #3ab6b6;
 }
+
 .card .left form .check-box input:hover::before {
   border-color: #059cb1;
 }
+
 .card .left form .check-box input::after {
   content: "";
   left: 50%;
@@ -663,6 +880,7 @@ main {
   -ms-transform: translate(-50%, -50%) rotate(3turn);
   -o-transform: translate(-50%, -50%) rotate(3turn);
 }
+
 .card .left form .check-box input:checked::after {
   content: "\f00c";
   font-family: "Font Awesome 6 Free";
@@ -680,22 +898,28 @@ main {
   -ms-transform: translate(-50%, -50%) rotate(0);
   -o-transform: translate(-50%, -50%) rotate(0);
 }
+
 .card .left form .check-box label {
   font-size: 0.9rem;
   margin-top: 2px;
+  margin-bottom: 0 !important;
   cursor: pointer;
 }
+
 .card .left form .check-box label a {
-  color: #59c1bd;
+  color: #3ab6b6;
 }
+
 .card .left form .check-box label a:hover {
   color: #059cb1;
 }
+
 .card .left form .check-box span {
   position: absolute;
   left: 0;
   width: 100%;
 }
+
 .card .left form .check-box span.error {
   background-color: transparent;
   font-size: 0.9rem;
@@ -703,21 +927,26 @@ main {
   bottom: -22px;
   display: none;
 }
+
 .card .left form .buttons {
   gap: 10px;
   margin-bottom: 15px;
 }
+
 @media (max-width: 767px) {
   .card .left form .buttons {
     margin-bottom: 20px;
   }
 }
+
 @media (max-width: 370px) {
   .card .left form .buttons {
     flex-direction: column;
   }
 }
+
 .card .left form .buttons input[type=submit] {
+  font-size: 1rem !important;
   width: 160px;
   margin: 0 auto;
   outline: none;
@@ -726,45 +955,55 @@ main {
   background-color: #059cb1;
   padding: 10px 20px;
 }
+
 .card .left form .buttons input[type=submit]:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
+
 .card .left form .buttons input[type=reset] {
+  font-size: 1rem !important;
   width: 160px;
   margin: 0 auto;
   outline: none;
   color: #fff;
-  border: 1px solid #59c1bd;
-  background-color: #59c1bd;
+  border: 1px solid #3ab6b6;
+  background-color: #3ab6b6;
   padding: 10px 20px;
 }
+
 .card .left form .buttons input[type=reset]:hover {
-  color: #59c1bd;
+  color: #3ab6b6;
   background-color: transparent;
-  border-color: #59c1bd;
+  border-color: #3ab6b6;
 }
+
 .card .left .log-link {
   gap: 10px;
 }
+
 .card .left .log-link a {
   font-size: 1rem;
-  color: #59c1bd;
+  color: #3ab6b6;
 }
+
 .card .left .log-link a:hover {
   color: #059cb1;
 }
+
 @media (min-width: 768px) {
   .card .left .log-link {
     display: none;
   }
 }
+
 .card .right {
   width: 50%;
   background-image: url(../Data/Images/IMG_20221204_221445_961.jpg);
   position: relative;
 }
+
 .card .right::before {
   content: "";
   width: 100%;
@@ -776,32 +1015,39 @@ main {
   z-index: 1;
   opacity: 0.6;
 }
+
 @media (max-width: 767px) {
   .card .right {
     display: none;
   }
 }
+
 .card .right .text {
   text-align: center;
   color: #fff;
   z-index: 2;
 }
+
 .card .right .text p {
   margin: auto;
   max-width: 70%;
 }
+
 .card .right .text h1 {
   margin: 0;
   margin-bottom: 10px;
 }
+
 .card .right .text h2 {
   margin: 20px 0;
   font-family: "Yesteryear", cursive;
   font-size: 2.4rem;
 }
+
 .card .right .text h3 {
   margin: 20px 0;
 }
+
 .card .right .text a {
   width: 160px;
   margin: 0 auto;
@@ -811,11 +1057,13 @@ main {
   background-color: #059cb1;
   padding: 10px 20px;
 }
+
 .card .right .text a:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
+
 .card .right .text a:hover {
   background-color: #fff;
 }

@@ -129,3 +129,18 @@ terms.oninput = () => {
 document.querySelector("input[type='submit']").onclick = (e) => {
   e.preventDefault();
 };
+
+let switchBtns = document.querySelectorAll(".select-btns button");
+let forms = document.querySelectorAll(".form form");
+switchBtns[0].addEventListener("click", () => {
+  switchBtns[0].classList.add("active");
+  switchBtns[1].classList.remove("active");
+  forms[0].classList.add("active");
+  forms[1].classList.remove("active");
+});
+switchBtns[1].addEventListener("click", () => {
+  switchBtns[1].classList.add("active");
+  switchBtns[0].classList.remove("active");
+  forms[1].classList.add("active");
+  forms[0].classList.remove("active");
+});

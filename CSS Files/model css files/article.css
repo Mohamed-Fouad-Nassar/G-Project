@@ -3,11 +3,11 @@ main .container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 main .container .right .other .swiper .swiper-navBtn {
@@ -33,30 +33,36 @@ main {
   padding-bottom: 40px;
   position: relative;
 }
+
 @media (max-width: 767px) {
   main {
     padding-top: 150px;
   }
 }
+
 main .container {
   gap: 20px;
 }
+
 @media (max-width: 991px) {
   main .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
-main .container > section {
+
+main .container>section {
   background-color: #fff;
 }
+
 main .container .right {
   width: 100%;
   padding-top: 20px;
   position: relative;
 }
+
 main .container .right .back-btn {
   position: absolute;
   top: 10px;
@@ -67,17 +73,21 @@ main .container .right .back-btn {
   background-color: transparent;
   cursor: pointer;
 }
+
 main .container .right .back-btn:hover .f-icon {
   color: #059cb1;
 }
+
 main .container .right .back-btn .f-icon {
   font-size: 1rem;
 }
+
 @media (max-width: 991px) {
   main .container .right {
     width: 100%;
   }
 }
+
 main .container .right article h1 {
   padding: 15px;
   width: 90%;
@@ -86,107 +96,130 @@ main .container .right article h1 {
   font-size: 1.5rem;
   color: #059cb1;
 }
+
 main .container .right article .image img {
   width: 100%;
 }
+
 main .container .right article .info {
   display: block;
   padding: 10px 15px 0;
   font-size: 0.9rem;
   color: #555;
 }
+
 main .container .right article .info span {
-  color: #59c1bd;
+  color: #3ab6b6;
 }
+
 main .container .right article .article-body {
   padding: 20px 40px;
   white-space: break-spaces;
   font: inherit;
   margin: 0;
 }
+
 @media (max-width: 767px) {
   main .container .right article .article-body {
     padding: 20px 15px;
   }
 }
+
 main .container .right article .video {
   width: 85%;
   margin: 0 auto;
   padding: 0 15px 30px;
 }
+
 @media (max-width: 767px) {
   main .container .right article .video {
     width: 100%;
     height: 340px;
   }
 }
+
 @media (min-width: 768px) and (max-width: 991px) {
   main .container .right article .video {
     width: 90%;
     height: 340px;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   main .container .right article .video {
     width: 80%;
     height: 440px;
   }
 }
+
 @media (min-width: 1200px) {
   main .container .right article .video {
     width: 70%;
     height: 460px;
   }
 }
+
 main .container .right article .video iframe {
   width: 100%;
   height: 100%;
 }
+
 main .container .right .other {
   padding: 20px;
   padding-bottom: 10px;
   padding-top: 30px;
 }
+
 @media (max-width: 991px) {
   main .container .right .other {
     padding-top: 0;
   }
 }
+
 main .container .right .other .head h2 {
   padding: 20px 10px;
   margin: 0 auto;
   font-size: 1.5rem;
   color: #059cb1;
 }
+
 main .container .right .other .swiper {
   overflow: hidden;
 }
+
 main .container .right .other .swiper .slider-container {
   padding: 0px 8px;
 }
+
 main .container .right .other .swiper .slider-container .slides {
   width: 100%;
   padding-bottom: 40px;
 }
+
 main .container .right .other .swiper .slider-container .slides .slide {
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
+
 main .container .right .other .swiper .slider-container .slides .slide .text {
   padding: 10px;
   background-color: #fff;
 }
+
 main .container .right .other .swiper .slider-container .slides .slide .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 main .container .right .other .swiper .slider-container .slides .slide .text a:hover {
   cursor: pointer;
 }
+
 main .container .right .other .swiper .slider-container .slides .slide .text a:hover h3 {
   color: #059cb1;
 }
+
 main .container .right .other .swiper .slider-container .slides .slide .text p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -195,23 +228,29 @@ main .container .right .other .swiper .slider-container .slides .slide .text p {
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
+
 main .container .right .other .swiper .slider-container .slides .slide .text .info span {
   color: #555;
   font-size: 0.9rem;
 }
+
 main .container .right .other .swiper .swiper-navBtn {
   height: 40px;
   width: 40px;
   color: #fff;
   background-color: #059cb1;
 }
+
 main .container .right .other .swiper .swiper-navBtn:hover {
-  background-color: #59c1bd;
+  background-color: #3ab6b6;
 }
-main .container .right .other .swiper .swiper-navBtn::before, main .container .right .other .swiper .swiper-navBtn::after {
+
+main .container .right .other .swiper .swiper-navBtn::before,
+main .container .right .other .swiper .swiper-navBtn::after {
   font-size: 1rem;
   bottom: -25px;
 }
+
 main .container .right .other .swiper .swiper-pagination-bullet {
   background-color: #059cb1;
 }
@@ -219,9 +258,11 @@ main .container .right .other .swiper .swiper-pagination-bullet {
 body.dark main {
   background-color: #222;
 }
-body.dark main .container > section {
+
+body.dark main .container>section {
   background-color: #1d1d1d;
 }
+
 body.dark main .container .right .back-btn {
   position: absolute;
   top: 10px;
@@ -233,54 +274,69 @@ body.dark main .container .right .back-btn {
   cursor: pointer;
   color: #efefef;
 }
+
 body.dark main .container .right .back-btn:hover .f-icon {
   color: #059cb1;
 }
+
 body.dark main .container .right .back-btn .f-icon {
   font-size: 1rem;
 }
+
 body.dark main .container .right .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .container .right article h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .container .right article .image {
   -webkit-filter: brightness(0.8);
-          filter: brightness(0.8);
+  filter: brightness(0.8);
 }
+
 body.dark main .container .right article .info {
   color: #aaa;
 }
+
 body.dark main .container .right article .info span {
-  color: rgba(89, 193, 189, 0.8705882353);
+  color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark main .container .right article .article-body {
   color: #a5a5a5;
 }
+
 body.dark main .container .right .other .head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide {
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text {
   padding: 10px;
   background-color: #fff;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text a:hover {
   cursor: pointer;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text a:hover h3 {
   color: #059cb1;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -289,29 +345,37 @@ body.dark main .container .right .other .swiper .slider-container .slides .slide
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text .info span {
   color: #555;
   font-size: 0.9rem;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text {
   background-color: #222;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text a h3 {
   color: #efefef;
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text a:hover h3 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .container .right .other .swiper .slider-container .slides .slide .text p {
   color: #a5a5a5;
 }
+
 body.dark main .container .right .other .swiper .swiper-navBtn {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
+
 body.dark main .container .right .other .swiper .swiper-navBtn:hover {
-  background-color: rgba(89, 193, 189, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
 }
+
 body.dark main .container .right .other .swiper .swiper-pagination-bullet {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }

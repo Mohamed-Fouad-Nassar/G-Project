@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 // additional page styling
 
 // Start Main Styling:-
@@ -112,35 +112,34 @@ main {
         form {
           div {
             overflow-x: auto;
-            .table {
-              min-width: 750px;
-              margin-bottom: 0;
-              white-space: nowrap;
-              width: 100%;
-              @media (max-width: 991px) {
-                padding-bottom: $sec-element-padding / 2;
-                margin-bottom: initial;
-              }
-              .tab-head {
-                @include table-head("light");
-              }
-              .tab-body {
-                padding-top: 2px;
-                .item {
-                  @include table-body-item("light");
-                  &:hover {
-                    span {
-                      background-color: $light-input-background;
-                    }
-                  }
-                  span {
-                    background-color: $white-color;
-                  }
-                }
-              }
-            }
+            // .table {
+            //   min-width: 750px;
+            //   margin-bottom: 0;
+            //   white-space: nowrap;
+            //   width: 100%;
+            //   @media (max-width: 991px) {
+            //     padding-bottom: $sec-element-padding / 2;
+            //     margin-bottom: initial;
+            //   }
+            //   .tab-head {
+            //     @include table-head("light");
+            //   }
+            //   .tab-body {
+            //     padding-top: 2px;
+            //     .item {
+            //       @include table-body-item("light");
+            //       &:hover {
+            //         span {
+            //           background-color: $light-input-background;
+            //         }
+            //       }
+            //       span {
+            //         background-color: $white-color;
+            //       }
+            //     }
+            //   }
+            // }
           }
-
           .cards {
             @extend %grid-250-20;
             .box {
@@ -164,8 +163,8 @@ main {
                 &:after {
                   content: "";
                   position: absolute;
-                  top: 19px;
-                  right: 19px;
+                  top: 19.5px;
+                  right: 19.5px;
                   border: 1px solid transparent;
                   opacity: 0;
                   background-color: $main-color;
@@ -227,7 +226,6 @@ main {
               }
             }
           }
-
           .order-data {
             padding-top: 20px;
             @extend %grid-200-10;
@@ -348,20 +346,19 @@ body {
           }
           .medicines {
             form {
-              .table {
-                .tab-head {
-                  @include table-head("dark");
-                }
-                .tab-body {
-                  .item {
-                    @include table-body-item("dark");
-                    span {
-                      background-color: $main-dark-bg;
-                    }
-                  }
-                }
-              }
-
+              // .table {
+              //   .tab-head {
+              //     @include table-head("dark");
+              //   }
+              //   .tab-body {
+              //     .item {
+              //       @include table-body-item("dark");
+              //       span {
+              //         background-color: $main-dark-bg;
+              //       }
+              //     }
+              //   }
+              // }
               .cards {
                 .box {
                   .card {
@@ -407,7 +404,6 @@ body {
                   }
                 }
               }
-
               .order-data {
                 section {
                   label {

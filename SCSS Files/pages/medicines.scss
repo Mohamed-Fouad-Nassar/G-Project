@@ -1,13 +1,13 @@
 // import global rules
-// @use "../Global-rules/global" as *;
+@use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-// @use "../sections/header" as *;
+@use "../sections/header" as *;
 // import footer styling:-
-// @use "../sections/footer" as *;
+@use "../sections/footer" as *;
 
 // additional page styling
 
@@ -18,15 +18,176 @@ main {
   position: relative;
   .content {
     .container {
-      .sec-head {
-      }
       .sec-body {
+        padding: $main-element-padding;
+        .med{
+          position: relative;
+          .filter{
+            position: absolute;
+            top: -50px;
+            right: 0;
+            display: none;
+            border: none;
+            width: 40px;
+            cursor: pointer;
+            z-index: 999999999999999999;
+            span{
+              display: block;
+              height: 4px;
+              background-color: #000;
+              margin-bottom: 4px;
+            }
+          }
+          .side-bar{
+            display: none;
+            position: absolute;
+            top: -50px;
+            right: 40px;
+            z-index: 999999999999999999;
+            padding: $field-top-padding;
+            background-color: #fff;
+            box-shadow: -16px 0 24px 4px #ececec;
+            width: 200px;
+            height: 30rem;
+            color: #000;
+            h2 {
+              font-size: 1.7rem;
+              margin: 0;
+              margin-bottom: 20px;
+            }
+            ul.categories{
+              list-style: none;
+              li{
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                a{
+                  text-decoration: none;
+                  color: inherit;
+                }
+              }
+              .active{
+                color: #fff;
+                background-color: $main-color;
+              }
+            }
+          }
+
+          .container{
+            gap: 20px;
+            padding: $sec-element-padding;
+            position: relative;
+            @extend %flex--between;
+            .left-side{
+              padding: $field-top-padding;
+              background-color: #fff;
+              box-shadow: -16px 0 24px 4px #ececec;
+              width: 200px;
+              height: 30rem;
+              color: #000;
+              h2 {
+                font-size: 1.7rem;
+                margin: 0;
+                margin-bottom: 20px;
+              }
+              ul.categories{
+                list-style: none;
+                li{
+                  padding: 10px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  a{
+                    text-decoration: none;
+                    color: inherit;
+                  }
+                }
+                .active{
+                  color: #fff;
+                  background-color: $main-color;
+                }
+              }
+            }
+
+
+
+            .right-side{
+              overflow: hidden;
+              flex: 1;
+              padding: 0;
+              @extend %grid-300-20;
+              .image{
+                img{
+                  width: 100%;
+                }
+              }
+              .card-body {
+                .med-details:after{
+                  margin-top: 10px;
+                  background-color: #ccca;
+                  width: 100%;
+                  height: 1px;
+                  display: block;
+                  content: ' ';
+                }
+                .pharmacies{
+                  padding-top: 10px;
+                  @extend %flex-start-center;
+                  flex-wrap: wrap;
+                  justify-content: space-around !important;
+                  a{
+                    display: inline-block;
+                    margin: 3px;
+                    color: #000;
+                    background-color: $dark-white-color;
+                    border-color: $dark-white-color;
+                    font-size: 0.9rem;
+                  }
+                  a:hover{
+                    color: #fff;
+                    background-color: $main-color;
+                    border-color: $main-color;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       .sec-foot {
         input[type="button"] {
           @include button-shape($main-color, "light");
         }
       }
+    }
+  }
+}
+.open{
+  display: block !important;
+  h2{
+    font-size: 1.2rem !important;
+  }
+  ul{
+    li{
+      font-size: 0.9rem !important;
+    }
+  }
+}
+
+//media 
+@media (max-width: 767.98px) {
+  .sec-body .med {
+    .filter{
+      display: block !important;
+    }
+    .left-side{
+      display: none;
+      position: absolute;
+      right: 50px;
+      top: -50px;
+      z-index: 9999999999;
+    }
+    .right-side{
+      width: 100% !important;
     }
   }
 }

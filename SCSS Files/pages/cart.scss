@@ -25,108 +25,117 @@ main {
       text-align: center;
       padding-bottom: 20px;
     }
-    h2 {
-      font-size: 1.3rem;
-      text-align: center;
-      color: $sec-color;
-    }
-    h3 {
-      font-size: 1.1rem;
-      color: $sec-color;
-    }
-    .order {
-      padding: 20px;
-      background-color: $light-white-color;
-      position: relative;
-      margin-top: 20px;
-      &::after {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: 0;
-        width: 100%;
-        height: 1px;
+    form {
+      h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        color: $sec-color;
+      }
+      h3 {
+        font-size: 1.1rem;
+        color: $sec-color;
+      }
+      .order {
+        padding: 20px;
         background-color: $light-white-color;
-      }
-      &:first-of-type {
-        margin-top: 0;
+        position: relative;
+        margin-top: 20px;
         &::after {
-          display: none;
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: $light-white-color;
         }
-      }
-      .order-info {
-        padding-bottom: 20px;
-        .content {
-          @media (max-width: 575px) {
-            flex-direction: column;
-            width: 100%;
+        &:first-of-type {
+          margin-top: 0;
+          &::after {
+            display: none;
           }
-          @extend %flex-center-start;
-          gap: 20px;
-          .image {
-            height: 100px;
-            width: 100px;
-            img {
-              max-width: 100%;
-            }
-            @media (max-width: 991px) {
-              height: 115px;
-              width: 115px;
-            }
-          }
-          .grid {
-            @include grid(165px, 10px);
-            flex: 1;
+        }
+        .order-info {
+          padding-bottom: 20px;
+          .content {
             @media (max-width: 575px) {
+              flex-direction: column;
               width: 100%;
             }
-            article {
-              @extend %flex-center-center;
-              flex-direction: column;
-              gap: 10px;
-              span {
-                &:last-of-type {
-                  font-size: 1.5rem;
-                  font-weight: 600;
-                  color: $main-color;
-                }
-              }
-            }
-          }
-        }
-      }
-      .order-cont {
-        .content {
-          @include grid(250px, 10px);
-          .box {
-            @extend %flex-center-center;
-            gap: 10px;
-            padding: 10px;
-            background-color: $white-color;
+            @extend %flex-center-start;
+            gap: 20px;
             .image {
-              width: 70px;
-              height: 70px;
+              height: 100px;
+              width: 100px;
               img {
                 max-width: 100%;
               }
+              @media (max-width: 991px) {
+                height: 115px;
+                width: 115px;
+              }
             }
-            .info {
-              @extend %flex-start-center;
-              flex-direction: column;
+            .grid {
+              @include grid(165px, 10px);
               flex: 1;
-              gap: 10px;
-              span {
-                &:first-of-type {
-                  font-weight: 500;
-                }
-                &:last-of-type {
-                  font-size: 0.9rem;
-                  font-weight: 400;
-                  color: $sec-text-color;
+              @media (max-width: 575px) {
+                width: 100%;
+              }
+              article {
+                @extend %flex-center-center;
+                flex-direction: column;
+                gap: 10px;
+                span {
+                  &:last-of-type {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: $main-color;
+                  }
                 }
               }
             }
           }
+        }
+        .order-cont {
+          .content {
+            @include grid(250px, 10px);
+            .box {
+              @extend %flex-center-center;
+              gap: 10px;
+              padding: 10px;
+              background-color: $white-color;
+              .image {
+                width: 70px;
+                height: 70px;
+                img {
+                  max-width: 100%;
+                }
+              }
+              .info {
+                @extend %flex-start-center;
+                flex-direction: column;
+                flex: 1;
+                gap: 10px;
+                span {
+                  &:first-of-type {
+                    font-weight: 500;
+                  }
+                  &:last-of-type {
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    color: $sec-text-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .sec-foot {
+        padding-top: 20px;
+        input[type="submit"] {
+          @include button-shape($main-color, "light");
+          margin-right: 0 !important;
         }
       }
     }
@@ -142,42 +151,50 @@ body {
         h1 {
           color: $main-dark-color;
         }
-        h2,
-        h3 {
-          color: $sec-dark-color;
-        }
-        .order {
-          background-color: $sec-dark-bg;
-          &::after {
-            background-color: $sec-dark-bg;
+        form {
+          h2,
+          h3 {
+            color: $sec-dark-color;
           }
-          .order-info {
-            .content {
-              .grid {
-                article {
-                  span {
-                    color: $white-dark-color;
-                    &:last-of-type {
-                      color: $main-dark-color;
+          .order {
+            background-color: $sec-dark-bg;
+            &::after {
+              background-color: $sec-dark-bg;
+            }
+            .order-info {
+              .content {
+                .grid {
+                  article {
+                    span {
+                      color: $white-dark-color;
+                      &:last-of-type {
+                        color: $main-dark-color;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .order-cont {
+              .content {
+                .box {
+                  background-color: $main-dark-bg;
+                  .info {
+                    span {
+                      color: $white-dark-color;
+                      &:last-of-type {
+                        color: $sec-text-dark-color;
+                      }
                     }
                   }
                 }
               }
             }
           }
-          .order-cont {
-            .content {
-              .box {
-                background-color: $main-dark-bg;
-                .info {
-                  span {
-                    color: $white-dark-color;
-                    &:last-of-type {
-                      color: $sec-text-dark-color;
-                    }
-                  }
-                }
-              }
+          .sec-foot {
+            padding-top: 20px;
+            input[type="submit"] {
+              @include button-shape($main-dark-color, "dark");
             }
           }
         }

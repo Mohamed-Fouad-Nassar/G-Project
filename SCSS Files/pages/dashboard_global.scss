@@ -14,7 +14,7 @@
 main {
   @extend %flex-stretch-start;
   padding: $up-down-padding $main-element-padding $main-element-padding * 2;
-  height: 100vh;
+  // height: 100vh;
   gap: $main-element-padding;
   @media (max-width: 767px) {
     padding: 150px $sec-element-padding 30px;
@@ -24,18 +24,20 @@ main {
     @extend %border-radius-10;
     width: 230px;
     height: 100%;
+    position: sticky;
+    top: 90px;
     overflow-y: auto;
     overflow-x: hidden;
     padding: $main-element-padding;
     background-color: $white-color;
     box-shadow: $dash-main-box-shadow;
-    position: relative;
     @media (max-width: 991px) {
       width: 200px;
     }
     @media (max-width: 767px) {
       width: 60px;
       padding: 15px $sec-element-padding;
+      top: 65px;
     }
     @media (max-width: 575px) {
       padding: {
@@ -157,7 +159,7 @@ main {
     @extend %flex-center-center;
     background-color: $white-color;
     box-shadow: $dash-main-box-shadow;
-    position: relative;
+    // position: relative;
     flex: 1;
     overflow-y: auto;
     @media (max-width: 1199px) {
@@ -166,10 +168,10 @@ main {
     > div {
       width: 100%;
       padding: $main-element-padding;
-      position: absolute;
-      top: 0;
-      left: 0;
-      overflow-y: auto;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // overflow-y: auto;
     }
   }
 }

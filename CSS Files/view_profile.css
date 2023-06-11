@@ -1812,8 +1812,8 @@ main .container .content .top-sec {
 }
 
 main .container .content .top-sec .image {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   margin: 0 auto;
 }

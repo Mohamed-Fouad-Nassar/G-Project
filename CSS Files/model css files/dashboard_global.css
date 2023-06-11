@@ -64,7 +64,6 @@ main aside .head .shape span {
 
 main {
   padding: 100px 20px 40px;
-  height: 100vh;
   gap: 20px;
 }
 
@@ -78,13 +77,14 @@ main {
 main aside {
   width: 230px;
   height: 100%;
+  position: sticky;
+  top: 90px;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px 1px #ececec;
   box-shadow: 0 0 5px 1px #ececec;
-  position: relative;
 }
 
 @media (max-width: 991px) {
@@ -97,6 +97,7 @@ main aside {
   main aside {
     width: 60px;
     padding: 15px 10px;
+    top: 65px;
   }
 }
 
@@ -131,7 +132,7 @@ main aside .head a {
 }
 
 main aside .head a:hover {
-  color: #59c1bd !important;
+  color: #3ab6b6 !important;
 }
 
 main aside .head .shape {
@@ -251,7 +252,6 @@ main .content {
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px 1px #ececec;
   box-shadow: 0 0 5px 1px #ececec;
-  position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -267,10 +267,6 @@ main .content {
 main .content>div {
   width: 100%;
   padding: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow-y: auto;
 }
 
 body.dark main {
@@ -288,7 +284,7 @@ body.dark main aside .head a {
 }
 
 body.dark main aside .head a:hover {
-  color: rgba(89, 193, 189, 0.8705882353) !important;
+  color: rgba(58, 182, 182, 0.8705882353) !important;
 }
 
 body.dark main aside .shape span {

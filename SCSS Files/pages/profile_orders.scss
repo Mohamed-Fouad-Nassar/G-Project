@@ -104,6 +104,7 @@ main {
               }
             }
             .f-icon {
+              @extend %zero-transition;
               margin-right: $sec-element-padding;
               @media (max-width: 767px) {
                 margin-right: 0;
@@ -135,112 +136,126 @@ main {
     .content {
       @extend %border-radius-10;
       background-color: $white-color;
+      padding: 20px;
       overflow: hidden;
       flex: 1;
-      .top-sec {
-        @extend %grid-200-20;
-        align-items: center;
-        padding: $main-element-padding;
-        min-width: 300px;
-        max-width: 700px;
-        margin: 0 auto;
-        @media (max-width: 991px) {
-          min-width: initial;
-          @include grid(350px, 0);
-        }
-        @media (max-width: 575px) {
-          @include grid(250px, 0);
-        }
-        .image {
-          @extend %border-radius-50;
-          width: 200px;
-          height: 200px;
-          overflow: hidden;
-          margin: 0 auto;
-          @media (max-width: 767px) {
-            width: 170px;
-            height: 170px;
+      position: relative;
+      h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        color: $sec-color;
+      }
+      h3 {
+        font-size: 1.1rem;
+        color: $sec-color;
+      }
+      .sec-body {
+        .order {
+          @extend %border-radius-10;
+          padding: 20px;
+          background-color: $light-white-color;
+          position: relative;
+          margin-top: 20px;
+          display: none;
+          &.active {
+            display: block;
           }
-          img {
+          &::after {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 0;
             width: 100%;
+            height: 1px;
+            background-color: $light-white-color;
           }
-        }
-        .text {
-          text-align: center;
-          h2 {
-            padding-top: $main-element-padding;
-            font-size: 1.5em;
+          &:first-of-type {
+            margin-top: 0;
+            &::after {
+              display: none;
+            }
           }
-          span {
-            font-size: 1.2rem;
-            color: $sec-text-color;
-          }
-        }
-        .edit-btn {
-          @extend %flex-center-;
-          flex-direction: column;
-          gap: $sec-element-padding;
-          padding-top: 30px;
-          a {
-            @include button-shape($main-color, "light");
-            @extend %flex-center-center;
-            gap: $sec-element-padding;
-            &:hover {
-              .f-icon,
-              span {
-                color: $main-color;
+          .order-info {
+            padding-bottom: 20px;
+            .content {
+              @media (max-width: 575px) {
+                flex-direction: column;
+                width: 100%;
+              }
+              @extend %flex-center-start;
+              gap: 20px;
+              .image {
+                height: 100px;
+                width: 100px;
+                img {
+                  max-width: 100%;
+                }
+                @media (max-width: 991px) {
+                  height: 115px;
+                  width: 115px;
+                }
+              }
+              .grid {
+                @include grid(165px, 10px);
+                flex: 1;
+                @media (max-width: 575px) {
+                  width: 100%;
+                }
+                article {
+                  @extend %flex-center-center;
+                  flex-direction: column;
+                  gap: 10px;
+                  span {
+                    &:last-of-type {
+                      font-size: 1.5rem;
+                      font-weight: 600;
+                      color: $main-color;
+                    }
+                  }
+                }
               }
             }
-            .f-icon,
-            span {
-              color: $white-color;
+          }
+          .order-cont {
+            .content {
+              @include grid(250px, 10px);
+              .box {
+                @extend %flex-center-center;
+                gap: 10px;
+                padding: 10px;
+                background-color: $white-color;
+                .image {
+                  width: 70px;
+                  height: 70px;
+                  img {
+                    max-width: 100%;
+                  }
+                }
+                .info {
+                  @extend %flex-start-center;
+                  flex-direction: column;
+                  flex: 1;
+                  gap: 10px;
+                  span {
+                    &:first-of-type {
+                      font-weight: 500;
+                    }
+                    &:last-of-type {
+                      font-size: 0.9rem;
+                      font-weight: 400;
+                      color: $sec-text-color;
+                    }
+                  }
+                }
+              }
             }
           }
         }
       }
-      .bottom-sec {
-        flex: 1;
-        padding: $main-element-padding;
-        .box {
-          padding-bottom: $main-element-padding;
-          &:last-of-type {
-            padding: 0;
-          }
-          label {
-            font-size: 1.05rem;
-            padding-bottom: $sec-element-padding;
-            color: $black-color;
-            font-weight: 500;
-          }
-          .field {
-            @extend %flex-center-center;
-            gap: $sec-element-padding;
-            color: $main-color;
-            font-size: 1.5rem;
-            flex-wrap: wrap;
-            span {
-              flex: 1;
-              font-size: 1rem;
-              padding: $sec-element-padding $main-element-padding;
-              background-color: $light-white-color;
-              color: $black-color;
-              display: block;
-              text-align: center;
-            }
-            .left-sec,
-            .right-sec {
-              flex: 1;
-            }
-            .flex-sec {
-              width: calc((100% - 20px) / 3);
-              @media (max-width: 1199px) {
-                width: calc((100% - 10px) / 2);
-              }
-              @media (max-width: 991px) {
-                width: 100%;
-              }
-            }
-          }
+      .sec-foot {
+        padding-top: 20px;
+        input[type="button"] {
+          @include button-shape($main-color, "light");
         }
       }
     }
@@ -299,43 +314,50 @@ body {
         }
         .content {
           background-color: $main-dark-bg;
-          .top-sec {
-            .text {
-              h2 {
-                color: $white-dark-color;
+          h2,
+          h3 {
+            color: $sec-dark-color;
+          }
+          .sec-body {
+            .order {
+              background-color: $sec-dark-bg;
+              &::after {
+                background-color: $sec-dark-bg;
               }
-              span {
-                color: $sec-text-dark-color;
-              }
-            }
-            .edit-btn {
-              a {
-                @include button-shape($sec-dark-color, "dark");
-                &:hover {
-                  .f-icon,
-                  span {
-                    color: $sec-dark-color;
+              .order-info {
+                .content {
+                  .grid {
+                    article {
+                      span {
+                        color: $white-dark-color;
+                        &:last-of-type {
+                          color: $main-dark-color;
+                        }
+                      }
+                    }
                   }
                 }
-                .f-icon,
-                span {
-                  color: $white-dark-color;
+              }
+              .order-cont {
+                .content {
+                  .box {
+                    background-color: $main-dark-bg;
+                    .info {
+                      span {
+                        color: $white-dark-color;
+                        &:last-of-type {
+                          color: $sec-text-dark-color;
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
           }
-          .bottom-sec {
-            .box {
-              label {
-                color: $white-dark-color;
-              }
-              .field {
-                color: sec-dark-color;
-                span {
-                  color: $sec-text-dark-color;
-                  background-color: $sec-dark-bg;
-                }
-              }
+          .sec-foot {
+            input[type="button"] {
+              @include button-shape($main-dark-color, "dark");
             }
           }
         }

@@ -26,12 +26,13 @@
 // new version:-
 let pages = document.querySelectorAll(".container .sec-body .page");
 let seeMoreBtn = document.querySelector(".container .sec-foot input");
+let footSec = document.querySelector(".container .sec-foot");
 let index = 1;
 seeMoreBtn.addEventListener("click", function () {
   pages[index].style.display = "grid";
   index++;
   if (index == pages.length - 1) {
-    seeMoreBtn.style.display = "none";
+    footSec.style.display = "none";
   }
 });
 

@@ -235,7 +235,8 @@ header {
           }
         }
       }
-      .lang {
+      .lang,
+      .cart {
         position: relative;
         .h-btn {
           @extend %flex-center-center;
@@ -263,6 +264,44 @@ header {
               &:hover {
                 background-color: $light-input-background;
                 color: $main-color;
+              }
+            }
+          }
+        }
+        .h-btn {
+          padding: 0 $sec-element-padding;
+          a {
+            @extend %flex-center-center;
+            @extend %border-radius-50;
+            width: $main-element-padding * 2;
+            height: $main-element-padding * 2;
+            background-color: $white-color;
+            position: relative;
+            &::after {
+              @extend %flex-center-center;
+              @extend %border-radius-50;
+              content: attr(number);
+              position: absolute;
+              top: -5px;
+              right: -5px;
+              background-color: $main-color;
+              color: $white-color;
+              width: 20px;
+              height: 20px;
+              z-index: 1000;
+            }
+            &:hover {
+              background-color: $dark-white-color;
+              .f-icon {
+                color: $main-color;
+              }
+            }
+            .f-icon {
+              color: $black-color;
+              font-size: 1.05rem;
+              padding: {
+                top: 4px;
+                right: 2px;
               }
             }
           }
@@ -462,7 +501,8 @@ body {
               }
             }
           }
-          .lang {
+          .lang,
+          .cart {
             .h-btn {
               span {
                 color: $white-dark-color;
@@ -475,6 +515,24 @@ body {
                     background-color: $sec-dark-bg;
                     color: $main-dark-color;
                   }
+                }
+              }
+            }
+            .h-btn {
+              a {
+                background-color: $main-dark-bg;
+                &::after {
+                  background-color: $main-dark-color;
+                  color: $white-color;
+                }
+                &:hover {
+                  background-color: $nav-active-bg;
+                  .f-icon {
+                    color: $main-dark-color;
+                  }
+                }
+                .f-icon {
+                  color: $white-color;
                 }
               }
             }

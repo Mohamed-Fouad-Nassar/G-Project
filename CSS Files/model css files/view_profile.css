@@ -1,6 +1,12 @@
-main .content .container .left .edit-btn a,
-main .content .container .right .box .field,
-body.dark main .content .container .left .edit-btn a {
+main .container aside ul,
+main .container aside ul li {
+  margin: 0;
+  padding: 0;
+}
+
+main .container .content .top-sec .edit-btn a,
+main .container .content .bottom-sec .box .field,
+body.dark main .container .content .top-sec .edit-btn a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,19 +18,7 @@ body.dark main .content .container .left .edit-btn a {
   justify-content: center;
 }
 
-main .content .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-main .content .container .left .edit-btn {
+main .container .content .top-sec .edit-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,8 +27,17 @@ main .content .container .left .edit-btn {
   align-items: center;
 }
 
-main .content .container .left .edit-btn a,
-body.dark main .content .container .left .edit-btn a {
+main .container .content .top-sec {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+main .container aside ul li a,
+main .container aside ul li button,
+main .container .content .top-sec .edit-btn a,
+body.dark main .container .content .top-sec .edit-btn a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -42,7 +45,16 @@ body.dark main .content .container .left .edit-btn a {
   -o-border-radius: 5px !important;
 }
 
-main .content .container .left .image {
+main .container aside,
+main .container .content {
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
+}
+
+main .container .content .top-sec .image {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -52,37 +64,233 @@ main .content .container .left .image {
 
 main {
   background-color: #eee;
+}
+
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  gap: 20px;
   position: relative;
-  padding: 100px 0;
   padding-bottom: 50px;
 }
 
-main .content .container {
-  gap: 20px;
-}
-
-@media (max-width: 767px) {
-  main .content .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+@media (max-width: 575px) {
+  main .container {
+    gap: 10px;
   }
 }
 
-main .content .container .left {
+main .container aside {
+  position: sticky;
+  top: 90px;
+  width: 230px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 20px;
   background-color: #fff;
-  min-width: 300px;
 }
 
 @media (max-width: 991px) {
-  main .content .container .left {
-    min-width: initial;
+  main .container aside {
+    width: 200px;
   }
 }
 
-main .content .container .left .image {
+@media (max-width: 767px) {
+  main .container aside {
+    width: 60px;
+    padding: 15px 10px;
+    top: 65px;
+  }
+}
+
+@media (max-width: 575px) {
+  main .container aside {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+main .container aside ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  main .container aside ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+main .container aside ul li {
+  padding-top: 5px;
+}
+
+main .container aside ul li a,
+main .container aside ul li button {
+  display: block;
+  width: 100%;
+  color: #212529;
+  padding: 10px 15px;
+}
+
+@media (max-width: 767px) {
+
+  main .container aside ul li a,
+  main .container aside ul li button {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+  }
+
+  main .container aside ul li a .f-icon,
+  main .container aside ul li button .f-icon {
+    font-size: 1.1rem;
+  }
+}
+
+main .container aside ul li a:hover,
+main .container aside ul li button:hover {
+  color: #059cb1;
+  background-color: #f9f9f9;
+}
+
+main .container aside ul li a:hover span,
+main .container aside ul li button:hover span {
+  color: #059cb1;
+}
+
+main .container aside ul li a:hover .f-icon,
+main .container aside ul li button:hover .f-icon {
+  color: #059cb1;
+}
+
+main .container aside ul li a.active,
+main .container aside ul li button.active {
+  color: #059cb1;
+  background-color: #f9f9f9;
+}
+
+main .container aside ul li a.active span,
+main .container aside ul li button.active span {
+  color: #059cb1;
+}
+
+main .container aside ul li a.active .f-icon,
+main .container aside ul li button.active .f-icon {
+  color: #059cb1;
+}
+
+main .container aside ul li a span,
+main .container aside ul li button span {
+  color: #212529;
+}
+
+@media (max-width: 767px) {
+
+  main .container aside ul li a span,
+  main .container aside ul li button span {
+    display: none;
+  }
+}
+
+main .container aside ul li a .f-icon,
+main .container aside ul li button .f-icon {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+
+  main .container aside ul li a .f-icon,
+  main .container aside ul li button .f-icon {
+    margin-right: 0;
+  }
+}
+
+main .container aside ul li:last-of-type button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-align: inherit;
+}
+
+main .container aside ul li:last-of-type button span,
+main .container aside ul li:last-of-type button .f-icon {
+  color: #d20519;
+}
+
+main .container aside ul li:last-of-type button:hover {
+  background-color: #d20519;
+}
+
+main .container aside ul li:last-of-type button:hover span,
+main .container aside ul li:last-of-type button:hover .f-icon {
+  color: #fff;
+}
+
+main .container .content {
+  background-color: #fff;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+main .container .content .top-sec {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  main .container .content .top-sec {
+    min-width: initial;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  main .container .content .top-sec {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0;
+  }
+}
+
+main .container .content .top-sec .image {
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -90,31 +298,31 @@ main .content .container .left .image {
 }
 
 @media (max-width: 767px) {
-  main .content .container .left .image {
+  main .container .content .top-sec .image {
     width: 170px;
     height: 170px;
   }
 }
 
-main .content .container .left .image img {
+main .container .content .top-sec .image img {
   width: 100%;
 }
 
-main .content .container .left .text {
+main .container .content .top-sec .text {
   text-align: center;
 }
 
-main .content .container .left .text h2 {
+main .container .content .top-sec .text h2 {
   padding-top: 20px;
   font-size: 1.5em;
 }
 
-main .content .container .left .text span {
+main .container .content .top-sec .text span {
   font-size: 1.2rem;
   color: #555;
 }
 
-main .content .container .left .edit-btn {
+main .container .content .top-sec .edit-btn {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -123,7 +331,7 @@ main .content .container .left .edit-btn {
   padding-top: 30px;
 }
 
-main .content .container .left .edit-btn a {
+main .container .content .top-sec .edit-btn a {
   width: 160px;
   margin: 0 auto;
   outline: none;
@@ -134,46 +342,45 @@ main .content .container .left .edit-btn a {
   gap: 10px;
 }
 
-main .content .container .left .edit-btn a:hover {
+main .container .content .top-sec .edit-btn a:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
 
-main .content .container .left .edit-btn a:hover .f-icon,
-main .content .container .left .edit-btn a:hover span {
+main .container .content .top-sec .edit-btn a:hover .f-icon,
+main .container .content .top-sec .edit-btn a:hover span {
   color: #059cb1;
 }
 
-main .content .container .left .edit-btn a .f-icon,
-main .content .container .left .edit-btn a span {
+main .container .content .top-sec .edit-btn a .f-icon,
+main .container .content .top-sec .edit-btn a span {
   color: #fff;
 }
 
-main .content .container .right {
+main .container .content .bottom-sec {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 20px;
-  background-color: #fff;
 }
 
-main .content .container .right .box {
+main .container .content .bottom-sec .box {
   padding-bottom: 20px;
 }
 
-main .content .container .right .box:last-of-type {
+main .container .content .bottom-sec .box:last-of-type {
   padding: 0;
 }
 
-main .content .container .right .box label {
+main .container .content .bottom-sec .box label {
   font-size: 1.05rem;
   padding-bottom: 10px;
   color: #212529;
   font-weight: 500;
 }
 
-main .content .container .right .box .field {
+main .container .content .bottom-sec .box .field {
   gap: 10px;
   color: #059cb1;
   font-size: 1.5rem;
@@ -181,7 +388,7 @@ main .content .container .right .box .field {
   flex-wrap: wrap;
 }
 
-main .content .container .right .box .field span {
+main .container .content .bottom-sec .box .field span {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -193,84 +400,123 @@ main .content .container .right .box .field span {
   text-align: center;
 }
 
-main .content .container .right .box .field .left-sec,
-main .content .container .right .box .field .right-sec {
+main .container .content .bottom-sec .box .field .left-sec,
+main .container .content .bottom-sec .box .field .right-sec {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-main .content .container .right .box .field .flex-sec {
+main .container .content .bottom-sec .box .field .flex-sec {
   width: calc((100% - 20px) / 3);
 }
 
 @media (max-width: 1199px) {
-  main .content .container .right .box .field .flex-sec {
+  main .container .content .bottom-sec .box .field .flex-sec {
     width: calc((100% - 10px) / 2);
   }
 }
 
 @media (max-width: 991px) {
-  main .content .container .right .box .field .flex-sec {
+  main .container .content .bottom-sec .box .field .flex-sec {
     width: 100%;
   }
 }
 
 body.dark main {
-  background-color: #222;
-}
-
-body.dark main .content .container .left {
   background-color: #1d1d1d;
 }
 
-body.dark main .content .container .left .text h2 {
+body.dark main .container aside {
+  background-color: #222;
+}
+
+body.dark main .container aside ul li a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #323234;
+}
+
+body.dark main .container aside ul li a:hover span,
+body.dark main .container aside ul li a:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container aside ul li a.active {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #323234;
+}
+
+body.dark main .container aside ul li a.active span,
+body.dark main .container aside ul li a.active .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container aside ul li a span,
+body.dark main .container aside ul li a .f-icon {
   color: #efefef;
 }
 
-body.dark main .content .container .left .text span {
+body.dark main .container aside ul li:last-of-type button span,
+body.dark main .container aside ul li:last-of-type button .f-icon {
+  color: #dc3545;
+}
+
+body.dark main .container aside ul li:last-of-type button:hover {
+  background-color: #dc3545;
+}
+
+body.dark main .container aside ul li:last-of-type button:hover span,
+body.dark main .container aside ul li:last-of-type button:hover .f-icon {
+  color: #efefef;
+}
+
+body.dark main .container .content {
+  background-color: #222;
+}
+
+body.dark main .container .content .top-sec .text h2 {
+  color: #efefef;
+}
+
+body.dark main .container .content .top-sec .text span {
   color: #a5a5a5;
 }
 
-body.dark main .content .container .left .edit-btn a {
+body.dark main .container .content .top-sec .edit-btn a {
   width: 160px;
   margin: 0 auto;
   outline: none;
   color: #efefef;
-  border: 1px solid rgba(5, 156, 177, 0.8705882353);
-  background-color: rgba(5, 156, 177, 0.8705882353);
+  border: 1px solid rgba(58, 182, 182, 0.8705882353);
+  background-color: rgba(58, 182, 182, 0.8705882353);
   padding: 10px 20px;
 }
 
-body.dark main .content .container .left .edit-btn a:hover {
-  color: rgba(5, 156, 177, 0.8705882353);
+body.dark main .container .content .top-sec .edit-btn a:hover {
+  color: rgba(58, 182, 182, 0.8705882353);
   background-color: transparent;
-  border-color: rgba(5, 156, 177, 0.8705882353);
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
 
-body.dark main .content .container .left .edit-btn a:hover .f-icon,
-body.dark main .content .container .left .edit-btn a:hover span {
-  color: rgba(5, 156, 177, 0.8705882353);
+body.dark main .container .content .top-sec .edit-btn a:hover .f-icon,
+body.dark main .container .content .top-sec .edit-btn a:hover span {
+  color: rgba(58, 182, 182, 0.8705882353);
 }
 
-body.dark main .content .container .left .edit-btn a .f-icon,
-body.dark main .content .container .left .edit-btn a span {
+body.dark main .container .content .top-sec .edit-btn a .f-icon,
+body.dark main .container .content .top-sec .edit-btn a span {
   color: #efefef;
 }
 
-body.dark main .content .container .right {
-  background-color: #1d1d1d;
-}
-
-body.dark main .content .container .right .box label {
+body.dark main .container .content .bottom-sec .box label {
   color: #efefef;
 }
 
-body.dark main .content .container .right .box .field {
-  color: rgba(5, 156, 177, 0.8705882353);
+body.dark main .container .content .bottom-sec .box .field {
+  color: sec-dark-color;
 }
 
-body.dark main .content .container .right .box .field span {
+body.dark main .container .content .bottom-sec .box .field span {
   color: #a5a5a5;
-  background-color: #222;
+  background-color: #1d1d1d;
 }

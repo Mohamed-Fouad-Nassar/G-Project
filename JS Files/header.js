@@ -8,21 +8,21 @@ var lightTransColor = "#ffffffcc";
 // Language Dropdown Menu
 
 // active language menu
-let lang = document.querySelector(".lang > .h-btn");
-let langMenu = document.querySelector(".lang > .menu");
-lang.onclick = function () {
-  if (lang.classList.contains("active")) {
-    lang.classList.remove("active");
-    langMenu.style.display = "none";
-  } else {
-    lang.classList.add("active");
-    langMenu.style.display = "block";
-  }
-};
-lang.onblur = function () {
-  lang.classList.remove("active");
-  langMenu.style.display = "none";
-};
+// let lang = document.querySelector(".lang > .h-btn");
+// let langMenu = document.querySelector(".lang > .menu");
+// lang.onclick = function () {
+//   if (lang.classList.contains("active")) {
+//     lang.classList.remove("active");
+//     langMenu.style.display = "none";
+//   } else {
+//     lang.classList.add("active");
+//     langMenu.style.display = "block";
+//   }
+// };
+// lang.onblur = function () {
+//   lang.classList.remove("active");
+//   langMenu.style.display = "none";
+// };
 
 // active account menu
 let acc = document.querySelector(".acc > .h-btn");

@@ -164,104 +164,141 @@
     <main id="main_page">
       <section class="content">
         <div class="container">
-          <div class="left">
-            <div class="image">
-              <img
-                src="../Data/Images/avatar-image-1.png"
-                alt="profile-image"
-              />
+          <!-- Start Aside -->
+          <aside>
+            <ul>
+              <li>
+                <a href="#top" class="active">
+                  <i class="f-icon fa-solid fa-user"></i>
+                  <span>personal info</span>
+                </a>
+              </li>
+              <li>
+                <a href="./user-profile/Pharmacy_profile_orders.html">
+                  <i class="f-icon fa-solid fa-cart-shopping"></i>
+                  <span>orders</span>
+                </a>
+              </li>
+              <li>
+                <a href="./user-profile/liked_articles.html">
+                  <i class="f-icon fa-solid fa-thumbs-up"></i>
+                  <span>liked articles</span>
+                </a>
+              </li>
+              <li>
+                <a href="./user-profile/saved_articles.html">
+                  <i class="f-icon fa-solid fa-bookmark"></i>
+                  <span>saved articles</span>
+                </a>
+              </li>
+              <li>
+                <button>
+                  <i class="f-icon fa-solid fa-arrow-right-from-bracket"></i>
+                  <!-- <i class="f-icon fa-solid fa-right-from-bracket"></i> -->
+                  <span>log out</span>
+                </button>
+              </li>
+            </ul>
+          </aside>
+          <!-- End Aside -->
+          <!-- start content section -->
+          <section class="content">
+            <div class="top-sec">
+              <div class="image">
+                <img
+                  src="../Data/Images/pharmacy-image.jpg"
+                  alt="pharmacy-profile-image"
+                />
+              </div>
+              <div class="text">
+                <h2>account name</h2>
+                <span>username</span>
+              </div>
+              <div class="edit-btn">
+                <a href="./edit_pharmacy_profile.html">
+                  <i class="f-icon fa-solid fa-pen"></i>
+                  <span>edit profile</span>
+                </a>
+              </div>
             </div>
-            <div class="text">
-              <h2>account name</h2>
-              <span>username</span>
+            <div class="bottom-sec">
+              <!-- start box -->
+              <article class="box">
+                <label for="field">pharmacy name:</label>
+                <div class="field" id="field">
+                  <span>name</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <label for="field">e-mail:</label>
+                <div class="field" id="field">
+                  <span>leosx.as@mn.ci</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <label for="field">bio:</label>
+                <div class="field" id="field">
+                  <span
+                    >Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit.
+                    Placeat Vel Molestias Minus Vitae Numquam Eveniet? Minus
+                    Libero Itaque</span
+                  >
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <label for="field">phone number:</label>
+                <div class="field" id="field">
+                  <span>+201034648924</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <label for="field">address:</label>
+                <div class="field" id="field">
+                  <span>street name - city - country</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="field">
+                  <div class="flex-sec">
+                    <label for="field">facebook:</label>
+                    <div class="field" id="field">
+                      <span>username</span>
+                    </div>
+                  </div>
+                  <div class="flex-sec">
+                    <label for="field">twitter:</label>
+                    <div class="field" id="field">
+                      <span>username</span>
+                    </div>
+                  </div>
+                  <div class="flex-sec">
+                    <label for="field">Whatsapp:</label>
+                    <div class="field" id="field">
+                      <span>number</span>
+                    </div>
+                  </div>
+                  <div class="flex-sec">
+                    <label for="field">phone number:</label>
+                    <div class="field" id="field">
+                      <span>number</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <!-- end box -->
             </div>
-            <div class="edit-btn">
-              <a href="./edit_pharmacy_profile.html">
-                <i class="f-icon fa-solid fa-pen"></i>
-                <span>edit profile</span>
-              </a>
-              <a href="./dashboard-pages/medicines-dash.html">
-                <i class="f-icon fa-solid fa-pen"></i>
-                <span>medicines</span>
-              </a>
-            </div>
-          </div>
-          <div class="right">
-            <!-- start box -->
-            <article class="box">
-              <label for="field">pharmacy name:</label>
-              <div class="field" id="field">
-                <span>name</span>
-              </div>
-            </article>
-            <!-- end box -->
-            <!-- start box -->
-            <article class="box">
-              <label for="field">e-mail:</label>
-              <div class="field" id="field">
-                <span>leosx.as@mn.ci</span>
-              </div>
-            </article>
-            <!-- end box -->
-            <!-- start box -->
-            <article class="box">
-              <label for="field">bio:</label>
-              <div class="field" id="field">
-                <span
-                  >Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit.
-                  Placeat Vel Molestias Minus Vitae Numquam Eveniet? Minus
-                  Libero Itaque</span
-                >
-              </div>
-            </article>
-            <!-- end box -->
-            <!-- start box -->
-            <article class="box">
-              <label for="field">phone number:</label>
-              <div class="field" id="field">
-                <span>+201034648924</span>
-              </div>
-            </article>
-            <!-- end box -->
-            <!-- start box -->
-            <article class="box">
-              <label for="field">address:</label>
-              <div class="field" id="field">
-                <span>street name - city - country</span>
-              </div>
-            </article>
-            <!-- end box -->
-            <!-- start box -->
-            <article class="box">
-              <div class="field">
-                <div class="flex-sec">
-                  <label for="field">facebook:</label>
-                  <div class="field" id="field">
-                    <span>username</span>
-                  </div>
-                </div>
-                <div class="flex-sec">
-                  <label for="field">twitter:</label>
-                  <div class="field" id="field">
-                    <span>username</span>
-                  </div>
-                </div>
-                <div class="flex-sec">
-                  <label for="field">Whatsapp:</label>
-                  <div class="field" id="field">
-                    <span>number</span>
-                  </div>
-                </div>
-                <div class="flex-sec">
-                  <label for="field">phone number:</label>
-                  <div class="field" id="field">
-                    <span>number</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <!-- end box -->
-          </div>
+          </section>
+          <!-- end content section -->
         </div>
       </section>
       <!-- Start Top Button -->

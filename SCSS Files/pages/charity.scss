@@ -1,13 +1,13 @@
 // import global rules
-// @use "../Global-rules/global" as *;
+@use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-// @use "../sections/header" as *;
+@use "../sections/header" as *;
 // import footer styling:-
-// @use "../sections/footer" as *;
+@use "../sections/footer" as *;
 // additional page styling
 
 // Start Main Styling:-
@@ -22,12 +22,15 @@ main {
     position: relative;
     .back-btn {
       @include back-btn($sec-element-padding, $sec-element-padding, "light");
+      top: 16px !important;
     }
     > h1 {
       display: none;
       padding: 15px;
-      width: 90%;
-      margin: 0 30px 0;
+      width: calc(100% - 35px);
+      margin: 0 {
+        left: 35px;
+      }
       text-align: center;
       font-size: 1.5rem;
       color: $main-color;
@@ -60,9 +63,12 @@ main {
           h1 {
             padding: $main-element-padding 5px;
             width: 100%;
-            margin: 35px 0 0 0;
+            text-align: center;
             font-size: 1.5rem;
             color: $main-color;
+            margin: 0 {
+              left: 25px;
+            }
             @media (max-width: 991px) {
               display: none;
             }

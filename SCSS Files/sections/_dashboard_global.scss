@@ -7,6 +7,7 @@
 // additional page styling
 
 main {
+  background-color: $light-white-color;
   @extend %flex-stretch-start;
   padding: $up-down-padding $main-element-padding $main-element-padding * 2;
   // height: 100vh;
@@ -25,7 +26,7 @@ main {
     overflow-x: hidden;
     padding: $main-element-padding;
     background-color: $white-color;
-    box-shadow: $dash-main-box-shadow;
+    // box-shadow: $dash-main-box-shadow;
     @media (max-width: 991px) {
       width: 200px;
     }
@@ -153,7 +154,7 @@ main {
     @extend %border-radius-10;
     @extend %flex-center-center;
     background-color: $white-color;
-    box-shadow: $dash-main-box-shadow;
+    // box-shadow: $dash-main-box-shadow;
     // position: relative;
     flex: 1;
     overflow-y: auto;
@@ -177,7 +178,7 @@ body {
       background-color: $main-dark-bg;
       aside {
         background-color: $sec-dark-bg;
-        box-shadow: $dark-box-shadow;
+        // box-shadow: $dark-box-shadow;
         .head {
           a {
             color: $main-dark-color !important;
@@ -226,7 +227,7 @@ body {
       }
       .content {
         background-color: $sec-dark-bg;
-        box-shadow: $dark-box-shadow;
+        // box-shadow: $dark-box-shadow;
       }
     }
   }

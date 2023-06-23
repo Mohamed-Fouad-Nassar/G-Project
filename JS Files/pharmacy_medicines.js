@@ -1,26 +1,8 @@
-// // sec-body select
-// let secBody = document.querySelector(".container .sec-body");
-
-// // see more button select
-// let seeMoreBtn = document.querySelector(".container .sec-foot input");
-
-// // Variables
-// let start = 0;
-// let startNum = 3;
-// let StopNum = startNum + 3;
-
-// // import elements
-// import { pharmaciesAPI } from "./APIs.js";
-
-// // calling pharmacies API
-// pharmaciesAPI("../Test APIs/pharmacy.json", start, startNum, secBody);
-
-// // see More Button
-// seeMoreBtn.addEventListener("click", function () {
-//   pharmaciesAPI("../Test APIs/pharmacy.json", startNum, StopNum, secBody);
-//   startNum += 3;
-//   StopNum = startNum + 3;
-// });
+// back button
+let cancelBtn = document.getElementById("cancel");
+cancelBtn.addEventListener("click", function () {
+  window.history.back();
+});
 
 // back to top button
 let goUp = document.getElementById("up");
@@ -40,10 +22,10 @@ goUp.onclick = function () {
 };
 
 // load boxes
-let boxes = document.querySelectorAll(".container .sec-body .box");
+let boxes = document.querySelectorAll(".container .cards .box");
 let seeMoreBtn = document.querySelector(".container .sec-foot input");
 let sectionFoot = document.querySelector(".container .sec-foot");
-let start = 6;
+let start = 8;
 // loop on elements
 let loopElements = function (start, stop) {
   for (let i = start; i < stop; i++) {
@@ -53,15 +35,16 @@ let loopElements = function (start, stop) {
 };
 // first six elements
 loopElements(0, start);
-let stop = start + 3;
+let stop = start + 4;
 // see more click
 seeMoreBtn.addEventListener("click", function () {
   loopElements(start, stop);
   start = stop;
-  stop += 3;
+  stop += 4;
   if (
     start - 1 === boxes.length ||
     start - 2 === boxes.length ||
+    start - 3 === boxes.length ||
     start === boxes.length
   ) {
     sectionFoot.style.display = "none";

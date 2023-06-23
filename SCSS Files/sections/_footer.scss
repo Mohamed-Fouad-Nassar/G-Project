@@ -43,6 +43,11 @@ footer {
       }
       .f-social {
         @include social-media-links("light");
+        a {
+          i {
+            @extend %zero-transition;
+          }
+        }
       }
     }
     .f-links {

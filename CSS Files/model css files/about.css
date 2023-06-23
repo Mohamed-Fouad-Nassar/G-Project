@@ -1,27 +1,25 @@
-main .container .sec-body .box .data .links .contact,
-body.dark main .container .sec-body .box .data .links .contact {
+main .container .sec-body .box .data .links .contact, body.dark main .container .sec-body .box .data .links .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-main .container .sec-body .box .data .links .contact>div a,
-body.dark main .container .sec-body .box .data .links .contact>div a {
+main .container .sec-body .box .data .links .contact > div a, body.dark main .container .sec-body .box .data .links .contact > div a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .container .sec-body {
@@ -31,8 +29,7 @@ main .container .sec-body {
   gap: 20px;
 }
 
-main .container .sec-body .box .data .links .contact>div a,
-body.dark main .container .sec-body .box .data .links .contact>div a {
+main .container .sec-body .box .data .links .contact > div a, body.dark main .container .sec-body .box .data .links .contact > div a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -56,22 +53,18 @@ main {
   padding-top: 100px;
   padding-bottom: 40px;
 }
-
 @media (max-width: 767px) {
   main {
     padding-top: 150px;
   }
 }
-
 main .container .sec-head {
   padding-bottom: 50px !important;
 }
-
 main .container .sec-body {
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
 }
-
 @media (max-width: 575px) {
   main .container .sec-body {
     display: -ms-grid;
@@ -80,14 +73,12 @@ main .container .sec-body {
     gap: 20px;
   }
 }
-
 main .container .sec-body .box {
   margin-top: 100px;
   position: relative;
   background-color: #fff;
   padding: 20px;
 }
-
 main .container .sec-body .box .avatar {
   transform: translate(-50%, -100px);
   -webkit-transform: translate(-50%, -100px);
@@ -103,23 +94,19 @@ main .container .sec-body .box .avatar {
   background-color: #eee;
   overflow: hidden;
 }
-
 main .container .sec-body .box .avatar img {
   width: 100%;
   height: 200px;
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 main .container .sec-body .box .data {
   text-align: center;
   padding-top: 100px;
 }
-
 main .container .sec-body .box .data .head {
   position: relative;
 }
-
 main .container .sec-body .box .data .head::before {
   content: "";
   position: absolute;
@@ -129,18 +116,15 @@ main .container .sec-body .box .data .head::before {
   height: 1px;
   background-color: #eee;
 }
-
 main .container .sec-body .box .data .head h3 {
   font-size: 1.3rem;
   margin: 0;
 }
-
 main .container .sec-body .box .data .head span {
   font-size: 0.9rem;
   padding: 10px 0 45px;
   display: block;
 }
-
 main .container .sec-body .box .data .head p {
   margin: 0;
   display: -webkit-box;
@@ -149,12 +133,10 @@ main .container .sec-body .box .data .head p {
   overflow: hidden;
   color: #555;
 }
-
 main .container .sec-body .box .data .links {
   position: relative;
   padding-top: 40px;
 }
-
 main .container .sec-body .box .data .links::before {
   content: "";
   position: absolute;
@@ -164,106 +146,85 @@ main .container .sec-body .box .data .links::before {
   height: 1px;
   background-color: #eee;
 }
-
 main .container .sec-body .box .data .links h3 {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
-
 main .container .sec-body .box .data .links .contact {
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   -ms-flex-wrap: nowrap !important;
-  flex-wrap: nowrap !important;
+      flex-wrap: nowrap !important;
   -webkit-box-pack: center !important;
-  -ms-flex-pack: center !important;
-  justify-content: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
 }
-
-main .container .sec-body .box .data .links .contact>div a {
+main .container .sec-body .box .data .links .contact > div a {
   width: 40px;
   height: 40px;
   background-color: #3ab6b6;
 }
-
-main .container .sec-body .box .data .links .contact>div a i {
+main .container .sec-body .box .data .links .contact > div a i {
   font-size: 1.5rem;
 }
-
-main .container .sec-body .box .data .links .contact>div a:hover {
+main .container .sec-body .box .data .links .contact > div a:hover {
   background-color: #eee;
 }
-
-main .container .sec-body .box .data .links .contact>div a:hover i {
+main .container .sec-body .box .data .links .contact > div a:hover i {
   color: #059cb1;
 }
-
-main .container .sec-body .box .data .links .contact>div a i {
+main .container .sec-body .box .data .links .contact > div a i {
   color: #fff;
 }
 
 body.dark main {
   background-color: #222;
 }
-
 body.dark main .container .sec-body .box {
   background-color: #1d1d1d;
 }
-
 body.dark main .container .sec-body .box .avatar {
   border-color: #222;
   background-color: #222;
 }
-
 body.dark main .container .sec-body .box .data .head::before {
   background-color: #555;
 }
-
 body.dark main .container .sec-body .box .data .head h3 {
   color: #efefef;
 }
-
 body.dark main .container .sec-body .box .data .head span {
   color: #efefef;
 }
-
 body.dark main .container .sec-body .box .data .head p {
   color: #a5a5a5;
 }
-
 body.dark main .container .sec-body .box .data .links::before {
   background-color: #555;
 }
-
 body.dark main .container .sec-body .box .data .links h3 {
   color: #efefef;
 }
-
 body.dark main .container .sec-body .box .data .links .contact {
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
-
-body.dark main .container .sec-body .box .data .links .contact>div a {
+body.dark main .container .sec-body .box .data .links .contact > div a {
   width: 40px;
   height: 40px;
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
-
-body.dark main .container .sec-body .box .data .links .contact>div a i {
+body.dark main .container .sec-body .box .data .links .contact > div a i {
   font-size: 1.5rem;
 }
-
-body.dark main .container .sec-body .box .data .links .contact>div a:hover {
+body.dark main .container .sec-body .box .data .links .contact > div a:hover {
   background-color: #222;
 }
-
-body.dark main .container .sec-body .box .data .links .contact>div a:hover i {
+body.dark main .container .sec-body .box .data .links .contact > div a:hover i {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .container .sec-body .box .data .links .contact>div a i {
+body.dark main .container .sec-body .box .data .links .contact > div a i {
   color: #efefef;
 }

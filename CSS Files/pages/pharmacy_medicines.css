@@ -17,8 +17,11 @@ a {
   cursor: pointer;
 }
 
-main .content .container .sec-foot input[type=button], header .container nav ul li a, header .container .account,
-header .container .log-in-acc, header .container .account a, header .container .log-in-acc article, header .container .log-in-acc article > .menu ul, header .container .log-in-acc article > .menu ul li, header .container .log-in-acc .lang .h-btn, header .container .log-in-acc .theme .h-btn, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
+main .container .medicines form .order-data section .felid, main .container .medicines form .btn input, header .container nav ul li a, header .container .account,
+header .container .log-in-acc, header .container .account a, header .container .log-in-acc article, header .container .log-in-acc article > .menu ul, header .container .log-in-acc article > .menu ul li, header .container .log-in-acc .lang .h-btn,
+header .container .log-in-acc .cart .h-btn, header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
+header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,27 +54,6 @@ header .container .log-in-acc .acc .menu ul li a {
           align-items: center;
 }
 
-main .content .container .sec-body .med .container .right-side .card-body .pharmacies {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .content .container .sec-body .med .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -96,10 +78,17 @@ header .container nav {
           justify-content: space-between;
 }
 
-main .content .container .sec-body .med .container .right-side {
+main .container .medicines form .order-data {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+main .container .medicines form .cards {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
@@ -113,7 +102,15 @@ main .content .container .sec-body .med .container .right-side {
   -o-transform: translateY(-50%);
 }
 
-main .content .container .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a {
+main .container .medicines form .cards .box, main .container .medicines form .cards .box .card {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
+
+main .container .medicines form .btn input, footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -121,7 +118,9 @@ main .content .container .sec-foot input[type=button], footer .container .f-info
   -o-border-radius: 5px !important;
 }
 
-header .container .log-in-acc .theme .h-btn, .head-shape span,
+header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
+header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
@@ -130,7 +129,7 @@ header .container .log-in-acc .theme .h-btn, .head-shape span,
   -o-border-radius: 50% !important;
 }
 
-footer .container .f-links ul li a::before, .f-icon {
+footer .container .f-info .f-social a i, footer .container .f-links ul li a::before, .f-icon {
   transition: 0s !important;
   -webkit-transition: 0s !important;
   -moz-transition: 0s !important;
@@ -706,7 +705,7 @@ header .container .log-in-acc {
 }
 @media (max-width: 767px) {
   header .container .account,
-header .container .log-in-acc {
+  header .container .log-in-acc {
     grid-area: account;
   }
 }
@@ -721,7 +720,7 @@ header .container .log-in-acc {
     -ms-grid-column-span: 3;
   }
   header .container .account,
-header .container .log-in-acc {
+  header .container .log-in-acc {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
   }
@@ -855,16 +854,20 @@ header .container .log-in-acc article > .menu ul li span {
   font-weight: 400;
   font-size: 0.9rem;
 }
-header .container .log-in-acc .lang {
+header .container .log-in-acc .lang,
+header .container .log-in-acc .cart {
   position: relative;
 }
-header .container .log-in-acc .lang .h-btn {
+header .container .log-in-acc .lang .h-btn,
+header .container .log-in-acc .cart .h-btn {
   gap: 5px;
 }
-header .container .log-in-acc .lang .h-btn:hover {
+header .container .log-in-acc .lang .h-btn:hover,
+header .container .log-in-acc .cart .h-btn:hover {
   cursor: pointer;
 }
-header .container .log-in-acc .lang .h-btn div {
+header .container .log-in-acc .lang .h-btn div,
+header .container .log-in-acc .cart .h-btn div {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -873,19 +876,61 @@ header .container .log-in-acc .lang .h-btn div {
   width: 30px;
   overflow: hidden;
 }
-header .container .log-in-acc .lang .h-btn div img {
+header .container .log-in-acc .lang .h-btn div img,
+header .container .log-in-acc .cart .h-btn div img {
   max-width: 100%;
 }
-header .container .log-in-acc .lang .h-btn span {
+header .container .log-in-acc .lang .h-btn span,
+header .container .log-in-acc .cart .h-btn span {
   text-transform: uppercase;
   font-weight: 600;
 }
-header .container .log-in-acc .lang .menu {
+header .container .log-in-acc .lang .menu,
+header .container .log-in-acc .cart .menu {
   padding: 10px;
 }
-header .container .log-in-acc .lang .menu ul li:hover {
+header .container .log-in-acc .lang .menu ul li:hover,
+header .container .log-in-acc .cart .menu ul li:hover {
   background-color: #f9f9f9;
   color: #059cb1;
+}
+header .container .log-in-acc .lang .h-btn,
+header .container .log-in-acc .cart .h-btn {
+  padding: 0 10px;
+}
+header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc .cart .h-btn a {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: relative;
+}
+header .container .log-in-acc .lang .h-btn a::after,
+header .container .log-in-acc .cart .h-btn a::after {
+  content: attr(number);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #059cb1;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  z-index: 1000;
+}
+header .container .log-in-acc .lang .h-btn a:hover,
+header .container .log-in-acc .cart .h-btn a:hover {
+  background-color: #ccc;
+}
+header .container .log-in-acc .lang .h-btn a:hover .f-icon,
+header .container .log-in-acc .cart .h-btn a:hover .f-icon {
+  color: #059cb1;
+}
+header .container .log-in-acc .lang .h-btn a .f-icon,
+header .container .log-in-acc .cart .h-btn a .f-icon {
+  color: #212529;
+  font-size: 1.05rem;
+  padding-top: 4px;
+  padding-right: 2px;
 }
 header .container .log-in-acc .theme .h-btn {
   background-color: #fff;
@@ -1056,12 +1101,35 @@ body.dark header .container .log-in-acc article > .menu ul::after {
 body.dark header .container .log-in-acc article > .menu ul li span {
   color: #efefef;
 }
-body.dark header .container .log-in-acc .lang .h-btn span {
+body.dark header .container .log-in-acc .lang .h-btn span,
+body.dark header .container .log-in-acc .cart .h-btn span {
   color: #efefef;
 }
-body.dark header .container .log-in-acc .lang .menu ul li:hover {
+body.dark header .container .log-in-acc .lang .menu ul li:hover,
+body.dark header .container .log-in-acc .cart .menu ul li:hover {
   background-color: #1d1d1d;
   color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark header .container .log-in-acc .lang .h-btn a,
+body.dark header .container .log-in-acc .cart .h-btn a {
+  background-color: #222;
+}
+body.dark header .container .log-in-acc .lang .h-btn a::after,
+body.dark header .container .log-in-acc .cart .h-btn a::after {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  color: #fff;
+}
+body.dark header .container .log-in-acc .lang .h-btn a:hover,
+body.dark header .container .log-in-acc .cart .h-btn a:hover {
+  background-color: #323234;
+}
+body.dark header .container .log-in-acc .lang .h-btn a:hover .f-icon,
+body.dark header .container .log-in-acc .cart .h-btn a:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark header .container .log-in-acc .lang .h-btn a .f-icon,
+body.dark header .container .log-in-acc .cart .h-btn a .f-icon {
+  color: #fff;
 }
 body.dark header .container .log-in-acc .theme .h-btn {
   background-color: #222;
@@ -1269,142 +1337,173 @@ body.dark footer .f-info .f-social > div a i {
   color: #efefef;
 }
 
-main {
+main .container {
   background-color: #eee;
-  padding: 100px 0;
   position: relative;
 }
-main .content .container .sec-body {
-  padding: 20px;
-}
-main .content .container .sec-body .med {
-  position: relative;
-}
-main .content .container .sec-body .med .filter {
+main .container .back-btn {
   position: absolute;
-  top: -50px;
-  right: 0;
-  display: none;
+  top: 10px;
+  left: 10px;
+  padding: 7px 10px;
   border: none;
-  width: 40px;
-  cursor: pointer;
-  z-index: 1000000000000000000;
-}
-main .content .container .sec-body .med .filter span {
-  display: block;
-  height: 4px;
-  background-color: #000;
-  margin-bottom: 4px;
-}
-main .content .container .sec-body .med .side-bar {
-  display: none;
-  position: absolute;
-  top: -50px;
-  right: 40px;
-  z-index: 1000000000000000000;
-  padding: 7px;
-  background-color: #fff;
-  -webkit-box-shadow: -16px 0 24px 4px #ececec;
-          box-shadow: -16px 0 24px 4px #ececec;
-  width: 200px;
-  height: 30rem;
-  color: #000;
-}
-main .content .container .sec-body .med .side-bar h2 {
-  font-size: 1.7rem;
-  margin: 0;
-  margin-bottom: 20px;
-}
-main .content .container .sec-body .med .side-bar ul.categories {
-  list-style: none;
-}
-main .content .container .sec-body .med .side-bar ul.categories li {
-  padding: 10px;
-  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
   cursor: pointer;
 }
-main .content .container .sec-body .med .side-bar ul.categories li a {
-  text-decoration: none;
-  color: inherit;
+main .container .back-btn:hover .f-icon {
+  color: #059cb1;
 }
-main .content .container .sec-body .med .side-bar ul.categories .active {
-  color: #fff;
-  background-color: #059cb1;
+main .container .back-btn .f-icon {
+  font-size: 1rem;
 }
-main .content .container .sec-body .med .container {
-  gap: 20px;
-  padding: 10px;
+main .container .medicines form div {
+  overflow-x: auto;
+}
+main .container .medicines form .cards .box .card {
+  border: 1px solid #eee;
   position: relative;
-}
-main .content .container .sec-body .med .container .left-side {
-  padding: 7px;
-  background-color: #fff;
-  -webkit-box-shadow: -16px 0 24px 4px #ececec;
-          box-shadow: -16px 0 24px 4px #ececec;
-  width: 200px;
-  height: 30rem;
-  color: #000;
-}
-main .content .container .sec-body .med .container .left-side h2 {
-  font-size: 1.7rem;
-  margin: 0;
-  margin-bottom: 20px;
-}
-main .content .container .sec-body .med .container .left-side ul.categories {
-  list-style: none;
-}
-main .content .container .sec-body .med .container .left-side ul.categories li {
-  padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-main .content .container .sec-body .med .container .left-side ul.categories li a {
-  text-decoration: none;
-  color: inherit;
+main .container .medicines form .cards .box .card:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #eee;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
 }
-main .content .container .sec-body .med .container .left-side ul.categories .active {
-  color: #fff;
+main .container .medicines form .cards .box .card:after {
+  content: "";
+  position: absolute;
+  top: 19.5px;
+  right: 19.5px;
+  border: 1px solid transparent;
+  opacity: 0;
+  background-color: #059cb1;
+  width: 0;
+  height: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+main .container .medicines form .cards .box .card .image {
+  width: 100%;
+  height: 200px;
+}
+main .container .medicines form .cards .box .card .image img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .medicines form .cards .box .card .description {
+  padding: 10px;
+  padding-bottom: 0;
+}
+main .container .medicines form .cards .box .card .description h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+main .container .medicines form .cards .box .card .description p {
+  font-size: 0.9rem;
+}
+main .container .medicines form .cards .box input {
+  cursor: pointer;
+  display: none;
+}
+main .container .medicines form .cards .box input:checked + .card {
+  border-color: #059cb1;
+}
+main .container .medicines form .cards .box input:checked + .card::before {
+  border-color: #059cb1;
+}
+main .container .medicines form .cards .box input:checked + .card::after {
+  opacity: 1;
+  border-color: #059cb1;
+  transform: scale(7);
+  -webkit-transform: scale(7);
+  -moz-transform: scale(7);
+  -ms-transform: scale(7);
+  -o-transform: scale(7);
+}
+main .container .medicines form .cards .box input:checked + .card .description {
   background-color: #059cb1;
 }
-main .content .container .sec-body .med .container .right-side {
-  overflow: hidden;
+main .container .medicines form .cards .box input:checked + .card .description h2,
+main .container .medicines form .cards .box input:checked + .card .description p {
+  color: #fff;
+}
+main .container .medicines form .order-data {
+  padding-top: 20px;
+}
+main .container .medicines form .order-data section label {
+  display: block;
+  margin-bottom: 10px;
+}
+main .container .medicines form .order-data section .felid {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  position: relative;
+  gap: 5px;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f9f9f9;
+}
+main .container .medicines form .order-data section .felid input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
-main .content .container .sec-body .med .container .right-side .image img {
-  width: 100%;
+main .container .medicines form .order-data section .felid input:focus::-webkit-input-placeholder {
+  color: transparent;
 }
-main .content .container .sec-body .med .container .right-side .card-body .med-details:after {
-  margin-top: 10px;
-  background-color: rgba(204, 204, 204, 0.6666666667);
-  width: 100%;
-  height: 1px;
-  display: block;
-  content: " ";
+main .container .medicines form .order-data section .felid input:focus::-moz-placeholder {
+  color: transparent;
 }
-main .content .container .sec-body .med .container .right-side .card-body .pharmacies {
-  padding-top: 10px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute !important;
-      justify-content: space-around !important;
+main .container .medicines form .order-data section .felid input:focus:-ms-input-placeholder {
+  color: transparent;
 }
-main .content .container .sec-body .med .container .right-side .card-body .pharmacies a {
-  display: inline-block;
-  margin: 3px;
-  color: #000;
-  background-color: #ccc;
-  border-color: #ccc;
-  font-size: 0.9rem;
+main .container .medicines form .order-data section .felid input:focus::-ms-input-placeholder {
+  color: transparent;
 }
-main .content .container .sec-body .med .container .right-side .card-body .pharmacies a:hover {
-  color: #fff;
+main .container .medicines form .order-data section .felid input:focus::placeholder {
+  color: transparent;
+}
+main .container .medicines form .order-data section .felid input:focus ~ span {
   background-color: #059cb1;
-  border-color: #059cb1;
 }
-main .content .container .sec-foot input[type=button] {
+main .container .medicines form .order-data section .felid span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #3ab6b6;
+  height: 2px;
+  width: 100%;
+}
+main .container .medicines form .btn {
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+}
+main .container .medicines form .btn input {
   width: 160px;
   margin: 0 auto;
   outline: none;
@@ -1412,38 +1511,37 @@ main .content .container .sec-foot input[type=button] {
   border: 1px solid #059cb1;
   background-color: #059cb1;
   padding: 10px 20px;
+  margin-right: 0 !important;
 }
-main .content .container .sec-foot input[type=button]:hover {
+main .container .medicines form .btn input:hover {
   color: #059cb1;
   background-color: transparent;
   border-color: #059cb1;
 }
 
-.open {
-  display: block !important;
-}
-.open h2 {
-  font-size: 1.2rem !important;
-}
-.open ul li {
-  font-size: 0.9rem !important;
-}
-
-@media (max-width: 767.98px) {
-  .sec-body .med .filter {
-    display: block !important;
-  }
-  .sec-body .med .left-side {
-    display: none;
-    position: absolute;
-    right: 50px;
-    top: -50px;
-    z-index: 9999999999;
-  }
-  .sec-body .med .right-side {
-    width: 100% !important;
-  }
-}
 body.dark main {
   background-color: #222;
+}
+body.dark main .container {
+  background-color: #1d1d1d;
+}
+body.dark main .container .back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #efefef;
+}
+body.dark main .container .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+body.dark main .container .back-btn .f-icon {
+  font-size: 1rem;
+}
+body.dark main .container .back-btn:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
 }

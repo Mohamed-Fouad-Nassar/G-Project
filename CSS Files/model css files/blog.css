@@ -1,14 +1,13 @@
-main .content .container .sec-foot input[type=button],
-body.dark main .content .container .sec-foot input[type=button] {
+main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-foot input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container .sec-body .page {
@@ -18,8 +17,7 @@ main .content .container .sec-body .page {
   gap: 20px;
 }
 
-main .content .container .sec-foot input[type=button],
-body.dark main .content .container .sec-foot input[type=button] {
+main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-foot input[type=button] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -40,12 +38,10 @@ main {
   padding: 100px 0;
   position: relative;
 }
-
 main .content .container .sec-body .page:not(:first-of-type) {
   padding-top: 20px;
   display: none;
 }
-
 @media (max-width: 991px) and (min-width: 768px) {
   main .content .container .sec-body .page {
     display: -ms-grid;
@@ -54,31 +50,25 @@ main .content .container .sec-body .page:not(:first-of-type) {
     gap: 20;
   }
 }
-
 main .content .container .sec-body .page .box {
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
 }
-
 main .content .container .sec-body .page .box .text {
   padding: 10px;
   background-color: #fff;
 }
-
 main .content .container .sec-body .page .box .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 main .content .container .sec-body .page .box .text a:hover {
   cursor: pointer;
 }
-
 main .content .container .sec-body .page .box .text a:hover h3 {
   color: #059cb1;
 }
-
 main .content .container .sec-body .page .box .text p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -87,12 +77,10 @@ main .content .container .sec-body .page .box .text p {
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
-
 main .content .container .sec-body .page .box .text .info span {
   color: #555;
   font-size: 0.9rem;
 }
-
 main .content .container .sec-foot input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -102,7 +90,6 @@ main .content .container .sec-foot input[type=button] {
   background-color: #059cb1;
   padding: 10px 20px;
 }
-
 main .content .container .sec-foot input[type=button]:hover {
   color: #059cb1;
   background-color: transparent;
@@ -112,32 +99,26 @@ main .content .container .sec-foot input[type=button]:hover {
 body.dark main {
   background-color: #222;
 }
-
 body.dark main .content .container .sec-body .page .box {
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
   overflow: hidden;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
 }
-
 body.dark main .content .container .sec-body .page .box .text {
   padding: 10px;
   background-color: #fff;
 }
-
 body.dark main .content .container .sec-body .page .box .text a h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 body.dark main .content .container .sec-body .page .box .text a:hover {
   cursor: pointer;
 }
-
 body.dark main .content .container .sec-body .page .box .text a:hover h3 {
   color: #059cb1;
 }
-
 body.dark main .content .container .sec-body .page .box .text p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -146,28 +127,22 @@ body.dark main .content .container .sec-body .page .box .text p {
   margin-bottom: 10px;
   font-size: 0.9rem;
 }
-
 body.dark main .content .container .sec-body .page .box .text .info span {
   color: #555;
   font-size: 0.9rem;
 }
-
 body.dark main .content .container .sec-body .page .box .text {
   background-color: #222;
 }
-
 body.dark main .content .container .sec-body .page .box .text a h3 {
   color: #efefef;
 }
-
 body.dark main .content .container .sec-body .page .box .text a:hover h3 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container .sec-body .page .box .text p {
   color: #a5a5a5;
 }
-
 body.dark main .content .container .sec-foot input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -177,7 +152,6 @@ body.dark main .content .container .sec-foot input[type=button] {
   background-color: rgba(5, 156, 177, 0.8705882353);
   padding: 10px 20px;
 }
-
 body.dark main .content .container .sec-foot input[type=button]:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: transparent;

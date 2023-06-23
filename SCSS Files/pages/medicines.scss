@@ -20,9 +20,9 @@ main {
     .container {
       .sec-body {
         padding: $main-element-padding;
-        .med{
+        .med {
           position: relative;
-          .filter{
+          .filter {
             position: absolute;
             top: -50px;
             right: 0;
@@ -31,14 +31,14 @@ main {
             width: 40px;
             cursor: pointer;
             z-index: 999999999999999999;
-            span{
+            span {
               display: block;
               height: 4px;
               background-color: #000;
               margin-bottom: 4px;
             }
           }
-          .side-bar{
+          .side-bar {
             display: none;
             position: absolute;
             top: -50px;
@@ -55,30 +55,29 @@ main {
               margin: 0;
               margin-bottom: 20px;
             }
-            ul.categories{
+            ul.categories {
               list-style: none;
-              li{
+              li {
                 padding: 10px;
                 border-radius: 5px;
                 cursor: pointer;
-                a{
+                a {
                   text-decoration: none;
                   color: inherit;
                 }
               }
-              .active{
+              .active {
                 color: #fff;
                 background-color: $main-color;
               }
             }
           }
-
-          .container{
+          .cards {
             gap: 20px;
             padding: $sec-element-padding;
             position: relative;
             @extend %flex--between;
-            .left-side{
+            .left-side {
               padding: $field-top-padding;
               background-color: #fff;
               box-shadow: -16px 0 24px 4px #ececec;
@@ -90,51 +89,49 @@ main {
                 margin: 0;
                 margin-bottom: 20px;
               }
-              ul.categories{
+              ul.categories {
                 list-style: none;
-                li{
+                li {
                   padding: 10px;
                   border-radius: 5px;
                   cursor: pointer;
-                  a{
+                  a {
                     text-decoration: none;
                     color: inherit;
                   }
                 }
-                .active{
+                .active {
                   color: #fff;
                   background-color: $main-color;
                 }
               }
             }
 
-
-
-            .right-side{
+            .right-side {
               overflow: hidden;
               flex: 1;
               padding: 0;
               @extend %grid-300-20;
-              .image{
-                img{
+              .image {
+                img {
                   width: 100%;
                 }
               }
               .card-body {
-                .med-details:after{
+                .med-details:after {
                   margin-top: 10px;
                   background-color: #ccca;
                   width: 100%;
                   height: 1px;
                   display: block;
-                  content: ' ';
+                  content: " ";
                 }
-                .pharmacies{
+                .pharmacies {
                   padding-top: 10px;
                   @extend %flex-start-center;
                   flex-wrap: wrap;
                   justify-content: space-around !important;
-                  a{
+                  a {
                     display: inline-block;
                     margin: 3px;
                     color: #000;
@@ -142,7 +139,7 @@ main {
                     border-color: $dark-white-color;
                     font-size: 0.9rem;
                   }
-                  a:hover{
+                  a:hover {
                     color: #fff;
                     background-color: $main-color;
                     border-color: $main-color;
@@ -161,32 +158,32 @@ main {
     }
   }
 }
-.open{
+.open {
   display: block !important;
-  h2{
+  h2 {
     font-size: 1.2rem !important;
   }
-  ul{
-    li{
+  ul {
+    li {
       font-size: 0.9rem !important;
     }
   }
 }
 
-//media 
+//media
 @media (max-width: 767.98px) {
   .sec-body .med {
-    .filter{
+    .filter {
       display: block !important;
     }
-    .left-side{
+    .left-side {
       display: none;
       position: absolute;
       right: 50px;
       top: -50px;
       z-index: 9999999999;
     }
-    .right-side{
+    .right-side {
       width: 100% !important;
     }
   }

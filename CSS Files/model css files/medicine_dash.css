@@ -1,16 +1,13 @@
-main .content .container .sec-body .control .table .tab-head,
-main .content .container .sec-body .control .table .tab-body .item,
-body.dark main .content .container .sec-body .control .table .tab-head,
-body.dark main .content .container .sec-body .control .table .tab-body .item {
+main .content .container .sec-body .control .table .tab-head, main .content .container .sec-body .control .table .tab-body .item, body.dark main .content .container .sec-body .control .table .tab-head, body.dark main .content .container .sec-body .control .table .tab-body .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container .sec-body .info {
@@ -18,41 +15,38 @@ main .content .container .sec-body .info {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a,
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a, body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type,
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type, body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a,
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a, body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -60,7 +54,7 @@ body.dark main .content .container .sec-body .control .table .tab-body .item>spa
   -o-border-radius: 5px !important;
 }
 
-main .content .container .sec-body .info>div {
+main .content .container .sec-body .info > div {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -75,189 +69,159 @@ main .content .container h2 {
   font-size: 1.6rem;
   font-weight: 600;
 }
-
-main .content .container h2::before,
-main .content .container h2::after {
+main .content .container h2::before, main .content .container h2::after {
   content: "";
   position: absolute;
   left: 0;
   height: 3px;
   background-color: #3ab6b6;
 }
-
 main .content .container h2::before {
   width: 95px;
   bottom: -8px;
 }
-
 main .content .container h2::after {
   width: 50px;
   bottom: -15px;
 }
-
 main .content .container .sec-body .info {
   max-width: 750px;
   margin: 0 auto;
   gap: 20px;
 }
-
 @media (max-width: 575px) {
   main .content .container .sec-body .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 10px;
   }
 }
-
-main .content .container .sec-body .info>div {
+main .content .container .sec-body .info > div {
   width: 50%;
   padding: 20px;
   background-color: #f9f9f9;
   text-align: center;
 }
-
 @media (max-width: 575px) {
-  main .content .container .sec-body .info>div {
+  main .content .container .sec-body .info > div {
     width: 100%;
   }
 }
-
-main .content .container .sec-body .info>div h3 {
+main .content .container .sec-body .info > div h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
   font-weight: 600;
 }
-
-main .content .container .sec-body .info>div span {
+main .content .container .sec-body .info > div span {
   color: #059cb1;
   font-size: 1.4rem;
   font-weight: 700;
 }
-
-main .content .container .sec-body .info>div a .f-icon {
+main .content .container .sec-body .info > div a .f-icon {
   font-size: 2.6rem;
   color: #059cb1;
   cursor: pointer;
 }
-
-main .content .container .sec-body .info>div a .f-icon:hover {
+main .content .container .sec-body .info > div a .f-icon:hover {
   color: #3ab6b6;
 }
-
 main .content .container .sec-body .control {
   padding-top: 30px;
   overflow-x: auto;
 }
-
 main .content .container .sec-body .control .table {
   min-width: 750px;
   padding-bottom: 5px;
   white-space: nowrap;
   width: 100%;
 }
-
 main .content .container .sec-body .control .table .tab-head {
   gap: 3px;
 }
-
-main .content .container .sec-body .control .table .tab-head>span {
+main .content .container .sec-body .control .table .tab-head > span {
   display: block;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px 15px;
   background-color: #3ab6b6;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-main .content .container .sec-body .control .table .tab-head>span:first-of-type {
+main .content .container .sec-body .control .table .tab-head > span:first-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 60px;
 }
-
-main .content .container .sec-body .control .table .tab-head>span:nth-of-type(2) {
+main .content .container .sec-body .control .table .tab-head > span:nth-of-type(2) {
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
-
-main .content .container .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
+main .content .container .sec-body .control .table .tab-head > span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
-
-main .content .container .sec-body .control .table .tab-head>span:last-of-type {
+main .content .container .sec-body .control .table .tab-head > span:last-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 130px;
 }
-
 main .content .container .sec-body .control .table .tab-body {
   padding-top: 2px;
 }
-
 main .content .container .sec-body .control .table .tab-body .item {
   padding-top: 2px;
   gap: 3px;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span {
+main .content .container .sec-body .control .table .tab-body .item > span {
   display: block;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px 15px;
   background-color: #3ab6b6;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:first-of-type {
+main .content .container .sec-body .control .table .tab-body .item > span:first-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 60px;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+main .content .container .sec-body .control .table .tab-body .item > span:nth-of-type(2) {
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+main .content .container .sec-body .control .table .tab-body .item > span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 130px;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span {
+main .content .container .sec-body .control .table .tab-body .item > span {
   background-color: #eee;
   color: #212529;
   font-size: 1rem !important;
   font-weight: 500 !important;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type {
   padding: 7px 10px;
   gap: 10px;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a {
   border: none;
   outline: none;
   color: #fff;
@@ -265,153 +229,126 @@ main .content .container .sec-body .control .table .tab-body .item>span:last-of-
   height: 30px;
   background-color: #059cb1;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:hover {
   background-color: #3ab6b6;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type {
   background-color: #fb0505;
 }
-
-main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type:hover {
   background-color: #d20519;
 }
 
 body.dark main {
   background-color: #1d1d1d;
 }
-
 body.dark main .content .container h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .content .container h2::before,
-body.dark main .content .container h2::after {
+body.dark main .content .container h2::before, body.dark main .content .container h2::after {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
-
-body.dark main .content .container .sec-body .info>div {
+body.dark main .content .container .sec-body .info > div {
   background-color: #222;
 }
-
-body.dark main .content .container .sec-body .info>div h3 {
+body.dark main .content .container .sec-body .info > div h3 {
   color: #efefef;
 }
-
-body.dark main .content .container .sec-body .info>div span {
+body.dark main .content .container .sec-body .info > div span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .content .container .sec-body .info>div a .f-icon {
+body.dark main .content .container .sec-body .info > div a .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .content .container .sec-body .info>div a .f-icon:hover {
+body.dark main .content .container .sec-body .info > div a .f-icon:hover {
   color: rgba(58, 182, 182, 0.8705882353);
 }
-
 body.dark main .content .container .sec-body .control .table .tab-head {
   gap: 3px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-head>span {
+body.dark main .content .container .sec-body .control .table .tab-head > span {
   display: block;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px 15px;
   background-color: #3ab6b6;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-head>span:first-of-type {
+body.dark main .content .container .sec-body .control .table .tab-head > span:first-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 60px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-head>span:nth-of-type(2) {
+body.dark main .content .container .sec-body .control .table .tab-head > span:nth-of-type(2) {
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
+body.dark main .content .container .sec-body .control .table .tab-head > span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-head>span:last-of-type {
+body.dark main .content .container .sec-body .control .table .tab-head > span:last-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 130px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-head>span {
+body.dark main .content .container .sec-body .control .table .tab-head > span {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
-
 body.dark main .content .container .sec-body .control .table .tab-body .item {
   padding-top: 2px;
   gap: 3px;
   gap: 3px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span {
   display: block;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px 15px;
   background-color: #3ab6b6;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:first-of-type {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:first-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 60px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:nth-of-type(2) {
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 130px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span {
   background-color: #eee;
   color: #212529;
   font-size: 1rem !important;
   font-weight: 500 !important;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type {
   padding: 7px 10px;
   gap: 10px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a {
   border: none;
   outline: none;
   color: #fff;
@@ -419,79 +356,65 @@ body.dark main .content .container .sec-body .control .table .tab-body .item>spa
   height: 30px;
   background-color: #059cb1;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:hover {
   background-color: #3ab6b6;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type {
   background-color: #fb0505;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type:hover {
   background-color: #d20519;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span {
   display: block;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 10px 15px;
   background-color: #3ab6b6;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:first-of-type {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:first-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 60px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:nth-of-type(2) {
   -webkit-box-flex: 2;
-  -ms-flex: 2;
-  flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type {
   -webkit-box-flex: 0;
-  -ms-flex: 0;
-  flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   min-width: 130px;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span {
   font-weight: 400 !important;
   background-color: #222;
   color: #a5a5a5;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:hover {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type {
   background-color: #d20519;
 }
-
-body.dark main .content .container .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+body.dark main .content .container .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type:hover {
   background-color: #dc3545;
 }

@@ -31,7 +31,7 @@ main .container aside ul li button, main .container .content .sec-body .box, mai
   -o-border-radius: 5px !important;
 }
 
-main .container aside, main .container .content .sec-body {
+main .container aside, main .container .content, main .container .content .sec-body {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -127,7 +127,7 @@ main .container aside ul li button {
 }
 @media (max-width: 767px) {
   main .container aside ul li a,
-main .container aside ul li button {
+  main .container aside ul li button {
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -142,7 +142,7 @@ main .container aside ul li button {
     height: 45px;
   }
   main .container aside ul li a .f-icon,
-main .container aside ul li button .f-icon {
+  main .container aside ul li button .f-icon {
     font-size: 1.1rem;
   }
 }
@@ -178,7 +178,7 @@ main .container aside ul li button span {
 }
 @media (max-width: 767px) {
   main .container aside ul li a span,
-main .container aside ul li button span {
+  main .container aside ul li button span {
     display: none;
   }
 }
@@ -188,7 +188,7 @@ main .container aside ul li button .f-icon {
 }
 @media (max-width: 767px) {
   main .container aside ul li a .f-icon,
-main .container aside ul li button .f-icon {
+  main .container aside ul li button .f-icon {
     margin-right: 0;
   }
 }

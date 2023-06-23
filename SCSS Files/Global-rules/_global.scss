@@ -25,6 +25,11 @@ body {
   @extend %reset;
 }
 
+.box,
+.card {
+  @extend %border-radius-5;
+}
+
 ::after,
 ::before {
   @extend %transition;

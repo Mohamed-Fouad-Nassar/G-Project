@@ -1,0 +1,286 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+// additional page styling
+
+// Start Main Styling:-
+main {
+  .container {
+    position: relative;
+    padding-bottom: 30px;
+    .back-btn {
+      @include back-btn($sec-element-padding, $sec-element-padding, "light");
+      top: 0 !important;
+    }
+    .medicines {
+      .head {
+        padding-bottom: 30px;
+        h1 {
+          text-align: center;
+          font-size: 1.5rem;
+          color: $main-color;
+        }
+      }
+      form {
+        div {
+          overflow-x: auto;
+        }
+        .cards {
+          @extend %grid-250-20;
+          .box {
+            @extend %border-radius-0;
+            display: none;
+            &.active {
+              display: block;
+            }
+            .card {
+              overflow: hidden;
+              border: 1px solid $light-white-color;
+              position: relative;
+              cursor: pointer;
+              user-select: none;
+              &:before {
+                @extend %border-radius-5;
+                content: "";
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                border: 1px solid $light-white-color;
+                width: 25px;
+                height: 25px;
+                z-index: 100;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                top: 22px;
+                right: 22px;
+                border: 1px solid transparent;
+                opacity: 0;
+                background-color: $main-color;
+                width: 0;
+                height: 0;
+                transition: 0.3s;
+                -webkit-transition: 0.3s;
+                -moz-transition: 0.3s;
+                -ms-transition: 0.3s;
+                -o-transition: 0.3s;
+                border-radius: 0.5px;
+                -webkit-border-radius: 0.5px;
+                -moz-border-radius: 0.5px;
+                -ms-border-radius: 0.5px;
+                -o-border-radius: 0.5px;
+              }
+              .image {
+                width: 100%;
+                height: 200px;
+                img {
+                  width: 100%;
+                  height: 200px;
+                  object-fit: cover;
+                }
+              }
+              .description {
+                background-color: $light-white-color;
+                padding: 10px {
+                  bottom: 0;
+                }
+                h2 {
+                  font-size: 1.1rem;
+                  font-weight: 600;
+                }
+                p {
+                  font-size: 0.9rem;
+                }
+              }
+            }
+            input {
+              cursor: pointer;
+              display: none;
+              &:checked + .card {
+                border-color: $main-color;
+                &::before {
+                  border-color: $main-color;
+                }
+                &::after {
+                  opacity: 1;
+                  border-color: $main-color;
+                  transform: scale(8);
+                  -webkit-transform: scale(8);
+                  -moz-transform: scale(8);
+                  -ms-transform: scale(8);
+                  -o-transform: scale(8);
+                }
+                .description {
+                  background-color: $main-color;
+                  h2,
+                  p {
+                    color: $white-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .sec-foot {
+          padding-top: 20px;
+          input {
+            @include button-shape($main-color, "light");
+          }
+        }
+        .order-data {
+          padding-top: 20px;
+          @extend %grid-200-10;
+          section {
+            label {
+              display: block;
+              margin-bottom: $sec-element-padding;
+            }
+            .felid {
+              @extend %flex-center-center;
+              flex-direction: row-reverse;
+              position: relative;
+              gap: 5px;
+              padding: 0 {
+                left: 5px;
+                right: 5px;
+              }
+              background-color: $light-input-background;
+              input {
+                flex: 1;
+                padding: $sec-element-padding {
+                  left: 5px;
+                  right: 0;
+                }
+                border: none;
+                outline: none;
+                background-color: transparent;
+                &:focus {
+                  @include placeholder-color(transparent);
+                  ~ span {
+                    background-color: $main-color;
+                  }
+                }
+              }
+              span {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $sec-color;
+                height: 2px;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .btn {
+          width: 100%;
+          padding: 0 {
+            top: $main-element-padding;
+          }
+          input {
+            @include button-shape($main-color, "light");
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      .container {
+        .back-btn {
+          @include back-btn($sec-element-padding, $sec-element-padding, "dark");
+        }
+        .medicines {
+          form {
+            .cards {
+              .box {
+                .card {
+                  border-color: $sec-dark-bg;
+                  &:before {
+                    border-color: $sec-dark-bg;
+                  }
+                  &:after {
+                    border-color: transparent;
+                    background-color: $main-dark-color;
+                  }
+                  .description {
+                    background-color: $sec-dark-bg;
+                    h2,
+                    p {
+                      color: $sec-text-dark-color;
+                    }
+                  }
+                }
+                .image {
+                  img {
+                    filter: brightness(0.9);
+                    -webkit-filter: brightness(0.9);
+                  }
+                }
+                input {
+                  &:checked + .card {
+                    border-color: $main-dark-color;
+                    &::before {
+                      border-color: $main-dark-color;
+                    }
+                    &::after {
+                      border-color: $main-dark-color;
+                    }
+                    .description {
+                      background-color: $main-dark-color;
+                      h2,
+                      p {
+                        color: $black-color;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .order-data {
+              section {
+                label {
+                  color: $sec-text-dark-color;
+                }
+                .felid {
+                  background-color: $sec-dark-bg;
+                  input {
+                    background-color: transparent;
+                    color: $white-dark-color;
+                    &:focus {
+                      @include placeholder-color(transparent);
+                      ~ span {
+                        background-color: $main-dark-color;
+                      }
+                    }
+                  }
+                  span {
+                    background-color: $sec-dark-color;
+                  }
+                }
+              }
+            }
+            .btn {
+              input {
+                @include button-shape($main-dark-color, "dark");
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

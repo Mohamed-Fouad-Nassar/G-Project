@@ -1364,6 +1364,7 @@ main .content .container .sec-body .med .filter {
   width: 40px;
   cursor: pointer;
   z-index: 1000000000000000000;
+  padding: 10px;
 }
 main .content .container .sec-body .med .filter span {
   display: block;
@@ -1379,8 +1380,6 @@ main .content .container .sec-body .med .side-bar {
   z-index: 1000000000000000000;
   padding: 7px;
   background-color: #fff;
-  -webkit-box-shadow: -16px 0 24px 4px #ececec;
-          box-shadow: -16px 0 24px 4px #ececec;
   width: 200px;
   height: 30rem;
   color: #000;
@@ -1414,8 +1413,6 @@ main .content .container .sec-body .med .cards {
 main .content .container .sec-body .med .cards .left-side {
   padding: 7px;
   background-color: #fff;
-  -webkit-box-shadow: -16px 0 24px 4px #ececec;
-          box-shadow: -16px 0 24px 4px #ececec;
   width: 200px;
   height: 30rem;
   color: #000;
@@ -1521,4 +1518,42 @@ main .content .container .sec-foot input[type=button]:hover {
 }
 body.dark main {
   background-color: #222;
+}
+body.dark main .content .container .sec-body .med .filter {
+  background: none;
+}
+body.dark main .content .container .sec-body .med .filter span {
+  background-color: rgba(58, 182, 182, 0.8705882353);
+}
+body.dark main .content .container .sec-body .med .cards .left-side {
+  background-color: #1d1d1d;
+  color: #efefef;
+}
+body.dark main .content .container .sec-body .med .cards .left-side ul li {
+  color: #a5a5a5;
+}
+body.dark main .content .container .sec-body .med .cards .left-side ul li .active {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .content .container .sec-body .med .right-side .card {
+  background-color: #1d1d1d;
+}
+body.dark main .content .container .sec-body .med .right-side .card .card-body h5 {
+  color: #efefef;
+}
+body.dark main .content .container .sec-body .med .right-side .card .card-body span {
+  color: #a5a5a5;
+}
+body.dark main .content .container .sec-body .med .right-side .card .pharmacies a:hover {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  color: #efefef;
+}
+body.dark main .content .container .sec-foot #more {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  color: #efefef;
+}
+body.dark main .content .container .sec-foot #more:hover {
+  background: none;
+  color: rgba(5, 156, 177, 0.8705882353);
+  border-color: rgba(5, 156, 177, 0.8705882353);
 }

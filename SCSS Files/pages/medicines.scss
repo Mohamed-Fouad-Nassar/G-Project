@@ -31,6 +31,7 @@ main {
             width: 40px;
             cursor: pointer;
             z-index: 999999999999999999;
+            padding: $sec-element-padding;
             span {
               display: block;
               height: 4px;
@@ -46,7 +47,6 @@ main {
             z-index: 999999999999999999;
             padding: $field-top-padding;
             background-color: #fff;
-            box-shadow: -16px 0 24px 4px #ececec;
             width: 200px;
             height: 30rem;
             color: #000;
@@ -80,7 +80,6 @@ main {
             .left-side {
               padding: $field-top-padding;
               background-color: #fff;
-              box-shadow: -16px 0 24px 4px #ececec;
               width: 200px;
               height: 30rem;
               color: #000;
@@ -189,10 +188,70 @@ main {
   }
 }
 
+
+//dark mode
 body {
   &.dark {
     main {
       background-color: $main-dark-bg;
+      .content {
+       .container{
+        .sec-body{
+          .med{
+            .filter{
+              // background-color: $sec-dark-color;
+              background: none;
+              span{
+                background-color: $sec-dark-color;
+              }
+            }
+            .cards{
+              .left-side{
+                background-color: $sec-dark-bg;
+                color: $white-dark-color;
+                ul li{
+                  color: $sec-text-dark-color;
+                  .active{
+                    background-color: $main-dark-color;
+                  }
+                }
+              }
+
+            }
+            .right-side{
+              .card{
+                background-color: $sec-dark-bg;
+                .card-body{
+                  h5{
+                    color: $white-dark-color;
+                  }
+                  span{
+                    color: $sec-text-dark-color;
+                  }
+                }
+                .pharmacies{
+                  a:hover{
+                    background-color: $main-dark-color;
+                    color: $white-dark-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .sec-foot{
+          #more{
+            background-color: $main-dark-color;
+            color: $white-dark-color;
+          }
+          #more:hover{
+            background: none;
+            color: $main-dark-color;
+            border-color: $main-dark-color;
+          }
+        }
+       }
+      }
     }
   }
 }

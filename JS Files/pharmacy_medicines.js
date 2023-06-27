@@ -4,6 +4,35 @@ cancelBtn.addEventListener("click", function () {
   window.history.back();
 });
 
+//choose categories
+let switcher= document.querySelectorAll("#main_page .medicines .cat ul li");
+let box= Array.from(document.querySelectorAll("#main_page .medicines form .cards .box"));
+
+switcher.forEach((li) => {
+    li.addEventListener("click", removeActive);
+    li.addEventListener("click", managment)
+
+});
+
+function removeActive(){
+    switcher.forEach((li) => {
+        li.classList.remove("active");
+        this.classList.add("active");
+    });
+}
+
+function managment(){
+    box.forEach((img) => {
+        img.style.display= 'none';
+    });
+
+    document.querySelectorAll(this.dataset.content).forEach((cat) => {
+        cat.style.display= 'block';
+    })
+}
+//////////////
+
+
 // back to top button
 let goUp = document.getElementById("up");
 window.onscroll = function () {

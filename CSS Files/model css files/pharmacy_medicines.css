@@ -69,6 +69,29 @@ main .container .medicines .head h1 {
   font-size: 1.5rem;
   color: #059cb1;
 }
+main .container .medicines .cat {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #eee;
+}
+main .container .medicines .cat ul {
+  list-style: none;
+}
+main .container .medicines .cat ul li {
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+main .container .medicines .cat ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+main .container .medicines .cat ul .active {
+  color: #fff;
+  background-color: #059cb1;
+}
 main .container .medicines form .cards .box {
   display: none;
 }
@@ -280,6 +303,17 @@ body.dark main .container .back-btn .f-icon {
 }
 body.dark main .container .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines .cat {
+  background-color: #1d1d1d;
+  color: #efefef;
+}
+body.dark main .container .medicines .cat ul li {
+  color: #a5a5a5;
+}
+body.dark main .container .medicines .cat ul .active {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  color: #fff !important;
 }
 body.dark main .container .medicines form .filter ul li a {
   background-color: #1d1d1d;

@@ -28,6 +28,29 @@ main {
           color: $main-color;
         }
       }
+      .cat{
+        text-align: center;
+        margin-bottom: 20px;
+        padding: $sec-element-padding;
+        background-color: $light-white-color;
+        ul{
+          list-style: none;
+          li{
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            cursor: pointer;
+            a{
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+          .active{
+            color: #fff;
+            background-color: $main-color;
+          }
+        }
+      }
       form {
         // div {
         //   overflow-x: auto;
@@ -224,6 +247,7 @@ main {
   }
 }
 
+//dark mode
 body {
   &.dark {
     main {
@@ -233,6 +257,17 @@ body {
           @include back-btn($sec-element-padding, $sec-element-padding, "dark");
         }
         .medicines {
+          .cat{
+            background-color: $sec-dark-bg;
+            color: $white-dark-color;
+            ul li{
+              color: $sec-text-dark-color;
+            }
+            ul .active{
+              background-color: $main-dark-color;
+              color: #fff !important;
+            }
+          }
           form {
             .filter {
               ul {

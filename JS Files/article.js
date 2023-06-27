@@ -83,3 +83,29 @@ backBtn.addEventListener("click", function () {
   console.log("Click");
   window.history.back();
 });
+
+// liked button
+let likedBtn = document.getElementById("likedBtn");
+let likedNum = document.getElementById("likedNum");
+likedBtn.onclick = function () {
+  if (likedBtn.classList.contains("active")) {
+    likedBtn.classList.remove("active");
+    likedNum.innerText--;
+  } else {
+    likedBtn.classList.add("active");
+    likedNum.innerText++;
+  }
+};
+
+// saved button
+let savedBtn = document.getElementById("savedBtn");
+let savedNum = document.getElementById("savedNum");
+savedBtn.onclick = function () {
+  if (savedBtn.classList.contains("active")) {
+    savedBtn.classList.remove("active");
+    savedNum.innerText--;
+  } else {
+    savedBtn.classList.add("active");
+    savedNum.innerText++;
+  }
+};

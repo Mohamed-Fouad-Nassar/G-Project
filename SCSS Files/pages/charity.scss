@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 // additional page styling
 
 // Start Main Styling:-
@@ -18,11 +18,14 @@ main {
     // bottom: $main-element-padding * 2;
   }
   .container {
-    background-color: $light-white-color;
+    // background-color: $light-white-color;
     position: relative;
     .back-btn {
       @include back-btn($sec-element-padding, $sec-element-padding, "light");
       top: 16px !important;
+      @media (min-width: 1400px) {
+        top: 50px !important;
+      }
     }
     > h1 {
       display: none;
@@ -39,11 +42,12 @@ main {
       }
     }
     .content {
-      padding: {
-        left: $sec-element-padding;
-        right: $sec-element-padding;
-        bottom: $main-element-padding;
-      }
+      padding-bottom: $main-element-padding;
+      // padding: {
+      //   left: $sec-element-padding;
+      //   right: $sec-element-padding;
+      //   bottom: $main-element-padding;
+      // }
       .upper-sec {
         @extend %flex-center-center;
         gap: $main-element-padding;
@@ -69,13 +73,18 @@ main {
             margin: 0 {
               left: 25px;
             }
+            @media (min-width: 1400px) {
+              padding-top: 0;
+            }
             @media (max-width: 991px) {
               display: none;
             }
           }
         }
         .data {
-          background-color: $white-color;
+          // background-color: $white-color;
+          @extend %border-radius-5;
+          background-color: $light-white-color;
           padding: $main-element-padding {
             top: 0;
           }
@@ -160,7 +169,7 @@ main {
         .body {
           @extend %grid-300-20;
           .image {
-            border: 5px solid $white-color;
+            border: 5px solid $light-white-color;
             img {
               width: 100%;
               height: 250px;
@@ -184,7 +193,7 @@ body {
     main {
       background-color: $main-dark-bg;
       .container {
-        background-color: $sec-dark-bg;
+        // background-color: $sec-dark-bg;
         .back-btn {
           @include back-btn($sec-element-padding, $sec-element-padding, "dark");
         }
@@ -202,7 +211,8 @@ body {
               }
             }
             .data {
-              background-color: $main-dark-bg;
+              // background-color: $main-dark-bg;
+              background-color: $sec-dark-bg;
               > div {
                 h2 {
                   color: $white-dark-color;
@@ -244,7 +254,7 @@ body {
           .events {
             .body {
               .image {
-                border-color: $main-dark-bg;
+                border-color: $sec-dark-bg;
               }
             }
           }

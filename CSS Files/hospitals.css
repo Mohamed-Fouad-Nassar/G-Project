@@ -95,7 +95,7 @@ main .content .container .sec-body {
   -o-transform: translateY(-50%);
 }
 
-main .content .container .sec-body .box .data .contact > div a, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-body .box .data .contact > div a, body.dark main .content .container .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, .box,
+main .content .container .sec-body .box .data .contact > div a, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-body .box .data .contact > div a, body.dark main .content .container .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -104,7 +104,7 @@ main .content .container .sec-body .box .data .contact > div a, main .content .c
   -o-border-radius: 5px !important;
 }
 
-main .content .container .sec-body .box .avatar, main .content .container .sec-body .box .data .info > div > div > .f-icon, body.dark main .content .container .sec-body .box .avatar, body.dark main .content .container .sec-body .box .data .info > div > div > .f-icon, header .container .log-in-acc .lang .h-btn a,
+main .content .container .sec-body .box .avatar, main .content .container .sec-body .box .data .info > div > div > .f-icon, body.dark main .content .container .sec-body .box .avatar, body.dark main .content .container .sec-body .box .data .info > div > div > .f-icon, header .container .log-in-acc article > .menu ul li div, header .container .log-in-acc .lang .h-btn a,
 header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
 header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
 .head-shape-w span {
@@ -815,6 +815,7 @@ header .container .log-in-acc article > .menu ul::after {
   }
 }
 header .container .log-in-acc article > .menu ul li {
+  overflow: hidden;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -824,11 +825,6 @@ header .container .log-in-acc article > .menu ul li:hover {
   cursor: pointer;
 }
 header .container .log-in-acc article > .menu ul li div {
-  border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  -o-border-radius: 50% !important;
   width: 25px;
   overflow: hidden;
 }

@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="../../CSS Files/all.min.css" />
     <!-- bootstrap css file -->
     <link rel="stylesheet" href="../../CSS Files/bootstrap.min.css" />
-    <!-- swiper css files -->
-    <link rel="stylesheet" href="../../CSS Files/swiper-bundle.min.css" />
     <!-- main css file -->
-    <link rel="stylesheet" href="../../CSS Files/dashboard_control.css" />
+    <link rel="stylesheet" href="../../CSS Files/profile_medicines.css" />
     <!-- font open-sans files -->
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,7 +33,7 @@
       type="image/x-icon"
     />
     <!-- page title -->
-    <title>Dashboard</title>
+    <title>Profile-medicines</title>
   </head>
   <body>
     <!-- Start Header -->
@@ -43,9 +41,8 @@
       <div class="container">
         <div class="logo">
           <a href="../../index.html">
-            <!-- <h1 id="logoText">hope</h1> -->
-            <!-- <img src="./Data/un-used-Images/logo-1.png" alt="logo-image" /> -->
-            <img src="../../Data/un-used-Images/logo-2.png" alt="logo-image" />
+            <h1 id="logoText">hope</h1>
+            <!-- <img src="./Data/Images/logo.png" alt="logo-image" /> -->
           </a>
         </div>
         <nav id="nav">
@@ -86,6 +83,18 @@
                 <span>blog</span>
               </a>
             </li>
+            <!-- <li class="link">
+              <a href="../charities.html">
+                <i class="f-icon fa-solid fa-hand-holding-heart"></i>
+                <span>charities</span>
+              </a>
+            </li> -->
+            <!-- <li class="link">
+              <a href="#contacts">
+                <i class="f-icon fa-solid fa-comments"></i>
+                <span>contacts</span>
+              </a>
+            </li> -->
           </ul>
         </nav>
         <!-- Start Not Logging In View -->
@@ -96,44 +105,18 @@
         <!-- End Not Logging In View -->
         <!-- Start Logging In View -->
         <div class="log-in-acc">
-          <article class="lang">
+          <article class="cart">
             <div class="h-btn">
-              <div>
-                <img src="../../Data/Images/usa.png" alt="lang-flag-image" />
-              </div>
-              <span>en</span>
-            </div>
-            <div class="menu">
-              <ul>
-                <li img-src="../../Data/Images/usa.png" lang-text="en">
-                  <div>
-                    <img
-                      src="../../Data/Images/usa.png"
-                      alt="lang-flag-image"
-                    />
-                  </div>
-                  <span>en</span>
-                </li>
-                <li img-src="../../Data/Images/eg.png" lang-text="ar">
-                  <div>
-                    <img src="../../Data/Images/eg.png" alt="lang-flag-image" />
-                  </div>
-                  <span>ar</span>
-                </li>
-              </ul>
+              <a href="../cart.html" number="3">
+                <i class="f-icon fa-solid fa-cart-shopping"></i>
+              </a>
             </div>
           </article>
           <article class="theme">
             <div class="h-btn">
-              <!-- <i class="f-icon fa-solid fa-circle-half-stroke"></i> -->
-              <!-- <i class="f-icon light fa-solid fa-sun"></i> -->
-              <!-- <i class="f-icon dark fa-solid fa-moon"></i> -->
-              <ion-icon
-                class="f-icon light"
-                name="sunny"
-                size="large"
-              ></ion-icon>
-              <ion-icon class="f-icon dark" name="moon" size="large"></ion-icon>
+              <i class="f-icon fa-solid fa-circle-half-stroke"></i>
+              <!-- <i class="f-icon fa-solid fa-sun"></i> -->
+              <!-- <i class="f-icon fa-solid fa-moon"></i> -->
             </div>
             <div class="menu"></div>
           </article>
@@ -147,7 +130,7 @@
             <div class="menu">
               <ul>
                 <li id="view-profile">
-                  <a href="../view_profile.html">view profile</a>
+                  <a href="../user-profile/view_profile.html">view profile</a>
                 </li>
                 <li id="log-out-btn">
                   <span>log out</span>
@@ -162,67 +145,58 @@
     <!-- End Header -->
     <!-- Start Main -->
     <main id="main_page">
-      <!-- Start Aside -->
-      <aside>
-        <div class="head">
-          <a href="../dashboard.html">dashboard</a>
-          <div class="shape">
-            <span></span>
-          </div>
-        </div>
-        <div class="links">
+      <div class="cont">
+        <!-- Start Aside -->
+        <aside>
           <ul>
-            <li class="aside-link">
-              <a href="../dashboard.html">
-                <i class="f-icon fa-regular fa-chart-bar"></i>
-                <span>dashboard</span>
+            <li>
+              <a href="../view_pharmacy_profile.html">
+                <i class="f-icon fa-solid fa-user"></i>
+                <span>personal info</span>
               </a>
             </li>
-            <li class="aside-link">
-              <a href="./doctors-dash.html">
-                <i class="f-icon fa-solid fa-user-doctor"></i>
-                <span>doctors</span>
+            <li>
+              <a href="./Pharmacy_profile_orders.html">
+                <i class="f-icon fa-solid fa-cart-shopping"></i>
+                <span>orders</span>
               </a>
             </li>
-            <li class="aside-link">
-              <a href="./hospitals-dash.html">
-                <i class="f-icon fa-solid fa-hospital"></i>
-                <span>hospitals</span>
+            <li>
+              <a href="#top" class="active">
+                <i class="f-icon fa-solid fa-pills"></i>
+                <span>medicines</span>
               </a>
             </li>
-            <li class="aside-link">
-              <a href="./pharmacies-dash.html">
-                <i class="f-icon fa-solid fa-house-medical"></i>
-                <span>pharmacies</span>
+            <li>
+              <a href="./liked_articles.html">
+                <i class="f-icon fa-solid fa-thumbs-up"></i>
+                <span>liked articles</span>
               </a>
             </li>
-            <li class="aside-link">
-              <a href="./blog-dash.html">
-                <i class="f-icon fa-solid fa-book-open-reader"></i>
-                <span>blog</span>
+            <li>
+              <a href="./saved_articles.html">
+                <i class="f-icon fa-solid fa-bookmark"></i>
+                <span>saved articles</span>
               </a>
             </li>
-            <li class="aside-link">
-              <a href="#" class="active">
-                <i class="f-icon fa-solid fa-hand-holding-heart"></i>
-                <span>charities</span>
-              </a>
+            <li>
+              <button>
+                <i class="f-icon fa-solid fa-arrow-right-from-bracket"></i>
+                <!-- <i class="f-icon fa-solid fa-right-from-bracket"></i> -->
+                <span>log out</span>
+              </button>
             </li>
           </ul>
-        </div>
-      </aside>
-      <!-- End Aside -->
-      <!-- Start Content  -->
-      <section class="content">
-        <div class="charities">
-          <div class="sec-head">
-            <h2>charities</h2>
-          </div>
+        </aside>
+        <!-- End Aside -->
+        <!-- start content section -->
+        <section class="content">
+          <!-- <h2>manage medicines</h2> -->
           <div class="sec-body">
             <article class="info">
               <div class="modify">
                 <h3>add a new item</h3>
-                <a href="../modify-pages/modify_charity.html">
+                <a href="../modify-pages/modify_medicine.html">
                   <i class="f-icon fa-solid fa-circle-plus"></i>
                 </a>
               </div>
@@ -247,7 +221,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -271,7 +245,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -295,7 +269,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -319,7 +293,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -343,7 +317,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -367,7 +341,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -391,7 +365,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -415,7 +389,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -439,7 +413,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -463,7 +437,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -487,7 +461,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -511,7 +485,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -535,7 +509,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -559,7 +533,7 @@
                     <span>1 jun 2022</span>
                     <span>
                       <a
-                        href="../modify-pages/modify_charity.html"
+                        href="../modify-pages/modify_medicine.html"
                         class="edit"
                       >
                         <i class="f-icon fa-solid fa-pencil"></i>
@@ -580,13 +554,13 @@
               </div>
             </article>
           </div>
-        </div>
-      </section>
-      <!-- End Content  -->
+        </section>
+        <!-- end content section -->
+      </div>
       <!-- Start Top Button -->
       <div class="top" id="up">
         <a href="#">
-          <i class="f-icon fa-solid fa-angle-up"></i>
+          <i class="fa-solid fa-angle-up"></i>
         </a>
       </div>
       <!-- End Top Button -->
@@ -714,11 +688,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-- swiper script -->
-    <script src="../../JS Files/swiper-bundle.min.js"></script>
+    <!-- main script -->
+    <!-- <script src=""></script> -->
     <!-- header script -->
     <script src="../../JS Files/header.js"></script>
-    <!-- main script -->
-    <!-- <script src="../JS Files/dashboard.js"></script> -->
   </body>
 </html>

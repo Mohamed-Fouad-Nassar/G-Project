@@ -112,8 +112,15 @@
         <div class="log-in-acc">
           <article class="cart">
             <div class="h-btn">
-              <a href="./HTML Files/cart.html" number="3">
+              <a href="./HTML Files/cart.html" data-number="3">
                 <i class="f-icon fa-solid fa-cart-shopping"></i>
+              </a>
+            </div>
+          </article>
+          <article class="notification">
+            <div class="h-btn">
+              <a href="./HTML Files/notifications.html" data-number="4">
+                <i class="f-icon fa-solid fa-bell"></i>
               </a>
             </div>
           </article>
@@ -1292,5 +1299,10 @@
     <script src="./JS Files/header.js"></script>
     <!-- main page only script -->
     <script src="./JS Files/main-page-only.js"></script>
+    <script>
+      document.getElementById("copyright").innerText = new Date().getFullYear();
+      document.getElementById("copyright").style.cssText =
+        "font-family:inherit; font-size:inherit; font-weight:inherit; color:#aaa !important;";
+    </script>
   </body>
 </html>

@@ -14,13 +14,13 @@
 main {
   background-color: $light-white-color;
   min-height: calc(100vh - 544px);
-  padding: 0 {
-    top: $up-down-padding;
-    bottom: $main-element-padding * 2;
-  }
   position: relative;
+  padding: 0 {
+    top: $up-down-padding / 2;
+    // bottom: $main-element-padding * 2;
+  }
   @media (max-width: 767px) {
-    padding-top: 150px;
+    padding-top: 130px !important;
   }
   .container {
     @extend %flex-center-center;
@@ -28,15 +28,22 @@ main {
     @media (max-width: 991px) {
       flex-direction: column;
     }
-    > section {
-      background-color: $white-color;
-    }
-    .right {
+    // > section {
+    //    background-color: $white-color;
+    // }
+    .article {
       width: 100%;
-      padding-top: $main-element-padding;
+      padding-top: $main-element-padding + $sec-element-padding;
+      @media (max-width: 767px) {
+        padding-top: 0 !important;
+      }
       position: relative;
       .back-btn {
         @include back-btn($sec-element-padding, $sec-element-padding, "light");
+        top: 40px !important;
+        @media (max-width: 767px) {
+          top: 10px !important;
+        }
       }
       @media (max-width: 991px) {
         width: 100%;
@@ -98,6 +105,52 @@ main {
             height: 100%;
           }
         }
+        .statistics {
+          @extend %flex-center-center;
+          gap: 20px;
+          max-width: 300px;
+          margin: 0 auto;
+          button {
+            @extend %flex-center-center;
+            @extend %border-radius-5;
+            gap: 7px;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            padding: 10px;
+            &:hover {
+              background-color: $light-input-background;
+            }
+            span {
+              color: $sec-text-color;
+              font-size: 1.4rem;
+            }
+            .f-icon {
+              color: $sec-text-color;
+              font-size: 1.6rem;
+              &:first-of-type {
+                display: block;
+              }
+              &:last-of-type {
+                display: none;
+              }
+            }
+            &.active {
+              span {
+                color: $black-color;
+              }
+              .f-icon {
+                color: $black-color;
+                &:first-of-type {
+                  display: none;
+                }
+                &:last-of-type {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
       }
       .other {
         padding: 20px {
@@ -157,10 +210,10 @@ body {
     main {
       background-color: $main-dark-bg;
       .container {
-        > section {
-          background-color: $sec-dark-bg;
-        }
-        .right {
+        // > section {
+        //    background-color: $sec-dark-bg;
+        // }
+        .article {
           .back-btn {
             @include back-btn(
               $sec-element-padding,
@@ -183,6 +236,28 @@ body {
             }
             .article-body {
               color: $sec-text-dark-color;
+            }
+            .statistics {
+              button {
+                background-color: transparent;
+                &:hover {
+                  background-color: $sec-dark-bg;
+                }
+                span {
+                  color: $sec-text-dark-color;
+                }
+                .f-icon {
+                  color: $sec-text-dark-color;
+                }
+                &.active {
+                  span {
+                    color: $white-dark-color;
+                  }
+                  .f-icon {
+                    color: $white-dark-color;
+                  }
+                }
+              }
             }
           }
           .other {

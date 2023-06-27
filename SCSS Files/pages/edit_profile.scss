@@ -10,148 +10,6 @@
 // @use "../sections/footer" as *;
 
 // additional page styling
-
-body {
-  &.dark {
-    main {
-      background-color: $main-dark-bg;
-      .head {
-        h1 {
-          color: $main-dark-color;
-        }
-      }
-      .content {
-        .container {
-          .back-btn {
-            @include back-btn(
-              $main-element-padding,
-              $sec-element-padding,
-              dark
-            );
-          }
-          form {
-            .top-sec {
-              background-color: $sec-dark-bg;
-              .right {
-                &::after {
-                  background-color: $main-dark-bg;
-                }
-                section {
-                  label {
-                    color: $white-dark-color;
-                  }
-                }
-                .name {
-                  > label {
-                    color: $white-dark-color;
-                  }
-                  .data {
-                    div {
-                      label {
-                        color: $white-dark-color;
-                      }
-                    }
-                  }
-                }
-                .field {
-                  background-color: $main-dark-bg;
-                  input {
-                    background-color: transparent;
-                    color: $white-dark-color;
-                    &:focus {
-                      ~ span {
-                        background-color: $main-dark-color;
-                      }
-                      ~ .f-icon {
-                        color: $main-dark-color;
-                      }
-                    }
-                  }
-                  i {
-                    color: $sec-dark-color;
-                  }
-                  span {
-                    background-color: $sec-dark-color;
-                  }
-                }
-                .gender {
-                  p {
-                    color: $sec-text-dark-color;
-                  }
-                  .choices {
-                    .choice {
-                      input {
-                        @include radio-shape($main-color, "dark");
-                      }
-                    }
-                  }
-                }
-                .caner-type {
-                  .cancer {
-                    select {
-                      background-color: $sec-dark-bg;
-                      color: $white-dark-color;
-                      &:focus {
-                        border-bottom-color: $main-dark-color;
-                      }
-                    }
-                  }
-                }
-                .birth-date {
-                  input[type="date"] {
-                    border-bottom-color: $sec-dark-color;
-                    background-color: $sec-dark-bg;
-                    color: $white-dark-color;
-                    &:focus {
-                      border-color: $main-dark-color;
-                    }
-                  }
-                }
-                .social-links {
-                  h2 {
-                    color: $main-dark-color;
-                  }
-                }
-              }
-              .left {
-                background-color: $sec-dark-bg;
-                .avatar-upload {
-                  .avatar-edit {
-                    label {
-                      &:after {
-                        color: $white-dark-color;
-                      }
-                    }
-                  }
-                  .avatar-preview {
-                    border-color: $main-dark-bg;
-                  }
-                }
-                .text {
-                  h2 {
-                    color: $white-dark-color;
-                  }
-                  span {
-                    color: $sec-text-dark-color;
-                  }
-                }
-              }
-            }
-            .buttons {
-              input[type="submit"] {
-                @include button-shape($main-dark-color, "dark");
-              }
-              input[type="reset"] {
-                @include button-shape($sec-dark-color, "dark");
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 .Mag-Image {
   width: 600px;
   height: 600px;
@@ -192,6 +50,7 @@ main {
       }
       form {
         .top-sec {
+          @extend %border-radius-5;
           @extend %flex-start-center;
           padding: $main-element-padding {
             top: $main-element-padding * 2;
@@ -494,6 +353,149 @@ main {
           }
           input[type="reset"] {
             @include button-shape($sec-color, "light");
+          }
+        }
+      }
+    }
+  }
+}
+
+// start dark theme styling:-
+
+body {
+  &.dark {
+    main {
+      background-color: $main-dark-bg;
+      .head {
+        h1 {
+          color: $main-dark-color;
+        }
+      }
+      .content {
+        .container {
+          .back-btn {
+            @include back-btn(
+              $main-element-padding,
+              $sec-element-padding,
+              dark
+            );
+          }
+          form {
+            .top-sec {
+              background-color: $sec-dark-bg;
+              .right {
+                &::after {
+                  background-color: $main-dark-bg;
+                }
+                section {
+                  label {
+                    color: $white-dark-color;
+                  }
+                }
+                .name {
+                  > label {
+                    color: $white-dark-color;
+                  }
+                  .data {
+                    div {
+                      label {
+                        color: $white-dark-color;
+                      }
+                    }
+                  }
+                }
+                .field {
+                  background-color: $main-dark-bg;
+                  input {
+                    background-color: transparent;
+                    color: $white-dark-color;
+                    &:focus {
+                      ~ span {
+                        background-color: $main-dark-color;
+                      }
+                      ~ .f-icon {
+                        color: $main-dark-color;
+                      }
+                    }
+                  }
+                  i {
+                    color: $sec-dark-color;
+                  }
+                  span {
+                    background-color: $sec-dark-color;
+                  }
+                }
+                .gender {
+                  p {
+                    color: $sec-text-dark-color;
+                  }
+                  .choices {
+                    .choice {
+                      input {
+                        @include radio-shape($main-color, "dark");
+                      }
+                    }
+                  }
+                }
+                .caner-type {
+                  .cancer {
+                    select {
+                      background-color: $sec-dark-bg;
+                      color: $white-dark-color;
+                      &:focus {
+                        border-bottom-color: $main-dark-color;
+                      }
+                    }
+                  }
+                }
+                .birth-date {
+                  input[type="date"] {
+                    border-bottom-color: $sec-dark-color;
+                    background-color: $sec-dark-bg;
+                    color: $white-dark-color;
+                    &:focus {
+                      border-color: $main-dark-color;
+                    }
+                  }
+                }
+                .social-links {
+                  h2 {
+                    color: $main-dark-color;
+                  }
+                }
+              }
+              .left {
+                background-color: $sec-dark-bg;
+                .avatar-upload {
+                  .avatar-edit {
+                    label {
+                      &:after {
+                        color: $white-dark-color;
+                      }
+                    }
+                  }
+                  .avatar-preview {
+                    border-color: $main-dark-bg;
+                  }
+                }
+                .text {
+                  h2 {
+                    color: $white-dark-color;
+                  }
+                  span {
+                    color: $sec-text-dark-color;
+                  }
+                }
+              }
+            }
+            .buttons {
+              input[type="submit"] {
+                @include button-shape($main-dark-color, "dark");
+              }
+              input[type="reset"] {
+                @include button-shape($sec-dark-color, "dark");
+              }
+            }
           }
         }
       }

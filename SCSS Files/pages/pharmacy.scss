@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 // additional page styling
 
 // Start Main Styling:-
@@ -18,7 +18,7 @@ main {
     bottom: $main-element-padding * 2;
   }
   .container {
-    background-color: $light-white-color;
+    // background-color: $light-white-color;
     position: relative;
     .back-btn {
       @include back-btn($sec-element-padding, $sec-element-padding, "light");
@@ -35,7 +35,8 @@ main {
       color: $main-color;
     }
     .content {
-      padding: $main-element-padding $sec-element-padding;
+      // padding: $main-element-padding $sec-element-padding;
+      padding: $main-element-padding 0;
       .upper-sec {
         @extend %flex-stretch-center;
         gap: $main-element-padding;
@@ -46,7 +47,8 @@ main {
           //   width: 100% !important;
           // }
         }
-        background-color: $white-color;
+        // background-color: $white-color;
+        background-color: $light-white-color;
         padding: $main-element-padding;
         .image {
           width: 400px;
@@ -87,6 +89,9 @@ main {
                 a {
                   width: $main-element-padding * 2 !important;
                   height: $main-element-padding * 2 !important;
+                  &:hover {
+                    background-color: $white-color;
+                  }
                 }
               }
             }
@@ -224,6 +229,7 @@ main {
                   }
                 }
                 .description {
+                  background-color: $light-white-color;
                   padding: 10px {
                     bottom: 0;
                   }
@@ -336,7 +342,7 @@ body {
     main {
       background-color: $main-dark-bg;
       .container {
-        background-color: $sec-dark-bg;
+        // background-color: $sec-dark-bg;
         .back-btn {
           @include back-btn($sec-element-padding, $sec-element-padding, "dark");
         }
@@ -345,7 +351,8 @@ body {
         }
         .content {
           .upper-sec {
-            background-color: $main-dark-bg;
+            // background-color: $main-dark-bg;
+            background-color: $sec-dark-bg;
             .image {
               img {
                 filter: brightness(0.9);
@@ -406,7 +413,10 @@ body {
               .cards {
                 .box {
                   .card {
-                    border-color: $main-dark-bg;
+                    // background-color: $main-dark-bg;
+                    // border-color: $main-dark-bg;
+                    background-color: $sec-dark-bg;
+                    border-color: $sec-dark-bg;
                     &:before {
                       border-color: $main-dark-bg;
                     }
@@ -415,7 +425,8 @@ body {
                       background-color: $main-dark-color;
                     }
                     .description {
-                      background-color: $main-dark-bg;
+                      // background-color: $main-dark-bg;
+                      background-color: $sec-dark-bg;
                       h2,
                       p {
                         color: $sec-text-dark-color;
@@ -454,7 +465,8 @@ body {
                     color: $sec-text-dark-color;
                   }
                   .felid {
-                    background-color: $main-dark-bg;
+                    // background-color: $main-dark-bg;
+                    background-color: $sec-dark-bg;
                     input {
                       background-color: transparent;
                       color: $white-dark-color;

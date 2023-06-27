@@ -41,7 +41,7 @@ main .container .content .events .body {
   gap: 20px;
 }
 
-main .container .content .upper-sec .data .social-icon > div > div a, body.dark main .container .content .upper-sec .data .social-icon > div > div a {
+main .container .content .upper-sec .data, main .container .content .upper-sec .data .social-icon > div > div a, body.dark main .container .content .upper-sec .data .social-icon > div > div a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -78,7 +78,6 @@ main {
   padding-top: 100px;
 }
 main .container {
-  background-color: #eee;
   position: relative;
 }
 main .container .back-btn {
@@ -90,6 +89,7 @@ main .container .back-btn {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+  top: 16px !important;
 }
 main .container .back-btn:hover .f-icon {
   color: #059cb1;
@@ -97,11 +97,17 @@ main .container .back-btn:hover .f-icon {
 main .container .back-btn .f-icon {
   font-size: 1rem;
 }
+@media (min-width: 1400px) {
+  main .container .back-btn {
+    top: 50px !important;
+  }
+}
 main .container > h1 {
   display: none;
   padding: 15px;
-  width: 90%;
-  margin: 0 30px 0;
+  width: calc(100% - 35px);
+  margin: 0;
+  margin-left: 35px;
   text-align: center;
   font-size: 1.5rem;
   color: #059cb1;
@@ -112,8 +118,6 @@ main .container > h1 {
   }
 }
 main .container .content {
-  padding-left: 10px;
-  padding-right: 10px;
   padding-bottom: 20px;
 }
 main .container .content .upper-sec {
@@ -141,9 +145,16 @@ main .container .content .upper-sec .description .article-body {
 main .container .content .upper-sec .description h1 {
   padding: 20px 5px;
   width: 100%;
-  margin: 35px 0 0 0;
+  text-align: center;
   font-size: 1.5rem;
   color: #059cb1;
+  margin: 0;
+  margin-left: 25px;
+}
+@media (min-width: 1400px) {
+  main .container .content .upper-sec .description h1 {
+    padding-top: 0;
+  }
 }
 @media (max-width: 991px) {
   main .container .content .upper-sec .description h1 {
@@ -151,7 +162,7 @@ main .container .content .upper-sec .description h1 {
   }
 }
 main .container .content .upper-sec .data {
-  background-color: #fff;
+  background-color: #eee;
   padding: 20px;
   padding-top: 0;
   margin-top: 110px;
@@ -273,7 +284,7 @@ main .container .content .other .head h2 {
   color: #059cb1;
 }
 main .container .content .events .body .image {
-  border: 5px solid #fff;
+  border: 5px solid #eee;
 }
 main .container .content .events .body .image img {
   width: 100%;
@@ -379,9 +390,6 @@ main .container .content .other .swiper .swiper-pagination-bullet {
 body.dark main {
   background-color: #222;
 }
-body.dark main .container {
-  background-color: #1d1d1d;
-}
 body.dark main .container .back-btn {
   position: absolute;
   top: 10px;
@@ -412,7 +420,7 @@ body.dark main .container .content .upper-sec .description h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark main .container .content .upper-sec .data {
-  background-color: #222;
+  background-color: #1d1d1d;
 }
 body.dark main .container .content .upper-sec .data > div h2 {
   color: #efefef;
@@ -487,7 +495,7 @@ body.dark main .container .content .other .head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark main .container .content .events .body .image {
-  border-color: #222;
+  border-color: #1d1d1d;
 }
 body.dark main .container .content .other .swiper {
   overflow: hidden;

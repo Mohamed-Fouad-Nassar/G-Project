@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 // additional page styling
 
 // Start Main Styling:-
@@ -21,7 +21,7 @@ main {
     }
     .medicines {
       .head {
-        padding-bottom: 30px;
+        padding-bottom: $main-element-padding + $sec-element-padding;
         h1 {
           text-align: center;
           font-size: 1.5rem;
@@ -29,9 +29,38 @@ main {
         }
       }
       form {
-        div {
-          overflow-x: auto;
-        }
+        // div {
+        //   overflow-x: auto;
+        // }
+        // .filter {
+        //   padding-bottom: $main-element-padding;
+        //   ul {
+        //     @extend %flex-center-center;
+        //     flex-wrap: wrap;
+        //     gap: $sec-element-padding;
+        //     li {
+        //       a {
+        //         display: block;
+        //         width: fit-content;
+        //         padding: $field-top-padding $sec-element-padding;
+        //         background-color: transparent;
+        //         color: $main-color;
+        //         border: 1px solid $main-color;
+        //         &:hover {
+        //           background-color: $main-color;
+        //           color: $white-color;
+        //         }
+        //       }
+        //       &.active {
+        //         a {
+        //           background-color: $sec-color;
+        //           color: $white-color;
+        //           border-color: $sec-color;
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
         .cards {
           @extend %grid-250-20;
           .box {
@@ -50,8 +79,8 @@ main {
                 @extend %border-radius-5;
                 content: "";
                 position: absolute;
-                top: 10px;
-                right: 10px;
+                top: $sec-element-padding;
+                right: $sec-element-padding;
                 border: 1px solid $light-white-color;
                 width: 25px;
                 height: 25px;
@@ -89,7 +118,7 @@ main {
               }
               .description {
                 background-color: $light-white-color;
-                padding: 10px {
+                padding: $sec-element-padding {
                   bottom: 0;
                 }
                 h2 {
@@ -130,13 +159,13 @@ main {
           }
         }
         .sec-foot {
-          padding-top: 20px;
+          padding-top: $main-element-padding;
           input {
             @include button-shape($main-color, "light");
           }
         }
         .order-data {
-          padding-top: 20px;
+          padding-top: $main-element-padding;
           @extend %grid-200-10;
           section {
             label {
@@ -205,9 +234,32 @@ body {
         }
         .medicines {
           form {
+            .filter {
+              ul {
+                li {
+                  a {
+                    background-color: $sec-dark-bg;
+                    color: $main-dark-color;
+                    border: 1px solid $main-dark-color;
+                    &:hover {
+                      background-color: $main-dark-color;
+                      color: $white-dark-color;
+                    }
+                  }
+                  &.active {
+                    a {
+                      background-color: $sec-dark-color;
+                      color: $white-dark-color;
+                      border-color: $sec-dark-color;
+                    }
+                  }
+                }
+              }
+            }
             .cards {
               .box {
                 .card {
+                  background-color: $sec-dark-bg;
                   border-color: $sec-dark-bg;
                   &:before {
                     border-color: $sec-dark-bg;
@@ -218,6 +270,7 @@ body {
                   }
                   .description {
                     background-color: $sec-dark-bg;
+                    // border-color: $sec-dark-bg;
                     h2,
                     p {
                       color: $sec-text-dark-color;

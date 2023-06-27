@@ -1,0 +1,11 @@
+// import global rules
+// import placeholders and mixins
+// @use "../Global-rules/helpers" as *;
+// @use "../Global-rules/global" as *;
+
+// @use "../Global-rules/variables" as *;
+
+@use "../sections/header" as *;
+@use "../sections/footer" as *;
+
+@use "../sections/dashboard_global";

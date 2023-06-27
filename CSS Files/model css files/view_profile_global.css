@@ -1,0 +1,236 @@
+main .container aside ul,
+main .container aside ul li {
+  margin: 0;
+  padding: 0;
+}
+
+main .container aside,
+main .container aside ul li a {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
+main {
+  background-color: #eee;
+}
+
+main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  gap: 20px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 575px) {
+  main .container {
+    gap: 10px;
+  }
+}
+
+main .container aside {
+  position: sticky;
+  top: 90px;
+  width: 230px;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: #fff;
+}
+
+@media (max-width: 991px) {
+  main .container aside {
+    width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .container aside {
+    width: 60px;
+    padding: 15px 10px;
+    top: 65px;
+  }
+}
+
+@media (max-width: 575px) {
+  main .container aside {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+main .container aside ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  main .container aside ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+main .container aside ul li {
+  padding-top: 5px;
+}
+
+main .container aside ul li a {
+  display: block;
+  width: 100%;
+  color: #212529;
+  padding: 10px 15px;
+}
+
+@media (max-width: 767px) {
+  main .container aside ul li a {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+  }
+
+  main .container aside ul li a .f-icon {
+    font-size: 1.1rem;
+  }
+}
+
+main .container aside ul li a:hover {
+  color: #059cb1;
+  background-color: #f9f9f9;
+}
+
+main .container aside ul li a:hover span {
+  color: #059cb1;
+}
+
+main .container aside ul li a:hover .f-icon {
+  color: #059cb1;
+}
+
+main .container aside ul li a.active {
+  color: #059cb1;
+  background-color: #f9f9f9;
+}
+
+main .container aside ul li a.active span {
+  color: #059cb1;
+}
+
+main .container aside ul li a.active .f-icon {
+  color: #059cb1;
+}
+
+main .container aside ul li a span {
+  color: #212529;
+}
+
+@media (max-width: 767px) {
+  main .container aside ul li a span {
+    display: none;
+  }
+}
+
+main .container aside ul li a .f-icon {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  main .container aside ul li a .f-icon {
+    margin-right: 0;
+  }
+}
+
+main .container aside ul li:last-of-type .danger {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-align: inherit;
+}
+
+main .container aside ul li:last-of-type .danger span,
+main .container aside ul li:last-of-type .danger .f-icon {
+  color: #d20519;
+}
+
+main .container aside ul li:last-of-type .danger:hover {
+  background-color: #d20519;
+}
+
+main .container aside ul li:last-of-type .danger:hover span,
+main .container aside ul li:last-of-type .danger:hover .f-icon {
+  color: #fff;
+}
+
+body.dark main {
+  background-color: #1d1d1d;
+}
+
+body.dark main .container aside {
+  background-color: #222;
+}
+
+body.dark main .container aside ul li a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #323234;
+}
+
+body.dark main .container aside ul li a:hover span,
+body.dark main .container aside ul li a:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container aside ul li a.active {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #323234;
+}
+
+body.dark main .container aside ul li a.active span,
+body.dark main .container aside ul li a.active .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+
+body.dark main .container aside ul li a span,
+body.dark main .container aside ul li a .f-icon {
+  color: #efefef;
+}
+
+body.dark main .container aside ul li:last-of-type .danger span,
+body.dark main .container aside ul li:last-of-type .danger .f-icon {
+  color: #dc3545;
+}
+
+body.dark main .container aside ul li:last-of-type .danger:hover {
+  background-color: #dc3545;
+}
+
+body.dark main .container aside ul li:last-of-type .danger:hover span,
+body.dark main .container aside ul li:last-of-type .danger:hover .f-icon {
+  color: #efefef;
+}

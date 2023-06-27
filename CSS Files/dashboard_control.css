@@ -100,7 +100,8 @@ main aside .head .shape span::before, main aside .head .shape span::after, .head
   -o-transform: translateY(-50%);
 }
 
-main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, body.dark main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, main aside .links ul li a, footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a {
+main .content div .sec-body .info > div, main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, body.dark main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, main aside, main aside .links ul li a, main .content, footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
+.card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -108,15 +109,7 @@ main .content div .sec-body .control .table .tab-body .item > span:last-of-type 
   -o-border-radius: 5px !important;
 }
 
-main .content div .sec-body .info > div, main aside, main .content {
-  border-radius: 10px !important;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  -ms-border-radius: 10px !important;
-  -o-border-radius: 10px !important;
-}
-
-main aside .head .shape span, header .container .log-in-acc .lang .h-btn a,
+main aside .head .shape span, header .container .log-in-acc article > .menu ul li div, header .container .log-in-acc .lang .h-btn a,
 header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
 header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
 .head-shape-w span {
@@ -827,6 +820,7 @@ header .container .log-in-acc article > .menu ul::after {
   }
 }
 header .container .log-in-acc article > .menu ul li {
+  overflow: hidden;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -836,11 +830,6 @@ header .container .log-in-acc article > .menu ul li:hover {
   cursor: pointer;
 }
 header .container .log-in-acc article > .menu ul li div {
-  border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  -o-border-radius: 50% !important;
   width: 25px;
   overflow: hidden;
 }

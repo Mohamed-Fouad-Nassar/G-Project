@@ -19,9 +19,12 @@ a {
 
 main .container .content .top-sec .edit-btn a, main .container .content .bottom-sec .box .field, body.dark main .container .content .top-sec .edit-btn a, header .container nav ul li a, header .container .account,
 header .container .log-in-acc, header .container .account a, header .container .log-in-acc article, header .container .log-in-acc article > .menu ul, header .container .log-in-acc article > .menu ul li, header .container .log-in-acc .lang .h-btn,
-header .container .log-in-acc .cart .h-btn, header .container .log-in-acc .lang .h-btn a,
-header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
-header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
+header .container .log-in-acc .cart .h-btn,
+header .container .log-in-acc .notification .h-btn, header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc .cart .h-btn a,
+header .container .log-in-acc .notification .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
+header .container .log-in-acc .cart .h-btn a::after,
+header .container .log-in-acc .notification .h-btn a::after, header .container .log-in-acc .theme .h-btn, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -95,8 +98,7 @@ main .container .content .top-sec {
   -o-transform: translateY(-50%);
 }
 
-main .container aside ul li a,
-main .container aside ul li button, main .container .content .top-sec .edit-btn a, body.dark main .container .content .top-sec .edit-btn a, footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, .box,
+main .container .content, main .container .content .top-sec .edit-btn a, body.dark main .container .content .top-sec .edit-btn a, main .container aside, main .container aside ul li a, footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -105,17 +107,11 @@ main .container aside ul li button, main .container .content .top-sec .edit-btn 
   -o-border-radius: 5px !important;
 }
 
-main .container aside, main .container .content {
-  border-radius: 10px !important;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  -ms-border-radius: 10px !important;
-  -o-border-radius: 10px !important;
-}
-
-main .container .content .top-sec .image, header .container .log-in-acc .lang .h-btn a,
-header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
-header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
+main .container .content .top-sec .image, header .container .log-in-acc article > .menu ul li div, header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc .cart .h-btn a,
+header .container .log-in-acc .notification .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
+header .container .log-in-acc .cart .h-btn a::after,
+header .container .log-in-acc .notification .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
@@ -824,6 +820,7 @@ header .container .log-in-acc article > .menu ul::after {
   }
 }
 header .container .log-in-acc article > .menu ul li {
+  overflow: hidden;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -833,11 +830,6 @@ header .container .log-in-acc article > .menu ul li:hover {
   cursor: pointer;
 }
 header .container .log-in-acc article > .menu ul li div {
-  border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  -o-border-radius: 50% !important;
   width: 25px;
   overflow: hidden;
 }
@@ -850,19 +842,23 @@ header .container .log-in-acc article > .menu ul li span {
   font-size: 0.9rem;
 }
 header .container .log-in-acc .lang,
-header .container .log-in-acc .cart {
+header .container .log-in-acc .cart,
+header .container .log-in-acc .notification {
   position: relative;
 }
 header .container .log-in-acc .lang .h-btn,
-header .container .log-in-acc .cart .h-btn {
+header .container .log-in-acc .cart .h-btn,
+header .container .log-in-acc .notification .h-btn {
   gap: 5px;
 }
 header .container .log-in-acc .lang .h-btn:hover,
-header .container .log-in-acc .cart .h-btn:hover {
+header .container .log-in-acc .cart .h-btn:hover,
+header .container .log-in-acc .notification .h-btn:hover {
   cursor: pointer;
 }
 header .container .log-in-acc .lang .h-btn div,
-header .container .log-in-acc .cart .h-btn div {
+header .container .log-in-acc .cart .h-btn div,
+header .container .log-in-acc .notification .h-btn div {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -872,40 +868,47 @@ header .container .log-in-acc .cart .h-btn div {
   overflow: hidden;
 }
 header .container .log-in-acc .lang .h-btn div img,
-header .container .log-in-acc .cart .h-btn div img {
+header .container .log-in-acc .cart .h-btn div img,
+header .container .log-in-acc .notification .h-btn div img {
   max-width: 100%;
 }
 header .container .log-in-acc .lang .h-btn span,
-header .container .log-in-acc .cart .h-btn span {
+header .container .log-in-acc .cart .h-btn span,
+header .container .log-in-acc .notification .h-btn span {
   text-transform: uppercase;
   font-weight: 600;
 }
 header .container .log-in-acc .lang .menu,
-header .container .log-in-acc .cart .menu {
+header .container .log-in-acc .cart .menu,
+header .container .log-in-acc .notification .menu {
   padding: 10px;
 }
 header .container .log-in-acc .lang .menu ul li:hover,
-header .container .log-in-acc .cart .menu ul li:hover {
+header .container .log-in-acc .cart .menu ul li:hover,
+header .container .log-in-acc .notification .menu ul li:hover {
   background-color: #f9f9f9;
   color: #059cb1;
 }
 header .container .log-in-acc .lang .h-btn,
-header .container .log-in-acc .cart .h-btn {
+header .container .log-in-acc .cart .h-btn,
+header .container .log-in-acc .notification .h-btn {
   padding: 0 10px;
 }
 header .container .log-in-acc .lang .h-btn a,
-header .container .log-in-acc .cart .h-btn a {
+header .container .log-in-acc .cart .h-btn a,
+header .container .log-in-acc .notification .h-btn a {
   width: 40px;
   height: 40px;
   background-color: #fff;
   position: relative;
 }
 header .container .log-in-acc .lang .h-btn a::after,
-header .container .log-in-acc .cart .h-btn a::after {
-  content: attr(number);
+header .container .log-in-acc .cart .h-btn a::after,
+header .container .log-in-acc .notification .h-btn a::after {
+  content: attr(data-number);
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -7px;
+  right: -7px;
   background-color: #059cb1;
   color: #fff;
   width: 20px;
@@ -913,19 +916,20 @@ header .container .log-in-acc .cart .h-btn a::after {
   z-index: 1000;
 }
 header .container .log-in-acc .lang .h-btn a:hover,
-header .container .log-in-acc .cart .h-btn a:hover {
+header .container .log-in-acc .cart .h-btn a:hover,
+header .container .log-in-acc .notification .h-btn a:hover {
   background-color: #ccc;
 }
 header .container .log-in-acc .lang .h-btn a:hover .f-icon,
-header .container .log-in-acc .cart .h-btn a:hover .f-icon {
+header .container .log-in-acc .cart .h-btn a:hover .f-icon,
+header .container .log-in-acc .notification .h-btn a:hover .f-icon {
   color: #059cb1;
 }
 header .container .log-in-acc .lang .h-btn a .f-icon,
-header .container .log-in-acc .cart .h-btn a .f-icon {
+header .container .log-in-acc .cart .h-btn a .f-icon,
+header .container .log-in-acc .notification .h-btn a .f-icon {
   color: #212529;
   font-size: 1.05rem;
-  padding-top: 4px;
-  padding-right: 2px;
 }
 header .container .log-in-acc .theme .h-btn {
   background-color: #fff;
@@ -1097,33 +1101,40 @@ body.dark header .container .log-in-acc article > .menu ul li span {
   color: #efefef;
 }
 body.dark header .container .log-in-acc .lang .h-btn span,
-body.dark header .container .log-in-acc .cart .h-btn span {
+body.dark header .container .log-in-acc .cart .h-btn span,
+body.dark header .container .log-in-acc .notification .h-btn span {
   color: #efefef;
 }
 body.dark header .container .log-in-acc .lang .menu ul li:hover,
-body.dark header .container .log-in-acc .cart .menu ul li:hover {
+body.dark header .container .log-in-acc .cart .menu ul li:hover,
+body.dark header .container .log-in-acc .notification .menu ul li:hover {
   background-color: #1d1d1d;
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark header .container .log-in-acc .lang .h-btn a,
-body.dark header .container .log-in-acc .cart .h-btn a {
+body.dark header .container .log-in-acc .cart .h-btn a,
+body.dark header .container .log-in-acc .notification .h-btn a {
   background-color: #222;
 }
 body.dark header .container .log-in-acc .lang .h-btn a::after,
-body.dark header .container .log-in-acc .cart .h-btn a::after {
+body.dark header .container .log-in-acc .cart .h-btn a::after,
+body.dark header .container .log-in-acc .notification .h-btn a::after {
   background-color: rgba(5, 156, 177, 0.8705882353);
   color: #fff;
 }
 body.dark header .container .log-in-acc .lang .h-btn a:hover,
-body.dark header .container .log-in-acc .cart .h-btn a:hover {
+body.dark header .container .log-in-acc .cart .h-btn a:hover,
+body.dark header .container .log-in-acc .notification .h-btn a:hover {
   background-color: #323234;
 }
 body.dark header .container .log-in-acc .lang .h-btn a:hover .f-icon,
-body.dark header .container .log-in-acc .cart .h-btn a:hover .f-icon {
+body.dark header .container .log-in-acc .cart .h-btn a:hover .f-icon,
+body.dark header .container .log-in-acc .notification .h-btn a:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark header .container .log-in-acc .lang .h-btn a .f-icon,
-body.dark header .container .log-in-acc .cart .h-btn a .f-icon {
+body.dark header .container .log-in-acc .cart .h-btn a .f-icon,
+body.dark header .container .log-in-acc .notification .h-btn a .f-icon {
   color: #fff;
 }
 body.dark header .container .log-in-acc .theme .h-btn {
@@ -1402,16 +1413,14 @@ main .container aside ul {
 main .container aside ul li {
   padding-top: 5px;
 }
-main .container aside ul li a,
-main .container aside ul li button {
+main .container aside ul li a {
   display: block;
   width: 100%;
   color: #212529;
   padding: 10px 15px;
 }
 @media (max-width: 767px) {
-  main .container aside ul li a,
-  main .container aside ul li button {
+  main .container aside ul li a {
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1425,74 +1434,102 @@ main .container aside ul li button {
     width: 45px;
     height: 45px;
   }
-  main .container aside ul li a .f-icon,
-  main .container aside ul li button .f-icon {
+  main .container aside ul li a .f-icon {
     font-size: 1.1rem;
   }
 }
-main .container aside ul li a:hover,
-main .container aside ul li button:hover {
+main .container aside ul li a:hover {
   color: #059cb1;
   background-color: #f9f9f9;
 }
-main .container aside ul li a:hover span,
-main .container aside ul li button:hover span {
+main .container aside ul li a:hover span {
   color: #059cb1;
 }
-main .container aside ul li a:hover .f-icon,
-main .container aside ul li button:hover .f-icon {
+main .container aside ul li a:hover .f-icon {
   color: #059cb1;
 }
-main .container aside ul li a.active,
-main .container aside ul li button.active {
+main .container aside ul li a.active {
   color: #059cb1;
   background-color: #f9f9f9;
 }
-main .container aside ul li a.active span,
-main .container aside ul li button.active span {
+main .container aside ul li a.active span {
   color: #059cb1;
 }
-main .container aside ul li a.active .f-icon,
-main .container aside ul li button.active .f-icon {
+main .container aside ul li a.active .f-icon {
   color: #059cb1;
 }
-main .container aside ul li a span,
-main .container aside ul li button span {
+main .container aside ul li a span {
   color: #212529;
 }
 @media (max-width: 767px) {
-  main .container aside ul li a span,
-  main .container aside ul li button span {
+  main .container aside ul li a span {
     display: none;
   }
 }
-main .container aside ul li a .f-icon,
-main .container aside ul li button .f-icon {
+main .container aside ul li a .f-icon {
   margin-right: 10px;
 }
 @media (max-width: 767px) {
-  main .container aside ul li a .f-icon,
-  main .container aside ul li button .f-icon {
+  main .container aside ul li a .f-icon {
     margin-right: 0;
   }
 }
-main .container aside ul li:last-of-type button {
+main .container aside ul li:last-of-type .danger {
   outline: none;
   border: none;
   background-color: transparent;
   text-align: inherit;
 }
-main .container aside ul li:last-of-type button span,
-main .container aside ul li:last-of-type button .f-icon {
+main .container aside ul li:last-of-type .danger span,
+main .container aside ul li:last-of-type .danger .f-icon {
   color: #d20519;
 }
-main .container aside ul li:last-of-type button:hover {
+main .container aside ul li:last-of-type .danger:hover {
   background-color: #d20519;
 }
-main .container aside ul li:last-of-type button:hover span,
-main .container aside ul li:last-of-type button:hover .f-icon {
+main .container aside ul li:last-of-type .danger:hover span,
+main .container aside ul li:last-of-type .danger:hover .f-icon {
   color: #fff;
 }
+
+body.dark main {
+  background-color: #1d1d1d;
+}
+body.dark main .container aside {
+  background-color: #222;
+}
+body.dark main .container aside ul li a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #323234;
+}
+body.dark main .container aside ul li a:hover span,
+body.dark main .container aside ul li a:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container aside ul li a.active {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #323234;
+}
+body.dark main .container aside ul li a.active span,
+body.dark main .container aside ul li a.active .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container aside ul li a span,
+body.dark main .container aside ul li a .f-icon {
+  color: #efefef;
+}
+body.dark main .container aside ul li:last-of-type .danger span,
+body.dark main .container aside ul li:last-of-type .danger .f-icon {
+  color: #dc3545;
+}
+body.dark main .container aside ul li:last-of-type .danger:hover {
+  background-color: #dc3545;
+}
+body.dark main .container aside ul li:last-of-type .danger:hover span,
+body.dark main .container aside ul li:last-of-type .danger:hover .f-icon {
+  color: #efefef;
+}
+
 main .container .content {
   background-color: #fff;
   overflow: hidden;
@@ -1649,43 +1686,6 @@ main .container .content .bottom-sec .box .field .flex-sec {
   }
 }
 
-body.dark main {
-  background-color: #1d1d1d;
-}
-body.dark main .container aside {
-  background-color: #222;
-}
-body.dark main .container aside ul li a:hover {
-  color: rgba(5, 156, 177, 0.8705882353);
-  background-color: #323234;
-}
-body.dark main .container aside ul li a:hover span,
-body.dark main .container aside ul li a:hover .f-icon {
-  color: rgba(5, 156, 177, 0.8705882353);
-}
-body.dark main .container aside ul li a.active {
-  color: rgba(5, 156, 177, 0.8705882353);
-  background-color: #323234;
-}
-body.dark main .container aside ul li a.active span,
-body.dark main .container aside ul li a.active .f-icon {
-  color: rgba(5, 156, 177, 0.8705882353);
-}
-body.dark main .container aside ul li a span,
-body.dark main .container aside ul li a .f-icon {
-  color: #efefef;
-}
-body.dark main .container aside ul li:last-of-type button span,
-body.dark main .container aside ul li:last-of-type button .f-icon {
-  color: #dc3545;
-}
-body.dark main .container aside ul li:last-of-type button:hover {
-  background-color: #dc3545;
-}
-body.dark main .container aside ul li:last-of-type button:hover span,
-body.dark main .container aside ul li:last-of-type button:hover .f-icon {
-  color: #efefef;
-}
 body.dark main .container .content {
   background-color: #222;
 }

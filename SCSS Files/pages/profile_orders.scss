@@ -9,6 +9,8 @@
 // import footer styling:-
 @use "../sections/footer" as *;
 
+// @use "../sections/view_profile_global" as *;
+
 // additional page styling
 
 // Start Main Styling:-
@@ -25,7 +27,7 @@ main {
       gap: 10px;
     }
     aside {
-      @extend %border-radius-10;
+      @extend %border-radius-5;
       position: sticky;
       top: 90px;
       width: 230px;
@@ -134,7 +136,7 @@ main {
       }
     }
     .content {
-      @extend %border-radius-10;
+      @extend %border-radius-5;
       background-color: $white-color;
       padding: 20px;
       overflow: hidden;
@@ -149,9 +151,38 @@ main {
         font-size: 1.1rem;
         color: $sec-color;
       }
+      .filter {
+        padding-bottom: $main-element-padding;
+        ul {
+          @extend %flex-center-center;
+          flex-wrap: wrap;
+          gap: $sec-element-padding;
+          li {
+            a {
+              display: block;
+              width: fit-content;
+              padding: $field-top-padding $sec-element-padding;
+              background-color: transparent;
+              color: $main-color;
+              border: 1px solid $main-color;
+              &:hover {
+                background-color: $main-color;
+                color: $white-color;
+              }
+            }
+            &.active {
+              a {
+                background-color: $sec-color;
+                color: $white-color;
+                border-color: $sec-color;
+              }
+            }
+          }
+        }
+      }
       .sec-body {
         .order {
-          @extend %border-radius-10;
+          @extend %border-radius-5;
           padding: 20px;
           background-color: $light-white-color;
           position: relative;
@@ -316,6 +347,28 @@ body {
           h2,
           h3 {
             color: $sec-dark-color;
+          }
+          .filter {
+            ul {
+              li {
+                a {
+                  background-color: $sec-dark-bg;
+                  color: $main-dark-color;
+                  border: 1px solid $main-dark-color;
+                  &:hover {
+                    background-color: $main-dark-color;
+                    color: $white-dark-color;
+                  }
+                }
+                &.active {
+                  a {
+                    background-color: $sec-dark-color;
+                    color: $white-dark-color;
+                    border-color: $sec-dark-color;
+                  }
+                }
+              }
+            }
           }
           .sec-body {
             .order {

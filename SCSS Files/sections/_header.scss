@@ -166,6 +166,7 @@ header {
       }
       article {
         > .menu {
+          @extend %border-radius-5;
           @extend %user-select-none;
           @include trans-x(-50%);
           display: none;
@@ -208,6 +209,8 @@ header {
             }
             li {
               @extend %flex-center-center;
+              @extend %border-radius-5;
+              overflow: hidden;
               padding: 5px {
                 left: $sec-element-padding;
                 right: $sec-element-padding;
@@ -217,7 +220,7 @@ header {
                 cursor: pointer;
               }
               div {
-                @include border-rad(50%);
+                @extend %border-radius-50;
                 width: 25px;
                 overflow: hidden;
                 img {
@@ -236,7 +239,8 @@ header {
         }
       }
       .lang,
-      .cart {
+      .cart,
+      .notification {
         position: relative;
         .h-btn {
           @extend %flex-center-center;
@@ -280,10 +284,10 @@ header {
             &::after {
               @extend %flex-center-center;
               @extend %border-radius-50;
-              content: attr(number);
+              content: attr(data-number);
               position: absolute;
-              top: -5px;
-              right: -5px;
+              top: -7px;
+              right: -7px;
               background-color: $main-color;
               color: $white-color;
               width: 20px;
@@ -299,10 +303,10 @@ header {
             .f-icon {
               color: $black-color;
               font-size: 1.05rem;
-              padding: {
-                top: 4px;
-                right: 2px;
-              }
+              // padding: {
+              //   top: 4px;
+              //   right: 2px;
+              // }
             }
           }
         }
@@ -502,7 +506,8 @@ body {
             }
           }
           .lang,
-          .cart {
+          .cart,
+          .notification {
             .h-btn {
               span {
                 color: $white-dark-color;

@@ -1,13 +1,13 @@
 // import global rules
-// @use "../Global-rules/global" as *;
+@use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-// @use "../sections/header" as *;
+@use "../sections/header" as *;
 // import footer styling:-
-// @use "../sections/footer" as *;
+@use "../sections/footer" as *;
 
 // additional page styling
 
@@ -22,7 +22,7 @@ main {
         @extend %flex-start-between;
         @include grid(350px, $main-element-padding);
         .box {
-          @extend %border-radius-10;
+          @extend %border-radius-5;
           background-color: $white-color;
           overflow: hidden;
           .card-top {

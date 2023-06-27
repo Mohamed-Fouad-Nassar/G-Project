@@ -95,8 +95,8 @@ main .container .content .sec-body {
   -o-transform: translateY(-50%);
 }
 
-main .container aside ul li a,
-main .container aside ul li button, main .container .content .sec-body .box, main .container .content .sec-foot input[type=button], body.dark main .container .content .sec-body .box, body.dark main .container .content .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, .box,
+main .container aside, main .container aside ul li a,
+main .container aside ul li button, main .container .content, main .container .content .sec-body .box, main .container .content .sec-foot input[type=button], body.dark main .container .content .sec-body .box, body.dark main .container .content .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -105,15 +105,7 @@ main .container aside ul li button, main .container .content .sec-body .box, mai
   -o-border-radius: 5px !important;
 }
 
-main .container aside, main .container .content {
-  border-radius: 10px !important;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  -ms-border-radius: 10px !important;
-  -o-border-radius: 10px !important;
-}
-
-header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc article > .menu ul li div, header .container .log-in-acc .lang .h-btn a,
 header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
 header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
 .head-shape-w span {
@@ -825,6 +817,7 @@ header .container .log-in-acc article > .menu ul::after {
   }
 }
 header .container .log-in-acc article > .menu ul li {
+  overflow: hidden;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -834,11 +827,6 @@ header .container .log-in-acc article > .menu ul li:hover {
   cursor: pointer;
 }
 header .container .log-in-acc article > .menu ul li div {
-  border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  -o-border-radius: 50% !important;
   width: 25px;
   overflow: hidden;
 }

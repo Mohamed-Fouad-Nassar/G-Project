@@ -1,0 +1,380 @@
+main .container .medicines form .sec-foot input, main .container .medicines form .order-data section .felid, main .container .medicines form .btn input, body.dark main .container .medicines form .btn input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .container .medicines form .order-data {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+main .container .medicines form .cards {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+main .container .medicines form .cards .box {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+}
+
+main .container .medicines form .cards .box .card:before, main .container .medicines form .sec-foot input, main .container .medicines form .btn input, body.dark main .container .medicines form .btn input {
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
+main .container {
+  position: relative;
+  padding-bottom: 30px;
+}
+main .container .back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  top: 0 !important;
+}
+main .container .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+main .container .back-btn .f-icon {
+  font-size: 1rem;
+}
+main .container .medicines .head {
+  padding-bottom: 30px;
+}
+main .container .medicines .head h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #059cb1;
+}
+main .container .medicines form .cards .box {
+  display: none;
+}
+main .container .medicines form .cards .box.active {
+  display: block;
+}
+main .container .medicines form .cards .box .card {
+  overflow: hidden;
+  border: 1px solid #eee;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+main .container .medicines form .cards .box .card:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: 1px solid #eee;
+  width: 25px;
+  height: 25px;
+  z-index: 100;
+}
+main .container .medicines form .cards .box .card:after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  border: 1px solid transparent;
+  opacity: 0;
+  background-color: #059cb1;
+  width: 0;
+  height: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  border-radius: 0.5px;
+  -webkit-border-radius: 0.5px;
+  -moz-border-radius: 0.5px;
+  -ms-border-radius: 0.5px;
+  -o-border-radius: 0.5px;
+}
+main .container .medicines form .cards .box .card .image {
+  width: 100%;
+  height: 200px;
+}
+main .container .medicines form .cards .box .card .image img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .container .medicines form .cards .box .card .description {
+  background-color: #eee;
+  padding: 10px;
+  padding-bottom: 0;
+}
+main .container .medicines form .cards .box .card .description h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+main .container .medicines form .cards .box .card .description p {
+  font-size: 0.9rem;
+}
+main .container .medicines form .cards .box input {
+  cursor: pointer;
+  display: none;
+}
+main .container .medicines form .cards .box input:checked + .card {
+  border-color: #059cb1;
+}
+main .container .medicines form .cards .box input:checked + .card::before {
+  border-color: #059cb1;
+}
+main .container .medicines form .cards .box input:checked + .card::after {
+  opacity: 1;
+  border-color: #059cb1;
+  transform: scale(8);
+  -webkit-transform: scale(8);
+  -moz-transform: scale(8);
+  -ms-transform: scale(8);
+  -o-transform: scale(8);
+}
+main .container .medicines form .cards .box input:checked + .card .description {
+  background-color: #059cb1;
+}
+main .container .medicines form .cards .box input:checked + .card .description h2,
+main .container .medicines form .cards .box input:checked + .card .description p {
+  color: #fff;
+}
+main .container .medicines form .sec-foot {
+  padding-top: 20px;
+}
+main .container .medicines form .sec-foot input {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+main .container .medicines form .sec-foot input:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}
+main .container .medicines form .order-data {
+  padding-top: 20px;
+}
+main .container .medicines form .order-data section label {
+  display: block;
+  margin-bottom: 10px;
+}
+main .container .medicines form .order-data section .felid {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  position: relative;
+  gap: 5px;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: #f9f9f9;
+}
+main .container .medicines form .order-data section .felid input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  padding-left: 5px;
+  padding-right: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+main .container .medicines form .order-data section .felid input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+main .container .medicines form .order-data section .felid input:focus::-moz-placeholder {
+  color: transparent;
+}
+main .container .medicines form .order-data section .felid input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+main .container .medicines form .order-data section .felid input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+main .container .medicines form .order-data section .felid input:focus::placeholder {
+  color: transparent;
+}
+main .container .medicines form .order-data section .felid input:focus ~ span {
+  background-color: #059cb1;
+}
+main .container .medicines form .order-data section .felid span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #3ab6b6;
+  height: 2px;
+  width: 100%;
+}
+main .container .medicines form .btn {
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+}
+main .container .medicines form .btn input {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+  margin-right: 0 !important;
+}
+main .container .medicines form .btn input:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}
+
+body.dark main {
+  background-color: #222;
+}
+body.dark main .container .back-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #efefef;
+}
+body.dark main .container .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+body.dark main .container .back-btn .f-icon {
+  font-size: 1rem;
+}
+body.dark main .container .back-btn:hover .f-icon {
+  color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .filter ul li a {
+  background-color: #1d1d1d;
+  color: rgba(5, 156, 177, 0.8705882353);
+  border: 1px solid rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .filter ul li a:hover {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  color: #efefef;
+}
+body.dark main .container .medicines form .filter ul li.active a {
+  background-color: rgba(58, 182, 182, 0.8705882353);
+  color: #efefef;
+  border-color: rgba(58, 182, 182, 0.8705882353);
+}
+body.dark main .container .medicines form .cards .box .card {
+  background-color: #1d1d1d;
+  border-color: #1d1d1d;
+}
+body.dark main .container .medicines form .cards .box .card:before {
+  border-color: #1d1d1d;
+}
+body.dark main .container .medicines form .cards .box .card:after {
+  border-color: transparent;
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .cards .box .card .description {
+  background-color: #1d1d1d;
+}
+body.dark main .container .medicines form .cards .box .card .description h2,
+body.dark main .container .medicines form .cards .box .card .description p {
+  color: #a5a5a5;
+}
+body.dark main .container .medicines form .cards .box .image img {
+  filter: brightness(0.9);
+  -webkit-filter: brightness(0.9);
+}
+body.dark main .container .medicines form .cards .box input:checked + .card {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .cards .box input:checked + .card::before {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .cards .box input:checked + .card::after {
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .cards .box input:checked + .card .description {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .cards .box input:checked + .card .description h2,
+body.dark main .container .medicines form .cards .box input:checked + .card .description p {
+  color: #212529;
+}
+body.dark main .container .medicines form .order-data section label {
+  color: #a5a5a5;
+}
+body.dark main .container .medicines form .order-data section .felid {
+  background-color: #1d1d1d;
+}
+body.dark main .container .medicines form .order-data section .felid input {
+  background-color: transparent;
+  color: #efefef;
+}
+body.dark main .container .medicines form .order-data section .felid input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+body.dark main .container .medicines form .order-data section .felid input:focus::-moz-placeholder {
+  color: transparent;
+}
+body.dark main .container .medicines form .order-data section .felid input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+body.dark main .container .medicines form .order-data section .felid input:focus::-ms-input-placeholder {
+  color: transparent;
+}
+body.dark main .container .medicines form .order-data section .felid input:focus::placeholder {
+  color: transparent;
+}
+body.dark main .container .medicines form .order-data section .felid input:focus ~ span {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .medicines form .order-data section .felid span {
+  background-color: rgba(58, 182, 182, 0.8705882353);
+}
+body.dark main .container .medicines form .btn input {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #efefef;
+  border: 1px solid rgba(5, 156, 177, 0.8705882353);
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  padding: 10px 20px;
+}
+body.dark main .container .medicines form .btn input:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: transparent;
+  border-color: rgba(5, 156, 177, 0.8705882353);
+}

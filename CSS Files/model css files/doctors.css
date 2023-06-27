@@ -55,20 +55,12 @@ main .content .container .sec-body .box .data .social-icon > div > div a, body.d
           justify-content: center;
 }
 
-main .content .container .sec-body .box .data .social-icon > div > div a, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-body .box .data .social-icon > div > div a, body.dark main .content .sec-foot input[type=button] {
+main .content .container .sec-body .box, main .content .container .sec-body .box .data .social-icon > div > div a, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-body .box .data .social-icon > div > div a, body.dark main .content .sec-foot input[type=button] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
   -ms-border-radius: 5px !important;
   -o-border-radius: 5px !important;
-}
-
-main .content .container .sec-body .box {
-  border-radius: 10px !important;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  -ms-border-radius: 10px !important;
-  -o-border-radius: 10px !important;
 }
 
 main .content .container .sec-body .box .card-top .images, main .content .container .sec-body .box .data .contact-info > div > div > .f-icon, body.dark main .content .container .sec-body .box .data .contact-info > div > div > .f-icon {

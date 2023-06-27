@@ -114,7 +114,7 @@ main .container .content .head .more, .head-shape span::after, .head-shape span:
   -o-transform: translateY(-50%);
 }
 
-main .container .content .upper-sec .data .social-icon > div > div a, main .container .content .medicines form .btn input, body.dark main .container .content .upper-sec .data .social-icon > div > div a, body.dark main .container .content .medicines form .btn input, footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, .box,
+main .container .content .upper-sec .data .social-icon > div > div a, main .container .content .medicines form .btn input, body.dark main .container .content .upper-sec .data .social-icon > div > div a, body.dark main .container .content .medicines form .btn input, footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -131,7 +131,7 @@ main .container .content .other .swiper .slider-container .slides .slide, body.d
   -o-border-radius: 10px !important;
 }
 
-main .container .content .upper-sec .data .contact-info > div > div > .f-icon, main .container .content .other .swiper .swiper-navBtn, body.dark main .container .content .upper-sec .data .contact-info > div > div > .f-icon, body.dark main .container .content .other .swiper .swiper-navBtn, header .container .log-in-acc .lang .h-btn a,
+main .container .content .upper-sec .data .contact-info > div > div > .f-icon, main .container .content .other .swiper .swiper-navBtn, body.dark main .container .content .upper-sec .data .contact-info > div > div > .f-icon, body.dark main .container .content .other .swiper .swiper-navBtn, header .container .log-in-acc article > .menu ul li div, header .container .log-in-acc .lang .h-btn a,
 header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
 header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
 .head-shape-w span {
@@ -842,6 +842,7 @@ header .container .log-in-acc article > .menu ul::after {
   }
 }
 header .container .log-in-acc article > .menu ul li {
+  overflow: hidden;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -851,11 +852,6 @@ header .container .log-in-acc article > .menu ul li:hover {
   cursor: pointer;
 }
 header .container .log-in-acc article > .menu ul li div {
-  border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  -o-border-radius: 50% !important;
   width: 25px;
   overflow: hidden;
 }
@@ -1357,7 +1353,6 @@ main {
   padding-bottom: 40px;
 }
 main .container {
-  background-color: #eee;
   position: relative;
 }
 main .container .back-btn {
@@ -1387,11 +1382,11 @@ main .container > h1 {
   color: #059cb1;
 }
 main .container .content {
-  padding: 20px 10px;
+  padding: 20px 0;
 }
 main .container .content .upper-sec {
   gap: 20px;
-  background-color: #fff;
+  background-color: #eee;
   padding: 20px;
 }
 @media (max-width: 991px) {
@@ -1462,6 +1457,9 @@ main .container .content .upper-sec .data .social-icon > div > div a i {
 main .container .content .upper-sec .data .social-icon > div > div a {
   width: 40px !important;
   height: 40px !important;
+}
+main .container .content .upper-sec .data .social-icon > div > div a:hover {
+  background-color: #fff;
 }
 main .container .content .upper-sec .data .contact-info {
   position: relative;
@@ -1585,6 +1583,7 @@ main .container .content .medicines form .cards .box .card .image img {
      object-fit: cover;
 }
 main .container .content .medicines form .cards .box .card .description {
+  background-color: #eee;
   padding: 10px;
   padding-bottom: 0;
 }
@@ -1795,9 +1794,6 @@ main .container .content .other .swiper .swiper-pagination-bullet {
 body.dark main {
   background-color: #222;
 }
-body.dark main .container {
-  background-color: #1d1d1d;
-}
 body.dark main .container .back-btn {
   position: absolute;
   top: 10px;
@@ -1822,7 +1818,7 @@ body.dark main .container > h1 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark main .container .content .upper-sec {
-  background-color: #222;
+  background-color: #1d1d1d;
 }
 body.dark main .container .content .upper-sec .image img {
   filter: brightness(0.9);
@@ -1902,7 +1898,8 @@ body.dark main .container .content .head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark main .container .content .medicines form .cards .box .card {
-  border-color: #222;
+  background-color: #1d1d1d;
+  border-color: #1d1d1d;
 }
 body.dark main .container .content .medicines form .cards .box .card:before {
   border-color: #222;
@@ -1912,7 +1909,7 @@ body.dark main .container .content .medicines form .cards .box .card:after {
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark main .container .content .medicines form .cards .box .card .description {
-  background-color: #222;
+  background-color: #1d1d1d;
 }
 body.dark main .container .content .medicines form .cards .box .card .description h2,
 body.dark main .container .content .medicines form .cards .box .card .description p {
@@ -1942,7 +1939,7 @@ body.dark main .container .content .medicines form .order-data section label {
   color: #a5a5a5;
 }
 body.dark main .container .content .medicines form .order-data section .felid {
-  background-color: #222;
+  background-color: #1d1d1d;
 }
 body.dark main .container .content .medicines form .order-data section .felid input {
   background-color: transparent;

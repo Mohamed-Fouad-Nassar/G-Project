@@ -17,11 +17,14 @@ a {
   cursor: pointer;
 }
 
-main .container .content .sec-body .order .order-info .content .grid article, main .container .content .sec-body .order .order-cont .content .box, main .container .content .sec-foot input[type=button], body.dark main .container .content .sec-foot input[type=button], header .container nav ul li a, header .container .account,
+main .container .content .filter ul, main .container .content .sec-body .order .order-info .content .grid article, main .container .content .sec-body .order .order-cont .content .box, main .container .content .sec-foot input[type=button], body.dark main .container .content .sec-foot input[type=button], header .container nav ul li a, header .container .account,
 header .container .log-in-acc, header .container .account a, header .container .log-in-acc article, header .container .log-in-acc article > .menu ul, header .container .log-in-acc article > .menu ul li, header .container .log-in-acc .lang .h-btn,
-header .container .log-in-acc .cart .h-btn, header .container .log-in-acc .lang .h-btn a,
-header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
-header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
+header .container .log-in-acc .cart .h-btn,
+header .container .log-in-acc .notification .h-btn, header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc .cart .h-btn a,
+header .container .log-in-acc .notification .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
+header .container .log-in-acc .cart .h-btn a::after,
+header .container .log-in-acc .notification .h-btn a::after, header .container .log-in-acc .theme .h-btn, body.dark header .container .account a, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,8 +103,8 @@ header .container nav {
   -o-transform: translateY(-50%);
 }
 
-main .container aside ul li a,
-main .container aside ul li button, main .container .content .sec-foot input[type=button], body.dark main .container .content .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, body.dark header .container .account a, .box,
+main .container aside, main .container aside ul li a,
+main .container aside ul li button, main .container .content, main .container .content .sec-body .order, main .container .content .sec-foot input[type=button], body.dark main .container .content .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -110,17 +113,11 @@ main .container aside ul li button, main .container .content .sec-foot input[typ
   -o-border-radius: 5px !important;
 }
 
-main .container aside, main .container .content, main .container .content .sec-body .order {
-  border-radius: 10px !important;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  -ms-border-radius: 10px !important;
-  -o-border-radius: 10px !important;
-}
-
-header .container .log-in-acc .lang .h-btn a,
-header .container .log-in-acc .cart .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
-header .container .log-in-acc .cart .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
+header .container .log-in-acc article > .menu ul li div, header .container .log-in-acc .lang .h-btn a,
+header .container .log-in-acc .cart .h-btn a,
+header .container .log-in-acc .notification .h-btn a, header .container .log-in-acc .lang .h-btn a::after,
+header .container .log-in-acc .cart .h-btn a::after,
+header .container .log-in-acc .notification .h-btn a::after, header .container .log-in-acc .theme .h-btn, .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
@@ -830,6 +827,7 @@ header .container .log-in-acc article > .menu ul::after {
   }
 }
 header .container .log-in-acc article > .menu ul li {
+  overflow: hidden;
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
@@ -839,11 +837,6 @@ header .container .log-in-acc article > .menu ul li:hover {
   cursor: pointer;
 }
 header .container .log-in-acc article > .menu ul li div {
-  border-radius: 50% !important;
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  -o-border-radius: 50% !important;
   width: 25px;
   overflow: hidden;
 }
@@ -856,19 +849,23 @@ header .container .log-in-acc article > .menu ul li span {
   font-size: 0.9rem;
 }
 header .container .log-in-acc .lang,
-header .container .log-in-acc .cart {
+header .container .log-in-acc .cart,
+header .container .log-in-acc .notification {
   position: relative;
 }
 header .container .log-in-acc .lang .h-btn,
-header .container .log-in-acc .cart .h-btn {
+header .container .log-in-acc .cart .h-btn,
+header .container .log-in-acc .notification .h-btn {
   gap: 5px;
 }
 header .container .log-in-acc .lang .h-btn:hover,
-header .container .log-in-acc .cart .h-btn:hover {
+header .container .log-in-acc .cart .h-btn:hover,
+header .container .log-in-acc .notification .h-btn:hover {
   cursor: pointer;
 }
 header .container .log-in-acc .lang .h-btn div,
-header .container .log-in-acc .cart .h-btn div {
+header .container .log-in-acc .cart .h-btn div,
+header .container .log-in-acc .notification .h-btn div {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
@@ -878,40 +875,47 @@ header .container .log-in-acc .cart .h-btn div {
   overflow: hidden;
 }
 header .container .log-in-acc .lang .h-btn div img,
-header .container .log-in-acc .cart .h-btn div img {
+header .container .log-in-acc .cart .h-btn div img,
+header .container .log-in-acc .notification .h-btn div img {
   max-width: 100%;
 }
 header .container .log-in-acc .lang .h-btn span,
-header .container .log-in-acc .cart .h-btn span {
+header .container .log-in-acc .cart .h-btn span,
+header .container .log-in-acc .notification .h-btn span {
   text-transform: uppercase;
   font-weight: 600;
 }
 header .container .log-in-acc .lang .menu,
-header .container .log-in-acc .cart .menu {
+header .container .log-in-acc .cart .menu,
+header .container .log-in-acc .notification .menu {
   padding: 10px;
 }
 header .container .log-in-acc .lang .menu ul li:hover,
-header .container .log-in-acc .cart .menu ul li:hover {
+header .container .log-in-acc .cart .menu ul li:hover,
+header .container .log-in-acc .notification .menu ul li:hover {
   background-color: #f9f9f9;
   color: #059cb1;
 }
 header .container .log-in-acc .lang .h-btn,
-header .container .log-in-acc .cart .h-btn {
+header .container .log-in-acc .cart .h-btn,
+header .container .log-in-acc .notification .h-btn {
   padding: 0 10px;
 }
 header .container .log-in-acc .lang .h-btn a,
-header .container .log-in-acc .cart .h-btn a {
+header .container .log-in-acc .cart .h-btn a,
+header .container .log-in-acc .notification .h-btn a {
   width: 40px;
   height: 40px;
   background-color: #fff;
   position: relative;
 }
 header .container .log-in-acc .lang .h-btn a::after,
-header .container .log-in-acc .cart .h-btn a::after {
-  content: attr(number);
+header .container .log-in-acc .cart .h-btn a::after,
+header .container .log-in-acc .notification .h-btn a::after {
+  content: attr(data-number);
   position: absolute;
-  top: -5px;
-  right: -5px;
+  top: -7px;
+  right: -7px;
   background-color: #059cb1;
   color: #fff;
   width: 20px;
@@ -919,19 +923,20 @@ header .container .log-in-acc .cart .h-btn a::after {
   z-index: 1000;
 }
 header .container .log-in-acc .lang .h-btn a:hover,
-header .container .log-in-acc .cart .h-btn a:hover {
+header .container .log-in-acc .cart .h-btn a:hover,
+header .container .log-in-acc .notification .h-btn a:hover {
   background-color: #ccc;
 }
 header .container .log-in-acc .lang .h-btn a:hover .f-icon,
-header .container .log-in-acc .cart .h-btn a:hover .f-icon {
+header .container .log-in-acc .cart .h-btn a:hover .f-icon,
+header .container .log-in-acc .notification .h-btn a:hover .f-icon {
   color: #059cb1;
 }
 header .container .log-in-acc .lang .h-btn a .f-icon,
-header .container .log-in-acc .cart .h-btn a .f-icon {
+header .container .log-in-acc .cart .h-btn a .f-icon,
+header .container .log-in-acc .notification .h-btn a .f-icon {
   color: #212529;
   font-size: 1.05rem;
-  padding-top: 4px;
-  padding-right: 2px;
 }
 header .container .log-in-acc .theme .h-btn {
   background-color: #fff;
@@ -1103,33 +1108,40 @@ body.dark header .container .log-in-acc article > .menu ul li span {
   color: #efefef;
 }
 body.dark header .container .log-in-acc .lang .h-btn span,
-body.dark header .container .log-in-acc .cart .h-btn span {
+body.dark header .container .log-in-acc .cart .h-btn span,
+body.dark header .container .log-in-acc .notification .h-btn span {
   color: #efefef;
 }
 body.dark header .container .log-in-acc .lang .menu ul li:hover,
-body.dark header .container .log-in-acc .cart .menu ul li:hover {
+body.dark header .container .log-in-acc .cart .menu ul li:hover,
+body.dark header .container .log-in-acc .notification .menu ul li:hover {
   background-color: #1d1d1d;
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark header .container .log-in-acc .lang .h-btn a,
-body.dark header .container .log-in-acc .cart .h-btn a {
+body.dark header .container .log-in-acc .cart .h-btn a,
+body.dark header .container .log-in-acc .notification .h-btn a {
   background-color: #222;
 }
 body.dark header .container .log-in-acc .lang .h-btn a::after,
-body.dark header .container .log-in-acc .cart .h-btn a::after {
+body.dark header .container .log-in-acc .cart .h-btn a::after,
+body.dark header .container .log-in-acc .notification .h-btn a::after {
   background-color: rgba(5, 156, 177, 0.8705882353);
   color: #fff;
 }
 body.dark header .container .log-in-acc .lang .h-btn a:hover,
-body.dark header .container .log-in-acc .cart .h-btn a:hover {
+body.dark header .container .log-in-acc .cart .h-btn a:hover,
+body.dark header .container .log-in-acc .notification .h-btn a:hover {
   background-color: #323234;
 }
 body.dark header .container .log-in-acc .lang .h-btn a:hover .f-icon,
-body.dark header .container .log-in-acc .cart .h-btn a:hover .f-icon {
+body.dark header .container .log-in-acc .cart .h-btn a:hover .f-icon,
+body.dark header .container .log-in-acc .notification .h-btn a:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark header .container .log-in-acc .lang .h-btn a .f-icon,
-body.dark header .container .log-in-acc .cart .h-btn a .f-icon {
+body.dark header .container .log-in-acc .cart .h-btn a .f-icon,
+body.dark header .container .log-in-acc .notification .h-btn a .f-icon {
   color: #fff;
 }
 body.dark header .container .log-in-acc .theme .h-btn {
@@ -1517,6 +1529,33 @@ main .container .content h3 {
   font-size: 1.1rem;
   color: #3ab6b6;
 }
+main .container .content .filter {
+  padding-bottom: 20px;
+}
+main .container .content .filter ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+main .container .content .filter ul li a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px 10px;
+  background-color: transparent;
+  color: #059cb1;
+  border: 1px solid #059cb1;
+}
+main .container .content .filter ul li a:hover {
+  background-color: #059cb1;
+  color: #fff;
+}
+main .container .content .filter ul li.active a {
+  background-color: #3ab6b6;
+  color: #fff;
+  border-color: #3ab6b6;
+}
 main .container .content .sec-body .order {
   padding: 20px;
   background-color: #eee;
@@ -1692,6 +1731,20 @@ body.dark main .container .content {
 body.dark main .container .content h2,
 body.dark main .container .content h3 {
   color: rgba(58, 182, 182, 0.8705882353);
+}
+body.dark main .container .content .filter ul li a {
+  background-color: #1d1d1d;
+  color: rgba(5, 156, 177, 0.8705882353);
+  border: 1px solid rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .container .content .filter ul li a:hover {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  color: #efefef;
+}
+body.dark main .container .content .filter ul li.active a {
+  background-color: rgba(58, 182, 182, 0.8705882353);
+  color: #efefef;
+  border-color: rgba(58, 182, 182, 0.8705882353);
 }
 body.dark main .container .content .sec-body .order {
   background-color: #1d1d1d;

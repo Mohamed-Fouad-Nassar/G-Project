@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize css files -->
+    <link rel="stylesheet" href="../CSS Files/normalize.css" />
     <!-- font-awesome css file -->
     <link rel="stylesheet" href="../CSS Files/all.min.css" />
     <!-- bootstrap css file -->
     <link rel="stylesheet" href="../CSS Files/bootstrap.min.css" />
+    <!-- swiper css files -->
+    <link rel="stylesheet" href="../CSS Files/swiper-bundle.min.css" />
     <!-- main css file -->
-    <link rel="stylesheet" href="../CSS Files/view_profile.css" />
+    <!-- <link rel="stylesheet" href="../CSS Files/cart.css" /> -->
+    <link rel="stylesheet" href="../CSS Files/notifications.css" />
     <!-- font open-sans files -->
     <!-- font-family: 'Open Sans', sans-serif; -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,16 +38,17 @@
       type="image/x-icon"
     />
     <!-- page title -->
-    <title>Profile</title>
+    <title>notifications</title>
   </head>
   <body>
     <!-- Start Header -->
     <header id="navbar_top">
       <div class="container">
         <div class="logo">
-          <a href="../index.html">
+          <a href="#top">
             <h1 id="logoText">hope</h1>
-            <!-- <img src="./Data/Images/logo.png" alt="logo-image" /> -->
+            <!-- <img src="./Data/un-used-Images/logo-1.png" alt="logo-image" /> -->
+            <!-- <img src="./Data/un-used-Images/logo-2.png" alt="logo-image" /> -->
           </a>
         </div>
         <nav id="nav">
@@ -84,7 +90,7 @@
               </a>
             </li>
             <!-- <li class="link">
-              <a href="./charities.html">
+              <a href="#charities">
                 <i class="f-icon fa-solid fa-hand-holding-heart"></i>
                 <span>charities</span>
               </a>
@@ -105,35 +111,31 @@
         <!-- End Not Logging In View -->
         <!-- Start Logging In View -->
         <div class="log-in-acc">
-          <article class="lang">
+          <article class="cart">
             <div class="h-btn">
-              <div>
-                <img src="../Data/Images/usa.png" alt="lang-flag-image" />
-              </div>
-              <span>en</span>
+              <a href="./cart.html" data-number="3">
+                <i class="f-icon fa-solid fa-cart-shopping"></i>
+              </a>
             </div>
-            <div class="menu">
-              <ul>
-                <li img-src="../Data/Images/usa.png" lang-text="en">
-                  <div>
-                    <img src="../Data/Images/usa.png" alt="lang-flag-image" />
-                  </div>
-                  <span>en</span>
-                </li>
-                <li img-src="../Data/Images/eg.png" lang-text="ar">
-                  <div>
-                    <img src="../Data/Images/eg.png" alt="lang-flag-image" />
-                  </div>
-                  <span>ar</span>
-                </li>
-              </ul>
+          </article>
+          <article class="notification">
+            <div class="h-btn">
+              <a href="#top" data-number="4">
+                <i class="f-icon fa-solid fa-bell"></i>
+              </a>
             </div>
           </article>
           <article class="theme">
             <div class="h-btn">
-              <i class="f-icon fa-solid fa-circle-half-stroke"></i>
-              <!-- <i class="f-icon fa-solid fa-sun"></i> -->
-              <!-- <i class="f-icon fa-solid fa-moon"></i> -->
+              <!-- <i class="f-icon fa-solid fa-circle-half-stroke"></i> -->
+              <!-- <i class="f-icon light fa-solid fa-sun"></i> -->
+              <!-- <i class="f-icon dark fa-solid fa-moon"></i> -->
+              <ion-icon
+                class="f-icon light"
+                name="sunny"
+                size="large"
+              ></ion-icon>
+              <ion-icon class="f-icon dark" name="moon" size="large"></ion-icon>
             </div>
             <div class="menu"></div>
           </article>
@@ -147,10 +149,22 @@
             <div class="menu">
               <ul>
                 <li id="view-profile">
-                  <a href="#top">view profile</a>
+                  <a href="./view_profile.html">
+                    <i class="f-icon fa-solid fa-user"></i>
+                    view profile
+                  </a>
+                </li>
+                <li>
+                  <a href="./dashboard.html">
+                    <i class="f-icon fa-solid fa-chart-column"></i>
+                    dashboard
+                  </a>
                 </li>
                 <li id="log-out-btn">
-                  <span>log out</span>
+                  <a class="danger">
+                    <i class="f-icon fa-solid fa-arrow-right-from-bracket"></i>
+                    log out
+                  </a>
                 </li>
               </ul>
             </div>
@@ -162,155 +176,228 @@
     <!-- End Header -->
     <!-- Start Main -->
     <main id="main_page">
+      <!-- Start Landing -->
       <section class="content">
+        <h2>messages</h2>
         <div class="container">
-          <!-- Start Aside -->
-          <aside>
+          <aside class="active" id="aside">
             <ul>
-              <li>
-                <a href="#top" class="active">
-                  <i class="f-icon fa-solid fa-user"></i>
-                  <span>personal info</span>
+              <li class="active">
+                <a>
+                  <div class="image">
+                    <img
+                      src="../Data/Images/avatar-image-1.png"
+                      alt="user-image"
+                    />
+                  </div>
+                  <div class="data">
+                    <span>user name</span>
+                  </div>
                 </a>
               </li>
               <li>
-                <a href="./user-profile/Pharmacy_profile_orders.html">
-                  <i class="f-icon fa-solid fa-cart-shopping"></i>
-                  <span>orders</span>
+                <a>
+                  <div class="image">
+                    <img
+                      src="../Data/Images/avatar-image-1.png"
+                      alt="user-image"
+                    />
+                  </div>
+                  <div class="data">
+                    <span>user name</span>
+                  </div>
                 </a>
               </li>
               <li>
-                <a href="./user-profile/profile_medicine.html">
-                  <i class="f-icon fa-solid fa-pills"></i>
-                  <span>medicines</span>
+                <a>
+                  <div class="image">
+                    <img
+                      src="../Data/Images/avatar-image-1.png"
+                      alt="user-image"
+                    />
+                  </div>
+                  <div class="data">
+                    <span>user name</span>
+                  </div>
                 </a>
               </li>
               <li>
-                <a href="./user-profile/liked_articles.html">
-                  <i class="f-icon fa-solid fa-thumbs-up"></i>
-                  <span>liked articles</span>
+                <a>
+                  <div class="image">
+                    <img
+                      src="../Data/Images/avatar-image-1.png"
+                      alt="user-image"
+                    />
+                  </div>
+                  <div class="data">
+                    <span>user name</span>
+                  </div>
                 </a>
               </li>
               <li>
-                <a href="./user-profile/saved_articles.html">
-                  <i class="f-icon fa-solid fa-bookmark"></i>
-                  <span>saved articles</span>
+                <a>
+                  <div class="image">
+                    <img
+                      src="../Data/Images/avatar-image-1.png"
+                      alt="user-image"
+                    />
+                  </div>
+                  <div class="data">
+                    <span>user name</span>
+                  </div>
                 </a>
               </li>
               <li>
-                <button>
-                  <i class="f-icon fa-solid fa-arrow-right-from-bracket"></i>
-                  <!-- <i class="f-icon fa-solid fa-right-from-bracket"></i> -->
-                  <span>log out</span>
-                </button>
+                <a>
+                  <div class="image">
+                    <img
+                      src="../Data/Images/avatar-image-1.png"
+                      alt="user-image"
+                    />
+                  </div>
+                  <div class="data">
+                    <span>user name</span>
+                  </div>
+                </a>
               </li>
             </ul>
           </aside>
-          <!-- End Aside -->
-          <!-- start content section -->
-          <section class="content">
-            <div class="top-sec">
-              <div class="image">
-                <img
-                  src="../Data/Images/pharmacy-image.jpg"
-                  alt="pharmacy-profile-image"
-                />
+          <div class="message" id="message">
+            <button class="back-btn" id="backBtn">
+              <i class="f-icon fa-solid fa-arrow-left"></i>
+              <!-- <i class="fa-solid fa-left-long"></i> -->
+              <!-- <i class="fa-solid fa-chevron-left"></i> -->
+            </button>
+            <div class="order-info">
+              <article class="cycle">
+                <span>remaining cycles</span>
+                <span>3</span>
+              </article>
+              <article class="time-dif">
+                <span>days between cycles</span>
+                <span>15</span>
+              </article>
+              <article class="status">
+                <span>order status</span>
+                <span>pending</span>
+              </article>
+            </div>
+            <div class="order-content">
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+              <!-- start box -->
+              <article class="box">
+                <div class="image">
+                  <img src="../Data/Images/medicine.jpg" alt="medicine-image" />
+                </div>
+                <div class="info">
+                  <span>medicine name</span>
+                  <span>category</span>
+                </div>
+              </article>
+              <!-- end box -->
+            </div>
+            <div class="user-info">
+              <div class="box">
+                <span>name: </span>
+                <span>user name</span>
               </div>
-              <div class="text">
-                <h2>account name</h2>
-                <span>username</span>
+              <div class="box">
+                <span>phone: </span>
+                <span>user phone number</span>
               </div>
-              <div class="edit-btn">
-                <a href="./edit_pharmacy_profile.html">
-                  <i class="f-icon fa-solid fa-pen"></i>
-                  <span>edit profile</span>
-                </a>
+              <div class="box">
+                <span>address: </span>
+                <span>user address</span>
+              </div>
+              <div class="box">
+                <span>email: </span>
+                <span>user email address</span>
               </div>
             </div>
-            <div class="bottom-sec">
-              <!-- start box -->
-              <article class="box">
-                <label for="field">pharmacy name:</label>
-                <div class="field" id="field">
-                  <span>name</span>
-                </div>
-              </article>
-              <!-- end box -->
-              <!-- start box -->
-              <article class="box">
-                <label for="field">e-mail:</label>
-                <div class="field" id="field">
-                  <span>leosx.as@mn.ci</span>
-                </div>
-              </article>
-              <!-- end box -->
-              <!-- start box -->
-              <article class="box">
-                <label for="field">bio:</label>
-                <div class="field" id="field">
-                  <span
-                    >Lorem Ipsum Dolor, Sit Amet Consectetur Adipisicing Elit.
-                    Placeat Vel Molestias Minus Vitae Numquam Eveniet? Minus
-                    Libero Itaque</span
-                  >
-                </div>
-              </article>
-              <!-- end box -->
-              <!-- start box -->
-              <article class="box">
-                <label for="field">phone number:</label>
-                <div class="field" id="field">
-                  <span>+201034648924</span>
-                </div>
-              </article>
-              <!-- end box -->
-              <!-- start box -->
-              <article class="box">
-                <label for="field">address:</label>
-                <div class="field" id="field">
-                  <span>street name - city - country</span>
-                </div>
-              </article>
-              <!-- end box -->
-              <!-- start box -->
-              <article class="box">
-                <div class="field">
-                  <div class="flex-sec">
-                    <label for="field">facebook:</label>
-                    <div class="field" id="field">
-                      <span>username</span>
-                    </div>
-                  </div>
-                  <div class="flex-sec">
-                    <label for="field">twitter:</label>
-                    <div class="field" id="field">
-                      <span>username</span>
-                    </div>
-                  </div>
-                  <div class="flex-sec">
-                    <label for="field">Whatsapp:</label>
-                    <div class="field" id="field">
-                      <span>number</span>
-                    </div>
-                  </div>
-                  <div class="flex-sec">
-                    <label for="field">phone number:</label>
-                    <div class="field" id="field">
-                      <span>number</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-              <!-- end box -->
-            </div>
-          </section>
-          <!-- end content section -->
+          </div>
         </div>
       </section>
+      <!-- End Landing -->
       <!-- Start Top Button -->
       <div class="top" id="up">
         <a href="#">
-          <i class="fa-solid fa-angle-up"></i>
+          <i class="f-icon fa-solid fa-angle-up"></i>
         </a>
       </div>
       <!-- End Top Button -->
@@ -371,7 +458,7 @@
               <a href="../index.html">home</a>
             </li>
             <li>
-              <a href="./doctors.html">doctors</a>
+              <a href="../doctors.html">doctors</a>
             </li>
             <li>
               <a href="./medicines.html">medicines</a>
@@ -421,8 +508,9 @@
       </div>
       <div class="rights">
         <p>
-          Copyright &copy; 2023 <span> hope</span>, made by -
-          <a href="">🚑66-اسعاف🚨</a>
+          Copyright &copy; <span id="copyright"></span> - <span> hope</span>,
+          made by -
+          <a href="./about.html">🚑66-اسعاف🚨</a>
         </p>
       </div>
     </footer>
@@ -438,9 +526,16 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-- main script -->
-    <!-- <script src="../JS Files/.js"></script> -->
+    <!-- swiper script -->
+    <script src="../JS Files/swiper-bundle.min.js"></script>
     <!-- header script -->
     <script src="../JS Files/header.js"></script>
+    <!-- main scripts -->
+    <script>
+      document.getElementById("copyright").innerText = new Date().getFullYear();
+      document.getElementById("copyright").style.cssText =
+        "font-family:inherit; font-size:inherit; font-weight:inherit; color:#aaa !important;";
+    </script>
+    <script src="../JS Files/notifications.js"></script>
   </body>
 </html>

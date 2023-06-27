@@ -1,140 +1,140 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 
 // additional page styling
 
 // Start Main Styling:-
 main {
-  background-color: $light-white-color;
+  // background-color: $light-white-color;
   .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 20px;
-    position: relative;
-    padding-bottom: $up-down-padding / 2;
-    @media (max-width: 575px) {
-      gap: 10px;
-    }
-    aside {
-      @extend %border-radius-10;
-      position: sticky;
-      top: 90px;
-      width: 230px;
-      height: 100%;
-      overflow-y: auto;
-      overflow-x: hidden;
-      padding: $main-element-padding;
-      background-color: $white-color;
-      @media (max-width: 991px) {
-        width: 200px;
-      }
-      @media (max-width: 767px) {
-        width: 60px;
-        padding: 15px $sec-element-padding;
-        top: 65px;
-      }
-      @media (max-width: 575px) {
-        padding: {
-          left: $sec-element-padding / 2;
-          right: $sec-element-padding / 2;
-        }
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        @extend %reset;
-        @media (max-width: 767px) {
-          align-items: center;
-        }
-        li {
-          @extend %reset;
-          padding-top: $sec-element-padding / 2;
-          a,
-          button {
-            display: block;
-            width: 100%;
-            color: $black-color;
-            padding: $sec-element-padding 15px;
-            @extend %border-radius-5;
-            @media (max-width: 767px) {
-              padding: 0;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 45px;
-              height: 45px;
-              .f-icon {
-                font-size: 1.1rem;
-              }
-            }
-            &:hover {
-              color: $main-color;
-              background-color: $light-input-background;
-              span {
-                color: $main-color;
-              }
-              .f-icon {
-                color: $main-color;
-              }
-            }
-            &.active {
-              color: $main-color;
-              background-color: $light-input-background;
-              span {
-                color: $main-color;
-              }
-              .f-icon {
-                color: $main-color;
-              }
-            }
-            span {
-              color: $black-color;
-              @media (max-width: 767px) {
-                display: none;
-              }
-            }
-            .f-icon {
-              @extend %zero-transition;
-              margin-right: $sec-element-padding;
-              @media (max-width: 767px) {
-                margin-right: 0;
-              }
-            }
-          }
-          &:last-of-type {
-            button {
-              outline: none;
-              border: none;
-              background-color: transparent;
-              text-align: inherit;
-              span,
-              .f-icon {
-                color: $light-danger-color;
-              }
-              &:hover {
-                background-color: $light-danger-color;
-                span,
-                .f-icon {
-                  color: $white-color;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: stretch;
+    // gap: 20px;
+    // position: relative;
+    // padding-bottom: $up-down-padding / 2;
+    // @media (max-width: 575px) {
+    //   gap: 10px;
+    // }
+    // aside {
+    //   @extend %border-radius-5;
+    //   position: sticky;
+    //   top: 90px;
+    //   width: 230px;
+    //   height: 100%;
+    //   overflow-y: auto;
+    //   overflow-x: hidden;
+    //   padding: $main-element-padding;
+    //   background-color: $white-color;
+    //   @media (max-width: 991px) {
+    //     width: 200px;
+    //   }
+    //   @media (max-width: 767px) {
+    //     width: 60px;
+    //     padding: 15px $sec-element-padding;
+    //     top: 65px;
+    //   }
+    //   @media (max-width: 575px) {
+    //     padding: {
+    //       left: $sec-element-padding / 2;
+    //       right: $sec-element-padding / 2;
+    //     }
+    //   }
+    //   ul {
+    //     display: flex;
+    //     flex-direction: column;
+    //     list-style: none;
+    //     @extend %reset;
+    //     @media (max-width: 767px) {
+    //       align-items: center;
+    //     }
+    //     li {
+    //       @extend %reset;
+    //       padding-top: $sec-element-padding / 2;
+    //       a,
+    //       button {
+    //         display: block;
+    //         width: 100%;
+    //         color: $black-color;
+    //         padding: $sec-element-padding 15px;
+    //         @extend %border-radius-5;
+    //         @media (max-width: 767px) {
+    //           padding: 0;
+    //           display: flex;
+    //           align-items: center;
+    //           justify-content: center;
+    //           width: 45px;
+    //           height: 45px;
+    //           .f-icon {
+    //             font-size: 1.1rem;
+    //           }
+    //         }
+    //         &:hover {
+    //           color: $main-color;
+    //           background-color: $light-input-background;
+    //           span {
+    //             color: $main-color;
+    //           }
+    //           .f-icon {
+    //             color: $main-color;
+    //           }
+    //         }
+    //         &.active {
+    //           color: $main-color;
+    //           background-color: $light-input-background;
+    //           span {
+    //             color: $main-color;
+    //           }
+    //           .f-icon {
+    //             color: $main-color;
+    //           }
+    //         }
+    //         span {
+    //           color: $black-color;
+    //           @media (max-width: 767px) {
+    //             display: none;
+    //           }
+    //         }
+    //         .f-icon {
+    //           @extend %zero-transition;
+    //           margin-right: $sec-element-padding;
+    //           @media (max-width: 767px) {
+    //             margin-right: 0;
+    //           }
+    //         }
+    //       }
+    //       &:last-of-type {
+    //         button {
+    //           outline: none;
+    //           border: none;
+    //           background-color: transparent;
+    //           text-align: inherit;
+    //           span,
+    //           .f-icon {
+    //             color: $light-danger-color;
+    //           }
+    //           &:hover {
+    //             background-color: $light-danger-color;
+    //             span,
+    //             .f-icon {
+    //               color: $white-color;
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
     .content {
-      @extend %border-radius-10;
+      @extend %border-radius-5;
       display: flex;
       flex-direction: column;
       background-color: $white-color;
@@ -171,52 +171,52 @@ main {
 body {
   &.dark {
     main {
-      background-color: $sec-dark-bg;
+      // background-color: $sec-dark-bg;
       .container {
-        aside {
-          background-color: $main-dark-bg;
-          ul {
-            li {
-              a {
-                &:hover {
-                  color: $main-dark-color;
-                  background-color: $nav-active-bg;
-                  span,
-                  .f-icon {
-                    color: $main-dark-color;
-                  }
-                }
-                &.active {
-                  color: $main-dark-color;
-                  background-color: $nav-active-bg;
-                  span,
-                  .f-icon {
-                    color: $main-dark-color;
-                  }
-                }
-                span,
-                .f-icon {
-                  color: $white-dark-color;
-                }
-              }
-              &:last-of-type {
-                button {
-                  span,
-                  .f-icon {
-                    color: $dark-danger-color;
-                  }
-                  &:hover {
-                    background-color: $dark-danger-color;
-                    span,
-                    .f-icon {
-                      color: $white-dark-color;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
+        // aside {
+        //   background-color: $main-dark-bg;
+        //   ul {
+        //     li {
+        //       a {
+        //         &:hover {
+        //           color: $main-dark-color;
+        //           background-color: $nav-active-bg;
+        //           span,
+        //           .f-icon {
+        //             color: $main-dark-color;
+        //           }
+        //         }
+        //         &.active {
+        //           color: $main-dark-color;
+        //           background-color: $nav-active-bg;
+        //           span,
+        //           .f-icon {
+        //             color: $main-dark-color;
+        //           }
+        //         }
+        //         span,
+        //         .f-icon {
+        //           color: $white-dark-color;
+        //         }
+        //       }
+        //       &:last-of-type {
+        //         button {
+        //           span,
+        //           .f-icon {
+        //             color: $dark-danger-color;
+        //           }
+        //           &:hover {
+        //             background-color: $dark-danger-color;
+        //             span,
+        //             .f-icon {
+        //               color: $white-dark-color;
+        //             }
+        //           }
+        //         }
+        //       }
+        //     }
+        //   }
+        // }
         .content {
           background-color: $main-dark-bg;
           .sec-body {

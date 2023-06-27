@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 // import dashboard global styling:-
 @use "../sections/dashboard_global" as *;
 // import dashboard control styling:-
@@ -190,7 +190,7 @@ main {
         @include grid(250px, $main-element-padding);
       }
       > article {
-        @extend %border-radius-10;
+        @extend %border-radius-5;
         background-color: $light-input-background;
         padding: $main-element-padding;
         .head {
@@ -229,7 +229,7 @@ main {
             gap: $sec-element-padding;
           }
           > div {
-            @extend %border-radius-10;
+            @extend %border-radius-5;
             width: 50%;
             @media (max-width: 575px) {
               width: 100%;

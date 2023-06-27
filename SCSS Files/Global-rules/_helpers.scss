@@ -250,6 +250,7 @@
 }
 
 @mixin blog-article-box($theme) {
+  @extend %border-radius-5;
   box-shadow: $main-box-shadow;
   overflow: hidden;
   .text {
@@ -994,6 +995,12 @@
 %flex-center-start {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+}
+
+%flex-start-start {
+  display: flex;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 

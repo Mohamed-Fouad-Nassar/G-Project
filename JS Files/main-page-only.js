@@ -48,16 +48,16 @@ goUp.onclick = function () {
 };
 
 // change active class
-const lis = document.querySelectorAll("nav ul li");
-const sec = document.querySelectorAll("section.section");
-function activeMenu() {
-  let len = sec.length;
-  while (--len && window.scrollY + 97 < sec[len].offsetTop) {}
-  lis.forEach((ltx) => ltx.classList.remove("active"));
-  lis[len].classList.add("active");
-}
-activeMenu();
-window.addEventListener("scroll", activeMenu);
+// const lis = document.querySelectorAll("nav ul li");
+// const sec = document.querySelectorAll("section.section");
+// function activeMenu() {
+//   let len = sec.length;
+//   while (--len && window.scrollY + 97 < sec[len].offsetTop) {}
+//   lis.forEach((ltx) => ltx.classList.remove("active"));
+//   lis[len].classList.add("active");
+// }
+// activeMenu();
+// window.addEventListener("scroll", activeMenu);
 
 // // use pharmacies api
 // let pharmacySecBody = document.getElementById("pharmacy-body");
@@ -71,7 +71,11 @@ window.addEventListener("scroll", activeMenu);
 
 // new added
 // change year automatically in copyright section
-let year = document.getElementById("copyright");
-year.innerText = new Date().getFullYear();
-year.style.cssText =
-  "font-family:inherit; font-size:inherit; font-weight:inherit; color:#aaa !important;";
+// let year = document.getElementById("copyright");
+// year.innerText = new Date().getFullYear();
+// year.style.cssText =
+//   "font-family:inherit; font-size:inherit; font-weight:inherit; color:#aaa !important;";
+
+// document.getElementById("copyright").innerText = new Date().getFullYear();
+// document.getElementById("copyright").style.cssText =
+//   "font-family:inherit; font-size:inherit; font-weight:inherit; color:#aaa !important;";

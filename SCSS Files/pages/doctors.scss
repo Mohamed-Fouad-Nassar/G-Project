@@ -25,6 +25,10 @@ main {
           @extend %border-radius-5;
           background-color: $white-color;
           overflow: hidden;
+          display: none;
+          &.active {
+            display: block;
+          }
           .card-top {
             @extend %flex-center-;
             background-color: $main-color;

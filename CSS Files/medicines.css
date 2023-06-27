@@ -6,7 +6,7 @@
           transition-delay: 0s;
 }
 
-body, ul, ul li {
+main .content .container .sec-body .med .side-bar ul, main .content .container .sec-body .med .cards .left-side ul, body, ul, ul li {
   margin: 0;
   padding: 0;
 }
@@ -17,7 +17,7 @@ a {
   cursor: pointer;
 }
 
-main .content .container .sec-foot input[type=button], header .container nav ul li a, header .container .account,
+main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-foot input[type=button], header .container nav ul li a, header .container .account,
 header .container .log-in-acc, header .container .account a, header .container .log-in-acc article, header .container .log-in-acc article > .menu ul, header .container .log-in-acc article > .menu ul li, header .container .log-in-acc .lang .h-btn,
 header .container .log-in-acc .cart .h-btn,
 header .container .log-in-acc .notification .h-btn, header .container .log-in-acc .lang .h-btn a,
@@ -57,7 +57,19 @@ header .container .log-in-acc .acc .menu ul li a {
           align-items: center;
 }
 
-main .content .container .sec-body .med .cards .right-side .card-body .pharmacies {
+main .content .container .sec-body .med .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,15 +79,6 @@ main .content .container .sec-body .med .cards .right-side .card-body .pharmacie
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-main .content .container .sec-body .med .cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a {
@@ -119,7 +122,7 @@ main .content .container .sec-body .med .cards .right-side {
   -o-transform: translateY(-50%);
 }
 
-main .content .container .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
+main .content .container .sec-body .med .side-bar, main .content .container .sec-body .med .side-bar ul li, main .content .container .sec-body .med .cards .left-side, main .content .container .sec-body .med .cards .left-side ul li a, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-foot input[type=button], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -1369,9 +1372,6 @@ main {
   padding: 100px 0;
   position: relative;
 }
-main .content .container .sec-body {
-  padding: 20px;
-}
 main .content .container .sec-body .med {
   position: relative;
 }
@@ -1383,13 +1383,13 @@ main .content .container .sec-body .med .filter {
   border: none;
   width: 40px;
   cursor: pointer;
-  z-index: 1000000000000000000;
+  z-index: 10;
   padding: 10px;
 }
 main .content .container .sec-body .med .filter span {
   display: block;
   height: 4px;
-  background-color: #000;
+  background-color: #212529;
   margin-bottom: 4px;
 }
 main .content .container .sec-body .med .side-bar {
@@ -1397,66 +1397,60 @@ main .content .container .sec-body .med .side-bar {
   position: absolute;
   top: -50px;
   right: 40px;
-  z-index: 1000000000000000000;
+  z-index: 10;
   padding: 7px;
   background-color: #fff;
   width: 200px;
   height: 30rem;
-  color: #000;
+  color: #212529;
 }
 main .content .container .sec-body .med .side-bar h2 {
   font-size: 1.7rem;
   margin: 0;
   margin-bottom: 20px;
 }
-main .content .container .sec-body .med .side-bar ul.categories {
-  list-style: none;
-}
-main .content .container .sec-body .med .side-bar ul.categories li {
-  padding: 10px;
-  border-radius: 5px;
+main .content .container .sec-body .med .side-bar ul li {
+  padding: 10px 7px;
   cursor: pointer;
 }
-main .content .container .sec-body .med .side-bar ul.categories li a {
-  text-decoration: none;
-  color: inherit;
-}
-main .content .container .sec-body .med .side-bar ul.categories .active {
+main .content .container .sec-body .med .side-bar ul .active {
   color: #fff;
   background-color: #059cb1;
 }
 main .content .container .sec-body .med .cards {
   gap: 20px;
-  padding: 10px;
   position: relative;
 }
 main .content .container .sec-body .med .cards .left-side {
-  padding: 7px;
+  padding: 20px 10px;
   background-color: #fff;
   width: 200px;
-  height: 30rem;
-  color: #000;
+  color: #212529;
+}
+@media (min-width: 768px) {
+  main .content .container .sec-body .med .cards .left-side {
+    position: sticky;
+    top: 90px;
+  }
 }
 main .content .container .sec-body .med .cards .left-side h2 {
   font-size: 1.7rem;
   margin: 0;
   margin-bottom: 20px;
 }
-main .content .container .sec-body .med .cards .left-side ul.categories {
-  list-style: none;
-}
-main .content .container .sec-body .med .cards .left-side ul.categories li {
+main .content .container .sec-body .med .cards .left-side ul li a {
   padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-bottom: 4px;
 }
-main .content .container .sec-body .med .cards .left-side ul.categories li a {
-  text-decoration: none;
-  color: inherit;
+main .content .container .sec-body .med .cards .left-side ul li a:hover {
+  color: #059cb1;
+  background-color: #f9f9f9;
 }
-main .content .container .sec-body .med .cards .left-side ul.categories .active {
-  color: #fff;
-  background-color: #059cb1;
+main .content .container .sec-body .med .cards .left-side ul li.active a {
+  color: #059cb1;
+  background-color: #f9f9f9;
 }
 main .content .container .sec-body .med .cards .right-side {
   overflow: hidden;
@@ -1465,33 +1459,36 @@ main .content .container .sec-body .med .cards .right-side {
           flex: 1;
   padding: 0;
 }
-main .content .container .sec-body .med .cards .right-side .image img {
+main .content .container .sec-body .med .cards .right-side .card {
+  display: none;
+}
+main .content .container .sec-body .med .cards .right-side .card.active {
+  display: block;
+}
+main .content .container .sec-body .med .cards .right-side .card .image img {
   width: 100%;
 }
-main .content .container .sec-body .med .cards .right-side .card-body .med-details:after {
+main .content .container .sec-body .med .cards .right-side .card .card-body .med-details:after {
   margin-top: 10px;
-  background-color: rgba(204, 204, 204, 0.6666666667);
+  background-color: #eee;
   width: 100%;
   height: 1px;
   display: block;
   content: " ";
 }
-main .content .container .sec-body .med .cards .right-side .card-body .pharmacies {
+main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies {
   padding-top: 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute !important;
-      justify-content: space-around !important;
+  gap: 10px;
 }
-main .content .container .sec-body .med .cards .right-side .card-body .pharmacies a {
-  display: inline-block;
-  margin: 3px;
-  color: #000;
-  background-color: #ccc;
-  border-color: #ccc;
+main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies a {
+  color: #212529;
+  background-color: #eee;
+  border-color: #eee;
   font-size: 0.9rem;
 }
-main .content .container .sec-body .med .cards .right-side .card-body .pharmacies a:hover {
+main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies a:hover {
   color: #fff;
   background-color: #059cb1;
   border-color: #059cb1;
@@ -1521,7 +1518,7 @@ main .content .container .sec-foot input[type=button]:hover {
   font-size: 0.9rem !important;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 767px) {
   .sec-body .med .filter {
     display: block !important;
   }
@@ -1530,7 +1527,7 @@ main .content .container .sec-foot input[type=button]:hover {
     position: absolute;
     right: 50px;
     top: -50px;
-    z-index: 9999999999;
+    z-index: 10;
   }
   .sec-body .med .right-side {
     width: 100% !important;
@@ -1549,11 +1546,16 @@ body.dark main .content .container .sec-body .med .cards .left-side {
   background-color: #1d1d1d;
   color: #efefef;
 }
-body.dark main .content .container .sec-body .med .cards .left-side ul li {
-  color: #a5a5a5;
+body.dark main .content .container .sec-body .med .cards .left-side ul li a {
+  color: #efefef;
 }
-body.dark main .content .container .sec-body .med .cards .left-side ul li .active {
-  background-color: rgba(5, 156, 177, 0.8705882353);
+body.dark main .content .container .sec-body .med .cards .left-side ul li a:hover {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #222;
+}
+body.dark main .content .container .sec-body .med .cards .left-side ul li.active a {
+  color: rgba(5, 156, 177, 0.8705882353);
+  background-color: #222;
 }
 body.dark main .content .container .sec-body .med .right-side .card {
   background-color: #1d1d1d;
@@ -1564,16 +1566,30 @@ body.dark main .content .container .sec-body .med .right-side .card .card-body h
 body.dark main .content .container .sec-body .med .right-side .card .card-body span {
   color: #a5a5a5;
 }
+body.dark main .content .container .sec-body .med .right-side .card .med-details:after {
+  background-color: #323234;
+}
+body.dark main .content .container .sec-body .med .right-side .card .pharmacies a {
+  color: #efefef;
+  background-color: #222;
+  border-color: #222;
+}
 body.dark main .content .container .sec-body .med .right-side .card .pharmacies a:hover {
-  background-color: rgba(5, 156, 177, 0.8705882353);
   color: #efefef;
-}
-body.dark main .content .container .sec-foot #more {
   background-color: rgba(5, 156, 177, 0.8705882353);
-  color: #efefef;
-}
-body.dark main .content .container .sec-foot #more:hover {
-  background: none;
-  color: rgba(5, 156, 177, 0.8705882353);
   border-color: rgba(5, 156, 177, 0.8705882353);
+}
+body.dark main .content .container .sec-foot input[type=button] {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #efefef;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+body.dark main .content .container .sec-foot input[type=button]:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
 }

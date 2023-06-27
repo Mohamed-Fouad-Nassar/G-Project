@@ -1,3 +1,26 @@
+//choose categories
+let switcher = document.querySelectorAll("#main_page .container .filter ul li");
+let box = Array.from(document.querySelectorAll("#main_page .container .order"));
+switcher.forEach((li) => {
+  li.addEventListener("click", removeActive);
+  li.addEventListener("click", management);
+});
+function removeActive() {
+  switcher.forEach((li) => {
+    li.classList.remove("active");
+    this.classList.add("active");
+  });
+}
+function management() {
+  box.forEach((img) => {
+    img.style.display = "none";
+  });
+  document.querySelectorAll(this.dataset.content).forEach((cat) => {
+    cat.style.display = "block";
+  });
+}
+
+// load elements
 let boxes = document.querySelectorAll(".container .content .sec-body .order");
 let seeMoreBtn = document.querySelector(".container .sec-foot input");
 let sectionFoot = document.querySelector(".container .sec-foot");

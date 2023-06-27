@@ -1362,6 +1362,10 @@ main .content .container .sec-body {
 main .content .container .sec-body .box {
   background-color: #fff;
   overflow: hidden;
+  display: none;
+}
+main .content .container .sec-body .box.active {
+  display: block;
 }
 main .content .container .sec-body .box .card-top {
   background-color: #059cb1;

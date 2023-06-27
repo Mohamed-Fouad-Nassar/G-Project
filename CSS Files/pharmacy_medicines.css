@@ -17,7 +17,7 @@ a {
   cursor: pointer;
 }
 
-main .container .medicines form .sec-foot input, main .container .medicines form .order-data section .felid, main .container .medicines form .btn input, body.dark main .container .medicines form .btn input, header .container nav ul li a, header .container .account,
+main .container .medicines form .filter ul, main .container .medicines form .sec-foot input, main .container .medicines form .order-data section .felid, main .container .medicines form .btn input, body.dark main .container .medicines form .btn input, header .container nav ul li a, header .container .account,
 header .container .log-in-acc, header .container .account a, header .container .log-in-acc article, header .container .log-in-acc article > .menu ul, header .container .log-in-acc article > .menu ul li, header .container .log-in-acc .lang .h-btn,
 header .container .log-in-acc .cart .h-btn,
 header .container .log-in-acc .notification .h-btn, header .container .log-in-acc .lang .h-btn a,
@@ -711,7 +711,7 @@ header .container .log-in-acc {
 }
 @media (max-width: 767px) {
   header .container .account,
-header .container .log-in-acc {
+  header .container .log-in-acc {
     grid-area: account;
   }
 }
@@ -726,7 +726,7 @@ header .container .log-in-acc {
     -ms-grid-column-span: 3;
   }
   header .container .account,
-header .container .log-in-acc {
+  header .container .log-in-acc {
     -ms-grid-row: 1;
     -ms-grid-column: 3;
   }
@@ -1387,35 +1387,33 @@ main .container .medicines .head h1 {
   font-size: 1.5rem;
   color: #059cb1;
 }
-<<<<<<< HEAD
-=======
-main .container .medicines .cat {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 10px;
-  background-color: #eee;
+main .container .medicines form .filter {
+  padding-bottom: 20px;
 }
-main .container .medicines .cat ul {
-  list-style: none;
+main .container .medicines form .filter ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
 }
-main .container .medicines .cat ul li {
-  padding: 10px;
-  border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
+main .container .medicines form .filter ul li a {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px 10px;
+  background-color: transparent;
+  color: #059cb1;
+  border: 1px solid #059cb1;
 }
-main .container .medicines .cat ul li a {
-  text-decoration: none;
-  color: inherit;
-}
-main .container .medicines .cat ul .active {
-  color: #fff;
+main .container .medicines form .filter ul li a:hover {
   background-color: #059cb1;
+  color: #fff;
 }
-main .container .medicines form div {
-  overflow-x: auto;
+main .container .medicines form .filter ul li.active a {
+  background-color: #3ab6b6;
+  color: #fff;
+  border-color: #3ab6b6;
 }
->>>>>>> 49ab78bca1a02a8561bbf4dae8a9b0f9e960a03f
 main .container .medicines form .cards .box {
   display: none;
 }
@@ -1628,7 +1626,17 @@ body.dark main .container .back-btn .f-icon {
 body.dark main .container .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-<<<<<<< HEAD
+body.dark main .container .medicines .cat {
+  background-color: #1d1d1d;
+  color: #efefef;
+}
+body.dark main .container .medicines .cat ul li {
+  color: #a5a5a5;
+}
+body.dark main .container .medicines .cat ul .active {
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  color: #fff !important;
+}
 body.dark main .container .medicines form .filter ul li a {
   background-color: #1d1d1d;
   color: rgba(5, 156, 177, 0.8705882353);
@@ -1642,18 +1650,6 @@ body.dark main .container .medicines form .filter ul li.active a {
   background-color: rgba(58, 182, 182, 0.8705882353);
   color: #efefef;
   border-color: rgba(58, 182, 182, 0.8705882353);
-=======
-body.dark main .container .medicines .cat {
-  background-color: #1d1d1d;
-  color: #efefef;
-}
-body.dark main .container .medicines .cat ul li {
-  color: #a5a5a5;
-}
-body.dark main .container .medicines .cat ul .active {
-  background-color: rgba(5, 156, 177, 0.8705882353);
-  color: #fff !important;
->>>>>>> 49ab78bca1a02a8561bbf4dae8a9b0f9e960a03f
 }
 body.dark main .container .medicines form .cards .box .card {
   background-color: #1d1d1d;

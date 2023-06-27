@@ -28,62 +28,62 @@ main {
           color: $main-color;
         }
       }
-      .cat{
-        text-align: center;
-        margin-bottom: 20px;
-        padding: $sec-element-padding;
-        background-color: $light-white-color;
-        ul{
-          list-style: none;
-          li{
-            padding: 10px;
-            border-radius: 5px;
-            display: inline-block;
-            cursor: pointer;
-            a{
-              text-decoration: none;
-              color: inherit;
-            }
-          }
-          .active{
-            color: #fff;
-            background-color: $main-color;
-          }
-        }
-      }
+      // .cat {
+      //   text-align: center;
+      //   margin-bottom: 20px;
+      //   padding: $sec-element-padding;
+      //   background-color: $light-white-color;
+      //   ul {
+      //     list-style: none;
+      //     li {
+      //       padding: 10px;
+      //       border-radius: 5px;
+      //       display: inline-block;
+      //       cursor: pointer;
+      //       a {
+      //         text-decoration: none;
+      //         color: inherit;
+      //       }
+      //     }
+      //     .active {
+      //       color: #fff;
+      //       background-color: $main-color;
+      //     }
+      //   }
+      // }
       form {
         // div {
         //   overflow-x: auto;
         // }
-        // .filter {
-        //   padding-bottom: $main-element-padding;
-        //   ul {
-        //     @extend %flex-center-center;
-        //     flex-wrap: wrap;
-        //     gap: $sec-element-padding;
-        //     li {
-        //       a {
-        //         display: block;
-        //         width: fit-content;
-        //         padding: $field-top-padding $sec-element-padding;
-        //         background-color: transparent;
-        //         color: $main-color;
-        //         border: 1px solid $main-color;
-        //         &:hover {
-        //           background-color: $main-color;
-        //           color: $white-color;
-        //         }
-        //       }
-        //       &.active {
-        //         a {
-        //           background-color: $sec-color;
-        //           color: $white-color;
-        //           border-color: $sec-color;
-        //         }
-        //       }
-        //     }
-        //   }
-        // }
+        .filter {
+          padding-bottom: $main-element-padding;
+          ul {
+            @extend %flex-center-center;
+            flex-wrap: wrap;
+            gap: $sec-element-padding;
+            li {
+              a {
+                display: block;
+                width: fit-content;
+                padding: $field-top-padding $sec-element-padding;
+                background-color: transparent;
+                color: $main-color;
+                border: 1px solid $main-color;
+                &:hover {
+                  background-color: $main-color;
+                  color: $white-color;
+                }
+              }
+              &.active {
+                a {
+                  background-color: $sec-color;
+                  color: $white-color;
+                  border-color: $sec-color;
+                }
+              }
+            }
+          }
+        }
         .cards {
           @extend %grid-250-20;
           .box {
@@ -257,13 +257,13 @@ body {
           @include back-btn($sec-element-padding, $sec-element-padding, "dark");
         }
         .medicines {
-          .cat{
+          .cat {
             background-color: $sec-dark-bg;
             color: $white-dark-color;
-            ul li{
+            ul li {
               color: $sec-text-dark-color;
             }
-            ul .active{
+            ul .active {
               background-color: $main-dark-color;
               color: #fff !important;
             }

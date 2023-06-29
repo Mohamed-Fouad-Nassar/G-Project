@@ -145,7 +145,7 @@
     <!-- End Header -->
     <!-- Start Main -->
     <main id="main_page">
-      <div class="cont">
+      <div class="container">
         <!-- Start Aside -->
         <aside>
           <ul>
@@ -557,6 +557,62 @@
         </section>
         <!-- end content section -->
       </div>
+      <!-- Start pop-up -->
+      <div class="pop-up active">
+        <div class="overlay"></div>
+        <div class="data">
+          <button class="cancel" id="cancel">
+            <i class="f-icon fa-solid fa-xmark"></i>
+            <!-- <i class="f-icon fa-solid fa-arrow-left"></i> -->
+            <!-- <i class="fa-solid fa-left-long"></i> -->
+            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+          </button>
+          <div class="felids">
+            <!-- start box -->
+            <article class="box">
+              <div class="field">
+                <div class="left-sec">
+                  <!-- start box -->
+                  <article class="box">
+                    <label for="field">name:</label>
+                    <div class="field" id="field">
+                      <span>medicine name</span>
+                    </div>
+                  </article>
+                  <!-- end box -->
+                  <!-- start box -->
+                  <article class="box">
+                    <label for="field">category:</label>
+                    <div class="field" id="field">
+                      <span>medicine category</span>
+                    </div>
+                  </article>
+                  <!-- end box -->
+                  <!-- start box -->
+                  <article class="box">
+                    <label for="field">quantity:</label>
+                    <div class="field" id="field">
+                      <span>medicine quantity</span>
+                    </div>
+                  </article>
+                  <!-- end box -->
+                </div>
+                <div class="right-sec">
+                  <label for="field">medicine image:</label>
+                  <div class="image" id="field">
+                    <img
+                      src="../../Data/Images/IMG_20221204_221443_587.jpg"
+                      alt="medicine-image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- end box -->
+          </div>
+        </div>
+      </div>
+      <!-- End pop-up -->
       <!-- Start Top Button -->
       <div class="top" id="up">
         <a href="#">
@@ -688,9 +744,9 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-- main script -->
-    <!-- <script src=""></script> -->
     <!-- header script -->
     <script src="../../JS Files/header.js"></script>
+    <!-- main script -->
+    <script src="../../JS Files/popup.js"></script>
   </body>
 </html>

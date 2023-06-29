@@ -1,4 +1,4 @@
-*, ::after,
+main .pop-up .data, *, ::after,
 ::before {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
@@ -17,7 +17,7 @@ a {
   cursor: pointer;
 }
 
-main .content div .sec-body .control .table .tab-head, main .content div .sec-body .control .table .tab-body .item, body.dark main .content div .sec-body .control .table .tab-head, body.dark main .content div .sec-body .control .table .tab-body .item, main .content, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
+main .content div .sec-body .control .table .tab-head, main .content div .sec-body .control .table .tab-body .item, main .pop-up, main .pop-up .data .cancel, main .pop-up .data .felids .box .images, body.dark main .content div .sec-body .control .table .tab-head, body.dark main .content div .sec-body .control .table .tab-body .item, main .content, section .container .sec-foot a, .dark section .container .sec-foot a, main .top a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +39,15 @@ main .content .dashboard > article .info, main .content div .sec-body .info, mai
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+main .pop-up .data .felids .box .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, body.dark main .content div .sec-body .control .table .tab-body .item > span:last-of-type a {
@@ -65,6 +74,14 @@ main .content div .sec-body .control .table .tab-body .item > span:last-of-type,
           justify-content: space-between;
 }
 
+main .pop-up .overlay {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
 main aside .head .shape span::before, main aside .head .shape span::after, .head-shape span::after, .head-shape span::before,
 .head-shape-w span::after,
 .head-shape-w span::before, body.dark .error-message::after, .error-message::after, .success-message::after {
@@ -75,7 +92,7 @@ main aside .head .shape span::before, main aside .head .shape span::after, .head
   -o-transform: translateY(-50%);
 }
 
-main .content .dashboard > article, main .content .dashboard > article .info > div, main .content div .sec-body .info > div, main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, body.dark main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, main aside, main aside .links ul li a, main .content, .box,
+main .content .dashboard > article, main .content .dashboard > article .info > div, main .content div .sec-body .info > div, main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, main .pop-up .data, main .pop-up .data .felids .box .field span, body.dark main .content div .sec-body .control .table .tab-body .item > span:last-of-type a, main aside, main aside .links ul li a, main .content, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -84,7 +101,7 @@ main .content .dashboard > article, main .content .dashboard > article .info > d
   -o-border-radius: 5px !important;
 }
 
-main aside .head .shape span, .head-shape span,
+main .pop-up .data .cancel, main aside .head .shape span, .head-shape span,
 .head-shape-w span {
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
@@ -93,12 +110,19 @@ main aside .head .shape span, .head-shape span,
   -o-border-radius: 50% !important;
 }
 
-.f-icon {
+main .pop-up .overlay, .f-icon {
   transition: 0s !important;
   -webkit-transition: 0s !important;
   -moz-transition: 0s !important;
   -ms-transition: 0s !important;
   -o-transition: 0s !important;
+}
+
+main .pop-up .overlay {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .success-message::after {
@@ -899,6 +923,187 @@ main .content div .sec-body .control .table .tab-body .item > span:last-of-type 
 main .content div .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type:hover {
   background-color: #d20519;
 }
+main .pop-up {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 40px;
+  z-index: -1;
+}
+main .pop-up.active {
+  z-index: 50;
+}
+main .pop-up.active .overlay {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+main .pop-up.active .data {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+main .pop-up .overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
+main .pop-up .data {
+  max-height: calc(100vh - 90px) !important;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  position: relative;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0 0 14px -5px #717171;
+          box-shadow: 0 0 14px -5px #717171;
+  width: 900px;
+  z-index: 200;
+  padding: 20px;
+  padding-top: 45px !important;
+}
+main .pop-up .data::-webkit-scrollbar {
+  width: 0;
+}
+@media (max-width: 991px) {
+  main .pop-up .data {
+    width: 750px;
+  }
+}
+@media (max-width: 767px) {
+  main .pop-up .data {
+    margin-bottom: -30px !important;
+    height: calc(100vh - 140px) !important;
+    width: 550px;
+  }
+}
+@media (max-width: 575px) {
+  main .pop-up .data {
+    width: 330px;
+  }
+}
+main .pop-up .data .cancel {
+  border: none;
+  outline: none;
+  background-color: #fb0505;
+  padding: 5px 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+main .pop-up .data .cancel:hover {
+  background-color: #dc3545;
+}
+main .pop-up .data .cancel .f-icon {
+  color: #fff;
+}
+main .pop-up .data .felids .box {
+  padding-bottom: 10px;
+}
+main .pop-up .data .felids .box .box {
+  padding-bottom: 0 !important;
+}
+main .pop-up .data .felids .box:last-of-type {
+  padding-bottom: 10px;
+}
+main .pop-up .data .felids .box label {
+  font-size: 1.05rem;
+  padding-bottom: 5px;
+  color: #212529;
+  font-weight: 500;
+}
+main .pop-up .data .felids .box .image {
+  border: 5px solid #eee;
+}
+main .pop-up .data .felids .box .image img {
+  width: 100%;
+  height: 100%;
+}
+main .pop-up .data .felids .box .images {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+main .pop-up .data .felids .box .images > section {
+  width: 250px;
+  border: 5px solid #eee;
+}
+main .pop-up .data .felids .box .images > section img {
+  width: 100%;
+}
+main .pop-up .data .felids .box .field {
+  gap: 10px;
+  color: #059cb1;
+  font-size: 1.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  main .pop-up .data .felids .box .field {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 991px) {
+  main .pop-up .data .felids .box .field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+main .pop-up .data .felids .box .field span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #eee;
+  color: #212529;
+  display: block;
+  text-align: center;
+}
+main .pop-up .data .felids .box .field span.article-body {
+  text-align: start;
+}
+main .pop-up .data .felids .box .field .left-sec,
+main .pop-up .data .felids .box .field .right-sec {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+main .pop-up .data .felids .box .field .flex-sec {
+  width: calc((100% - 20px) / 3);
+}
+@media (max-width: 1199px) {
+  main .pop-up .data .felids .box .field .flex-sec {
+    width: calc((100% - 10px) / 2);
+  }
+}
+@media (max-width: 991px) {
+  main .pop-up .data .felids .box .field .flex-sec {
+    width: 100%;
+  }
+}
 
 body.dark main .content div .sec-head h2 {
   color: rgba(5, 156, 177, 0.8705882353);
@@ -1075,6 +1280,39 @@ body.dark main .content div .sec-body .control .table .tab-body .item > span:las
 }
 body.dark main .content div .sec-body .control .table .tab-body .item > span:last-of-type a:last-of-type:hover {
   background-color: #dc3545;
+}
+body.dark main .pop-up .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+body.dark main .pop-up .data {
+  background-color: #222;
+  -webkit-box-shadow: 0 0 14px -5px #000000;
+          box-shadow: 0 0 14px -5px #000000;
+}
+body.dark main .pop-up .data .cancel {
+  background-color: #d20519;
+}
+body.dark main .pop-up .data .cancel:hover {
+  background-color: #dc3545;
+}
+body.dark main .pop-up .data .cancel .f-icon {
+  color: #efefef;
+}
+body.dark main .pop-up .data .felids .box label {
+  color: #efefef;
+}
+body.dark main .pop-up .data .felids .box .images > section {
+  border-color: #1d1d1d;
+}
+body.dark main .pop-up .data .felids .box .image {
+  border-color: #1d1d1d;
+}
+body.dark main .pop-up .data .felids .box .field {
+  color: sec-dark-color;
+}
+body.dark main .pop-up .data .felids .box .field span {
+  color: #a5a5a5;
+  background-color: #1d1d1d;
 }
 
 main .content .dashboard {

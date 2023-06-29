@@ -1,13 +1,22 @@
-main .cont aside ul,
-main .cont aside ul li {
+main .pop-up .data {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+main .container aside ul,
+main .container aside ul li {
   margin: 0;
   padding: 0;
 }
 
-main .cont .content .sec-body .control .table .tab-head,
-main .cont .content .sec-body .control .table .tab-body .item,
-body.dark main .cont .content .sec-body .control .table .tab-head,
-body.dark main .cont .content .sec-body .control .table .tab-body .item {
+main .container .content .sec-body .control .table .tab-head,
+main .container .content .sec-body .control .table .tab-body .item,
+main .pop-up,
+main .pop-up .data .cancel,
+body.dark main .container .content .sec-body .control .table .tab-head,
+body.dark main .container .content .sec-body .control .table .tab-body .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,7 +28,7 @@ body.dark main .cont .content .sec-body .control .table .tab-body .item {
   justify-content: center;
 }
 
-main .cont .content .sec-body .info {
+main .container .content .sec-body .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,8 +40,17 @@ main .cont .content .sec-body .info {
   justify-content: flex-start;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a,
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a {
+main .pop-up .data .felids .box .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a,
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -44,8 +62,8 @@ body.dark main .cont .content .sec-body .control .table .tab-body .item>span:las
   justify-content: center;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type,
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type {
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type,
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,11 +75,21 @@ body.dark main .cont .content .sec-body .control .table .tab-body .item>span:las
   justify-content: space-between;
 }
 
-main .cont aside,
-main .cont aside ul li a,
-main .cont aside ul li button,
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a,
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a {
+main .pop-up .overlay {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+main .container aside,
+main .container aside ul li a,
+main .container aside ul li button,
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a,
+main .pop-up .data,
+main .pop-up .data .felids .box .field span,
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -69,7 +97,7 @@ body.dark main .cont .content .sec-body .control .table .tab-body .item>span:las
   -o-border-radius: 5px !important;
 }
 
-main .cont .content .sec-body .info>div {
+main .container .content .sec-body .info>div {
   border-radius: 10px !important;
   -webkit-border-radius: 10px !important;
   -moz-border-radius: 10px !important;
@@ -77,8 +105,17 @@ main .cont .content .sec-body .info>div {
   -o-border-radius: 10px !important;
 }
 
-main .cont aside ul li a .f-icon,
-main .cont aside ul li button .f-icon {
+main .pop-up .data .cancel {
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+}
+
+main .container aside ul li a .f-icon,
+main .container aside ul li button .f-icon,
+main .pop-up .overlay {
   transition: 0s !important;
   -webkit-transition: 0s !important;
   -moz-transition: 0s !important;
@@ -86,11 +123,18 @@ main .cont aside ul li button .f-icon {
   -o-transition: 0s !important;
 }
 
+main .pop-up .overlay {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 main {
   background-color: #eee;
 }
 
-main .cont {
+main .container {
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,16 +151,18 @@ main .cont {
 }
 
 @media (max-width: 575px) {
-  main .cont {
+  main .container {
     gap: 10px;
   }
 }
 
-main .cont aside {
+main .container aside {
   position: sticky;
   top: 90px;
   min-width: 230px;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 20px;
@@ -124,13 +170,13 @@ main .cont aside {
 }
 
 @media (max-width: 991px) {
-  main .cont aside {
+  main .container aside {
     min-width: 200px;
   }
 }
 
 @media (max-width: 767px) {
-  main .cont aside {
+  main .container aside {
     min-width: 60px;
     padding: 15px 10px;
     top: 65px;
@@ -138,13 +184,13 @@ main .cont aside {
 }
 
 @media (max-width: 575px) {
-  main .cont aside {
+  main .container aside {
     padding-left: 5px;
     padding-right: 5px;
   }
 }
 
-main .cont aside ul {
+main .container aside ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,19 +202,19 @@ main .cont aside ul {
 }
 
 @media (max-width: 767px) {
-  main .cont aside ul {
+  main .container aside ul {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
   }
 }
 
-main .cont aside ul li {
+main .container aside ul li {
   padding-top: 5px;
 }
 
-main .cont aside ul li a,
-main .cont aside ul li button {
+main .container aside ul li a,
+main .container aside ul li button {
   display: block;
   width: 100%;
   color: #212529;
@@ -177,8 +223,8 @@ main .cont aside ul li button {
 
 @media (max-width: 767px) {
 
-  main .cont aside ul li a,
-  main .cont aside ul li button {
+  main .container aside ul li a,
+  main .container aside ul li button {
     padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -193,101 +239,100 @@ main .cont aside ul li button {
     height: 45px;
   }
 
-  main .cont aside ul li a .f-icon,
-  main .cont aside ul li button .f-icon {
+  main .container aside ul li a .f-icon,
+  main .container aside ul li button .f-icon {
     font-size: 1.1rem;
   }
 }
 
-main .cont aside ul li a:hover,
-main .cont aside ul li button:hover {
+main .container aside ul li a:hover,
+main .container aside ul li button:hover {
   color: #059cb1;
   background-color: #f9f9f9;
 }
 
-main .cont aside ul li a:hover span,
-main .cont aside ul li button:hover span {
+main .container aside ul li a:hover span,
+main .container aside ul li button:hover span {
   color: #059cb1;
 }
 
-main .cont aside ul li a:hover .f-icon,
-main .cont aside ul li button:hover .f-icon {
+main .container aside ul li a:hover .f-icon,
+main .container aside ul li button:hover .f-icon {
   color: #059cb1;
 }
 
-main .cont aside ul li a.active,
-main .cont aside ul li button.active {
+main .container aside ul li a.active,
+main .container aside ul li button.active {
   color: #059cb1;
   background-color: #f9f9f9;
 }
 
-main .cont aside ul li a.active span,
-main .cont aside ul li button.active span {
+main .container aside ul li a.active span,
+main .container aside ul li button.active span {
   color: #059cb1;
 }
 
-main .cont aside ul li a.active .f-icon,
-main .cont aside ul li button.active .f-icon {
+main .container aside ul li a.active .f-icon,
+main .container aside ul li button.active .f-icon {
   color: #059cb1;
 }
 
-main .cont aside ul li a span,
-main .cont aside ul li button span {
+main .container aside ul li a span,
+main .container aside ul li button span {
   color: #212529;
 }
 
 @media (max-width: 767px) {
 
-  main .cont aside ul li a span,
-  main .cont aside ul li button span {
+  main .container aside ul li a span,
+  main .container aside ul li button span {
     display: none;
   }
 }
 
-main .cont aside ul li a .f-icon,
-main .cont aside ul li button .f-icon {
+main .container aside ul li a .f-icon,
+main .container aside ul li button .f-icon {
   margin-right: 10px;
 }
 
 @media (max-width: 767px) {
 
-  main .cont aside ul li a .f-icon,
-  main .cont aside ul li button .f-icon {
+  main .container aside ul li a .f-icon,
+  main .container aside ul li button .f-icon {
     margin-right: 0;
   }
 }
 
-main .cont aside ul li:last-of-type button {
+main .container aside ul li:last-of-type button {
   outline: none;
   border: none;
   background-color: transparent;
   text-align: inherit;
 }
 
-main .cont aside ul li:last-of-type button span,
-main .cont aside ul li:last-of-type button .f-icon {
+main .container aside ul li:last-of-type button span,
+main .container aside ul li:last-of-type button .f-icon {
   color: #d20519;
 }
 
-main .cont aside ul li:last-of-type button:hover {
+main .container aside ul li:last-of-type button:hover {
   background-color: #d20519;
 }
 
-main .cont aside ul li:last-of-type button:hover span,
-main .cont aside ul li:last-of-type button:hover .f-icon {
+main .container aside ul li:last-of-type button:hover span,
+main .container aside ul li:last-of-type button:hover .f-icon {
   color: #fff;
 }
 
-main .cont .content {
+main .container .content {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 20px;
   background-color: #fff;
   overflow-y: auto;
 }
 
-main .cont .content h2 {
+main .container .content h2 {
   margin-bottom: 40px;
   position: relative;
   color: #059cb1;
@@ -296,14 +341,14 @@ main .cont .content h2 {
   font-weight: 600;
 }
 
-main .cont .content .sec-body .info {
+main .container .content .sec-body .info {
   max-width: 750px;
   margin: 0 auto;
   gap: 20px;
 }
 
 @media (max-width: 575px) {
-  main .cont .content .sec-body .info {
+  main .container .content .sec-body .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -312,7 +357,7 @@ main .cont .content .sec-body .info {
   }
 }
 
-main .cont .content .sec-body .info>div {
+main .container .content .sec-body .info>div {
   width: 50%;
   padding: 20px;
   background-color: #f9f9f9;
@@ -320,50 +365,50 @@ main .cont .content .sec-body .info>div {
 }
 
 @media (max-width: 575px) {
-  main .cont .content .sec-body .info>div {
+  main .container .content .sec-body .info>div {
     width: 100%;
   }
 }
 
-main .cont .content .sec-body .info>div h3 {
+main .container .content .sec-body .info>div h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-main .cont .content .sec-body .info>div span {
+main .container .content .sec-body .info>div span {
   color: #059cb1;
   font-size: 1.4rem;
   font-weight: 700;
 }
 
-main .cont .content .sec-body .info>div a .f-icon {
+main .container .content .sec-body .info>div a .f-icon {
   font-size: 2.6rem;
   color: #059cb1;
   cursor: pointer;
 }
 
-main .cont .content .sec-body .info>div a .f-icon:hover {
+main .container .content .sec-body .info>div a .f-icon:hover {
   color: #3ab6b6;
 }
 
-main .cont .content .sec-body .control {
+main .container .content .sec-body .control {
   padding-top: 30px;
   overflow-x: auto;
 }
 
-main .cont .content .sec-body .control .table {
+main .container .content .sec-body .control .table {
   min-width: 750px;
   padding-bottom: 5px;
   white-space: nowrap;
   width: 100%;
 }
 
-main .cont .content .sec-body .control .table .tab-head {
+main .container .content .sec-body .control .table .tab-head {
   gap: 3px;
 }
 
-main .cont .content .sec-body .control .table .tab-head>span {
+main .container .content .sec-body .control .table .tab-head>span {
   display: block;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -375,41 +420,41 @@ main .cont .content .sec-body .control .table .tab-head>span {
   font-weight: 600;
 }
 
-main .cont .content .sec-body .control .table .tab-head>span:first-of-type {
+main .container .content .sec-body .control .table .tab-head>span:first-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 60px;
 }
 
-main .cont .content .sec-body .control .table .tab-head>span:nth-of-type(2) {
+main .container .content .sec-body .control .table .tab-head>span:nth-of-type(2) {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
 }
 
-main .cont .content .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
+main .container .content .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
 
-main .cont .content .sec-body .control .table .tab-head>span:last-of-type {
+main .container .content .sec-body .control .table .tab-head>span:last-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 130px;
 }
 
-main .cont .content .sec-body .control .table .tab-body {
+main .container .content .sec-body .control .table .tab-body {
   padding-top: 2px;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item {
+main .container .content .sec-body .control .table .tab-body .item {
   padding-top: 2px;
   gap: 3px;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span {
+main .container .content .sec-body .control .table .tab-body .item>span {
   display: block;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -421,44 +466,44 @@ main .cont .content .sec-body .control .table .tab-body .item>span {
   font-weight: 600;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:first-of-type {
+main .container .content .sec-body .control .table .tab-body .item>span:first-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 60px;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+main .container .content .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+main .container .content .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type {
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 130px;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span {
+main .container .content .sec-body .control .table .tab-body .item>span {
   background-color: #eee;
   color: #212529;
   font-size: 1rem !important;
   font-weight: 500 !important;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type {
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type {
   padding: 7px 10px;
   gap: 10px;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a {
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a {
   border: none;
   outline: none;
   color: #fff;
@@ -467,94 +512,302 @@ main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type 
   background-color: #059cb1;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
   background-color: #3ab6b6;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
   background-color: #fb0505;
 }
 
-main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
   background-color: #d20519;
+}
+
+main .pop-up {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 40px;
+  z-index: -1;
+}
+
+main .pop-up.active {
+  z-index: 50;
+}
+
+main .pop-up.active .overlay {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+main .pop-up.active .data {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+main .pop-up .overlay {
+  background-color: rgba(255, 255, 255, 0.8);
+  display: none;
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+}
+
+main .pop-up .data {
+  height: calc(100vh - 90px) !important;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  position: relative;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 0 0 14px -5px #717171;
+  box-shadow: 0 0 14px -5px #717171;
+  width: 900px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 200;
+  padding: 20px;
+  padding-top: 45px !important;
+}
+
+main .pop-up .data::-webkit-scrollbar {
+  width: 0;
+}
+
+@media (min-width: 992px) {
+  main .pop-up .data {
+    height: -webkit-fit-content !important;
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+  }
+}
+
+@media (max-width: 991px) {
+  main .pop-up .data {
+    width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .pop-up .data {
+    margin-bottom: -30px !important;
+    height: calc(100vh - 140px) !important;
+    width: 550px;
+  }
+}
+
+@media (max-width: 575px) {
+  main .pop-up .data {
+    width: 330px;
+  }
+}
+
+main .pop-up .data .cancel {
+  border: none;
+  outline: none;
+  background-color: #fb0505;
+  padding: 5px 8px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+main .pop-up .data .cancel:hover {
+  background-color: #dc3545;
+}
+
+main .pop-up .data .cancel .f-icon {
+  color: #fff;
+}
+
+main .pop-up .data .felids .box {
+  padding-bottom: 10px;
+}
+
+main .pop-up .data .felids .box .box {
+  padding-bottom: 0 !important;
+}
+
+main .pop-up .data .felids .box:last-of-type {
+  padding-bottom: 10px;
+}
+
+main .pop-up .data .felids .box label {
+  font-size: 1.05rem;
+  padding-bottom: 5px;
+  color: #212529;
+  font-weight: 500;
+}
+
+main .pop-up .data .felids .box .image {
+  border: 5px solid #eee;
+}
+
+main .pop-up .data .felids .box .image img {
+  width: 100%;
+  height: 100%;
+}
+
+main .pop-up .data .felids .box .field {
+  gap: 10px;
+  color: #059cb1;
+  font-size: 1.5rem;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 992px) {
+  main .pop-up .data .felids .box .field {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 991px) {
+  main .pop-up .data .felids .box .field {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+main .pop-up .data .felids .box .field span {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #eee;
+  color: #212529;
+  display: block;
+  text-align: center;
+}
+
+main .pop-up .data .felids .box .field span.article-body {
+  text-align: start;
+}
+
+main .pop-up .data .felids .box .field .left-sec,
+main .pop-up .data .felids .box .field .right-sec {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+main .pop-up .data .felids .box .field .flex-sec {
+  width: calc((100% - 20px) / 3);
+}
+
+@media (max-width: 1199px) {
+  main .pop-up .data .felids .box .field .flex-sec {
+    width: calc((100% - 10px) / 2);
+  }
+}
+
+@media (max-width: 991px) {
+  main .pop-up .data .felids .box .field .flex-sec {
+    width: 100%;
+  }
 }
 
 body.dark main {
   background-color: #1d1d1d;
 }
 
-body.dark main .cont aside {
+body.dark main .container aside {
   background-color: #222;
 }
 
-body.dark main .cont aside ul li a:hover {
+body.dark main .container aside ul li a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: #323234;
 }
 
-body.dark main .cont aside ul li a:hover span,
-body.dark main .cont aside ul li a:hover .f-icon {
+body.dark main .container aside ul li a:hover span,
+body.dark main .container aside ul li a:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .cont aside ul li a.active {
+body.dark main .container aside ul li a.active {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: #323234;
 }
 
-body.dark main .cont aside ul li a.active span,
-body.dark main .cont aside ul li a.active .f-icon {
+body.dark main .container aside ul li a.active span,
+body.dark main .container aside ul li a.active .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .cont aside ul li a span,
-body.dark main .cont aside ul li a .f-icon {
+body.dark main .container aside ul li a span,
+body.dark main .container aside ul li a .f-icon {
   color: #efefef;
 }
 
-body.dark main .cont aside ul li:last-of-type button span,
-body.dark main .cont aside ul li:last-of-type button .f-icon {
+body.dark main .container aside ul li:last-of-type button span,
+body.dark main .container aside ul li:last-of-type button .f-icon {
   color: #dc3545;
 }
 
-body.dark main .cont aside ul li:last-of-type button:hover {
+body.dark main .container aside ul li:last-of-type button:hover {
   background-color: #dc3545;
 }
 
-body.dark main .cont aside ul li:last-of-type button:hover span,
-body.dark main .cont aside ul li:last-of-type button:hover .f-icon {
+body.dark main .container aside ul li:last-of-type button:hover span,
+body.dark main .container aside ul li:last-of-type button:hover .f-icon {
   color: #efefef;
 }
 
-body.dark main .cont .content {
+body.dark main .container .content {
   background-color: #222;
 }
 
-body.dark main .cont .content .sec-body .info>div {
+body.dark main .container .content .sec-body .info>div {
   background-color: #1d1d1d;
 }
 
-body.dark main .cont .content .sec-body .info>div h3 {
+body.dark main .container .content .sec-body .info>div h3 {
   color: #efefef;
 }
 
-body.dark main .cont .content .sec-body .info>div span {
+body.dark main .container .content .sec-body .info>div span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .cont .content .sec-body .info>div a .f-icon {
+body.dark main .container .content .sec-body .info>div a .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .cont .content .sec-body .info>div a .f-icon:hover {
+body.dark main .container .content .sec-body .info>div a .f-icon:hover {
   color: rgba(58, 182, 182, 0.8705882353);
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-head {
+body.dark main .container .content .sec-body .control .table .tab-head {
   gap: 3px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-head>span {
+body.dark main .container .content .sec-body .control .table .tab-head>span {
   display: block;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -566,43 +819,43 @@ body.dark main .cont .content .sec-body .control .table .tab-head>span {
   font-weight: 600;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-head>span:first-of-type {
+body.dark main .container .content .sec-body .control .table .tab-head>span:first-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 60px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-head>span:nth-of-type(2) {
+body.dark main .container .content .sec-body .control .table .tab-head>span:nth-of-type(2) {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
+body.dark main .container .content .sec-body .control .table .tab-head>span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-head>span:last-of-type {
+body.dark main .container .content .sec-body .control .table .tab-head>span:last-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 130px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-head>span {
+body.dark main .container .content .sec-body .control .table .tab-head>span {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item {
+body.dark main .container .content .sec-body .control .table .tab-body .item {
   padding-top: 2px;
   gap: 3px;
   gap: 3px;
   background-color: #1d1d1d;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span {
   display: block;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -614,44 +867,44 @@ body.dark main .cont .content .sec-body .control .table .tab-body .item>span {
   font-weight: 600;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:first-of-type {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:first-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 60px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 130px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span {
   background-color: #eee;
   color: #212529;
   font-size: 1rem !important;
   font-weight: 500 !important;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type {
   padding: 7px 10px;
   gap: 10px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a {
   border: none;
   outline: none;
   color: #fff;
@@ -660,19 +913,19 @@ body.dark main .cont .content .sec-body .control .table .tab-body .item>span:las
   background-color: #059cb1;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
   background-color: #3ab6b6;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
   background-color: #fb0505;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
   background-color: #d20519;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span {
   display: block;
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -684,54 +937,93 @@ body.dark main .cont .content .sec-body .control .table .tab-body .item>span {
   font-weight: 600;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:first-of-type {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:first-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 60px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:nth-of-type(2) {
   -webkit-box-flex: 2;
   -ms-flex: 2;
   flex: 2;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:nth-last-of-type(2) {
   min-width: 130px !important;
   max-width: 160px !important;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type {
   -webkit-box-flex: 0;
   -ms-flex: 0;
   flex: 0;
   min-width: 130px;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span {
   font-weight: 400 !important;
   background-color: #222;
   color: #a5a5a5;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:hover {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type {
   background-color: #d20519;
 }
 
-body.dark main .cont .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
+body.dark main .container .content .sec-body .control .table .tab-body .item>span:last-of-type a:last-of-type:hover {
   background-color: #dc3545;
+}
+
+body.dark main .pop-up .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+body.dark main .pop-up .data {
+  background-color: #222;
+  -webkit-box-shadow: 0 0 14px -5px #000000;
+  box-shadow: 0 0 14px -5px #000000;
+}
+
+body.dark main .pop-up .data .cancel {
+  background-color: #d20519;
+}
+
+body.dark main .pop-up .data .cancel:hover {
+  background-color: #dc3545;
+}
+
+body.dark main .pop-up .data .cancel .f-icon {
+  color: #efefef;
+}
+
+body.dark main .pop-up .data .felids .box label {
+  color: #efefef;
+}
+
+body.dark main .pop-up .data .felids .box .image {
+  border-color: #1d1d1d;
+}
+
+body.dark main .pop-up .data .felids .box .field {
+  color: sec-dark-color;
+}
+
+body.dark main .pop-up .data .felids .box .field span {
+  color: #a5a5a5;
+  background-color: #1d1d1d;
 }

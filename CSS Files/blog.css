@@ -979,6 +979,7 @@ header .container .log-in-acc .acc .h-btn img {
   max-width: 100%;
 }
 header .container .log-in-acc .acc .menu {
+  display: block;
   padding: 10px;
   min-width: 150px;
 }

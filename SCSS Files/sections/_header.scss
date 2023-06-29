@@ -350,6 +350,7 @@ header {
           }
         }
         .menu {
+          display: block;
           padding: 10px;
           min-width: 150px;
           ul {
@@ -401,6 +402,9 @@ header {
             }
           }
         }
+        // .open{
+        //   display: none !important;
+        // }
       }
     }
   }
@@ -425,6 +429,7 @@ header {
     }
   }
 }
+
 // End Header Styling
 // Start Dark Mode Styling:-
 body {

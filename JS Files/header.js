@@ -27,19 +27,35 @@ var lightTransColor = "#ffffffcc";
 // active account menu
 let acc = document.querySelector(".acc > .h-btn");
 let accMenu = document.querySelector(".acc > .menu");
-acc.onclick = function () {
-  if (acc.classList.contains("active")) {
-    acc.classList.remove("active");
-    accMenu.style.display = "none";
-  } else {
-    acc.classList.add("active");
-    accMenu.style.display = "block";
+// acc.onclick = function () {
+//   if (acc.classList.contains("active")) {
+//     acc.classList.remove("active");
+//     accMenu.style.display = "none";
+//   } else {
+//     acc.classList.add("active");
+//     accMenu.style.display = "block";
+//   }
+// };
+acc.onclick = function (e) {
+  accMenu.classList.toggle("open");
+  e.stopPropagation();
+};
+
+document.addEventListener("click", (e) => {
+  if (e.target !== acc && e.target !== accMenu) {
+    if (accMenu.classList.contains("open")) {
+      accMenu.classList.toggle("open");
+    }
   }
+});
+accMenu.onclick = function (e) {
+  e.stopPropagation();
 };
-acc.onblur = function () {
-  acc.classList.remove("active");
-  accMenu.style.display = "none";
-};
+
+// acc.onblur = function () {
+//   acc.classList.remove("active");
+//   accMenu.style.display = "none";
+// };
 
 // change header language icon and text
 let headLangImage = document.querySelector(".lang > .h-btn div img");

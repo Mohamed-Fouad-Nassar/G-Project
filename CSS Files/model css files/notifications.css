@@ -93,6 +93,7 @@ main .content h2 {
 
 main .content .container {
   gap: 10px;
+  overflow-x: hidden;
 }
 
 @media (max-width: 767px) {
@@ -112,13 +113,6 @@ main .content .container {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
   }
-
-  main .content .container aside.active,
-  main .content .container .message.active {
-    top: 0;
-    left: 0;
-    z-index: 100;
-  }
 }
 
 main .content .container aside {
@@ -127,9 +121,14 @@ main .content .container aside {
   padding: 20px 10px;
 }
 
+main .content .container aside.active {
+  position: static;
+}
+
 @media (max-width: 767px) {
   main .content .container aside {
     left: 100%;
+    width: 100%;
   }
 }
 
@@ -182,6 +181,7 @@ main .content .container aside ul li a .data span {
 
 main .content .container .message {
   display: none;
+  left: calc(-100% - 20px);
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -198,6 +198,9 @@ main .content .container .message {
 
 main .content .container .message.active {
   display: block;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 
 main .content .container .message .back-btn {

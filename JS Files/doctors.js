@@ -16,7 +16,7 @@ goUp.onclick = function () {
 };
 
 // load elements
-let boxes = document.querySelectorAll(".container .sec-body .box");
+let boxes = document.querySelectorAll(".container .sec-body article.box");
 let seeMoreBtn = document.querySelector(".container .sec-foot input");
 let sectionFoot = document.querySelector(".container .sec-foot");
 let start = 3;

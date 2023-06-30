@@ -216,6 +216,14 @@
                 <div class="tab-body">
                   <!-- Start Item -->
                   <div class="item">
+                    <div class="hidden">
+                      <span id="name">medicine name1</span>
+                      <span id="category">medicine category1</span>
+                      <span id="quantity">medicine quantity1</span>
+                      <span id="imgSrc">
+                        ../../Data/Images/contact-background-image.jpg
+                      </span>
+                    </div>
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
@@ -240,6 +248,14 @@
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
+                    <div class="hidden">
+                      <span id="name">medicine name2</span>
+                      <span id="category">medicine category2</span>
+                      <span id="quantity">medicine quantity2</span>
+                      <span id="imgSrc">
+                        ../../Data/Images/IMG_20221204_221443_587.jpg
+                      </span>
+                    </div>
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
@@ -264,6 +280,14 @@
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
+                    <div class="hidden">
+                      <span id="name">medicine name3</span>
+                      <span id="category">medicine category3</span>
+                      <span id="quantity">medicine quantity3</span>
+                      <span id="imgSrc">
+                        ../../Data/Images/IMG_20221204_221443_587.jpg
+                      </span>
+                    </div>
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
@@ -558,7 +582,7 @@
         <!-- end content section -->
       </div>
       <!-- Start pop-up -->
-      <div class="pop-up active">
+      <div class="pop-up">
         <div class="overlay"></div>
         <div class="data">
           <button class="cancel" id="cancel">
@@ -576,7 +600,7 @@
                   <article class="box">
                     <label for="field">name:</label>
                     <div class="field" id="field">
-                      <span>medicine name</span>
+                      <span id="nameField"></span>
                     </div>
                   </article>
                   <!-- end box -->
@@ -584,7 +608,7 @@
                   <article class="box">
                     <label for="field">category:</label>
                     <div class="field" id="field">
-                      <span>medicine category</span>
+                      <span id="categoryField"></span>
                     </div>
                   </article>
                   <!-- end box -->
@@ -592,7 +616,7 @@
                   <article class="box">
                     <label for="field">quantity:</label>
                     <div class="field" id="field">
-                      <span>medicine quantity</span>
+                      <span id="quantityField"></span>
                     </div>
                   </article>
                   <!-- end box -->
@@ -600,10 +624,7 @@
                 <div class="right-sec">
                   <label for="field">medicine image:</label>
                   <div class="image" id="field">
-                    <img
-                      src="../../Data/Images/IMG_20221204_221443_587.jpg"
-                      alt="medicine-image"
-                    />
+                    <img id="imgSrcField" />
                   </div>
                 </div>
               </div>
@@ -747,6 +768,7 @@
     <!-- header script -->
     <script src="../../JS Files/header.js"></script>
     <!-- main script -->
-    <script src="../../JS Files/popup.js"></script>
+    <script src="../../JS Files/profile_medicine.js"></script>
+    <!-- <script src="../../JS Files/popup.js"></script> -->
   </body>
 </html>

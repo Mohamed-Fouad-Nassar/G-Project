@@ -119,10 +119,10 @@ main {
               padding: 0;
               @extend %grid-300-20;
               .card {
-                display: none;
-                &.active {
-                  display: block;
-                }
+                // display: none;
+                // &.active {
+                display: block;
+                // }
                 .image {
                   img {
                     width: 100%;

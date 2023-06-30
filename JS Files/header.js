@@ -37,14 +37,14 @@ let accMenu = document.querySelector(".acc > .menu");
 //   }
 // };
 acc.onclick = function (e) {
-  accMenu.classList.toggle("open");
+  accMenu.classList.toggle("active");
   e.stopPropagation();
 };
 
 document.addEventListener("click", (e) => {
   if (e.target !== acc && e.target !== accMenu) {
-    if (accMenu.classList.contains("open")) {
-      accMenu.classList.toggle("open");
+    if (accMenu.classList.contains("active")) {
+      accMenu.classList.toggle("active");
     }
   }
 });

@@ -323,6 +323,10 @@ main .content div .sec-body .control .table .tab-body .item>span:last-of-type a:
   background-color: #d20519;
 }
 
+main .content div .sec-body .control .table .tab-body .item .hidden {
+  display: none !important;
+}
+
 main .pop-up {
   position: fixed;
   left: 0;
@@ -508,7 +512,7 @@ main .pop-up .data .felids .box .field span {
   text-align: center;
 }
 
-main .pop-up .data .felids .box .field span.article-body {
+main .pop-up .data .felids .box .field span.info {
   text-align: start;
 }
 

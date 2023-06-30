@@ -248,6 +248,29 @@
                 <div class="tab-body">
                   <!-- Start Item -->
                   <div class="item">
+                    <div class="hidden">
+                      <span id="name">pharmacy name1</span>
+                      <span id="location">pharmacy location1</span>
+                      <span id="mail">pharmacy mail1</span>
+                      <span id="phoneNumber">pharmacy phone number1</span>
+                      <span id="imgSrc">
+                        ../../Data/Images/contact-background-image.jpg
+                      </span>
+                      <span id="info">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Minima optio repellendus perferendis, laboriosam
+                        rerum sunt iure vitae minus nihil voluptates, accusamus
+                        incidunt aut quo ipsa sit odit non, necessitatibus
+                        tempore.
+                      </span>
+                      <span id="facebookLink">pharmacy facebook link1</span>
+                      <span id="twitterLink">pharmacy twitter link1</span>
+                      <span id="mailLink">pharmacy mail address link1</span>
+                      <span id="whatsappLink">pharmacy whatsapp link1</span>
+                      <span id="phoneNumberLink"
+                        >pharmacy phone number link1</span
+                      >
+                    </div>
                     <span>1</span>
                     <span>item 1</span>
                     <span>1 jun 2022</span>
@@ -272,6 +295,29 @@
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
+                    <div class="hidden">
+                      <span id="name">pharmacy name2</span>
+                      <span id="location">pharmacy location2</span>
+                      <span id="mail">pharmacy mail2</span>
+                      <span id="phoneNumber">pharmacy phone number2</span>
+                      <span id="imgSrc">
+                        ../../Data/Images/contact-background-image.jpg
+                      </span>
+                      <span id="info">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Minima optio repellendus perferendis, laboriosam
+                        rerum sunt iure vitae minus nihil voluptates, accusamus
+                        incidunt aut quo ipsa sit odit non, necessitatibus
+                        tempore.
+                      </span>
+                      <span id="facebookLink">pharmacy facebook link2</span>
+                      <span id="twitterLink">pharmacy twitter link2</span>
+                      <span id="mailLink">pharmacy mail address link2</span>
+                      <span id="whatsappLink">pharmacy whatsapp link2</span>
+                      <span id="phoneNumberLink">
+                        pharmacy phone number link1</span
+                      >
+                    </div>
                     <span>2</span>
                     <span>item 2</span>
                     <span>1 jun 2022</span>
@@ -296,6 +342,29 @@
                   <!-- End Item -->
                   <!-- Start Item -->
                   <div class="item">
+                    <div class="hidden">
+                      <span id="name">pharmacy name3</span>
+                      <span id="location">pharmacy location3</span>
+                      <span id="mail">pharmacy mail3</span>
+                      <span id="phoneNumber">pharmacy phone number3</span>
+                      <span id="imgSrc">
+                        ../../Data/Images/contact-background-image.jpg
+                      </span>
+                      <span id="info">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Minima optio repellendus perferendis, laboriosam
+                        rerum sunt iure vitae minus nihil voluptates, accusamus
+                        incidunt aut quo ipsa sit odit non, necessitatibus
+                        tempore.
+                      </span>
+                      <span id="facebookLink">pharmacy facebook link3</span>
+                      <span id="twitterLink">pharmacy twitter link3</span>
+                      <span id="mailLink">pharmacy mail address link3</span>
+                      <span id="whatsappLink">pharmacy whatsapp link3</span>
+                      <span id="phoneNumberLink">
+                        pharmacy phone number link1</span
+                      >
+                    </div>
                     <span>3</span>
                     <span>item 3</span>
                     <span>1 jun 2022</span>
@@ -590,7 +659,7 @@
       </section>
       <!-- End Content  -->
       <!-- Start pop-up -->
-      <div class="pop-up active">
+      <div class="pop-up">
         <div class="overlay"></div>
         <div class="data">
           <button class="cancel" id="cancel">
@@ -608,7 +677,7 @@
                   <article class="box">
                     <label for="field">name:</label>
                     <div class="field" id="field">
-                      <span>pharmacy name</span>
+                      <span id="nameField"></span>
                     </div>
                   </article>
                   <!-- end box -->
@@ -616,7 +685,7 @@
                   <article class="box">
                     <label for="field">location:</label>
                     <div class="field" id="field">
-                      <span>pharmacy location</span>
+                      <span id="locationField"></span>
                     </div>
                   </article>
                   <!-- end box -->
@@ -624,7 +693,7 @@
                   <article class="box">
                     <label for="field">e-mail:</label>
                     <div class="field" id="field">
-                      <span>pharmacy mail address</span>
+                      <span id="mailField"></span>
                     </div>
                   </article>
                   <!-- end box -->
@@ -632,18 +701,15 @@
                   <article class="box">
                     <label for="field">phone number:</label>
                     <div class="field" id="field">
-                      <span>pharmacy phone number</span>
+                      <span id="phoneField"></span>
                     </div>
                   </article>
                   <!-- end box -->
                 </div>
                 <div class="right-sec">
-                  <label for="field">age:</label>
+                  <label for="field">image:</label>
                   <div class="image" id="field">
-                    <img
-                      src="../../Data/Images/IMG_20221204_221443_587.jpg"
-                      alt="article-image"
-                    />
+                    <img id="imgSrcField" />
                   </div>
                 </div>
               </div>
@@ -653,12 +719,7 @@
             <article class="box">
               <label for="field">pharmacy info:</label>
               <div class="field" id="field">
-                <span class="article-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-                  fugit enim nostrum consequuntur soluta. Laudantium sed
-                  doloremque aperiam animi nesciunt dolores facilis rem minima
-                  temporibus, voluptate expedita tempore earum! Blanditiis!
-                </span>
+                <span class="info" id="infoField"></span>
               </div>
             </article>
             <!-- end box -->
@@ -670,7 +731,7 @@
                 <article class="box">
                   <label for="field">facebook:</label>
                   <div class="field" id="field">
-                    <span>facebook link</span>
+                    <span id="facebookLinkField"></span>
                   </div>
                 </article>
                 <!-- end box -->
@@ -678,7 +739,7 @@
                 <article class="box">
                   <label for="field">twitter:</label>
                   <div class="field" id="field">
-                    <span>twitter link</span>
+                    <span id="twitterLinkField"></span>
                   </div>
                 </article>
                 <!-- end box -->
@@ -686,7 +747,7 @@
                 <article class="box">
                   <label for="field">mail address:</label>
                   <div class="field" id="field">
-                    <span>mail address link</span>
+                    <span id="mailLinkField"></span>
                   </div>
                 </article>
                 <!-- end box -->
@@ -694,7 +755,7 @@
                 <article class="box">
                   <label for="field">Whatsapp:</label>
                   <div class="field" id="field">
-                    <span>Whatsapp link</span>
+                    <span id="WhatsappLinkField"></span>
                   </div>
                 </article>
                 <!-- end box -->
@@ -702,7 +763,7 @@
                 <article class="box">
                   <label for="field">phone number:</label>
                   <div class="field" id="field">
-                    <span>phone number link</span>
+                    <span id="phoneLinkField"></span>
                   </div>
                 </article>
                 <!-- end box -->
@@ -849,6 +910,7 @@
     <!-- header script -->
     <script src="../../JS Files/header.js"></script>
     <!-- main script -->
-    <script src="../../JS Files/popup.js"></script>
+    <script src="../../JS Files/pharmacies-dash.js"></script>
+    <!-- <script src="../../JS Files/popup.js"></script> -->
   </body>
 </html>

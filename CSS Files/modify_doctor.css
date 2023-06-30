@@ -779,7 +779,6 @@ header .container .log-in-acc article > .menu {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  display: none;
   position: absolute;
   padding: 0;
   padding-top: 10px;
@@ -991,9 +990,12 @@ header .container .log-in-acc .acc .h-btn img {
   max-width: 100%;
 }
 header .container .log-in-acc .acc .menu {
-  display: block;
+  display: none;
   padding: 10px;
   min-width: 150px;
+}
+header .container .log-in-acc .acc .menu.active {
+  display: block;
 }
 header .container .log-in-acc .acc .menu ul {
   gap: 5px;

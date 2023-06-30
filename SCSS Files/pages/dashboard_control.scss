@@ -261,6 +261,9 @@ main {
               padding-top: 2px;
               .item {
                 @include table-body-item("light");
+                .hidden {
+                  display: none !important;
+                }
               }
             }
           }
@@ -418,8 +421,9 @@ main {
               color: $black-color;
               display: block;
               text-align: center;
-              &.article-body {
+              &.info {
                 text-align: start;
+                // word-wrap: break-word;
               }
             }
             .left-sec,

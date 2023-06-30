@@ -169,7 +169,7 @@ header {
           @extend %border-radius-5;
           @extend %user-select-none;
           @include trans-x(-50%);
-          display: none;
+          // display: none;
           position: absolute;
           padding: 0 {
             top: $sec-element-padding;
@@ -350,7 +350,11 @@ header {
           }
         }
         .menu {
-          display: block;
+          // display: block;
+          display: none;
+          &.active {
+            display: block;
+          }
           padding: 10px;
           min-width: 150px;
           ul {

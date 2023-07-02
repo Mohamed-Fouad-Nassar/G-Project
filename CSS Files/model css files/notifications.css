@@ -1,15 +1,13 @@
-main .content .container .message .order-info article,
-main .content .container .message .order-content .box,
-main .content .container .message .user-info .box {
+main .content .container .message .order-info article, main .content .container .message .order-content .box, main .content .container .message .user-info .box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container aside ul li a {
@@ -17,11 +15,11 @@ main .content .container aside ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 main .content .container {
@@ -29,11 +27,11 @@ main .content .container {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 main .content .container .message .order-content .box .info {
@@ -41,16 +39,14 @@ main .content .container .message .order-content .box .info {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-main .content .container aside,
-main .content .container aside ul li a,
-main .content .container .message {
+main .content .container aside, main .content .container aside ul li a, main .content .container .message {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -73,35 +69,29 @@ main {
   padding-top: 100px;
   padding-bottom: 40px;
 }
-
 main .content {
   min-height: 90vh;
 }
-
 @media (max-width: 767px) {
   main .content {
     margin: 0 10px;
   }
 }
-
 main .content h2 {
   color: #059cb1;
   font-size: 1.4rem;
   text-align: center;
   padding-bottom: 10px;
 }
-
 main .content .container {
   gap: 10px;
   overflow-x: hidden;
 }
-
 @media (max-width: 767px) {
   main .content .container {
     position: relative;
     overflow-x: hidden;
   }
-
   main .content .container aside,
   main .content .container .message {
     position: absolute;
@@ -114,95 +104,78 @@ main .content .container {
     -o-transition: 0.3s;
   }
 }
-
 main .content .container aside {
   width: 280px;
   background-color: #fff;
   padding: 20px 10px;
 }
-
 main .content .container aside.active {
   position: static;
 }
-
 @media (max-width: 767px) {
   main .content .container aside {
     left: 100%;
     width: 100%;
   }
 }
-
 main .content .container aside ul li {
   border-bottom: 1px solid #eee;
 }
-
 main .content .container aside ul li:last-of-type {
   border: none;
 }
-
 main .content .container aside ul li.active a {
   background-color: #f9f9f9;
 }
-
 main .content .container aside ul li.active a .data span {
   color: #059cb1;
 }
-
 main .content .container aside ul li a {
   padding: 10px 7px;
   background-color: transparent;
   gap: 10px;
 }
-
 main .content .container aside ul li a:hover {
   background-color: #f9f9f9;
 }
-
 main .content .container aside ul li a:hover .data span {
   color: #059cb1;
 }
-
 main .content .container aside ul li a .image {
   width: 50px;
   height: 50px;
   overflow: hidden;
 }
-
 main .content .container aside ul li a .image img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
-
 main .content .container aside ul li a .data span {
   color: #212529;
 }
-
 main .content .container .message {
   display: none;
   left: calc(-100% - 20px);
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #fff;
   padding: 20px 10px;
   position: relative;
 }
-
 @media (max-width: 767px) {
   main .content .container .message {
     left: calc(-100% - 20px);
   }
 }
-
 main .content .container .message.active {
   display: block;
   top: 0;
   left: 0;
   z-index: 100;
 }
-
 main .content .container .message .back-btn {
   position: absolute;
   top: 20px;
@@ -215,170 +188,139 @@ main .content .container .message .back-btn {
   left: 7px !important;
   top: 15px !important;
 }
-
 main .content .container .message .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 main .content .container .message .back-btn .f-icon {
   font-size: 1rem;
 }
-
 @media (max-width: 767px) {
   main .content .container .message .back-btn {
     display: block !important;
   }
 }
-
-main .content .container .message>div:not(div:last-of-type) {
+main .content .container .message > div:not(div:last-of-type) {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
 }
-
 main .content .container .message .order-info {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
   gap: 10px;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
-
 @media (max-width: 575px) {
   main .content .container .message .order-info {
     width: 100%;
   }
 }
-
 main .content .container .message .order-info article {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
 }
-
 main .content .container .message .order-info article span:last-of-type {
   font-size: 1.5rem;
   font-weight: 600;
   color: #059cb1;
 }
-
 main .content .container .message .order-content {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 10px;
 }
-
 main .content .container .message .order-content .box {
   gap: 10px;
   padding: 10px;
   background-color: #eee;
 }
-
 main .content .container .message .order-content .box .image {
   width: 70px;
   height: 70px;
 }
-
 main .content .container .message .order-content .box .image img {
   max-width: 100%;
 }
-
 main .content .container .message .order-content .box .info {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   gap: 10px;
 }
-
 main .content .container .message .order-content .box .info span:first-of-type {
   font-weight: 500;
 }
-
 main .content .container .message .order-content .box .info span:last-of-type {
   font-size: 0.9rem;
   font-weight: 400;
   color: #555;
 }
-
 main .content .container .message .user-info .box {
   gap: 10px;
   padding: 5px 0;
 }
-
 main .content .container .message .user-info .box:last-of-type {
   padding-bottom: 0;
 }
-
 main .content .container .message .user-info .box span:first-of-type {
   width: 120px;
 }
-
 @media (max-width: 767px) {
   main .content .container .message .user-info .box span:first-of-type {
     width: 75px;
   }
 }
-
 main .content .container .message .user-info .box span:last-of-type {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 body.dark main {
   background-color: #222;
 }
-
 body.dark main .content h2 {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container aside {
   background-color: #1d1d1d;
 }
-
 body.dark main .content .container aside ul li {
   border-bottom-color: #323234;
 }
-
 body.dark main .content .container aside ul li.active a {
   background-color: #222;
 }
-
 body.dark main .content .container aside ul li.active a .data span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container aside ul li a {
   background-color: transparent;
   gap: 10px;
 }
-
 body.dark main .content .container aside ul li a:hover {
   background-color: #222;
 }
-
 body.dark main .content .container aside ul li a:hover .data span {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container aside ul li a .data span {
   color: #a5a5a5;
 }
-
 body.dark main .content .container .message {
   background-color: #1d1d1d;
 }
-
 body.dark main .content .container .message .back-btn {
   position: absolute;
   top: 20px;
@@ -390,43 +332,33 @@ body.dark main .content .container .message .back-btn {
   cursor: pointer;
   color: #efefef;
 }
-
 body.dark main .content .container .message .back-btn:hover .f-icon {
   color: #059cb1;
 }
-
 body.dark main .content .container .message .back-btn .f-icon {
   font-size: 1rem;
 }
-
 body.dark main .content .container .message .back-btn:hover .f-icon {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
-body.dark main .content .container .message>div:not(div:last-of-type) {
+body.dark main .content .container .message > div:not(div:last-of-type) {
   border-bottom-color: #323234;
 }
-
 body.dark main .content .container .message .order-info article span {
   color: #efefef;
 }
-
 body.dark main .content .container .message .order-info article span:last-of-type {
   color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container .message .order-content .box {
   background-color: #222;
 }
-
 body.dark main .content .container .message .order-content .box .info span {
   color: #efefef;
 }
-
 body.dark main .content .container .message .order-content .box .info span:last-of-type {
   color: #a5a5a5;
 }
-
 body.dark main .content .container .message .user-info .box span {
   color: #efefef;
 }

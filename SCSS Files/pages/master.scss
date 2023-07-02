@@ -1,13 +1,13 @@
 // import global rules
-@use "../Global-rules/global" as *;
+// @use "../Global-rules/global" as *;
 // import placeholders and mixins
 @use "../Global-rules/helpers" as *;
 // import variables
 @use "../Global-rules/variables" as *;
 // import header styling:-
-@use "../sections/header" as *;
+// @use "../sections/header" as *;
 // import footer styling:-
-@use "../sections/footer" as *;
+// @use "../sections/footer" as *;
 
 // additional page styling
 // Start Main Styling:-
@@ -187,84 +187,127 @@ main {
         @media (max-width: 575px) {
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
+        // .box {
+        //   &::before {
+        //     @extend %translate-50;
+        //     @extend %border-radius-5;
+        //     content: "";
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     width: calc(100% - 40px);
+        //     height: calc(100% - 40px);
+        //     width: 0;
+        //     height: 0;
+        //     background-color: $transparent-color;
+        //     z-index: 2;
+        //   }
+        //   box-shadow: $main-box-shadow;
+        //   overflow: hidden;
+        //   position: relative;
+        //   z-index: 1;
+        //   .info {
+        //     @extend %translate-50;
+        //     text-align: center;
+        //     display: block;
+        //     padding: $main-element-padding;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: 50%;
+        //     width: calc(100% - 60px);
+        //     z-index: -1;
+        //     opacity: 0;
+        //     a {
+        //       display: block;
+        //       margin-bottom: $sec-element-padding;
+        //       color: $sec-color;
+        //       &:hover {
+        //         i,
+        //         h4 {
+        //           color: $main-color;
+        //         }
+        //       }
+        //       i {
+        //         margin-bottom: $sec-element-padding;
+        //         font-size: 2rem;
+        //         color: $sec-color;
+        //         @media (max-width: 575px) {
+        //           font-size: 1.5rem;
+        //         }
+        //       }
+        //       h4 {
+        //         margin-bottom: $sec-element-padding;
+        //         font-size: 1.5rem;
+        //         color: $sec-color;
+        //         @media (max-width: 575px) {
+        //           font-size: 1.1rem;
+        //         }
+        //       }
+        //     }
+        //     p {
+        //       @include max-lines(3);
+        //       margin: 0;
+        //       font-size: 0.9rem;
+        //       color: $sec-text-color;
+        //       @media (max-width: 575px) {
+        //         font-size: 0.8rem;
+        //       }
+        //     }
+        //   }
+        //   &:hover {
+        //     &::before {
+        //       width: calc(100% - 40px);
+        //       height: calc(100% - 40px);
+        //     }
+        //     img {
+        //       @include scale(1.2);
+        //     }
+        //     .info {
+        //       opacity: 1;
+        //       z-index: 3;
+        //     }
+        //   }
+        // }
         .box {
-          &::before {
-            @extend %translate-50;
-            @extend %border-radius-5;
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: calc(100% - 40px);
-            height: calc(100% - 40px);
-            width: 0;
-            height: 0;
-            background-color: $transparent-color;
-            z-index: 2;
-          }
-          box-shadow: $main-box-shadow;
-          overflow: hidden;
-          position: relative;
-          z-index: 1;
-          .info {
-            @extend %translate-50;
-            text-align: center;
-            display: block;
-            padding: $main-element-padding;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: calc(100% - 60px);
-            z-index: -1;
-            opacity: 0;
-            a {
-              display: block;
-              margin-bottom: $sec-element-padding;
-              color: $sec-color;
-              &:hover {
-                i,
-                h4 {
-                  color: $main-color;
-                }
-              }
-              i {
-                margin-bottom: $sec-element-padding;
-                font-size: 2rem;
-                color: $sec-color;
-                @media (max-width: 575px) {
-                  font-size: 1.5rem;
-                }
-              }
-              h4 {
-                margin-bottom: $sec-element-padding;
-                font-size: 1.5rem;
-                color: $sec-color;
-                @media (max-width: 575px) {
-                  font-size: 1.1rem;
-                }
-              }
-            }
-            p {
-              @include max-lines(3);
-              margin: 0;
-              font-size: 0.9rem;
-              color: $sec-text-color;
-              @media (max-width: 575px) {
-                font-size: 0.8rem;
-              }
-            }
-          }
-          &:hover {
-            &::before {
-              width: calc(100% - 40px);
-              height: calc(100% - 40px);
-            }
+          // display: none;
+          // &.active {
+          display: block;
+          // }
+          background-color: $white-color;
+          .image {
             img {
-              @include scale(1.2);
+              width: 100%;
             }
-            .info {
-              opacity: 1;
-              z-index: 3;
+          }
+          .card-body {
+            background-color: $white-color;
+            .med-details {
+              padding: 10px;
+              &:after {
+                margin-top: 10px;
+                background-color: $light-white-color;
+                width: 100%;
+                height: 1px;
+                display: block;
+                content: " ";
+              }
+            }
+            .pharmacies-name {
+              padding: 10px;
+              @extend %flex-start-center;
+              flex-wrap: wrap;
+              gap: 10px;
+              a {
+                color: $black-color;
+                background-color: $light-white-color;
+                border-color: $light-white-color;
+                font-size: 0.9rem;
+              }
+              a:hover {
+                color: $white-color;
+                background-color: $main-color;
+                border-color: $main-color;
+              }
             }
           }
         }
@@ -534,29 +577,56 @@ body {
         background-color: $main-dark-bg;
         .container {
           .sec-body {
+            // .box {
+            //   &::before {
+            //     background-color: $dark-transparent-color;
+            //   }
+            //   box-shadow: $dark-box-shadow;
+            //   .info {
+            //     a {
+            //       color: $sec-dark-color;
+            //       &:hover {
+            //         i,
+            //         h4 {
+            //           color: $main-dark-color;
+            //         }
+            //       }
+            //       i {
+            //         color: $sec-dark-color;
+            //       }
+            //       h4 {
+            //         color: $sec-dark-color;
+            //       }
+            //     }
+            //     p {
+            //       color: $sec-text-dark-color;
+            //     }
+            //   }
+            // }
             .box {
-              &::before {
-                background-color: $dark-transparent-color;
-              }
-              box-shadow: $dark-box-shadow;
-              .info {
-                a {
-                  color: $sec-dark-color;
-                  &:hover {
-                    i,
-                    h4 {
-                      color: $main-dark-color;
-                    }
-                  }
-                  i {
-                    color: $sec-dark-color;
-                  }
-                  h4 {
-                    color: $sec-dark-color;
-                  }
+              background-color: $sec-dark-bg;
+              .card-body {
+                background-color: $sec-dark-bg;
+                h5 {
+                  color: $white-dark-color;
                 }
-                p {
+                span {
                   color: $sec-text-dark-color;
+                }
+              }
+              .med-details:after {
+                background-color: $nav-active-bg;
+              }
+              .pharmacies-name {
+                a {
+                  color: $white-dark-color;
+                  background-color: $main-dark-bg;
+                  border-color: $main-dark-bg;
+                  &:hover {
+                    color: $white-dark-color;
+                    background-color: $main-dark-color;
+                    border-color: $main-dark-color;
+                  }
                 }
               }
             }

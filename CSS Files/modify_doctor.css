@@ -1046,16 +1046,21 @@ header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
 header.scroll {
   background-color: rgba(255, 255, 255, 0.8);
 }
-@media (max-width: 767px) {
-  header.scroll {
-    top: -67px;
-  }
-}
 header.scroll .container nav ul li.active {
   background-color: #eee;
 }
 header.scroll .container nav ul li.active a {
   color: #059cb1;
+}
+@media (max-width: 767px) {
+  header.scroll_down {
+    top: -67px !important;
+  }
+}
+@media (max-width: 767px) {
+  header.scroll_up {
+    top: 0 !important;
+  }
 }
 
 body.dark header {
@@ -1230,6 +1235,19 @@ footer .container > div h3 {
   font-size: 1.3rem;
   margin: 0;
   color: #eee;
+}
+footer .container .f-info .f-logo {
+  width: 75px;
+}
+@media (max-width: 991px) {
+  footer .container .f-info .f-logo {
+    width: 60px;
+  }
+}
+@media (max-width: 767px) {
+  footer .container .f-info .f-logo {
+    width: 70px;
+  }
 }
 footer .container .f-info .f-logo h1 {
   font-family: "Yesteryear", cursive;

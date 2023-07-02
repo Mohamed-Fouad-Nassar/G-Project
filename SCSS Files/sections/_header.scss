@@ -414,9 +414,6 @@ header {
   }
   &.scroll {
     background-color: $transparent-color;
-    @media (max-width: 767px) {
-      top: -67px;
-    }
     .container {
       nav {
         ul {
@@ -430,6 +427,16 @@ header {
           }
         }
       }
+    }
+  }
+  &.scroll_down {
+    @media (max-width: 767px) {
+      top: -67px !important;
+    }
+  }
+  &.scroll_up {
+    @media (max-width: 767px) {
+      top: 0 !important;
     }
   }
 }

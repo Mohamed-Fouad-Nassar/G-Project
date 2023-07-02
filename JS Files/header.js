@@ -103,12 +103,36 @@ if (window.localStorage.getItem("theme") === "dark") {
 
 // change nav color and position on scroll
 let header = document.getElementById("navbar_top");
-document.addEventListener("DOMContentLoaded", function () {
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 30) {
-      header.classList.add("scroll");
-    } else {
+// document.addEventListener("DOMContentLoaded", function () {
+//   window.addEventListener("scroll", function () {
+//     if (window.scrollY > 30) {
+//       header.classList.add("scroll");
+//     } else {
+//       header.classList.remove("scroll");
+//     }
+//   });
+// });
+
+let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+window.addEventListener(
+  "scroll",
+  function handleScroll() {
+    const scrollTopPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
+    if (window.pageYOffset === 0) {
       header.classList.remove("scroll");
+    } else {
+      header.classList.add("scroll");
+      if (scrollTopPosition > lastScrollTop) {
+        header.classList.add("scroll_down");
+        header.classList.remove("scroll_up");
+      } else if (scrollTopPosition < lastScrollTop) {
+        header.classList.remove("scroll_down");
+        header.classList.add("scroll_up");
+      }
+      lastScrollTop = scrollTopPosition <= 0 ? 0 : scrollTopPosition;
     }
-  });
-});
+  },
+  false
+);

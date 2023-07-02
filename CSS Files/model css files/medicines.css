@@ -1,20 +1,18 @@
-main .content .container .sec-body .med .side-bar ul,
-main .content .container .sec-body .med .cards .left-side ul {
+main .content .container .sec-body .med .side-bar ul, main .content .container .sec-body .med .cards .left-side ul {
   margin: 0;
   padding: 0;
 }
 
-main .content .container .sec-foot input[type=button],
-body.dark main .content .container .sec-foot input[type=button] {
+main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-foot input[type=button] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container .sec-body .med .cards {
@@ -22,11 +20,11 @@ main .content .container .sec-body .med .cards {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies {
@@ -34,11 +32,11 @@ main .content .container .sec-body .med .cards .right-side .card .card-body .pha
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .content .container .sec-body .med .cards .right-side {
@@ -48,12 +46,7 @@ main .content .container .sec-body .med .cards .right-side {
   gap: 20px;
 }
 
-main .content .container .sec-body .med .side-bar,
-main .content .container .sec-body .med .side-bar ul li,
-main .content .container .sec-body .med .cards .left-side,
-main .content .container .sec-body .med .cards .left-side ul li a,
-main .content .container .sec-foot input[type=button],
-body.dark main .content .container .sec-foot input[type=button] {
+main .content .container .sec-body .med .side-bar, main .content .container .sec-body .med .side-bar ul li, main .content .container .sec-body .med .cards .left-side, main .content .container .sec-body .med .cards .left-side ul li a, main .content .container .sec-foot input[type=button], body.dark main .content .container .sec-foot input[type=button] {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
   -moz-border-radius: 5px !important;
@@ -66,11 +59,9 @@ main {
   padding: 100px 0;
   position: relative;
 }
-
 main .content .container .sec-body .med {
   position: relative;
 }
-
 main .content .container .sec-body .med .filter {
   position: absolute;
   top: -50px;
@@ -82,14 +73,12 @@ main .content .container .sec-body .med .filter {
   z-index: 10;
   padding: 10px;
 }
-
 main .content .container .sec-body .med .filter span {
   display: block;
   height: 4px;
   background-color: #212529;
   margin-bottom: 4px;
 }
-
 main .content .container .sec-body .med .side-bar {
   display: none;
   position: absolute;
@@ -102,81 +91,67 @@ main .content .container .sec-body .med .side-bar {
   height: 30rem;
   color: #212529;
 }
-
 main .content .container .sec-body .med .side-bar h2 {
   font-size: 1.7rem;
   margin: 0;
   margin-bottom: 20px;
 }
-
 main .content .container .sec-body .med .side-bar ul li {
   padding: 10px 7px;
   cursor: pointer;
 }
-
 main .content .container .sec-body .med .side-bar ul .active {
   color: #fff;
   background-color: #059cb1;
 }
-
 main .content .container .sec-body .med .cards {
   gap: 20px;
   position: relative;
 }
-
 main .content .container .sec-body .med .cards .left-side {
   padding: 20px 10px;
   background-color: #fff;
   width: 200px;
   color: #212529;
 }
-
 @media (min-width: 768px) {
   main .content .container .sec-body .med .cards .left-side {
     position: sticky;
     top: 90px;
   }
 }
-
 main .content .container .sec-body .med .cards .left-side h2 {
   font-size: 1.7rem;
   margin: 0;
   margin-bottom: 20px;
 }
-
 main .content .container .sec-body .med .cards .left-side ul li a {
   padding: 10px;
   display: block;
   width: 100%;
   margin-bottom: 4px;
 }
-
 main .content .container .sec-body .med .cards .left-side ul li a:hover {
   color: #059cb1;
   background-color: #f9f9f9;
 }
-
 main .content .container .sec-body .med .cards .left-side ul li.active a {
   color: #059cb1;
   background-color: #f9f9f9;
 }
-
 main .content .container .sec-body .med .cards .right-side {
   overflow: hidden;
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0;
 }
-
 main .content .container .sec-body .med .cards .right-side .card {
   display: block;
 }
-
 main .content .container .sec-body .med .cards .right-side .card .image img {
   width: 100%;
 }
-
 main .content .container .sec-body .med .cards .right-side .card .card-body .med-details:after {
   margin-top: 10px;
   background-color: #eee;
@@ -185,27 +160,23 @@ main .content .container .sec-body .med .cards .right-side .card .card-body .med
   display: block;
   content: " ";
 }
-
 main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies {
   padding-top: 10px;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
-
 main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies a {
   color: #212529;
   background-color: #eee;
   border-color: #eee;
   font-size: 0.9rem;
 }
-
 main .content .container .sec-body .med .cards .right-side .card .card-body .pharmacies a:hover {
   color: #fff;
   background-color: #059cb1;
   border-color: #059cb1;
 }
-
 main .content .container .sec-foot input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -215,7 +186,6 @@ main .content .container .sec-foot input[type=button] {
   background-color: #059cb1;
   padding: 10px 20px;
 }
-
 main .content .container .sec-foot input[type=button]:hover {
   color: #059cb1;
   background-color: transparent;
@@ -225,11 +195,9 @@ main .content .container .sec-foot input[type=button]:hover {
 .open {
   display: block !important;
 }
-
 .open h2 {
   font-size: 1.2rem !important;
 }
-
 .open ul li {
   font-size: 0.9rem !important;
 }
@@ -238,7 +206,6 @@ main .content .container .sec-foot input[type=button]:hover {
   .sec-body .med .filter {
     display: block !important;
   }
-
   .sec-body .med .left-side {
     display: none;
     position: absolute;
@@ -246,71 +213,56 @@ main .content .container .sec-foot input[type=button]:hover {
     top: -50px;
     z-index: 10;
   }
-
   .sec-body .med .right-side {
     width: 100% !important;
   }
 }
-
 body.dark main {
   background-color: #222;
 }
-
 body.dark main .content .container .sec-body .med .filter {
   background: none;
 }
-
 body.dark main .content .container .sec-body .med .filter span {
   background-color: rgba(58, 182, 182, 0.8705882353);
 }
-
 body.dark main .content .container .sec-body .med .cards .left-side {
   background-color: #1d1d1d;
   color: #efefef;
 }
-
 body.dark main .content .container .sec-body .med .cards .left-side ul li a {
   color: #efefef;
 }
-
 body.dark main .content .container .sec-body .med .cards .left-side ul li a:hover {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: #222;
 }
-
 body.dark main .content .container .sec-body .med .cards .left-side ul li.active a {
   color: rgba(5, 156, 177, 0.8705882353);
   background-color: #222;
 }
-
 body.dark main .content .container .sec-body .med .right-side .card {
   background-color: #1d1d1d;
 }
-
 body.dark main .content .container .sec-body .med .right-side .card .card-body h5 {
   color: #efefef;
 }
-
 body.dark main .content .container .sec-body .med .right-side .card .card-body span {
   color: #a5a5a5;
 }
-
 body.dark main .content .container .sec-body .med .right-side .card .med-details:after {
   background-color: #323234;
 }
-
 body.dark main .content .container .sec-body .med .right-side .card .pharmacies a {
   color: #efefef;
   background-color: #222;
   border-color: #222;
 }
-
 body.dark main .content .container .sec-body .med .right-side .card .pharmacies a:hover {
   color: #efefef;
   background-color: rgba(5, 156, 177, 0.8705882353);
   border-color: rgba(5, 156, 177, 0.8705882353);
 }
-
 body.dark main .content .container .sec-foot input[type=button] {
   width: 160px;
   margin: 0 auto;
@@ -320,7 +272,6 @@ body.dark main .content .container .sec-foot input[type=button] {
   background-color: #059cb1;
   padding: 10px 20px;
 }
-
 body.dark main .content .container .sec-foot input[type=button]:hover {
   color: #059cb1;
   background-color: transparent;

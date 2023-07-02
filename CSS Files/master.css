@@ -45,6 +45,12 @@ main .contacts .container .sec-body {
   justify-content: space-between;
 }
 
+main .medicine .container .sec-body .box .card-body .pharmacies-name {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 main .hospitals .container .sec-body {
   display: flex;
   justify-content: space-between;
@@ -80,14 +86,6 @@ main .services .container .sec-body, main .medicine .container .sec-body, main .
   gap: 20px;
 }
 
-main .medicine .container .sec-body .box::before, main .medicine .container .sec-body .box .info {
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-
 .head-shape span::after, .head-shape span::before,
 .head-shape-w span::after,
 .head-shape-w span::before, body.dark .error-message::after, .error-message::after, .success-message::after {
@@ -98,7 +96,7 @@ main .medicine .container .sec-body .box::before, main .medicine .container .sec
   -o-transform: translateY(-50%);
 }
 
-main .doctors .container .sec-body .box .info .contact > div a, main .medicine .container .sec-body .box::before, main .hospitals .container .sec-body, main .hospitals .container .sec-body .text a, main .pharmacies .container .sec-body .box .data .contact > div a, main .blog .container .sec-body article, main .contacts .container .sec-body .sec-left .social-icon > div > div a, main .contacts .container .sec-body .sec-right form input[type=submit], body.dark main .doctors .container .sec-body .box .info .contact > div a, body.dark main .hospitals .container .sec-body .text a, body.dark main .pharmacies .container .sec-body .box .data .contact > div a, body.dark main .blog .container .sec-body article, body.dark main .contacts .container .sec-body .sec-left .social-icon > div a, body.dark main .contacts .container .sec-body .sec-right form input[type=submit], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
+main .doctors .container .sec-body .box .info .contact > div a, main .hospitals .container .sec-body, main .hospitals .container .sec-body .text a, main .pharmacies .container .sec-body .box .data .contact > div a, main .blog .container .sec-body article, main .contacts .container .sec-body .sec-left .social-icon > div > div a, main .contacts .container .sec-body .sec-right form input[type=submit], body.dark main .doctors .container .sec-body .box .info .contact > div a, body.dark main .hospitals .container .sec-body .text a, body.dark main .pharmacies .container .sec-body .box .data .contact > div a, body.dark main .blog .container .sec-body article, body.dark main .contacts .container .sec-body .sec-left .social-icon > div a, body.dark main .contacts .container .sec-body .sec-right form input[type=submit], footer .container .f-info .f-social > div a, body.dark footer .f-info .f-social > div a, header .container .account a, header .container .log-in-acc article > .menu, header .container .log-in-acc article > .menu ul li, body.dark header .container .account a, .box,
 .card, section .container .sec-foot a, .dark section .container .sec-foot a {
   border-radius: 5px !important;
   -webkit-border-radius: 5px !important;
@@ -1002,16 +1000,21 @@ header .container .log-in-acc .acc .menu ul li a.danger .f-icon {
 header.scroll {
   background-color: rgba(255, 255, 255, 0.8);
 }
-@media (max-width: 767px) {
-  header.scroll {
-    top: -67px;
-  }
-}
 header.scroll .container nav ul li.active {
   background-color: #eee;
 }
 header.scroll .container nav ul li.active a {
   color: #059cb1;
+}
+@media (max-width: 767px) {
+  header.scroll_down {
+    top: -67px !important;
+  }
+}
+@media (max-width: 767px) {
+  header.scroll_up {
+    top: 0 !important;
+  }
 }
 
 body.dark header {
@@ -1506,91 +1509,41 @@ main .medicine {
   }
 }
 main .medicine .container .sec-body .box {
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-}
-main .medicine .container .sec-body .box::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-  width: 0;
-  height: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 2;
-}
-main .medicine .container .sec-body .box .info {
-  text-align: center;
   display: block;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% - 60px);
-  z-index: -1;
-  opacity: 0;
+  background-color: #fff;
 }
-main .medicine .container .sec-body .box .info a {
+main .medicine .container .sec-body .box .image img {
+  width: 100%;
+}
+main .medicine .container .sec-body .box .card-body {
+  background-color: #fff;
+}
+main .medicine .container .sec-body .box .card-body .med-details {
+  padding: 10px;
+}
+main .medicine .container .sec-body .box .card-body .med-details:after {
+  margin-top: 10px;
+  background-color: #eee;
+  width: 100%;
+  height: 1px;
   display: block;
-  margin-bottom: 10px;
-  color: #3ab6b6;
+  content: " ";
 }
-main .medicine .container .sec-body .box .info a:hover i,
-main .medicine .container .sec-body .box .info a:hover h4 {
-  color: #059cb1;
+main .medicine .container .sec-body .box .card-body .pharmacies-name {
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-main .medicine .container .sec-body .box .info a i {
-  margin-bottom: 10px;
-  font-size: 2rem;
-  color: #3ab6b6;
-}
-@media (max-width: 575px) {
-  main .medicine .container .sec-body .box .info a i {
-    font-size: 1.5rem;
-  }
-}
-main .medicine .container .sec-body .box .info a h4 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #3ab6b6;
-}
-@media (max-width: 575px) {
-  main .medicine .container .sec-body .box .info a h4 {
-    font-size: 1.1rem;
-  }
-}
-main .medicine .container .sec-body .box .info p {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin: 0;
+main .medicine .container .sec-body .box .card-body .pharmacies-name a {
+  color: #212529;
+  background-color: #eee;
+  border-color: #eee;
   font-size: 0.9rem;
-  color: #555;
 }
-@media (max-width: 575px) {
-  main .medicine .container .sec-body .box .info p {
-    font-size: 0.8rem;
-  }
-}
-main .medicine .container .sec-body .box:hover::before {
-  width: calc(100% - 40px);
-  height: calc(100% - 40px);
-}
-main .medicine .container .sec-body .box:hover img {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-}
-main .medicine .container .sec-body .box:hover .info {
-  opacity: 1;
-  z-index: 3;
+main .medicine .container .sec-body .box .card-body .pharmacies-name a:hover {
+  color: #fff;
+  background-color: #059cb1;
+  border-color: #059cb1;
 }
 main .hospitals {
   padding: 100px 0;
@@ -2137,26 +2090,29 @@ body.dark main .medicine {
   background-color: #222;
 }
 body.dark main .medicine .container .sec-body .box {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  background-color: #1d1d1d;
 }
-body.dark main .medicine .container .sec-body .box::before {
-  background-color: rgba(0, 0, 0, 0.8);
+body.dark main .medicine .container .sec-body .box .card-body {
+  background-color: #1d1d1d;
 }
-body.dark main .medicine .container .sec-body .box .info a {
-  color: rgba(58, 182, 182, 0.8705882353);
+body.dark main .medicine .container .sec-body .box .card-body h5 {
+  color: #efefef;
 }
-body.dark main .medicine .container .sec-body .box .info a:hover i,
-body.dark main .medicine .container .sec-body .box .info a:hover h4 {
-  color: rgba(5, 156, 177, 0.8705882353);
-}
-body.dark main .medicine .container .sec-body .box .info a i {
-  color: rgba(58, 182, 182, 0.8705882353);
-}
-body.dark main .medicine .container .sec-body .box .info a h4 {
-  color: rgba(58, 182, 182, 0.8705882353);
-}
-body.dark main .medicine .container .sec-body .box .info p {
+body.dark main .medicine .container .sec-body .box .card-body span {
   color: #a5a5a5;
+}
+body.dark main .medicine .container .sec-body .box .med-details:after {
+  background-color: #323234;
+}
+body.dark main .medicine .container .sec-body .box .pharmacies-name a {
+  color: #efefef;
+  background-color: #222;
+  border-color: #222;
+}
+body.dark main .medicine .container .sec-body .box .pharmacies-name a:hover {
+  color: #efefef;
+  background-color: rgba(5, 156, 177, 0.8705882353);
+  border-color: rgba(5, 156, 177, 0.8705882353);
 }
 body.dark main .hospitals {
   background-color: #1d1d1d;

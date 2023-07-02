@@ -24,6 +24,13 @@ footer {
     }
     .f-info {
       .f-logo {
+        width: 75px;
+        @media (max-width: 991px) {
+          width: 60px;
+        }
+        @media (max-width: 767px) {
+          width: 70px;
+        }
         h1 {
           font: {
             family: "Yesteryear", cursive;
